@@ -14,7 +14,7 @@ repo: https://github.com/TryGhost/Ghost
 support: https://github.com/TryGhost/Ghost/issues
 port: 7205
 gallery:
-  - https://github.com/benphelps/homepage/raw/main/images/1.png
+  - https://user-images.githubusercontent.com/353959/169805900-66be5b89-0859-4816-8da9-528ed7534704.png
 path: ""
 defaultPassword: ""
 releaseNotes: >
