@@ -2,6 +2,12 @@
 
 This repository contains the Big Bear Umbrel App Store. This app store is a community app store that is not maintained by the Umbrel team. It is maintained by BigBearTechWorld and the BigBearCommunity.
 
+## Apps
+
+| App Name    | Last Updated   | Updated By       | Version |
+| ----------- | -------------- | ---------------- | ------- |
+| Uptime Kuma | July 29th 2023 | BigBearTechWorld | 1.22.1  |
+
 ## UI How to
 
 How to add the App Store:
