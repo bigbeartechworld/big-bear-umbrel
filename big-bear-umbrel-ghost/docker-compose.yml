@@ -18,7 +18,7 @@ services:
       database__connection__password: d41bd7eb-48bb-4bf6-bd13-92bf636b9abb
       database__connection__database: ghost
       # this url value is just an example, and is likely wrong for your environment!
-      url: ${APP_URL}
+      url: "http://${APP_DOMAIN}:7205"
       # contrary to the default mentioned in the linked documentation, this image defaults to NODE_ENV=production (so development mode needs to be explicitly specified if desired)
       #NODE_ENV: development
 
