@@ -4,7 +4,7 @@ name: Homepage
 category: Dashboards
 version: "0.6.23"
 tagline: Self-hosted homepage
-icon: https://getumbrel.github.io/umbrel-apps-gallery/uptime-kuma/icon.svg
+icon: https://github.com/benphelps/homepage/blob/main/public/android-chrome-512x512.png?raw=true
 description: >
   A modern (fully static, fast), secure (fully proxied), highly customizable application dashboard with integrations for more than 25 services and translations for over 15 languages.
   Easily configured via YAML files (or discovery via docker labels).
