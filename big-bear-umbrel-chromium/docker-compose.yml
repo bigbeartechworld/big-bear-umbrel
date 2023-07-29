@@ -1,0 +1,41 @@
+version: "3.7"
+
+services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-chromium_server_1
+      APP_PORT: 3001
+
+  server:
+    # Service for running Chromium browser in a container
+    image: lscr.io/linuxserver/chromium:latest
+
+    # Define security options for the container
+    security_opt:
+      # For Docker Engine only, many modern gui apps need this to function on older hosts as syscalls are unknown to Docker. Chromium runs in no-sandbox test mode without it.
+      - seccomp:unconfined # Enable unconfined seccomp mode for this container (optional)
+
+    # Set environment variables for the container
+    environment:
+      - PUID=1000 # Set the user ID for the container process (optional)
+      - PGID=1000 # Set the group ID for the container process (optional)
+      - TZ=Etc/UTC # Set the timezone inside the container to UTC (optional)
+      - CHROME_CLI=https://bigbeartechworld.com/ # Set a URL to be used as home page (optional)
+
+    # Mount volumes from the host into the container
+    volumes:
+      - /data/chromium/config:/config
+      # Map the host directory /data/chromium/config to the container's /config directory
+      # This allows the container to read/write configuration files to the specified host directory
+
+    # Expose ports from the container to the host machine
+    ports:
+      - 3000:3000 # Map port 3000 from the container to port 3000 on the host (http)
+      - 3001:3001 # Map port 3001 from the container to port 3001 on the host (https)
+
+    # Set the size of the container's shared memory segment
+    shm_size: "1gb" # Allocate 1 GB of shared memory (RAM) for this container
+
+    # Define the restart policy for the container
+    restart: unless-stopped
+    # This means the container will automatically restart unless explicitly stopped by the user or Docker itself
