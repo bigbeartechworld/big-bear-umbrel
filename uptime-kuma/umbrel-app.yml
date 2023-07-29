@@ -4,6 +4,7 @@ name: Uptime Kuma
 category: Development
 version: "1.22.1"
 tagline: Self-hosted uptime monitoring tool
+icon: https://getumbrel.github.io/umbrel-apps-gallery/uptime-kuma/icon.svg
 description: >
   Uptime Kuma is a self-hosted monitoring tool like Uptime Robot.
 
@@ -33,9 +34,9 @@ repo: https://github.com/louislam/uptime-kuma
 support: https://github.com/louislam/uptime-kuma/issues
 port: 8385
 gallery:
-  - 1.jpg
-  - 2.jpg
-  - 3.jpg
+  - https://getumbrel.github.io/umbrel-apps-gallery/uptime-kuma/1.jpg
+  - https://getumbrel.github.io/umbrel-apps-gallery/uptime-kuma/2.jpg
+  - https://getumbrel.github.io/umbrel-apps-gallery/uptime-kuma/3.jpg
 path: ""
 defaultPassword: ""
 releaseNotes: >
