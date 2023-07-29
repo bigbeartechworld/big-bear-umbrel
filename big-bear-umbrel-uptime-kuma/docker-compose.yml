@@ -3,7 +3,7 @@ version: "3.7"
 services:
   app_proxy:
     environment:
-      APP_HOST: uptime-kuma_server_1
+      APP_HOST: big-bear-umbrel-uptime-kuma_server_1
       APP_PORT: 3001
 
   server:
