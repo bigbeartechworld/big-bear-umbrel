@@ -1,7 +1,7 @@
 manifestVersion: 1
 id: big-bear-umbrel-chromium
 name: Chromium
-category: Networking
+category: Developer Tools
 version: "0.0.1"
 tagline: Self-hosted browser that runs in a container
 icon: https://i.imgur.com/umFr7ki.png
