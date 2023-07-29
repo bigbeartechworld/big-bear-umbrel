@@ -10,7 +10,5 @@ services:
     image: wisdomsky/casaos-cloudflared:latest
     restart: unless-stopped
     network_mode: host
-    ports:
-      - 7203:14333
     volumes:
       - ${APP_DATA_DIR}/data/config:/app/config
