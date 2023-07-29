@@ -12,7 +12,7 @@ website: https://github.com/WisdomSky/CasaOS-Cloudflared
 dependencies: []
 repo: https://github.com/WisdomSky/CasaOS-Cloudflared
 support: https://github.com/WisdomSky/CasaOS-Cloudflared/issues
-port: 14333
+port: 7203
 gallery:
   - https://raw.githubusercontent.com/WisdomSky/Casaos-Appstore/main/Apps/Cloudflared/screenshot-2.png
 path: ""
