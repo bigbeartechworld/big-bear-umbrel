@@ -9,6 +9,7 @@ This repository contains the Big Bear Umbrel App Store. This app store is a comm
 | Adguard Home | July 29th 2023 | July 29th 2023 | BigBearTechWorld | 0.107.35 |
 | Chromium     | July 29th 2023 | July 29th 2023 | BigBearTechWorld | 0.0.1    |
 | Cloudflared  | July 29th 2023 | July 29th 2023 | BigBearTechWorld | 0.0.1    |
+| Ghost        | July 29th 2023 | July 29th 2023 | BigBearTechWorld | 5.55.2   |
 | Homepage     | July 29th 2023 | July 29th 2023 | BigBearTechWorld | 0.6.23   |
 | Uptime Kuma  | July 29th 2023 | July 29th 2023 | BigBearTechWorld | 1.22.1   |
 
