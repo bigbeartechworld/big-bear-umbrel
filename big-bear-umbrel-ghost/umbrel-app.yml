@@ -4,7 +4,7 @@ name: Ghost
 category: Developer Tools
 version: "5.55.2"
 tagline: Ghost is a free and open source blogging platform written in JavaScript
-icon: https://i.imgur.com/QKN0xr1.png
+icon: https://github.com/walkxcode/dashboard-icons/blob/main/png/ghost.png?raw=true
 description: >
   Ghost is a powerful app for new-media creators to publish, share, and grow a business around their content. It comes with modern tools to build a website, publish content, send newsletters & offer paid subscriptions to members.
 developer: ghost
