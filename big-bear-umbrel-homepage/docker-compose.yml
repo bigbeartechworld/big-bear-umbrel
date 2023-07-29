@@ -1,0 +1,13 @@
+version: "3.7"
+
+services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-homepage_server_1
+      APP_PORT: 3000
+
+  server:
+    image: ghcr.io/benphelps/homepage:v0.6.23
+    volumes:
+      - ${APP_DATA_DIR}/data/homepage:/app/config # Make sure your local config directory exists
+      - /var/run/docker.sock:/var/run/docker.sock:ro # (optional) For docker integrations
