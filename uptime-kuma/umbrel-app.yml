@@ -1,6 +1,6 @@
 manifestVersion: 1
 id: bbtw-uptime-kuma
-name: Uptime Kuma
+name: BBTW Uptime Kuma
 category: Development
 version: "1.22.1"
 tagline: Self-hosted uptime monitoring tool
