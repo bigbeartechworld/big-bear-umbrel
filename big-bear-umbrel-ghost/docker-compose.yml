@@ -1,0 +1,34 @@
+version: "3.7"
+
+services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-ghost_server_1
+      APP_PORT: 2368
+      PROXY_AUTH_ADD: "false"
+
+  server:
+    image: ghost:5.55.2-alpine
+    restart: on-failure
+    environment:
+      # see https://ghost.org/docs/config/#configuration-options
+      database__client: mysql
+      database__connection__host: db
+      database__connection__user: ghost
+      database__connection__password: d41bd7eb-48bb-4bf6-bd13-92bf636b9abb
+      database__connection__database: ghost
+      # this url value is just an example, and is likely wrong for your environment!
+      url: ${APP_URL}
+      # contrary to the default mentioned in the linked documentation, this image defaults to NODE_ENV=production (so development mode needs to be explicitly specified if desired)
+      #NODE_ENV: development
+
+  db:
+    image: mysql:8.0
+    restart: on-failure
+    volumes:
+      - ${APP_DATA_DIR}/data/ghost/db:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: "d41bd7eb-48bb-4bf6-bd13-92bf636b9abb"
+      MYSQL_USER: "ghost"
+      MYSQL_PASSWORD: "d41bd7eb-48bb-4bf6-bd13-92bf636b9abb"
+      MYSQL_DATABASE: "ghost"
