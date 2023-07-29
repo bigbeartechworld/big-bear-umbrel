@@ -29,9 +29,9 @@ services:
       # This allows the container to read/write configuration files to the specified host directory
 
     # Expose ports from the container to the host machine
-    ports:
-      - 3000:3000 # Map port 3000 from the container to port 3000 on the host (http)
-      - 3001:3001 # Map port 3001 from the container to port 3001 on the host (https)
+    # ports:
+    #   - 3000:3000 # Map port 3000 from the container to port 3000 on the host (http)
+    #   - 3001:3001 # Map port 3001 from the container to port 3001 on the host (https)
 
     # Set the size of the container's shared memory segment
     shm_size: "1gb" # Allocate 1 GB of shared memory (RAM) for this container
