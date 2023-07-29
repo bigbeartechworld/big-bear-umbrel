@@ -1,10 +1,10 @@
 version: "3.7"
 
 services:
-  app_proxy:
-    environment:
-      APP_HOST: big-bear-umbrel-cloudflared_server_1
-      APP_PORT: 14333
+  # app_proxy:
+  #   environment:
+  #     APP_HOST: big-bear-umbrel-cloudflared_server_1
+  #     APP_PORT: 14333
 
   server:
     image: wisdomsky/casaos-cloudflared:latest
