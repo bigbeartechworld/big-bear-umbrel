@@ -9,6 +9,8 @@ services:
   server:
     image: adguard/adguardhome:v0.107.35
     restart: unless-stopped
+    ports:
+      - 7201:3000
     volumes:
       - ${APP_DATA_DIR}/data/adguardhome/work:/app/data/work
       - ${APP_DATA_DIR}/data/adguardhome/conf:/app/data/conf
