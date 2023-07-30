@@ -9,12 +9,14 @@ services:
   server:
     image: adguard/adguardhome:v0.107.35
     restart: unless-stopped
+    network_mode: bridge
     ports:
-      - 7280:80
-      - 7201:3000
+      - 7200:80
+      - 3002:3000
       - 53:53
       - 853:853
       - 784:784
+    privileged: true
     volumes:
       - ${APP_DATA_DIR}/data/adguardhome/work:/app/data/work
       - ${APP_DATA_DIR}/data/adguardhome/conf:/app/data/conf
