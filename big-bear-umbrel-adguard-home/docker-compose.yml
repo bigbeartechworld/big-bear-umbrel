@@ -1,16 +1,16 @@
 version: "3.7"
 
 services:
-  app_proxy:
-    environment:
-      APP_HOST: big-bear-umbrel-adguard-home_server_1
-      APP_PORT: 80
+  # app_proxy:
+  #   environment:
+  #     APP_HOST: big-bear-umbrel-adguard-home_server_1
+  #     APP_PORT: 80
 
   server:
     image: adguard/adguardhome:v0.107.35
     restart: unless-stopped
-    network_mode: bridge
     ports:
+      - 7280:80
       - 7201:3000
       - 53:53
       - 853:853
