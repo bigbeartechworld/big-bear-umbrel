@@ -10,20 +10,20 @@ services:
     image: guacamole/guacamole:latest
     environment:
       - GUACD_HOSTNAME=guacd
-      - MYSQL_HOSTNAME=mysql
+      - MYSQL_HOSTNAME=db
       - MYSQL_DATABASE=guacamole
-      - MYSQL_USER=guacamole
+      - MYSQL_USER=root
       - MYSQL_PASSWORD=a49cd326-af4e-4a76-9995-51fc2b7bd58f
     restart: on-failure
     depends_on:
       - guacd
-      - mysql
+      - db
 
   guacd:
     image: guacamole/guacd
     restart: always
 
-  mysql:
+  db:
     image: mysql:8.0
     restart: on-failure
     volumes:
