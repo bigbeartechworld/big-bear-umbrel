@@ -20,6 +20,10 @@ services:
       # - 68:68/udp
       # HTTP
       - 7200:80/tcp
+      - 7200:80/udp
+      # Setup
+      - 7201:3000/tcp
+      - 7201:3000/udp
       # DNS-over-HTTPS
       # - 443:443/tcp
       # - 443:443/udp
