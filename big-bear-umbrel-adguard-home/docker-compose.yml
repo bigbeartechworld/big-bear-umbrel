@@ -11,6 +11,7 @@ services:
     restart: unless-stopped
     ports:
       - 7201:3000
+      - 53:53
     volumes:
       - ${APP_DATA_DIR}/data/adguardhome/work:/app/data/work
       - ${APP_DATA_DIR}/data/adguardhome/conf:/app/data/conf
