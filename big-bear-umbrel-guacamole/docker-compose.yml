@@ -10,6 +10,8 @@ services:
     image: guacamole/guacamole:latest
     environment:
       - GUACD_HOSTNAME=guacd
+      - MYSQL_DRIVER=mysql
+      - MYSQL_SSL_MODE=disabled
       - MYSQL_HOSTNAME=db
       - MYSQL_DATABASE=guacamole
       - MYSQL_USER=root
