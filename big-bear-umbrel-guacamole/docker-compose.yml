@@ -5,7 +5,6 @@ services:
     environment:
       APP_HOST: big-bear-umbrel-guacamole_frontend_1
       APP_PORT: 8080
-      PROXY_AUTH_ADD: "false"
 
   frontend:
     image: guacamole/guacamole:latest
