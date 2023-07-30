@@ -8,7 +8,7 @@ services:
       PROXY_AUTH_ADD: "false"
 
   frontend:
-    image: guacamole/guacamole
+    image: guacamole/guacamole:latest
     environment:
       - MYSQL_DATABASE=guacamole_db
       - MYSQL_USER=guacamole_user
