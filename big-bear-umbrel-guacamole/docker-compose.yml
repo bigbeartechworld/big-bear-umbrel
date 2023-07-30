@@ -11,7 +11,7 @@ services:
     environment:
       - GUACD_HOSTNAME=guacd
       - MYSQL_DRIVER=mysql
-      - MYSQL_SSL_MODE=disabled
+      # - MYSQL_SSL_MODE=disabled
       - MYSQL_HOSTNAME=db
       - MYSQL_DATABASE=guacamole
       - MYSQL_USER=guacamole
@@ -19,7 +19,6 @@ services:
     restart: on-failure
     depends_on:
       - guacd
-      - db
 
   guacd:
     image: guacamole/guacd
