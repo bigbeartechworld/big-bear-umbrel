@@ -18,5 +18,5 @@ services:
       - 784:784
     privileged: true
     volumes:
-      - ${APP_DATA_DIR}/data/adguardhome/work:/app/data/work
-      - ${APP_DATA_DIR}/data/adguardhome/conf:/app/data/conf
+      - ${APP_DATA_DIR}/data/adguardhome/work:/opt/adguardhome/work
+      - ${APP_DATA_DIR}/data/adguardhome/conf:/opt/adguardhome/conf
