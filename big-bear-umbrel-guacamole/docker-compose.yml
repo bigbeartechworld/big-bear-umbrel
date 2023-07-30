@@ -14,6 +14,8 @@ services:
       - MYSQL_USER=guacamole_user
       - MYSQL_PASSWORD=a49cd326-af4e-4a76-9995-51fc2b7bd58f
     restart: on-failure
+    links:
+      - guacd
     depends_on:
       - guacd
       - db
