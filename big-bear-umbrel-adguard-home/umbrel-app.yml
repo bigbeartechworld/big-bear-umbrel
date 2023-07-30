@@ -4,7 +4,7 @@ name: Adguard Home
 category: Networking
 version: "0.107.35"
 tagline: Network-wide ads & trackers blocking DNS server
-icon: https://i.imgur.com/JpMrQpW.png
+icon: https://github.com/walkxcode/dashboard-icons/blob/main/png/adguard-home.png?raw=true
 description: >
   AdGuard Home is a network-wide software for blocking ads and tracking. After you set it up, it'll cover all your home devices, and you won't need any client-side software for that.
   Learn more on our official Github repository.

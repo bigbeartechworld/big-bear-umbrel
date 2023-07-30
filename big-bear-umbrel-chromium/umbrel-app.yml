@@ -4,7 +4,7 @@ name: Chromium
 category: Developer Tools
 version: "0.0.1"
 tagline: Self-hosted browser that runs in a container
-icon: https://i.imgur.com/umFr7ki.png
+icon: https://github.com/walkxcode/dashboard-icons/blob/main/png/chromium.png?raw=true
 description: >
   Chromium is a self-hosted browser that runs in a container.
   It uses Kasm for emulation.
