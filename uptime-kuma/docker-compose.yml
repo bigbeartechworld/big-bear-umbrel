@@ -1,0 +1,14 @@
+version: "3.7"
+
+services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-uptime-kuma_server_1
+      APP_PORT: 3001
+
+  server:
+    image: louislam/uptime-kuma:1.22.1
+    restart: on-failure
+    stop_grace_period: 1m
+    volumes:
+      - ${APP_DATA_DIR}/data/uptime-kuma:/app/data
