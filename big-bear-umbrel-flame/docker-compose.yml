@@ -1,7 +1,12 @@
 version: '3.6'
 
 services:
-  flame:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-flame_server_1
+      APP_PORT: 5005
+
+  server:
     image: pawelmalak/flame
     container_name: flame
     volumes:
