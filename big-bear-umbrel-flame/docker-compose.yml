@@ -7,7 +7,7 @@ services:
       APP_PORT: 5005
 
   server:
-    image: pawelmalak/flame
+    image: pawelmalak/flame:2.3.1
     container_name: flame
     volumes:
       - ${APP_DATA_DIR}/flame/data:/app/data
