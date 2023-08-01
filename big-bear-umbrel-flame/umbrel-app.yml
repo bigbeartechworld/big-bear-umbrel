@@ -15,9 +15,9 @@ repo: https://github.com/pawelmalak/flame
 support: https://github.com/pawelmalak/flame/issues
 port: 7207
 gallery:
-  - https://github.com/pawelmalak/flame/blob/master/.github/themes.png
-  - https://github.com/pawelmalak/flame/blob/master/.github/home.png
-  - https://github.com/pawelmalak/flame/blob/master/.github/settings.png
+  - https://raw.githubusercontent.com/pawelmalak/flame/master/.github/themes.png
+  - https://raw.githubusercontent.com/pawelmalak/flame/master/.github/home.png
+  - https://raw.githubusercontent.com/pawelmalak/flame/master/.github/settings.png
 path: ""
 deterministicPassword: true
 releaseNotes: >
