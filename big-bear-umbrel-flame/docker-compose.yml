@@ -12,5 +12,5 @@ services:
       - ${APP_DATA_DIR}/flame/data:/app/data
       - /var/run/docker.sock:/var/run/docker.sock # optional but required for Docker integration
     environment:
-      - PASSWORD: $APP_PASSWORD
+      PASSWORD: $APP_PASSWORD # Corrected environment variable syntax
     restart: unless-stopped
