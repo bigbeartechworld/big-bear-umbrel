@@ -8,7 +8,6 @@ services:
 
   server:
     image: pawelmalak/flame:2.3.1
-    container_name: flame
     volumes:
       - ${APP_DATA_DIR}/flame/data:/app/data
       - /var/run/docker.sock:/var/run/docker.sock # optional but required for Docker integration
