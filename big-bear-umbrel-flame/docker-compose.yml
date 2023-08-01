@@ -1,0 +1,16 @@
+version: '3.6'
+
+services:
+  flame:
+    image: pawelmalak/flame:latest
+    container_name: flame
+    volumes:
+      - ${APP_DATA_DIR}/data/flame:/app/data
+      - /var/run/docker.sock:/var/run/docker.sock # optional but required for Docker integration
+    ports:
+      - 5005:5005
+    secrets:
+      - password # optional but required for (1)
+    environment:
+      - PASSWORD=flame_password
+    restart: unless-stopped
