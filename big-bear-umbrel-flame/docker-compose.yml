@@ -14,5 +14,5 @@ services:
     ports:
       - 5005:5005
     environment:
-      APP_PASSWORD: "$APP_PASSWORD"
+      - PASSWORD: "$APP_PASSWORD"
     restart: unless-stopped
