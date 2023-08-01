@@ -2,7 +2,7 @@ manifestVersion: 1
 id: big-bear-umbrel-homepage
 name: Homepage
 category: Dashboards
-version: "0.6.23"
+version: "0.0.1"
 tagline: Self-hosted homepage
 icon: https://github.com/walkxcode/dashboard-icons/blob/main/png/homepage.png?raw=true
 description: >

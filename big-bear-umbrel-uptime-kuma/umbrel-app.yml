@@ -2,7 +2,7 @@ manifestVersion: 1
 id: big-bear-umbrel-uptime-kuma
 name: Uptime Kuma
 category: Networking
-version: "1.22.1"
+version: "0.0.1"
 tagline: Self-hosted uptime monitoring tool
 icon: https://raw.githubusercontent.com/walkxcode/dashboard-icons/1e77aeec6a3883a590df69ae61c11ce60731b9d2/svg/uptime-kuma.svg
 description: >
