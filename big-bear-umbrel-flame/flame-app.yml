@@ -19,7 +19,7 @@ gallery:
   - https://github.com/pawelmalak/flame/blob/master/.github/home.png
   - https://github.com/pawelmalak/flame/blob/master/.github/settings.png
 path: ""
-defaultPassword: ""
+deterministicPassword: true
 releaseNotes: >
   What's Changed
 
