@@ -2,9 +2,9 @@ manifestVersion: 1
 id: big-bear-umbrel-homepage
 name: Homepage
 category: Dashboards
-version: "0.0.1"
+version: "0.0.2"
 tagline: Self-hosted homepage
-icon: https://github.com/walkxcode/dashboard-icons/blob/main/png/homepage.png?raw=true
+icon: https://i.imgur.com/nAu5Zna.png
 description: >
   A modern (fully static, fast), secure (fully proxied), highly customizable application dashboard with integrations for more than 25 services and translations for over 15 languages.
   Easily configured via YAML files (or discovery via docker labels).

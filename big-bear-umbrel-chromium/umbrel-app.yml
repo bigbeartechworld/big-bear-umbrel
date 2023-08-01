@@ -2,9 +2,9 @@ manifestVersion: 1
 id: big-bear-umbrel-chromium
 name: Chromium
 category: Developer Tools
-version: "0.0.1"
+version: "0.0.2"
 tagline: Self-hosted browser that runs in a container
-icon: https://github.com/walkxcode/dashboard-icons/blob/main/png/chromium.png?raw=true
+icon: https://i.imgur.com/RzEdgMc.png
 description: >
   Chromium is a self-hosted browser that runs in a container.
   It uses Kasm for emulation.
