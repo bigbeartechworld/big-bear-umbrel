@@ -7,7 +7,7 @@ services:
   #     APP_PORT: 14333
 
   server:
-    image: wisdomsky/casaos-cloudflared:latest
+    image: wisdomsky/casaos-cloudflared:2023.7.3
     restart: unless-stopped
     network_mode: host
     volumes:
