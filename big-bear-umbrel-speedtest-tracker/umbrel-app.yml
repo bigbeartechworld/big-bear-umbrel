@@ -1,0 +1,25 @@
+manifestVersion: 1
+id: big-bear-umbrel-speedtest-tracker
+name: SpeedTest-Tracker
+category: Networking
+version: "0.0.1"
+tagline: Self-hosted speedtest-tracker
+icon: https://i.imgur.com/Xy3ZQuF.png
+description: >
+  This program runs a speedtest check every hour and graphs the results. The back-end is written in Laravel and the front-end uses React. 
+  It uses the Ookla's speedtest cli package to get the data and uses Chart.js to plot the results.
+developer: hentrywhitaker3
+website: https://github.com/henrywhitaker3/Speedtest-Tracker
+dependencies: []
+repo: https://github.com/henrywhitaker3/Speedtest-Tracker
+support: https://github.com/henrywhitaker3/Speedtest-Tracker/issues
+port: 7208
+gallery:
+  - https://user-images.githubusercontent.com/36062479/78822484-a82b8300-79ca-11ea-8525-fdeae496a0bd.gif
+path: ""
+releaseNotes: >
+  What's Changed
+
+  - InlfuxDB integration.
+submitter: BigBearCommunity
+submission:
