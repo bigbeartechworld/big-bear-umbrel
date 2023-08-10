@@ -1,10 +1,10 @@
 version: "3.7"
 
 services:
-  app_proxy:
-    environment:
-      APP_HOST: big-bear-umbrel-scrypted_server_1
-      APP_PORT: 10443
+  # app_proxy:
+  #   environment:
+  #     APP_HOST: big-bear-umbrel-scrypted_server_1
+  #     APP_PORT: 10443
 
   server:
     image: koush/scrypted
