@@ -11,6 +11,7 @@ This repository contains the Big Bear Umbrel App Store. This app store is a comm
 | Cloudflared  | July 29th 2023 | July 29th 2023 | BigBearTechWorld | 0.0.2   |
 | Ghost        | July 29th 2023 | July 29th 2023 | BigBearTechWorld | 0.0.2   |
 | Homepage     | July 29th 2023 | July 29th 2023 | BigBearTechWorld | 0.0.2   |
+| Portainer    | Aug 10th 2023  | Aug 10th 2023  | BigBearTechWorld | 0.0.5   |
 | Uptime Kuma  | July 29th 2023 | July 29th 2023 | BigBearTechWorld | 0.0.2   |
 
 ## UI How to
