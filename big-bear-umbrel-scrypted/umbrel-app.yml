@@ -13,7 +13,7 @@ website: https://scrypted.app
 dependencies: []
 repo: https://github.com/koush/scrypted
 support: https://github.com/koush/scrypted/issues
-port: 8385
+port: 7209
 gallery:
   - https://docs.scrypted.app/assets/install-plugin.164ec654.png
 path: ""
