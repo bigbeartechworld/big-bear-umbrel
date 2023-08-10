@@ -1,11 +1,6 @@
 version: "3.7"
 
 services:
-  # app_proxy:
-  #   environment:
-  #     APP_HOST: big-bear-umbrel-scrypted_server_1
-  #     APP_PORT: 10443
-
   server:
     image: koush/scrypted
     environment:
@@ -13,6 +8,7 @@ services:
       - SCRYPTED_WEBHOOK_UPDATE=http://localhost:10444/v1/update
     restart: unless-stopped
     network_mode: host
+    # Available at port 10443
     volumes:
       - ${APP_DATA_DIR}/data/scrypted:/server/volume
     logging:
