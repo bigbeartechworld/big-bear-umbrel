@@ -1,0 +1,24 @@
+manifestVersion: 1
+id: big-bear-umbrel-scrypted
+name: Scrypted
+category: Networking
+version: "0.0.1"
+tagline: Scrypted is a high performance home video integration platform.
+icon: https://github.com/walkxcode/dashboard-icons/blob/main/png/scrypted.png?raw=true
+description: >
+  Scrypted can bridge most cameras to the three major home hubs: HomeKit (including HomeKit Secure Video), Google Home, and Alexa. Scrypted streams are fast, low latency, and have rock solid reliability.
+  Cameras: Unifi, Amcrest, Hikvision, ONVIF, RTSP, Ring, Arlo, Nest/Google, Tuya, Reolink, and more...
+developer: Koush
+website: https://scrypted.app
+dependencies: []
+repo: https://github.com/koush/scrypted
+support: https://github.com/koush/scrypted/issues
+port: 8385
+gallery:
+  - https://docs.scrypted.app/assets/install-plugin.164ec654.png
+path: ""
+defaultPassword: ""
+releaseNotes: >
+  Full changelog for versions can be found here: https://github.com/koush/scrypted/releases
+submitter: BigBearTechWorld
+submission:

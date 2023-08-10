@@ -1,0 +1,48 @@
+version: "3.7"
+
+services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-scrypted_server_1
+      APP_PORT: 10443
+
+  server:
+    image: koush/scrypted
+    environment:
+      - SCRYPTED_WEBHOOK_UPDATE_AUTHORIZATION=Bearer 43282fb9-27e4-4d93-b3c5-6c333ae4671f
+      - SCRYPTED_WEBHOOK_UPDATE=http://localhost:10444/v1/update
+    container_name: scrypted
+    restart: unless-stopped
+    network_mode: host
+    volumes:
+      - ${APP_DATA_DIR}/data/scrypted:/server/volume
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "10"
+    labels:
+      - "com.centurylinklabs.watchtower.scope=scrypted"
+
+  # watchtower manages updates for Scrypted.
+  watchtower:
+    environment:
+      - WATCHTOWER_HTTP_API_TOKEN=SET_THIS_TO_SOME_RANDOM_TEXT
+      - WATCHTOWER_HTTP_API_UPDATE=true
+      - WATCHTOWER_SCOPE=scrypted
+      # remove the following line to never allow docker to auto update.
+      # this is not recommended.
+      - WATCHTOWER_HTTP_API_PERIODIC_POLLS=true
+    image: containrrr/watchtower
+    container_name: scrypted-watchtower
+    restart: unless-stopped
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    labels:
+      - "com.centurylinklabs.watchtower.scope=scrypted"
+    ports:
+      # The auto update port 10444 can be configured
+      # Must match the port in the auto update url above.
+      - 10444:8080
+    # check for updates once an hour (interval is in seconds)
+    command: --interval 3600 --cleanup --scope scrypted
