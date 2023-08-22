@@ -1,0 +1,25 @@
+manifestVersion: 1
+id: big-bear-umbrel-dashdot
+name: dash.
+category: Dashboards
+version: "0.0.1"
+tagline: Self-hosted dash.
+icon: https://i.imgur.com/BcoQO4Y.png
+description: >
+  dash. (or dashdot) is a modern server dashboard, running on the latest tech, designed with glassmorphism in mind. It is intended to be used for smaller VPS and private servers.
+developer: MauriceNino
+website: https://getdashdot.com/
+dependencies: []
+repo: https://github.com/MauriceNino/dashdot
+support: https://github.com/MauriceNino/dashdot/issues
+port: 7209
+gallery:
+  - https://raw.githubusercontent.com/MauriceNino/dashdot/main/apps/docs/static/img/screenshot_darkmode.png
+  - https://raw.githubusercontent.com/MauriceNino/dashdot/main/apps/docs/static/img/screenshot_lightmode.png
+path: ""
+defaultPassword: ""
+releaseNotes: >
+  What's Changed
+  -
+submitter: BigBearCommunity
+submission:
