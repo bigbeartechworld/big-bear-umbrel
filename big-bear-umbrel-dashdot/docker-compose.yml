@@ -1,0 +1,16 @@
+version: '3.5'
+
+services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-dashdot_server_1
+      APP_PORT: 3001
+
+  server:
+    image: mauricenino/dashdot:latest
+    volumes:
+      - /:/mnt/host:ro
+    environment:
+       DASHDOT_ENABLE_CPU_TEMPS: 'true'
+    restart: unless-stopped
+    privileged: true
