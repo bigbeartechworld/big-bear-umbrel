@@ -2,22 +2,26 @@
 
 This repository contains the Big Bear Umbrel App Store. This app store is a community app store that is not maintained by the Umbrel team. It is maintained by BigBearTechWorld and the BigBearCommunity.
 
+# Support The Project
+
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/E1E5NDK3I)
+
 ## Apps
 
-| App Name          | Added          | Last Updated   | Updated By       | Version |
-| ----------------- | -------------- | -------------- | ---------------- | ------- |
-| Adguard Home      | July 29th 2023 | July 29th 2023 | BigBearTechWorld | 0.0.2   |
-| Chromium          | July 29th 2023 | July 29th 2023 | BigBearTechWorld | 0.0.2   |
-| Cloudflared       | July 29th 2023 | July 29th 2023 | BigBearTechWorld | 0.0.2   |
-| Dashdot           | Aug 23rd 2023  | Aug 23rd 2023  | BigBearCommunity | 0.0.1   |
-| Flame             | Aug 10th 2023  | Aug 10th 2023  | BigBearCommunity | 0.0.1   |
-| Ghost             | July 29th 2023 | July 29th 2023 | BigBearTechWorld | 0.0.2   |
-| Guacamole         | Aug 10th 2023  | Aug 10th 2023  | BigBearTechWorld | 0.0.3   |
-| Homepage          | July 29th 2023 | July 29th 2023 | BigBearTechWorld | 0.0.2   |
-| Portainer         | Aug 10th 2023  | Aug 10th 2023  | BigBearTechWorld | 0.0.6   |
-| Scrypted          | Aug 10th 2023  | Aug 10th 2023  | BigBearTechWorld | 0.0.3   |
-| SpeedTest-Tracker | Aug 10th 2023  | Aug 10th 2023  | BigBearCommunity | 0.0.1   |
-| Uptime Kuma       | July 29th 2023 | July 29th 2023 | BigBearTechWorld | 0.0.2   |
+| App Name          | Version |
+| ----------------- | ------- |
+| Adguard Home      | 0.0.2   |
+| Chromium          | 0.0.2   |
+| Cloudflared       | 0.0.2   |
+| Dashdot           | 0.0.1   |
+| Flame             | 0.0.1   |
+| Ghost             | 0.0.2   |
+| Guacamole         | 0.0.3   |
+| Homepage          | 0.0.2   |
+| Portainer         | 0.0.6   |
+| Scrypted          | 0.0.3   |
+| SpeedTest-Tracker | 0.0.1   |
+| Uptime Kuma       | 0.0.2   |
 
 ## UI How to
 
