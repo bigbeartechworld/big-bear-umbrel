@@ -11,9 +11,6 @@ services:
       PROXY_AUTH_ADD: "false" # Whether to add authentication for the proxy
 
   server:
-    # Name of the container
-    container_name: glances
-
     # Docker image to use
     image: nicolargo/glances:3.4.0.3-full # Docker image with specific version
 
