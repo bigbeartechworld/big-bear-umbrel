@@ -14,7 +14,8 @@ repo: https://github.com/nicolargo/glances
 support: https://github.com/nicolargo/glances/issues
 port: 7210
 gallery:
-  - https://user-images.githubusercontent.com/353959/169805900-66be5b89-0859-4816-8da9-528ed7534704.png
+  - https://raw.githubusercontent.com/nicolargo/glances/develop/docs/_static/glances-responsive-webdesign.png
+  - https://raw.githubusercontent.com/nicolargo/glances/develop/docs/_static/glances-summary.png
 path: ""
 defaultPassword: ""
 releaseNotes: >
