@@ -22,6 +22,7 @@ This repository contains the Big Bear Umbrel App Store. This app store is a comm
 | Scrypted          | 0.0.3   | [YouTube Video](https://youtu.be/DvXJ2cCApwY) |
 | SpeedTest-Tracker | 0.0.1   |                                               |
 | Uptime Kuma       | 0.0.2   | [YouTube Video](https://youtu.be/NEvP_Ioe78M) |
+| Glances           | 0.0.2   |                                               |
 
 ## UI How to
 
