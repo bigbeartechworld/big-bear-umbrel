@@ -1,0 +1,24 @@
+manifestVersion: 1
+id: big-bear-umbrel-speedtest-tracker-2
+name: SpeedTest-Tracker 2
+category: Networking
+version: "0.0.1"
+tagline: Self-hosted speedtest-tracker
+icon: https://github.com/alexjustesen/speedtest-tracker/blob/main/public/img/speedtest-tracker-icon.png?raw=true
+description: >
+  A Docker image to check your internet speed using Ookla's Speedtest service. Build using Laravel and the Speedtest CLI.
+developer: alexjustesen
+website: https://github.com/alexjustesen/Speedtest-Tracker
+dependencies: []
+repo: https://github.com/alexjustesen/Speedtest-Tracker
+support: https://github.com/alexjustesen/Speedtest-Tracker/issues
+port: 7210
+gallery:
+  - https://github.com/alexjustesen/speedtest-tracker/raw/main/.github/screenshots/dashboard_screenshot.jpg
+  - https://github.com/alexjustesen/speedtest-tracker/raw/main/.github/screenshots/results_screenshot.jpg
+  - https://github.com/alexjustesen/speedtest-tracker/raw/main/.github/screenshots/general_settings_screenshot.jpg
+path: ""
+releaseNotes: >
+  Based on alexjustesen/speedtest-tracker
+submitter: BigBearTechWorld
+submission:

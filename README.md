@@ -8,21 +8,22 @@ This repository contains the Big Bear Umbrel App Store. This app store is a comm
 
 ## Apps
 
-| App Name          | Version | Video                                         |
-| ----------------- | ------- | --------------------------------------------- |
-| Adguard Home      | 0.0.2   | [YouTube Video](https://youtu.be/Ay7eJbpbaQg) |
-| Chromium          | 0.0.2   | [YouTube Video](https://youtu.be/zGRjH0-zThs) |
-| Cloudflared       | 0.0.2   |                                               |
-| Dashdot           | 0.0.1   | [YouTube Video](https://youtu.be/iFGOCkJfvP4) |
-| Flame             | 0.0.1   |                                               |
-| Ghost             | 0.0.2   |                                               |
-| Guacamole         | 0.0.3   |                                               |
-| Homepage          | 0.0.2   |                                               |
-| Portainer         | 0.0.6   | [YouTube Video](https://youtu.be/Lcv9lRzI_gk) |
-| Scrypted          | 0.0.3   | [YouTube Video](https://youtu.be/DvXJ2cCApwY) |
-| SpeedTest-Tracker | 0.0.1   |                                               |
-| Uptime Kuma       | 0.0.2   | [YouTube Video](https://youtu.be/NEvP_Ioe78M) |
-| Glances           | 0.0.2   |                                               |
+| App Name            | Version | Video                                         |
+| ------------------- | ------- | --------------------------------------------- |
+| Adguard Home        | 0.0.2   | [YouTube Video](https://youtu.be/Ay7eJbpbaQg) |
+| Chromium            | 0.0.2   | [YouTube Video](https://youtu.be/zGRjH0-zThs) |
+| Cloudflared         | 0.0.2   |                                               |
+| Dashdot             | 0.0.1   | [YouTube Video](https://youtu.be/iFGOCkJfvP4) |
+| Flame               | 0.0.1   |                                               |
+| Ghost               | 0.0.2   |                                               |
+| Guacamole           | 0.0.3   |                                               |
+| Homepage            | 0.0.2   |                                               |
+| Portainer           | 0.0.6   | [YouTube Video](https://youtu.be/Lcv9lRzI_gk) |
+| Scrypted            | 0.0.3   | [YouTube Video](https://youtu.be/DvXJ2cCApwY) |
+| SpeedTest-Tracker   | 0.0.1   |                                               |
+| Uptime Kuma         | 0.0.2   | [YouTube Video](https://youtu.be/NEvP_Ioe78M) |
+| Glances             | 0.0.2   |                                               |
+| SpeedTest-Tracker 2 | 0.0.1   |                                               |
 
 ## UI How to
 
