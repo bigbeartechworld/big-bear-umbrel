@@ -60,5 +60,3 @@ sudo ~/umbrel/scripts/repo remove https://github.com/bigbeartechworld/big-bear-u
 ## Contributions
 
 We warmly welcome and deeply appreciate all contributions, no matter how big or small they may be! Thank you from the bottom of our hearts ❤️
-
-![Alt](https://repobeats.axiom.co/api/embed/4c66d9a81688d293bc0d4b36fec8c7ede9aff379.svg "Repobeats analytics image")
