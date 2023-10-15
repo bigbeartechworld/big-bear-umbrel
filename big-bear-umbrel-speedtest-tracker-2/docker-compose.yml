@@ -16,9 +16,9 @@ services:
       - DB_HOST=db
       - DB_PORT=3306
       - DB_DATABASE=speedtest_tracker
-      - DB_USERNAME=casaos
-      - DB_PASSWORD=casaos
-      - TZ=America/Chicago
+      - DB_USERNAME=umbrel
+      - DB_PASSWORD=umbrel
+      - TZ=Etc/UTC
     volumes:
       - "/etc/localtime:/etc/localtime:ro"
       - "${APP_DATA_DIR}/big-bear-umbrel-speedtest-tracker-2/config:/config"
