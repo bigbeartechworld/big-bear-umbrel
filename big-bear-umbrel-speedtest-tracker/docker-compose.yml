@@ -14,6 +14,8 @@ services:
      - PGID=1000
      - PUID=1000
      - OOKLA_EULA_GDPR=true
+   ports:
+      - 7208:80
    logging:
      driver: "json-file"
      options:
