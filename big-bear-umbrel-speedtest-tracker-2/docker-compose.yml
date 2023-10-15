@@ -8,7 +8,6 @@ services:
 
   server:
     image: "ghcr.io/alexjustesen/speedtest-tracker:v0.13.1"
-    container_name: speedtest-tracker
     environment:
       - PUID=1000
       - PGID=1000
