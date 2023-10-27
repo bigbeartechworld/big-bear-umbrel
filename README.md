@@ -6,6 +6,10 @@ This repository contains the Big Bear Umbrel App Store. This app store is a comm
 
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/E1E5NDK3I)
 
+## App Store Suggestions
+
+If you have a suggestion for an app, please post in the [BigBearCommunity](https://community.bigbeartechworld.com) server.
+
 ## Apps
 
 | App Name            | Version | Video                                         |
