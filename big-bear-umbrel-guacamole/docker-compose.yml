@@ -7,7 +7,7 @@ services:
       APP_PORT: 8080
 
   frontend:
-    image: guacamole/guacamole:1.5.3
+    image: guacamole/guacamole:1.5.4
     environment:
       - GUACD_HOSTNAME=guacd
       - MYSQL_DRIVER=mysql
