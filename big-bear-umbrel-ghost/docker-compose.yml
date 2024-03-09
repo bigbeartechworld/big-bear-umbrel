@@ -8,7 +8,7 @@ services:
       PROXY_AUTH_ADD: "false"
 
   server:
-    image: ghost:5.79.4-alpine
+    image: ghost:5.80.0-alpine
     restart: on-failure
     environment:
       # see https://ghost.org/docs/config/#configuration-options
