@@ -2,7 +2,7 @@ manifestVersion: 1
 id: big-bear-umbrel-adguard-home
 name: Adguard Home
 category: Networking
-version: "0.0.2"
+version: "0.0.3"
 tagline: Network-wide ads & trackers blocking DNS server
 icon: https://github.com/walkxcode/dashboard-icons/blob/main/png/adguard-home.png?raw=true
 description: >

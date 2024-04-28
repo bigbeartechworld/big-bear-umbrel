@@ -2,7 +2,7 @@ manifestVersion: 1
 id: big-bear-umbrel-scrypted
 name: Scrypted
 category: Networking
-version: "0.0.3"
+version: "0.0.4"
 tagline: Scrypted is a high performance home video integration platform.
 icon: https://github.com/walkxcode/dashboard-icons/blob/main/png/scrypted.png?raw=true
 description: >
