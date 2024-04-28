@@ -1,0 +1,91 @@
+name: Renovate CI
+on:
+  pull_request:
+
+jobs:
+  get-last-commit-message:
+    if: contains(github.head_ref, 'renovate/')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4.1.4
+
+      - name: Get last commit message
+        id: get-last-commit-message
+        run: |
+          echo "last_commit_message=$(git log -1 --pretty=%B)" >> $GITHUB_OUTPUT
+
+  update-config:
+    needs: get-last-commit-message
+    if: "!contains(${{ needs.get-last-commit-message.outputs.last_commit_message }}, '[ready]')"
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4.1.4
+        with:
+          fetch-depth: 0 # Fetch all history
+
+      - name: Get changed files
+        uses: jitterbit/get-changed-files@v1
+        id: files
+
+      - name: Apply config update
+        run: |
+          for changed_file in ${{ steps.files.outputs.all }}; do
+            if [[ $changed_file == "umbrel-app.yml" ]]; then
+              app_name=$(echo $changed_file | cut -d'/' -f 2)
+              echo "App name: $app_name"
+              # Assume the script updates the version automatically
+              ./.github/workflows/update-umbrel-version.sh $app_name
+            fi
+          done
+
+      - name: Commit and push changes
+        uses: EndBug/add-and-commit@v9
+        with:
+          author_name: Big Bear CI
+          author_email: ci@bigbeartechworld.com
+          message: "Update app version [ready]"
+          commit: --no-verify
+          push: origin HEAD:${{ github.head_ref }}
+
+  automerge:
+    needs:
+      - update-config
+      - get-last-commit-message
+    if: contains(${{ needs.get-last-commit-message.outputs.last_commit_message }}, '[ready]')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Analyze PR for Major Version Bump
+        id: analyze
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const body = context.payload.pull_request.body;
+            // Regex to find markdown table rows and check if any have 'major' in the Update column
+            const regex = /(?<=\|\s\[)(?:[^\]]+\]\(https?:\/\/[^\s\)]+\)\s\|\s)(major)(?=\s\|)/gi;
+            const isMajorUpdate = regex.test(body);
+
+            if (isMajorUpdate) {
+              console.log("Found a major version bump.");
+              core.setOutput("automerge", "false");
+            } else {
+              console.log("No major version bump found.");
+              core.setOutput("automerge", "true");
+            }
+
+      - name: Add automerge label
+        if: steps.analyze.outputs.automerge == 'true'
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            github.rest.issues.addLabels({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              labels: ["automerge"]
+            })
