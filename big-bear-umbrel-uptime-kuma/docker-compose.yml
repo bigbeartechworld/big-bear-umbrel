@@ -7,7 +7,7 @@ services:
       APP_PORT: 3001
 
   server:
-    image: louislam/uptime-kuma:1.23.13
+    image: louislam/uptime-kuma:1.23.14
     restart: on-failure
     stop_grace_period: 1m
     volumes:
