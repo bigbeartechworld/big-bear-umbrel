@@ -12,7 +12,7 @@ services:
 
   server:
     # Docker image to use
-    image: nicolargo/glances:4.1.2.1-full # Docker image with specific version
+    image: nicolargo/glances:4.3.0.3-full # Docker image with specific version
 
     # Environment variables for the server service
     environment:
