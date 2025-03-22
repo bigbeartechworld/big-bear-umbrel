@@ -8,7 +8,7 @@ services:
       PROXY_AUTH_ADD: "false"
 
   server:
-    image: adguard/adguardhome:v0.107.57
+    image: adguard/adguardhome:v0.107.58
     restart: on-failure
     ports:
       # plain DNS
