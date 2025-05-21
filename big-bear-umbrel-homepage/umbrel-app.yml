@@ -2,7 +2,7 @@ manifestVersion: 1
 id: big-bear-umbrel-homepage
 name: Homepage
 category: Dashboards
-version: "0.0.3"
+version: "0.0.4"
 tagline: Self-hosted homepage
 icon: https://i.imgur.com/nAu5Zna.png
 description: >
@@ -21,18 +21,6 @@ defaultPassword: ""
 releaseNotes: >
   What's Changed
 
-  Fixes oversized logo in 0.6.22 by @shamoon in #1698
-  Update Traefik API by @dan5py in #1607
-  Working Jdownloader by @karl0ss in #1608
-  Added boxed widgets header styling and error component to information widgets by @denispapec in #1603
-  JDownloader Widget - Add Total Queue and Remaining In Queue by @karl0ss in #1612
-  Adding Kavita by @dimitricappelle in #1623
-  Feature: collapsible layout sections by @ionyx0 and @shamoon in #1626
-  Feature: add collapsible feature to bookmarks by @shamoon in #1629
-  Handle invalid fields syntax in service labels by @shamoon in #1640
-  Handle missing EOF when decompressing responses by @nathan-sankbeil in #1656
-  Override config directory with env var. by @jnsgruk in #1673
-  Feature: support coinmarketcap slugs by @shamoon in #1684
-  Fix: Handle tautulli response when unable to connect to Plex by @jonathann92 and @shamoon in #1685
+  Switched to the latest version of Homepage 1.2.0
 submitter: BigBearTechWorld
 submission:
