@@ -14,7 +14,7 @@ repo: https://github.com/bigbeartechworld/big-bear-docker-images
 support: https://github.com/bigbeartechworld/big-bear-docker-images/issues
 port: 7681
 gallery:
-  - https://cdn.jsdelivr.net/gh/bigbeartechworld/big-bear-umbrel/big-bear-umbrel-btop/screenshot-1.png
+  - https://cdn.jsdelivr.net/gh/bigbeartechworld/big-bear-umbrel/big-bear-umbrel-btop/screenshot-1-v2.png
   - https://cdn.jsdelivr.net/gh/bigbeartechworld/big-bear-umbrel/big-bear-umbrel-btop/screenshot-2.png
   - https://cdn.jsdelivr.net/gh/bigbeartechworld/big-bear-umbrel/big-bear-umbrel-btop/screenshot-3.png
   - https://cdn.jsdelivr.net/gh/bigbeartechworld/big-bear-umbrel/big-bear-umbrel-btop/screenshot-4.png
