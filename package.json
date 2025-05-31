@@ -1,0 +1,22 @@
+{
+  "name": "big-bear-umbrel",
+  "version": "1.0.0",
+  "description": "Big Bear Umbrel App Store",
+  "scripts": {
+    "generate-readme": "node .github/scripts/readme-generator.cjs",
+    "find-ports": "grep -r \"port:\" big-bear-umbrel-*/umbrel-app.yml | sort -t: -k3 -n",
+    "fix-port-conflicts": "npx tsc scripts/fix-port-conflicts.ts --outDir scripts --target ES2020 --module ESNext --moduleResolution node --esModuleInterop && node scripts/fix-port-conflicts.js",
+    "test": "jest"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.0",
+    "@types/js-yaml": "^4.0.5",
+    "@types/node": "^20.0.0",
+    "jest": "^29.5.0",
+    "js-yaml": "^4.1.0",
+    "ts-jest": "^29.1.0",
+    "ts-node": "^10.9.0",
+    "typescript": "^5.0.0"
+  },
+  "type": "module"
+}

@@ -12,7 +12,7 @@ website: https://www.portainer.io
 dependencies: []
 repo: https://www.portainer.io/
 support: https://www.portainer.io/
-port: 7210
+port: 8000
 gallery:
   - https://i.imgur.com/DNHGseE.png
 path: ""
