@@ -12,22 +12,24 @@ If you have a suggestion for an app, please post in the [BigBearCommunity](https
 
 ## Apps
 
-| App Name            | Version | Video                                         |
-| ------------------- | ------- | --------------------------------------------- |
-| Adguard Home        | 0.0.2   | [YouTube Video](https://youtu.be/Ay7eJbpbaQg) |
-| Chromium            | 0.0.2   | [YouTube Video](https://youtu.be/zGRjH0-zThs) |
-| Cloudflared         | 0.0.2   |                                               |
-| Dashdot             | 0.0.1   | [YouTube Video](https://youtu.be/iFGOCkJfvP4) |
-| Flame               | 0.0.1   |                                               |
-| Ghost               | 0.0.2   |                                               |
-| Guacamole           | 0.0.3   |                                               |
-| Homepage            | 0.0.2   |                                               |
-| Portainer           | 0.0.6   | [YouTube Video](https://youtu.be/Lcv9lRzI_gk) |
-| Scrypted            | 0.0.3   | [YouTube Video](https://youtu.be/DvXJ2cCApwY) |
-| SpeedTest-Tracker   | 0.0.1   |                                               |
-| Uptime Kuma         | 0.0.2   | [YouTube Video](https://youtu.be/NEvP_Ioe78M) |
-| Glances             | 0.0.2   |                                               |
-| SpeedTest-Tracker 2 | 0.0.1   |                                               |
+| Application | Version | Developer | Repository |
+| --- | --- | --- | --- |
+| [Adguard Home](https://adguard.com/en/adguard-home/overview.html) | 0.0.3 | AdGuard Team | [Repository](https://github.com/AdguardTeam/AdguardHome) |
+| [Chromium](https://www.chromium.org/chromium-projects/) | 0.0.3 | Chromium | [Repository](https://www.chromium.org/chromium-projects/) |
+| [Cloudflared](https://github.com/WisdomSky/CasaOS-Cloudflared) | 0.0.3 | WisdomSky | [Repository](https://github.com/WisdomSky/CasaOS-Cloudflared) |
+| [dash.](https://getdashdot.com/) | 0.0.2 | MauriceNino | [Repository](https://github.com/MauriceNino/dashdot) |
+| [Flame](https://github.com/pawelmalak/flame) | 0.0.2 | pawelmalak | [Repository](https://github.com/pawelmalak/flame) |
+| [Ghost](https://github.com/TryGhost/Ghost) | 0.0.6 | ghost | [Repository](https://github.com/TryGhost/Ghost) |
+| [Glances](https://github.com/nicolargo/glances) | 0.0.3 | nicolargo | [Repository](https://github.com/nicolargo/glances) |
+| [Guacamole](https://guacamole.apache.org/) | 0.0.4 | The Apache Software Foundation | [Repository](https://github.com/search?utf8=%E2%9C%93&q=repo:apache/guacamole-server+repo:apache/guacamole-client+repo:apache/guacamole-website&type=Repositories) |
+| [Homepage](https://github.com/Benphelps/Homepage) | 0.0.4 | Benphelps | [Repository](https://github.com/Benphelps/Homepage) |
+| [Portainer](https://www.portainer.io) | 0.0.7 | Portainer | [Repository](https://www.portainer.io/) |
+| [Scrypted](https://scrypted.app) | v0.139.0-noble-full | Koush | [Repository](https://github.com/koush/scrypted) |
+| [SpeedTest-Tracker](https://github.com/henrywhitaker3/Speedtest-Tracker) | 0.0.2 | hentrywhitaker3 | [Repository](https://github.com/henrywhitaker3/Speedtest-Tracker) |
+| [SpeedTest-Tracker 2](https://github.com/alexjustesen/Speedtest-Tracker) | 0.0.2 | alexjustesen | [Repository](https://github.com/alexjustesen/Speedtest-Tracker) |
+| [Uptime Kuma](https://uptime.kuma.pet) | 1.23.18 | Louis Lam | [Repository](https://github.com/louislam/uptime-kuma) |
+| [Wishlist](https://github.com/cmintey/wishlist) | 0.42.5 | cmintey | [Repository](https://github.com/cmintey/wishlist) |
+
 
 ## UI How to
 
