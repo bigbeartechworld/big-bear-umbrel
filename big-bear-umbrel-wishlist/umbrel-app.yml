@@ -4,7 +4,7 @@ name: Wishlist
 category: Collaboration Platforms
 version: "0.42.5"
 tagline: Self-hosted wishlist application
-icon: https://cdn.jsdelivr.net/gh/bigbeartechworld/big-bear-casaos/Apps/wishlist/logo.png
+icon: https://cdn.jsdelivr.net/gh/bigbeartechworld/big-bear-umbrel/big-bear-umbrel-wishlist/logo.png
 description: >
   Wishlist is a self-hosted wishlist application that you can share with your friends and family. You no longer have to wonder what to get your family for the holidays, simply check their wishlist and claim any available item!
 developer: cmintey
@@ -14,9 +14,9 @@ repo: https://github.com/cmintey/wishlist
 support: https://github.com/cmintey/wishlist/issues
 port: 3280
 gallery:
-  - https://cdn.jsdelivr.net/gh/bigbeartechworld/big-bear-casaos/Apps/wishlist/screenshot-1.png
-  - https://cdn.jsdelivr.net/gh/bigbeartechworld/big-bear-casaos/Apps/wishlist/screenshot-2.png
-  - https://cdn.jsdelivr.net/gh/bigbeartechworld/big-bear-casaos/Apps/wishlist/screenshot-3.png
+  - https://cdn.jsdelivr.net/gh/bigbeartechworld/big-bear-umbrel/big-bear-umbrel-wishlist/screenshot-1.png
+  - https://cdn.jsdelivr.net/gh/bigbeartechworld/big-bear-umbrel/big-bear-umbrel-wishlist/screenshot-2.png
+  - https://cdn.jsdelivr.net/gh/bigbeartechworld/big-bear-umbrel/big-bear-umbrel-wishlist/screenshot-3.png
 path: ""
 defaultPassword: ""
 releaseNotes: >
