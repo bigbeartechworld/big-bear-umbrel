@@ -6,6 +6,8 @@ jobs:
   get-last-commit-message:
     if: contains(github.head_ref, 'renovate/')
     runs-on: ubuntu-latest
+    outputs:
+      last_commit_message: ${{ steps.get-last-commit-message.outputs.last_commit_message }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4.2.2
@@ -17,7 +19,7 @@ jobs:
 
   update-config:
     needs: get-last-commit-message
-    if: "!contains(${{ needs.get-last-commit-message.outputs.last_commit_message }}, '[ready]')"
+    if: "!contains(needs.get-last-commit-message.outputs.last_commit_message, '[ready]')"
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -29,14 +31,59 @@ jobs:
         uses: jitterbit/get-changed-files@v1
         id: files
 
-      - name: Apply config update
+      - name: Extract version from PR and update configs
         run: |
+          # Get PR body to extract version information
+          PR_BODY="${{ github.event.pull_request.body }}"
+
           for changed_file in ${{ steps.files.outputs.all }}; do
-            if [[ $changed_file == "umbrel-app.yml" ]]; then
-              app_name=$(echo $changed_file | cut -d'/' -f 2)
-              echo "App name: $app_name"
-              # Assume the script updates the version automatically
-              ./.github/workflows/update-umbrel-version.sh $app_name
+            if [[ $changed_file == */docker-compose.yml ]]; then
+              app_dir=$(dirname $changed_file)
+              app_name=$(basename $app_dir)
+              echo "Processing app: $app_name in directory: $app_dir"
+              
+              # Extract the new version from the current docker-compose.yml file
+              # Use a robust approach: extract everything after the last colon, remove quotes, v prefix, and suffixes
+              extracted_version=$(grep "image:" "$changed_file" | sed 's/.*://' | sed 's/"//g' | sed 's/v//' | sed 's/-.*$//' | head -1)
+              
+              # Only use the extracted version if it looks like a valid version number (starts with digits.digits)
+              if echo "$extracted_version" | grep -qE '^[0-9]+\.[0-9]+'; then
+                new_version="$extracted_version"
+              else
+                new_version=""
+              fi
+              
+              if [[ -n "$new_version" ]]; then
+                echo "Found new version: $new_version"
+                
+                # Update umbrel-app.yml version
+                if [[ -f "$app_dir/umbrel-app.yml" ]]; then
+                  # Check if version is already correct
+                  current_version=$(sed -n 's/^version: "\([^"]*\)".*/\1/p' "$app_dir/umbrel-app.yml")
+                  if [[ -z "$current_version" ]]; then
+                    current_version=$(sed -n 's/^version: \([^ ]*\).*/\1/p' "$app_dir/umbrel-app.yml")
+                  fi
+                  
+                  if [[ "$current_version" != "$new_version" ]]; then
+                    # Update version, preserving quotes if they exist
+                    if grep -q 'version: "' "$app_dir/umbrel-app.yml"; then
+                      sed -i "s/version: \".*\"/version: \"$new_version\"/" "$app_dir/umbrel-app.yml"
+                    else
+                      sed -i "s/version: .*/version: \"$new_version\"/" "$app_dir/umbrel-app.yml"
+                    fi
+                    echo "Updated $app_dir/umbrel-app.yml version from $current_version to $new_version"
+                  else
+                    echo "Version in $app_dir/umbrel-app.yml is already up to date ($new_version)"
+                  fi
+                else
+                  echo "Warning: $app_dir/umbrel-app.yml not found"
+                fi
+              else
+                echo "Could not extract version from $changed_file"
+                # Debug: show the content of the file
+                echo "File content:"
+                cat "$changed_file"
+              fi
             fi
           done
 
@@ -53,7 +100,7 @@ jobs:
     needs:
       - update-config
       - get-last-commit-message
-    if: contains(${{ needs.get-last-commit-message.outputs.last_commit_message }}, '[ready]')
+    if: contains(needs.get-last-commit-message.outputs.last_commit_message, '[ready]')
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
