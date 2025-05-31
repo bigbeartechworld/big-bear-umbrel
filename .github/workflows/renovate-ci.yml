@@ -32,9 +32,11 @@ jobs:
         id: files
 
       - name: Extract version from PR and update configs
+        env:
+          PR_BODY: ${{ github.event.pull_request.body }}
         run: |
-          # Get PR body to extract version information
-          PR_BODY="${{ github.event.pull_request.body }}"
+          # Get PR body to extract version information - using environment variable to prevent command execution
+          echo "PR Body received (first 200 chars): ${PR_BODY:0:200}"
 
           for changed_file in ${{ steps.files.outputs.all }}; do
             if [[ $changed_file == */docker-compose.yml ]]; then
