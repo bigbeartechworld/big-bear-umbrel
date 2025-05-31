@@ -210,7 +210,7 @@ describe("Umbrel App configs", () => {
     expect(new Set(ids).size).toBe(apps.length);
   });
 
-  test("Port usage analysis", () => {
+  test("Each app should have a unique port", () => {
     const apps = getUmbrelAppConfigs();
     const ports = apps.map((app) => app.port);
     const uniquePorts = new Set(ports);
@@ -223,19 +223,21 @@ describe("Umbrel App configs", () => {
         duplicatePorts.includes(app.port)
       );
 
-      console.log("Apps with duplicate ports:");
-      appsWithDuplicatePorts.forEach((app) => {
-        console.log(`  ${app.id}: port ${app.port}`);
-      });
+      const conflictDetails = duplicatePorts
+        .map((port) => {
+          const conflictingApps = apps.filter((app) => app.port === port);
+          return `Port ${port}: ${conflictingApps
+            .map((app) => app.id)
+            .join(", ")}`;
+        })
+        .join("\n  ");
 
-      // This is now informational rather than a hard failure
-      console.log(
-        `Found ${uniquePorts.size} unique ports for ${apps.length} apps`
+      throw new Error(
+        `Port conflicts detected! Each app must have a unique port.\n\nConflicting apps:\n  ${conflictDetails}\n\nRun 'npm run fix-port-conflicts' to automatically generate new ports for conflicting apps.`
       );
     }
 
-    // For now, just ensure we have some ports defined
-    expect(uniquePorts.size).toBeGreaterThan(0);
+    expect(uniquePorts.size).toBe(apps.length);
   });
 
   describe("App directory structure", () => {

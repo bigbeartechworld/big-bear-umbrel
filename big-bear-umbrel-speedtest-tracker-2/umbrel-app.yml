@@ -12,7 +12,7 @@ website: https://github.com/alexjustesen/Speedtest-Tracker
 dependencies: []
 repo: https://github.com/alexjustesen/Speedtest-Tracker
 support: https://github.com/alexjustesen/Speedtest-Tracker/issues
-port: 7210
+port: 8001
 gallery:
   - https://github.com/alexjustesen/speedtest-tracker/raw/main/.github/screenshots/dashboard_screenshot.jpg
   - https://github.com/alexjustesen/speedtest-tracker/raw/main/.github/screenshots/results_screenshot.jpg

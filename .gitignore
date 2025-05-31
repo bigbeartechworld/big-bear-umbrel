@@ -5,3 +5,4 @@ github.secrets
 .nova
 .vscode/
 run.py
+scripts/*.js
