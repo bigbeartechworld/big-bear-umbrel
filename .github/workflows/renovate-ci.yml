@@ -38,51 +38,63 @@ jobs:
 
           for changed_file in ${{ steps.files.outputs.all }}; do
             if [[ $changed_file == */docker-compose.yml ]]; then
-              app_dir=$(dirname $changed_file)
-              app_name=$(basename $app_dir)
+              app_dir=$(dirname "$changed_file")
+              app_name=$(basename "$app_dir")
               echo "Processing app: $app_name in directory: $app_dir"
               
               # Extract the new version from the current docker-compose.yml file
-              # Use a robust approach: extract everything after the last colon, remove quotes, v prefix, and suffixes
-              extracted_version=$(grep "image:" "$changed_file" | sed 's/.*://' | sed 's/"//g' | sed 's/v//' | sed 's/-.*$//' | head -1)
-              
-              # Only use the extracted version if it looks like a valid version number (starts with digits.digits)
-              if echo "$extracted_version" | grep -qE '^[0-9]+\.[0-9]+'; then
-                new_version="$extracted_version"
-              else
-                new_version=""
-              fi
-              
-              if [[ -n "$new_version" ]]; then
-                echo "Found new version: $new_version"
+              # Use a more robust approach to handle complex version strings
+              if [[ -f "$changed_file" ]]; then
+                image_line=$(grep "image:" "$changed_file" | head -1)
+                echo "Image line: $image_line"
                 
-                # Update umbrel-app.yml version
-                if [[ -f "$app_dir/umbrel-app.yml" ]]; then
-                  # Check if version is already correct
-                  current_version=$(sed -n 's/^version: "\([^"]*\)".*/\1/p' "$app_dir/umbrel-app.yml")
-                  if [[ -z "$current_version" ]]; then
-                    current_version=$(sed -n 's/^version: \([^ ]*\).*/\1/p' "$app_dir/umbrel-app.yml")
-                  fi
+                # Extract the tag part after the colon, handling various formats
+                # Use awk to split on colon and get the last part (the tag)
+                tag_part=$(echo "$image_line" | awk -F':' '{print $NF}' | tr -d ' ')
+                echo "Tag part: '$tag_part'"
+                
+                # For this specific case, we want to keep the full version including suffixes
+                # Keep the full tag as extracted (including 'v' prefix if present)
+                new_version="$tag_part"
+                
+                echo "Extracted version: '$new_version'"
+                
+                if [[ -n "$new_version" ]]; then
+                  echo "Found new version: $new_version"
                   
-                  if [[ "$current_version" != "$new_version" ]]; then
-                    # Update version, preserving quotes if they exist
-                    if grep -q 'version: "' "$app_dir/umbrel-app.yml"; then
-                      sed -i "s/version: \".*\"/version: \"$new_version\"/" "$app_dir/umbrel-app.yml"
-                    else
-                      sed -i "s/version: .*/version: \"$new_version\"/" "$app_dir/umbrel-app.yml"
+                  # Update umbrel-app.yml version
+                  if [[ -f "$app_dir/umbrel-app.yml" ]]; then
+                    # Check if version is already correct
+                    current_version=$(sed -n 's/^version: "\([^"]*\)".*/\1/p' "$app_dir/umbrel-app.yml")
+                    if [[ -z "$current_version" ]]; then
+                      current_version=$(sed -n 's/^version: \([^ ]*\).*/\1/p' "$app_dir/umbrel-app.yml")
                     fi
-                    echo "Updated $app_dir/umbrel-app.yml version from $current_version to $new_version"
+                    
+                    echo "Current version: '$current_version'"
+                    echo "New version: '$new_version'"
+                    
+                    if [[ "$current_version" != "$new_version" ]]; then
+                      # Update version, preserving quotes if they exist
+                      if grep -q 'version: "' "$app_dir/umbrel-app.yml"; then
+                        sed -i "s/version: \".*\"/version: \"$new_version\"/" "$app_dir/umbrel-app.yml"
+                      else
+                        sed -i "s/version: .*/version: \"$new_version\"/" "$app_dir/umbrel-app.yml"
+                      fi
+                      echo "Updated $app_dir/umbrel-app.yml version from '$current_version' to '$new_version'"
+                    else
+                      echo "Version in $app_dir/umbrel-app.yml is already up to date ($new_version)"
+                    fi
                   else
-                    echo "Version in $app_dir/umbrel-app.yml is already up to date ($new_version)"
+                    echo "Warning: $app_dir/umbrel-app.yml not found"
                   fi
                 else
-                  echo "Warning: $app_dir/umbrel-app.yml not found"
+                  echo "Could not extract version from $changed_file"
+                  # Debug: show the content of the file
+                  echo "File content:"
+                  cat "$changed_file"
                 fi
               else
-                echo "Could not extract version from $changed_file"
-                # Debug: show the content of the file
-                echo "File content:"
-                cat "$changed_file"
+                echo "Warning: File $changed_file does not exist"
               fi
             fi
           done
