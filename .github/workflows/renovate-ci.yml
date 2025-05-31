@@ -126,15 +126,51 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
             const body = context.payload.pull_request.body;
-            // Regex to find markdown table rows and check if any have 'major' in the Update column
-            const regex = /(?<=\|\s\[)(?:[^\]]+\]\(https?:\/\/[^\s\)]+\)\s\|\s)(major)(?=\s\|)/gi;
-            const isMajorUpdate = regex.test(body);
+            console.log("PR Body:", body);
+
+            // Look for markdown table format and check if any row has 'major' in the Update column
+            // The table format is: | Package | Update | Change |
+            // We want to find lines that have 'major' in the second column (Update column)
+
+            let isMajorUpdate = false;
+
+            if (body) {
+              // Split the body into lines
+              const lines = body.split('\n');
+              
+              // Look for table rows (lines that start and end with |)
+              for (const line of lines) {
+                const trimmedLine = line.trim();
+                
+                // Skip header lines and separator lines
+                if (trimmedLine.startsWith('|') && 
+                    trimmedLine.endsWith('|') && 
+                    !trimmedLine.includes('---') && 
+                    !trimmedLine.toLowerCase().includes('package')) {
+                  
+                  // Split the line by | and get the columns
+                  const columns = trimmedLine.split('|').map(col => col.trim());
+                  
+                  // Check if we have at least 3 columns (Package, Update, Change)
+                  if (columns.length >= 4) { // 4 because of empty strings at start/end
+                    const updateColumn = columns[2]; // Second column (index 2, accounting for empty first element)
+                    console.log("Checking update column:", updateColumn);
+                    
+                    if (updateColumn && updateColumn.toLowerCase().includes('major')) {
+                      console.log("Found major update in line:", trimmedLine);
+                      isMajorUpdate = true;
+                      break;
+                    }
+                  }
+                }
+              }
+            }
 
             if (isMajorUpdate) {
-              console.log("Found a major version bump.");
+              console.log("Found a major version bump - automerge disabled.");
               core.setOutput("automerge", "false");
             } else {
-              console.log("No major version bump found.");
+              console.log("No major version bump found - automerge enabled.");
               core.setOutput("automerge", "true");
             }
 
