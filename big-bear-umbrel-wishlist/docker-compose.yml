@@ -1,0 +1,31 @@
+version: "3.7"
+
+services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-wishlist_server_1
+      APP_PORT: 3280
+
+  server:
+    # Docker image to use
+    image: ghcr.io/cmintey/wishlist:v0.42.5
+    # Restart the container on failure
+    restart: on-failure
+    # Stop the container with a grace period of 1 minute
+    stop_grace_period: 1m
+    # Environment variables for service configuration
+    # These settings control the Flask application behavior and default admin credentials
+    environment:
+      # If behind a reverse proxy, set this to your domain
+      ORIGIN: ""
+      # Hours until signup and password reset tokens expire
+      TOKEN_TIME: "72"
+      # The currency to use when a product search does not return a currency
+      DEFAULT_CURRENCY: USD
+      # Set the logging level: trace | debug | info | warn | error | fatal | silent
+      LOG_LEVEL: info
+    # Volume mappings required for system integration
+    # These mounts allow the container to interact with the host system
+    volumes:
+      - ${APP_DATA_DIR}/uploads/:/usr/src/app/uploads
+      - ${APP_DATA_DIR}/data/:/usr/src/app/data
