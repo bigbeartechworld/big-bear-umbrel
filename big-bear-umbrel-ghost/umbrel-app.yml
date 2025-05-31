@@ -2,7 +2,7 @@ manifestVersion: 1
 id: big-bear-umbrel-ghost
 name: Ghost
 category: Developer Tools
-version: "5.120.3"
+version: "5.120.3-alpine"
 tagline: Ghost is a free and open source blogging platform written in JavaScript
 icon: https://i.imgur.com/5RJJOqw.png
 description: >
