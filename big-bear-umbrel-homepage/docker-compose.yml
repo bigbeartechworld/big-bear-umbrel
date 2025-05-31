@@ -8,6 +8,8 @@ services:
 
   server:
     image: ghcr.io/gethomepage/homepage:v1.2.0
+    environment:
+      - HOMEPAGE_ALLOWED_HOSTS=*
     volumes:
       - ${APP_DATA_DIR}/data/homepage:/app/config # Make sure your local config directory exists
       - /var/run/docker.sock:/var/run/docker.sock:ro # (optional) For docker integrations
