@@ -1,0 +1,25 @@
+manifestVersion: 1
+id: big-bear-umbrel-btop
+name: btop
+category: System Monitoring
+version: "0.1.2"
+tagline: A monitor of resources
+icon: https://cdn.jsdelivr.net/gh/aristocratos/btop/Img/icon.png
+description: >
+  A monitor of resources. Software made by Aristocratos at https://github.com/aristocratos/btop
+developer: bigbeartechworld
+website: https://github.com/bigbeartechworld/big-bear-docker-images
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-docker-images
+support: https://github.com/bigbeartechworld/big-bear-docker-images/issues
+port: 7681
+gallery:
+  # - https://cdn.jsdelivr.net/gh/bigbeartechworld/big-bear-umbrel/big-bear-umbrel-btop/screenshot-1.png
+  # - https://cdn.jsdelivr.net/gh/bigbeartechworld/big-bear-umbrel/big-bear-umbrel-btop/screenshot-2.png
+  # - https://cdn.jsdelivr.net/gh/bigbeartechworld/big-bear-umbrel/big-bear-umbrel-btop/screenshot-3.png
+path: ""
+defaultPassword: ""
+releaseNotes: >
+  A monitor of resources. Software made by Aristocratos at https://github.com/aristocratos/btop
+submitter: BigBearTechWorld
+submission:
