@@ -2,7 +2,7 @@ manifestVersion: 1
 id: big-bear-umbrel-flame
 name: Flame
 category: Dashboards
-version: "0.0.2"
+version: "2.3.1"
 tagline: Self-hosted flame
 icon: https://i.imgur.com/TzyTrX0.png
 description: >

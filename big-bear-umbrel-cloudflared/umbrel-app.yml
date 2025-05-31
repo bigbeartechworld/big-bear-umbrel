@@ -2,7 +2,7 @@ manifestVersion: 1
 id: big-bear-umbrel-cloudflared
 name: Cloudflared
 category: Networking
-version: "0.0.3"
+version: "2023.7.3"
 tagline: A tunneling daemon by Cloudflare that safely exposes your localhost into the web.
 icon: https://i.imgur.com/ZJBedYy.png
 description: >

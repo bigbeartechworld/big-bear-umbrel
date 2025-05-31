@@ -2,7 +2,7 @@ manifestVersion: 1
 id: big-bear-umbrel-chromium
 name: Chromium
 category: Developer Tools
-version: "0.0.3"
+version: "a4879cda-ls125"
 tagline: Self-hosted browser that runs in a container
 icon: https://i.imgur.com/RzEdgMc.png
 description: >

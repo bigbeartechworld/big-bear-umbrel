@@ -2,7 +2,7 @@ manifestVersion: 1
 id: big-bear-umbrel-homepage
 name: Homepage
 category: Dashboards
-version: "0.0.4"
+version: "1.2.0"
 tagline: Self-hosted homepage
 icon: https://i.imgur.com/nAu5Zna.png
 description: >
