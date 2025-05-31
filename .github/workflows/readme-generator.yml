@@ -1,0 +1,56 @@
+name: Readme Generator
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 0 * * *"
+
+jobs:
+  generate-readme-file:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4.2.2
+        with:
+          fetch-depth: 0 # Fetch all history
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "18"
+
+      - name: Generate new README.md file
+        run: node .github/scripts/readme-generator.cjs
+
+      - name: Create Pull Request
+        id: create-pr
+        uses: peter-evans/create-pull-request@v6
+        with:
+          token: ${{ secrets.PERSONAL_TOKEN }}
+          commit-message: |
+            docs: regenerate readme app list
+          # committer: GitHub <noreply@github.com>
+          # author: GitHub <noreply@github.com>
+          branch: bot/readme-update
+          title: |
+            readme-generator: update readme
+          labels: bot
+
+      - name: Label this PR as "automerge"
+        uses: actions/github-script@v7
+        env:
+          PULL_NUMBER: ${{ steps.create-pr.outputs.pull-request-number }}
+        with:
+          github-token: ${{ secrets.PERSONAL_TOKEN }}
+          script: |
+            const pullNumber = process.env.PULL_NUMBER ? parseInt(process.env.PULL_NUMBER) : null;
+            if (pullNumber) {
+              github.rest.issues.addLabels({
+                issue_number: pullNumber,
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                labels: ["automerge"]
+              });
+            } else {
+              console.log("No pull request number found.");
+            }
