@@ -1,0 +1,23 @@
+manifestVersion: 1
+id: big-bear-umbrel-omni-tools
+name: Omni Tools
+category: Developer Tools
+version: "0.4.0"
+tagline: Self-hosted Omni Tools application
+icon: https://cdn.jsdelivr.net/gh/bigbeartechworld/big-bear-umbrel/big-bear-umbrel-omni-tools/logo.png
+description: >
+  Self-hosted collection of powerful web-based tools for everyday tasks. No ads, no tracking, just fast, accessible utilities right from your browser!
+developer: iib0011
+website: https://github.com/iib0011/omni-tools
+dependencies: []
+repo: https://github.com/iib0011/omni-tools
+support: https://github.com/iib0011/omni-tools/issues
+port: 8400
+gallery:
+  - https://cdn.jsdelivr.net/gh/bigbeartechworld/big-bear-umbrel/big-bear-umbrel-omni-tools/screenshot-1.png
+path: ""
+defaultPassword: ""
+releaseNotes: >
+  Full changelog for versions can be found here: https://github.com/iib0011/omni-tools/releases
+submitter: BigBearTechWorld
+submission:
