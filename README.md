@@ -24,6 +24,7 @@ If you have a suggestion for an app, please post in the [BigBearCommunity](https
 | [Glances](https://github.com/nicolargo/glances) | 4.3.0.8-full | nicolargo | [Repository](https://github.com/nicolargo/glances) |
 | [Guacamole](https://guacamole.apache.org/) | 1.5.5 | The Apache Software Foundation | [Repository](https://github.com/search?utf8=%E2%9C%93&q=repo:apache/guacamole-server+repo:apache/guacamole-client+repo:apache/guacamole-website&type=Repositories) |
 | [Homepage](https://github.com/Benphelps/Homepage) | v1.3.0 | Benphelps | [Repository](https://github.com/Benphelps/Homepage) |
+| [Omni Tools](https://github.com/iib0011/omni-tools) | 0.4.0 | iib0011 | [Repository](https://github.com/iib0011/omni-tools) |
 | [Portainer](https://www.portainer.io) | 2.30.1 | Portainer | [Repository](https://www.portainer.io/) |
 | [Scrypted](https://scrypted.app) | v0.140.0-noble-full | Koush | [Repository](https://github.com/koush/scrypted) |
 | [SpeedTest-Tracker](https://github.com/henrywhitaker3/Speedtest-Tracker) | 0.0.2 | hentrywhitaker3 | [Repository](https://github.com/henrywhitaker3/Speedtest-Tracker) |
