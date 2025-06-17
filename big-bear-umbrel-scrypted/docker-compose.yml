@@ -2,7 +2,7 @@ version: "3.7"
 
 services:
   server:
-    image: koush/scrypted:v0.140.0-noble-full
+    image: koush/scrypted:v0.140.1-noble-full
     environment:
       - SCRYPTED_WEBHOOK_UPDATE_AUTHORIZATION=Bearer 43282fb9-27e4-4d93-b3c5-6c333ae4671f
       - SCRYPTED_WEBHOOK_UPDATE=http://localhost:10444/v1/update
