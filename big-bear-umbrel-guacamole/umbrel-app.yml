@@ -2,7 +2,7 @@ manifestVersion: 1
 id: big-bear-umbrel-guacamole
 name: Guacamole
 category: Developer Tools
-version: "1.5.5"
+version: "1.6.0"
 tagline: Apache Guacamole is a clientless remote desktop gateway supporting protocols like VNC and RDP.
 icon: https://i.imgur.com/pxcsqyl.png
 description: >
