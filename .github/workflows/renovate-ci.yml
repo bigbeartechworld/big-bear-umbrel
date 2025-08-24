@@ -10,7 +10,7 @@ jobs:
       last_commit_message: ${{ steps.get-last-commit-message.outputs.last_commit_message }}
     steps:
       - name: Checkout
-        uses: actions/checkout@v4.2.2
+        uses: actions/checkout@v4.3.0
 
       - name: Get last commit message
         id: get-last-commit-message
@@ -23,7 +23,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4.2.2
+        uses: actions/checkout@v4.3.0
         with:
           fetch-depth: 0 # Fetch all history
 
