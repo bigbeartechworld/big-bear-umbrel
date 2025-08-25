@@ -2,7 +2,7 @@ manifestVersion: 1
 id: big-bear-umbrel-portainer
 name: Portainer
 category: Developer Tools
-version: "2.31.0"
+version: "2.33.0"
 tagline: Self-hosted container management
 icon: https://github.com/walkxcode/dashboard-icons/blob/main/png/portainer-alt.png?raw=true
 description: >
