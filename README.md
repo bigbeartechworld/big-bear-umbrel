@@ -14,23 +14,23 @@ If you have a suggestion for an app, please post in the [BigBearCommunity](https
 
 | Application | Version | Developer | Repository |
 | --- | --- | --- | --- |
-| [Adguard Home](https://adguard.com/en/adguard-home/overview.html) | v0.107.62 | AdGuard Team | [Repository](https://github.com/AdguardTeam/AdguardHome) |
-| [btop](https://github.com/bigbeartechworld/big-bear-docker-images) | 0.1.2 | bigbeartechworld | [Repository](https://github.com/bigbeartechworld/big-bear-docker-images) |
+| [Adguard Home](https://adguard.com/en/adguard-home/overview.html) | v0.107.65 | AdGuard Team | [Repository](https://github.com/AdguardTeam/AdguardHome) |
+| [btop](https://github.com/bigbeartechworld/big-bear-docker-images) | 0.1.3 | bigbeartechworld | [Repository](https://github.com/bigbeartechworld/big-bear-docker-images) |
 | [Chromium](https://www.chromium.org/chromium-projects/) | a4879cda-ls125 | Chromium | [Repository](https://www.chromium.org/chromium-projects/) |
 | [Cloudflared](https://github.com/WisdomSky/CasaOS-Cloudflared) | 2023.7.3 | WisdomSky | [Repository](https://github.com/WisdomSky/CasaOS-Cloudflared) |
 | [dash.](https://getdashdot.com/) | 6.0.0 | MauriceNino | [Repository](https://github.com/MauriceNino/dashdot) |
 | [Flame](https://github.com/pawelmalak/flame) | 2.3.1 | pawelmalak | [Repository](https://github.com/pawelmalak/flame) |
-| [Ghost](https://github.com/TryGhost/Ghost) | 5.121.0-alpine | ghost | [Repository](https://github.com/TryGhost/Ghost) |
+| [Ghost](https://github.com/TryGhost/Ghost) | 5.123.0-alpine | ghost | [Repository](https://github.com/TryGhost/Ghost) |
 | [Glances](https://github.com/nicolargo/glances) | 4.3.0.8-full | nicolargo | [Repository](https://github.com/nicolargo/glances) |
-| [Guacamole](https://guacamole.apache.org/) | 1.5.5 | The Apache Software Foundation | [Repository](https://github.com/search?utf8=%E2%9C%93&q=repo:apache/guacamole-server+repo:apache/guacamole-client+repo:apache/guacamole-website&type=Repositories) |
+| [Guacamole](https://guacamole.apache.org/) | 1.6.0 | The Apache Software Foundation | [Repository](https://github.com/search?utf8=%E2%9C%93&q=repo:apache/guacamole-server+repo:apache/guacamole-client+repo:apache/guacamole-website&type=Repositories) |
 | [Homepage](https://github.com/Benphelps/Homepage) | v1.3.0 | Benphelps | [Repository](https://github.com/Benphelps/Homepage) |
 | [Omni Tools](https://github.com/iib0011/omni-tools) | 0.4.0 | iib0011 | [Repository](https://github.com/iib0011/omni-tools) |
-| [Portainer](https://www.portainer.io) | 2.30.1 | Portainer | [Repository](https://www.portainer.io/) |
-| [Scrypted](https://scrypted.app) | v0.140.0-noble-full | Koush | [Repository](https://github.com/koush/scrypted) |
+| [Portainer](https://www.portainer.io) | 2.31.0 | Portainer | [Repository](https://www.portainer.io/) |
+| [Scrypted](https://scrypted.app) | v0.140.1-noble-full | Koush | [Repository](https://github.com/koush/scrypted) |
 | [SpeedTest-Tracker](https://github.com/henrywhitaker3/Speedtest-Tracker) | 0.0.2 | hentrywhitaker3 | [Repository](https://github.com/henrywhitaker3/Speedtest-Tracker) |
-| [SpeedTest-Tracker 2](https://github.com/alexjustesen/Speedtest-Tracker) | 1.6.0 | alexjustesen | [Repository](https://github.com/alexjustesen/Speedtest-Tracker) |
+| [SpeedTest-Tracker 2](https://github.com/alexjustesen/Speedtest-Tracker) | 1.6.1" | alexjustesen | [Repository](https://github.com/alexjustesen/Speedtest-Tracker) |
 | [Uptime Kuma](https://uptime.kuma.pet) | 1.23.16 | Louis Lam | [Repository](https://github.com/louislam/uptime-kuma) |
-| [Wishlist](https://github.com/cmintey/wishlist) | v0.42.5 | cmintey | [Repository](https://github.com/cmintey/wishlist) |
+| [Wishlist](https://github.com/cmintey/wishlist) | v0.43.0 | cmintey | [Repository](https://github.com/cmintey/wishlist) |
 
 
 ## UI How to
