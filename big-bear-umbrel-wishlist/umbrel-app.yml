@@ -2,7 +2,7 @@ manifestVersion: 1
 id: big-bear-umbrel-wishlist
 name: Wishlist
 category: Collaboration Platforms
-version: "v0.43.0"
+version: "v0.49.0"
 tagline: Self-hosted wishlist application
 icon: https://cdn.jsdelivr.net/gh/bigbeartechworld/big-bear-umbrel/big-bear-umbrel-wishlist/logo.png
 description: >
