@@ -2,7 +2,7 @@ manifestVersion: 1
 id: big-bear-umbrel-dashdot
 name: dash.
 category: Dashboards
-version: "6.0.0"
+version: "6.2.0"
 tagline: Self-hosted dash.
 icon: https://i.imgur.com/BcoQO4Y.png
 description: >
