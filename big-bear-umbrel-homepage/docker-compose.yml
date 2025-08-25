@@ -7,7 +7,7 @@ services:
       APP_PORT: 3000
 
   server:
-    image: ghcr.io/gethomepage/homepage:v1.3.0
+    image: ghcr.io/gethomepage/homepage:v1.4.6
     environment:
       - HOMEPAGE_ALLOWED_HOSTS=*
     volumes:
