@@ -7,7 +7,7 @@ services:
       APP_PORT: 3001
 
   server:
-    image: mauricenino/dashdot:6.0.0
+    image: mauricenino/dashdot:6.2.0
     volumes:
       - /:/mnt/host:ro
     environment:
