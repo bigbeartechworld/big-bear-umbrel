@@ -8,7 +8,7 @@ services:
 
   server:
     # Docker image to use
-    image: iib0011/omni-tools:0.4.0
+    image: iib0011/omni-tools:0.5.0
     # Restart the container on failure
     restart: on-failure
     # Stop the container with a grace period of 1 minute

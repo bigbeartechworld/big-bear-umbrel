@@ -2,7 +2,7 @@ manifestVersion: 1
 id: big-bear-umbrel-omni-tools
 name: Omni Tools
 category: Developer Tools
-version: "0.4.0"
+version: "0.5.0"
 tagline: Self-hosted Omni Tools application
 icon: https://cdn.jsdelivr.net/gh/bigbeartechworld/big-bear-umbrel/big-bear-umbrel-omni-tools/logo.png
 description: >
