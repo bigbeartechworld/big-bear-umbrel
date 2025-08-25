@@ -8,7 +8,7 @@ services:
 
   server:
     # Docker image to use
-    image: ghcr.io/cmintey/wishlist:v0.43.0
+    image: ghcr.io/cmintey/wishlist:v0.49.0
     # Restart the container on failure
     restart: on-failure
     # Stop the container with a grace period of 1 minute
