@@ -2,7 +2,7 @@ manifestVersion: 1
 id: big-bear-umbrel-speedtest-tracker-2
 name: SpeedTest-Tracker 2
 category: Networking
-version: "1.6.5""
+version: "1.6.6""
 tagline: Self-hosted speedtest-tracker
 icon: https://github.com/alexjustesen/speedtest-tracker/blob/main/public/img/speedtest-tracker-icon.png?raw=true
 description: >
