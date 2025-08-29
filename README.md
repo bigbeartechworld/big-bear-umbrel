@@ -19,6 +19,7 @@ If you have a suggestion for an app, please post in the [BigBearCommunity](https
 | [Chromium](https://www.chromium.org/chromium-projects/) | a4879cda-ls125 | Chromium | [Repository](https://www.chromium.org/chromium-projects/) |
 | [Cloudflared](https://github.com/WisdomSky/CasaOS-Cloudflared) | 2023.7.3 | WisdomSky | [Repository](https://github.com/WisdomSky/CasaOS-Cloudflared) |
 | [dash.](https://getdashdot.com/) | 6.2.0 | MauriceNino | [Repository](https://github.com/MauriceNino/dashdot) |
+| [Dockpeek](https://github.com/dockpeek/dockpeek) | 1.5.5 | dockpeek | [Repository](https://github.com/dockpeek/dockpeek) |
 | [Flame](https://github.com/pawelmalak/flame) | 2.3.1 | pawelmalak | [Repository](https://github.com/pawelmalak/flame) |
 | [Ghost](https://github.com/TryGhost/Ghost) | 5.130.4-alpine | ghost | [Repository](https://github.com/TryGhost/Ghost) |
 | [Glances](https://github.com/nicolargo/glances) | 4.3.0.8-full | nicolargo | [Repository](https://github.com/nicolargo/glances) |
