@@ -8,7 +8,7 @@ services:
 
   server:
     # Docker image to use
-    image: bigbeartechworld/big-bear-btop:0.1.3
+    image: bigbeartechworld/big-bear-btop:0.1.4
     # Restart the container on failure
     restart: on-failure
     # Stop the container with a grace period of 1 minute
