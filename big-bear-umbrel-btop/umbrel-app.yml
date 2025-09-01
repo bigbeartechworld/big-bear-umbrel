@@ -2,7 +2,7 @@ manifestVersion: 1
 id: big-bear-umbrel-btop
 name: btop
 category: System Monitoring
-version: "0.1.3"
+version: "0.1.4"
 tagline: A monitor of resources
 icon: https://cdn.jsdelivr.net/gh/aristocratos/btop/Img/icon.png
 description: >
