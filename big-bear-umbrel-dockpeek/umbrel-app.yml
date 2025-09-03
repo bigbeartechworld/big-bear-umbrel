@@ -2,7 +2,7 @@ manifestVersion: 1
 id: big-bear-umbrel-dockpeek
 name: Dockpeek
 category: System Monitoring
-version: "v1.5.6"
+version: "v1.5.7"
 tagline: Docker Port Dashboard for Easy Container Access
 icon: https://raw.githubusercontent.com/dockpeek/dockpeek/main/static/logo_2.svg
 description: >
