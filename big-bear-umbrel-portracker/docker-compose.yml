@@ -1,0 +1,27 @@
+version: "3.7"
+
+services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-portracker_server_1
+      APP_PORT: 4999
+
+  server:
+    image: mostafawahied/portracker:1.1
+    restart: unless-stopped
+    stop_grace_period: 1m
+    pid: "host"
+    cap_add:
+      - SYS_PTRACE
+      - SYS_ADMIN
+    security_opt:
+      - apparmor:unconfined
+    volumes:
+      - ${APP_DATA_DIR}/data:/data
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+    healthcheck:
+      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:4999/api/health"]
+      interval: 30s
+      timeout: 10s
+      start_period: 30s
+      retries: 3
