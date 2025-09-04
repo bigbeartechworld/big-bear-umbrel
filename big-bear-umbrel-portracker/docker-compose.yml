@@ -7,7 +7,7 @@ services:
       APP_PORT: 4999
 
   server:
-    image: mostafawahied/portracker:latest
+    image: mostafawahied/portracker:1.1
     restart: unless-stopped
     stop_grace_period: 1m
     pid: "host"
