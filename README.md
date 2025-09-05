@@ -27,6 +27,7 @@ If you have a suggestion for an app, please post in the [BigBearCommunity](https
 | [Homepage](https://github.com/Benphelps/Homepage) | v1.4.6 | Benphelps | [Repository](https://github.com/Benphelps/Homepage) |
 | [Omni Tools](https://github.com/iib0011/omni-tools) | 0.5.0 | iib0011 | [Repository](https://github.com/iib0011/omni-tools) |
 | [Portainer](https://www.portainer.io) | 2.33.1 | Portainer | [Repository](https://www.portainer.io/) |
+| [ProTracker](https://github.com/bigbeartechworld/big-bear-docker-images) | 1.1 | bigbeartechworld | [Repository](https://github.com/Mostafa-Wahied/portracker) |
 | [Scrypted](https://scrypted.app) | v0.142.6-noble-full | Koush | [Repository](https://github.com/koush/scrypted) |
 | [SpeedTest-Tracker](https://github.com/henrywhitaker3/Speedtest-Tracker) | 0.0.2 | hentrywhitaker3 | [Repository](https://github.com/henrywhitaker3/Speedtest-Tracker) |
 | [SpeedTest-Tracker 2](https://github.com/alexjustesen/Speedtest-Tracker) | 1.6.6" | alexjustesen | [Repository](https://github.com/alexjustesen/Speedtest-Tracker) |
