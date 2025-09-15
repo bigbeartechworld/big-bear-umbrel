@@ -10,7 +10,7 @@ jobs:
       last_commit_message: ${{ steps.get-last-commit-message.outputs.last_commit_message }}
     steps:
       - name: Checkout
-        uses: actions/checkout@v4.3.0
+        uses: actions/checkout@v5.0.0
 
       - name: Get last commit message
         id: get-last-commit-message
@@ -23,7 +23,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4.3.0
+        uses: actions/checkout@v5.0.0
         with:
           fetch-depth: 0 # Fetch all history
 
@@ -117,7 +117,7 @@ jobs:
     if: contains(needs.get-last-commit-message.outputs.last_commit_message, '[ready]')
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       - name: Analyze PR for Major Version Bump
         id: analyze
