@@ -1,0 +1,25 @@
+manifestVersion: 1
+id: big-bear-umbrel-libretranslate
+category: BigBearCasaOS
+name: LibreTranslate
+version: "1.7.3"
+tagline: Free and Open Source Machine Translation API. 100% self-hosted, offline capable and easy to setup.
+description: >-
+  Free and Open Source Machine Translation API, entirely self-hosted. Unlike other APIs, it doesn't rely on proprietary providers such as Google or Azure to perform translations. Instead, its translation engine is powered by the open source Argos Translate library.
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: LibreTranslate
+website: 
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-casaos
+support: https://github.com/bigbeartechworld/big-bear-casaos/issues
+port: 5000
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-casaos

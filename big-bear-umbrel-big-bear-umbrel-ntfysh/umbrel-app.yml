@@ -1,0 +1,25 @@
+manifestVersion: 1
+id: big-bear-umbrel-ntfysh
+category: BigBearCasaOS
+name: Ntfy.sh
+version: "2.14.0"
+tagline: A simple HTTP-based pub-sub notification service
+description: >-
+  ntfy (pronounced notify) is a simple HTTP-based pub-sub notification service. It allows you to send notifications to your phone or desktop via scripts from any computer, and/or using a REST API. It's infinitely flexible, and 100% free software.
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: 
+website: 
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-casaos
+support: https://github.com/bigbeartechworld/big-bear-casaos/issues
+port: target
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-casaos

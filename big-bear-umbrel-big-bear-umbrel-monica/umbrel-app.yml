@@ -1,0 +1,25 @@
+manifestVersion: 1
+id: big-bear-umbrel-monica
+category: BigBearCasaOS
+name: Monica
+version: "4.1.2"
+tagline: A Personal Relationship Management tool to help you document your social life.
+description: >-
+  Monica is an open-source web application to organize and record your interactions with your loved ones. We call it a PRM, or Personal Relationship Management. Think of it as a CRM (a popular tool used by sales teams in the corporate world) for your friends or family.
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: monica
+website: 
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-casaos
+support: https://github.com/bigbeartechworld/big-bear-casaos/issues
+port: 8080
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-casaos

@@ -1,0 +1,25 @@
+manifestVersion: 1
+id: big-bear-umbrel-codex-docs
+category: BigBearCasaOS
+name: CodeX Docs
+version: "2.2"
+tagline: CodeX Docs
+description: >-
+  CodeX Docs is a free docs application. It's based on Editor.js ecosystem which gives all modern opportunities for working with content.
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: 
+website: 
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-casaos
+support: https://github.com/bigbeartechworld/big-bear-casaos/issues
+port: 3000
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-casaos

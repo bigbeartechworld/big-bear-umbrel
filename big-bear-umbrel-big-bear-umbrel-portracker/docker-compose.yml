@@ -1,0 +1,36 @@
+# Configuration for Portracker setup
+
+# Name of the big-bear-portracker application
+name: big-bear-portracker
+# Service definitions for the big-bear-portracker application
+services:
+  # Service name: big-bear-portracker
+  # The `big-bear-portracker` service definition
+  big-bear-portracker:
+    # Name of the container
+    container_name: big-bear-portracker
+    # Image to be used for the container
+    image: mostafawahied/portracker:1.1
+    # Container restart policy
+    restart: unless-stopped
+    # Environment variables for service configuration
+    environment:
+      - PORT=4999
+      - DATABASE_PATH=/data/portracker.db
+      - TRUSTED_LOCAL_EMAIL=your@email.com
+      - CACHE_TIMEOUT_MS=30000
+      - DISABLE_CACHE=false
+      - INCLUDE_UDP=false
+      - DEBUG=false
+    # Volumes to be mounted to the container
+    volumes:
+      - ${APP_DATA_DIR}/data:/data
+      - /var/run/docker.sock:/var/run/docker.sock
+    # Ports mapping between host and container
+    ports:
+      # Mapping port 4999 of the host to port 4999 of the container
+      - "4999:4999"
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-portracker_big-bear-portracker_1
+      APP_PORT: "4999"

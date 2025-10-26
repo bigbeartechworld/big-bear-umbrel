@@ -1,0 +1,25 @@
+manifestVersion: 1
+id: big-bear-umbrel-fastfetch
+category: BigBearCasaOS
+name: Fastfetch
+version: "0.0.4"
+tagline: Fastfetch is a neofetch-like tool.
+description: >-
+  Fastfetch is a neofetch-like tool for fetching system information and displaying it prettily. It is written mainly in C, with performance and customizability in mind. Currently, Linux, Android, FreeBSD, macOS, SunOS and Windows 7+ are supported. https://github.com/fastfetch-cli/fastfetch
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: bigbeartechworld
+website: 
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-casaos
+support: https://github.com/bigbeartechworld/big-bear-casaos/issues
+port: 7681
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-casaos

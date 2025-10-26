@@ -1,0 +1,25 @@
+manifestVersion: 1
+id: big-bear-umbrel-gotify
+category: BigBearCasaOS
+name: Gotify
+version: "2.7.3"
+tagline: Gotify
+description: >-
+  a simple server for sending and receiving messages
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: gotify
+website: 
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-casaos
+support: https://github.com/bigbeartechworld/big-bear-casaos/issues
+port: 8091
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-casaos

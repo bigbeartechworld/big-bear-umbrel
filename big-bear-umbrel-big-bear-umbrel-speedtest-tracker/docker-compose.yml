@@ -1,0 +1,53 @@
+# Configuration for speedtest-tracker setup
+
+# Name of the big-bear-speedtest-tracker application
+name: big-bear-speedtest-tracker
+# Service definitions for the big-bear-speedtest-tracker application
+services:
+  # Service name: app
+  big-bear-speedtest-tracker:
+    container_name: big-bear-speedtest-tracker
+    ports:
+      - "8080:80"
+      - "8443:443"
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - DB_CONNECTION=mysql
+      - DB_HOST=big-bear-speedtest-tracker-db
+      - DB_PORT=3306
+      - DB_DATABASE=speedtest_tracker
+      - DB_USERNAME=casaos
+      - DB_PASSWORD=casaos
+      - TZ=America/Chicago
+    volumes:
+      - "/etc/localtime:/etc/localtime:ro"
+      - "${APP_DATA_DIR}/config:/config"
+      - "${APP_DATA_DIR}/web:/etc/ssl/web"
+    image: "linuxserver/speedtest-tracker:1.6.8"
+    restart: unless-stopped
+    depends_on:
+      - big-bear-speedtest-tracker-db
+    networks:
+      - big_bear_speedtest_tracker_network
+  big-bear-speedtest-tracker-db:
+    image: mariadb:10
+    container_name: big-bear-speedtest-tracker-db
+    restart: always
+    environment:
+      - MARIADB_DATABASE=speedtest_tracker
+      - MARIADB_USER=casaos
+      - MARIADB_PASSWORD=casaos
+      - MARIADB_RANDOM_ROOT_PASSWORD=true
+    volumes:
+      - "${APP_DATA_DIR}/mysql:/var/lib/mysql"
+    networks:
+      - big_bear_speedtest_tracker_network
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-speedtest-tracker_big-bear-speedtest-tracker_1
+      APP_PORT: "8080"
+# Network definition for the big-bear-speedtest-tracker application
+networks:
+  big_bear_speedtest_tracker_network:
+    driver: bridge

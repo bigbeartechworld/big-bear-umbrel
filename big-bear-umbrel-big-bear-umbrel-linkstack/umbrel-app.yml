@@ -1,0 +1,25 @@
+manifestVersion: 1
+id: big-bear-umbrel-linkstack
+category: BigBearCasaOS
+name: LinkStack
+version: "V4"
+tagline: Your all-in-one link sharing solution
+description: >-
+  LinkStack is a link-in-bio tool that allows you to create a personalized and easily customizable page that houses all the important links you want to share with your audience.
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: LinkStackOrg
+website: 
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-casaos
+support: https://github.com/bigbeartechworld/big-bear-casaos/issues
+port: 8080
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-casaos

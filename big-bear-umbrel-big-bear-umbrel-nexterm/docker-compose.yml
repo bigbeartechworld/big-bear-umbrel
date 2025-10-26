@@ -1,0 +1,27 @@
+# Configuration for nexterm setup
+
+# Name of the big-bear-nexterm application
+name: big-bear-nexterm
+# Service definitions for the big-bear-nexterm application
+services:
+  # Service name: big-bear-nexterm
+  # The `big-bear-nexterm` service definition
+  big-bear-nexterm:
+    # Name of the container
+    container_name: big-bear-nexterm
+    # Image to be used for the container
+    image: germannewsmaker/nexterm:1.0.5-OPEN-PREVIEW
+    # Container restart policy
+    restart: unless-stopped
+    # Volumes to be mounted to the container
+    volumes:
+      # Mounting the local ${APP_DATA_DIR}/data directory to /app/data inside the container
+      - ${APP_DATA_DIR}/data:/app/data
+    # Ports mapping between host and container
+    ports:
+      # Mapping port 6989 of the host to port 6989 of the container
+      - "6989:6989"
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-nexterm_big-bear-nexterm_1
+      APP_PORT: "6989"

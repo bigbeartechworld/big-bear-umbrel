@@ -1,0 +1,25 @@
+manifestVersion: 1
+id: big-bear-umbrel-docker-cron-restart-notifier
+category: BigBearCasaOS
+name: Docker Cron Restart Notifier
+version: "restart-notifier-latest"
+tagline: Automatically restart specified Docker containers and send notifications to a Discord channel
+description: >-
+  This Docker image is designed to automatically restart specified Docker containers and send notifications to a Discord channel upon each restart. It's particularly useful for maintaining long-running services, ensuring they're periodically refreshed and stakeholders are informed of these actions.
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: activecs
+website: 
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-casaos
+support: https://github.com/bigbeartechworld/big-bear-casaos/issues
+port: 
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-casaos

@@ -1,0 +1,34 @@
+# Configuration for diun setup
+
+# Name of the big-bear-diun application
+name: big-bear-diun
+# Service definitions for the big-bear-diun application
+services:
+  # Service name: big-bear-diun
+  # The `big-bear-diun` service definition
+  big-bear-diun:
+    # Name of the container
+    container_name: big-bear-diun
+    # Image to be used for the container
+    image: crazymax/diun:4.30.0
+    # Command to run inside the container
+    command: ["serve"]
+    # Container restart policy
+    restart: always
+    # Environment variables for the container
+    environment:
+      TZ: "UTC"
+      DIUN_WATCH_WORKERS: "20"
+      DIUN_WATCH_SCHEDULE: "0 */6 * * *"
+      DIUN_WATCH_JITTER: "30s"
+      DIUN_PROVIDERS_DOCKER: "true"
+    # Volumes to be mounted to the container
+    volumes:
+      - ${APP_DATA_DIR}/data:/data
+      - /var/run/docker.sock:/var/run/docker.sock
+    labels:
+      - diun.enable=true
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-diun_big-bear-diun_1
+      APP_PORT: ""

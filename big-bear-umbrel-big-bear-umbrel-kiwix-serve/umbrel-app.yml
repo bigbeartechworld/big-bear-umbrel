@@ -1,0 +1,25 @@
+manifestVersion: 1
+id: big-bear-umbrel-kiwix-serve
+category: BigBearCasaOS
+name: Kiwix Server
+version: "3.7.0-2"
+tagline: Kiwix Server
+description: >-
+  Kiwix Server is a web server for hosting .zim files
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: kiwix
+website: 
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-casaos
+support: https://github.com/bigbeartechworld/big-bear-casaos/issues
+port: 8080
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-casaos

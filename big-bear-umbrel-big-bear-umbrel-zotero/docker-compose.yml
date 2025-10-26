@@ -1,0 +1,31 @@
+# Configuration for zotero setup
+
+# Name of the big-bear-zotero application
+name: big-bear-zotero
+# Service definitions for the big-bear-zotero application
+services:
+  # Service name: big-bear-zotero
+  # The `big-bear-zotero` service definition
+  big-bear-zotero:
+    # Name of the container
+    container_name: big-bear-zotero
+    # Image to be used for the container
+    image: linuxserver/zotero:7.0.20240809
+    # Container restart policy
+    restart: unless-stopped
+    # Environment variables for the container
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Etc/UTC
+    # Ports mapping between host and container
+    ports:
+      - 3000:3000
+      - 3001:3001
+    security_opt:
+      - seccomp:unconfined #optional
+    shm_size: "1gb" #optional
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-zotero_big-bear-zotero_1
+      APP_PORT: "3000"

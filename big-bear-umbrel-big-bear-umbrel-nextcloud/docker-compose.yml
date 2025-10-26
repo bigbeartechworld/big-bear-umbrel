@@ -1,0 +1,100 @@
+# Configuration for nextcloud setup
+
+# Name of the big-bear-nextcloud application
+name: big-bear-nextcloud
+# Service definitions for the big-bear-nextcloud application
+services:
+  # Service name: app
+  # The `app` service definition
+  nextcloud:
+    # Define the container name
+    container_name: nextcloud
+    # Use the nextcloud image from the official Docker Hub
+    image: bigbeartechworld/big-bear-nextcloud-with-smbclient:0.0.11
+    # Restart the container unless stopped
+    restart: unless-stopped
+    # Map port 7580 on the host to port 80 on the container
+    ports:
+      - 7580:80
+    # Mount the ${APP_DATA_DIR}/html directory on the host to /var/www/html in the container
+    volumes:
+      - ${APP_DATA_DIR}/html:/var/www/html
+    # Set environment variables for the container
+    environment:
+      - POSTGRES_HOST=db-nextcloud
+      - REDIS_HOST=redis-nextcloud
+      - POSTGRES_PASSWORD=casaos
+      - POSTGRES_USER=casaos
+      - POSTGRES_DB=nextcloud
+      - NEXTCLOUD_ADMIN_USER=casaos
+      - NEXTCLOUD_ADMIN_PASSWORD=casaos
+      - TRUSTED_PROXIES=
+      - OVERWRITEPROTOCOL=http
+      - PHP_MEMORY_LIMIT=1024M
+      - PHP_UPLOAD_LIMIT=1024M
+    # Specify the dependencies
+    depends_on:
+      db-nextcloud:
+        condition: service_healthy
+      redis-nextcloud:
+        condition: service_healthy
+    # Define the network
+    networks:
+      - nextcloud_network
+  # Define the database container for Nextcloud
+  db-nextcloud:
+    container_name: db-nextcloud
+    image: postgres:14.2
+    restart: unless-stopped
+    volumes:
+      - ${APP_DATA_DIR}/pgdata:/var/lib/postgresql/data # Mount the PostgreSQL data directory
+    environment:
+      - POSTGRES_PASSWORD=casaos # Set the PostgreSQL password
+      - POSTGRES_USER=casaos # Set the PostgreSQL username
+      - POSTGRES_DB=nextcloud # Set the name of the Nextcloud database
+    networks:
+      - nextcloud_network # Connect to the Nextcloud network
+    # Healthcheck configuration for the database service
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U casaos -d nextcloud"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+  # Redis configuration for Nextcloud
+  redis-nextcloud:
+    container_name: redis-nextcloud
+    user: "1000:1000"
+    image: redis:6.2.20@sha256:d06ff6ec778c7f2a5c0dfaf58141d598efaa50a89d0e966faedfdf122cef451b
+    restart: unless-stopped
+    volumes:
+      - "${APP_DATA_DIR}/redis:/data" # Mount the Redis data directory
+    networks:
+      - nextcloud_network # Connect to the Nextcloud network
+    # Healthcheck configuration for the Redis service
+    healthcheck:
+      test: ["CMD-SHELL", "redis-cli ping || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+  cron:
+    image: bigbeartechworld/big-bear-nextcloud-with-smbclient:0.0.11
+    restart: unless-stopped
+    volumes:
+      - ${APP_DATA_DIR}/html:/var/www/html
+    entrypoint: /cron.sh
+    # Specify the dependencies
+    depends_on:
+      db-nextcloud:
+        condition: service_healthy
+      redis-nextcloud:
+        condition: service_healthy
+    networks:
+      - nextcloud_network # Connect to the Nextcloud network
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-nextcloud_nextcloud_1
+      APP_PORT: "7580"
+# Network definition for the big-bear-nextcloud application
+networks:
+  nextcloud_network:
+    driver: bridge

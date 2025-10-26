@@ -1,0 +1,46 @@
+# Configuration for pihole setup
+
+# Name of the big-bear-pihole application
+name: big-bear-pihole
+# Service definitions for the big-bear-pihole application
+services:
+  # Service name: app
+  # The `app` service definition
+  app:
+    # Name of the container
+    container_name: big-bear-pihole
+    # Image to be used for the container
+    image: pihole/pihole:2025.08.0
+    # Container restart policy
+    restart: unless-stopped
+    # Environment variables
+    environment:
+      TZ: "UTC"
+      FTLCONF_webserver_api_password: "your_password"
+    # Volumes to be mounted to the container
+    volumes:
+      # Mounting the local ${APP_DATA_DIR}/etc directory to /etc/pihole/ inside the container
+      - ${APP_DATA_DIR}/etc:/etc/pihole/
+      # Mounting the local ${APP_DATA_DIR}/dnsmasq.d directory to /etc/dnsmasq.d inside the container
+      - ${APP_DATA_DIR}/dnsmasq.d:/etc/dnsmasq.d/
+    # Ports mapping between host and container
+    ports:
+      - "53:53/tcp"
+      - "53:53/udp"
+      - "67:67/udp"
+      - "8080:80/tcp"
+      - "10443:443/tcp"
+    # Define the networks section
+    networks:
+      # Define the pihole-network
+      - pihole-network
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-pihole_app_1
+      APP_PORT: "53"
+# Define the networks section
+networks:
+  # Define the pihole-network
+  pihole-network:
+    # Set the driver to bridge
+    driver: bridge

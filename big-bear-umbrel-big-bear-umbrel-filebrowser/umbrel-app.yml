@@ -1,0 +1,25 @@
+manifestVersion: 1
+id: big-bear-umbrel-filebrowser
+category: BigBearCasaOS
+name: Filebrowser
+version: "2.44.2-s6"
+tagline: Access your homeserver files from your browser
+description: >-
+  Reliable and Performant File Management Desktop Sync and File Sharing Tool.
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: filebrowser
+website: 
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-casaos
+support: https://github.com/bigbeartechworld/big-bear-casaos/issues
+port: 8080
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-casaos

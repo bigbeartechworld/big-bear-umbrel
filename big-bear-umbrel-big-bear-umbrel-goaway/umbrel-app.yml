@@ -1,0 +1,25 @@
+manifestVersion: 1
+id: big-bear-umbrel-goaway
+category: BigBearCasaOS
+name: GoAway
+version: "0.62.11"
+tagline: Lightweight DNS sinkhole for blocking ads and trackers
+description: >-
+  GoAway is a lightweight DNS sinkhole that blocks ads, trackers, and malicious domains at the network level. It provides a web-based admin dashboard for management and supports customizable blocking rules with real-time statistics tracking.
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: pommee
+website: 
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-casaos
+support: https://github.com/bigbeartechworld/big-bear-casaos/issues
+port: 53
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-casaos

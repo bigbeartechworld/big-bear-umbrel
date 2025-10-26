@@ -1,0 +1,25 @@
+manifestVersion: 1
+id: big-bear-umbrel-romm
+category: BigBearCasaOS
+name: RomM
+version: "4.3.2"
+tagline: RomM
+description: >-
+  ROM manager for organizing, enriching, and playing retro games, with support for 400+ platforms.
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: RomM Team
+website: 
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-casaos
+support: https://github.com/bigbeartechworld/big-bear-casaos/issues
+port: 1080
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-casaos

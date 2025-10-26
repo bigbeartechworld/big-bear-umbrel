@@ -1,0 +1,47 @@
+# Configuration for plex-nvidia setup
+
+# Name of the big-bear-plex-nvidia application
+name: big-bear-plex-nvidia
+# Service definitions for the big-bear-plex-nvidia application
+services:
+  # Service name: big-bear-plex-nvidia
+  # The `big-bear-plex-nvidia` service definition
+  big-bear-plex-nvidia:
+    # Name of the container
+    container_name: big-bear-plex-nvidia
+    # Image to be used for the container
+    image: linuxserver/plex:1.42.2
+    # Environment variables for the container
+    environment:
+      - PUID=1000 # specify the user id
+      - PGID=1000 # specify the group id
+      - TZ=Etc/UTC # specify a timezone to use.
+      - VERSION=docker # Set whether to update plex or not.
+      - PLEX_CLAIM= #optional Optionally you can obtain a claim token from https://plex.tv/claim and input here. Keep in mind that the claim tokens expire within 4 minutes.
+      - CPU_FALLBACK=true # Optional, only if you have a GPU
+      - NVIDIA_VISIBLE_DEVICES=all # Optional, only if you have a GPU
+    # Container restart policy
+    restart: unless-stopped
+    # Network mode for the container
+    network_mode: host
+    # Volumes to be mounted to the container
+    volumes:
+      - ${APP_DATA_DIR}/config:/config
+      - ${APP_DATA_DIR}/tv:/tv
+      - ${APP_DATA_DIR}/movies:/movies
+    # Devices to be mounted to the container
+    devices:
+      - /dev/dri:/dev/dri # Optional, only if you have a GPU
+      - /dev/dvb:/dev/dvb # Optional, only if you have a DVB card
+    # Deploy configuration
+    deploy:
+      resources:
+        reservations:
+          memory: "256M"
+          devices:
+            - capabilities:
+                - gpu
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-plex-nvidia_big-bear-plex-nvidia_1
+      APP_PORT: "32400"

@@ -1,0 +1,25 @@
+manifestVersion: 1
+id: big-bear-umbrel-pd3f
+category: BigBearCasaOS
+name: PD3F
+version: "latest"
+tagline: PD3F
+description: >-
+  pd3f is a PDF text extraction pipeline that is self-hosted, local-first and Docker-based. It reconstructs the original continuous text with the help of machine learning.
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: pd3f
+website: 
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-casaos
+support: https://github.com/bigbeartechworld/big-bear-casaos/issues
+port: 1616
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-casaos

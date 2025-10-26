@@ -1,0 +1,25 @@
+manifestVersion: 1
+id: big-bear-umbrel-open-webui
+category: BigBearCasaOS
+name: Open WebUI
+version: "git-33e54a9"
+tagline: User-friendly WebUI for LLMs
+description: >-
+  Open WebUI is an extensible, feature-rich, and user-friendly self-hosted WebUI designed to operate entirely offline.
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: open-webui
+website: 
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-casaos
+support: https://github.com/bigbeartechworld/big-bear-casaos/issues
+port: 8080
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-casaos

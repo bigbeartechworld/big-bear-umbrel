@@ -1,0 +1,25 @@
+manifestVersion: 1
+id: big-bear-umbrel-audiobookshelf
+category: BigBearCasaOS
+name: Audiobookshelf
+version: "2.30.0"
+tagline: Audiobookshelf is a self-hosted audiobook and podcast server.
+description: >-
+  Audiobookshelf is a self-hosted audiobook server for managing and playing your audiobooks. Audiobookshelf has a clean, accessible design that's loaded with features but not overly complicated.
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: ajnart
+website: 
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-casaos
+support: https://github.com/bigbeartechworld/big-bear-casaos/issues
+port: 8080
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-casaos

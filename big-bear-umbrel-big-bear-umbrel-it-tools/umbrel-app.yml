@@ -1,0 +1,25 @@
+manifestVersion: 1
+id: big-bear-umbrel-it-tools
+category: BigBearCasaOS
+name: IT Tools
+version: "2023.11.2-7d94e11"
+tagline: IT Tools
+description: >-
+  Collection of handy online tools for developers, with great UX as a web app.
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: corentinth
+website: 
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-casaos
+support: https://github.com/bigbeartechworld/big-bear-casaos/issues
+port: 8080
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-casaos

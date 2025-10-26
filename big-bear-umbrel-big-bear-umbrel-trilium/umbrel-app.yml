@@ -1,0 +1,25 @@
+manifestVersion: 1
+id: big-bear-umbrel-trilium
+category: BigBearCasaOS
+name: Trilium
+version: "v0.99.3"
+tagline: Build your personal knowledge base with Trilium Notes
+description: >-
+  Build your personal knowledge base with Trilium Notes
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: TriliumNext
+website: 
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-casaos
+support: https://github.com/bigbeartechworld/big-bear-casaos/issues
+port: 8080
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-casaos

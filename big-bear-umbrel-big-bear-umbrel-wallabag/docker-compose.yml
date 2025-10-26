@@ -1,0 +1,94 @@
+# Docker Compose configuration for Wallabag
+# Wallabag is a self-hosted application for saving web pages
+# Version: 2.6.12
+
+# Name of the wallabag application
+name: big-bear-wallabag
+services:
+  # Main Wallabag service configuration
+  big-bear-wallabag:
+    # Name of the container
+    container_name: big-bear-wallabag
+    # Image to be used for the container
+    image: wallabag/wallabag:2.6.14
+    # Container restart policy - restarts the container unless manually stopped
+    restart: unless-stopped
+    # Environment variables for Wallabag configuration
+    environment:
+      - MYSQL_ROOT_PASSWORD=777134a0-4480-49f3-b00c-29db42c6d136
+      - SYMFONY__ENV__DATABASE_DRIVER=pdo_mysql
+      - SYMFONY__ENV__DATABASE_HOST=big-bear-wallabag-db
+      - SYMFONY__ENV__DATABASE_PORT=3306
+      - SYMFONY__ENV__DATABASE_NAME=wallabag
+      - SYMFONY__ENV__DATABASE_USER=big_bear_wallabag
+      - SYMFONY__ENV__DATABASE_PASSWORD=fbe433e9-e3a8-432a-a382-d132596a76fc
+      - SYMFONY__ENV__DATABASE_CHARSET=utf8mb4
+      - SYMFONY__ENV__DATABASE_TABLE_PREFIX="big_bear_wallabag_"
+      - SYMFONY__ENV__MAILER_DSN=smtp://127.0.0.1
+      - SYMFONY__ENV__FROM_EMAIL=wallabag@example.com
+      - SYMFONY__ENV__DOMAIN_NAME=http://[IP]:8080
+      - SYMFONY__ENV__SERVER_NAME="Big Bear Wallabag"
+    # Port mapping
+    ports:
+      - "8080:80"
+    # Volume mappings for persistent storage
+    volumes:
+      - ${APP_DATA_DIR}/images:/var/www/wallabag/web/assets/images
+    # Health check configuration
+    healthcheck:
+      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost/api/info"]
+      interval: 1m
+      timeout: 3s
+    # Network configuration
+    networks:
+      - big-bear-wallabag-network
+    # Service dependencies
+    depends_on:
+      - big-bear-wallabag-db
+      - big-bear-wallabag-redis
+  # MariaDB database service
+  big-bear-wallabag-db:
+    # Name of the container
+    container_name: big-bear-wallabag-db
+    # Image to be used for the database container
+    image: mariadb:10.11.10
+    # Container restart policy
+    restart: unless-stopped
+    # Environment variables for MariaDB configuration
+    environment:
+      - MYSQL_ROOT_PASSWORD=777134a0-4480-49f3-b00c-29db42c6d136
+    # Volume mappings for database persistence
+    volumes:
+      - ${APP_DATA_DIR}/mysql:/var/lib/mysql
+    # Network configuration
+    networks:
+      - big-bear-wallabag-network
+    # Health check configuration for database
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      interval: 20s
+      timeout: 3s
+  # Redis cache service
+  big-bear-wallabag-redis:
+    # Name of the container
+    container_name: big-bear-wallabag-redis
+    # Image to be used for the Redis container
+    image: redis:7.4.6-alpine@sha256:7a7c6b5c49a6896d0a58ee0c6dc0dcabe14f30f0a2f7d2d1362d276fa2d43166
+    # Container restart policy
+    restart: unless-stopped
+    # Network configuration
+    networks:
+      - big-bear-wallabag-network
+    # Health check configuration for Redis
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 20s
+      timeout: 3s
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-wallabag_big-bear-wallabag_1
+      APP_PORT: "8080"
+# Network configuration
+networks:
+  big-bear-wallabag-network:
+    driver: bridge

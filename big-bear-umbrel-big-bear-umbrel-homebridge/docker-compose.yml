@@ -1,0 +1,27 @@
+# Configuration for homebridge setup
+
+# Name of the big-bear-homebridge application
+name: big-bear-homebridge
+# Service definitions for the big-bear-homebridge application
+services:
+  # Service name: big-bear-homebridge
+  # The `big-bear-homebridge` service definition
+  big-bear-homebridge:
+    # Name of the container
+    container_name: big-bear-homebridge
+    # Image to be used for the container
+    image: homebridge/homebridge:2024-05-02
+    # Container restart policy
+    restart: unless-stopped
+    # Environment Variables
+    environment:
+      - TZ=UTC # Timezone
+    privileged: true
+    network_mode: host
+    # Volumes HOST:CONTAINER
+    volumes:
+      - ${APP_DATA_DIR}/data:/homebridge
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-homebridge_big-bear-homebridge_1
+      APP_PORT: "8581"

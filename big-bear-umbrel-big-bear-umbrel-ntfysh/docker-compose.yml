@@ -1,0 +1,33 @@
+# big-bear-ntfy application configuration
+name: big-bear-ntfy
+# Services associated with the big-bear-ntfy application
+services:
+  # Main application service configuration
+  app:
+    # Docker image to be used for the service
+    image: binwiederhier/ntfy:v2.14.0
+    # Command to run inside the container
+    command:
+      - serve
+    # Environment variables for the service
+    environment:
+      - TZ=UTC
+    # Port configurations for the service
+    ports:
+      - target: 80 # Container port
+        published: "7200" # Host port
+        protocol: tcp # Protocol type
+    # Restart policy for the service
+    restart: unless-stopped
+    # Volumes to be mounted inside the container
+    volumes:
+      - type: bind
+        source: ${APP_DATA_DIR}/cache
+        target: /var/cache/ntfy
+      - type: bind
+        source: ${APP_DATA_DIR}/config
+        target: /etc/ntfy
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-ntfysh_app_1
+      APP_PORT: target

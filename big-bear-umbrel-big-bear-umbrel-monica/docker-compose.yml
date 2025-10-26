@@ -1,0 +1,52 @@
+# Configuration for monica setup
+
+# Name of the big-bear-monica application
+name: big-bear-monica
+# Service definitions for the big-bear-monica application
+services:
+  # Service name: big-bear-monica
+  # The `big-bear-monica` service definition
+  big-bear-monica:
+    # Name of the container
+    container_name: big-bear-monica
+    # Image to be used for the container
+    image: monica:4.1.2
+    # Container restart policy
+    restart: unless-stopped
+    environment:
+      - APP_KEY=80356f7073c4f7834187b25a9d32cd2a
+      - DB_HOST=big-bear-monica-db
+      - DB_USERNAME=usermonica
+      - DB_PASSWORD=passwordmonica
+    volumes:
+      - ${APP_DATA_DIR}/storage:/var/www/html/storage
+    # Ports mapping between host and container
+    ports:
+      # Mapping port 8080 of the host to port 80 of the container
+      - "8080:80"
+    # Networks to be attached to the container
+    networks:
+      - big_bear_monica_network
+  # Database service for monica
+  big-bear-monica-db:
+    image: mariadb:10.6.11
+    container_name: big-bear-monica-db
+    environment:
+      - TZ=UTC
+      - MARIADB_RANDOM_ROOT_PASSWORD=true
+      - MARIADB_DATABASE=monica
+      - MARIADB_USER=usermonica
+      - MARIADB_PASSWORD=passwordmonica
+    volumes:
+      - ${APP_DATA_DIR}/mysql:/var/lib/mysql
+    restart: unless-stopped
+    networks:
+      - big_bear_monica_network
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-monica_big-bear-monica_1
+      APP_PORT: "8080"
+# Networks used by the application
+networks:
+  big_bear_monica_network:
+    driver: bridge

@@ -1,0 +1,55 @@
+# Configuration for bookstack setup
+
+# Name of the big-bear-bookstack application
+name: big-bear-bookstack
+# Service definitions for the big-bear-bookstack application
+services:
+  # Service name: big-bear-bookstack
+  # The `big-bear-bookstack` service definition
+  big-bear-bookstack:
+    # Name of the container
+    container_name: big-bear-bookstack
+    # Image to be used for the container
+    image: linuxserver/bookstack:25.07.20250804
+    # Container restart policy
+    restart: unless-stopped
+    volumes:
+      - ${APP_DATA_DIR}/config:/config
+    # Environment variables
+    environment:
+      - APP_KEY=base64:3w/hRS2HYVFH5tJqD9AFlyurTh8mBByMKeMRyH9kEEQ=
+      - APP_URL=http://[change to your IP]:8080
+      - DB_HOST=big-bear-bookstack-db
+      - DB_USERNAME=bigbear
+      - DB_PASSWORD=a3e8949f-484c-4877-afdb-391f892f9bb6
+      - DB_DATABASE=bookstackapp
+    # Ports mapping between host and container
+    ports:
+      # Mapping port 8080 of the host to port 80 of the container
+      - "8080:80"
+    depends_on:
+      - big-bear-bookstack-db
+    networks:
+      - big_bear_bookstack_network
+  # Service definition for the database (MariaDB)
+  big-bear-bookstack-db:
+    image: linuxserver/mariadb:10.11.6 # The Docker image for MariaDB
+    container_name: big-bear-bookstack-db # Name of the container
+    environment: # Environment variables for the MariaDB service
+      - MYSQL_ROOT_PASSWORD=793e92b7-58d2-47b9-aae5-b8c7d58bd699 # Root password for MariaDB
+      - MYSQL_DATABASE=bookstackapp # Database name
+      - MYSQL_USER=bigbear # Database user
+      - MYSQL_PASSWORD=a3e8949f-484c-4877-afdb-391f892f9bb6 # Database password
+    volumes:
+      - ${APP_DATA_DIR}/mysql:/config # Mount the volume for MariaDB data
+    restart: unless-stopped # Restart policy
+    networks:
+      - big_bear_bookstack_network # Connect to the bookstack-network
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-bookstack_big-bear-bookstack_1
+      APP_PORT: "8080"
+# Network definition for the bookstack application
+networks:
+  big_bear_bookstack_network:
+    driver: bridge

@@ -1,0 +1,25 @@
+manifestVersion: 1
+id: big-bear-umbrel-MaybeFinance
+category: BigBearCasaOS
+name: Maybe Finance
+version: "sha-347c0a790693031fdd3b32792b5b6792693d1805"
+tagline: maybe-finance
+description: >-
+  Maybe is a fully* open-source OS for your personal finances built by a small team alongside an incredible community Discord
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: Maybe Finance
+website: 
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-casaos
+support: https://github.com/bigbeartechworld/big-bear-casaos/issues
+port: 4000
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-casaos

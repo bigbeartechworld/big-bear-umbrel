@@ -1,0 +1,42 @@
+# Configuration for adguard-home-sync setup
+
+# Name of the big-bear-adguard-home-sync application
+name: big-bear-ls-adguard-home-sync
+# Service definitions for the big-bear-adguard-home-sync application
+services:
+  # Service name: big-bear-ls-adguard-home-sync
+  # The `big-bear-ls-adguard-home-sync` service definition
+  big-bear-ls-adguard-home-sync:
+    # Name of the container
+    container_name: big-bear-ls-adguard-home-sync
+    # Image to be used for the container
+    image: linuxserver/adguardhome-sync:0.8.1
+    # Container restart policy
+    restart: unless-stopped
+    # Environment variables
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Etc/UTC
+      - LOG_LEVEL=info
+      - ORIGIN_URL=https://192.168.1.2:3000
+      - ORIGIN_USERNAME=bigbear
+      - ORIGIN_PASSWORD=casaos
+      - REPLICA_URL=https://192.168.1.3:3000
+      - REPLICA_USERNAME=bigbear
+      - REPLICA_PASSWORD=casaos
+      - CRON="0 */2 * * *"
+      - RUN_ON_START=true
+      - API_PORT=8080
+    # Volumes to be mounted to the container
+    volumes:
+      # Mounting the local adguard-home-sync/config directory to /config inside the container
+      - ${APP_DATA_DIR}/config:/config
+    # Ports mapping between host and container
+    ports:
+      # Mapping port 8080 of the host to port 8080 of the container
+      - "8080:8080"
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-ls-adguardhome-sync_big-bear-ls-adguard-home-sync_1
+      APP_PORT: "8080"

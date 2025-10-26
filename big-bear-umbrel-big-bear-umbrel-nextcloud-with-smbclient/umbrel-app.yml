@@ -1,0 +1,25 @@
+manifestVersion: 1
+id: big-bear-umbrel-nextcloud-with-smbclient
+category: BigBearCasaOS
+name: Nextcloud with SMB (Legacy)
+version: "0.0.11"
+tagline: The productivity platform that keeps you in control
+description: >-
+  This is legacy and you should use the BigBearCasaOS Nextcloud instead. Nextcloud puts your data at your fingertips, under your control. Store your documents, calendar, contacts and photos on a server at home, at one of our providers or in a data center you trust.
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: nextcloud
+website: 
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-casaos
+support: https://github.com/bigbeartechworld/big-bear-casaos/issues
+port: 7580
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-casaos

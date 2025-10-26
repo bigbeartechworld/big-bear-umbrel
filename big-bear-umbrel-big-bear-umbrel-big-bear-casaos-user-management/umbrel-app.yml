@@ -1,0 +1,25 @@
+manifestVersion: 1
+id: big-bear-umbrel-big-bear-casaos-user-management
+category: BigBearCasaOS
+name: Big Bear CasaOS User Management
+version: "0.1.1"
+tagline: Manage users in CasaOS
+description: >-
+  Manage users in CasaOS
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: bigbeartechworld
+website: 
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-casaos
+support: https://github.com/bigbeartechworld/big-bear-casaos/issues
+port: 5000
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-casaos

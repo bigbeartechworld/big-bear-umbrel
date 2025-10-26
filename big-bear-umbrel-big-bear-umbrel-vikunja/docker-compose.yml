@@ -1,0 +1,54 @@
+# Configuration for big-bear-vikunja setup
+
+# Name of the big-bear-vikunja application
+name: big-bear-vikunja
+# Service definitions for the big-bear-vikunja application
+services:
+  vikunja:
+    image: vikunja/vikunja:0.24.6
+    container_name: big-bear-vikunja
+    ports:
+      - 8081:3456
+    volumes:
+      # Map container path to host path for files
+      - ${APP_DATA_DIR}/files:/app/vikunja/files
+    environment:
+      # Set the Vikunja frontend URL, replace <your public frontend url with slash> with the actual URL
+      VIKUNJA_SERVICE_PUBLICURL: http://<your public frontend url with slash>/
+      # Vikunja API environment variables
+      VIKUNJA_DATABASE_HOST: vikunja-db
+      VIKUNJA_DATABASE_PASSWORD: secret
+      VIKUNJA_DATABASE_TYPE: mysql
+      VIKUNJA_DATABASE_USER: vikunja
+      VIKUNJA_DATABASE_DATABASE: vikunja
+      VIKUNJA_SERVICE_JWTSECRET: 4c2ad520-f177-425f-ab7f-64c5e2b1c2c8
+    restart: unless-stopped
+    depends_on:
+      - vikunja-db
+    networks:
+      - vikunja-network
+  vikunja-db:
+    image: mariadb:10
+    container_name: vikunja-db
+    command:
+      - --character-set-server=utf8mb4
+      - --collation-server=utf8mb4_unicode_ci
+    environment:
+      # MariaDB environment variables
+      MYSQL_ROOT_PASSWORD: supersecret
+      MYSQL_USER: vikunja
+      MYSQL_PASSWORD: secret
+      MYSQL_DATABASE: vikunja
+    volumes:
+      # Map container path to host path for MariaDB data
+      - ${APP_DATA_DIR}/mysql:/var/lib/mysql
+    restart: unless-stopped
+    networks:
+      - vikunja-network
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-vikunja_vikunja_1
+      APP_PORT: "8081"
+networks:
+  vikunja-network:
+    driver: bridge

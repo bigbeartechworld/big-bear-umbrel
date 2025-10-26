@@ -1,0 +1,25 @@
+manifestVersion: 1
+id: big-bear-umbrel-kavita
+category: BigBearCasaOS
+name: Kavita
+version: "0.8.8"
+tagline: Kavita
+description: >-
+  Kavita is a fast, feature rich, cross platform reading server
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: jvmilazz0
+website: 
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-casaos
+support: https://github.com/bigbeartechworld/big-bear-casaos/issues
+port: 5000
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-casaos

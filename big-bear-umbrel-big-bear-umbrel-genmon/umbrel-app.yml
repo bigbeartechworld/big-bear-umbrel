@@ -1,0 +1,25 @@
+manifestVersion: 1
+id: big-bear-umbrel-genmon
+category: BigBearCasaOS
+name: Genmon
+version: "1.19.06"
+tagline: Genmon
+description: >-
+  Generac (and other models) Generator Monitoring using a Raspberry Pi and WiFi
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: bigbeartechworld
+website: 
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-casaos
+support: https://github.com/bigbeartechworld/big-bear-casaos/issues
+port: 20022
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-casaos

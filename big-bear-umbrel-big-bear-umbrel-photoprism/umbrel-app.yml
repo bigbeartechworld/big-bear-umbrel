@@ -1,0 +1,25 @@
+manifestVersion: 1
+id: big-bear-umbrel-photoprism
+category: BigBearCasaOS
+name: Photoprism
+version: "240915"
+tagline: AI-Powered Photos App
+description: >-
+  PhotoPrism® is an AI-Powered Photos App for the Decentralized Web. It makes use of the latest technologies to tag and find pictures automatically without getting in your way. You can run it at home, on a private server, or in the cloud.
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: photoprism.app
+website: 
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-casaos
+support: https://github.com/bigbeartechworld/big-bear-casaos/issues
+port: 2342
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-casaos

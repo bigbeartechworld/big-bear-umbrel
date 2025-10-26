@@ -1,0 +1,23 @@
+# Configuration for chatpad setup
+
+# Name of the big-bear-chatpad application
+name: big-bear-chatpad
+# Service definitions for the big-bear-chatpad application
+services:
+  # Service name: chatpad
+  # The `chatpad` service definition
+  big-bear-chatpad:
+    # Name of the container
+    container_name: big-bear-chatpad
+    # Image to be used for the container
+    image: ghcr.io/deiucanta/chatpad:f45cd53bc410412610c1ba1cbd84cd137d8e167d
+    # Container restart policy
+    restart: unless-stopped
+    # Ports mapping between host and container
+    ports:
+      # Mapping port 8080 of the host to port 80 of the container
+      - "8080:80"
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-chatpad_big-bear-chatpad_1
+      APP_PORT: "8080"
