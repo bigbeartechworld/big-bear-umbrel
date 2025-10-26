@@ -1,0 +1,40 @@
+# Docker Compose configuration for Immich Kiosk Service
+# This service provides a web interface for managing Immich Kiosk
+# Initial Immich Kiosk Version: 0.21.0
+
+# Name of the big-bear-immich-kiosk application
+name: big-bear-immich-kiosk
+# Service definitions for the big-bear-immich-kiosk application
+services:
+  # Main service configuration for the Immich Kiosk application
+  # This service provides a web interface running on port 3000 for Immich Kiosk
+  big-bear-immich-kiosk:
+    # Name of the container
+    container_name: big-bear-immich-kiosk
+    # Image to be used for the container specifies the Immich Kiosk version and source
+    image: ghcr.io/damongolding/immich-kiosk:0.26.1
+    # Enable TTY for interactive terminal access
+    tty: true
+    # Container restart policy - restarts the container unless manually stopped
+    restart: unless-stopped
+    # Environment variables for service configuration
+    # These settings control the Immich Kiosk application behavior and default admin credentials
+    # https://github.com/damongolding/immich-kiosk#configuration
+    environment:
+      # Sets the language and timezone for the container
+      LANG: "en_us"
+      # Sets the timezone for the container
+      TZ: "UTC"
+      # Sets the Immich API key for the container
+      KIOSK_IMMICH_API_KEY: ""
+      # Sets the Immich server URL for the container
+      KIOSK_IMMICH_URL: ""
+      # Sets the Immich external URL for the container
+      KIOSK_IMMICH_EXTERNAL_URL: ""
+    # Map port 3000 on the host to port 3000 on the container
+    ports:
+      - "3000:3000"
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-immich-kiosk_big-bear-immich-kiosk_1
+      APP_PORT: "3009"

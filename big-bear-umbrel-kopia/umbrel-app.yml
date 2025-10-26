@@ -1,0 +1,26 @@
+manifestVersion: 1
+id: big-bear-umbrel-kopia
+category: BigBearCasaOS
+name: Kopia
+version: "v0.17.0-spad3"
+tagline: Kopia
+description: >-
+  Kopia is a fast and secure open-source backup/restore tool that allows you to create encrypted snapshots of your data and save the snapshots to remote or cloud storage of your choice, to network-attached storage or server, or locally on your machine.
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: thespad
+website: https://github.com/bigbeartechworld/big-bear-casaos
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-casaos
+support: https://github.com/bigbeartechworld/big-bear-casaos/issues
+port: 51515
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/kopia.png
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-casaos

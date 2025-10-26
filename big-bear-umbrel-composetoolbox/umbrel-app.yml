@@ -1,0 +1,26 @@
+manifestVersion: 1
+id: big-bear-umbrel-composetoolbox
+category: BigBearCasaOS
+name: Compose Toolbox
+version: "latest"
+tagline: Compose file editor & validator
+description: >-
+  Self-hosted tool to edit, validate, and get suggestions for docker-compose.yml files.
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: bluegoosemedia
+website: https://github.com/bigbeartechworld/big-bear-casaos
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-casaos
+support: https://github.com/bigbeartechworld/big-bear-casaos/issues
+port: 3003
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+icon: https://cdn.jsdelivr.net/gh/bluegoosemedia/composetoolbox@498d1527dcf9cc6422300216df6244ea79ae3630/public/favicon.png
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-casaos

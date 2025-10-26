@@ -1,0 +1,26 @@
+manifestVersion: 1
+id: big-bear-umbrel-python-matter-server
+category: BigBearCasaOS
+name: Python Matter Server
+version: "8.1.0"
+tagline: Python Matter Server
+description: >-
+  This project implements a Matter Controller Server over WebSockets using the official Matter (formerly CHIP) SDK as a base and provides both a server and client implementation. The goal of this project is primary to have Matter support in Home Assistant but its universal approach makes it suitable to be used in other projects too.
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: BigBearTechWorld
+website: https://github.com/bigbeartechworld/big-bear-casaos
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-casaos
+support: https://github.com/bigbeartechworld/big-bear-casaos/issues
+port: 5080
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+icon: https://cdn.jsdelivr.net/gh/bigbeartechworld/big-bear-casaos/Apps/python-matter-server/logo.png
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-casaos

@@ -1,0 +1,26 @@
+manifestVersion: 1
+id: big-bear-umbrel-wg-easy-v15
+category: BigBearCasaOS
+name: WireGuard Easy v15
+version: "15"
+tagline: WireGuard VPN server v15 (New Version)
+description: >-
+  WireGuard Easy v15 - Complete rewrite with new features and improved UI. Access your homeserver from anywhere with this modern VPN solution. NOTE: This is v15 which has breaking changes from v14. If you're currently using v14, please backup your configuration before migrating.
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: WeeJeWel
+website: https://github.com/bigbeartechworld/big-bear-casaos
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-casaos
+support: https://github.com/bigbeartechworld/big-bear-casaos/issues
+port: 51821
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+icon: https://cdn.jsdelivr.net/gh/bigbeartechworld/big-bear-casaos/Apps/wg-easy-v15/logo.png
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-casaos

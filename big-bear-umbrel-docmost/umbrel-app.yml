@@ -1,0 +1,26 @@
+manifestVersion: 1
+id: big-bear-umbrel-docmost
+category: BigBearCasaOS
+name: Docmost
+version: "0.23.2"
+tagline: Docmost
+description: >-
+  Docmost is an open-source alternative to the likes of Notion and Confluence. Whether you're managing a wiki, a knowledge base, or extensive project documentation, Docmost provides the tools you need to create, collaborate, and share knowledge effortlessly.
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: docmost
+website: https://github.com/bigbeartechworld/big-bear-casaos
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-casaos
+support: https://github.com/bigbeartechworld/big-bear-casaos/issues
+port: 3007
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+icon: https://cdn.jsdelivr.net/gh/bigbeartechworld/big-bear-casaos/Apps/docmost/logo.png
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-casaos

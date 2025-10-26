@@ -1,0 +1,26 @@
+manifestVersion: 1
+id: big-bear-umbrel-scrutiny
+category: BigBearCasaOS
+name: Scrutiny
+version: "master-omnibus"
+tagline: Monitor your server's hard disk health
+description: >-
+  If you run a server with more than a couple of hard drives, you're probably already familiar with S.M.A.R.T and the smartd daemon.
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: analogj
+website: https://github.com/bigbeartechworld/big-bear-casaos
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-casaos
+support: https://github.com/bigbeartechworld/big-bear-casaos/issues
+port: 38080
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/scrutiny.png
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-casaos

@@ -1,0 +1,26 @@
+manifestVersion: 1
+id: big-bear-umbrel-dockpeek
+category: BigBearCasaOS
+name: Dockpeek
+version: "1.7.0"
+tagline: Docker Dashboard
+description: >-
+  A lightweight, self-hosted Docker dashboard that provides quick access to all running containers and their exposed ports with one-click access to web apps.
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: dockpeek
+website: https://github.com/bigbeartechworld/big-bear-casaos
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-casaos
+support: https://github.com/bigbeartechworld/big-bear-casaos/issues
+port: 3420
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/dockpeek.png
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-casaos

@@ -1,0 +1,35 @@
+# Configuration for music-assistant setup
+
+# Name of the big-bear-music-assistant application
+name: big-bear-music-assistant
+# Service definitions for the big-bear-music-assistant application
+services:
+  # Service name: big-bear-music-assistant-server
+  # The `appserver service definition
+  big-bear-music-assistant-server:
+    # Name of the container
+    container_name: big-bear-music-assistant-server
+    # Image to be used for the container
+    image: ghcr.io/music-assistant/server:2.6.0
+    # Container restart policy
+    restart: unless-stopped
+    # Volumes to be mounted to the container
+    volumes:
+      - type: bind
+        source: ${APP_DATA_DIR}/data
+        target: /data
+    # Network mode for the container
+    network_mode: host
+    # Security options for container runtime
+    security_opt:
+      # Allows necessary system calls for full functionality
+      - apparmor:unconfined
+    # Additional container capabilities
+    cap_add:
+      # Required for system administration tasks within the container
+      - SYS_ADMIN
+      - DAC_READ_SEARCH
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-music-assistant_big-bear-music-assistant-server_1
+      APP_PORT: "8112"

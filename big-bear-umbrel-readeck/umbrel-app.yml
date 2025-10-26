@@ -1,0 +1,26 @@
+manifestVersion: 1
+id: big-bear-umbrel-readeck
+category: BigBearCasaOS
+name: Readeck
+version: "0.20.4"
+tagline: Self-hosted bookmark manager and read-it-later app
+description: >-
+  Readeck is a simple web application that lets you save the precious readable content of web pages you like and want to keep forever. It is a self-hosted alternative to Instapaper and Wallabag with a modern interface and powerful features for managing your bookmarks and reading list.
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: readeck
+website: https://github.com/bigbeartechworld/big-bear-casaos
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-casaos
+support: https://github.com/bigbeartechworld/big-bear-casaos/issues
+port: 8012
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/readeck.png
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-casaos

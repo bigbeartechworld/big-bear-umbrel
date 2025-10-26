@@ -1,0 +1,47 @@
+# Configuration for pocket-id setup
+name: big-bear-pocketid
+# Service definitions for the pocket-id application
+services:
+  # Service configuration for the pocket-id application
+  big-bear-pocketid:
+    container_name: big-bear-pocketid # Name of the pocket-id container
+    image: ghcr.io/pocket-id/pocket-id:v1.14 # Docker image to use for pocket-id
+    restart: unless-stopped # Restart policy: Restart unless manually stopped
+    cpu_shares: 90
+    command: []
+    deploy:
+      resources:
+        limits:
+          memory: 2048M
+    environment:
+      - APP_URL=http://localhost:1411 # Application URL for pocket-id, should be set to your domain name e.g https://pocketid.example.com if using a reverse proxy
+      - TRUST_PROXY=false # Whether to trust proxy headers, set to true if behind a reverse proxy
+      - MAXMIND_LICENSE_KEY= # MaxMind license key for geolocation, optional
+      - PUID=1000 # User ID for file permissions
+      - PGID=1000 # Group ID for file permissions
+    hostname: big-bear-pocketid
+    labels:
+      icon: https://pocket-id.org/img/logo.png # Icon URL
+    ports:
+      - target: 1411
+        published: "1411"
+        protocol: tcp # Port mapping between host and container
+    volumes:
+      - type: bind
+        source: ${APP_DATA_DIR}/data
+        target: /app/data # Volume for persistent data
+    devices: []
+    cap_add: []
+    network_mode: bridge
+    privileged: false
+    # Optional healthcheck
+    healthcheck:
+      test: "curl -f http://localhost:1411/healthz" # Health check command
+      interval: 1m30s
+      timeout: 5s
+      retries: 2
+      start_period: 10s
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-pocketid_big-bear-pocketid_1
+      APP_PORT: "1411"

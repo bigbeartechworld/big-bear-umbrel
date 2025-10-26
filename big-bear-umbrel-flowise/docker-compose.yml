@@ -1,0 +1,43 @@
+# Configuration for flowise setup
+
+# Name of the big-bear-flowise application
+name: big-bear-flowise
+# Service definitions for the big-bear-flowise application
+services:
+  # Service name: big-bear-flowise
+  # The `big-bear-flowise` service definition
+  big-bear-flowise:
+    # Name of the container
+    container_name: big-bear-flowise
+    # Image to be used for the container specifies the flowise version and source
+    image: flowiseai/flowise:3.0.8
+    # Container restart policy - restarts the container unless manually stopped
+    restart: unless-stopped
+    # Entrypoint to be used for the container
+    entrypoint: /bin/sh -c "sleep 3; flowise start"
+    # Environment variables to be set in the container for application configuration
+    environment:
+      - PORT=8009
+      - FLOWISE_USERNAME=bigbear
+      - FLOWISE_PASSWORD=b0f91e4c-9d4b-4375-bc9b-9b57667ce7ab
+      - FLOWISE_SECRETKEY_OVERWRITE="true"
+      - LANGCHAIN_ENDPOINT=""
+      - LANGCHAIN_API_KEY=""
+      - LANGCHAIN_PROJECT=""
+      - LANGCHAIN_TRACING_V2=""
+      - DISABLE_FLOWISE_TELEMETRY="true"
+      - DATABASE_PATH=/root/.flowise
+      - APIKEY_PATH=/root/.flowise
+      - SECRETKEY_PATH=/root/.flowise/logs
+      - LOG_PATH=/root/.flowise
+    # Ports mapping between host and container
+    ports:
+      # Mapping port 8009 of the host to port 8009 of the container
+      - "8009:8009"
+    # Volumes to be mounted to the container
+    volumes:
+      - ${APP_DATA_DIR}/data:/root/.flowise
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-flowise_big-bear-flowise_1
+      APP_PORT: "8009"

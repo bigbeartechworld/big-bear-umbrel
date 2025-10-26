@@ -1,0 +1,51 @@
+# Configuration for healthchecks setup
+
+# Name of the big-bear-healthchecks application
+name: big-bear-healthchecks
+# Service definitions for the big-bear-healthchecks application
+services:
+  # Service name: big-bear-healthchecks
+  # The `big-bear-healthchecks` service definition
+  big-bear-healthchecks:
+    # Name of the container
+    container_name: big-bear-healthchecks
+    # Image to be used for the container
+    image: linuxserver/healthchecks:3.11.20250828
+    # Container restart policy
+    restart: unless-stopped
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Etc/UTC
+      - SITE_ROOT=http://[YOUR_CASAOS_IP]
+      - SITE_NAME="Big Bear HealthChecks"
+      - SUPERUSER_EMAIL=user@example.com
+      - SUPERUSER_PASSWORD=8a4c087a-2652-4d12-a6cc-feeb60e59dd4
+      - ALLOWED_HOSTS= #optional
+      - APPRISE_ENABLED=False #optional
+      - CSRF_TRUSTED_ORIGINS= #optional
+      - DEBUG=True #optional
+      - DEFAULT_FROM_EMAIL= #optional
+      - EMAIL_HOST= #optional
+      - EMAIL_PORT= #optional
+      - EMAIL_HOST_USER= #optional
+      - EMAIL_HOST_PASSWORD= #optional
+      - EMAIL_USE_TLS= #optional
+      - INTEGRATIONS_ALLOW_PRIVATE_IPS= #optional
+      - PING_EMAIL_DOMAIN= #optional
+      - RP_ID= #optional
+      - SECRET_KEY="b2ea4094-c950-4890-b85f-301d8a777af2" #optional
+      - SITE_LOGO_URL= #optional
+    # Volumes to be mounted to the container
+    volumes:
+      - ${APP_DATA_DIR}/config:/config
+    # Ports mapping between host and container
+    ports:
+      # Mapping port 8000 of the host to port 8000 of the container
+      - "8000:8000"
+      # Mapping port 2525 of the host to port 2525 of the container
+      - "2525:2525"
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-healthchecks_big-bear-healthchecks_1
+      APP_PORT: "8004"

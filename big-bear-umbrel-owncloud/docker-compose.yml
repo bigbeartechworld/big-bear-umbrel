@@ -1,0 +1,91 @@
+# Configuration for owncloud setup
+
+# Name of the big-bear-owncloud application
+name: big-bear-owncloud
+# Service definitions for the big-bear-owncloud application
+services:
+  # Service name: big-bear-owncloud
+  # The `big-bear-owncloud` service definition
+  big-bear-owncloud:
+    # Name of the container
+    container_name: big-bear-owncloud
+    # Image to be used for the container
+    image: owncloud/server:10.16.0
+    # Container restart policy
+    restart: unless-stopped
+    # Environment variables
+    environment:
+      - OWNCLOUD_DOMAIN=http://[YOUR_CASAOS_IP]:8080
+      - OWNCLOUD_TRUSTED_DOMAINS=[YOUR_CASAOS_IP]
+      - OWNCLOUD_DB_TYPE=mysql
+      - OWNCLOUD_DB_NAME=big_bear_owncloud
+      - OWNCLOUD_DB_USERNAME=bigbear
+      - OWNCLOUD_DB_PASSWORD=f01914eb-2be3-4164-a57c-08e6518f313a
+      - OWNCLOUD_DB_HOST=big-bear-owncloud-db
+      - OWNCLOUD_ADMIN_USERNAME=bigbear
+      - OWNCLOUD_ADMIN_PASSWORD=ed135299-7c80-48d4-a2a0-357a012213e5
+      - OWNCLOUD_MYSQL_UTF8MB4=true
+      - OWNCLOUD_REDIS_ENABLED=true
+      - OWNCLOUD_REDIS_HOST=big-bear-owncloud-redis
+    # Volumes to be mounted to the container
+    volumes:
+      # Mounting the local ${APP_DATA_DIR}/data directory to /mnt/data inside the container
+      - ${APP_DATA_DIR}/data:/mnt/data
+    # Ports mapping between host and container
+    ports:
+      # Mapping port 8080 of the host to port 8080 of the container
+      - "8080:8080"
+    # Networks to be attached to the container
+    networks:
+      - big_bear_owncloud_network
+    # Healthcheck configuration for the service
+    healthcheck:
+      test: ["CMD", "/usr/bin/healthcheck"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+    depends_on:
+      - big-bear-owncloud-db
+      - big-bear-owncloud-redis
+  big-bear-owncloud-db:
+    container_name: big-bear-owncloud-db
+    image: mariadb:10.6
+    restart: unless-stopped
+    environment:
+      - MYSQL_ROOT_PASSWORD=f01914eb-2be3-4164-a57c-08e6518f313a
+      - MYSQL_USER=bigbear
+      - MYSQL_PASSWORD=f01914eb-2be3-4164-a57c-08e6518f313a
+      - MYSQL_DATABASE=big_bear_owncloud
+      - MARIADB_AUTO_UPGRADE=1
+    command: ["--max-allowed-packet=128M", "--innodb-log-file-size=64M"]
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-u", "bigbear", "--password=f01914eb-2be3-4164-a57c-08e6518f313a"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    volumes:
+      - ${APP_DATA_DIR}/mysql:/var/lib/mysql
+    networks:
+      - big_bear_owncloud_network
+  big-bear-owncloud-redis:
+    container_name: big-bear-owncloud-redis
+    image: redis:6.2.20@sha256:d06ff6ec778c7f2a5c0dfaf58141d598efaa50a89d0e966faedfdf122cef451b
+    restart: unless-stopped
+    command: ["--databases", "1"]
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    volumes:
+      - ${APP_DATA_DIR}/redis:/data
+    networks:
+      - big_bear_owncloud_network
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-owncloud_big-bear-owncloud_1
+      APP_PORT: "8118"
+networks:
+  big_bear_owncloud_network:
+    name: big_bear_owncloud_network
+    driver: bridge

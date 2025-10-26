@@ -1,0 +1,26 @@
+manifestVersion: 1
+id: big-bear-umbrel-financial-freedom
+category: BigBearCasaOS
+name: Financial Freedom
+version: "v0.2.0-alpha1"
+tagline: Financial Freedom
+description: >-
+  Keep investors and their buyers out of your financial data. Own 100% of your data and start building financial wealth.
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: serversideup
+website: https://github.com/bigbeartechworld/big-bear-casaos
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-casaos
+support: https://github.com/bigbeartechworld/big-bear-casaos/issues
+port: 8096
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+icon: https://cdn.jsdelivr.net/gh/bigbeartechworld/big-bear-casaos/Apps/financial-freedom/logo.png
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-casaos

@@ -1,0 +1,26 @@
+manifestVersion: 1
+id: big-bear-umbrel-nextcloud-ls
+category: BigBearCasaOS
+name: Nextcloud LS
+version: "32.0.1"
+tagline: LinuxServer - The productivity platform that keeps you in control
+description: >-
+  Nextcloud puts your data at your fingertips, under your control. Store your documents, calendar, contacts and photos on a server at home, at one of our providers or in a data center you trust.
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: nextcloud
+website: https://github.com/bigbeartechworld/big-bear-casaos
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-casaos
+support: https://github.com/bigbeartechworld/big-bear-casaos/issues
+port: 10443
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/nextcloud.png
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-casaos
