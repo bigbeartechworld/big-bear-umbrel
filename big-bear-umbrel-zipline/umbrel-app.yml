@@ -1,0 +1,26 @@
+manifestVersion: 1
+id: big-bear-umbrel-zipline
+category: BigBearCasaOS
+name: zipline
+version: "3.7.13"
+tagline: zipline
+description: >-
+  A ShareX/file upload server that is easy to use, packed with features, and with an easy setup!
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: zipline
+website: https://github.com/bigbeartechworld/big-bear-casaos
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-casaos
+support: https://github.com/bigbeartechworld/big-bear-casaos/issues
+port: 3025
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+icon: https://github.com/bigbeartechworld/big-bear-casaos/assets/1289128/3b655316-f72c-4b89-8138-0abee624e9b8
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-casaos

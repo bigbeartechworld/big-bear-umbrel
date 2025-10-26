@@ -1,0 +1,26 @@
+manifestVersion: 1
+id: big-bear-umbrel-watchyourlan
+category: BigBearCasaOS
+name: WatchYourLAN
+version: "2.1.4"
+tagline: WatchYourLAN
+description: >-
+  Lightweight network IP scanner. Can be used to notify about new hosts and monitor host online/offline history
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: ajnart
+website: https://github.com/bigbeartechworld/big-bear-casaos
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-casaos
+support: https://github.com/bigbeartechworld/big-bear-casaos/issues
+port: 8840
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/watchyourlan.png
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-casaos

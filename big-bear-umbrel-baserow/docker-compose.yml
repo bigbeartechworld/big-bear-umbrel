@@ -1,0 +1,25 @@
+# Configuration for big-bear-baserow setup
+name: big-bear-baserow
+# Service definitions for the big-bear-baserow application
+services:
+  # Service name: app
+  app:
+    # Set the name of the Docker container.
+    container_name: baserow
+    # Use the specified Docker image for Baserow and specify its version.
+    image: baserow/baserow:1.35.3
+    # Set environment variables for Baserow.
+    environment:
+      # Set the your CASA OS IP for Baserow to use.
+      BASEROW_PUBLIC_URL: "http://[YOUR_CASAOS_IP]:7350"
+    # Map ports from the host machine to the Baserow container.
+    ports:
+      - "7350:80" # Map port 7300 on the host to port 80 in the container.
+      - "7351:443" # Map port 7301 on the host to port 443 in the container.
+    # Define volumes to persist data between container restarts.
+    volumes:
+      - ${APP_DATA_DIR}/data:/baserow/data
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-baserow_app_1
+      APP_PORT: "7350"

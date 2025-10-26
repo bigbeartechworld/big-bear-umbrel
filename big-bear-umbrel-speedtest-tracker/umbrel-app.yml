@@ -1,25 +1,26 @@
 manifestVersion: 1
 id: big-bear-umbrel-speedtest-tracker
-name: SpeedTest-Tracker
-category: Networking
-version: "0.0.2"
-tagline: Self-hosted speedtest-tracker
-icon: https://i.imgur.com/Xy3ZQuF.png
-description: >
-  This program runs a speedtest check every hour and graphs the results. The back-end is written in Laravel and the front-end uses React.
-  It uses the Ookla's speedtest cli package to get the data and uses Chart.js to plot the results.
-developer: hentrywhitaker3
-website: https://github.com/henrywhitaker3/Speedtest-Tracker
+category: BigBearCasaOS
+name: Speedtest Tracker
+version: "1.6.8"
+tagline: Speedtest Tracker
+description: >-
+  A Docker image to check your internet speed using Ookla's Speedtest service. Build using Laravel and the Speedtest CLI.
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: alexjustesen
+website: https://github.com/bigbeartechworld/big-bear-casaos
 dependencies: []
-repo: https://github.com/henrywhitaker3/Speedtest-Tracker
-support: https://github.com/henrywhitaker3/Speedtest-Tracker/issues
-port: 7208
+repo: https://github.com/bigbeartechworld/big-bear-casaos
+support: https://github.com/bigbeartechworld/big-bear-casaos/issues
+port: 8133
 gallery:
-  - https://user-images.githubusercontent.com/36062479/78822484-a82b8300-79ca-11ea-8525-fdeae496a0bd.gif
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
 path: ""
-releaseNotes: >
-  What's Changed
-
-  - InlfuxDB integration.
-submitter: BigBearCommunity
-submission:
+defaultUsername: ""
+defaultPassword: ""
+icon: https://cdn.jsdelivr.net/gh/alexjustesen/speedtest-tracker/public/img/speedtest-tracker-icon.png
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-casaos

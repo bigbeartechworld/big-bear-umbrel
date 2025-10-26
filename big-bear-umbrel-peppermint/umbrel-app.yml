@@ -1,0 +1,26 @@
+manifestVersion: 1
+id: big-bear-umbrel-peppermint
+category: BigBearCasaOS
+name: Peppermint
+version: "latest"
+tagline: peppermint
+description: >-
+  Peppermint is a central hub for your help desk. A powerfully easy system for tracking, prioritising, and solving customer support tickets.
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: Pepperlabs
+website: https://github.com/bigbeartechworld/big-bear-casaos
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-casaos
+support: https://github.com/bigbeartechworld/big-bear-casaos/issues
+port: 3015
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+icon: https://cdn.jsdelivr.net/gh/bigbeartechworld/big-bear-casaos/Apps/peppermint/logo.png
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-casaos

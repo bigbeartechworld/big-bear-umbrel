@@ -1,0 +1,26 @@
+manifestVersion: 1
+id: big-bear-umbrel-chatpad
+category: BigBearCasaOS
+name: Chatpad
+version: "f45cd53bc410412610c1ba1cbd84cd137d8e167d"
+tagline: Not just another ChatGPT user-interface!
+description: >-
+  Recently, there has been a surge of UIs for ChatGPT, making it the new "to-do app" that everyone wants to try their hand at. Chatpad sets itself apart with a broader vision - to become the ultimate interface for ChatGPT users.
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: deiucanta
+website: https://github.com/bigbeartechworld/big-bear-casaos
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-casaos
+support: https://github.com/bigbeartechworld/big-bear-casaos/issues
+port: 8087
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+icon: https://cdn.jsdelivr.net/gh/bigbeartechworld/big-bear-casaos/Apps/chatpad/logo.jpeg
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-casaos

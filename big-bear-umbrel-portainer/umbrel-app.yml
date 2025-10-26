@@ -1,23 +1,26 @@
 manifestVersion: 1
 id: big-bear-umbrel-portainer
+category: BigBearCasaOS
 name: Portainer
-category: Developer Tools
-version: "2.33.1"
-tagline: Self-hosted container management
-icon: https://github.com/walkxcode/dashboard-icons/blob/main/png/portainer-alt.png?raw=true
-description: >
-  Irrespective of your industry, orchestration platform, or computing device, Portainer is the most versatile container management platform that simplifies your secure adoption of containers with remarkable speed.
-developer: Portainer
-website: https://www.portainer.io
+version: "2.35.0-alpine"
+tagline: Portainer
+description: >-
+  Irrespective of your industry, orchestration platform, or computing device, Portainer is the most versatile container management software that simplifies your secure adoption of containers with remarkable speed.
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: portainer
+website: https://github.com/bigbeartechworld/big-bear-casaos
 dependencies: []
-repo: https://www.portainer.io/
-support: https://www.portainer.io/
-port: 8000
+repo: https://github.com/bigbeartechworld/big-bear-casaos
+support: https://github.com/bigbeartechworld/big-bear-casaos/issues
+port: 8010
 gallery:
-  - https://i.imgur.com/DNHGseE.png
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
 path: ""
+defaultUsername: ""
 defaultPassword: ""
-releaseNotes: >
-  https://github.com/portainer/portainer
+icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/portainer.png
 submitter: BigBearTechWorld
-submission:
+submission: https://github.com/bigbeartechworld/big-bear-casaos

@@ -1,32 +1,26 @@
 manifestVersion: 1
 id: big-bear-umbrel-flame
+category: BigBearCasaOS
 name: Flame
-category: Dashboards
-version: "2.3.1"
-tagline: Self-hosted flame
-icon: https://i.imgur.com/TzyTrX0.png
-description: >
-  Flame is self-hosted startpage for your server. Its design is inspired (heavily) by SUI.
-  Flame is very easy to setup and use. With built-in editors, it allows you to setup your very own application hub in no time - no file editing necessary.
-developer: pawelmalak
-website: https://github.com/pawelmalak/flame
+version: "multiarch2.3.1"
+tagline: Flame is a self-hosted startpage for your server. Manage your apps and bookmarks effortlessly with built-in editors.
+description: >-
+  Flame is a self-hosted startpage for your server. Its design is heavily inspired by SUI. Flame is user-friendly and easy to set up. With its built-in editors, users can quickly establish their own application hub without any file editing.
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: BigBearTechWorld
+website: https://github.com/bigbeartechworld/big-bear-casaos
 dependencies: []
-repo: https://github.com/pawelmalak/flame
-support: https://github.com/pawelmalak/flame/issues
-port: 7207
+repo: https://github.com/bigbeartechworld/big-bear-casaos
+support: https://github.com/bigbeartechworld/big-bear-casaos/issues
+port: 5005
 gallery:
-  - https://raw.githubusercontent.com/pawelmalak/flame/master/.github/themes.png
-  - https://raw.githubusercontent.com/pawelmalak/flame/master/.github/home.png
-  - https://raw.githubusercontent.com/pawelmalak/flame/master/.github/settings.png
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
 path: ""
-deterministicPassword: true
-releaseNotes: >
-  What's Changed
-
-  - Fixed bug where "Open search results in the same tab" setting was not respected if "Local search" was set as primary search provider (#270)
-  - Fixed bug where search bar had rounded input field on iOS (#394)
-  - Updated link to Material Design Icons reference page (#414)
-  - Fixed bug where color inputs in theme creator/editor were too small (#429)
-  - Changed input labels in settings for more consistent naming (#430)
-submitter: BigBearCommunity
-submission:
+defaultUsername: ""
+defaultPassword: ""
+icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/flame.png
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-casaos

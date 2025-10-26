@@ -1,0 +1,17 @@
+name: big-bear-brave # Name of the CasaOS application
+services:
+  brave:
+    container_name: big-bear-brave # Name of the Docker container
+    image: kasmweb/brave:1.15.0-rolling # Docker image for the Brave browser
+    ports:
+      - "6901:6901" # Expose port 6901 for VNC access
+    environment:
+      - VNC_PW=casaos # Set the VNC password to 'casaos'
+      - LAUNCH_URL=https://community.bigbeartechworld.com/ # Set the default URL to Big Bear Tech World
+    shm_size: 512m # Allocate 512 MB of shared memory
+    volumes:
+      - ${APP_DATA_DIR}/Downloads:/home/kasm-user/Downloads # Mount the host directory to the container's Downloads directory
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-brave_brave_1
+      APP_PORT: "6901"

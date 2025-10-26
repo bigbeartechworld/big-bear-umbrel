@@ -1,0 +1,26 @@
+manifestVersion: 1
+id: big-bear-umbrel-kasm
+category: BigBearCasaOS
+name: Kasm
+version: "1.120.20221218"
+tagline: Kasm
+description: >-
+  The Container Streaming Platform - Streaming containerized apps and desktops to end-users. The Workspaces platform provides enterprise-class orchestration, data loss prevention, and web streaming technology to enable the delivery of containerized workloads to your browser.
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: Kasm
+website: https://github.com/bigbeartechworld/big-bear-casaos
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-casaos
+support: https://github.com/bigbeartechworld/big-bear-casaos/issues
+port: 3011
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+icon: https://avatars.githubusercontent.com/u/44181855?s=280&v=4
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-casaos

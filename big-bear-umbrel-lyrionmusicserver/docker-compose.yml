@@ -1,0 +1,44 @@
+# Configuration for lyrionmusicserver setup
+
+# Name of the big-bear-lyrionmusicserver application
+name: big-bear-lyrionmusicserver
+# Service definitions for the big-bear-lyrionmusicserver application
+services:
+  # Service name: big-bear-lyrionmusicserver
+  # The `big-bear-lyrionmusicserver` service definition
+  big-bear-lyrionmusicserver:
+    # Name of the container
+    container_name: big-bear-lyrionmusicserver
+    # Image to be used for the container
+    image: lmscommunity/lyrionmusicserver:9.1.0
+    # Container restart policy
+    restart: unless-stopped
+    # Environment variables for the container
+    environment:
+      - HTTP_PORT=9000
+    # Volumes to be mounted to the container
+    volumes:
+      # Mounting the local big-bear-lyrionmusicserver/config directory to /config inside the container
+      - ${APP_DATA_DIR}/config:/config:rw
+      # Mounting the local big-bear-lyrionmusicserver/music directory to /music inside the container
+      - ${APP_DATA_DIR}/music:/music:ro
+      # Mounting the local big-bear-lyrionmusicserver/playlists directory to /playlist inside the container
+      - ${APP_DATA_DIR}/playlists:/playlist:rw
+      # Mounting the local /etc/localtime directory to /etc/localtime inside the container
+      - /etc/localtime:/etc/localtime:ro
+      # Mounting the local /etc/timezone directory to /etc/timezone inside the container
+      - /etc/timezone:/etc/timezone:ro
+    # Ports mapping between host and container
+    ports:
+      # Mapping port 9000 of the host to port 9000 of the container
+      - 9000:9000/tcp
+      # Mapping port 9090 of the host to port 9090 of the container
+      - 9090:9090/tcp
+      # Mapping port 3483 of the host to port 3483 of the container
+      - 3483:3483/tcp
+      # Mapping port 3483 of the host to port 3483 of the container
+      - 3483:3483/udp
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-lyrionmusicserver_big-bear-lyrionmusicserver_1
+      APP_PORT: "9002"

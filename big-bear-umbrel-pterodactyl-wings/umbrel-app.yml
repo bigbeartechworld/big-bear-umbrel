@@ -1,0 +1,26 @@
+manifestVersion: 1
+id: big-bear-umbrel-pterodactyl-wings
+category: BigBearCasaOS
+name: Pterodactyl Wings
+version: "1.11.13"
+tagline: Pterodactyl Wings
+description: >-
+  Wings is Pterodactyl's server control plane, built for the rapidly changing gaming industry and designed to be highly performant and secure. Wings provides an HTTP API allowing you to interface directly with running server instances, fetch server logs, generate backups, and control all aspects of the server lifecycle.
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: pterodactyl
+website: https://github.com/bigbeartechworld/big-bear-casaos
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-casaos
+support: https://github.com/bigbeartechworld/big-bear-casaos/issues
+port: 8128
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/pterodactyl.png
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-casaos

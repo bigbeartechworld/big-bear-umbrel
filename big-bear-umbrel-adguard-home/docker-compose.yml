@@ -1,38 +1,39 @@
-version: "3.7"
+# Configuration for adguard home setup
 
+# Application Name
+name: big-bear-adguard-home
+# Services used in the application
 services:
+  # The `app` service for the adguard home application
+  app:
+    # Name of the container
+    container_name: adguard-home
+    # Docker image to be used
+    image: adguard/adguardhome:v0.107.68
+    # Resources for the service
+    deploy:
+      resources:
+        reservations:
+          memory: 64M
+    # Volume mappings for the service
+    volumes:
+      - "${APP_DATA_DIR}/data/work:/opt/adguardhome/work" # Map data work directory
+      - "${APP_DATA_DIR}/data/conf:/opt/adguardhome/conf" # Map configuration directory
+    restart: unless-stopped
+    ports:
+      - 53:53/tcp # Map TCP port 53
+      - 53:53/udp # Map UDP port 53
+      - 8080:80 # Map port 80
+    # Define the networks
+    networks:
+      # Specify the adguard-home-network
+      - adguard-home-network
   app_proxy:
     environment:
-      APP_HOST: big-bear-umbrel-adguard-home_server_1
-      APP_PORT: 80
-      PROXY_AUTH_ADD: "false"
-
-  server:
-    image: adguard/adguardhome:v0.107.65
-    restart: on-failure
-    ports:
-      # plain DNS
-      - 53:53/tcp
-      - 53:53/udp
-      # DHCP Server
-      # - 67:67/udp
-      # - 68:68/tcp
-      # - 68:68/udp
-      # HTTP
-      # - 7200:80/tcp
-      # - 7200:80/udp
-      # Setup
-      - 7201:3000/tcp
-      - 7201:3000/udp
-      # DNS-over-HTTPS
-      # - 443:443/tcp
-      # - 443:443/udp
-      # DNS-over-TLS
-      - 853:853/tcp
-      # DNS-over-QUIC
-      - 784:784/udp
-      - 853:853/udp
-      - 8853:8853/udp
-    volumes:
-      - ${APP_DATA_DIR}/data/adguardhome/work:/opt/adguardhome/work
-      - ${APP_DATA_DIR}/data/adguardhome/conf:/opt/adguardhome/conf
+      APP_HOST: big-bear-umbrel-adguard-home_app_1
+      APP_PORT: "8080"
+# Networks used by the application
+networks:
+  # Define the network for AdGuard Home
+  adguard-home-network:
+    driver: bridge

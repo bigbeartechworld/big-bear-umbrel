@@ -1,0 +1,26 @@
+manifestVersion: 1
+id: big-bear-umbrel-code-server
+category: BigBearCasaOS
+name: Code Server
+version: "4.105.1"
+tagline: Code Server
+description: >-
+  Run VS Code on any machine anywhere and access it in the browser.
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: BigBearTechWorld
+website: https://github.com/bigbeartechworld/big-bear-casaos
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-casaos
+support: https://github.com/bigbeartechworld/big-bear-casaos/issues
+port: 8088
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/coder.png
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-casaos

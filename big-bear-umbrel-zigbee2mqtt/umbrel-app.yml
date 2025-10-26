@@ -1,0 +1,26 @@
+manifestVersion: 1
+id: big-bear-umbrel-zigbee2mqtt
+category: BigBearCasaOS
+name: Zigbee to MQTT bridge
+version: "2.6.2"
+tagline: Zigbee to MQTT bridge
+description: >-
+  Zigbee to MQTT bridge, get rid of your proprietary Zigbee bridges
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: koenkk
+website: https://github.com/bigbeartechworld/big-bear-casaos
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-casaos
+support: https://github.com/bigbeartechworld/big-bear-casaos/issues
+port: 8148
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/zigbee2mqtt.png
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-casaos

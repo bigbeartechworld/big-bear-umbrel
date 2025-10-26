@@ -1,0 +1,26 @@
+manifestVersion: 1
+id: big-bear-umbrel-unifi-network-application
+category: BigBearCasaOS
+name: Unifi Network Application
+version: "6.0.11"
+tagline: The Unifi-network-application
+description: >-
+  The Unifi-network-application software is a powerful, enterprise wireless software engine ideal for high-density client deployments requiring low latency and high uptime performance.
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: Ubiquiti
+website: https://github.com/bigbeartechworld/big-bear-casaos
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-casaos
+support: https://github.com/bigbeartechworld/big-bear-casaos/issues
+port: 27017
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/ubiquiti-unifi.png
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-casaos

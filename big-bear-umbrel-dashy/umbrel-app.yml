@@ -1,0 +1,26 @@
+manifestVersion: 1
+id: big-bear-umbrel-dashy
+category: BigBearCasaOS
+name: Dashy
+version: "3.1.0"
+tagline: Dashy
+description: >-
+  Dashy helps you organize your self-hosted services by making them accessible from a single place
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: Lissy93
+website: https://github.com/bigbeartechworld/big-bear-casaos
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-casaos
+support: https://github.com/bigbeartechworld/big-bear-casaos/issues
+port: 4001
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/dashy.png
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-casaos

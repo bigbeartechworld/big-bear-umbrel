@@ -1,0 +1,26 @@
+manifestVersion: 1
+id: big-bear-umbrel-jfa-go
+category: BigBearCasaOS
+name: jfa-go
+version: "latest"
+tagline: Manage users in Jellyfin
+description: >-
+  jfa-go is a user management app for Jellyfin (and Emby as 2nd class) that provides invite-based account creation as well as other features that make one's instance much easier to manage.
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: hrfee
+website: https://github.com/bigbeartechworld/big-bear-casaos
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-casaos
+support: https://github.com/bigbeartechworld/big-bear-casaos/issues
+port: 8056
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/jellyfin.png
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-casaos

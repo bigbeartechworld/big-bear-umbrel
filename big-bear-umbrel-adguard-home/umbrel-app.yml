@@ -1,39 +1,26 @@
 manifestVersion: 1
 id: big-bear-umbrel-adguard-home
-name: Adguard Home
-category: Networking
-version: "v0.107.65"
-tagline: Network-wide ads & trackers blocking DNS server
-icon: https://github.com/walkxcode/dashboard-icons/blob/main/png/adguard-home.png?raw=true
-description: >
-  AdGuard Home is a network-wide software for blocking ads and tracking. After you set it up, it'll cover all your home devices, and you won't need any client-side software for that.
-  Learn more on our official Github repository.
-developer: AdGuard Team
-website: https://adguard.com/en/adguard-home/overview.html
+category: BigBearCasaOS
+name: AdGuard Home
+version: "0.107.68"
+tagline: Network-wide ads & trackers blocking DNS server.
+description: >-
+  AdGuard Home is a network-wide software for blocking ads and tracking. After you set it up, it'll cover all your home devices, and you won't need any client-side software for that. Learn more on our official Github repository.
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: AdGuardTeam
+website: https://github.com/bigbeartechworld/big-bear-casaos
 dependencies: []
-repo: https://github.com/AdguardTeam/AdguardHome
-support: https://github.com/AdguardTeam/AdguardHome/issues
-port: 7200
+repo: https://github.com/bigbeartechworld/big-bear-casaos
+support: https://github.com/bigbeartechworld/big-bear-casaos/issues
+port: 8080
 gallery:
-  - https://i.imgur.com/gtLjT0L.png
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
 path: ""
+defaultUsername: ""
 defaultPassword: ""
-releaseNotes: >
-  In the previous release, we optimized the filtering-rule list updates, achieving up to three times speedup in some cases. However, the new algorithm proved to be too strict, so in this release we have relaxed its validations while maintaining the optimization for more typical filtering-rule lists 🏎️.
-
-  As always, there are other minor bug fixes in this release as well.
-
-  Full changelog
-  See also the v0.107.35 GitHub milestone.
-
-  Changed
-  Improved reliability filtering-rule list updates on Unix systems.
-  Fixed
-  Occasional client information lookup failures that could lead to the DNS server getting stuck (#6006).
-
-  bufio.Scanner: token too long and other errors when trying to add filtering-rule lists with lines over 1024 bytes long or containing cosmetic rules (#6003).
-
-  Removed
-  Default exposure of the non-standard ports 784 and 8853 for DNS-over-QUIC in the Dockerfile.
+icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/adguard-home.png
 submitter: BigBearTechWorld
-submission:
+submission: https://github.com/bigbeartechworld/big-bear-casaos

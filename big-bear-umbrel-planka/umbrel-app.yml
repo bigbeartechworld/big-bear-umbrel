@@ -1,0 +1,26 @@
+manifestVersion: 1
+id: big-bear-umbrel-planka
+category: BigBearCasaOS
+name: Planka
+version: "1.26.3"
+tagline: Free open source kanban board for workgroups.
+description: >-
+  The realtime kanban board for workgroups built with React and Redux.
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: plankanban
+website: https://github.com/bigbeartechworld/big-bear-casaos
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-casaos
+support: https://github.com/bigbeartechworld/big-bear-casaos/issues
+port: 3017
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/planka.png
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-casaos

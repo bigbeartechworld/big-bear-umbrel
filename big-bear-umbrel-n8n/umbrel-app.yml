@@ -1,0 +1,26 @@
+manifestVersion: 1
+id: big-bear-umbrel-n8n
+category: BigBearCasaOS
+name: n8n
+version: "1.117.0"
+tagline: Workflow automation tool
+description: >-
+  Free and open fair-code licensed node based Workflow Automation Tool.
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: n8n
+website: https://github.com/bigbeartechworld/big-bear-casaos
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-casaos
+support: https://github.com/bigbeartechworld/big-bear-casaos/issues
+port: 5678
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/n8n.png
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-casaos

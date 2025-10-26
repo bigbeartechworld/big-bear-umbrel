@@ -1,0 +1,26 @@
+manifestVersion: 1
+id: big-bear-umbrel-pihole-unbound
+category: BigBearCasaOS
+name: Pi-hole and Unbound
+version: "2025.08.0"
+tagline: Pi-hole and Unbound
+description: >-
+  This is a custom pihole and unbound setup.
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: bigbeartechworld
+website: https://github.com/bigbeartechworld/big-bear-casaos
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-casaos
+support: https://github.com/bigbeartechworld/big-bear-casaos/issues
+port: 8121
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/pi-hole-unbound.png
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-casaos

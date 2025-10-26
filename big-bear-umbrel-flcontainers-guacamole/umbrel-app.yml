@@ -1,0 +1,26 @@
+manifestVersion: 1
+id: big-bear-umbrel-flcontainers-guacamole
+category: BigBearCasaOS
+name: FlContainers Guacamole
+version: "1.6.0"
+tagline: Fully packaged Multi-Arch Guacamole.
+description: >-
+  A Docker Container for Apache Guacamole, a client-less remote desktop gateway. It supports standard protocols like VNC, RDP, and SSH over HTML5.
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: BigBearTechWorld
+website: https://github.com/bigbeartechworld/big-bear-casaos
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-casaos
+support: https://github.com/bigbeartechworld/big-bear-casaos/issues
+port: 8097
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/apache-guacamole.png
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-casaos

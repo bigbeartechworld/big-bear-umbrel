@@ -1,0 +1,26 @@
+manifestVersion: 1
+id: big-bear-umbrel-octoprint
+category: BigBearCasaOS
+name: OctoPrint
+version: "1.11.3"
+tagline: OctoPrint
+description: >-
+  OctoPrint is the snappy web interface for your 3D printer!
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: octoprint
+website: https://github.com/bigbeartechworld/big-bear-casaos
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-casaos
+support: https://github.com/bigbeartechworld/big-bear-casaos/issues
+port: 1082
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/octoprint.png
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-casaos

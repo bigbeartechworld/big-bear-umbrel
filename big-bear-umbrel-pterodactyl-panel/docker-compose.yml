@@ -1,0 +1,75 @@
+# big-bear-pterodactyl-panel configuration
+name: big-bear-pterodactyl-panel
+# Services section that specifies how the different services should be run
+services:
+  # This is the main app service for Pterodactyl Panel
+  app:
+    # Container configuration for the Pterodactyl Panel
+    container_name: pterodactyl-panel
+    # Image to use for the panel
+    image: ghcr.io/pterodactyl/panel:v1.11.11
+    # Restart the container automatically if it stops
+    restart: always
+    # Ports mapping: [HOST:CONTAINER]
+    ports:
+      - "1180:80" # Map host port 1180 to container port 80
+      - "11443:443" # Map host port 11443 to container port 443
+    # Link this container with the 'database' and 'cache' containers
+    links:
+      - database
+      - cache
+    # Volumes mapping: [HOST:CONTAINER]
+    volumes:
+      - "${APP_DATA_DIR}/var/:/app/var/" # Map app data
+      - "${APP_DATA_DIR}/nginx/:/etc/nginx/http.d/" # Map nginx config
+      - "${APP_DATA_DIR}/certs/:/etc/letsencrypt/" # Map SSL certificates
+      - "${APP_DATA_DIR}/logs/:/app/storage/logs" # Map logs
+    # Environment variables for the container
+    environment:
+      APP_URL: "http://example.com" # App URL
+      APP_TIMEZONE: "UTC" # App timezone
+      APP_SERVICE_AUTHOR: "noreply@example.com" # Service author email
+      # Uncomment to use Let's Encrypt for SSL certificate
+      # LE_EMAIL: ""
+      MAIL_FROM: "noreply@example.com" # Email sender
+      MAIL_DRIVER: "smtp" # Email driver
+      MAIL_HOST: "mail" # Email host
+      MAIL_PORT: "1025" # Email port
+      MAIL_USERNAME: "" # Email username
+      MAIL_PASSWORD: "" # Email password
+      MAIL_ENCRYPTION: "true" # Use email encryption
+      APP_ENV: "production" # App environment
+      APP_ENVIRONMENT_ONLY: "false" # Environment setting
+      CACHE_DRIVER: "redis" # Cache driver
+      SESSION_DRIVER: "redis" # Session driver
+      QUEUE_DRIVER: "redis" # Queue driver
+      REDIS_HOST: "cache" # Redis host
+      DB_HOST: "database" # Database host
+      DB_PASSWORD: casaos # Database password
+      DB_PORT: "3306" # Database port
+  database:
+    # Image to use for the database
+    image: mariadb:10.5
+    # Restart the container automatically if it stops
+    restart: always
+    # Command to run on container start
+    command: --default-authentication-plugin=mysql_native_password
+    # Volumes mapping: [HOST:CONTAINER]
+    volumes:
+      - "${APP_DATA_DIR}/database:/var/lib/mysql" # Map database data
+    # Environment variables for the container
+    environment:
+      MYSQL_DATABASE: "panel" # Database name
+      MYSQL_USER: "pterodactyl" # Database user
+      MYSQL_PASSWORD: "casaos" # Database user password
+      MYSQL_ROOT_PASSWORD: "casaos" # Database root password
+      # Container configuration for the cache
+  cache:
+    # Image to use for the cache
+    image: redis:8.2.2-alpine@sha256:1c78f5e7512cc8b22b0edc95c20e7abd9e1fd832e5dfd5c3c6b59ce82fb238d0
+    # Restart the container automatically if it stops
+    restart: always
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-pterodactyl-panel_app_1
+      APP_PORT: "1180"

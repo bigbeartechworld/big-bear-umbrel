@@ -1,0 +1,35 @@
+# Docker Compose configuration for BigBearCasaOS Poste.io Service
+# This service provides a mail server solution with JMAP, IMAP4, POP3, and SMTP support and a wide range of modern features.
+# Initial Version: v2.4.11
+
+# Name of the big-bear-poste-io application
+name: big-bear-poste-io
+# Service definitions for the big-bear-poste-io application
+services:
+  # Main service configuration for the Poste.io application
+  # This service provides a mail server solution with JMAP, IMAP4, POP3, and SMTP support and a wide range of modern features.
+  big-bear-poste-io:
+    # Name of the container
+    container_name: big-bear-poste-io
+    # Image to be used for the container specifies the analogic/poste.io version and source
+    image: analogic/poste.io:2.5.7
+    # Container restart policy - restarts the container unless manually stopped
+    restart: unless-stopped
+    # Network mode
+    network_mode: host
+    # Environment variables
+    environment:
+      - TZ=UTC
+    # Container hostname
+    hostname: mail.example.com
+    # Enable pseudo-TTY
+    tty: true
+    # Volume mappings required for system integration
+    # These mounts allow the container to interact with the host system
+    volumes:
+      # Required for monitoring system resources and container metrics
+      - ${APP_DATA_DIR}/data:/data
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-poste-io_big-bear-poste-io_1
+      APP_PORT: "8127"

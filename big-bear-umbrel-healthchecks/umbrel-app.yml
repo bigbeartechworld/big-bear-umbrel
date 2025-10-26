@@ -1,0 +1,26 @@
+manifestVersion: 1
+id: big-bear-umbrel-healthchecks
+category: BigBearCasaOS
+name: Healthchecks
+version: "3.11.20250828"
+tagline: Healthchecks
+description: >-
+  Healthchecks is a watchdog for your cron jobs. It's a web server that listens for pings from your cron jobs, plus a web interface.
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: linuxserver
+website: https://github.com/bigbeartechworld/big-bear-casaos
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-casaos
+support: https://github.com/bigbeartechworld/big-bear-casaos/issues
+port: 8004
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/healthchecks.png
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-casaos

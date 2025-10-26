@@ -1,0 +1,26 @@
+manifestVersion: 1
+id: big-bear-umbrel-wordpress
+category: BigBearCasaOS
+name: WordPress
+version: "6.8.3"
+tagline: WordPress
+description: >-
+  Initially started as a blogging tool in 2003, it has evolved into a highly flexible CMS that powers over 40% of the web (as of my last training data in 2022).
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: Automattic
+website: https://github.com/bigbeartechworld/big-bear-casaos
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-casaos
+support: https://github.com/bigbeartechworld/big-bear-casaos/issues
+port: 8146
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/wordpress.png
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-casaos

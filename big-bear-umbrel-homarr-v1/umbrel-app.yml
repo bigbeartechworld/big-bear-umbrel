@@ -1,0 +1,26 @@
+manifestVersion: 1
+id: big-bear-umbrel-homarr-v1
+category: BigBearCasaOS
+name: Homarr v1
+version: "1.43.0"
+tagline: Homarr v1 (Latest)
+description: >-
+  Homarr v1 - A sleek, modern dashboard for your server. This is the latest major version (v1.x) from homarr-labs with improved architecture and features. Note: This version uses a different data structure and requires SECRET_ENCRYPTION_KEY. Not compatible with legacy Homarr (v0.x) data without migration.
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: homarr-labs
+website: https://github.com/bigbeartechworld/big-bear-casaos
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-casaos
+support: https://github.com/bigbeartechworld/big-bear-casaos/issues
+port: 7576
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/homarr.png
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-casaos
