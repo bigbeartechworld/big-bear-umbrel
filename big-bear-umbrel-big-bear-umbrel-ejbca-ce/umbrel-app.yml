@@ -1,0 +1,25 @@
+manifestVersion: 1
+id: big-bear-umbrel-ejbca-ce
+category: BigBearCasaOS
+name: EJBCA Community
+version: "9.1.1"
+tagline: The open-source public key infrastructure (PKI) and certificate authority (CA)
+description: >-
+  The open-source public key infrastructure (PKI) and certificate authority (CA) software EJBCA is one of the longest running CA software projects. EJBCA covers all your needs - from certificate enrollment, via certificate management, to certificate validation.
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: Keyfactor
+website: 
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-casaos
+support: https://github.com/bigbeartechworld/big-bear-casaos/issues
+port: 8080
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-casaos

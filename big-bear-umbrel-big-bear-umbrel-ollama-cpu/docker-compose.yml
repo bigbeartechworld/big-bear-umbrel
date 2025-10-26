@@ -1,0 +1,33 @@
+# Configuration for ollama-cpu setup
+
+# Name of the big-bear-ollama-cpu application
+name: big-bear-ollama-cpu
+# Service definitions for the big-bear-ollama-cpu application
+services:
+  # Service name: big-bear-ollama-cpu
+  # The `big-bear-ollama-cpu` service definition
+  big-bear-ollama-cpu:
+    # Name of the container
+    container_name: big-bear-ollama-cpu
+    # Image to be used for the container
+    image: ollama/ollama:0.12.6
+    # Container restart policy
+    restart: unless-stopped
+    # Environment variables
+    environment:
+      - PORT=11434
+    # Volumes to be mounted to the container
+    volumes:
+      - ${APP_DATA_DIR}/.ollama:/root/.ollama
+    # Ports mapping between host and container
+    ports:
+      # Mapping port 11434 of the host to port 11434 of the container
+      - "11434:11434"
+    devices:
+      # Attach GPU
+      - /dev/kfd
+      - /dev/dri
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-ollama-cpu_big-bear-ollama-cpu_1
+      APP_PORT: "11434"

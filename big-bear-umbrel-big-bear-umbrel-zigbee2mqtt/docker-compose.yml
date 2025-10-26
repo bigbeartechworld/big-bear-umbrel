@@ -1,0 +1,33 @@
+# Configuration for zigbee2mqtt setup
+
+# Name of the big-bear-zigbee2mqtt application
+name: big-bear-zigbee2mqtt
+# Service definitions for the big-bear-zigbee2mqtt application
+services:
+  # Service name: big-bear-zigbee2mqtt
+  # The `big-bear-zigbee2mqtt` service definition
+  big-bear-zigbee2mqtt:
+    # Name of the container
+    container_name: big-bear-zigbee2mqtt
+    # Image to be used for the container
+    image: koenkk/zigbee2mqtt:2.6.2
+    # Container restart policy
+    restart: unless-stopped
+    # Volumes to be mounted to the container
+    volumes:
+      - ${APP_DATA_DIR}/data:/app/data
+      - /run/udev:/run/udev:ro
+    # Ports mapping between host and container
+    ports:
+      # Mapping port 8080 of the host to port 8080 of the container
+      - 8080:8080
+    # Environment variables
+    environment:
+      - TZ=UTC
+    devices:
+      # Make sure this matched your adapter location
+      - /dev/serial/by-id/usb-Texas_Instruments_TI_CC2531_USB_CDC___0X00124B0018ED3DDF-if00:/dev/ttyACM0
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-zigbee2mqtt_big-bear-zigbee2mqtt_1
+      APP_PORT: "8080"

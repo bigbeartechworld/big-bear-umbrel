@@ -1,0 +1,25 @@
+manifestVersion: 1
+id: big-bear-umbrel-scrypted
+category: BigBearCasaOS
+name: Scrypted
+version: "0.123.58-jammy-full"
+tagline: Scrypted
+description: >-
+  Scrypted is an open source video integration platform. Using various Plugins, Scrypted can receive streams from a range of cameras and send them to other platforms (HomeKit, Google Home, Alexa, Home Assistant).
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: koush
+website: 
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-casaos
+support: https://github.com/bigbeartechworld/big-bear-casaos/issues
+port: 10443
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-casaos

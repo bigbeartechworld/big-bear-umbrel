@@ -1,0 +1,25 @@
+manifestVersion: 1
+id: big-bear-umbrel-homebridge
+category: BigBearCasaOS
+name: HomeBridge
+version: "2024-05-02"
+tagline: HomeKit support for the impatient.
+description: >-
+  HomeKit support for the impatient.
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: homebridge
+website: 
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-casaos
+support: https://github.com/bigbeartechworld/big-bear-casaos/issues
+port: 8581
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-casaos

@@ -1,0 +1,30 @@
+# Configuration for komga setup
+
+# Name of the big-bear-komga application
+name: big-bear-komga
+# Service definitions for the big-bear-komga application
+services:
+  # Service name: big-bear-komga
+  # The `big-bear-komga` service definition
+  big-bear-komga:
+    # Name of the container
+    container_name: big-bear-komga
+    # Image to be used for the container
+    image: ghcr.io/gotson/komga:1.23.5
+    # Container restart policy
+    restart: unless-stopped
+    # Environment variables for the container
+    environment:
+      - TZ=UTC
+    # Volumes to be mounted to the container
+    volumes:
+      - ${APP_DATA_DIR}/config:/config
+      - ${APP_DATA_DIR}/data:/data
+    # Ports mapping between host and container
+    ports:
+      # Mapping port 25600 of the host to port 25600 of the container
+      - "25600:25600"
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-komga_big-bear-komga_1
+      APP_PORT: "25600"

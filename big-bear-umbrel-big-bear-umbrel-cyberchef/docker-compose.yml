@@ -1,0 +1,23 @@
+# Configuration for cyberchef setup
+
+# Name of the big-bear-cyberchef application
+name: big-bear-cyberchef
+# Service definitions for the big-bear-cyberchef application
+services:
+  # Service name: big-bear-cyberchef
+  # The `big-bear-cyberchef` service definition
+  big-bear-cyberchef:
+    # Name of the container
+    container_name: big-bear-cyberchef
+    # Image to be used for the container
+    image: ghcr.io/gchq/cyberchef:10.19.4
+    # Container restart policy
+    restart: unless-stopped
+    # Ports mapping between host and container
+    ports:
+      # Mapping port 8080 of the host to port 80 of the container
+      - "8080:80"
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-cyberchef_big-bear-cyberchef_1
+      APP_PORT: "8080"

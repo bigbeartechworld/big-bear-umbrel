@@ -1,0 +1,25 @@
+manifestVersion: 1
+id: big-bear-umbrel-dockge
+category: BigBearCasaOS
+name: Dockge
+version: "1.5.0"
+tagline: Dockge
+description: >-
+  A fancy, easy-to-use and reactive docker `compose.yaml` stack-oriented manager
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: louislam
+website: 
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-casaos
+support: https://github.com/bigbeartechworld/big-bear-casaos/issues
+port: 5001
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-casaos

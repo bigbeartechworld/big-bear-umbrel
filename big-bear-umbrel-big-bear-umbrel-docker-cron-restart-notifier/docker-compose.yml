@@ -1,0 +1,29 @@
+# Configuration for docker-cron-restart-notifier setup
+
+# Name of the big-bear-docker-cron-restart-notifier application
+name: big-bear-docker-cron-restart-notifier
+# Service definitions for the big-bear-docker-cron-restart-notifier application
+services:
+  # Service name: app
+  # The `app` service definition
+  app:
+    # Name of the container
+    container_name: big-bear-docker-cron-restart-notifier
+    # Image to be used for the container
+    image: deduard/tools:restart-notifier-latest
+    # Container restart policy
+    restart: unless-stopped
+    # Environment variables
+    environment:
+      DISCORD_WEBHOOK_URL: ""
+      RESTART_CONTAINERS: "app_1,app_2"
+      RUN_ON_STARTUP: "false"
+      CRON_SCHEDULE: "0 4 * * FRI" # Every Friday at 4:00 AM
+    # Volumes to be mounted to the container
+    volumes:
+      # Mounting docker.sock to allow docker management via Homarr
+      - /var/run/docker.sock:/var/run/docker.sock
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-docker-cron-restart-notifier_app_1
+      APP_PORT: ""

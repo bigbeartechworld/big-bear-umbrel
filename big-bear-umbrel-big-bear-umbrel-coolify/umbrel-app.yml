@@ -1,0 +1,25 @@
+manifestVersion: 1
+id: big-bear-umbrel-coolify
+category: BigBearCasaOS
+name: Coolify
+version: "4.0.0-beta.434"
+tagline: Coolify
+description: >-
+  Coolify is a self-hosted web application that allows you to manage your servers, applications, and services. It provides a simple and intuitive interface for managing your infrastructure, making it easy to deploy and manage your applications. With Coolify, you can easily manage your servers, applications, and services, providing a streamlined experience for managing your infrastructure.
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: coollabsio
+website: 
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-casaos
+support: https://github.com/bigbeartechworld/big-bear-casaos/issues
+port: 8000
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-casaos

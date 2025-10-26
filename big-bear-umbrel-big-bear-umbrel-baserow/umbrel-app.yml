@@ -1,0 +1,25 @@
+manifestVersion: 1
+id: big-bear-umbrel-baserow
+category: BigBearCasaOS
+name: Baserow
+version: "1.35.3"
+tagline: Baserow
+description: >-
+  Create your own online database without technical experience. Our user-friendly no-code tool gives you the powers of a developer without leaving your browser.
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: 
+website: 
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-casaos
+support: https://github.com/bigbeartechworld/big-bear-casaos/issues
+port: 7350
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-casaos

@@ -1,0 +1,25 @@
+manifestVersion: 1
+id: big-bear-umbrel-lobe-chat
+category: BigBearCasaOS
+name: LobeChat
+version: "1.141.10"
+tagline: LobeChat
+description: >-
+  LobeChat is a open-source, extensible (Function Calling), high-performance chatbot framework. It supports one-click free deployment of your private ChatGPT/LLM web application.
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: lobehub
+website: 
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-casaos
+support: https://github.com/bigbeartechworld/big-bear-casaos/issues
+port: 3210
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-casaos

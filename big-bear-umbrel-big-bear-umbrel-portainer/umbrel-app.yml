@@ -1,0 +1,25 @@
+manifestVersion: 1
+id: big-bear-umbrel-portainer
+category: BigBearCasaOS
+name: Portainer
+version: "2.35.0-alpine"
+tagline: Portainer
+description: >-
+  Irrespective of your industry, orchestration platform, or computing device, Portainer is the most versatile container management software that simplifies your secure adoption of containers with remarkable speed.
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: portainer
+website: 
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-casaos
+support: https://github.com/bigbeartechworld/big-bear-casaos/issues
+port: 8000
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-casaos

@@ -1,0 +1,63 @@
+# Configuration for zipline setup
+
+# Name of the big-bear-zipline application
+name: big-bear-zipline
+# Service definitions for the big-bear-zipline application
+services:
+  # Service name: zipline
+  # The `zipline` service definition
+  zipline:
+    # Name of the container
+    container_name: big-bear-zipline
+    # Image to be used for the container
+    image: ghcr.io/diced/zipline:3.7.13
+    # Container restart policy
+    restart: unless-stopped
+    # Volumes to be mounted to the container
+    volumes:
+      - "${APP_DATA_DIR}/uploads:/zipline/uploads"
+      - "${APP_DATA_DIR}/public:/zipline/public"
+    # Environment variables
+    environment:
+      - CORE_RETURN_HTTPS=false
+      - CORE_SECRET=changeme
+      - CORE_HOST=0.0.0.0
+      - CORE_PORT=3000
+      - CORE_DATABASE_URL=postgres://postgres:postgrespassword@zipline-db/zipline
+      - CORE_LOGGER=true
+    # Ports mapping between host and container
+    ports:
+      # Mapping port 3000 of the host to port 3000 of the container
+      - "3000:3000"
+    # Networks to be attached to the container
+    networks:
+      - zipline_network
+  # Postgres database
+  zipline-db:
+    # Name of the container
+    container_name: big-bear-zipline-db
+    # Image to be used
+    image: postgres:15
+    # Container restart policy
+    restart: unless-stopped
+    # Environment variables
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgrespassword
+      - POSTGRES_DATABASE=zipline
+    # Volumes to be mounted
+    volumes:
+      - ${APP_DATA_DIR}/postgres:/var/lib/postgresql/data
+    # Networks to be attached
+    networks:
+      - zipline_network
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-zipline_zipline_1
+      APP_PORT: "3000"
+# Networks to be created
+networks:
+  # Network name
+  zipline_network:
+    # Set the driver to bridge
+    driver: bridge

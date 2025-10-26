@@ -1,0 +1,25 @@
+manifestVersion: 1
+id: big-bear-umbrel-2fauth
+category: BigBearCasaOS
+name: 2FAuth
+version: "5.6.0"
+tagline: A Web app to manage your Two-Factor Authentication (2FA) accounts and generate their security codes
+description: >-
+  A Web app to manage your Two-Factor Authentication (2FA) accounts and generate their security codes
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: bubka
+website: 
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-casaos
+support: https://github.com/bigbeartechworld/big-bear-casaos/issues
+port: 8000
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-casaos

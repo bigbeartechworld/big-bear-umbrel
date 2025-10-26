@@ -1,0 +1,25 @@
+manifestVersion: 1
+id: big-bear-umbrel-playit-docker-web
+category: BigBearCasaOS
+name: Playit Docker Web
+version: "1.1"
+tagline: Playit.gg is a global proxy that allows anyone to host a server without port forwarding.
+description: >-
+  Playit.gg is a global proxy that allows anyone to host a server without port forwarding. We use tunneling. Only the server needs to run the program, not every player!
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: wisdomsky
+website: 
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-casaos
+support: https://github.com/bigbeartechworld/big-bear-casaos/issues
+port: 8008
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-casaos

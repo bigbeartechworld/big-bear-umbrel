@@ -1,0 +1,25 @@
+manifestVersion: 1
+id: big-bear-umbrel-jellyseerr
+category: BigBearCasaOS
+name: Jellyseerr
+version: "2.7.3"
+tagline: Jellyseerr is a free and open source software application for managing requests for your media library. It is a fork of Overseerr built to bring support for Jellyfin & Emby media servers!
+description: >-
+  Jellyseerr is a free and open source software application for managing requests for your media library. It is a fork of Overseerr built to bring support for Jellyfin & Emby media servers!
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: Fallenbagel
+website: 
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-casaos
+support: https://github.com/bigbeartechworld/big-bear-casaos/issues
+port: 5055
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-casaos

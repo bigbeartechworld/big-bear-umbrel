@@ -1,0 +1,25 @@
+manifestVersion: 1
+id: big-bear-umbrel-onlyoffice
+category: BigBearCasaOS
+name: OnlyOffice
+version: "9.1.0"
+tagline: OnlyOffice
+description: >-
+  Feature-rich web-based office suite with a vast range of collaborative capabilities
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: 
+website: 
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-casaos
+support: https://github.com/bigbeartechworld/big-bear-casaos/issues
+port: 7400
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-casaos

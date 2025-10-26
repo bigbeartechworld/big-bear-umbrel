@@ -1,0 +1,25 @@
+manifestVersion: 1
+id: big-bear-umbrel-wallabag
+category: BigBearCasaOS
+name: Wallabag
+version: "2.6.14"
+tagline: Save and classify articles. Read them later. Freely.
+description: >-
+  Wallabag is a self-hosted application for saving web pages. Unlike other services, Wallabag is free and open source.
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: wallabag
+website: 
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-casaos
+support: https://github.com/bigbeartechworld/big-bear-casaos/issues
+port: 8080
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-casaos

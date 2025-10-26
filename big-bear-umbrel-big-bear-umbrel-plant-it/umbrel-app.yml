@@ -1,0 +1,25 @@
+manifestVersion: 1
+id: big-bear-umbrel-plant-it
+category: BigBearCasaOS
+name: Plant-it
+version: "0.10.0"
+tagline: Self-hosted, open source gardening companion app
+description: >-
+  Plant-it is a self-hosted gardening companion app. Useful for keeping track of plant care, receiving notifications about when to water plants, uploading plant images, and more.
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: msdeluise
+website: 
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-casaos
+support: https://github.com/bigbeartechworld/big-bear-casaos/issues
+port: 8080
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-casaos

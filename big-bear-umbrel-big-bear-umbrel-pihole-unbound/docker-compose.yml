@@ -1,0 +1,46 @@
+# Configuration for pihole-unbound setup
+
+# Name of the big-bear-pihole-unbound application
+name: big-bear-pihole-unbound
+# Service definitions for the big-bear-pihole-unbound application
+services:
+  # Service name: app
+  # The `app` service definition
+  app:
+    # Name of the container
+    container_name: big-bear-pihole-unbound
+    # Image to be used for the container
+    image: bigbeartechworld/big-bear-pihole-unbound:2025.08.0
+    # Container restart policy
+    restart: unless-stopped
+    # Environment variables
+    environment:
+      TZ: "America/Chicago"
+      FTLCONF_webserver_api_password: "your_password"
+      FTLCONF_dns_upstreams: "127.0.0.1#5353" # Use Unbound IPs delimited by ; ex: 8.8.8.8;8.8.4.4
+    # Volumes to be mounted to the container
+    volumes:
+      # Mounting the local ${APP_DATA_DIR}/etc directory to /etc/pihole/ inside the container
+      - ${APP_DATA_DIR}/etc:/etc/pihole/
+      # Mounting the local ${APP_DATA_DIR}/dnsmasq.d directory to /etc/dnsmasq.d inside the container
+      - ${APP_DATA_DIR}/dnsmasq.d:/etc/dnsmasq.d/
+    # Ports mapping between host and container
+    ports:
+      - "53:53/tcp"
+      - "53:53/udp"
+      - "67:67/udp"
+      - "8080:80/tcp"
+      - "10443:443/tcp"
+    networks:
+      # Define the network for pihole-unbound
+      - pihole-unbound-network # Name of the network used by pihole-unbound
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-pihole-unbound_app_1
+      APP_PORT: "53"
+# Define the networks section
+networks:
+  # Define the pihole-unbound-network
+  pihole-unbound-network:
+    # Set the network driver to bridge
+    driver: bridge

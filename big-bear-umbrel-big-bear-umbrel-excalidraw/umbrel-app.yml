@@ -1,0 +1,25 @@
+manifestVersion: 1
+id: big-bear-umbrel-excalidraw
+category: BigBearCasaOS
+name: Excalidraw
+version: "latest"
+tagline: Virtual whiteboard for sketching hand-drawn like diagrams
+description: >-
+  Virtual whiteboard for sketching hand-drawn like diagrams
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: excalidraw
+website: 
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-casaos
+support: https://github.com/bigbeartechworld/big-bear-casaos/issues
+port: 8000
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-casaos

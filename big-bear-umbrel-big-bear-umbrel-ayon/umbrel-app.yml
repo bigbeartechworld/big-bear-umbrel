@@ -1,0 +1,25 @@
+manifestVersion: 1
+id: big-bear-umbrel-ayon
+category: BigBearCasaOS
+name: Ayon
+version: "1.3.6-20240823"
+tagline: Ayon
+description: >-
+  This is the official Docker-based deployment for the Ayon Server. Ayon is a robust tool designed to manage and automate workflows in the animation and visual effects industries.
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: ynput
+website: 
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-casaos
+support: https://github.com/bigbeartechworld/big-bear-casaos/issues
+port: 5000
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-casaos

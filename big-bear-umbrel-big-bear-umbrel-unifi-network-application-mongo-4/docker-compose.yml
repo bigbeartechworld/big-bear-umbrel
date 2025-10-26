@@ -1,0 +1,61 @@
+# Configuration for unifi-network-application-mongo-4 setup
+
+# Name of the big-bear-unifi-network-application-mongo-4 application
+name: big-bear-unifi-network-application-mongo-4
+# Service definitions for the big-bear-unifi-network-application-mongo-4 application
+services:
+  # MongoDB database for the application
+  unifi-db:
+    image: mongo:4.4.28
+    container_name: big-bear-unifi-db
+    volumes:
+      - ${APP_DATA_DIR}/db/data:/data/db # MongoDB data persistence
+      - /DATA/AppData/big-bear-unifi-network-application/db/init-mongo.js:/docker-entrypoint-initdb.d/init-mongo.js:ro
+    ports:
+      - 27017:27017 # MongoDB default port
+    networks: # Networks to join
+      - unifi-nework-application-network
+    restart: unless-stopped # Restart policy
+  # Main application service
+  app: # Name of the service
+    image: linuxserver/unifi-network-application:9.5.21 # Docker image to use
+    container_name: big-bear-unifi-network-application # Name for the created container
+    environment: # Environmental variables for the container
+      - PUID=1000 # User ID
+      - PGID=1000 # Group ID
+      - TZ=Etc/UTC # Timezone
+      - MONGO_HOST=big-bear-unifi-db # MongoDB host
+      - MONGO_USER=unifi # MongoDB username
+      - MONGO_PASS=unifi_password # MongoDB password
+      - MONGO_PORT=27017 # MongoDB port
+      - MONGO_DBNAME=unifi # MongoDB database name
+      - MEM_LIMIT=1024 #optional  # Memory limit for the container
+      - MEM_STARTUP=1024 #optional  # Memory to allocate on container startup
+      - MONGO_TLS= #optional  # MongoDB TLS setting
+      - MONGO_AUTHSOURCE= #optional  # MongoDB authentication source
+    volumes: # Volumes to mount in the container
+      - ${APP_DATA_DIR}/config:/config # Map host directory to container directory
+    ports: # Ports to expose and forward
+      - 8443:8443 # HTTPS portal
+      - 3478:3478/udp # STUN service
+      - 10001:10001/udp # UniFi AP discovery
+      - 8080:8080 # HTTP portal
+      - 1900:1900/udp #optional  # For DLNA
+      - 8843:8843 #optional  # HTTPS guest portal
+      - 8880:8880 #optional  # HTTP guest portal
+      - 6789:6789 #optional  # Mobile speed test port
+      - 5514:5514/udp #optional  # Remote syslog port
+    restart: unless-stopped # Restart policy for the container
+    networks: # Networks to join
+      - unifi-nework-application-network
+    depends_on:
+      - unifi-db
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-unifi-network-application-mongo-4_unifi-db_1
+      APP_PORT: "27017"
+# Networks used by the application
+networks:
+  # Define the network for AdGuard Home
+  unifi-nework-application-network:
+    driver: bridge

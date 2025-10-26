@@ -1,0 +1,25 @@
+manifestVersion: 1
+id: big-bear-umbrel-upsnap
+category: BigBearCasaOS
+name: Upsnap
+version: "5.2.3"
+tagline: Upsnap
+description: >-
+  A simple wake on lan web app written with SvelteKit, Go and PocketBase.
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: seriousm4x
+website: 
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-casaos
+support: https://github.com/bigbeartechworld/big-bear-casaos/issues
+port: 8090
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-casaos

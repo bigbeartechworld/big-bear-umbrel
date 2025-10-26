@@ -1,0 +1,20 @@
+# Configuration for big-bear-onlyoffice setup
+name: big-bear-onlyoffice
+# Service definitions for the big-bear-onlyoffice application
+services:
+  app:
+    image: onlyoffice/documentserver:9.1.0
+    container_name: documentserver
+    ports:
+      - "7400:80"
+    volumes:
+      - ${APP_DATA_DIR}/onlyoffice/logs:/var/log/onlyoffice
+      - ${APP_DATA_DIR}/onlyoffice/data:/var/www/onlyoffice/Data
+      - ${APP_DATA_DIR}/onlyoffice/lib:/var/lib/onlyoffice
+      - ${APP_DATA_DIR}/onlyoffice/rabbitmq:/var/lib/rabbitmq
+      - ${APP_DATA_DIR}/onlyoffice/redis:/var/lib/redis
+      - ${APP_DATA_DIR}/onlyoffice/db:/var/lib/postgresql
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-onlyoffice_app_1
+      APP_PORT: "7400"

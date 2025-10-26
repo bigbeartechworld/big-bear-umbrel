@@ -1,0 +1,25 @@
+manifestVersion: 1
+id: big-bear-umbrel-joplin
+category: BigBearCasaOS
+name: joplin
+version: "3.4.3"
+tagline: joplin
+description: >-
+  Note taking and to-do application with synchronisation
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: joplin
+website: 
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-casaos
+support: https://github.com/bigbeartechworld/big-bear-casaos/issues
+port: 22300
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-casaos

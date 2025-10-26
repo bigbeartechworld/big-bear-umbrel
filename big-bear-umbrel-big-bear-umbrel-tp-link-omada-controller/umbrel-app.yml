@@ -1,0 +1,25 @@
+manifestVersion: 1
+id: big-bear-umbrel-tp-link-omada-controller
+category: BigBearCasaOS
+name: TP-Link Omada Controller
+version: "5.15"
+tagline: TP-Link Omada Controller
+description: >-
+  Docker image for TP-Link Omada Controller to control TP-Link Omada Hardware
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: 
+website: 
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-casaos
+support: https://github.com/bigbeartechworld/big-bear-casaos/issues
+port: 8088
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-casaos

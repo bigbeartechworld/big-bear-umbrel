@@ -1,0 +1,25 @@
+manifestVersion: 1
+id: big-bear-umbrel-crafty
+category: BigBearCasaOS
+name: Crafty Controller
+version: "4.5.5"
+tagline: Crafty Controller
+description: >-
+  Crafty 4 is the next iteration of our Minecraft Server Wrapper / Controller / Launcher.
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: crafty-controller
+website: 
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-casaos
+support: https://github.com/bigbeartechworld/big-bear-casaos/issues
+port: 8443
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-casaos

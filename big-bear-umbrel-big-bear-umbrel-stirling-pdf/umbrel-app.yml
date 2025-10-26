@@ -1,0 +1,25 @@
+manifestVersion: 1
+id: big-bear-umbrel-stirling-pdf
+category: BigBearCasaOS
+name: Stirling-PDF
+version: "1.5.0"
+tagline: Stirling PDF - Local hosted web based PDF editor
+description: >-
+  Stirling PDF - Local hosted web based PDF editor
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: stirlingtools
+website: 
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-casaos
+support: https://github.com/bigbeartechworld/big-bear-casaos/issues
+port: 8080
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-casaos

@@ -1,0 +1,25 @@
+manifestVersion: 1
+id: big-bear-umbrel-pihole
+category: BigBearCasaOS
+name: Pi-hole
+version: "2025.08.0"
+tagline: A black hole for Internet advertisements
+description: >-
+  The Pi-hole® is a DNS sinkhole that protects your devices from unwanted content without installing any client-side software.
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: pi-hole.net
+website: 
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-casaos
+support: https://github.com/bigbeartechworld/big-bear-casaos/issues
+port: 53
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-casaos

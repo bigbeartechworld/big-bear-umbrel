@@ -1,0 +1,25 @@
+manifestVersion: 1
+id: big-bear-umbrel-sftpgo
+category: BigBearCasaOS
+name: SFTPGO
+version: "v2.6"
+tagline: SFTPGO
+description: >-
+  Full-featured and highly configurable SFTP, HTTP/S, FTP/S and WebDAV server - S3, Google Cloud Storage, Azure Blob
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: drakkan
+website: 
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-casaos
+support: https://github.com/bigbeartechworld/big-bear-casaos/issues
+port: 8080
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-casaos

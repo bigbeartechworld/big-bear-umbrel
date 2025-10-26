@@ -1,0 +1,25 @@
+manifestVersion: 1
+id: big-bear-umbrel-ghostfolio
+category: BigBearCasaOS
+name: Ghostfolio
+version: "2.210.1"
+tagline: Ghostfolio
+description: >-
+  Open Source Wealth Management Software. Angular + NestJS + Prisma + Nx + TypeScript 🤍
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: ghostfolio
+website: 
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-casaos
+support: https://github.com/bigbeartechworld/big-bear-casaos/issues
+port: 3333
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-casaos

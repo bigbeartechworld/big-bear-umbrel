@@ -1,0 +1,49 @@
+# Configuration for big-bear-immich-without-machine-learning setup
+name: big-bear-immich-without-machine-learning
+# Service definitions for the big-bear-immich-without-machine-learning application
+services:
+  # Main Immich Server service configuration
+  immich-server:
+    container_name: immich-server # Name of the running container
+    image: ghcr.io/immich-app/immich-server:v2.1.0 # Image to be used
+    # extends:
+    #   file: hwaccel.transcoding.yml
+    #   service: cpu # set to one of [nvenc, quicksync, rkmpp, vaapi, vaapi-wsl] for accelerated transcoding
+    ports: # Mapping ports from the host OS to the container
+      - 2283:2283
+    volumes: # Mounting directories for persistent data storage
+      - /DATA/AppData/big-bear-immich/upload:/usr/src/app/upload
+    environment: # Setting environment variables
+      DB_HOSTNAME: immich-postgres
+      DB_USERNAME: casaos
+      DB_PASSWORD: casaos
+      DB_DATABASE_NAME: immich
+      DB_PORT: "5432"
+      REDIS_HOSTNAME: immich-redis
+    depends_on: # Dependencies to ensure the order of service startup
+      - redis
+      - database
+    restart: unless-stopped # Policy to restart unless stopped
+  # Configuration for Redis service
+  redis:
+    container_name: immich-redis # Name of the running container
+    image: redis:6.2.20-alpine@sha256:2185e741f4c1e7b0ea9ca1e163a3767c4270a73086b6bbea2049a7203212fb7f # patched for CVE-2025-49844
+    restart: always # Policy to always restart the container if it stops
+  # Configuration for Database service
+  database:
+    container_name: immich-postgres # Name of the running container
+    image: ghcr.io/immich-app/postgres:14-vectorchord0.3.0-pgvectors0.2.0 # Image to be used
+    environment: # Setting environment variables
+      POSTGRES_PASSWORD: casaos
+      POSTGRES_USER: casaos
+      POSTGRES_DB: immich
+      PG_DATA: /var/lib/postgresql/data
+      # Uncomment the DB_STORAGE_TYPE: 'HDD' var if your database isn't stored on SSDs
+      # DB_STORAGE_TYPE: 'HDD'
+    volumes: # Mounting directories for persistent data storage
+      - /DATA/AppData/big-bear-immich/pgdata:/var/lib/postgresql/data
+    restart: always # Policy to always restart the container if it stops
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-immich-without-machine-learning_immich-server_1
+      APP_PORT: "2283"

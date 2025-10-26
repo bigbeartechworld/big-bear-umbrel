@@ -1,0 +1,25 @@
+manifestVersion: 1
+id: big-bear-umbrel-ihatemoney
+category: BigBearCasaOS
+name: I Hate Money
+version: "6.1.5"
+tagline: A simple shared budget manager web application
+description: >-
+  I hate money is a web application made to ease shared budget management. It keeps track of who bought what, when, and for whom; and helps to settle the bills.
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: spiral-project
+website: 
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-casaos
+support: https://github.com/bigbeartechworld/big-bear-casaos/issues
+port: 8001
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-casaos
