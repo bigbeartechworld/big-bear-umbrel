@@ -1,0 +1,26 @@
+manifestVersion: 1
+id: big-bear-umbrel-rallly
+category: BigBearCasaOS
+name: Rallly
+version: "4.4.1"
+tagline: Rallly
+description: >-
+  Rallly is an open-source scheduling and collaboration tool designed to make organizing events and meetings easier.
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: lukevella
+website: https://github.com/bigbeartechworld/big-bear-casaos
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-casaos
+support: https://github.com/bigbeartechworld/big-bear-casaos/issues
+port: 3018
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/rallly.png
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-casaos

@@ -1,0 +1,26 @@
+manifestVersion: 1
+id: big-bear-umbrel-pocketid
+category: BigBearCasaOS
+name: Pocket ID
+version: "1.14"
+tagline: Passkey-based OIDC authentication
+description: >-
+  Simple and easy-to-use OIDC provider that allows users to authenticate with their passkeys to your services.
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: pocket-id
+website: https://github.com/bigbeartechworld/big-bear-casaos
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-casaos
+support: https://github.com/bigbeartechworld/big-bear-casaos/issues
+port: 1411
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+icon: https://pocket-id.org/img/logo.png
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-casaos

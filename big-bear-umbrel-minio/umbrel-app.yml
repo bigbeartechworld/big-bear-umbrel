@@ -1,0 +1,26 @@
+manifestVersion: 1
+id: big-bear-umbrel-minio
+category: BigBearCasaOS
+name: Minio
+version: "RELEASE.2025-10-15T17-29-55Z"
+tagline: An open-source S3 alternative
+description: >-
+  A distributed object storage server built for cloud applications and devops. Default credentials 'minioadmin:minioadmin', we recommend that you change these values with 'MINIO_ROOT_USER' and 'MINIO_ROOT_PASSWORD' environment variables.
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: minio
+website: https://github.com/bigbeartechworld/big-bear-casaos
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-casaos
+support: https://github.com/bigbeartechworld/big-bear-casaos/issues
+port: 9010
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/minio.png
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-casaos

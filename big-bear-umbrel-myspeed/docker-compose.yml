@@ -1,0 +1,19 @@
+# Configuration for myspeed setup
+
+# Name of the big-bear-myspeed application
+name: big-bear-myspeed
+# Service definitions for the big-bear-myspeed application
+services:
+  # Service name: app
+  # The `app` service definition
+  app:
+    image: germannewsmaker/myspeed:1.0.9 # Docker image to be used for the service
+    ports:
+      - "5216:5216" # Port mapping from host to container
+    volumes:
+      - ${APP_DATA_DIR}/data:/myspeed/data # Mount host directory to container directory
+    restart: unless-stopped # Restart policy for the service
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-myspeed_app_1
+      APP_PORT: "5216"

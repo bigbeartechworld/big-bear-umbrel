@@ -1,0 +1,26 @@
+manifestVersion: 1
+id: big-bear-umbrel-project-management
+category: BigBearCasaOS
+name: Project Management
+version: "1.2.3"
+tagline: Project Management
+description: >-
+  An open source Project management tool based on Laravel and Filament
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: eloufirhatim
+website: https://github.com/bigbeartechworld/big-bear-casaos
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-casaos
+support: https://github.com/bigbeartechworld/big-bear-casaos/issues
+port: 8011
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+icon: https://cdn.jsdelivr.net/gh/bigbeartechworld/big-bear-casaos/Apps/project-management/logo.png
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-casaos

@@ -1,0 +1,23 @@
+# Name of the configuration: big-bear-flcontainers-guacamole
+name: big-bear-flcontainers-guacamole
+# Define the services required for the application
+services:
+  # app service configuration
+  app:
+    # Docker image to use for this service
+    image: flcontainers/guacamole:1.6.0
+    # Container name
+    container_name: big-bear-flcontainers-guacamole
+    # Restart policy for the container
+    restart: always
+    # Environment variables for the app service
+    environment:
+      tz: "UTC"
+      EXTENSIONS: "auth-totp,auth-ldap"
+    # Map port 8080 on the host to port 8080 on the container
+    ports:
+      - 8080:8080
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-flcontainers-guacamole_app_1
+      APP_PORT: "8097"

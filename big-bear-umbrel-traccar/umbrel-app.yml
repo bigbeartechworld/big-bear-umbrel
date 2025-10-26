@@ -1,0 +1,26 @@
+manifestVersion: 1
+id: big-bear-umbrel-traccar
+category: BigBearCasaOS
+name: Traccar
+version: "6.10-ubuntu"
+tagline: Traccar
+description: >-
+  Traccar GPS Tracking System in Docker image.
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: traccar
+website: https://github.com/bigbeartechworld/big-bear-casaos
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-casaos
+support: https://github.com/bigbeartechworld/big-bear-casaos/issues
+port: 8139
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/traccar.png
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-casaos

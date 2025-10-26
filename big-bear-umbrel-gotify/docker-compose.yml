@@ -1,0 +1,19 @@
+# Configuration for big-bear-gotify setup
+name: big-bear-gotify
+# Service definitions for the big-bear-gotify application
+services:
+  # Service name: app
+  app:
+    image: gotify/server:2.7.3 # Docker image for the service
+    ports:
+      - 8091:80 # Port mapping (host:container)
+    environment: # Environment variables for the service
+      - GOTIFY_DEFAULTUSER_NAME=admin
+      - GOTIFY_DEFAULTUSER_PASS=custom
+    volumes: # Volume mapping (host:container)
+      - "${APP_DATA_DIR}/data:/app/data"
+    network_mode: bridge # Network mode
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-gotify_app_1
+      APP_PORT: "8099"

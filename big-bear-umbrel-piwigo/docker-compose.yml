@@ -1,0 +1,50 @@
+# Configuration for piwigo setup
+
+# Name of the big-bear-piwigo application
+name: big-bear-piwigo
+# Service definitions for the big-bear-piwigo application
+services:
+  # Service name: big-bear-piwigo
+  # The `big-bear-piwigo` service definition
+  big-bear-piwigo:
+    # Name of the container
+    container_name: big-bear-piwigo
+    # Image to be used for the container
+    image: linuxserver/piwigo:15.7.0
+    # Container restart policy
+    restart: unless-stopped
+    # Environment variables
+    environment:
+      - PUID=1000 # User ID for the container
+      - PGID=1000 # Group ID for the container
+      - TZ=UTC # Timezone setting for the container
+    # Volumes to be mounted to the container
+    volumes:
+      - ${APP_DATA_DIR}/config:/config # Configuration files
+      - ${APP_DATA_DIR}/gallery:/gallery # Gallery files
+    # Ports mapping between host and container
+    ports:
+      - "8080:80" # Mapping port 8080 of the host to port 80 of the container
+    networks:
+      - big_bear_piwigo_network
+  big-bear-piwigo-db:
+    image: mariadb:10.6
+    container_name: big-bear-piwigo-db
+    environment:
+      - MYSQL_ROOT_PASSWORD=3cf3f2c4-3415-4efe-b478-db7b6f0b9934 # Root password for MySQL
+      - MYSQL_DATABASE=piwigo # Database name
+      - MYSQL_USER=big_bear_piwigo # Database user
+      - MYSQL_PASSWORD=358fac48-4beb-4027-9c11-840464aca400 # Database user password
+    volumes:
+      - ${APP_DATA_DIR}/mysql:/var/lib/mysql # Persist database data
+    restart: unless-stopped
+    networks:
+      - big_bear_piwigo_network
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-piwigo_big-bear-piwigo_1
+      APP_PORT: "8124"
+# Network definition for the big-bear-piwigo application
+networks:
+  big_bear_piwigo_network:
+    driver: bridge # Defines the network driver to be used (bridge)

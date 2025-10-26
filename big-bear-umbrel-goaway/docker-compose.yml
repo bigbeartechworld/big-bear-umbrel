@@ -1,0 +1,32 @@
+# Configuration for goaway setup
+
+# Application Name
+name: big-bear-goaway
+# Services used in the application
+services:
+  # The `big-bear-goaway` service for the goaway application
+  big-bear-goaway:
+    # Name of the container
+    container_name: big-bear-goaway
+    # Docker image to be used
+    image: pommee/goaway:0.62.11
+    # Restart policy for the service
+    restart: unless-stopped
+    # Port mappings for the service
+    ports:
+      - "53:53/udp" # DNS port UDP
+      - "53:53/tcp" # DNS port TCP
+      - "8080:8080" # Web dashboard port
+    # Network mode for the service
+    network_mode: bridge
+    # Volumes for the service HOST -> CONTAINER
+    volumes:
+      - ${APP_DATA_DIR}/config:/app/config
+    # Capabilities required for DNS services
+    cap_add:
+      - NET_BIND_SERVICE
+      - NET_RAW
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-goaway_big-bear-goaway_1
+      APP_PORT: "8098"

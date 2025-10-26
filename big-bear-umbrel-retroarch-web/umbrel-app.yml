@@ -1,0 +1,26 @@
+manifestVersion: 1
+id: big-bear-umbrel-retroarch-web
+category: BigBearCasaOS
+name: RetroArch
+version: "latest"
+tagline: RetroArch Web Player
+description: >-
+  Online retro games emulator.The RetroArch Web Player is RetroArch compiled through Emscripten.
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: inglebard
+website: https://github.com/bigbeartechworld/big-bear-casaos
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-casaos
+support: https://github.com/bigbeartechworld/big-bear-casaos/issues
+port: 8129
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+icon: https://cdn.jsdelivr.net/gh/bigbeartechworld/big-bear-casaos/Apps/retroarch-web/logo.png
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-casaos

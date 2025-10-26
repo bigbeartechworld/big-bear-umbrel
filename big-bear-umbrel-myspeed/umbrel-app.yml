@@ -1,0 +1,26 @@
+manifestVersion: 1
+id: big-bear-umbrel-myspeed
+category: BigBearCasaOS
+name: MySpeed
+version: "1.0.9"
+tagline: A speed test analysis software that shows your internet speed for up to 30 days
+description: >-
+  MySpeed is a speed test analysis software that records your internet speed for up to 30 days.
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: gnmyt
+website: https://github.com/bigbeartechworld/big-bear-casaos
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-casaos
+support: https://github.com/bigbeartechworld/big-bear-casaos/issues
+port: 5216
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+icon: https://cdn.jsdelivr.net/gh/bigbeartechworld/big-bear-casaos/Apps/myspeed/logo.png
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-casaos

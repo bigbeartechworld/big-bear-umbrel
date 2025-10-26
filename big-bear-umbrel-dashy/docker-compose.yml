@@ -1,0 +1,34 @@
+# Configuration for big-bear-dashy setup
+
+# Name of the big-bear-dashy application
+name: big-bear-dashy
+# Service definitions for the dashy application
+services:
+  # Service name: big-bear-dashy
+  big-bear-dashy:
+    # Image to be used for the app service
+    image: lissy93/dashy:3.1.0
+    # Name of the container
+    container_name: big-bear-dashy
+    # Uncomment below if you want to mount volumes
+    volumes:
+      - ${APP_DATA_DIR}/public:/app/public
+    # Ports mapping
+    ports:
+      - 4000:8080
+    # Set any environmental variables
+    environment:
+      - NODE_ENV=production
+    # Restart policy for the container
+    restart: unless-stopped
+    # Configure healthchecks for the service
+    healthcheck:
+      test: ["CMD", "node", "/app/services/healthcheck"]
+      interval: 1m30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-dashy_big-bear-dashy_1
+      APP_PORT: "4001"

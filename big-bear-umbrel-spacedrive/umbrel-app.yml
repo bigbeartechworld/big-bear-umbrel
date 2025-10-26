@@ -1,0 +1,26 @@
+manifestVersion: 1
+id: big-bear-umbrel-spacedrive
+category: BigBearCasaOS
+name: Spacedrive
+version: "0.4.2"
+tagline: Cross-platform file explorer
+description: >-
+  Spacedrive is an open source cross-platform file explorer, powered by a virtual distributed filesystem written in Rust.
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: spacedriveapp
+website: https://github.com/bigbeartechworld/big-bear-casaos
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-casaos
+support: https://github.com/bigbeartechworld/big-bear-casaos/issues
+port: 8132
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+icon: https://cdn.jsdelivr.net/gh/bigbeartechworld/big-bear-casaos/Apps/spacedrive/logo.png
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-casaos

@@ -1,0 +1,26 @@
+manifestVersion: 1
+id: big-bear-umbrel-erugo
+category: BigBearCasaOS
+name: Erugo
+version: "0.1.1"
+tagline: A powerful, self-hosted file-sharing platform built with PHP and Laravel with a Vue.js frontend.
+description: >-
+  A powerful, self-hosted file-sharing platform built with PHP and Laravel with a Vue.js frontend. It offers secure, customizable file-transfer capabilities through an elegant user interface, giving you complete control over your data while providing a seamless experience for both senders and recipients.
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: wardy784
+website: https://github.com/bigbeartechworld/big-bear-casaos
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-casaos
+support: https://github.com/bigbeartechworld/big-bear-casaos/issues
+port: 9997
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/erugo.png
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-casaos

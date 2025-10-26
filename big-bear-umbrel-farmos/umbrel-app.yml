@@ -1,0 +1,26 @@
+manifestVersion: 1
+id: big-bear-umbrel-farmos
+category: BigBearCasaOS
+name: FarmOS
+version: "3.4.5"
+tagline: A web-based farm record keeping application.
+description: >-
+  farmOS is a web-based application for farm management, planning, and record keeping. It is developed by a community of volunteers and aims to provide a standard platform for farmers, developers, and researchers to build upon.
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: farmOS
+website: https://github.com/bigbeartechworld/big-bear-casaos
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-casaos
+support: https://github.com/bigbeartechworld/big-bear-casaos/issues
+port: 8094
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+icon: https://cdn.jsdelivr.net/gh/bigbeartechworld/big-bear-casaos/Apps/farmos/logo.jpeg
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-casaos

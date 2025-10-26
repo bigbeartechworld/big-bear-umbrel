@@ -1,0 +1,26 @@
+manifestVersion: 1
+id: big-bear-umbrel-gladys
+category: BigBearCasaOS
+name: Gladys Assistant
+version: "4.64.0"
+tagline: A privacy-first, open-source home assistant.
+description: >-
+  Gladys Assistant is a modern, privacy-first & open-source home automation software that runs anywhere.
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: GladysAssistant
+website: https://github.com/bigbeartechworld/big-bear-casaos
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-casaos
+support: https://github.com/bigbeartechworld/big-bear-casaos/issues
+port: 1081
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+icon: https://gladysassistant.com/img/external/github-gladys-logo.png
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-casaos

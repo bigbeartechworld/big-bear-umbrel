@@ -1,0 +1,26 @@
+manifestVersion: 1
+id: big-bear-umbrel-mind
+category: BigBearCasaOS
+name: MIND
+version: "1.4.1"
+tagline: A simple self hosted reminder application that can send push notifications to your device. Set the reminder and forget about it!
+description: >-
+  A simple self hosted reminder application that can send push notifications to your device. Set the reminder and forget about it!
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: Casvt
+website: https://github.com/bigbeartechworld/big-bear-casaos
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-casaos
+support: https://github.com/bigbeartechworld/big-bear-casaos/issues
+port: 8109
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+icon: https://i.imgur.com/UgjalkK.png
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-casaos

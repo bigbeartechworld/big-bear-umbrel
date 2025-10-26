@@ -1,0 +1,26 @@
+manifestVersion: 1
+id: big-bear-umbrel-ghost
+category: BigBearCasaOS
+name: Ghost
+version: "6.5.0-alpine"
+tagline: Ghost is a free and open source blogging platform
+description: >-
+  Ghost is a free and open source blogging platform written in JavaScript and distributed under the MIT License, designed to simplify the process of online publishing for individual bloggers as well as online publications.
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: ghost
+website: https://github.com/bigbeartechworld/big-bear-casaos
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-casaos
+support: https://github.com/bigbeartechworld/big-bear-casaos/issues
+port: 2368
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/ghost.png
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-casaos

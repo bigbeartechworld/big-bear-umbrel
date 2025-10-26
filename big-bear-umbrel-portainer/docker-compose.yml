@@ -1,0 +1,20 @@
+# Configuration for big-bear-portainer setup
+name: big-bear-portainer
+# Service definitions for the big-bear-portainer application
+services:
+  # Main Portainer service configuration
+  app:
+    container_name: big-bear-portainer # Name of the running container
+    image: portainer/portainer-ce:2.35.0-alpine # Image to be used
+    network_mode: bridge # Network mode to be used
+    ports: # Port mapping between host and container
+      - 8000:8000
+      - 9000:9000
+      - 9443:9443
+    volumes:
+      - ${APP_DATA_DIR}/data:/data # Bind mount for Docker volumes
+      - /var/run/docker.sock:/var/run/docker.sock # Bind mount for Docker socket
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-portainer_app_1
+      APP_PORT: "8010"

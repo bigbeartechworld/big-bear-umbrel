@@ -1,0 +1,45 @@
+# Configuration for filebrowser setup
+
+# Name of the big-bear-filebrowser application
+name: big-bear-filebrowser
+# Service definitions for the big-bear-filebrowser application
+services:
+  # Service name: big-bear-filebrowser
+  # The `big-bear-filebrowser` service definition
+  big-bear-filebrowser:
+    # Name of the container
+    container_name: big-bear-filebrowser
+    # Image to be used for the container
+    image: filebrowser/filebrowser:v2.44.2-s6
+    # Container restart policy
+    restart: unless-stopped
+    # Environment variables
+    environment:
+      # User ID to run the container with
+      - PUID=0
+      # Group ID to run the container with
+      - PGID=0
+    # Volumes to be mounted to the container
+    volumes:
+      # Volume mapping for the app data from CasaOS
+      - /DATA/AppData:/srv/app-data
+      # Volume mapping for the Documents files from CasaOS
+      - /DATA/Documents:/srv/documents
+      # Volume mapping for the Downloads files from CasaOS
+      - /DATA/Downloads:/srv/downloads
+      # Volume mapping for the Gallery files from CasaOS
+      - /DATA/Gallery:/srv/gallery
+      # Volume mapping for the media files from CasaOS
+      - /DATA/media:/srv/media
+      # Volume mapping for the database files for filebrowser
+      - ${APP_DATA_DIR}/data/db:/database
+      # Volume mapping for the config files for filebrowser
+      - ${APP_DATA_DIR}/data/config:/config
+    # Ports mapping between host and container
+    ports:
+      # Mapping port 8080 of the host to port 8080 of the container
+      - "8080:80"
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-filebrowser_big-bear-filebrowser_1
+      APP_PORT: "8095"

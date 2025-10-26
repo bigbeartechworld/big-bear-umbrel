@@ -1,0 +1,26 @@
+manifestVersion: 1
+id: big-bear-umbrel-mumble-server
+category: BigBearCasaOS
+name: Mumble Server
+version: "v1.4.230-6"
+tagline: Mumble Server
+description: >-
+  Mumble is a free, open source, low latency, high quality voice chat application.
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: BigBearTechWorld
+website: https://github.com/bigbeartechworld/big-bear-casaos
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-casaos
+support: https://github.com/bigbeartechworld/big-bear-casaos/issues
+port: 64738
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/mumble.png
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-casaos

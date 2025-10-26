@@ -1,0 +1,26 @@
+manifestVersion: 1
+id: big-bear-umbrel-linkwarden
+category: BigBearCasaOS
+name: Linkwarden
+version: "2.13.1"
+tagline: Linkwarden
+description: >-
+  ⚡️⚡️⚡️Self-hosted collaborative bookmark manager to collect, organize, and preserve webpages and articles.
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: linkwarden
+website: https://github.com/bigbeartechworld/big-bear-casaos
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-casaos
+support: https://github.com/bigbeartechworld/big-bear-casaos/issues
+port: 3012
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/linkwarden.png
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-casaos

@@ -1,0 +1,26 @@
+manifestVersion: 1
+id: big-bear-umbrel-GemDigest
+category: BigBearCasaOS
+name: GemDigest Bot
+version: "1.0"
+tagline: Your personal article summarizer
+description: >-
+  Simplify your reads, amplify your time! 📚✨ GemDigest is a Telegram bot that summarizes articles from any website into bite-sized nuggets, saving you time and energy for what matters most. 📱👋
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: Armaggheddon
+website: https://github.com/bigbeartechworld/big-bear-casaos
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-casaos
+support: https://github.com/bigbeartechworld/big-bear-casaos/issues
+port: 3333
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+icon: https://cdn.jsdelivr.net/gh/Piero24/GemDigest/.github/images/casOS_logo.png
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-casaos

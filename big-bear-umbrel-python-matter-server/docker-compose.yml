@@ -1,0 +1,26 @@
+# big-bear-python-matter-server Configuration
+name: big-bear-python-matter-server
+# Defining the services for this configuration
+services:
+  app:
+    # Docker image used for the service
+    image: ghcr.io/home-assistant-libs/python-matter-server:8.1.0
+    # Container name for the service
+    container_name: matter-server
+    # Restart policy for the container
+    restart: unless-stopped
+    # Required to make mDNS work correctly
+    network_mode: host
+    security_opt:
+      # Necessary for accessing Bluetooth via dbus
+      - apparmor:unconfined
+    volumes:
+      # Map the data directory from the host to the container
+      # Make sure to create an .env file that sets the USERDIR environment variable
+      - ${APP_DATA_DIR}/data:/data/
+      # Map the dbus directory from the host to the container in read-only mode
+      - /run/dbus:/run/dbus:ro
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-python-matter-server_app_1
+      APP_PORT: "5080"

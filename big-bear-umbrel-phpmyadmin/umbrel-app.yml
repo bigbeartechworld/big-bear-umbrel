@@ -1,0 +1,26 @@
+manifestVersion: 1
+id: big-bear-umbrel-phpmyadmin
+category: BigBearCasaOS
+name: phpMyAdmin
+version: "5.2.3"
+tagline: phpMyAdmin
+description: >-
+  phpMyAdmin - A web interface for MySQL and MariaDB.
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: phpMyAdmin
+website: https://github.com/bigbeartechworld/big-bear-casaos
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-casaos
+support: https://github.com/bigbeartechworld/big-bear-casaos/issues
+port: 8119
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/phpmyadmin.png
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-casaos

@@ -1,0 +1,54 @@
+# Configuration for odoo setup
+
+# Name of the big-bear-odoo application
+name: big-bear-odoo
+# Service definitions for the big-bear-odoo application
+services:
+  # Service name: big-bear-odoo
+  # This section defines the main Odoo service
+  big-bear-odoo:
+    # Name of the container
+    container_name: big-bear-odoo # Specifies the container instance name for identification
+    # Image to be used for the container
+    image: odoo:19 # Docker image for Odoo version 17
+    # Container restart policy
+    restart: unless-stopped # Restart policy to ensure service recovery
+    # User to run the container as
+    user: root # Specifies running the container as root
+    # Volumes to be mounted to the container
+    volumes:
+      - ${APP_DATA_DIR}/data/etc:/etc/odoo # Mounts Odoo configuration files
+      - ${APP_DATA_DIR}/data/addons:/mnt/extra-addons # Mounts additional Odoo addons
+    # Ports mapping between host and container
+    ports:
+      - "8069:8069" # Exposes port 8069 on host and container for web access
+    # Environment variables
+    environment:
+      - HOST=big-bear-odoo-db # Database host
+      - USER=odoo # Database username
+      - PASSWORD=a8d785b6-bc00-49cc-8675-d404093d1507 # Database password
+    # Networks to be attached to the container
+    networks:
+      - big_bear_odoo_network # Specifies network attachment for internal communication
+  # Database service for Odoo
+  big-bear-odoo-db:
+    container_name: big-bear-odoo-db # Database container name
+    image: postgres:15 # PostgreSQL version 15 Docker image
+    user: root # Runs as root user
+    environment:
+      - POSTGRES_USER=odoo # Database user
+      - POSTGRES_PASSWORD=a8d785b6-bc00-49cc-8675-d404093d1507 # Database password
+      - POSTGRES_DB=postgres # Database name
+    restart: unless-stopped # Restart policy for the database
+    volumes:
+      - ${APP_DATA_DIR}/data/postgresql:/var/lib/postgresql/data # Mounts PostgreSQL data directory
+    networks:
+      - big_bear_odoo_network # Attached network for internal communication
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-odoo_big-bear-odoo_1
+      APP_PORT: "8069"
+# Network definition for the big-bear-odoo application
+networks:
+  big_bear_odoo_network:
+    driver: bridge # Specifies network driver as bridge

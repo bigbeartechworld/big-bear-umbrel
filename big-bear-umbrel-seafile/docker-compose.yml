@@ -1,0 +1,74 @@
+# Configuration for seafile setup
+
+# Name of the big-bear-seafile application
+name: big-bear-seafile
+# Service definitions for the big-bear-seafile application
+services:
+  # Service name: big-bear-seafile
+  # The `big-bear-seafile` service definition
+  big-bear-seafile:
+    # Name of the container
+    container_name: big-bear-seafile
+    # Image to be used for the container
+    image: seafileltd/seafile-mc:11.0.13
+    # Container restart policy
+    restart: unless-stopped
+    # Service dependencies
+    depends_on:
+      big-bear-seafile-db:
+        condition: service_healthy
+      big-bear-seafile-memcached:
+        condition: service_started
+    volumes:
+      - ${APP_DATA_DIR}/shared:/shared
+    # Ports mapping between host and container
+    ports:
+      # Mapping port 8080 of the host to port 80 of the container
+      - "8080:80"
+      # - "443:443"  # If https is enabled, cancel the comment.
+    environment:
+      - DB_HOST=big-bear-seafile-db # Specifies MySQL service host name.
+      - DB_ROOT_PASSWD=seafilepassword # Requested, the value should be root's password of MySQL service.
+      - TIME_ZONE=Etc/UTC # Optional, default is UTC. Should be uncomment and set to your local time zone.
+      - SEAFILE_ADMIN_EMAIL=admin@example.com # Specifies Seafile admin user, default is 'me@example.com'.
+      - SEAFILE_ADMIN_PASSWORD=asecret # Specifies Seafile admin password, default is 'asecret'.
+      - SEAFILE_SERVER_LETSENCRYPT=false # Whether to use https or not.
+      - SEAFILE_SERVER_HOSTNAME=docs.seafile.com # Specifies your host name if https is enabled.
+    # Networks to be attached to the container
+    networks:
+      - big_bear_seafile_network
+  # Database service for seafile
+  big-bear-seafile-db:
+    image: mariadb:10.11
+    container_name: big-bear-seafile-db
+    environment:
+      - MYSQL_ROOT_PASSWORD=seafilepassword # Requested, set the root's password of MySQL service.
+      - MYSQL_LOG_CONSOLE=true
+      - MARIADB_AUTO_UPGRADE=1
+    volumes:
+      - ${APP_DATA_DIR}/mysql:/var/lib/mysql
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "healthcheck.sh", "--connect", "--innodb_initialized"]
+      start_period: 1m
+      start_interval: 10s
+      interval: 1m
+      timeout: 5s
+      retries: 3
+    networks:
+      - big_bear_seafile_network
+  # Memcached service for seafile
+  big-bear-seafile-memcached:
+    container_name: big-bear-seafile-memcached
+    image: memcached:1.6.39
+    entrypoint: memcached -m 256
+    networks:
+      - big_bear_seafile_network
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-seafile_big-bear-seafile_1
+      APP_PORT: "8130"
+# Networks used by the application
+networks:
+  big_bear_seafile_network:
+    driver: bridge

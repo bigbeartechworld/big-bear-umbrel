@@ -1,0 +1,26 @@
+manifestVersion: 1
+id: big-bear-umbrel-gitea-mirror
+category: BigBearCasaOS
+name: Gitea Mirror
+version: "3.8.10"
+tagline: Mirror GitHub repositories to Gitea
+description: >-
+  Gitea Mirror is a modern web app for automatically mirroring repositories from GitHub to your self-hosted Gitea instance. It features a user-friendly interface to sync public, private, or starred GitHub repos, mirror entire organizations with structure preservation, and optionally mirror issues and labels. The application includes smart filtering, detailed logs, and scheduled automatic mirroring.
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: raylabs.io
+website: https://github.com/bigbeartechworld/big-bear-casaos
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-casaos
+support: https://github.com/bigbeartechworld/big-bear-casaos/issues
+port: 4321
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+icon: https://cdn.jsdelivr.net/gh/bigbeartechworld/big-bear-casaos/Apps/gitea-mirror/logo-new.png
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-casaos
