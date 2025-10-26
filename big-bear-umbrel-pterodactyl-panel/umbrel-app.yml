@@ -1,0 +1,26 @@
+manifestVersion: 1
+id: big-bear-umbrel-pterodactyl-panel
+category: BigBearCasaOS
+name: Pterodactyl Panel
+version: "1.11.11"
+tagline: Pterodactyl Panel
+description: >-
+  Pterodactyl® is a free, open-source game server management panel built with PHP, React, and Go. Designed with security in mind, Pterodactyl runs all game servers in isolated Docker containers while exposing a beautiful and intuitive UI to end users.
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: pterodactyl
+website: https://github.com/bigbeartechworld/big-bear-casaos
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-casaos
+support: https://github.com/bigbeartechworld/big-bear-casaos/issues
+port: 1180
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/pterodactyl.png
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-casaos

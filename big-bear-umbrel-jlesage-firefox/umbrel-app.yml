@@ -1,0 +1,26 @@
+manifestVersion: 1
+id: big-bear-umbrel-jlesage-firefox
+category: BigBearCasaOS
+name: Jlesage Firefox
+version: "25.09.1"
+tagline: This project implements a Docker container for Firefox.
+description: >-
+  The GUI of the application is accessed through a modern web browser (no installation or configuration needed on the client side) or via any VNC client.
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: jlesage
+website: https://github.com/bigbeartechworld/big-bear-casaos
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-casaos
+support: https://github.com/bigbeartechworld/big-bear-casaos/issues
+port: 5800
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/firefox.png
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-casaos

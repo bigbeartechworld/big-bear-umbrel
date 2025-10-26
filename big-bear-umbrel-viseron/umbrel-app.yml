@@ -1,0 +1,26 @@
+manifestVersion: 1
+id: big-bear-umbrel-viseron
+category: BigBearCasaOS
+name: Viseron
+version: "3.3.1"
+tagline: Viseron
+description: >-
+  Viseron is a self-hosted, local only NVR and AI Computer Vision software
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: roflcoopter
+website: https://github.com/bigbeartechworld/big-bear-casaos
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-casaos
+support: https://github.com/bigbeartechworld/big-bear-casaos/issues
+port: 8891
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+icon: https://cdn.jsdelivr.net/gh/bigbeartechworld/big-bear-casaos/Apps/viseron/logo.png
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-casaos

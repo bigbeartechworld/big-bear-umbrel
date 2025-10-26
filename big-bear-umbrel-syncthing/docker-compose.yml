@@ -1,0 +1,35 @@
+# Configuration for syncthing setup
+
+# Name of the big-bear-syncthing application
+name: big-bear-syncthing
+# Service definitions for the big-bear-syncthing application
+services:
+  # Service name: big-bear-syncthing
+  # The `big-bear-syncthing` service definition
+  big-bear-syncthing:
+    # Name of the container
+    container_name: big-bear-syncthing
+    # Image to be used for the container
+    image: syncthing/syncthing:2.0
+    # Container restart policy
+    restart: unless-stopped
+    # Volumes to be mounted to the container
+    volumes:
+      - ${APP_DATA_DIR}/data:/var/syncthing
+      - ${APP_DATA_DIR}/media/data/syncthing:/media/data/syncthing
+    # Ports mapping between host and container
+    ports:
+      - 8384:8384 # WebUI
+      - 22000:22000/tcp # TCP file transfers
+      - 22000:22000/udp # QUIC file transfers
+      - 21027:21027/udp # Receive local discovery broadcasts
+    # Environment variables for the container
+    environment:
+      - PUID=1000 # User ID
+      - PGID=1000 # Group ID
+    # Stop the container if it exits
+    stop_grace_period: 1m
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-syncthing_big-bear-syncthing_1
+      APP_PORT: "8384"

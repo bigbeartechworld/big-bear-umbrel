@@ -1,36 +1,44 @@
-version: "3.7"
-
+# Name of the configuration: big-bear-guacamole
+name: big-bear-guacamole
+# Define the services required for the application
 services:
-  app_proxy:
-    environment:
-      APP_HOST: big-bear-umbrel-guacamole_frontend_1
-      APP_PORT: 8080
-
-  frontend:
+  # guacd service configuration
+  guacd:
+    # Docker image to use for this service
+    image: guacamole/guacd:1.6.0
+    # Restart policy for the container
+    restart: always
+  # app service configuration
+  app:
     image: guacamole/guacamole:1.6.0
+    restart: always
+    # Link this service to the guacd service
+    links:
+      - guacd
+    # Environment variables for the app service
     environment:
       - GUACD_HOSTNAME=guacd
-      - MYSQL_DRIVER=mysql
-      # - MYSQL_SSL_MODE=disabled
-      - MYSQL_HOSTNAME=db
-      - MYSQL_DATABASE=guacamole
-      - MYSQL_USER=guacamole
-      - MYSQL_PASSWORD=a49cd326-af4e-4a76-9995-51fc2b7bd58f
-    restart: on-failure
-    depends_on:
-      - guacd
-
-  guacd:
-    image: guacamole/guacd
+      - MYSQL_HOSTNAME=mysql
+      - MYSQL_DATABASE=guacamole_db
+      - MYSQL_USER=guacamole_user
+      - MYSQL_PASSWORD=some_password
+    # Map port 8090 on the host to port 8080 on the container
+    ports:
+      - 8090:8080
+  # mysql service configuration
+  mysql:
+    image: mysql:5.7
     restart: always
-
-  db:
-    image: mysql:8.0
-    restart: on-failure
-    volumes:
-      - ${APP_DATA_DIR}/data/guacamole/mysql:/var/lib/mysql
+    # Environment variables for the MySQL service
     environment:
-      MYSQL_ROOT_PASSWORD: "a49cd326-af4e-4a76-9995-51fc2b7bd58f"
-      MYSQL_USER: "guacamole"
-      MYSQL_PASSWORD: "a49cd326-af4e-4a76-9995-51fc2b7bd58f"
-      MYSQL_DATABASE: "guacamole"
+      - MYSQL_ROOT_PASSWORD=my-secret-pw
+      - MYSQL_DATABASE=guacamole_db
+      - MYSQL_USER=guacamole_user
+      - MYSQL_PASSWORD=some_password
+    # Volume mapping for persistent storage
+    volumes:
+      - ${APP_DATA_DIR}/mysql:/var/lib/mysql
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-guacamole_guacd_1
+      APP_PORT: "8100"

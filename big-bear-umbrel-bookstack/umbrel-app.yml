@@ -1,0 +1,26 @@
+manifestVersion: 1
+id: big-bear-umbrel-bookstack
+category: BigBearCasaOS
+name: bookstack
+version: "25.07.20250804"
+tagline: BookStack
+description: >-
+  BookStack is a simple, self-hosted, easy-to-use platform for organising and storing information. Default login admin@admin.com password password
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: Dan Brown
+website: https://github.com/bigbeartechworld/big-bear-casaos
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-casaos
+support: https://github.com/bigbeartechworld/big-bear-casaos/issues
+port: 8084
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/bookstack.png
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-casaos

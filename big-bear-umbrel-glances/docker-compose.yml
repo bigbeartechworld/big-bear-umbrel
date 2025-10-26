@@ -1,30 +1,28 @@
-# Docker Compose version
-version: "3.7"
-
-# List of services to be run
+# Configuration for big-bear-glances setup
+name: big-bear-glances
+# Service definitions for the big-bear-glances application
 services:
-  app_proxy:
-    # Set environment variables for app_proxy service
-    environment:
-      APP_HOST: big-bear-umbrel-glances_server_1 # Hostname of the application
-      APP_PORT: 61208 # Port number of the application
-      PROXY_AUTH_ADD: "false" # Whether to add authentication for the proxy
-
-  server:
+  # Service name: big-bear-glances
+  big-bear-glances:
+    # Name of the container
+    container_name: big-bear-glances
     # Docker image to use
-    image: nicolargo/glances:4.3.0.8-full # Docker image with specific version
-
-    # Environment variables for the server service
+    image: nicolargo/glances:4.3.0.8-full
+    # Port mapping between host and container
+    ports:
+      - 61208:61208
+    # Environment variables
     environment:
-      - TZ=UTC # Timezone for the container
+      - TZ=UTC # Timezone
       - GLANCES_OPT=-w # Glances option to run as a web server
-
-    # Use the host's PID namespace to allow container processes to be visible on the host
+    # Use the host's PID namespace
     pid: host
-
-    # Container restart policy - restart unless manually stopped
+    # Container restart policy
     restart: unless-stopped
-
-    # Volumes to mount into the container for persistent storage and access
+    # Volumes to mount into the container
     volumes:
-      - /var/run/docker.sock:/var/run/docker.sock:ro # Mount the Docker socket to allow monitoring of Docker containers from within the Glances container
+      - /var/run/docker.sock:/var/run/docker.sock:ro # Docker socket for monitoring
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-glances_big-bear-glances_1
+      APP_PORT: "61208"

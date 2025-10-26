@@ -1,0 +1,80 @@
+# Configuration for davis setup
+
+# Name of the big-bear-davis application
+name: big-bear-davis
+# Service definitions for the big-bear-davis application
+services:
+  # Service name: big-bear-davis
+  # The `big-bear-davis` service definition
+  big-bear-davis:
+    # Name of the container
+    container_name: big-bear-davis
+    # Image to be used for the container
+    image: ghcr.io/tchapi/davis-standalone:5.2.0
+    # Container restart policy
+    restart: unless-stopped
+    # Environment variables to be set in the container
+    environment:
+      - APP_ENV=prod
+      - DATABASE_DRIVER=mysql
+      - DATABASE_URL=mysql://bigbear:0c9d2acc-d4f3-423c-8361-86f35cdd3eb2@big-bear-davis-mysql:3306/davis?serverVersion=10.6.10&charset=utf8mb4
+      - MAILER_DSN=smtp://:@big-bear-davis-mailpit:1025
+      - ADMIN_LOGIN=bigbear
+      - ADMIN_PASSWORD=aa9405b8-426c-41a1-bbc6-2924d8ec7eb3
+      - AUTH_REALM=
+      - AUTH_METHOD=
+      - CALDAV_ENABLED=
+      - CARDDAV_ENABLED=
+      - WEBDAV_ENABLED=
+      - WEBDAV_TMP_DIR=
+      - WEBDAV_PUBLIC_DIR=
+      - WEBDAV_HOMES_DIR=
+      - INVITE_FROM_ADDRESS=
+      - APP_TIMEZONE=UTC
+    # Ports to be exposed from the container
+    ports:
+      - 9000:9000
+    networks:
+      - big-bear-davis-network
+    depends_on:
+      - big-bear-davis-mysql
+      - big-bear-davis-mailpit
+  # Service name: big-bear-davis-mailpit
+  big-bear-davis-mailpit:
+    container_name: big-bear-davis-mailpit # Container name for the app service
+    image: axllent/mailpit:v1.27 # Image for the app service
+    restart: unless-stopped # Restart policy for the container
+    volumes: # Volumes to mount for the app service
+      - ${APP_DATA_DIR}/mailpit/data:/data
+    environment: # Environment variables for the app service
+      - TZ=UTC
+    ports: # Ports to expose for the app service
+      - "8025:8025"
+      - "1025:1025"
+    networks:
+      - big-bear-davis-network
+  # Service name: big-bear-mysql
+  big-bear-davis-mysql:
+    container_name: big-bear-davis-mysql
+    image: mariadb:10.6.10
+    environment:
+      - MYSQL_ROOT_PASSWORD=0c9d2acc-d4f3-423c-8361-86f35cdd3eb2
+      - MYSQL_DATABASE=davis
+      - MYSQL_USER=bigbear
+      - MYSQL_PASSWORD=0c9d2acc-d4f3-423c-8361-86f35cdd3eb2
+    volumes:
+      - ${APP_DATA_DIR}/mysql:/var/lib/mysql
+    networks:
+      - big-bear-davis-network
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      interval: 10s
+      retries: 5
+      timeout: 5s
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-davis_big-bear-davis_1
+      APP_PORT: "9000"
+networks:
+  big-bear-davis-network:
+    driver: bridge

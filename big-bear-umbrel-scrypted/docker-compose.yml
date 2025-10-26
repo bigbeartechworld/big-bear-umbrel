@@ -1,43 +1,51 @@
-version: "3.7"
-
+# big-bear-scrypted configuration
+name: big-bear-scrypted
+# Services section that specifies how the different services should be run
 services:
-  server:
-    image: koush/scrypted:v0.142.6-noble-full
+  # This is the main app service for Scrypted
+  scrypted:
+    container_name: scrypted
+    image: koush/scrypted:v0.123.58-jammy-full # Docker image for Scrypted
+    network_mode: host # Use host networking mode
     environment:
-      - SCRYPTED_WEBHOOK_UPDATE_AUTHORIZATION=Bearer 43282fb9-27e4-4d93-b3c5-6c333ae4671f
+      # These environment variables are for Scrypted webhook configuration
+      - SCRYPTED_WEBHOOK_UPDATE_AUTHORIZATION=Bearer SET_THIS_TO_SOME_RANDOM_TEXT
       - SCRYPTED_WEBHOOK_UPDATE=http://localhost:10444/v1/update
-    restart: unless-stopped
-    network_mode: host
-    # Available at port 10443
     volumes:
-      - ${APP_DATA_DIR}/data/scrypted:/server/volume
+      # Mounting data directory from host to the container
+      - ${APP_DATA_DIR}/data:/server/volume
+    restart: unless-stopped # Restart policy
     logging:
+      # JSON logging configuration
       driver: "json-file"
       options:
         max-size: "10m"
         max-file: "10"
     labels:
+      # Watchtower label for Scrypted
       - "com.centurylinklabs.watchtower.scope=scrypted"
-
-  # watchtower manages updates for Scrypted.
+  # This service manages automatic updates for Scrypted using Watchtower
   watchtower:
     environment:
+      # Watchtower configuration environment variables
       - WATCHTOWER_HTTP_API_TOKEN=SET_THIS_TO_SOME_RANDOM_TEXT
       - WATCHTOWER_HTTP_API_UPDATE=true
       - WATCHTOWER_SCOPE=scrypted
-      # remove the following line to never allow docker to auto update.
-      # this is not recommended.
+      # Allows periodic auto-updates, can be removed if not desired
       - WATCHTOWER_HTTP_API_PERIODIC_POLLS=true
-    image: containrrr/watchtower
-    container_name: scrypted-watchtower
+    image: containrrr/watchtower # Docker image for Watchtower
+    container_name: watchtower
     restart: unless-stopped
     volumes:
+      # Mounting Docker socket for Watchtower to interact with Docker
       - /var/run/docker.sock:/var/run/docker.sock
     labels:
       - "com.centurylinklabs.watchtower.scope=scrypted"
     ports:
-      # The auto update port 10444 can be configured
-      # Must match the port in the auto update url above.
+      # Mapping the auto-update port; it should match the one in the URL above
       - 10444:8080
-    # check for updates once an hour (interval is in seconds)
-    command: --interval 3600 --cleanup --scope scrypted
+    command: --interval 3600 --cleanup --scope scrypted # Command to run watchtower with specified options
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-scrypted_scrypted_1
+      APP_PORT: "10444"

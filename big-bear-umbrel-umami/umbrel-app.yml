@@ -1,0 +1,26 @@
+manifestVersion: 1
+id: big-bear-umbrel-umami
+category: BigBearCasaOS
+name: Umami
+version: "postgresql-latest"
+tagline: Umami is a simple, fast, privacy-focused alternative to Google Analytics.
+description: >-
+  Umami is a simple, fast, privacy-focused alternative to Google Analytics.
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: umami-software
+website: https://github.com/bigbeartechworld/big-bear-casaos
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-casaos
+support: https://github.com/bigbeartechworld/big-bear-casaos/issues
+port: 3022
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/umami.png
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-casaos

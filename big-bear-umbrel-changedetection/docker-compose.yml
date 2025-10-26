@@ -1,0 +1,26 @@
+# Configuration for changedetection setup
+
+# Name of the big-bear-changedetection application
+name: big-bear-changedetection
+# Service definitions for the big-bear-changedetection application
+services:
+  # Service name: big-bear-changedetection
+  # The `big-bear-changedetection` service definition
+  big-bear-changedetection:
+    # Name of the container
+    container_name: big-bear-changedetection
+    # Image to be used for the container
+    image: ghcr.io/dgtlmoon/changedetection.io:0.50.32
+    # Container restart policy
+    restart: unless-stopped
+    # Ports mapping between host and container
+    ports:
+      # Mapping port 5000 of the host to port 5000 of the container
+      - "5000:5000"
+    # Volumes to be mounted to the container
+    volumes:
+      - ${APP_DATA_DIR}/datastore:/datastore
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-changedetection_big-bear-changedetection_1
+      APP_PORT: "5002"

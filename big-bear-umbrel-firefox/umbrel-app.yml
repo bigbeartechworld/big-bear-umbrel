@@ -1,0 +1,26 @@
+manifestVersion: 1
+id: big-bear-umbrel-firefox
+category: BigBearCasaOS
+name: Firefox
+version: "1.15.0-rolling"
+tagline: Firefox
+description: >-
+  This Image contains a browser-accessible version of Firefox.
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: kasmweb
+website: https://github.com/bigbeartechworld/big-bear-casaos
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-casaos
+support: https://github.com/bigbeartechworld/big-bear-casaos/issues
+port: 6904
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/firefox.png
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-casaos

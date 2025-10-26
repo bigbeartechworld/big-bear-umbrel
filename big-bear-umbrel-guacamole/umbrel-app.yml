@@ -1,27 +1,26 @@
 manifestVersion: 1
 id: big-bear-umbrel-guacamole
+category: BigBearCasaOS
 name: Guacamole
-category: Developer Tools
 version: "1.6.0"
-tagline: Apache Guacamole is a clientless remote desktop gateway supporting protocols like VNC and RDP.
-icon: https://i.imgur.com/pxcsqyl.png
-description: >
-  Apache Guacamole is a clientless remote desktop gateway. It supports standard protocols like VNC, RDP, and SSH.
-
-  We call it clientless because no plugins or client software are required.
-
-  Thanks to HTML5, once Guacamole is installed on a server, all you need to access your desktops is a web browser.
-developer: The Apache Software Foundation
-website: https://guacamole.apache.org/
+tagline: Guacamole
+description: >-
+  Apache Guacamole is a free and open-source, cross-platform, clientless remote desktop gateway maintained by the Apache Software Foundation.
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: BigBearTechWorld
+website: https://github.com/bigbeartechworld/big-bear-casaos
 dependencies: []
-repo: https://github.com/search?utf8=%E2%9C%93&q=repo:apache/guacamole-server+repo:apache/guacamole-client+repo:apache/guacamole-website&type=Repositories
-support: https://github.com/search?utf8=%E2%9C%93&q=repo:apache/guacamole-server+repo:apache/guacamole-client+repo:apache/guacamole-website&type=issues
-port: 7206
+repo: https://github.com/bigbeartechworld/big-bear-casaos
+support: https://github.com/bigbeartechworld/big-bear-casaos/issues
+port: 8100
 gallery:
-  - https://guacamole.apache.org/doc/gug/_images/guacamole-client-interface.png
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
 path: ""
+defaultUsername: ""
 defaultPassword: ""
-releaseNotes: >
-
+icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/guacamole.png
 submitter: BigBearTechWorld
-submission:
+submission: https://github.com/bigbeartechworld/big-bear-casaos

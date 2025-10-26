@@ -1,0 +1,34 @@
+# Configuration for tugtainer setup
+
+# Name of the big-bear-tugtainer application
+name: big-bear-tugtainer
+# Service definitions for the big-bear-tugtainer application
+services:
+  # Service name: big-bear-tugtainer
+  # The `big-bear-tugtainer` service definition
+  big-bear-tugtainer:
+    # Name of the container
+    container_name: big-bear-tugtainer
+    # Image to be used for the container
+    image: quenary/tugtainer:v1.2.3
+    # Container restart policy
+    restart: unless-stopped
+    # Ports to expose from the container
+    ports:
+      - "9412:80"
+    # Environment variables for the container
+    environment:
+      TZ: "UTC"
+      LOG_LEVEL: "warning"
+      JWT_SECRET_KEY: "your-secret-key-here"
+      ACCESS_TOKEN_LIFETIME_MIN: "5"
+      REFRESH_TOKEN_LIFETIME_MIN: "43200"
+      HTTPS: "FALSE"
+    # Volumes to be mounted to the container
+    volumes:
+      - ${APP_DATA_DIR}/data:/tugtainer
+      - /var/run/docker.sock:/var/run/docker.sock
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-tugtainer_big-bear-tugtainer_1
+      APP_PORT: "9412"

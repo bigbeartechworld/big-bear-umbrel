@@ -1,58 +1,26 @@
 manifestVersion: 1
 id: big-bear-umbrel-uptime-kuma
+category: BigBearCasaOS
 name: Uptime Kuma
-category: Networking
-version: "1.23.16"
-tagline: Self-hosted uptime monitoring tool
-icon: https://i.imgur.com/NQhUQbR.png
-description: >
-  Uptime Kuma is a self-hosted monitoring tool like Uptime Robot.
-
-
-  Features:
-
-
-  - Monitoring uptime for HTTP(s) / TCP / HTTP(s) Keyword / Ping / DNS Record / Push / Steam Game Server.
-
-  - Fancy, Reactive, Fast UI/UX.
-
-  - Notifications via Telegram, Discord, Gotify, Slack, Pushover, Email (SMTP), and 70+ notification services.
-
-  - 20 second intervals.
-
-  - Multi Languages
-
-  - Simple Status Page
-
-  - Ping Chart
-
-  - Certificate Info
-developer: Louis Lam
-website: https://uptime.kuma.pet
+version: "1"
+tagline: A fancy self-hosted monitoring tool
+description: >-
+  A fancy self-hosted monitoring tool
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: louislam
+website: https://github.com/bigbeartechworld/big-bear-casaos
 dependencies: []
-repo: https://github.com/louislam/uptime-kuma
-support: https://github.com/louislam/uptime-kuma/issues
-port: 8385
+repo: https://github.com/bigbeartechworld/big-bear-casaos
+support: https://github.com/bigbeartechworld/big-bear-casaos/issues
+port: 3023
 gallery:
-  - https://getumbrel.github.io/umbrel-apps-gallery/uptime-kuma/1.jpg
-  - https://getumbrel.github.io/umbrel-apps-gallery/uptime-kuma/2.jpg
-  - https://getumbrel.github.io/umbrel-apps-gallery/uptime-kuma/3.jpg
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
 path: ""
+defaultUsername: ""
 defaultPassword: ""
-releaseNotes: >
-  Updates Uptime Kuma from version 1.22.1.
-
-
-  💇‍ Improvements
-  #3347 Uptime Kuma will no longer make requests to check update if you have disabled it. (Thanks @tofran)
-
-  🐛 Bug Fixes
-  #3296 Fixed auto theme for status pages on custom domains (Thanks @crystalcommunication)
-
-  Security Fixes
-  #3346 Removed all unreleased plugin feature code from Uptime Kuma to eliminate vulnerabilities. (Thanks @n-thumann)
-
-
-  Full changelog for versions can be found here: https://github.com/louislam/uptime-kuma/releases
+icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/uptime-kuma.png
 submitter: BigBearTechWorld
-submission:
+submission: https://github.com/bigbeartechworld/big-bear-casaos

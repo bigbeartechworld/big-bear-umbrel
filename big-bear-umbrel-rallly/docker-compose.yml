@@ -1,0 +1,60 @@
+# Configuration for the big-bear-rally setup
+
+# Name of the big-bear-rallly application
+name: big-bear-rallly
+# Definition of services required for the big-bear-rallly application
+services:
+  # Main application service definition
+  big-bear-rallly:
+    container_name: big-bear-rallly # The name for the container instance of this service
+    image: lukevella/rallly:4.4.1 # Docker image to be used for creating the container
+    restart: unless-stopped # Policy to restart the container unless manually stopped
+    environment: # Environment variables passed to the container for configuration
+      # Database connection URL (DATABASE_URL=postgres://username:password@host/database)
+      - DATABASE_URL=postgres://rallly:f87c7126-f816-47ef-9193-2e5eec763fcd@big-bear-rallly-db/big-bear-rallly
+      - SECRET_PASSWORD=0f6f292d-c78c-4709-920d-e3b6361eb5b5 # Secret password for application security UUID V4
+      # URL for the frontend to use, replace [YOUR_CASAOS_IP] with your actual CasaOS IP
+      - NEXT_PUBLIC_BASE_URL=http://[YOUR_CASAOS_IP]:3000
+      - NOREPLY_EMAIL=noreply@example.com # Email used for sending no-reply messages
+      - SUPPORT_EMAIL=support@example.com # Support contact email
+      # SMTP configuration for sending emails, to be filled with your SMTP server details
+      - SMTP_HOST=[YOUR_CASAOS_IP]
+      - SMTP_PORT=1025
+      - SMTP_SECURE=
+      - SMTP_USER=
+      - SMTP_PWD=
+      - SMTP_TLS_ENABLED=
+      - ALLOWED_EMAILS= # Specify allowed emails if needed
+    ports:
+      - "3000:3000" # Maps port 3000 on the host to port 3000 on the container
+    networks:
+      - big_bear_rally_network # Connects the container to the specified network
+    depends_on:
+      big-bear-rallly-db:
+        condition: service_healthy # Ensures the DB service is healthy before starting
+  # Database service for the application
+  big-bear-rallly-db:
+    container_name: big-bear-rallly-db # Container name for the database service
+    image: postgres:14 # PostgreSQL version 14 as the database
+    restart: unless-stopped # Restart policy similar to the application service
+    volumes:
+      - ${APP_DATA_DIR}/postgresql:/var/lib/postgresql/data # Persistent data storage
+    environment:
+      - POSTGRES_PASSWORD=f87c7126-f816-47ef-9193-2e5eec763fcd # DB password
+      - POSTGRES_DB=big-bear-rallly # Database name
+      - POSTGRES_USER=rallly # Database user
+    networks:
+      - big_bear_rally_network # Uses the same network as the application service
+    healthcheck: # Checks if the database service is ready to accept connections
+      test: ["CMD-SHELL", "pg_isready -U rallly"] # This is a utility provided by PostgreSQL, used to check if a PostgreSQL server is ready to accept connections. The -U rallly option specifies the username to connect as.
+      interval: 5s # This specifies how often the health check command should be run. In your configuration, it’s set to every 5 seconds (5s). This means Docker will execute the pg_isready command every 5 seconds to check if the database server is up and ready to accept connections.
+      timeout: 5s # This is the maximum time allowed for the health check command to run. If the command takes longer than this time to complete, it is considered a failure. Here, the timeout is also set to 5 seconds.
+      retries: 5 # This specifies the number of consecutive failures required to consider the container as unhealthy. In your case, the pg_isready command must fail 5 consecutive times before Docker marks the container as unhealthy.
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-rallly_big-bear-rallly_1
+      APP_PORT: "3018"
+# Network definitions for the application
+networks:
+  big_bear_rally_network:
+    driver: bridge # Uses bridge network driver

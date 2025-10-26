@@ -1,0 +1,17 @@
+name: big-bear-chrome # Name of the CasaOS application
+services:
+  chrome:
+    container_name: big-bear-chrome # Name of the Docker container
+    image: kasmweb/chrome:1.15.0-rolling # Docker image for the chrome browser
+    ports:
+      - "6902:6901" # Expose port 6901 for VNC access
+    environment:
+      - VNC_PW=casaos # Set the VNC password to 'casaos'
+      - LAUNCH_URL=https://community.bigbeartechworld.com/ # Set the default URL to Big Bear Tech World
+    shm_size: 512m # Allocate 512 MB of shared memory
+    volumes:
+      - ${APP_DATA_DIR}/Downloads:/home/kasm-user/Downloads # Mount the host directory to the container's Downloads directory
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-chrome_chrome_1
+      APP_PORT: "6902"

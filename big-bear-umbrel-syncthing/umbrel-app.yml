@@ -1,0 +1,26 @@
+manifestVersion: 1
+id: big-bear-umbrel-syncthing
+category: BigBearCasaOS
+name: Syncthing
+version: "2.0"
+tagline: Peer-to-peer file synchronization between your devices
+description: >-
+  Syncthing is a continuous file synchronization program. It synchronizes files between two or more computers. We strive to fulfill the goals below. The goals are listed in order of importance, the most important one being the first.
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: syncthing
+website: https://github.com/bigbeartechworld/big-bear-casaos
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-casaos
+support: https://github.com/bigbeartechworld/big-bear-casaos/issues
+port: 8384
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/syncthing.png
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-casaos

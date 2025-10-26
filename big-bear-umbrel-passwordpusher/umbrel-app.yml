@@ -1,0 +1,26 @@
+manifestVersion: 1
+id: big-bear-umbrel-passwordpusher
+category: BigBearCasaOS
+name: Password Pusher
+version: "1.62.1"
+tagline: Give your users the tools to be secure by default.
+description: >-
+  Password Pusher is an open source application to communicate passwords over the web. Links to passwords expire after a certain number of views and/or time has passed.
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: pglombardo
+website: https://github.com/bigbeartechworld/big-bear-casaos
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-casaos
+support: https://github.com/bigbeartechworld/big-bear-casaos/issues
+port: 5100
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/password-pusher.png
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-casaos

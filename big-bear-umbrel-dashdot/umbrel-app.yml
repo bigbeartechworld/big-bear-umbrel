@@ -1,25 +1,26 @@
 manifestVersion: 1
 id: big-bear-umbrel-dashdot
-name: dash.
-category: Dashboards
+category: BigBearCasaOS
+name: Dashdot
 version: "6.2.0"
-tagline: Self-hosted dash.
-icon: https://i.imgur.com/BcoQO4Y.png
-description: >
-  dash. (or dashdot) is a modern server dashboard, running on the latest tech, designed with glassmorphism in mind. It is intended to be used for smaller VPS and private servers.
-developer: MauriceNino
-website: https://getdashdot.com/
+tagline: dash. - a modern server dashboard
+description: >-
+  About A simple, modern server dashboard, primarily used by smaller private servers.
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: mauricenino
+website: https://github.com/bigbeartechworld/big-bear-casaos
 dependencies: []
-repo: https://github.com/MauriceNino/dashdot
-support: https://github.com/MauriceNino/dashdot/issues
-port: 7209
+repo: https://github.com/bigbeartechworld/big-bear-casaos
+support: https://github.com/bigbeartechworld/big-bear-casaos/issues
+port: 3005
 gallery:
-  - https://raw.githubusercontent.com/MauriceNino/dashdot/main/apps/docs/static/img/screenshot_darkmode.png
-  - https://raw.githubusercontent.com/MauriceNino/dashdot/main/apps/docs/static/img/screenshot_lightmode.png
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
 path: ""
+defaultUsername: ""
 defaultPassword: ""
-releaseNotes: >
-  What's Changed
-  -
-submitter: BigBearCommunity
-submission:
+icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/dashdot.png
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-casaos

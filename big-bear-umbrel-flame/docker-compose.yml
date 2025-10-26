@@ -1,16 +1,34 @@
-version: '3.6'
-
+# Name of the application
+name: big-bear-flame
+# List of services that this application uses
 services:
+  # Main service for the Flame application
+  app:
+    # The Docker image to be used for the Flame application
+    image: pawelmalak/flame:multiarch2.3.1
+    # Environment variables that configure the application
+    environment:
+      # Specifies the password to be used by the Flame application
+      PASSWORD: casaos
+    # Policy to determine how the service should be restarted if it stops
+    restart: unless-stopped
+    # Specifies the ports that the application should expose
+    ports:
+      # Maps the container's port (target) to the host's port (published)
+      - target: 5005
+        published: "5005"
+        protocol: tcp
+    # Specifies the storage volumes that the application should use
+    volumes:
+      # Mounts the application data directory from the host system to the container
+      - type: bind
+        source: ${APP_DATA_DIR}/data
+        target: /app/data
+      # Mounts the Docker socket from the host system to the container
+      - type: bind
+        source: /var/run/docker.sock
+        target: /var/run/docker.sock
   app_proxy:
     environment:
-      APP_HOST: big-bear-umbrel-flame_server_1
-      APP_PORT: 5005
-
-  server:
-    image: pawelmalak/flame:2.3.1
-    volumes:
-      - ${APP_DATA_DIR}/flame/data:/app/data
-      - /var/run/docker.sock:/var/run/docker.sock # optional but required for Docker integration
-    environment:
-      - PASSWORD=${APP_PASSWORD}
-    restart: unless-stopped
+      APP_HOST: big-bear-umbrel-flame_app_1
+      APP_PORT: "5005"

@@ -1,0 +1,26 @@
+manifestVersion: 1
+id: big-bear-umbrel-owncloud
+category: BigBearCasaOS
+name: ownCloud
+version: "10.16.0"
+tagline: ownCloud
+description: >-
+  ownCloud offers file sharing and collaboration trusted by 200+ million users worldwide regardless of device or location.
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: owncloud
+website: https://github.com/bigbeartechworld/big-bear-casaos
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-casaos
+support: https://github.com/bigbeartechworld/big-bear-casaos/issues
+port: 8118
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/owncloud.png
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-casaos

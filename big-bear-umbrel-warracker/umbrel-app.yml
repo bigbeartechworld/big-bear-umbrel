@@ -1,0 +1,26 @@
+manifestVersion: 1
+id: big-bear-umbrel-warracker
+category: BigBearCasaOS
+name: Warracker
+version: "9.9.3"
+tagline: A self-hosted warranty tracker
+description: >-
+  A self-hosted warranty tracker
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: sassanix
+website: https://github.com/bigbeartechworld/big-bear-casaos
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-casaos
+support: https://github.com/bigbeartechworld/big-bear-casaos/issues
+port: 8013
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/warracker.png
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-casaos

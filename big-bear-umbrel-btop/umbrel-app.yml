@@ -1,28 +1,26 @@
 manifestVersion: 1
 id: big-bear-umbrel-btop
+category: BigBearCasaOS
 name: btop
-category: System Monitoring
-version: "0.1.4"
+version: "0.1.5"
 tagline: A monitor of resources
-icon: https://cdn.jsdelivr.net/gh/aristocratos/btop/Img/icon.png
-description: >
+description: >-
   A monitor of resources. Software made by Aristocratos at https://github.com/aristocratos/btop
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
 developer: bigbeartechworld
-website: https://github.com/bigbeartechworld/big-bear-docker-images
+website: https://github.com/bigbeartechworld/big-bear-casaos
 dependencies: []
-repo: https://github.com/bigbeartechworld/big-bear-docker-images
-support: https://github.com/bigbeartechworld/big-bear-docker-images/issues
+repo: https://github.com/bigbeartechworld/big-bear-casaos
+support: https://github.com/bigbeartechworld/big-bear-casaos/issues
 port: 7681
 gallery:
-  - https://cdn.jsdelivr.net/gh/bigbeartechworld/big-bear-umbrel/big-bear-umbrel-btop/screenshot-1-v2.png
-  - https://cdn.jsdelivr.net/gh/bigbeartechworld/big-bear-umbrel/big-bear-umbrel-btop/screenshot-2.png
-  - https://cdn.jsdelivr.net/gh/bigbeartechworld/big-bear-umbrel/big-bear-umbrel-btop/screenshot-3.png
-  - https://cdn.jsdelivr.net/gh/bigbeartechworld/big-bear-umbrel/big-bear-umbrel-btop/screenshot-4.png
-  - https://cdn.jsdelivr.net/gh/bigbeartechworld/big-bear-umbrel/big-bear-umbrel-btop/screenshot-5.png
-  - https://cdn.jsdelivr.net/gh/bigbeartechworld/big-bear-umbrel/big-bear-umbrel-btop/screenshot-6.png
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
 path: ""
+defaultUsername: ""
 defaultPassword: ""
-releaseNotes: >
-  A monitor of resources. Software made by Aristocratos at https://github.com/aristocratos/btop
+icon: https://cdn.jsdelivr.net/gh/aristocratos/btop/Img/icon.png
 submitter: BigBearTechWorld
-submission:
+submission: https://github.com/bigbeartechworld/big-bear-casaos
