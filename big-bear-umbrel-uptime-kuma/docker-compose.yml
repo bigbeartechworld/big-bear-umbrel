@@ -2,7 +2,7 @@
 version: "3.7"
 services:
   app:
-    image: louislam/uptime-kuma:1
+    image: louislam/uptime-kuma:2
     volumes:
       - ${APP_DATA_DIR}/data:/app/data
     restart: always
