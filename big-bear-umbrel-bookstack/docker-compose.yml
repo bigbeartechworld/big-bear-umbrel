@@ -1,4 +1,3 @@
-
 version: "3.7"
 services:
   big-bear-bookstack:
@@ -18,17 +17,17 @@ services:
     networks:
       - big_bear_bookstack_network
   big-bear-bookstack-db:
-    image: linuxserver/mariadb:10.11.6 # The Docker image for MariaDB
-    environment: # Environment variables for the MariaDB service
-      - MYSQL_ROOT_PASSWORD=793e92b7-58d2-47b9-aae5-b8c7d58bd699 # Root password for MariaDB
-      - MYSQL_DATABASE=bookstackapp # Database name
-      - MYSQL_USER=bigbear # Database user
-      - MYSQL_PASSWORD=a3e8949f-484c-4877-afdb-391f892f9bb6 # Database password
+    image: linuxserver/mariadb:10.11.6
+    environment:
+      - MYSQL_ROOT_PASSWORD=793e92b7-58d2-47b9-aae5-b8c7d58bd699
+      - MYSQL_DATABASE=bookstackapp
+      - MYSQL_USER=bigbear
+      - MYSQL_PASSWORD=a3e8949f-484c-4877-afdb-391f892f9bb6
     volumes:
-      - ${APP_DATA_DIR}/mysql:/config # Mount the volume for MariaDB data
-    restart: unless-stopped # Restart policy
+      - ${APP_DATA_DIR}/mysql:/config
+    restart: unless-stopped
     networks:
-      - big_bear_bookstack_network # Connect to the bookstack-network
+      - big_bear_bookstack_network
   app_proxy:
     environment:
       APP_HOST: big-bear-umbrel-bookstack_big-bear-bookstack_1

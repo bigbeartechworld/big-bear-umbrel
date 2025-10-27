@@ -1,11 +1,10 @@
-
 version: "3.7"
 services:
   app:
-    image: appsmith/appsmith-ce:v1.73.1 # Docker image to use
+    image: appsmith/appsmith-ce:v1.73.1
     volumes:
-      - ${APP_DATA_DIR}/stacks:/appsmith-stacks # Mount volume for app data
-    restart: unless-stopped # Container restart policy
+      - ${APP_DATA_DIR}/stacks:/appsmith-stacks
+    restart: unless-stopped
   app_proxy:
     environment:
       APP_HOST: big-bear-umbrel-appsmith_app_1

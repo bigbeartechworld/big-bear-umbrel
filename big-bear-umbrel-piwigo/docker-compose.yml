@@ -1,27 +1,26 @@
-
 version: "3.7"
 services:
   big-bear-piwigo:
     image: linuxserver/piwigo:15.7.0
     restart: unless-stopped
     environment:
-      - PUID=1000 # User ID for the container
-      - PGID=1000 # Group ID for the container
-      - TZ=UTC # Timezone setting for the container
+      - PUID=1000
+      - PGID=1000
+      - TZ=UTC
     volumes:
-      - ${APP_DATA_DIR}/config:/config # Configuration files
-      - ${APP_DATA_DIR}/gallery:/gallery # Gallery files
+      - ${APP_DATA_DIR}/config:/config
+      - ${APP_DATA_DIR}/gallery:/gallery
     networks:
       - big_bear_piwigo_network
   big-bear-piwigo-db:
     image: mariadb:10.6
     environment:
-      - MYSQL_ROOT_PASSWORD=3cf3f2c4-3415-4efe-b478-db7b6f0b9934 # Root password for MySQL
-      - MYSQL_DATABASE=piwigo # Database name
-      - MYSQL_USER=big_bear_piwigo # Database user
-      - MYSQL_PASSWORD=358fac48-4beb-4027-9c11-840464aca400 # Database user password
+      - MYSQL_ROOT_PASSWORD=3cf3f2c4-3415-4efe-b478-db7b6f0b9934
+      - MYSQL_DATABASE=piwigo
+      - MYSQL_USER=big_bear_piwigo
+      - MYSQL_PASSWORD=358fac48-4beb-4027-9c11-840464aca400
     volumes:
-      - ${APP_DATA_DIR}/mysql:/var/lib/mysql # Persist database data
+      - ${APP_DATA_DIR}/mysql:/var/lib/mysql
     restart: unless-stopped
     networks:
       - big_bear_piwigo_network
@@ -31,4 +30,4 @@ services:
       APP_PORT: "80"
 networks:
   big_bear_piwigo_network:
-    driver: bridge # Defines the network driver to be used (bridge)
+    driver: bridge

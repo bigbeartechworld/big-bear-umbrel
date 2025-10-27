@@ -1,4 +1,3 @@
-
 version: "3.7"
 services:
   big-bear-nightscout:
@@ -9,7 +8,7 @@ services:
       TZ: Etc/UTC
       INSECURE_USE_HTTP: "true"
       MONGO_CONNECTION: mongodb://big-bear-nightscout-mongo:27017/nightscout
-      API_SECRET: 48f875fa-0e03-416f-b9d6-19c9afc4e194 # change_me
+      API_SECRET: 48f875fa-0e03-416f-b9d6-19c9afc4e194
       ENABLE: careportal rawbg iob
       AUTH_DEFAULT_ROLES: denied
     depends_on:

@@ -1,4 +1,3 @@
-
 version: "3.7"
 services:
   big-bear-zotero:
@@ -9,8 +8,8 @@ services:
       - PGID=1000
       - TZ=Etc/UTC
     security_opt:
-      - seccomp:unconfined #optional
-    shm_size: "1gb" #optional
+      - seccomp:unconfined
+    shm_size: "1gb"
   app_proxy:
     environment:
       APP_HOST: big-bear-umbrel-zotero_big-bear-zotero_1

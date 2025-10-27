@@ -1,11 +1,10 @@
-
 version: "3.7"
 services:
   big-bear-spacedrive:
     image: ghcr.io/spacedriveapp/spacedrive/server:0.4.2
     restart: unless-stopped
     environment:
-      - SD_AUTH=bigbear:casaos # username:password
+      - SD_AUTH=bigbear:casaos
     volumes:
       - ${APP_DATA_DIR}/data/spacedrive:/var/spacedrive
   app_proxy:

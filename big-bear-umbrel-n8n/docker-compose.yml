@@ -1,12 +1,12 @@
 version: "3.7"
 services:
   app:
-    image: n8nio/n8n:1.117.0 # Docker image and version to use for n8n
-    restart: unless-stopped # Restart policy: Restart unless manually stopped
+    image: n8nio/n8n:1.117.0
+    restart: unless-stopped
     links:
-      - db-n8n # Link to the database container
+      - db-n8n
     volumes:
-      - ${APP_DATA_DIR}/.n8n:/home/node/.n8n # Volume for persistent data
+      - ${APP_DATA_DIR}/.n8n:/home/node/.n8n
     environment:
       - DB_TYPE=postgresdb
       - DB_POSTGRESDB_DATABASE=n8n
@@ -16,13 +16,13 @@ services:
       - DB_POSTGRESDB_PASSWORD=bigbearcasaos
     depends_on:
       db-n8n:
-        condition: service_healthy # Ensure DB is healthy before starting app
+        condition: service_healthy
   db-n8n:
-    image: postgres:14.2 # Docker image and version for PostgreSQL
-    restart: on-failure # Restart policy: Restart on failure
+    image: postgres:14.2
+    restart: on-failure
     volumes:
-      - ${APP_DATA_DIR}/pgdata:/var/lib/postgresql/data # Persistent DB data
-      - ${APP_DATA_DIR}/db/init-data.sh:/docker-entrypoint-initdb.d/init-data.sh # DB initialization script
+      - ${APP_DATA_DIR}/pgdata:/var/lib/postgresql/data
+      - ${APP_DATA_DIR}/db/init-data.sh:/docker-entrypoint-initdb.d/init-data.sh
     environment:
       - POSTGRES_PASSWORD=bigbearcasaos
       - POSTGRES_USER=bigbearcasaos

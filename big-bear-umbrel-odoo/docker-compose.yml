@@ -1,35 +1,34 @@
-
 version: "3.7"
 services:
   big-bear-odoo:
-    image: odoo:19 # Docker image for Odoo version 17
-    restart: unless-stopped # Restart policy to ensure service recovery
-    user: root # Specifies running the container as root
+    image: odoo:19
+    restart: unless-stopped
+    user: root
     volumes:
-      - ${APP_DATA_DIR}/data/etc:/etc/odoo # Mounts Odoo configuration files
-      - ${APP_DATA_DIR}/data/addons:/mnt/extra-addons # Mounts additional Odoo addons
+      - ${APP_DATA_DIR}/data/etc:/etc/odoo
+      - ${APP_DATA_DIR}/data/addons:/mnt/extra-addons
     environment:
-      - HOST=big-bear-odoo-db # Database host
-      - USER=odoo # Database username
-      - PASSWORD=a8d785b6-bc00-49cc-8675-d404093d1507 # Database password
+      - HOST=big-bear-odoo-db
+      - USER=odoo
+      - PASSWORD=a8d785b6-bc00-49cc-8675-d404093d1507
     networks:
-      - big_bear_odoo_network # Specifies network attachment for internal communication
+      - big_bear_odoo_network
   big-bear-odoo-db:
-    image: postgres:15 # PostgreSQL version 15 Docker image
-    user: root # Runs as root user
+    image: postgres:15
+    user: root
     environment:
-      - POSTGRES_USER=odoo # Database user
-      - POSTGRES_PASSWORD=a8d785b6-bc00-49cc-8675-d404093d1507 # Database password
-      - POSTGRES_DB=postgres # Database name
-    restart: unless-stopped # Restart policy for the database
+      - POSTGRES_USER=odoo
+      - POSTGRES_PASSWORD=a8d785b6-bc00-49cc-8675-d404093d1507
+      - POSTGRES_DB=postgres
+    restart: unless-stopped
     volumes:
-      - ${APP_DATA_DIR}/data/postgresql:/var/lib/postgresql/data # Mounts PostgreSQL data directory
+      - ${APP_DATA_DIR}/data/postgresql:/var/lib/postgresql/data
     networks:
-      - big_bear_odoo_network # Attached network for internal communication
+      - big_bear_odoo_network
   app_proxy:
     environment:
       APP_HOST: big-bear-umbrel-odoo_big-bear-odoo_1
       APP_PORT: "8069"
 networks:
   big_bear_odoo_network:
-    driver: bridge # Specifies network driver as bridge
+    driver: bridge

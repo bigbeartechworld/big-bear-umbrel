@@ -1,13 +1,12 @@
-
 version: "3.7"
 services:
   big-bear-jfa-go:
     image: hrfee/jfa-go:latest
     restart: unless-stopped
     volumes:
-      - ${APP_DATA_DIR}/.config/jfa-go:/data # Path to wherever you want to store the config file and other data
-      - ${APP_DATA_DIR}/jellyfin:/jf # Only needed for password resets through Jellyfin, ignore if not using or using Emby
-      - /etc/localtime:/etc/localtime:ro # Makes sure time is correct
+      - ${APP_DATA_DIR}/.config/jfa-go:/data
+      - ${APP_DATA_DIR}/jellyfin:/jf
+      - /etc/localtime:/etc/localtime:ro
   app_proxy:
     environment:
       APP_HOST: big-bear-umbrel-jfa-go_big-bear-jfa-go_1

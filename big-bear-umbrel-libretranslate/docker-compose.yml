@@ -1,19 +1,18 @@
-
 version: "3.7"
 services:
   big-bear-libretranslate:
     image: libretranslate/libretranslate:v1.7.3
     restart: unless-stopped
     environment:
-      - LT_API_KEYS=true # Enables API key authentication for the LibreTranslate service.
-      - LT_API_KEYS_DB_PATH=/app/db/api_keys.db # Specifies the path within the container where API keys are stored.
-      - LT_UPDATE_MODELS=true # Allows the LibreTranslate service to update its translation models on startup.
-      - LT_LOAD_ONLY=en,fr,es,de,it,pt,ru,ja,zh # Restricts the languages loaded by LibreTranslate to these language codes.
+      - LT_API_KEYS=true
+      - LT_API_KEYS_DB_PATH=/app/db/api_keys.db
+      - LT_UPDATE_MODELS=true
+      - LT_LOAD_ONLY=en,fr,es,de,it,pt,ru,ja,zh
     volumes:
-      - ${APP_DATA_DIR}/db:/app/db # Mounts a volume at /app/db within the container for persistent API key storage.
-      - ${APP_DATA_DIR}/.local:/home/libretranslate/.local:rw # Mounts a volume for storing and updating translation models.
-    tty: true # Allocates a pseudo-TTY, which can be useful for interactive applications and logging.
-    healthcheck: # Defines a health check for the container to ensure it's running correctly.
+      - ${APP_DATA_DIR}/db:/app/db
+      - ${APP_DATA_DIR}/.local:/home/libretranslate/.local:rw
+    tty: true
+    healthcheck:
       test: ["CMD-SHELL", "./venv/bin/python scripts/healthcheck.py"]
   app_proxy:
     environment:

@@ -1,4 +1,3 @@
-
 version: "3.7"
 services:
   big-bear-nextcloud-smb:
@@ -29,13 +28,13 @@ services:
     image: postgres:14.2
     restart: unless-stopped
     volumes:
-      - ${APP_DATA_DIR}/pgdata:/var/lib/postgresql/data # Mount the PostgreSQL data directory
+      - ${APP_DATA_DIR}/pgdata:/var/lib/postgresql/data
     environment:
-      - POSTGRES_PASSWORD=casaos # Set the PostgreSQL password
-      - POSTGRES_USER=casaos # Set the PostgreSQL username
-      - POSTGRES_DB=nextcloud # Set the name of the Nextcloud database
+      - POSTGRES_PASSWORD=casaos
+      - POSTGRES_USER=casaos
+      - POSTGRES_DB=nextcloud
     networks:
-      - big_bear_nextcloud_network # Connect to the Nextcloud network
+      - big_bear_nextcloud_network
     healthcheck:
       test: ["CMD-SHELL", "pg_isready -U casaos -d nextcloud"]
       interval: 10s
@@ -46,9 +45,9 @@ services:
     image: redis:6.2.20@sha256:d06ff6ec778c7f2a5c0dfaf58141d598efaa50a89d0e966faedfdf122cef451b
     restart: on-failure
     volumes:
-      - "${APP_DATA_DIR}/redis:/data" # Mount the Redis data directory
+      - "${APP_DATA_DIR}/redis:/data"
     networks:
-      - big_bear_nextcloud_network # Connect to the Nextcloud network
+      - big_bear_nextcloud_network
     healthcheck:
       test: ["CMD-SHELL", "redis-cli ping || exit 1"]
       interval: 10s
@@ -66,7 +65,7 @@ services:
       big-bear-nextcloud-smb-redis:
         condition: service_healthy
     networks:
-      - big_bear_nextcloud_network # Connect to the Nextcloud network
+      - big_bear_nextcloud_network
   app_proxy:
     environment:
       APP_HOST: big-bear-umbrel-nextcloud-with-smbclient_big-bear-nextcloud-smb_1

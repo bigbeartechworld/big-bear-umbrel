@@ -1,4 +1,3 @@
-
 version: "3.7"
 services:
   big-bear-kopia:
@@ -8,20 +7,20 @@ services:
       - PUID=0
       - PGID=0
       - TZ=UTC
-      - KOPIA_HTTPS=true # Optional
+      - KOPIA_HTTPS=true
       - KOPIA_UI_USERNAME=casaos
       - KOPIA_UI_PASSWORD=casaos
-      - KOPIA_PASSWORD=casaos # Repository password
-      - REFRESH_INTERVAL= # Optional
+      - KOPIA_PASSWORD=casaos
+      - REFRESH_INTERVAL=
     volumes:
       - ${APP_DATA_DIR}/config:/config
-      - ${APP_DATA_DIR}/home:/backups/home:ro # Optional
-      - /var/lib/docker/volumes:/backups/docker:ro # Optional
-      - ${APP_DATA_DIR}/repository:/repository # Optional
-      - /tmp:/tmp:shared # Optional
-      - /var/run/docker.sock:/var/run/docker.sock:ro # Optional
+      - ${APP_DATA_DIR}/home:/backups/home:ro
+      - /var/lib/docker/volumes:/backups/docker:ro
+      - ${APP_DATA_DIR}/repository:/repository
+      - /tmp:/tmp:shared
+      - /var/run/docker.sock:/var/run/docker.sock:ro
     cap_add:
-      - SYS_ADMIN # Optional
+      - SYS_ADMIN
   app_proxy:
     environment:
       APP_HOST: big-bear-umbrel-kopia_big-bear-kopia_1

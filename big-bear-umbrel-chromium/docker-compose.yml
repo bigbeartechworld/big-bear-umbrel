@@ -1,13 +1,13 @@
 version: "3.7"
 services:
   chromium:
-    image: kasmweb/chromium:1.15.0-rolling # Docker image for the chromium browser
+    image: kasmweb/chromium:1.15.0-rolling
     environment:
-      - VNC_PW=casaos # Set the VNC password to 'casaos'
-      - LAUNCH_URL=https://community.bigbeartechworld.com/ # Set the default URL to Big Bear Tech World
-    shm_size: 512m # Allocate 512 MB of shared memory
+      - VNC_PW=casaos
+      - LAUNCH_URL=https://community.bigbeartechworld.com/
+    shm_size: 512m
     volumes:
-      - ${APP_DATA_DIR}/Downloads:/home/kasm-user/Downloads # Mount the host directory to the container's Downloads directory
+      - ${APP_DATA_DIR}/Downloads:/home/kasm-user/Downloads
   app_proxy:
     environment:
       APP_HOST: big-bear-umbrel-chromium_chromium_1

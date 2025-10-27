@@ -1,4 +1,3 @@
-
 version: "3.7"
 services:
   app:
@@ -11,12 +10,12 @@ services:
       - ${APP_DATA_DIR}/sessions:/var/www/html/storage/framework/sessions
     environment:
       - APP_NAME="Financial Freedom"
-      - APP_ENV=production # Change to "local" for development
-      - APP_DEBUG=false # Change to "true" for development
+      - APP_ENV=production
+      - APP_DEBUG=false
       - APP_URL=http://[CASAOS_IP]:8080
-      - APP_KEY=base64:1234567890abcdefghijklmnopqrstuvwxyz # Run `php artisan key:generate`
+      - APP_KEY=base64:1234567890abcdefghijklmnopqrstuvwxyz
       - DB_ROOT_PASSWORD=cd876479-f30b-43f2-8714-e52e040c657a
-      - DB_HOST=mariadb # You generally don't need to change this
+      - DB_HOST=mariadb
       - DB_DATABASE=financialfreedom
       - DB_USERNAME=bigbear
       - DB_PASSWORD=cd876479-f30b-43f2-8714-e52e040c657a

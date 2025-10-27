@@ -1,11 +1,10 @@
-
 version: "3.7"
 services:
   app:
-    image: germannewsmaker/myspeed:1.0.9 # Docker image to be used for the service
+    image: germannewsmaker/myspeed:1.0.9
     volumes:
-      - ${APP_DATA_DIR}/data:/myspeed/data # Mount host directory to container directory
-    restart: unless-stopped # Restart policy for the service
+      - ${APP_DATA_DIR}/data:/myspeed/data
+    restart: unless-stopped
   app_proxy:
     environment:
       APP_HOST: big-bear-umbrel-myspeed_app_1

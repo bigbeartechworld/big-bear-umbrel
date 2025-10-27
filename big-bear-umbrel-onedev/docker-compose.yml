@@ -1,4 +1,3 @@
-
 version: "3.7"
 services:
   big-bear-onedev:
@@ -7,35 +6,35 @@ services:
     volumes:
       - ${APP_DATA_DIR}/data:/opt/onedev
       - /var/run/docker.sock:/var/run/docker.sock
-    environment: # Environment variables for configuration
-      - hibernate_dialect=io.onedev.server.persistence.PostgreSQLDialect # Specify the Hibernate dialect for PostgreSQL
-      - hibernate_connection_driver_class=org.postgresql.Driver # JDBC driver class for PostgreSQL
-      - hibernate_connection_url=jdbc:postgresql://big-bear-onedev-db:5432/onedev # JDBC connection URL, pointing to the PostgreSQL service
-      - hibernate_connection_username=bigbear # Username for the database connection
-      - hibernate_connection_password=eea2dad6-2203-45eb-8908-e8ba4d1e7f92 # Password for the database connection
-      - initial_user=bigbear # Initial admin username for OneDev
-      - initial_password=password # Initial admin password for OneDev
-      - initial_email=admin@example.com # Initial admin email for OneDev
-      - initial_server_url=http://localhost:6610 # URL where OneDev will be accessible
-    depends_on: # Ensure the database service starts before this service
+    environment:
+      - hibernate_dialect=io.onedev.server.persistence.PostgreSQLDialect
+      - hibernate_connection_driver_class=org.postgresql.Driver
+      - hibernate_connection_url=jdbc:postgresql://big-bear-onedev-db:5432/onedev
+      - hibernate_connection_username=bigbear
+      - hibernate_connection_password=eea2dad6-2203-45eb-8908-e8ba4d1e7f92
+      - initial_user=bigbear
+      - initial_password=password
+      - initial_email=admin@example.com
+      - initial_server_url=http://localhost:6610
+    depends_on:
       - big-bear-onedev-db
-    networks: # Connect to the network
+    networks:
       - big_bear_ondedev_network
   big-bear-onedev-db:
-    image: postgres:14 # Use the specified PostgreSQL image
-    restart: unless-stopped # Policy to restart the container unless stopped manually
-    environment: # Environment variables for PostgreSQL configuration
-      - POSTGRES_USER=bigbear # Default username for PostgreSQL
-      - POSTGRES_PASSWORD=eea2dad6-2203-45eb-8908-e8ba4d1e7f92 # Password for the default user
-      - POSTGRES_DB=onedev # Default database created upon startup
-    volumes: # Mount point for database persistence
+    image: postgres:14
+    restart: unless-stopped
+    environment:
+      - POSTGRES_USER=bigbear
+      - POSTGRES_PASSWORD=eea2dad6-2203-45eb-8908-e8ba4d1e7f92
+      - POSTGRES_DB=onedev
+    volumes:
       - ${APP_DATA_DIR}/postgres_data:/var/lib/postgresql/data
-    networks: # Connect to the network
+    networks:
       - big_bear_ondedev_network
   app_proxy:
     environment:
       APP_HOST: big-bear-umbrel-onedev_big-bear-onedev_1
       APP_PORT: "6610"
 networks:
-  big_bear_ondedev_network: # Network name
-    driver: bridge # Network driver
+  big_bear_ondedev_network:
+    driver: bridge

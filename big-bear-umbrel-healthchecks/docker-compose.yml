@@ -1,4 +1,3 @@
-
 version: "3.7"
 services:
   big-bear-healthchecks:
@@ -12,21 +11,21 @@ services:
       - SITE_NAME="Big Bear HealthChecks"
       - SUPERUSER_EMAIL=user@example.com
       - SUPERUSER_PASSWORD=8a4c087a-2652-4d12-a6cc-feeb60e59dd4
-      - ALLOWED_HOSTS= #optional
-      - APPRISE_ENABLED=False #optional
-      - CSRF_TRUSTED_ORIGINS= #optional
-      - DEBUG=True #optional
-      - DEFAULT_FROM_EMAIL= #optional
-      - EMAIL_HOST= #optional
-      - EMAIL_PORT= #optional
-      - EMAIL_HOST_USER= #optional
-      - EMAIL_HOST_PASSWORD= #optional
-      - EMAIL_USE_TLS= #optional
-      - INTEGRATIONS_ALLOW_PRIVATE_IPS= #optional
-      - PING_EMAIL_DOMAIN= #optional
-      - RP_ID= #optional
-      - SECRET_KEY="b2ea4094-c950-4890-b85f-301d8a777af2" #optional
-      - SITE_LOGO_URL= #optional
+      - ALLOWED_HOSTS=
+      - APPRISE_ENABLED=False
+      - CSRF_TRUSTED_ORIGINS=
+      - DEBUG=True
+      - DEFAULT_FROM_EMAIL=
+      - EMAIL_HOST=
+      - EMAIL_PORT=
+      - EMAIL_HOST_USER=
+      - EMAIL_HOST_PASSWORD=
+      - EMAIL_USE_TLS=
+      - INTEGRATIONS_ALLOW_PRIVATE_IPS=
+      - PING_EMAIL_DOMAIN=
+      - RP_ID=
+      - SECRET_KEY="b2ea4094-c950-4890-b85f-301d8a777af2"
+      - SITE_LOGO_URL=
     volumes:
       - ${APP_DATA_DIR}/config:/config
   app_proxy:

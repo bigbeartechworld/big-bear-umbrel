@@ -7,41 +7,41 @@ services:
       - database
       - cache
     volumes:
-      - "${APP_DATA_DIR}/var/:/app/var/" # Map app data
-      - "${APP_DATA_DIR}/nginx/:/etc/nginx/http.d/" # Map nginx config
-      - "${APP_DATA_DIR}/certs/:/etc/letsencrypt/" # Map SSL certificates
-      - "${APP_DATA_DIR}/logs/:/app/storage/logs" # Map logs
+      - "${APP_DATA_DIR}/var/:/app/var/"
+      - "${APP_DATA_DIR}/nginx/:/etc/nginx/http.d/"
+      - "${APP_DATA_DIR}/certs/:/etc/letsencrypt/"
+      - "${APP_DATA_DIR}/logs/:/app/storage/logs"
     environment:
-      APP_URL: "http://example.com" # App URL
-      APP_TIMEZONE: "UTC" # App timezone
-      APP_SERVICE_AUTHOR: "noreply@example.com" # Service author email
-      MAIL_FROM: "noreply@example.com" # Email sender
-      MAIL_DRIVER: "smtp" # Email driver
-      MAIL_HOST: "mail" # Email host
-      MAIL_PORT: "1025" # Email port
-      MAIL_USERNAME: "" # Email username
-      MAIL_PASSWORD: "" # Email password
-      MAIL_ENCRYPTION: "true" # Use email encryption
-      APP_ENV: "production" # App environment
-      APP_ENVIRONMENT_ONLY: "false" # Environment setting
-      CACHE_DRIVER: "redis" # Cache driver
-      SESSION_DRIVER: "redis" # Session driver
-      QUEUE_DRIVER: "redis" # Queue driver
-      REDIS_HOST: "cache" # Redis host
-      DB_HOST: "database" # Database host
-      DB_PASSWORD: casaos # Database password
-      DB_PORT: "3306" # Database port
+      APP_URL: "http://example.com"
+      APP_TIMEZONE: "UTC"
+      APP_SERVICE_AUTHOR: "noreply@example.com"
+      MAIL_FROM: "noreply@example.com"
+      MAIL_DRIVER: "smtp"
+      MAIL_HOST: "mail"
+      MAIL_PORT: "1025"
+      MAIL_USERNAME: ""
+      MAIL_PASSWORD: ""
+      MAIL_ENCRYPTION: "true"
+      APP_ENV: "production"
+      APP_ENVIRONMENT_ONLY: "false"
+      CACHE_DRIVER: "redis"
+      SESSION_DRIVER: "redis"
+      QUEUE_DRIVER: "redis"
+      REDIS_HOST: "cache"
+      DB_HOST: "database"
+      DB_PASSWORD: casaos
+      DB_PORT: "3306"
   database:
     image: mariadb:10.5
     restart: always
     command: --default-authentication-plugin=mysql_native_password
     volumes:
-      - "${APP_DATA_DIR}/database:/var/lib/mysql" # Map database data
+      - "${APP_DATA_DIR}/database:/var/lib/mysql"
     environment:
-      MYSQL_DATABASE: "panel" # Database name
-      MYSQL_USER: "pterodactyl" # Database user
-      MYSQL_PASSWORD: "casaos" # Database user password
-      MYSQL_ROOT_PASSWORD: "casaos" # Database root password
+      MYSQL_DATABASE: "panel"
+      MYSQL_USER: "pterodactyl"
+      MYSQL_PASSWORD: "casaos"
+      MYSQL_ROOT_PASSWORD: "casaos"
   cache:
     image: redis:8.2.2-alpine@sha256:1c78f5e7512cc8b22b0edc95c20e7abd9e1fd832e5dfd5c3c6b59ce82fb238d0
     restart: always

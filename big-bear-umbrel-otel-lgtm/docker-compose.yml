@@ -1,8 +1,7 @@
-
 version: "3.7"
 services:
   big-bear-otel-lgtm:
-    image: grafana/otel-lgtm:0.11.12
+    image: grafana/otel-lgtm:0.11.13
     restart: unless-stopped
     volumes:
       - type: bind

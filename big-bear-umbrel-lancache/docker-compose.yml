@@ -1,8 +1,7 @@
-
 version: "3.7"
 services:
   app:
-    image: lancachenet/monolithic:latest # Docker image for the caching service
+    image: lancachenet/monolithic:latest
     environment:
       - USE_GENERIC_CACHE=true
       - LANCACHE_IP=10.0.39.1
@@ -18,7 +17,7 @@ services:
       - ${APP_DATA_DIR}/cache:/data/cache
       - ${APP_DATA_DIR}/logs:/data/logs
   dns:
-    image: lancachenet/lancache-dns:latest # Docker image for DNS service
+    image: lancachenet/lancache-dns:latest
     environment:
       - USE_GENERIC_CACHE=true
       - LANCACHE_IP=10.0.39.1

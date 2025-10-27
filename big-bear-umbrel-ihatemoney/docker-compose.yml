@@ -1,32 +1,31 @@
-
 version: "3.7"
 services:
   big-bear-ihatemoney:
     image: ihatemoney/ihatemoney:6.1.5
     restart: unless-stopped
     environment:
-      SECRET_KEY: "1d58bc34-e7ff-4f6d-a1e4-f319262ed9b8" # Sets the secret key environment variable for the application.
-      SQLALCHEMY_DATABASE_URI: "mysql+pymysql://bigbear:password@big-bear-ihatemoney-db/ihatemoney" # Database connection string.
-      ACTIVATE_ADMIN_DASHBOARD: "True" # Enables the admin dashboard.
-      ADMIN_PASSWORD: "" # Sets the admin password. On the host run: docker run -it --rm --entrypoint ihatemoney ihatemoney/ihatemoney generate_password_hash
-      SESSION_COOKIE_SECURE: "False" # Disables secure session cookies for development.
+      SECRET_KEY: "1d58bc34-e7ff-4f6d-a1e4-f319262ed9b8"
+      SQLALCHEMY_DATABASE_URI: "mysql+pymysql://bigbear:password@big-bear-ihatemoney-db/ihatemoney"
+      ACTIVATE_ADMIN_DASHBOARD: "True"
+      ADMIN_PASSWORD: ""
+      SESSION_COOKIE_SECURE: "False"
     networks:
-      - big_bear_ihatemoney_network # Connects the service to a network.
+      - big_bear_ihatemoney_network
   big-bear-ihatemoney-db:
-    image: mariadb:10 # Use MariaDB version 10 Docker image.
+    image: mariadb:10
     environment:
-      MYSQL_ROOT_PASSWORD: password # Root password for MariaDB.
-      MYSQL_DATABASE: ihatemoney # Default database name.
-      MYSQL_USER: bigbear # Username for MariaDB.
-      MYSQL_PASSWORD: password # Password for the MariaDB user.
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: ihatemoney
+      MYSQL_USER: bigbear
+      MYSQL_PASSWORD: password
     volumes:
-      - ${APP_DATA_DIR}/mysql:/var/lib/mysql # Maps a volume for data persistence.
+      - ${APP_DATA_DIR}/mysql:/var/lib/mysql
     networks:
-      - big_bear_ihatemoney_network # Connects the MySQL service to the network.
+      - big_bear_ihatemoney_network
   app_proxy:
     environment:
       APP_HOST: big-bear-umbrel-ihatemoney_big-bear-ihatemoney_1
       APP_PORT: "8000"
 networks:
-  big_bear_ihatemoney_network: # Define a network named 'big_bear_ihatemoney_network'.
-    driver: bridge # Use the bridge network driver.
+  big_bear_ihatemoney_network:
+    driver: bridge

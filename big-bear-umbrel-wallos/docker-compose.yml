@@ -1,11 +1,10 @@
-
 version: "3.7"
 services:
   big-bear-wallos:
     image: bellamy/wallos:4.5.0
     restart: unless-stopped
     environment:
-      TZ: "UTC" # Sets the time zone inside the container to Coordinated Universal Time (UTC).
+      TZ: "UTC"
     volumes:
       - ${APP_DATA_DIR}/db:/var/www/html/db
       - ${APP_DATA_DIR}/logos:/var/www/html/images/uploads/logos

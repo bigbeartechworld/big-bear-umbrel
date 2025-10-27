@@ -1,10 +1,10 @@
 version: "3.7"
 services:
   app:
-    image: portainer/portainer-ce:2.35.0-alpine # Image to be used
+    image: portainer/portainer-ce:2.35.0-alpine
     volumes:
-      - ${APP_DATA_DIR}/data:/data # Bind mount for Docker volumes
-      - /var/run/docker.sock:/var/run/docker.sock # Bind mount for Docker socket
+      - ${APP_DATA_DIR}/data:/data
+      - /var/run/docker.sock:/var/run/docker.sock
   app_proxy:
     environment:
       APP_HOST: big-bear-umbrel-portainer_app_1

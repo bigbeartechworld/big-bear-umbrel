@@ -1,13 +1,12 @@
-
 version: "3.7"
 services:
   app:
     image: b4bz/homer:v25.10.1
     volumes:
       - ${APP_DATA_DIR}/assets:/www/assets
-    user: 1000:1000 # default
+    user: 1000:1000
     environment:
-      - INIT_ASSETS=1 # default
+      - INIT_ASSETS=1
   app_proxy:
     environment:
       APP_HOST: big-bear-umbrel-homer_app_1

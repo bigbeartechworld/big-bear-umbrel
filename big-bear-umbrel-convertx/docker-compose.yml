@@ -4,7 +4,7 @@ services:
     image: ghcr.io/c4illin/convertx:v0.15.1
     restart: unless-stopped
     environment:
-      - JWT_SECRET=c8330437-e6ae-4cf0-9837-4d1326457e32 # will use randomUUID() if unset
+      - JWT_SECRET=c8330437-e6ae-4cf0-9837-4d1326457e32
       - HTTP_ALLOWED=true
     volumes:
       - ${APP_DATA_DIR}/data:/app/data

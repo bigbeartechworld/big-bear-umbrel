@@ -1,4 +1,3 @@
-
 version: "3.7"
 services:
   big-bear-faster-whisper:
@@ -9,8 +8,8 @@ services:
       - PGID=1000
       - TZ=Etc/UTC
       - WHISPER_MODEL=tiny-int8
-      - WHISPER_BEAM=1 #optional
-      - WHISPER_LANG=en #optional
+      - WHISPER_BEAM=1
+      - WHISPER_LANG=en
     volumes:
       - ${APP_DATA_DIR}/config:/config
   app_proxy:
