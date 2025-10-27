@@ -1,4 +1,3 @@
-
 version: "3.7"
 services:
   app:
@@ -6,9 +5,10 @@ services:
     restart: unless-stopped
     ulimits:
       nofile:
-        soft: 4096 # Suggested maximum number of open file descriptors.
-        hard: 8192 # Absolute maximum number of open file descriptors.
+        soft: 4096
+        hard: 8192
     stop_grace_period: 60s
+    network_mode: host
     environment:
       - PUID=508
       - PGID=508
@@ -30,7 +30,3 @@ services:
     volumes:
       - ${APP_DATA_DIR}/data:/opt/tplink/EAPController/data
       - ${APP_DATA_DIR}/logs:/opt/tplink/EAPController/logs
-  app_proxy:
-    environment:
-      APP_HOST: big-bear-umbrel-tp-link-omada-controller_app_1
-      APP_PORT: "8088"

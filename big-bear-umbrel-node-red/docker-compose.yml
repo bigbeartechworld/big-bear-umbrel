@@ -2,12 +2,9 @@ version: "3.7"
 services:
   app:
     image: nodered/node-red:4.1.1
+    network_mode: host
     restart: always
     volumes:
-      - type: bind # Bind type volume
-        source: ${APP_DATA_DIR}/data # Source path on the host
-        target: /data # Path inside the container
-  app_proxy:
-    environment:
-      APP_HOST: big-bear-umbrel-node-red_app_1
-      APP_PORT: ' 1880 # Container''s port'
+      - type: bind
+        source: ${APP_DATA_DIR}/data
+        target: /data

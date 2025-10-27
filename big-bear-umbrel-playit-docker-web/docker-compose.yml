@@ -1,14 +1,10 @@
-
 version: "3.7"
 services:
   big-bear-playit-docker-web:
     image: wisdomsky/playit-docker-web:1.1
     restart: unless-stopped
+    network_mode: host
     environment:
       - WEBUI_PORT=8008
     volumes:
       - ${APP_DATA_DIR}/config:/config
-  app_proxy:
-    environment:
-      APP_HOST: big-bear-umbrel-playit-docker-web_big-bear-playit-docker-web_1
-      APP_PORT: "8008"

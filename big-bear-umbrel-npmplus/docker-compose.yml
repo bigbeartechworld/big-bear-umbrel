@@ -1,14 +1,10 @@
-
 version: "3.7"
 services:
   big-bear-npmplus:
     image: zoeyvid/npmplus:449
     restart: unless-stopped
+    network_mode: host
     environment:
-      - "TZ=America/Chicago" # Required for the container to function properly
+      - "TZ=America/Chicago"
     volumes:
       - "${APP_DATA_DIR}/data:/data"
-  app_proxy:
-    environment:
-      APP_HOST: big-bear-umbrel-npmplus_big-bear-npmplus_1
-      APP_PORT: "8081"

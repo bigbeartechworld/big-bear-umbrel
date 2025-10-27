@@ -1,15 +1,11 @@
-
 version: "3.7"
 services:
   big-bear-homebridge:
     image: homebridge/homebridge:2024-05-02
     restart: unless-stopped
     environment:
-      - TZ=UTC # Timezone
+      - TZ=UTC
     privileged: true
+    network_mode: host
     volumes:
       - ${APP_DATA_DIR}/data:/homebridge
-  app_proxy:
-    environment:
-      APP_HOST: big-bear-umbrel-homebridge_big-bear-homebridge_1
-      APP_PORT: "8581"
