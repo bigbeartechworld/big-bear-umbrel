@@ -2,7 +2,7 @@ manifestVersion: 1
 id: big-bear-umbrel-zipline
 category: BigBearCasaOS
 name: zipline
-version: "3.7.13"
+version: "4.3.2"
 tagline: zipline
 description: >-
   A ShareX/file upload server that is easy to use, packed with features, and with an easy setup!
