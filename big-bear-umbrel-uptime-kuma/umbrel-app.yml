@@ -2,7 +2,7 @@ manifestVersion: 1
 id: big-bear-umbrel-uptime-kuma
 category: BigBearCasaOS
 name: Uptime Kuma
-version: "1"
+version: "2"
 tagline: A fancy self-hosted monitoring tool
 description: >-
   A fancy self-hosted monitoring tool
