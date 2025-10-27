@@ -1,7 +1,6 @@
 # Configuration for cloudflared-web setup
 
 # Name of the big-bear-cloudflared-web application
-name: big-bear-cloudflared-web
 # Service definitions for the big-bear-cloudflared-web application
 services:
   # Service name: big-bear-cloudflared-web

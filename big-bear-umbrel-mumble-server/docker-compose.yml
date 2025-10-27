@@ -1,5 +1,4 @@
 # Name of the service
-name: big-bear-mumble-server
 # Service configurations
 services:
   # Main application service

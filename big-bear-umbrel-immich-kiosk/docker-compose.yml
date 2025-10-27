@@ -3,7 +3,6 @@
 # Initial Immich Kiosk Version: 0.21.0
 
 # Name of the big-bear-immich-kiosk application
-name: big-bear-immich-kiosk
 # Service definitions for the big-bear-immich-kiosk application
 services:
   # Main service configuration for the Immich Kiosk application

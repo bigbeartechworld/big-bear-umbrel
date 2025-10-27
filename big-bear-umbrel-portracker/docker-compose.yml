@@ -1,7 +1,6 @@
 # Configuration for Portracker setup
 
 # Name of the big-bear-portracker application
-name: big-bear-portracker
 # Service definitions for the big-bear-portracker application
 services:
   # Service name: big-bear-portracker

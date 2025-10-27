@@ -1,7 +1,6 @@
 # Configuration for planka setup
 
 # Name of the big-bear-planka application
-name: big-bear-planka
 # Service definitions for the big-bear-planka application
 services:
   # Service name: big-bear-planka

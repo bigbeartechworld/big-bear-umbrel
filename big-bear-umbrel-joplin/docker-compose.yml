@@ -1,7 +1,6 @@
 # Configuration for joplin setup
 
 # Name of the big-bear-joplin application
-name: big-bear-joplin
 # Service definitions for the big-bear-joplin application
 services:
   # Configuration for the Joplin server service

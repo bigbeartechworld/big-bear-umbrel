@@ -1,7 +1,6 @@
 # Configuration for scrutiny setup
 
 # Name of the big-bear-scrutiny application
-name: big-bear-scrutiny
 # Service definitions for the big-bear-scrutiny application
 services:
   # Service name: big-bear-scrutiny

@@ -1,5 +1,4 @@
 # Configuration for big-bear-glances setup
-name: big-bear-glances
 # Service definitions for the big-bear-glances application
 services:
   # Service name: big-bear-glances

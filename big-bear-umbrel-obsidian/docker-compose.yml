@@ -1,7 +1,6 @@
 # Configuration for obsidian setup
 
 # Name of the big-bear-obsidian application
-name: big-bear-obsidian
 # Service definitions for the big-bear-obsidian application
 services:
   # Service name: big-bear-obsidian

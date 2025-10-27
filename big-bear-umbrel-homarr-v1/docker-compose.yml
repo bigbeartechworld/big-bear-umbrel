@@ -1,7 +1,6 @@
 # Configuration for homarr-v1 setup
 
 # Name of the big-bear-homarr-v1 application
-name: big-bear-homarr-v1
 # Service definitions for the big-bear-homarr-v1 application
 services:
   # Service name: big-bear-homarr-v1

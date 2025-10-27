@@ -3,7 +3,6 @@
 # Version: 0.4.2
 
 # Name of the big-bear-spacedrive application
-name: big-bear-spacedrive
 # Service definitions for the big-bear-spacedrive application
 services:
   # Main service configuration for the spacedrive application

@@ -1,7 +1,6 @@
 # Configuration for bookstack setup
 
 # Name of the big-bear-bookstack application
-name: big-bear-bookstack
 # Service definitions for the big-bear-bookstack application
 services:
   # Service name: big-bear-bookstack

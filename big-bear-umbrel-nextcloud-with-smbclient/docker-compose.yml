@@ -1,7 +1,6 @@
 # Configuration for nextcloud-smb setup
 
 # Name of the big-bear-nextcloud-smb application
-name: big-bear-nextcloud-smb
 # Service definitions for the big-bear-nextcloud-smb application
 services:
   # Service name: app

@@ -1,7 +1,6 @@
 # Configuration for eufy-security-ws setup
 
 # Name of the big-bear-eufy-security-ws application
-name: big-bear-eufy-security-ws
 # Service definitions for the big-bear-eufy-security-ws application
 services:
   # Service name: big-bear-eufy-security-ws

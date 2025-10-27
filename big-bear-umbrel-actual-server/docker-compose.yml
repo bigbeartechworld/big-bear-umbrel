@@ -1,5 +1,4 @@
 # Configuration for big-bear-actual-server setup
-name: big-bear-actual-server
 # Service definitions for the big-bear-actual-server application
 services:
   # Service name: app

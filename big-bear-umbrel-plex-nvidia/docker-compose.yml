@@ -1,7 +1,6 @@
 # Configuration for plex-nvidia setup
 
 # Name of the big-bear-plex-nvidia application
-name: big-bear-plex-nvidia
 # Service definitions for the big-bear-plex-nvidia application
 services:
   # Service name: big-bear-plex-nvidia

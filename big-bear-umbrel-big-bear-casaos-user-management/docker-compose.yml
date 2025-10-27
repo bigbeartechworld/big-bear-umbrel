@@ -3,7 +3,6 @@
 # Version: 0.1.0
 
 # Name of the big-bear-casaos-user-management application
-name: big-bear-casaos-user-management
 # Service definitions for the big-bear-casaos-user-management application
 services:
   # Main service configuration for the CasaOS User Management application

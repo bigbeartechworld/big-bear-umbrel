@@ -1,7 +1,6 @@
 # Configuration for nextcloud setup
 
 # Name of the big-bear-nextcloud application
-name: big-bear-nextcloud
 # Service definitions for the big-bear-nextcloud application
 services:
   # Service name: app

@@ -1,7 +1,6 @@
 # Configuration for music-assistant setup
 
 # Name of the big-bear-music-assistant application
-name: big-bear-music-assistant
 # Service definitions for the big-bear-music-assistant application
 services:
   # Service name: big-bear-music-assistant-server

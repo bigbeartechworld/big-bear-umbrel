@@ -1,7 +1,6 @@
 # Configuration for watchyourlan setup
 
 # Name of the big-bear-watchyourlan application
-name: big-bear-watchyourlan
 # Service definitions for the big-bear-watchyourlan application
 services:
   # Service name: big-bear-watchyourlan

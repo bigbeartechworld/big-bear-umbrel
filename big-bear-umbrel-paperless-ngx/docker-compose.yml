@@ -1,7 +1,6 @@
 # Configuration for paperless-ngx setup
 
 # Name of the big-bear-paperless-ngx application
-name: big-bear-paperless-ngx
 # Service definitions for the big-bear-paperless-ngx application
 services:
   # Service name: big-bear-paperless-ngx

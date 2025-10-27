@@ -1,7 +1,6 @@
 # Configuration for Microbin setup
 
 # Name of the big-bear-microbin application
-name: big-bear-microbin
 # Service definitions for the big-bear-microbin application
 services:
   # Service name: big-bear-microbin

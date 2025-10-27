@@ -1,7 +1,6 @@
 # Configuration for big-bear-vikunja setup
 
 # Name of the big-bear-vikunja application
-name: big-bear-vikunja
 # Service definitions for the big-bear-vikunja application
 services:
   vikunja:

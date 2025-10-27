@@ -2,7 +2,6 @@
 
 # Application Name
 # This sets the name of the Rocket.Chat application.
-name: big-bear-rocket-chat
 # Service definitions
 # Defining the services required for the Rocket.Chat application.
 services:

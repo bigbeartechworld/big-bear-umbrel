@@ -1,5 +1,4 @@
 # Name of the service configuration
-name: big-bear-node-red
 # Define the services for this configuration
 services:
   app:

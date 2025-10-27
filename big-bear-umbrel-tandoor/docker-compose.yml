@@ -1,7 +1,6 @@
 # Configuration for tandoor setup
 
 # Name of the big-bear-tandoor application
-name: big-bear-tandoor
 # Service definitions for the big-bear-tandoor application
 services:
   # Service name: big-bear-tandoor

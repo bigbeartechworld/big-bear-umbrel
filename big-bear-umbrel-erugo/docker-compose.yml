@@ -1,7 +1,6 @@
 # Configuration for erugo setup
 
 # Name of the big-bear-erugo application
-name: big-bear-erugo
 # Service definitions for the big-bear-erugo application
 services:
   # Service name: big-bear-erugo

@@ -1,5 +1,4 @@
 # Name of the application
-name: big-bear-umami
 # List of services that this application uses
 services:
   # Main service for the Umami application

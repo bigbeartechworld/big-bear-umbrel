@@ -1,7 +1,6 @@
 # Configuration for dbgate setup
 
 # Name of the big-bear-dbgate application
-name: big-bear-dbgate
 # Service definitions for the big-bear-dbgate application
 services:
   # Service name: big-bear-dbgate

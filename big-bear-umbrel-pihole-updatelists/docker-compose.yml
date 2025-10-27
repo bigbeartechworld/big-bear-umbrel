@@ -1,7 +1,6 @@
 # Configuration for pihole-updatelists setup
 
 # Name of the big-bear-pihole-updatelists application
-name: big-bear-pihole-updatelists
 # Service definitions for the big-bear-pihole-updatelists application
 services:
   # Service name: big-bear-pihole-updatelists

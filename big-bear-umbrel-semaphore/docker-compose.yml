@@ -1,7 +1,6 @@
 # Configuration for semaphore setup
 
 # Name of the big-bear-semaphore application
-name: big-bear-semaphore
 # Service definitions for the big-bear-semaphore application
 services:
   # Service name: big-bear-semaphore

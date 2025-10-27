@@ -1,7 +1,6 @@
 # Configuration for homebridge setup
 
 # Name of the big-bear-homebridge application
-name: big-bear-homebridge
 # Service definitions for the big-bear-homebridge application
 services:
   # Service name: big-bear-homebridge

@@ -1,5 +1,4 @@
 # Name of the big-bear-morphos application
-name: big-bear-morphos
 # Service definitions for the big-bear-morphos application
 services:
   # Main service configuration for the morphos application

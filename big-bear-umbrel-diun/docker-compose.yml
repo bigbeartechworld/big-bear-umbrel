@@ -1,7 +1,6 @@
 # Configuration for diun setup
 
 # Name of the big-bear-diun application
-name: big-bear-diun
 # Service definitions for the big-bear-diun application
 services:
   # Service name: big-bear-diun

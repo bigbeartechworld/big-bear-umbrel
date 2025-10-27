@@ -1,7 +1,6 @@
 # Configuration for fastfetch setup
 
 # Name of the big-bear-fastfetch application
-name: big-bear-fastfetch
 # Service definitions for the big-bear-fastfetch application
 services:
   # Service name: big-bear-fastfetch

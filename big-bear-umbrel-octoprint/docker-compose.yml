@@ -1,7 +1,6 @@
 # Configuration for octoprint setup
 
 # Name of the big-bear-octoprint application
-name: big-bear-octoprint
 # Service definitions for the big-bear-octoprint application
 services:
   # Service name: app

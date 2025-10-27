@@ -1,7 +1,6 @@
 # Configuration for lancache setup
 
 # Name of the big-bear-lancache application
-name: big-bear-lancache
 # Service definitions for the big-bear-lancache application
 services:
   # Service name: app

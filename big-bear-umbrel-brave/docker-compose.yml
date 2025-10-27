@@ -1,4 +1,3 @@
-name: big-bear-brave # Name of the CasaOS application
 services:
   brave:
     container_name: big-bear-brave # Name of the Docker container

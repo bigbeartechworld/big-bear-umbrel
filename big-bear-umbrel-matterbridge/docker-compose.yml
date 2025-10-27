@@ -1,7 +1,6 @@
 # Configuration for matterbridge setup
 
 # Application Name
-name: big-bear-matterbridge
 # Services used in the application
 services:
   # The `big-bear-matterbridge` service for the Matterbridge application

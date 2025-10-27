@@ -1,5 +1,4 @@
 # Configuration for big-bear-immich-aio-alpine setup
-name: big-bear-immich-aio-alpine
 # Service definitions for the big-bear-immich-aio-alpine application
 services:
   # Main Immich Server service configuration

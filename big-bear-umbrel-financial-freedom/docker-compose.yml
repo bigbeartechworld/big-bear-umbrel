@@ -1,7 +1,6 @@
 # Configuration for financial-freedom setup
 
 # Name of the big-bear-financial-freedom application
-name: big-bear-financial-freedom
 # Service definitions for the big-bear-financial-freedom application
 services:
   # Service name: app

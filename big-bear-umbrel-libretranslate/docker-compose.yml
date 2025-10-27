@@ -1,7 +1,6 @@
 # Configuration for libretranslate setup
 
 # Name of the big-bear-libretranslate application
-name: big-bear-libretranslate
 # Service definitions for the big-bear-libretranslate application
 services:
   # Service name: big-bear-libretranslate

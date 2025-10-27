@@ -1,7 +1,6 @@
 # Configuration for npmplus setup
 
 # Name of the big-bear-npmplus application
-name: big-bear-npmplus
 # Service definitions for the big-bear-npmplus application
 services:
   # Service name: big-bear-npmplus
