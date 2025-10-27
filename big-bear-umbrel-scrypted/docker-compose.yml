@@ -1,7 +1,7 @@
 version: "3.7"
 services:
   scrypted:
-    image: koush/scrypted:v0.123.58-jammy-full
+    image: koush/scrypted:v0.142.9-noble-full
     network_mode: host
     environment:
       - SCRYPTED_WEBHOOK_UPDATE_AUTHORIZATION=Bearer SET_THIS_TO_SOME_RANDOM_TEXT

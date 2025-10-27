@@ -1,11 +1,11 @@
 version: "3.7"
 services:
   big-bear-immich-aio-alpine:
-    image: ghcr.io/imagegenius/immich:2.0.0-alpine # Image to be used
-    volumes: # Mounting directories for persistent data storage
+    image: ghcr.io/imagegenius/immich:2.0.0-alpine
+    volumes:
       - ${APP_DATA_DIR}/config:/config
       - ${APP_DATA_DIR}/photos:/usr/src/app/photos
-    environment: # Setting environment variables
+    environment:
       - PUID=1000
       - PGID=1000
       - TZ=Etc/UTC
@@ -14,39 +14,39 @@ services:
       - DB_PASSWORD=casaos
       - DB_DATABASE_NAME=immich
       - REDIS_HOSTNAME=big-bear-immich-redis
-      - DB_PORT=5432 #optional
-      - REDIS_PORT=6379 #optional
-      - REDIS_PASSWORD= #optional
-      - MACHINE_LEARNING_GPU_ACCELERATION= #optional
-      - MACHINE_LEARNING_WORKERS=1 #optional
-      - MACHINE_LEARNING_WORKER_TIMEOUT=120 #optional
-    depends_on: # Dependencies to ensure the order of service startup
+      - DB_PORT=5432
+      - REDIS_PORT=6379
+      - REDIS_PASSWORD=
+      - MACHINE_LEARNING_GPU_ACCELERATION=
+      - MACHINE_LEARNING_WORKERS=1
+      - MACHINE_LEARNING_WORKER_TIMEOUT=120
+    depends_on:
       - big-bear-immich-redis
       - big-bear-immich-db
-    restart: unless-stopped # Policy to restart unless stopped
+    restart: unless-stopped
     networks:
       - big_bear_immich_network
   big-bear-immich-redis:
-    image: redis:6.2.20-alpine@sha256:2185e741f4c1e7b0ea9ca1e163a3767c4270a73086b6bbea2049a7203212fb7f # patched for CVE-2025-49844
-    restart: always # Policy to always restart the container if it stops
+    image: redis:6.2.20-alpine@sha256:2185e741f4c1e7b0ea9ca1e163a3767c4270a73086b6bbea2049a7203212fb7f
+    restart: always
     networks:
-      - big_bear_immich_network # Connects the container to a defined network
+      - big_bear_immich_network
   big-bear-immich-db:
-    image: tensorchord/pgvecto-rs:pg14-v0.2.0 # Image to be used
-    environment: # Setting environment variables
+    image: tensorchord/pgvecto-rs:pg14-v0.2.0
+    environment:
       POSTGRES_PASSWORD: casaos
       POSTGRES_USER: casaos
       POSTGRES_DB: immich
       PG_DATA: /var/lib/postgresql/data
-    volumes: # Mounting directories for persistent data storage
+    volumes:
       - ${APP_DATA_DIR}/pgdata:/var/lib/postgresql/data
-    restart: unless-stopped # Policy to always restart the container if it stops
+    restart: unless-stopped
     networks:
-      - big_bear_immich_network # Connects the container to a defined network
+      - big_bear_immich_network
   app_proxy:
     environment:
       APP_HOST: big-bear-umbrel-immich-aio-alpine_big-bear-immich-aio-alpine_1
       APP_PORT: "8080"
-networks: # Defines network configurations for the services
+networks:
   big_bear_immich_network:
-    driver: bridge # Uses bridge network driver
+    driver: bridge

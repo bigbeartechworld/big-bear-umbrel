@@ -1,18 +1,18 @@
 version: "3.7"
 services:
   app:
-    image: linuxserver/code-server:4.105.1 # The Docker image to be used for the service
+    image: linuxserver/code-server:4.105.1
     environment:
-      - PUID=1000 # User ID under which code-server will run
-      - PGID=1000 # Group ID under which code-server will run
-      - TZ=UTC # Timezone for the container
-      - PASSWORD=my_password # Password to access code-server
-      - SUDO_PASSWORD=sudo_my_password # Password to access code-server
+      - PUID=1000
+      - PGID=1000
+      - TZ=UTC
+      - PASSWORD=my_password
+      - SUDO_PASSWORD=sudo_my_password
       - DEFAULT_WORKSPACE=/config/workspace
     volumes:
-      - ${APP_DATA_DIR}/config:/config #config dir
-      - ${APP_DATA_DIR}/projects:/projects #project dir
-    restart: always # Policy to restart the container if it stops unexpectedly
+      - ${APP_DATA_DIR}/config:/config
+      - ${APP_DATA_DIR}/projects:/projects
+    restart: always
   app_proxy:
     environment:
       APP_HOST: big-bear-umbrel-code-server_app_1

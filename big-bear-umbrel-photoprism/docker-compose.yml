@@ -1,4 +1,3 @@
-
 version: "3.7"
 services:
   app:
@@ -40,7 +39,7 @@ services:
   photoprism-db:
     image: mariadb:10.8
     restart: unless-stopped
-    command: ["mysqld", "--innodb-buffer-pool-size=128M", "--transaction-isolation=READ-COMMITTED", "--character-set-server=utf8mb4", "--collation-server=utf8mb4_unicode_ci", "--max-connections=512", "--innodb-rollback-on-timeout=OFF", "--innodb-lock-wait-timeout=120"] # File system volumes for the database
+    command: ["mysqld", "--innodb-buffer-pool-size=128M", "--transaction-isolation=READ-COMMITTED", "--character-set-server=utf8mb4", "--collation-server=utf8mb4_unicode_ci", "--max-connections=512", "--innodb-rollback-on-timeout=OFF", "--innodb-lock-wait-timeout=120"]
     volumes:
       - "${APP_DATA_DIR}/mysql:/var/lib/mysql"
     environment:

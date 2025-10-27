@@ -1,4 +1,3 @@
-
 version: "3.7"
 services:
   big-bear-coolify:
@@ -96,7 +95,7 @@ services:
       timeout: 2s
     networks:
       - big_bear_coolify_network
-  big-bear-coolify-redis: # Redis service configuration
+  big-bear-coolify-redis:
     image: redis:8.2.2-alpine@sha256:1c78f5e7512cc8b22b0edc95c20e7abd9e1fd832e5dfd5c3c6b59ce82fb238d0
     command: ["redis-server", "--save", "20", "1", "--loglevel", "warning", "--requirepass", "9e3df6aa-ea48-4e59-a9c4-59798f1ba9b4"]
     environment:

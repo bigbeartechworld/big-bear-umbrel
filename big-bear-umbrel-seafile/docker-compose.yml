@@ -1,4 +1,3 @@
-
 version: "3.7"
 services:
   big-bear-seafile:
@@ -12,19 +11,19 @@ services:
     volumes:
       - ${APP_DATA_DIR}/shared:/shared
     environment:
-      - DB_HOST=big-bear-seafile-db # Specifies MySQL service host name.
-      - DB_ROOT_PASSWD=seafilepassword # Requested, the value should be root's password of MySQL service.
-      - TIME_ZONE=Etc/UTC # Optional, default is UTC. Should be uncomment and set to your local time zone.
-      - SEAFILE_ADMIN_EMAIL=admin@example.com # Specifies Seafile admin user, default is 'me@example.com'.
-      - SEAFILE_ADMIN_PASSWORD=asecret # Specifies Seafile admin password, default is 'asecret'.
-      - SEAFILE_SERVER_LETSENCRYPT=false # Whether to use https or not.
-      - SEAFILE_SERVER_HOSTNAME=docs.seafile.com # Specifies your host name if https is enabled.
+      - DB_HOST=big-bear-seafile-db
+      - DB_ROOT_PASSWD=seafilepassword
+      - TIME_ZONE=Etc/UTC
+      - SEAFILE_ADMIN_EMAIL=admin@example.com
+      - SEAFILE_ADMIN_PASSWORD=asecret
+      - SEAFILE_SERVER_LETSENCRYPT=false
+      - SEAFILE_SERVER_HOSTNAME=docs.seafile.com
     networks:
       - big_bear_seafile_network
   big-bear-seafile-db:
     image: mariadb:10.11
     environment:
-      - MYSQL_ROOT_PASSWORD=seafilepassword # Requested, set the root's password of MySQL service.
+      - MYSQL_ROOT_PASSWORD=seafilepassword
       - MYSQL_LOG_CONSOLE=true
       - MARIADB_AUTO_UPGRADE=1
     volumes:

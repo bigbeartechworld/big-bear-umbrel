@@ -1,4 +1,3 @@
-
 version: "3.7"
 services:
   big-bear-semaphore:
@@ -17,20 +16,20 @@ services:
       SEMAPHORE_ADMIN: admin
       TZ: UTC
     volumes:
-      - ${APP_DATA_DIR}/home:/etc/semaphore # Configuration files for Semaphore
-      - ${APP_DATA_DIR}/lib:/var/lib/semaphore # Local storage for Semaphore data (not needed if using an external database)
+      - ${APP_DATA_DIR}/home:/etc/semaphore
+      - ${APP_DATA_DIR}/lib:/var/lib/semaphore
     networks:
       - big-bear-semaphore-network
   big-bear-semaphore-db:
     image: mysql:8.0
     restart: unless-stopped
     volumes:
-      - ${APP_DATA_DIR}/mysql:/var/lib/mysql # Data directory for MySQL
+      - ${APP_DATA_DIR}/mysql:/var/lib/mysql
     environment:
-      MYSQL_RANDOM_ROOT_PASSWORD: "yes" # Generate a random root password
-      MYSQL_DATABASE: "semaphore" # Database name to create
-      MYSQL_USER: "semaphore" # Database user
-      MYSQL_PASSWORD: "semaphore" # Database password
+      MYSQL_RANDOM_ROOT_PASSWORD: "yes"
+      MYSQL_DATABASE: "semaphore"
+      MYSQL_USER: "semaphore"
+      MYSQL_PASSWORD: "semaphore"
     networks:
       - big-bear-semaphore-network
   app_proxy:
@@ -39,4 +38,4 @@ services:
       APP_PORT: "3000"
 networks:
   big-bear-semaphore-network:
-    driver: bridge # Specifies network driver type
+    driver: bridge

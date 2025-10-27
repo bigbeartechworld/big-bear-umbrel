@@ -1,4 +1,3 @@
-
 version: "3.7"
 services:
   big-bear-neko-firefox:
@@ -12,7 +11,7 @@ services:
       NEKO_EPR: 52000-52010
       NEKO_ICELITE: "1"
       NEKO_DEBUG: "1"
-      NEKO_NAT1TO1: "[CASAOS_IP]" # Replace with your own IP address
+      NEKO_NAT1TO1: "[CASAOS_IP]"
   app_proxy:
     environment:
       APP_HOST: big-bear-umbrel-neko-firefox_big-bear-neko-firefox_1

@@ -1,10 +1,10 @@
 version: "3.7"
 services:
   app:
-    image: actualbudget/actual-server:25.10.0 # The Docker image to use (latest version of actual-server)
+    image: actualbudget/actual-server:25.10.0
     volumes:
-      - ${APP_DATA_DIR}:/data # Mounting the project directory inside the container
-    restart: unless-stopped # Policy to restart the container if it stops unexpectedly
+      - ${APP_DATA_DIR}:/data
+    restart: unless-stopped
   app_proxy:
     environment:
       APP_HOST: big-bear-umbrel-actual-server_app_1

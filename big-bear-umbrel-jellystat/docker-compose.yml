@@ -1,4 +1,3 @@
-
 version: "3.7"
 services:
   big-bear-jellystat:
@@ -21,7 +20,7 @@ services:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: 8a23ad09-61cf-4178-a783-6d4586496e3a
     volumes:
-      - ${APP_DATA_DIR}/postgres-data:/var/lib/postgresql/data # Mounting the volume
+      - ${APP_DATA_DIR}/postgres-data:/var/lib/postgresql/data
     networks:
       - big-bear-jellystat-network
   app_proxy:

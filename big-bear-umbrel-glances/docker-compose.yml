@@ -3,12 +3,12 @@ services:
   big-bear-glances:
     image: nicolargo/glances:4.3.0.8-full
     environment:
-      - TZ=UTC # Timezone
-      - GLANCES_OPT=-w # Glances option to run as a web server
+      - TZ=UTC
+      - GLANCES_OPT=-w
     pid: host
     restart: unless-stopped
     volumes:
-      - /var/run/docker.sock:/var/run/docker.sock:ro # Docker socket for monitoring
+      - /var/run/docker.sock:/var/run/docker.sock:ro
   app_proxy:
     environment:
       APP_HOST: big-bear-umbrel-glances_big-bear-glances_1

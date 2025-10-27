@@ -1,4 +1,3 @@
-
 version: "3.7"
 services:
   app:
@@ -8,8 +7,8 @@ services:
         reservations:
           memory: 64M
     volumes:
-      - "${APP_DATA_DIR}/data/work:/opt/adguardhome/work" # Map data work directory
-      - "${APP_DATA_DIR}/data/conf:/opt/adguardhome/conf" # Map configuration directory
+      - "${APP_DATA_DIR}/data/work:/opt/adguardhome/work"
+      - "${APP_DATA_DIR}/data/conf:/opt/adguardhome/conf"
     restart: unless-stopped
     networks:
       - adguard-home-network

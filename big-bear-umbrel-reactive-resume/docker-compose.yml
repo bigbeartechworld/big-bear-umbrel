@@ -1,4 +1,3 @@
-
 version: "3.7"
 services:
   app:
@@ -24,7 +23,7 @@ services:
       MAIL_FROM: "noreply@localhost"
       STORAGE_ENDPOINT: "[CASAOS_IP]"
       STORAGE_PORT: "9000"
-      STORAGE_REGION: "us-east-1" # Optional
+      STORAGE_REGION: "us-east-1"
       STORAGE_BUCKET: "default"
       STORAGE_ACCESS_KEY: "minioadmin"
       STORAGE_SECRET_KEY: "minioadmin"

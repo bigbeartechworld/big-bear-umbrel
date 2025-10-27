@@ -1,25 +1,25 @@
 version: "3.7"
 services:
   app:
-    image: ghcr.io/umami-software/umami:postgresql-latest # Docker image for the Umami app
-    environment: # Environment variables for the service
+    image: ghcr.io/umami-software/umami:postgresql-latest
+    environment:
       DATABASE_URL: postgresql://umami:umami@db:5432/umami
       DATABASE_TYPE: postgresql
       APP_SECRET: replace-me-with-a-random-string
-    depends_on: # Dependency of this service
+    depends_on:
       db:
         condition: service_healthy
-    restart: always # Restart policy
+    restart: always
   db:
-    image: postgres:15-alpine # Docker image for the PostgreSQL database
-    environment: # Environment variables for the service
+    image: postgres:15-alpine
+    environment:
       POSTGRES_DB: umami
       POSTGRES_USER: umami
       POSTGRES_PASSWORD: umami
-    volumes: # Volumes for data persistence
+    volumes:
       - ${APP_DATA_DIR}/pgdata:/var/lib/postgresql/data
-    restart: always # Restart policy
-    healthcheck: # Health check configuration
+    restart: always
+    healthcheck:
       test: ["CMD-SHELL", "pg_isready -U $${POSTGRES_USER} -d $${POSTGRES_DB}"]
       interval: 5s
       timeout: 5s

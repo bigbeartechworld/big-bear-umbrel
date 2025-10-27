@@ -1,15 +1,14 @@
-
 version: "3.7"
 services:
   big-bear-genmon:
     image: bigbeartechworld/big-bear-genmon:1.19.06
     environment:
-      - TZ=America/Chicago # Set the timezone to 'America/Chicago'
-    restart: unless-stopped # Restart the container unless it is explicitly stopped
+      - TZ=America/Chicago
+    restart: unless-stopped
     volumes:
-      - ${APP_DATA_DIR}/git_genmon:/git/genmon # Mount a named volume 'big_bear_genmon_data' to store data persistently at /git/genmon in the container (this is the default location)
-      - ${APP_DATA_DIR}/etc_genmon:/etc/genmon # Mount a named volume 'big_bear_genmon_config' to store configuration files persistently at /etc/genmon in the container
-      - ${APP_DATA_DIR}/var_log:/var/log # Mount a named volume 'big_bear_genmon_logs' to store logs persistently at /var/log in the container
+      - ${APP_DATA_DIR}/git_genmon:/git/genmon
+      - ${APP_DATA_DIR}/etc_genmon:/etc/genmon
+      - ${APP_DATA_DIR}/var_log:/var/log
   app_proxy:
     environment:
       APP_HOST: big-bear-umbrel-genmon_big-bear-genmon_1
