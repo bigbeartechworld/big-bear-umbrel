@@ -1,24 +1,16 @@
-# Configuration for unifi-network-application setup
 
-# Name of the big-bear-unifi-network-application application
-# Service definitions for the big-bear-homarr application
+version: "3.7"
 services:
-  # MongoDB database for the application
   unifi-db:
     image: mongo:6.0.11
-    container_name: big-bear-unifi-db
     volumes:
       - ${APP_DATA_DIR}/db/data:/data/db # MongoDB data persistence
       - ${APP_DATA_DIR}/db/init-mongo.js:/docker-entrypoint-initdb.d/init-mongo.js:ro
-    ports:
-      - 27017:27017 # MongoDB default port
     networks: # Networks to join
       - unifi-nework-application-network
     restart: unless-stopped # Restart policy
-  # Main application service
   app: # Name of the service
     image: linuxserver/unifi-network-application:9.5.21 # Docker image to use
-    container_name: big-bear-unifi-network-application # Name for the created container
     environment: # Environmental variables for the container
       - PUID=1000 # User ID
       - PGID=1000 # Group ID
@@ -34,16 +26,6 @@ services:
       - MONGO_AUTHSOURCE= #optional  # MongoDB authentication source
     volumes: # Volumes to mount in the container
       - ${APP_DATA_DIR}/config:/config # Map host directory to container directory
-    ports: # Ports to expose and forward
-      - 8443:8443 # HTTPS portal
-      - 3478:3478/udp # STUN service
-      - 10001:10001/udp # UniFi AP discovery
-      - 8080:8080 # HTTP portal
-      - 1900:1900/udp #optional  # For DLNA
-      - 8843:8843 #optional  # HTTPS guest portal
-      - 8880:8880 #optional  # HTTP guest portal
-      - 6789:6789 #optional  # Mobile speed test port
-      - 5514:5514/udp #optional  # Remote syslog port
     restart: unless-stopped # Restart policy for the container
     networks: # Networks to join
       - unifi-nework-application-network
@@ -53,8 +35,6 @@ services:
     environment:
       APP_HOST: big-bear-umbrel-unifi-network-application_unifi-db_1
       APP_PORT: "27017"
-# Networks used by the application
 networks:
-  # Define the network for AdGuard Home
   unifi-nework-application-network:
     driver: bridge

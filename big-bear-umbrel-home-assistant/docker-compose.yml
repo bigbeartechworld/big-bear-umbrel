@@ -1,27 +1,13 @@
-# Configuration for home-assistant setup
 
-# Name of the big-bear-home-assistant application
-# Service definitions for the big-bear-home-assistant application
+version: "3.7"
 services:
-  # Service name: app
-  # The `app` service definition
   app:
-    # Name of the container
-    container_name: big-bear-home-assistant
-    # Image to be used for the container
     image: ghcr.io/home-assistant/home-assistant:2025.10.4
-    # Container restart policy
     restart: unless-stopped
-    # Volumes to be mounted to the container
     volumes:
-      # Mounting the local ${APP_DATA_DIR}/config directory to /config inside the container
       - ${APP_DATA_DIR}/config:/config
-      # Mounting the local /etc/localtime to /etc/localtime inside the container
       - /etc/localtime:/etc/localtime:ro
-      # Mounting the local /run/dbus to /run/dbus inside the container
       - /run/dbus:/run/dbus:ro
-    # Network mode for the container
-    network_mode: host
   app_proxy:
     environment:
       APP_HOST: big-bear-umbrel-home-assistant_app_1

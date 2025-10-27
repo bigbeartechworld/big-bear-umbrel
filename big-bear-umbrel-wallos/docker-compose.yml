@@ -1,31 +1,15 @@
-# Configuration for wallos setup
 
-# Name of the big-bear-wallos application
-# Service definitions for the big-bear-wallos application
+version: "3.7"
 services:
-  # Service name: big-bear-wallos
-  # The `big-bear-wallos` service definition
   big-bear-wallos:
-    # Name of the container
-    container_name: big-bear-wallos
-    # Image to be used for the container
     image: bellamy/wallos:4.5.0
-    # Container restart policy
     restart: unless-stopped
-    # Environment variables for the container
     environment:
       TZ: "UTC" # Sets the time zone inside the container to Coordinated Universal Time (UTC).
-    # Volumes to be mounted to the container
     volumes:
-      # Mounting the local /DATA/AppData/big-bear-wallos/db directory to /var/www/html/db inside the container
       - ${APP_DATA_DIR}/db:/var/www/html/db
-      # Mounting the local /DATA/AppData/big-bear-wallos/logos directory to /var/www/html/images/uploads/logos inside the container
       - ${APP_DATA_DIR}/logos:/var/www/html/images/uploads/logos
-    # Ports mapping between host and container
-    ports:
-      # Mapping port 8282 of the host to port 80 of the container
-      - "8282:80"
   app_proxy:
     environment:
       APP_HOST: big-bear-umbrel-wallos_big-bear-wallos_1
-      APP_PORT: "8282"
+      APP_PORT: "80"

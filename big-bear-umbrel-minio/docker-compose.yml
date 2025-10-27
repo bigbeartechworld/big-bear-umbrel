@@ -1,15 +1,9 @@
-# Configuration for big-bear-minio setup
-# Service definitions for the big-bear-minio application
+version: "3.7"
 services:
-  # Service name: app
   app:
     image: bigbeartechworld/big-bear-minio:RELEASE.2025-10-15T17-29-55Z # The Docker image to use (latest version of minio)
-    container_name: big-bear-minio # Name of the container instance
     volumes:
       - ${APP_DATA_DIR}:/data # Mounting the project directory inside the container
-    ports:
-      - "9010:9000" # Expose minio's port 9000 on the host's port 9010
-      - "9011:9001" # Expose minio web console's port 9001 on the host's port 9011
     environment:
       MINIO_ROOT_PASSWORD: "minioadmin"
       MINIO_ROOT_USER: "minioadmin"
@@ -18,4 +12,4 @@ services:
   app_proxy:
     environment:
       APP_HOST: big-bear-umbrel-minio_app_1
-      APP_PORT: "9010"
+      APP_PORT: "9000"

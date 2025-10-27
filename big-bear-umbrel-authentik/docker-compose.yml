@@ -1,14 +1,7 @@
-# Configuration for authentik setup
 
-# Name of the big-bear-authentik application
-# Service definitions for the big-bear-authentik application
+version: "3.7"
 services:
-  # Service name: authentik
-  # The `authentik` service definition
   big-bear-authentik:
-    # Name of the container
-    container_name: big-bear-authentik
-    # Image to be used for the container
     image: ghcr.io/goauthentik/server:2025.8.4
     command: server
     environment:
@@ -21,8 +14,6 @@ services:
     volumes:
       - ${APP_DATA_DIR}/data/authentik-media:/media
       - ${APP_DATA_DIR}/data/authentik-custom-templates:/templates
-    ports:
-      - "9443:9443"
     depends_on:
       - big-bear-authentik-db
       - big-bear-authentik-redis
@@ -32,7 +23,6 @@ services:
     image: ghcr.io/goauthentik/server:2025.8.4
     restart: unless-stopped
     command: worker
-    container_name: big-bear-authentik-worker
     environment:
       AUTHENTIK_REDIS__HOST: big-bear-authentik-redis
       AUTHENTIK_POSTGRESQL__HOST: big-bear-authentik-db
@@ -40,12 +30,6 @@ services:
       AUTHENTIK_POSTGRESQL__NAME: authentik
       AUTHENTIK_POSTGRESQL__PASSWORD: authentik-password
       AUTHENTIK_SECRET_KEY: changeme
-    # `user: root` and the docker socket volume are optional.
-    # See more for the docker socket integration here:
-    # https://goauthentik.io/docs/outposts/integrations/docker
-    # Removing `user: root` also prevents the worker from fixing the permissions
-    # on the mounted folders, so when removing this make sure the folders have the correct UID/GID
-    # (1000:1000 by default)
     user: root
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
@@ -58,10 +42,6 @@ services:
     networks:
       - big_bear_authentik_network
   big-bear-authentik-db:
-    container_name: big-bear-authentik-db
-    # PostgreSQL 14+ required by Authentik (since version 2024.6)
-    # BREAKING CHANGE: Existing users with PostgreSQL 12 data need to migrate
-    # See: https://www.postgresql.org/docs/current/upgrading.html
     image: postgres:14-alpine
     restart: unless-stopped
     healthcheck:
@@ -81,7 +61,6 @@ services:
   big-bear-authentik-redis:
     image: redis:8.2.2-alpine@sha256:1c78f5e7512cc8b22b0edc95c20e7abd9e1fd832e5dfd5c3c6b59ce82fb238d0
     command: ["--save", "60", "1", "--loglevel", "warning"]
-    container_name: big-bear-authentik-redis
     restart: unless-stopped
     healthcheck:
       test: ["CMD-SHELL", "redis-cli ping | grep PONG"]

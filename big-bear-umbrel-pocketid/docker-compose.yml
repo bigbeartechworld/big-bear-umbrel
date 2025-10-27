@@ -1,9 +1,6 @@
-# Configuration for pocket-id setup
-# Service definitions for the pocket-id application
+version: "3.7"
 services:
-  # Service configuration for the pocket-id application
   big-bear-pocketid:
-    container_name: big-bear-pocketid # Name of the pocket-id container
     image: ghcr.io/pocket-id/pocket-id:v1.14 # Docker image to use for pocket-id
     restart: unless-stopped # Restart policy: Restart unless manually stopped
     cpu_shares: 90
@@ -21,19 +18,13 @@ services:
     hostname: big-bear-pocketid
     labels:
       icon: https://pocket-id.org/img/logo.png # Icon URL
-    ports:
-      - target: 1411
-        published: "1411"
-        protocol: tcp # Port mapping between host and container
     volumes:
       - type: bind
         source: ${APP_DATA_DIR}/data
         target: /app/data # Volume for persistent data
     devices: []
     cap_add: []
-    network_mode: bridge
     privileged: false
-    # Optional healthcheck
     healthcheck:
       test: "curl -f http://localhost:1411/healthz" # Health check command
       interval: 1m30s
@@ -43,4 +34,4 @@ services:
   app_proxy:
     environment:
       APP_HOST: big-bear-umbrel-pocketid_big-bear-pocketid_1
-      APP_PORT: "1411"
+      APP_PORT: ' 1411'

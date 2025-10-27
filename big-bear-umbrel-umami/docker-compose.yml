@@ -1,11 +1,7 @@
-# Name of the application
-# List of services that this application uses
+version: "3.7"
 services:
-  # Main service for the Umami application
   app:
     image: ghcr.io/umami-software/umami:postgresql-latest # Docker image for the Umami app
-    ports:
-      - "3000:3000" # Port mapping: host:container
     environment: # Environment variables for the service
       DATABASE_URL: postgresql://umami:umami@db:5432/umami
       DATABASE_TYPE: postgresql
@@ -14,7 +10,6 @@ services:
       db:
         condition: service_healthy
     restart: always # Restart policy
-  # Database service for the Umami application
   db:
     image: postgres:15-alpine # Docker image for the PostgreSQL database
     environment: # Environment variables for the service
@@ -32,4 +27,4 @@ services:
   app_proxy:
     environment:
       APP_HOST: big-bear-umbrel-umami_app_1
-      APP_PORT: "3022"
+      APP_PORT: "3000"

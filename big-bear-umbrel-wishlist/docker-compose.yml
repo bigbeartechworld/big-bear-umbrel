@@ -1,38 +1,17 @@
-# Docker Compose configuration for BigBearWishlist Service
-# This service provides a web interface for managing Wishlist
-# Version: v0.42.5
 
-# Name of the big-bear-wishlist application
-# Service definitions for the big-bear-wishlist application
+version: "3.7"
 services:
-  # Main service configuration for the BigBearWishlist application
-  # This service provides a web interface running on port 3280 for user administration
   big-bear-wishlist:
-    # Name of the container
-    container_name: big-bear-wishlist
-    # Image to be used for the container specifies the wishlist version and source
     image: ghcr.io/cmintey/wishlist:v0.51.1
-    # Container restart policy - restarts the container unless manually stopped
     restart: unless-stopped
-    # Environment variables for service configuration
-    # These settings control the Flask application behavior and default admin credentials
     environment:
-      # If behind a reverse proxy, set this to your domain
       ORIGIN: ""
-      # Hours until signup and password reset tokens expire
       TOKEN_TIME: "72"
-      # The currency to use when a product search does not return a currency
       DEFAULT_CURRENCY: USD
-      # Set the logging level: trace | debug | info | warn | error | fatal | silent
       LOG_LEVEL: info
-    # Volume mappings required for system integration
-    # These mounts allow the container to interact with the host system
     volumes:
       - ${APP_DATA_DIR}/uploads:/usr/src/app/uploads
       - ${APP_DATA_DIR}/data:/usr/src/app/data
-    # Map port 3280 on the host to port 3280 on the container
-    ports:
-      - "3280:3280"
   app_proxy:
     environment:
       APP_HOST: big-bear-umbrel-wishlist_big-bear-wishlist_1

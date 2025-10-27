@@ -1,17 +1,11 @@
-# Configuration for big-bear-wud setup
 
-# Name of the big-bear-wud application
-# Service definitions for the big-bear-wud application
+version: "3.7"
 services:
-  # Service definition for the main application
   app:
     image: fmartinou/whats-up-docker:6.6.1
-    container_name: wud
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
-    ports:
-      - 3000:3000
   app_proxy:
     environment:
       APP_HOST: big-bear-umbrel-whats-up-docker_app_1
-      APP_PORT: "3024"
+      APP_PORT: "3000"

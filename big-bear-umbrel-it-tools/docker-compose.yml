@@ -1,22 +1,10 @@
-# Configuration for it-tools setup
 
-# Name of the big-bear-it-tools application
-# Service definitions for the big-bear-it-tools application
+version: "3.7"
 services:
-  # Service name: app
-  # The `app` service definition
   app:
-    # Name of the container
-    container_name: big-bear-it-tools
-    # Image to be used for the container
     image: corentinth/it-tools:2023.11.2-7d94e11
-    # Container restart policy
     restart: unless-stopped
-    # Ports mapping between host and container
-    ports:
-      # Mapping port 8080 of the host to port 80 of the container
-      - "8080:80"
   app_proxy:
     environment:
       APP_HOST: big-bear-umbrel-it-tools_app_1
-      APP_PORT: "8103"
+      APP_PORT: "80"

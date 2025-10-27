@@ -1,41 +1,20 @@
-# Configuration for big-bear-cadvisor setup
-# Service definitions for the big-bear-cadvisor application
+version: "3.7"
 services:
-  # Service for cAdvisor, a tool to monitor container performance
   app:
-    # Docker image to be used for cAdvisor
     image: gcr.io/cadvisor/cadvisor:v0.52.1
-    # Name of the container instance
-    container_name: monitoring_cadvisor
-    # Restart policy - Restart the container unless it's stopped manually
     restart: unless-stopped
-    # List of device mappings between host and container
     devices:
-      # Map the host's kernel message log to the container
       - "/dev/kmsg:/dev/kmsg"
-    # Volumes to be mounted to the container
     volumes:
-      # Mount the root directory of the host in a read-only mode
       - /:/rootfs:ro
-      # Mount the var run directory of the host in a read-write mode
       - /var/run:/var/run:rw
-      # Mount Docker socket to allow cAdvisor to monitor other containers
       - /var/run/docker.sock:/var/run/docker.sock:rw
-      # Mount system directory of the host in a read-only mode for system metrics
       - /sys:/sys:ro
-      # Mount Docker library directory in a read-only mode
       - /var/lib/docker/:/var/lib/docker:ro
-      # Mount the disk directory of the host in a read-only mode for disk metrics
       - /dev/disk/:/dev/disk:ro
-    # Ports to be exposed from the container
     expose:
-      # Expose port 8080 from the container
       - 8080
-    # Port mappings between host and container
-    ports:
-      # Map port 8085 of the host to port 8080 of the container
-      - 8085:8080
   app_proxy:
     environment:
       APP_HOST: big-bear-umbrel-cadvisor_app_1
-      APP_PORT: "8086"
+      APP_PORT: "8080"
