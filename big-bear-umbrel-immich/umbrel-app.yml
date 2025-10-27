@@ -2,7 +2,7 @@ manifestVersion: 1
 id: big-bear-umbrel-immich
 category: BigBearCasaOS
 name: Immich
-version: "2.1.0"
+version: "v2.1.0#Imagetobeused"
 tagline: Immich
 description: >-
   Self-hosted photo and video storage.

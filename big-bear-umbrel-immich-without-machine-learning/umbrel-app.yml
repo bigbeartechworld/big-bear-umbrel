@@ -2,7 +2,7 @@ manifestVersion: 1
 id: big-bear-umbrel-immich-without-machine-learning
 category: BigBearCasaOS
 name: Immich without machine learning
-version: "2.1.0"
+version: "v2.1.0#Imagetobeused"
 tagline: Immich without machine learning
 description: >-
   Self-hosted photo and video storage. This does not include the machine learning part.
