@@ -2,7 +2,7 @@
 version: "3.7"
 services:
   big-bear-wg-easy:
-    image: ghcr.io/wg-easy/wg-easy:14
+    image: ghcr.io/wg-easy/wg-easy:15
     restart: unless-stopped
     environment:
       WG_HOST: "[YOUR_PUBLIC_IP]"
