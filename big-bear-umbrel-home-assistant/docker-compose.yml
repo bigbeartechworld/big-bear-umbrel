@@ -1,4 +1,3 @@
-
 version: "3.7"
 services:
   app:
@@ -8,7 +7,4 @@ services:
       - ${APP_DATA_DIR}/config:/config
       - /etc/localtime:/etc/localtime:ro
       - /run/dbus:/run/dbus:ro
-  app_proxy:
-    environment:
-      APP_HOST: big-bear-umbrel-home-assistant_app_1
-      APP_PORT: "8123"
+    network_mode: host

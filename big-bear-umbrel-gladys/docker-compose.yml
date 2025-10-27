@@ -1,22 +1,18 @@
-
 version: "3.7"
 services:
   app:
-    image: gladysassistant/gladys:v4.64.0 # Docker image to use for the 'app' service
-    restart: always # Container should always restart
-    privileged: true # Grants additional privileges to this container
+    image: gladysassistant/gladys:v4.64.0
+    restart: always
+    privileged: true
+    network_mode: host
     cgroup: host
-    environment: # Environment variables for the container
-      NODE_ENV: production # Sets the environment to production
-      SQLITE_FILE_PATH: /var/lib/gladysassistant/gladys-production.db # Path to the SQLite database
-      TZ: Europe/Paris # Timezone
-      SERVER_PORT: "1080" # Server port for UI
-    volumes: # Mount points from the host to the container
-      - /var/run/docker.sock:/var/run/docker.sock # Docker socket file for Docker within Docker
-      - ${APP_DATA_DIR}/data:/var/lib/gladysassistant # Persistent storage for Gladys data
-      - /dev:/dev # Access to host devices
-      - /run/udev:/run/udev # Access to host devices
-  app_proxy:
     environment:
-      APP_HOST: big-bear-umbrel-gladys_app_1
-      APP_PORT: "1080"
+      NODE_ENV: production
+      SQLITE_FILE_PATH: /var/lib/gladysassistant/gladys-production.db
+      TZ: Europe/Paris
+      SERVER_PORT: "1080"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ${APP_DATA_DIR}/data:/var/lib/gladysassistant
+      - /dev:/dev
+      - /run/udev:/run/udev

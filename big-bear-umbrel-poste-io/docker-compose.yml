@@ -1,16 +1,12 @@
-
 version: "3.7"
 services:
   big-bear-poste-io:
     image: analogic/poste.io:2.5.7
     restart: unless-stopped
+    network_mode: host
     environment:
       - TZ=UTC
     hostname: mail.example.com
     tty: true
     volumes:
       - ${APP_DATA_DIR}/data:/data
-  app_proxy:
-    environment:
-      APP_HOST: big-bear-umbrel-poste-io_big-bear-poste-io_1
-      APP_PORT: "8080"

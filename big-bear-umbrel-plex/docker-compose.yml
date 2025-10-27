@@ -1,20 +1,16 @@
-
 version: "3.7"
 services:
   big-bear-plex:
     image: linuxserver/plex:1.42.2
     environment:
-      - PUID=1000 # specify the user id
-      - PGID=1000 # specify the group id
-      - TZ=Etc/UTC # specify a timezone to use.
-      - VERSION=docker # Set whether to update plex or not.
-      - PLEX_CLAIM= #optional Optionally you can obtain a claim token from https://plex.tv/claim and input here. Keep in mind that the claim tokens expire within 4 minutes.
+      - PUID=1000
+      - PGID=1000
+      - TZ=Etc/UTC
+      - VERSION=docker
+      - PLEX_CLAIM=
     restart: unless-stopped
+    network_mode: host
     volumes:
       - ${APP_DATA_DIR}/config:/config
       - ${APP_DATA_DIR}/tv:/tv
       - ${APP_DATA_DIR}/movies:/movies
-  app_proxy:
-    environment:
-      APP_HOST: big-bear-umbrel-plex_big-bear-plex_1
-      APP_PORT: "32400"
