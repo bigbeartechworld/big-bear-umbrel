@@ -1,17 +1,9 @@
-# Configuration for project-management setup
 
-# Name of the big-bear-project-management application
-# Service definitions for the big-bear-project-management application
+version: "3.7"
 services:
-  # The `big-bear-project-management` service definition
   big-bear-project-management:
-    # Name of the container
-    container_name: big-bear-project-management
-    # Image to be used for the container
     image: eloufirhatim/helper:1.2.3
-    # Container restart policy
     restart: unless-stopped
-    # Environment variables
     environment:
       - DB_CONNECTION=mysql
       - DB_HOST=big-bear-project-management-db
@@ -25,20 +17,14 @@ services:
       - MAIL_USERNAME=
       - MAIL_PASSWORD=
       - MAIL_ENCRYPTION=null
-    # Volumes to be mounted to the container
     volumes:
       - /etc/localtime:/etc/localtime
-    # Ports mapping between host and container
-    ports:
-      # Mapping port 8000 of the host to port 8000 of the container
-      - "8000:8000"
     networks:
       - big_bear_project_management_network
     depends_on:
       - big-bear-project-management-db
   big-bear-project-management-db:
     image: mysql:5.7
-    container_name: big-bear-project-management-db
     environment:
       - MYSQL_DATABASE=project_management
       - MYSQL_USER=project_management
@@ -57,7 +43,7 @@ services:
   app_proxy:
     environment:
       APP_HOST: big-bear-umbrel-project-management_big-bear-project-management_1
-      APP_PORT: "8011"
+      APP_PORT: "8000"
 networks:
   big_bear_project_management_network:
     driver: bridge

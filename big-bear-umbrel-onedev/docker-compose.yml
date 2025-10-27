@@ -1,22 +1,11 @@
-# Configuration for onedev setup
 
-# Name of the big-bear-onedev application
-# Service definitions for the big-bear-onedev application
+version: "3.7"
 services:
-  # Service name: big-bear-onedev
-  # The `big-bear-onedev` service definition
   big-bear-onedev:
-    # Name of the container
-    container_name: big-bear-onedev
-    # Image to be used for the container
     image: 1dev/server:13.0.9
-    # Container restart policy
     restart: unless-stopped
-    # Volumes to be mounted to the container
     volumes:
-      # Mounting the local /DATA/AppData/big-bear-onedev/data directory to /opt/onedev inside the container
       - ${APP_DATA_DIR}/data:/opt/onedev
-      # Mounting docker.sock to allow docker management via OneDev
       - /var/run/docker.sock:/var/run/docker.sock
     environment: # Environment variables for configuration
       - hibernate_dialect=io.onedev.server.persistence.PostgreSQLDialect # Specify the Hibernate dialect for PostgreSQL
@@ -28,19 +17,11 @@ services:
       - initial_password=password # Initial admin password for OneDev
       - initial_email=admin@example.com # Initial admin email for OneDev
       - initial_server_url=http://localhost:6610 # URL where OneDev will be accessible
-    # Ports mapping between host and container
-    ports:
-      # Mapping port 6610 of the host to port 6610 of the container
-      - "6610:6610"
-      # Mapping port 6611 of the host to port 6611 of the container
-      - "6611:6611"
     depends_on: # Ensure the database service starts before this service
       - big-bear-onedev-db
     networks: # Connect to the network
       - big_bear_ondedev_network
-  # Define the service for the PostgreSQL database
   big-bear-onedev-db:
-    container_name: big-bear-onedev-db # Container name for easy reference
     image: postgres:14 # Use the specified PostgreSQL image
     restart: unless-stopped # Policy to restart the container unless stopped manually
     environment: # Environment variables for PostgreSQL configuration
@@ -55,7 +36,6 @@ services:
     environment:
       APP_HOST: big-bear-umbrel-onedev_big-bear-onedev_1
       APP_PORT: "6610"
-# Define the network for the big-bear-onedev application
 networks:
   big_bear_ondedev_network: # Network name
     driver: bridge # Network driver

@@ -1,10 +1,7 @@
-# Configuration for big-bear-codex-docs setup
-# Service definitions for the big-bear-codex-docs application
+version: "3.7"
 services:
   app:
     image: ghcr.io/codex-team/codex.docs:v2.2
-    ports:
-      - "3000:3000"
     volumes:
       - ${APP_DATA_DIR}/uploads:/usr/src/app/uploads
       - ${APP_DATA_DIR}/db:/usr/src/app/db
@@ -12,4 +9,4 @@ services:
   app_proxy:
     environment:
       APP_HOST: big-bear-umbrel-codex-docs_app_1
-      APP_PORT: "3002"
+      APP_PORT: "3000"

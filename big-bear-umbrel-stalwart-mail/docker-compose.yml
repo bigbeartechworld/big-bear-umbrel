@@ -1,40 +1,12 @@
-# Docker Compose configuration for BigBearCasaOS Stalwart Mail Service
-# This service provides a mail server solution with JMAP, IMAP4, POP3, and SMTP support and a wide range of modern features.
-# Initial Version: v0.11.7
 
-# Name of the big-bear-stalwart-mail application
-# Service definitions for the big-bear-stalwart-mail application
+version: "3.7"
 services:
-  # Main service configuration for the Stalwart Mail application
-  # This service provides a mail server solution with JMAP, IMAP4, POP3, and SMTP support and a wide range of modern features.
   big-bear-stalwart-mail:
-    # Name of the container
-    container_name: big-bear-stalwart-mail
-    # Image to be used for the container specifies the stalwartlabs/mail-server version and source
     image: stalwartlabs/stalwart:v0.14.0
-    # Container restart policy - restarts the container unless manually stopped
     restart: unless-stopped
-    # Volume mappings required for system integration
-    # These mounts allow the container to interact with the host system
     volumes:
-      # Required for monitoring system resources and container metrics
       - ${APP_DATA_DIR}/data:/opt/stalwart
-    # Map port 8080 on the host to port 8080 on the container for the web interface
-    ports:
-      - 8080:8080
-      # Map port 25 on the host to port 25 on the container for the SMTP service
-      - 25:25/tcp
-      # Map port 143 on the host to port 143 on the container for the IMAP service
-      - 143:143/tcp
-      # Map port 465 on the host to port 465 on the container for the SMTP service with encryption
-      - 465:465/tcp
-      # Map port 587 on the host to port 587 on the container for the SMTP service with encryption
-      - 587:587/tcp
-      # Map port 993 on the host to port 993 on the container for the IMAP service with encryption
-      - 993:993/tcp
-      # Map port 4190 on the host to port 4190 on the container for the web interface
-      - 4190:4190/tcp
   app_proxy:
     environment:
       APP_HOST: big-bear-umbrel-stalwart-mail_big-bear-stalwart-mail_1
-      APP_PORT: "8134"
+      APP_PORT: "8080"

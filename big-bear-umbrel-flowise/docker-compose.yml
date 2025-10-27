@@ -1,20 +1,10 @@
-# Configuration for flowise setup
 
-# Name of the big-bear-flowise application
-# Service definitions for the big-bear-flowise application
+version: "3.7"
 services:
-  # Service name: big-bear-flowise
-  # The `big-bear-flowise` service definition
   big-bear-flowise:
-    # Name of the container
-    container_name: big-bear-flowise
-    # Image to be used for the container specifies the flowise version and source
     image: flowiseai/flowise:3.0.8
-    # Container restart policy - restarts the container unless manually stopped
     restart: unless-stopped
-    # Entrypoint to be used for the container
     entrypoint: /bin/sh -c "sleep 3; flowise start"
-    # Environment variables to be set in the container for application configuration
     environment:
       - PORT=8009
       - FLOWISE_USERNAME=bigbear
@@ -29,11 +19,6 @@ services:
       - APIKEY_PATH=/root/.flowise
       - SECRETKEY_PATH=/root/.flowise/logs
       - LOG_PATH=/root/.flowise
-    # Ports mapping between host and container
-    ports:
-      # Mapping port 8009 of the host to port 8009 of the container
-      - "8009:8009"
-    # Volumes to be mounted to the container
     volumes:
       - ${APP_DATA_DIR}/data:/root/.flowise
   app_proxy:

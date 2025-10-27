@@ -1,64 +1,35 @@
-# Configuration for send setup
-# Intial version: v3.4.25
 
-# Name of the big-bear-send-visee application
-# Service definitions for the big-bear-send application
+version: "3.7"
 services:
-  # Service name: big-bear-send-visee
-  # The `big-bear-send-visee` service definition
   big-bear-send-visee:
-    # Name of the container (Docker does not have to generate a random name)
-    container_name: big-bear-send-visee
-    # Image to be used for the container
     image: registry.gitlab.com/timvisee/send:v3.4.27
-    # Container restart policy
     restart: unless-stopped
-    # Environment variables for the container
     environment:
       - NODE_ENV=production
-      # Networking
       - BASE_URL=http://${APP_DOMAIN}
-      # Redis
       - REDIS_HOST=big-bear-send-visee-redis
-      # Storage Limit
       - MAX_FILE_SIZE=2147483648
-      # Storage path
       - FILE_DIR=/uploads
-    # Volumes to be mounted to the container
     volumes:
-      # Storage volume
       - ${APP_DATA_DIR}/uploads:/uploads
-    # Ports mapping between host and container
-    ports:
-      # Mapping port 1443 of the host to port 1443 of the container
-      - "1443:1443"
     networks:
       - big_bear_send_visee_network
   big-bear-send-visee-redis:
-    # Name of the container (Docker does not have to generate a random name)
-    container_name: big-bear-send-visee-redis
-    # Image to be used for the container
     image: redis:8.2.2-alpine@sha256:1c78f5e7512cc8b22b0edc95c20e7abd9e1fd832e5dfd5c3c6b59ce82fb238d0
-    # Container restart policy
     restart: unless-stopped
-    # Volumes to be mounted to the container
     volumes:
       - ${APP_DATA_DIR}/redis:/data
-    # Health check
     healthcheck:
       test: ["CMD", "redis-cli", "ping"]
       interval: 5s
       timeout: 3s
       retries: 30
-    # Networks to be used for the container
     networks:
       - big_bear_send_visee_network
   app_proxy:
     environment:
       APP_HOST: big-bear-umbrel-send-visee_big-bear-send-visee_1
       APP_PORT: "1443"
-# Networks to be used for the containers
 networks:
   big_bear_send_visee_network:
-    # Driver to be used for the network
     driver: bridge

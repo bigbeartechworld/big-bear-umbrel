@@ -1,28 +1,12 @@
-# Configuration for sftpgo setup
 
-# Name of the big-bear-sftpgo application
-# Service definitions for the big-bear-sftpgo application
+version: "3.7"
 services:
-  # Service name: app
-  # The `app` service definition
   big-bear-sftpgo:
-    # Name of the container
-    container_name: big-bear-sftpgo
-    # Image to be used for the container
     image: drakkan/sftpgo:v2.7
-    # Container restart policy
     restart: unless-stopped
-    # Volumes to be mounted to the container
     volumes:
       - ${APP_DATA_DIR}/srv:/srv/sftpgo
       - ${APP_DATA_DIR}/data:/var/lib/sftpgo
-    # Ports mapping between host and container
-    ports:
-      # Mapping port 7575 of the host to port 7575 of the container
-      - "8080:8080"
-      - "2022:2022"
-      - "2121:2121"
-      - "10080:10080"
     environment:
       - SFTPGO_HTTPD_BINDINGS_0_PORT=8080
       - SFTPGO_HTTPD_BINDINGS_0_ADDRESS=0.0.0.0
@@ -33,4 +17,4 @@ services:
   app_proxy:
     environment:
       APP_HOST: big-bear-umbrel-sftpgo_big-bear-sftpgo_1
-      APP_PORT: "8131"
+      APP_PORT: "8080"

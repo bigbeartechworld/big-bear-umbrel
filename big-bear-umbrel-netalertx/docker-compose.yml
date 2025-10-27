@@ -1,34 +1,18 @@
-# Configuration for netalertx setup
 
-# Name of the big-bear-netalertx application
-# Service definitions for the big-bear-netalertx application
+version: "3.7"
 services:
-  # Service name: big-bear-netalertx
-  # The `big-bear-netalertx` service definition
   big-bear-netalertx:
-    # Name of the container
-    container_name: big-bear-netalertx
-    # Image to be used for the container
     image: jokobsk/netalertx:25.10.1
-    # Container restart policy
     restart: unless-stopped
-    # Make the container privileged
     privileged: true
-    # Volumes to be mounted to the container
     volumes:
-      # Mounting the local ${APP_DATA_DIR}/config directory to /app/config inside the container
       - ${APP_DATA_DIR}/config:/app/config
-      # Mounting the local ${APP_DATA_DIR}/db directory to /app/db inside the container
       - ${APP_DATA_DIR}/db:/app/db
-    # Environment variables
     environment:
       - TZ=UTC
       - PORT=8080
-      # ❗ DANGER ZONE BELOW - Setting ALWAYS_FRESH_INSTALL=true will delete the content of the /db & /config folders
       - ALWAYS_FRESH_INSTALL=false
-    # Network mode for the container
-    network_mode: host
   app_proxy:
     environment:
       APP_HOST: big-bear-umbrel-netalertx_big-bear-netalertx_1
-      APP_PORT: "8114"
+      APP_PORT: "8080"

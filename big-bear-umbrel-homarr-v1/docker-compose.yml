@@ -1,33 +1,15 @@
-# Configuration for homarr-v1 setup
 
-# Name of the big-bear-homarr-v1 application
-# Service definitions for the big-bear-homarr-v1 application
+version: "3.7"
 services:
-  # Service name: big-bear-homarr-v1
-  # The `big-bear-homarr-v1` service definition
   big-bear-homarr-v1:
-    # Name of the container
-    container_name: big-bear-homarr-v1
-    # Image to be used for the container
     image: ghcr.io/homarr-labs/homarr:v1.43.0
-    # Container restart policy
     restart: unless-stopped
-    # Volumes to be mounted to the container
     volumes:
-      # Mounting docker.sock to allow docker management via Homarr
       - /var/run/docker.sock:/var/run/docker.sock
-      # Mounting the local homarr directory to /appdata inside the container
       - ${APP_DATA_DIR}/appdata:/appdata
-    # Environment variables
     environment:
-      # Secret encryption key for securing sensitive data (64 character hex string)
-      # Generate with: openssl rand -hex 32
       - SECRET_ENCRYPTION_KEY=
-    # Ports mapping between host and container
-    ports:
-      # Mapping port 7575 of the host to port 7575 of the container
-      - "7575:7575"
   app_proxy:
     environment:
       APP_HOST: big-bear-umbrel-homarr-v1_big-bear-homarr-v1_1
-      APP_PORT: "7576"
+      APP_PORT: "7575"

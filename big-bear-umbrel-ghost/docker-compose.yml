@@ -1,65 +1,38 @@
-# Configuration for ghost setup
 
-# Application Name
-# Services used in the application
+version: "3.7"
 services:
-  # The `app` service for the Ghost application
   app:
-    # Name of the container
-    container_name: big-bear-ghost
-    # Docker image to be used
     image: ghost:6.5.1-alpine
-    # Restart policy for the service
     restart: on-failure
-    # Networks used by the service
     networks:
       - ghost-network
     environment:
-      # Database configuration for Ghost (see Ghost documentation for more details)
       database__client: mysql
       database__connection__host: db
       database__connection__user: ghost
       database__connection__password: casaos
       database__connection__database: ghost
-      # Base URL for the Ghost application
       url: "http://localhost:2368"
-      # Note on NODE_ENV default value for this image
-      #NODE_ENV: development
-    # Volume mappings for persistent storage
     volumes:
       - ${APP_DATA_DIR}/content:/var/lib/ghost/content
-    # Port mappings for the service
-    ports:
-      - 2368:2368
-    # Dependencies for the service
     depends_on:
       - db
-  # The `db` service for database (MySQL in this case)
   db:
-    # Container name
-    container_name: big-bear-ghost-db
-    # Docker image to be used
     image: mysql:8.0
-    # Restart policy for the service
     restart: on-failure
-    # Volume mappings for persistent storage
     volumes:
       - ${APP_DATA_DIR}/mysql:/var/lib/mysql
-    # MySQL environment variables
     environment:
       MYSQL_USER: "ghost"
       MYSQL_DATABASE: "ghost"
       MYSQL_PASSWORD: "casaos"
       MYSQL_ROOT_PASSWORD: "casaos"
-    # Networks used by the service
     networks:
       - ghost-network
   app_proxy:
     environment:
       APP_HOST: big-bear-umbrel-ghost_app_1
       APP_PORT: "2368"
-# Networks used by the application
 networks:
-  # Define the network for AdGuard Home
   ghost-network:
     driver: bridge

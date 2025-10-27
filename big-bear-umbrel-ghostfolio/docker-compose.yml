@@ -1,18 +1,13 @@
-# Configuration for Ghostfolio setup using Docker Compose
 
-# Name of the Ghostfolio application stack
-# Definitions of services within the Ghostfolio application stack
+version: "3.7"
 services:
-  # Service definition for the Ghostfolio application
   big-bear-ghostfolio:
-    container_name: big-bear-ghostfolio # Unique name for the container instance
     image: ghostfolio/ghostfolio:2.210.1 # Docker image to use
     restart: unless-stopped # Policy to restart the container unless manually stopped
     environment: # Environment variables for configuration
       NODE_ENV: production # Node environment setting (production, development, etc.)
       HOST: "0.0.0.0" # Host interface the app binds to (0.0.0.0 for all interfaces)
       PORT: "3333" # The port on which the app listens
-      # Security and database settings:
       ACCESS_TOKEN_SALT: 5a7f9e0d-0e64-4c19-8279-bbe8b4c590f4
       DATABASE_URL: postgresql://ghostfolio:casaospassword@big-bear-ghostfolio-db:5432/ghostfolio?sslmode=prefer
       JWT_SECRET_KEY: 534e820d-da30-4dd3-baf9-0511847c478a
@@ -22,8 +17,6 @@ services:
       REDIS_HOST: big-bear-ghostfolio-redis
       REDIS_PASSWORD: casaosredispassword
       REDIS_PORT: "6379"
-    ports:
-      - "3333:3333" # Maps port 3333 on the host to port 3333 on the container
     depends_on: # Dependency definitions ensuring database and Redis are ready
       big-bear-ghostfolio-db:
         condition: service_healthy
@@ -31,9 +24,7 @@ services:
         condition: service_healthy
     networks:
       - big_bear_ghostfolio_network # Connects the service to the defined network
-  # PostgreSQL database service for Ghostfolio
   big-bear-ghostfolio-db:
-    container_name: big-bear-ghostfolio-db
     image: postgres:15.4-alpine # Using PostgreSQL 15.4 on Alpine Linux
     restart: unless-stopped
     environment: # Database configuration settings
@@ -50,9 +41,7 @@ services:
       - ${APP_DATA_DIR}/data/db:/var/lib/postgresql/data
     networks:
       - big_bear_ghostfolio_network # Connects the service to the defined network
-  # Redis service for Ghostfolio, used for caching and session storage
   big-bear-ghostfolio-redis:
-    container_name: big-bear-ghostfolio-redis
     image: redis:7.4.6-alpine@sha256:7a7c6b5c49a6896d0a58ee0c6dc0dcabe14f30f0a2f7d2d1362d276fa2d43166 # Using Redis 7 on Alpine Linux
     restart: unless-stopped
     command: >
@@ -71,8 +60,7 @@ services:
   app_proxy:
     environment:
       APP_HOST: big-bear-umbrel-ghostfolio_big-bear-ghostfolio_1
-      APP_PORT: "3334"
-# Network definition for inter-service communication
+      APP_PORT: "3333"
 networks:
   big_bear_ghostfolio_network:
     driver: bridge # Uses a bridge network for container communication

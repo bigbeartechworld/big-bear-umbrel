@@ -1,16 +1,12 @@
-# Configuration for big-bear-mind setup
-# Service definitions for the big-bear-mind application
+version: "3.7"
 services:
   app:
     image: "mrcas/mind:v1.4.1"
-    container_name: mind
     environment:
       - TZ=UTC
     volumes:
       - "${APP_DATA_DIR}/db:/app/db"
-    ports:
-      - "8080:8080"
   app_proxy:
     environment:
       APP_HOST: big-bear-umbrel-mind_app_1
-      APP_PORT: "8109"
+      APP_PORT: "8080"

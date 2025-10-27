@@ -1,31 +1,14 @@
-# Docker Compose configuration for BigBearCasaOS Spacedrive Service
-# This service provides a web interface for managing files
-# Version: 0.4.2
 
-# Name of the big-bear-spacedrive application
-# Service definitions for the big-bear-spacedrive application
+version: "3.7"
 services:
-  # Main service configuration for the spacedrive application
-  # This service provides a web interface running on port 8080 for file management
   big-bear-spacedrive:
-    # Name of the container
-    container_name: big-bear-spacedrive
-    # Image to be used for the container specifies the spacedrive version and source
     image: ghcr.io/spacedriveapp/spacedrive/server:0.4.2
-    # Container restart policy - restarts the container unless manually stopped
     restart: unless-stopped
-    # Environment variables for service configuration
-    # These settings control the spacedrive application behavior and authentication
     environment:
       - SD_AUTH=bigbear:casaos # username:password
-    # Volume mappings required for system integration
-    # These mounts allow the container to interact with the host system
     volumes:
       - ${APP_DATA_DIR}/data/spacedrive:/var/spacedrive
-    # Map port 8080 on the host to port 8080 on the container
-    ports:
-      - 8080:8080
   app_proxy:
     environment:
       APP_HOST: big-bear-umbrel-spacedrive_big-bear-spacedrive_1
-      APP_PORT: "8132"
+      APP_PORT: "8080"

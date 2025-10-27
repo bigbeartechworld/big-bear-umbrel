@@ -1,31 +1,16 @@
-# Configuration for tudu di setup
 
-# Name of the big-bear-tududi application
-# Service definitions for the big-bear-tududi application
+version: "3.7"
 services:
-  # Service name: big-bear-tududi
-  # The `big-bear-tududi` service definition
   big-bear-tududi:
-    # Name of the container
-    container_name: big-bear-tududi
-    # Image to be used for the container
     image: chrisvel/tududi:0.84
-    # Container restart policy
     restart: unless-stopped
-    # Environment variables
     environment:
       - TUDUDI_USER_EMAIL=admin@example.com
       - TUDUDI_USER_PASSWORD=2dd25e05-65f4-47d7-a9a6-1a3293c02461
       - TUDUDI_SESSION_SECRET=3337c138d17ac7acefa412e5db0d7ef6540905b198cc28c5bf0d11e48807a71bdfe48d82ed0a0a6eb667c937cbdd1db3e1e6073b3148bff37f73cc6398a39671
       - TUDUDI_INTERNAL_SSL_ENABLED=false
-    # Volumes to be mounted to the container
     volumes:
-      # Mounting the tududi database directory
       - ${APP_DATA_DIR}/tududi_db:/usr/src/app/tududi_db
-    # Ports mapping between host and container
-    ports:
-      # Mapping port 9292 of the host to port 9292 of the container
-      - "9292:9292"
   app_proxy:
     environment:
       APP_HOST: big-bear-umbrel-tududi_big-bear-tududi_1

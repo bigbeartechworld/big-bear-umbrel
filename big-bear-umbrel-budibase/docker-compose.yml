@@ -1,26 +1,12 @@
-# Configuration for budibase setup
 
-# Name of the big-bear-budibase application
-# Service definitions for the big-bear-budibase application
+version: "3.7"
 services:
-  # Service name: big-bear-budibase
-  # The `big-bear-budibase` service definition
   big-bear-budibase:
-    # Name of the container
-    container_name: big-bear-budibase
-    # Image to be used for the container
     image: budibase/budibase:3.22.3
-    # Container restart policy
     restart: unless-stopped
-    # Volumes to be mounted to the container
     volumes:
-      # Mounting the local directory ${APP_DATA_DIR}/data to /data in the container
       - ${APP_DATA_DIR}/data:/data
-    # Ports mapping between host and container
-    ports:
-      # Mapping port 80 of the container to port 8080 of the host
-      - "8080:80"
   app_proxy:
     environment:
       APP_HOST: big-bear-umbrel-budibase_big-bear-budibase_1
-      APP_PORT: "8085"
+      APP_PORT: "80"

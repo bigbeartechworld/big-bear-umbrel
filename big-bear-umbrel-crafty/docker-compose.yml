@@ -1,27 +1,11 @@
-# Configuration for crafty setup
 
-# Name of the big-bear-crafty application
-# Service definitions for the big-bear-crafty application
+version: "3.7"
 services:
-  # Service name: big-bear-crafty
-  # The `big-bear-crafty` service definition
   big-bear-crafty:
-    # Name of the container
-    container_name: big-bear-crafty
-    # Image to be used for the container
     image: registry.gitlab.com/crafty-controller/crafty-4:4.5.5
-    # Container restart policy
     restart: unless-stopped
-    # Environment variables
     environment:
       - TZ=UTC
-    # Ports mapping between host and container HOST:CONTAINER
-    ports:
-      - 8443:8443 # Web UI
-      - 8123:8123
-      - 19132:19132/udp
-      - 25500-25600:25500-25600
-    # Volumes mapping between host and container
     volumes:
       - ${APP_DATA_DIR}/data/backups:/crafty/backups
       - ${APP_DATA_DIR}/data/logs:/crafty/logs

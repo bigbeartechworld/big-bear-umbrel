@@ -1,18 +1,11 @@
-# Configuration for big-bear-portainer-agent setup
-# Service definitions for the big-bear-portainer-agent application
+version: "3.7"
 services:
-  # Main Portainer Agent Server service configuration
   app:
-    container_name: portainer-agent # Name of the running container
     image: portainer/agent:2.35.0 # Image to be used
-    network_mode: bridge # Network mode to be used
-    ports: # Port mapping between host and container
-      - 9001:9001
-      # Maps port 9001 on the host to port 9001 in the container
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock # Bind mount for Docker socket
       - /var/lib/docker/volumes:/var/lib/docker/volumes # Bind mount for Docker volumes
   app_proxy:
     environment:
       APP_HOST: big-bear-umbrel-portainer-agent_app_1
-      APP_PORT: "9004"
+      APP_PORT: "9001"

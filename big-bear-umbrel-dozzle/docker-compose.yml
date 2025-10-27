@@ -1,26 +1,12 @@
-# Configuration for dozzle setup
 
-# Name of the big-bear-dozzle application
-# Service definitions for the big-bear-dozzle application
+version: "3.7"
 services:
-  # Service name: app
-  # The `app` service definition
   app:
-    # Name of the container
-    container_name: big-bear-dozzle
-    # Image to be used for the container
     image: amir20/dozzle:v8.14.5
-    # Container restart policy
     restart: unless-stopped
-    # Volumes to be mounted to the container
     volumes:
-      # Mounting docker.sock to allow docker management via the container
       - /var/run/docker.sock:/var/run/docker.sock
-    # Ports mapping between host and container
-    ports:
-      # Mapping port 8888 of the host to port 8080 of the container
-      - "8888:8080"
   app_proxy:
     environment:
       APP_HOST: big-bear-umbrel-dozzle_app_1
-      APP_PORT: "8888"
+      APP_PORT: "8080"

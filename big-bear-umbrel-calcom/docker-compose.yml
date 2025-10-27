@@ -1,18 +1,9 @@
-# Configuration for calcom setup
 
-# Name of the big-bear-calcom application
-# Service definitions for the big-bear-calcom application
+version: "3.7"
 services:
-  # Service name: big-bear-calcom
-  # The `big-bear-calcom` service definition
   big-bear-calcom:
-    # Name of the container
-    container_name: big-bear-calcom
-    # Image to be used for the container
     image: calcom/cal.com:v5.8.2
-    # Container restart policy
     restart: unless-stopped
-    # Environment variables
     environment:
       - DATABASE_HOST=big-bear-calcom-db
       - DATABASE_URL=postgresql://bigbear:9e45944b-37bb-41f7-aa6f-b74195fb58ec@big-bear-calcom-db/bigbear_calcom
@@ -36,17 +27,11 @@ services:
       - EMAIL_SERVER_PASSWORD=
       - EMAIL_SERVER_USER=
       - NODE_ENV=production
-    # Volumes to be mounted to the container
     volumes:
       - ${APP_DATA_DIR}/config:/config
-    # Ports mapping between host and container
-    ports:
-      - 3000:3000
-      - 3001:3001
     networks:
       - big_bear_calcom_network
   big-bear-calcom-db:
-    container_name: big-bear-calcom-db
     image: postgres:16.1
     restart: on-failure
     volumes:
@@ -60,7 +45,7 @@ services:
   app_proxy:
     environment:
       APP_HOST: big-bear-umbrel-calcom_big-bear-calcom_1
-      APP_PORT: "3001"
+      APP_PORT: "3000"
 networks:
   big_bear_calcom_network:
     driver: bridge
