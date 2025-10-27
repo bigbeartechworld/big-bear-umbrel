@@ -1,5 +1,5 @@
 manifestVersion: 1
-id: big-bear-umbrel-whats-up-docker
+id: whats-up-docker
 category: BigBearCasaOS
 name: What's Up Docker
 version: "6.6.1"

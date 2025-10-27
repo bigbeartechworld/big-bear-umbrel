@@ -1,5 +1,5 @@
 manifestVersion: 1
-id: big-bear-umbrel-portainer-agent
+id: portainer-agent
 category: BigBearCasaOS
 name: Portainer Agent
 version: "2.35.0"

@@ -1,5 +1,5 @@
 manifestVersion: 1
-id: big-bear-umbrel-nextcloud-ls
+id: nextcloud-ls
 category: BigBearCasaOS
 name: Nextcloud LS
 version: "32.0.1"

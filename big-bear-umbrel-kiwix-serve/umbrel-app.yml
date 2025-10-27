@@ -1,5 +1,5 @@
 manifestVersion: 1
-id: big-bear-umbrel-kiwix-serve
+id: kiwix-serve
 category: BigBearCasaOS
 name: Kiwix Server
 version: "3.7.0-2"

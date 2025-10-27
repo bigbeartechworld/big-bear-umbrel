@@ -1,5 +1,4 @@
 # Configuration for big-bear-gotify setup
-name: big-bear-gotify
 # Service definitions for the big-bear-gotify application
 services:
   # Service name: app

@@ -1,7 +1,6 @@
 # Configuration for uptime-kuma setup
 
 # Name of the big-bear-uptime-kuma application
-name: big-bear-uptime-kuma
 # Service definitions for the big-bear-uptime-kuma application
 services:
   # Service name: app

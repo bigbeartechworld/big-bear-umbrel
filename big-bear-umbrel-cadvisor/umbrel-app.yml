@@ -1,5 +1,5 @@
 manifestVersion: 1
-id: big-bear-umbrel-cadvisor
+id: cadvisor
 category: BigBearCasaOS
 name: cAdvisor
 version: "0.52.1"

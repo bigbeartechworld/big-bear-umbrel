@@ -1,5 +1,5 @@
 manifestVersion: 1
-id: big-bear-umbrel-baserow
+id: baserow
 category: BigBearCasaOS
 name: Baserow
 version: "1.35.3"

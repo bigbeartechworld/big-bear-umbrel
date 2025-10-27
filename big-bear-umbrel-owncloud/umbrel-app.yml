@@ -1,5 +1,5 @@
 manifestVersion: 1
-id: big-bear-umbrel-owncloud
+id: owncloud
 category: BigBearCasaOS
 name: ownCloud
 version: "10.16.0"

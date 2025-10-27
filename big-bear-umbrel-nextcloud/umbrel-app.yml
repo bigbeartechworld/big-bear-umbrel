@@ -1,5 +1,5 @@
 manifestVersion: 1
-id: big-bear-umbrel-nextcloud
+id: nextcloud
 category: BigBearCasaOS
 name: Nextcloud
 version: "0.0.11"

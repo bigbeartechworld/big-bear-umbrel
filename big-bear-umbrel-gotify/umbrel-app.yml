@@ -1,5 +1,5 @@
 manifestVersion: 1
-id: big-bear-umbrel-gotify
+id: gotify
 category: BigBearCasaOS
 name: Gotify
 version: "2.7.3"

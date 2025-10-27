@@ -1,5 +1,5 @@
 manifestVersion: 1
-id: big-bear-umbrel-syncthing
+id: syncthing
 category: BigBearCasaOS
 name: Syncthing
 version: "2.0"

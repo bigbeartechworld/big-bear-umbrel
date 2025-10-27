@@ -1,5 +1,5 @@
 manifestVersion: 1
-id: big-bear-umbrel-rocket-chat
+id: rocket-chat
 category: BigBearCasaOS
 name: Rocket.Chat
 version: "6.13.1"

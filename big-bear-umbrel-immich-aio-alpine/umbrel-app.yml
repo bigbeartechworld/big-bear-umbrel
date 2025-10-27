@@ -1,5 +1,5 @@
 manifestVersion: 1
-id: big-bear-umbrel-immich-aio-alpine
+id: immich-aio-alpine
 category: BigBearCasaOS
 name: Immich AIO Alpine
 version: "2.0.0-alpine"

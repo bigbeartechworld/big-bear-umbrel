@@ -1,5 +1,5 @@
 manifestVersion: 1
-id: big-bear-umbrel-lancache
+id: lancache
 category: BigBearCasaOS
 name: LAN Cache
 version: "latest"

@@ -1,5 +1,5 @@
 manifestVersion: 1
-id: big-bear-umbrel-gitea-mirror
+id: gitea-mirror
 category: BigBearCasaOS
 name: Gitea Mirror
 version: "3.8.10"

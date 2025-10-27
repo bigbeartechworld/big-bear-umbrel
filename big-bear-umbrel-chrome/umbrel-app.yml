@@ -1,5 +1,5 @@
 manifestVersion: 1
-id: big-bear-umbrel-chrome
+id: chrome
 category: BigBearCasaOS
 name: chrome
 version: "1.15.0-rolling"

@@ -1,5 +1,5 @@
 manifestVersion: 1
-id: big-bear-umbrel-seafile
+id: seafile
 category: BigBearCasaOS
 name: seafile
 version: "11.0.13"

@@ -1,5 +1,5 @@
 manifestVersion: 1
-id: big-bear-umbrel-healthchecks
+id: healthchecks
 category: BigBearCasaOS
 name: Healthchecks
 version: "3.11.20250828"

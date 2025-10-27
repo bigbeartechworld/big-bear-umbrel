@@ -1,5 +1,5 @@
 manifestVersion: 1
-id: big-bear-umbrel-immich-without-machine-learning
+id: immich-without-machine-learning
 category: BigBearCasaOS
 name: Immich without machine learning
 version: "2.1.0"

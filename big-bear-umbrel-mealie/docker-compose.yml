@@ -1,7 +1,6 @@
 # Configuration for mealie setup
 
 # Name of the big-bear-mealie application
-name: big-bear-mealie
 # Service definitions for the big-bear-mealie application
 services:
   # Service name: app

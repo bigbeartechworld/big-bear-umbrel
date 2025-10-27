@@ -1,5 +1,5 @@
 manifestVersion: 1
-id: big-bear-umbrel-pihole-updatelists
+id: pihole-updatelists
 category: BigBearCasaOS
 name: Pi-hole® Updatelists
 version: "2025.08.0"

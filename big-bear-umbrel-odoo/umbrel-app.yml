@@ -1,5 +1,5 @@
 manifestVersion: 1
-id: big-bear-umbrel-odoo
+id: odoo
 category: BigBearCasaOS
 name: Odoo
 version: "19"

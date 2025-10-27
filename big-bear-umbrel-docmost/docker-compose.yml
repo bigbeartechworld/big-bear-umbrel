@@ -1,7 +1,6 @@
 # Configuration for docmost setup
 
 # Name of the big-bear-docmost application
-name: big-bear-docmost
 # Service definitions for the big-bear-docmost application
 services:
   # Service name: big-bear-docmost

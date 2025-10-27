@@ -1,5 +1,5 @@
 manifestVersion: 1
-id: big-bear-umbrel-tianji
+id: tianji
 category: BigBearCasaOS
 name: Tianji
 version: "1.30.0"
@@ -13,7 +13,7 @@ website: https://github.com/bigbeartechworld/big-bear-casaos
 dependencies: []
 repo: https://github.com/bigbeartechworld/big-bear-casaos
 support: https://github.com/bigbeartechworld/big-bear-casaos/issues
-port: 12345
+port: 12346
 gallery:
   - 1.jpg
   - 2.jpg

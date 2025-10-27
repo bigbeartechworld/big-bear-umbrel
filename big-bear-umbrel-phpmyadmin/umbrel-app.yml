@@ -1,5 +1,5 @@
 manifestVersion: 1
-id: big-bear-umbrel-phpmyadmin
+id: phpmyadmin
 category: BigBearCasaOS
 name: phpMyAdmin
 version: "5.2.3"

@@ -1,7 +1,6 @@
 # Configuration for libredesk setup
 
 # Name of the big-bear-libredesk application
-name: big-bear-libredesk
 # Service definitions for the big-bear-libredesk application
 services:
   # Service name: big-bear-libredesk

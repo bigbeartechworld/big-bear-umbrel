@@ -1,5 +1,4 @@
 # big-bear-python-matter-server Configuration
-name: big-bear-python-matter-server
 # Defining the services for this configuration
 services:
   app:

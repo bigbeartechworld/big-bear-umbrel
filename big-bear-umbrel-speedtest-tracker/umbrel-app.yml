@@ -1,5 +1,5 @@
 manifestVersion: 1
-id: big-bear-umbrel-speedtest-tracker
+id: speedtest-tracker
 category: BigBearCasaOS
 name: Speedtest Tracker
 version: "1.6.8"

@@ -1,5 +1,4 @@
 # Configuration for big-bear-immich setup
-name: big-bear-immich
 # Service definitions for the big-bear-immich application
 services:
   # Main Immich Server service configuration

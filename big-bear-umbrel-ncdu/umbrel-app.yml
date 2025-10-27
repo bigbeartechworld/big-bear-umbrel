@@ -1,5 +1,5 @@
 manifestVersion: 1
-id: big-bear-umbrel-ncdu
+id: ncdu
 category: BigBearCasaOS
 name: Ncdu
 version: "0.0.4"

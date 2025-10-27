@@ -1,7 +1,6 @@
 # Configuration for big-bear-dashdot setup
 
 # Name of the big-bear-dashdot application
-name: big-bear-dashdot
 # Service definitions for the dashdot application
 services:
   # Service definition for the main application

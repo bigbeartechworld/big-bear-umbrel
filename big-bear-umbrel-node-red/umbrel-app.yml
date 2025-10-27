@@ -1,5 +1,5 @@
 manifestVersion: 1
-id: big-bear-umbrel-node-red
+id: node-red
 category: BigBearCasaOS
 name: Node-RED
 version: "4.1.1"

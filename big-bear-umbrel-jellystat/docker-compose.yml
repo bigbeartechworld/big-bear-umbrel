@@ -1,7 +1,6 @@
 # Configuration for jellystat setup
 
 # Name of the big-bear-jellystat application
-name: big-bear-jellystat
 # Service definitions for the big-bear-jellystat application
 services:
   # Service name: big-bear-jellystat

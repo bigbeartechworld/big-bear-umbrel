@@ -1,5 +1,4 @@
 # big-bear-pterodactyl-wings configuration
-name: big-bear-pterodactyl-wings
 # Services section that specifies how the different services should be run
 services:
   # This is the main app service for Pterodactyl Wings

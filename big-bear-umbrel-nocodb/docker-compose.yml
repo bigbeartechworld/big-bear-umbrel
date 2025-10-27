@@ -1,7 +1,6 @@
 # Configuration for nocodb setup
 
 # Name of the big-bear-nocodb application
-name: big-bear-nocodb
 # Service definitions for the big-bear-nocodb application
 services:
   # Service name: big-bear-nocodb

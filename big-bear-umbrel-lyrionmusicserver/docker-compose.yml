@@ -1,7 +1,6 @@
 # Configuration for lyrionmusicserver setup
 
 # Name of the big-bear-lyrionmusicserver application
-name: big-bear-lyrionmusicserver
 # Service definitions for the big-bear-lyrionmusicserver application
 services:
   # Service name: big-bear-lyrionmusicserver

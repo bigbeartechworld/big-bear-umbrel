@@ -1,5 +1,5 @@
 manifestVersion: 1
-id: big-bear-umbrel-zigbee2mqtt
+id: zigbee2mqtt
 category: BigBearCasaOS
 name: Zigbee to MQTT bridge
 version: "2.6.2"

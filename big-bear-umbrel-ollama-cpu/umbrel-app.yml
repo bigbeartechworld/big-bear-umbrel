@@ -1,5 +1,5 @@
 manifestVersion: 1
-id: big-bear-umbrel-ollama-cpu
+id: ollama-cpu
 category: BigBearCasaOS
 name: Ollama - CPU
 version: "0.12.6"

@@ -1,7 +1,6 @@
 # Configuration for uisp setup
 
 # Name of the big-bear-uisp application
-name: big-bear-uisp
 # Service definitions for the big-bear-uisp application
 services:
   # Service name: big-bear-uisp

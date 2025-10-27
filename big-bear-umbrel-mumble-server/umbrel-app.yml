@@ -1,5 +1,5 @@
 manifestVersion: 1
-id: big-bear-umbrel-mumble-server
+id: mumble-server
 category: BigBearCasaOS
 name: Mumble Server
 version: "v1.4.230-6"

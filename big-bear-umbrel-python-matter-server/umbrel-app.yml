@@ -1,5 +1,5 @@
 manifestVersion: 1
-id: big-bear-umbrel-python-matter-server
+id: python-matter-server
 category: BigBearCasaOS
 name: Python Matter Server
 version: "8.1.0"

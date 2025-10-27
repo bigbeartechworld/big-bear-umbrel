@@ -1,7 +1,6 @@
 # Configuration for onedev setup
 
 # Name of the big-bear-onedev application
-name: big-bear-onedev
 # Service definitions for the big-bear-onedev application
 services:
   # Service name: big-bear-onedev

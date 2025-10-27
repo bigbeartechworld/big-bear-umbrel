@@ -1,7 +1,6 @@
 # Configuration for changedetection setup
 
 # Name of the big-bear-changedetection application
-name: big-bear-changedetection
 # Service definitions for the big-bear-changedetection application
 services:
   # Service name: big-bear-changedetection

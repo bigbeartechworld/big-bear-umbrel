@@ -1,5 +1,5 @@
 manifestVersion: 1
-id: big-bear-umbrel-home-assistant
+id: home-assistant
 category: BigBearCasaOS
 name: Home Assistant
 version: "2025.10.4"

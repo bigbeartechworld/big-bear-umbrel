@@ -1,7 +1,6 @@
 # Configuration for linkwarden setup
 
 # Name of the big-bear-linkwarden application
-name: big-bear-linkwarden
 # Service definitions for the big-bear-linkwarden application
 services:
   # Service name: linkwarden

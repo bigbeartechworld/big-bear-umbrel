@@ -1,7 +1,6 @@
 # Configuration for plex setup
 
 # Name of the big-bear-plex application
-name: big-bear-plex
 # Service definitions for the big-bear-plex application
 services:
   # Service name: big-bear-plex

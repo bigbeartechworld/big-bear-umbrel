@@ -1,7 +1,6 @@
 # Configuration for komf setup
 
 # Name of the big-bear-komf application
-name: big-bear-komf
 # Service definitions for the big-bear-homarr application
 services:
   # Service name: big-bear-komf

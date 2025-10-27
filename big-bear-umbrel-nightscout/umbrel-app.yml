@@ -1,5 +1,5 @@
 manifestVersion: 1
-id: big-bear-umbrel-nightscout
+id: nightscout
 category: BigBearCasaOS
 name: nightscout
 version: "15.0.3"

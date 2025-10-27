@@ -1,7 +1,6 @@
 # Configuration for piwigo setup
 
 # Name of the big-bear-piwigo application
-name: big-bear-piwigo
 # Service definitions for the big-bear-piwigo application
 services:
   # Service name: big-bear-piwigo

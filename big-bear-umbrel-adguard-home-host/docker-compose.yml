@@ -1,7 +1,6 @@
 # Configuration for adguard home host setup
 
 # Application Name
-name: big-bear-adguard-home-host
 # Services used in the application
 services:
   # The `app` service for the adguard home host application

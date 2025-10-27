@@ -1,5 +1,5 @@
 manifestVersion: 1
-id: big-bear-umbrel-plex-nvidia
+id: plex-nvidia
 category: BigBearCasaOS
 name: Plex with NVIDIA GPU
 version: "1.42.2"

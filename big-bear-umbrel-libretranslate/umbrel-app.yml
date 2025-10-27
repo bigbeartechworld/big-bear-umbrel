@@ -1,5 +1,5 @@
 manifestVersion: 1
-id: big-bear-umbrel-libretranslate
+id: libretranslate
 category: BigBearCasaOS
 name: LibreTranslate
 version: "1.7.3"

@@ -1,5 +1,5 @@
 manifestVersion: 1
-id: big-bear-umbrel-code-server
+id: code-server
 category: BigBearCasaOS
 name: Code Server
 version: "4.105.1"

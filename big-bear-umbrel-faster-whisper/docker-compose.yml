@@ -1,7 +1,6 @@
 # Configuration for faster-whisper setup
 
 # Name of the big-bear-faster-whisper application
-name: big-bear-faster-whisper
 # Service definitions for the big-bear-faster-whisper application
 services:
   # Service name: big-bear-faster-whisper

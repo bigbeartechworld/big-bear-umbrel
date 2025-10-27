@@ -1,5 +1,5 @@
 manifestVersion: 1
-id: big-bear-umbrel-wordpress
+id: wordpress
 category: BigBearCasaOS
 name: WordPress
 version: "6.8.3"

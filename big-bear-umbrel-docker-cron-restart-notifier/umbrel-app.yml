@@ -1,5 +1,5 @@
 manifestVersion: 1
-id: big-bear-umbrel-docker-cron-restart-notifier
+id: docker-cron-restart-notifier
 category: BigBearCasaOS
 name: Docker Cron Restart Notifier
 version: "restart-notifier-latest"

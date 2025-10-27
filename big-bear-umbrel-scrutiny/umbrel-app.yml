@@ -1,5 +1,5 @@
 manifestVersion: 1
-id: big-bear-umbrel-scrutiny
+id: scrutiny
 category: BigBearCasaOS
 name: Scrutiny
 version: "master-omnibus"

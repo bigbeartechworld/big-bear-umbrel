@@ -1,5 +1,5 @@
 manifestVersion: 1
-id: big-bear-umbrel-open-webui
+id: open-webui
 category: BigBearCasaOS
 name: Open WebUI
 version: "git-33e54a9"

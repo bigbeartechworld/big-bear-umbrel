@@ -1,5 +1,5 @@
 manifestVersion: 1
-id: big-bear-umbrel-ls-adguardhome-sync
+id: ls-adguardhome-sync
 category: BigBearCasaOS
 name: LS Adguard Home Sync
 version: "0.8.1"

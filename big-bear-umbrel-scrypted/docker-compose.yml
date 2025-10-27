@@ -1,5 +1,4 @@
 # big-bear-scrypted configuration
-name: big-bear-scrypted
 # Services section that specifies how the different services should be run
 services:
   # This is the main app service for Scrypted

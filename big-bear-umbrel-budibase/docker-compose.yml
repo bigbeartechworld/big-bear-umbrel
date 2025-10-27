@@ -1,7 +1,6 @@
 # Configuration for budibase setup
 
 # Name of the big-bear-budibase application
-name: big-bear-budibase
 # Service definitions for the big-bear-budibase application
 services:
   # Service name: big-bear-budibase
@@ -10,7 +9,7 @@ services:
     # Name of the container
     container_name: big-bear-budibase
     # Image to be used for the container
-    image: budibase/budibase:3.22.2
+    image: budibase/budibase:3.22.3
     # Container restart policy
     restart: unless-stopped
     # Volumes to be mounted to the container

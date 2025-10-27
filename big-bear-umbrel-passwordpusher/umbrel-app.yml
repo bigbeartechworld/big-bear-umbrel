@@ -1,5 +1,5 @@
 manifestVersion: 1
-id: big-bear-umbrel-passwordpusher
+id: passwordpusher
 category: BigBearCasaOS
 name: Password Pusher
 version: "1.62.1"

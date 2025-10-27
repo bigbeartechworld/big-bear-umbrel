@@ -1,7 +1,6 @@
 # Configuration for tianji setup
 
 # Name of the big-bear-tianji application
-name: big-bear-tianji
 # Service definitions for the big-bear-tianji application
 services:
   # Service name: big-bear-tianji
@@ -48,7 +47,7 @@ services:
   app_proxy:
     environment:
       APP_HOST: big-bear-umbrel-tianji_big-bear-tianji_1
-      APP_PORT: "12345"
+      APP_PORT: "12346"
 networks:
   big_bear_tianji_network:
     driver: bridge

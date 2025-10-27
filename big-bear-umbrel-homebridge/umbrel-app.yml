@@ -1,5 +1,5 @@
 manifestVersion: 1
-id: big-bear-umbrel-homebridge
+id: homebridge
 category: BigBearCasaOS
 name: HomeBridge
 version: "2024-05-02"

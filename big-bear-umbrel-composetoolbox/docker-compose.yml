@@ -1,7 +1,6 @@
 # Configuration for ComposeToolbox setup
 
 # Name of the big-bear-composetoolbox application
-name: big-bear-composetoolbox
 # Service definitions for the big-bear-composetoolbox application
 services:
   # Service name: big-bear-composetoolbox

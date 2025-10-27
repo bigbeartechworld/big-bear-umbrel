@@ -1,5 +1,5 @@
 manifestVersion: 1
-id: big-bear-umbrel-plex
+id: plex
 category: BigBearCasaOS
 name: Plex
 version: "1.42.2"

@@ -1,7 +1,6 @@
 # Configuration for anse setup
 
 # Name of the big-bear-anse application
-name: big-bear-anse
 # Service definitions for the big-bear-anse application
 services:
   # Service name: big-bear-anse

@@ -1,5 +1,5 @@
 manifestVersion: 1
-id: big-bear-umbrel-lyrionmusicserver
+id: lyrionmusicserver
 category: BigBearCasaOS
 name: LyriOn Music Server
 version: "9.1.0"

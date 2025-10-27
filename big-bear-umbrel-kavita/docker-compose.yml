@@ -1,7 +1,6 @@
 # Configuration for kavita setup
 
 # Name of the big-bear-kavita application
-name: big-bear-kavita
 # Service definitions for the big-bear-kavita application
 services:
   # Service name: big-bear-kavita

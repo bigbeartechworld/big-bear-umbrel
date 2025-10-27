@@ -1,5 +1,5 @@
 manifestVersion: 1
-id: big-bear-umbrel-dbgate
+id: dbgate
 category: BigBearCasaOS
 name: DBGate
 version: "6.6.5-alpine"

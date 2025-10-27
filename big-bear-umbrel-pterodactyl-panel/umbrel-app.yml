@@ -1,5 +1,5 @@
 manifestVersion: 1
-id: big-bear-umbrel-pterodactyl-panel
+id: pterodactyl-panel
 category: BigBearCasaOS
 name: Pterodactyl Panel
 version: "1.11.11"

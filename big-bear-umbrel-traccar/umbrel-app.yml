@@ -1,5 +1,5 @@
 manifestVersion: 1
-id: big-bear-umbrel-traccar
+id: traccar
 category: BigBearCasaOS
 name: Traccar
 version: "6.10-ubuntu"

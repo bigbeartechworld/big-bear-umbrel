@@ -1,7 +1,6 @@
 # Configuration for audiobookshelf setup
 
 # Name of the big-bear-audiobookshelf application
-name: big-bear-audiobookshelf
 # Service definitions for the big-bear-audiobookshelf application
 services:
   # Service name: big-bear-audiobookshelf

@@ -1,7 +1,6 @@
 # Configuration for filebrowser setup
 
 # Name of the big-bear-filebrowser application
-name: big-bear-filebrowser
 # Service definitions for the big-bear-filebrowser application
 services:
   # Service name: big-bear-filebrowser

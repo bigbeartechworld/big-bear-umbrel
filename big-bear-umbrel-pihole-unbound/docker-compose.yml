@@ -1,7 +1,6 @@
 # Configuration for pihole-unbound setup
 
 # Name of the big-bear-pihole-unbound application
-name: big-bear-pihole-unbound
 # Service definitions for the big-bear-pihole-unbound application
 services:
   # Service name: app

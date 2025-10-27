@@ -1,5 +1,5 @@
 manifestVersion: 1
-id: big-bear-umbrel-nextcloud-with-smbclient
+id: nextcloud-with-smbclient
 category: BigBearCasaOS
 name: Nextcloud with SMB (Legacy)
 version: "0.0.11"

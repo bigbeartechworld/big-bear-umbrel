@@ -1,7 +1,6 @@
 # Configuration for kopia setup
 
 # Name of the big-bear-kopia application
-name: big-bear-kopia
 # Service definitions for the big-bear-kopia application
 services:
   # Service name: big-bear-kopia

@@ -1,7 +1,6 @@
 # Configuration for unifi-network-application-mongo-4 setup
 
 # Name of the big-bear-unifi-network-application-mongo-4 application
-name: big-bear-unifi-network-application-mongo-4
 # Service definitions for the big-bear-unifi-network-application-mongo-4 application
 services:
   # MongoDB database for the application

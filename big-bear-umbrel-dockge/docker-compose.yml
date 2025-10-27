@@ -1,7 +1,6 @@
 # Configuration for dockge setup
 
 # Name of the big-bear-dockge application
-name: big-bear-dockge
 # Service definitions for the big-bear-dockge application
 services:
   # Service name: app

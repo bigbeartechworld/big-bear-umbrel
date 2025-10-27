@@ -1,5 +1,5 @@
 manifestVersion: 1
-id: big-bear-umbrel-umami
+id: umami
 category: BigBearCasaOS
 name: Umami
 version: "postgresql-latest"

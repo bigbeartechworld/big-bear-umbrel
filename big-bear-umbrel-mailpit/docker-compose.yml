@@ -1,5 +1,4 @@
 # Configuration for big-bear-mailpit setup
-name: big-bear-mailpit
 # Service definitions for the big-bear-mailpit application
 services:
   # Service name: app

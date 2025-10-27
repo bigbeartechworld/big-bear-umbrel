@@ -1,5 +1,5 @@
 manifestVersion: 1
-id: big-bear-umbrel-authentik
+id: authentik
 category: BigBearCasaOS
 name: Authentik
 version: "2025.8.4"

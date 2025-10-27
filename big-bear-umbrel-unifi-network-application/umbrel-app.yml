@@ -1,5 +1,5 @@
 manifestVersion: 1
-id: big-bear-umbrel-unifi-network-application
+id: unifi-network-application
 category: BigBearCasaOS
 name: Unifi Network Application
 version: "6.0.11"

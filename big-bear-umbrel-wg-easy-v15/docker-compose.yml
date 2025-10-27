@@ -1,7 +1,6 @@
 # Configuration for wg-easy v15 setup
 
 # Name of the big-bear-wg-easy-v15 application
-name: big-bear-wg-easy-v15
 # Service definitions for the big-bear-wg-easy-v15 application
 services:
   # Service name: big-bear-wg-easy-v15

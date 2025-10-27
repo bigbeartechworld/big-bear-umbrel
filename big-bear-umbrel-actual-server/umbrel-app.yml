@@ -1,5 +1,5 @@
 manifestVersion: 1
-id: big-bear-umbrel-actual-server
+id: actual-server
 category: BigBearCasaOS
 name: Actual Budget
 version: "25.10.0"

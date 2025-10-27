@@ -1,5 +1,5 @@
 manifestVersion: 1
-id: big-bear-umbrel-gluetun
+id: gluetun
 category: BigBearCasaOS
 name: Gluetun
 version: "3.40.0"

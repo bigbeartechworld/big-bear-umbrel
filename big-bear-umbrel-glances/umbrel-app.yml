@@ -1,5 +1,5 @@
 manifestVersion: 1
-id: big-bear-umbrel-glances
+id: glances
 category: BigBearCasaOS
 name: Glances
 version: "4.3.0.8-full"

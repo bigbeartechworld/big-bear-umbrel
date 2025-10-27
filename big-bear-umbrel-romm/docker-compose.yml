@@ -1,7 +1,6 @@
 # Configuration for romm setup
 
 # Name of the big-bear-romm application
-name: big-bear-romm
 # Service definitions for the big-bear-romm application
 services:
   # Service name: big-bear-romm

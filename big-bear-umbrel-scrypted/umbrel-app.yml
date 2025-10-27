@@ -1,5 +1,5 @@
 manifestVersion: 1
-id: big-bear-umbrel-scrypted
+id: scrypted
 category: BigBearCasaOS
 name: Scrypted
 version: "0.123.58-jammy-full"

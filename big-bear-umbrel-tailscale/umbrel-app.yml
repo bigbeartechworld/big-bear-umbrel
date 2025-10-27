@@ -1,5 +1,5 @@
 manifestVersion: 1
-id: big-bear-umbrel-tailscale
+id: tailscale
 category: BigBearCasaOS
 name: Tailscale
 version: "1.88.4"

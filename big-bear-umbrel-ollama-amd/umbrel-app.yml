@@ -1,5 +1,5 @@
 manifestVersion: 1
-id: big-bear-umbrel-ollama-amd
+id: ollama-amd
 category: BigBearCasaOS
 name: Ollama - AMD
 version: "0.12.6-rocm"

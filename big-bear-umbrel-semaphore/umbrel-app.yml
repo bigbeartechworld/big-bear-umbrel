@@ -1,5 +1,5 @@
 manifestVersion: 1
-id: big-bear-umbrel-semaphore
+id: semaphore
 category: BigBearCasaOS
 name: Ansible Semaphore
 version: "2.16.34"

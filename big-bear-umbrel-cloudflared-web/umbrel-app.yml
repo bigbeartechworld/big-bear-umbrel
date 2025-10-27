@@ -1,5 +1,5 @@
 manifestVersion: 1
-id: big-bear-umbrel-cloudflared-web
+id: cloudflared-web
 category: BigBearCasaOS
 name: Cloudflared Web
 version: "2025.10.0"

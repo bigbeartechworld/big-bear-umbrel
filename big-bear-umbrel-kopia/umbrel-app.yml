@@ -1,5 +1,5 @@
 manifestVersion: 1
-id: big-bear-umbrel-kopia
+id: kopia
 category: BigBearCasaOS
 name: Kopia
 version: "v0.17.0-spad3"

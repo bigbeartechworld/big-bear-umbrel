@@ -1,5 +1,4 @@
 # Configuration for big-bear-gluetun setup
-name: big-bear-gluetun
 # Service definitions for the big-bear-gluetun application
 services:
   # Main Portainer Agent Server service configuration

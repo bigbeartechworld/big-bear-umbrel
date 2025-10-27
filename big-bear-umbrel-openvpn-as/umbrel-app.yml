@@ -1,5 +1,5 @@
 manifestVersion: 1
-id: big-bear-umbrel-openvpn-as
+id: openvpn-as
 category: BigBearCasaOS
 name: OpenVPN
 version: "2.13.1-d8cdeb9c-Ubuntu22"

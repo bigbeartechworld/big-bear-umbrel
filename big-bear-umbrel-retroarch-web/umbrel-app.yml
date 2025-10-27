@@ -1,5 +1,5 @@
 manifestVersion: 1
-id: big-bear-umbrel-retroarch-web
+id: retroarch-web
 category: BigBearCasaOS
 name: RetroArch
 version: "latest"

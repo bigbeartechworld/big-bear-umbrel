@@ -1,5 +1,5 @@
 manifestVersion: 1
-id: big-bear-umbrel-audiobookshelf
+id: audiobookshelf
 category: BigBearCasaOS
 name: Audiobookshelf
 version: "2.30.0"

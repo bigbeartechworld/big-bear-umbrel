@@ -1,5 +1,5 @@
 manifestVersion: 1
-id: big-bear-umbrel-tp-link-omada-controller
+id: tp-link-omada-controller
 category: BigBearCasaOS
 name: TP-Link Omada Controller
 version: "5.15"

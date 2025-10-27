@@ -1,7 +1,6 @@
 # Configuration for calcom setup
 
 # Name of the big-bear-calcom application
-name: big-bear-calcom
 # Service definitions for the big-bear-calcom application
 services:
   # Service name: big-bear-calcom

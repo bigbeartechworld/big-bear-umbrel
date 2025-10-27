@@ -1,5 +1,5 @@
 manifestVersion: 1
-id: big-bear-umbrel-immich
+id: immich
 category: BigBearCasaOS
 name: Immich
 version: "2.1.0"

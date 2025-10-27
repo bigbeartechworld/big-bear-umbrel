@@ -1,5 +1,5 @@
 manifestVersion: 1
-id: big-bear-umbrel-immich-kiosk
+id: immich-kiosk
 category: BigBearCasaOS
 name: Immich Kiosk
 version: "0.26.1"

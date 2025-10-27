@@ -1,5 +1,5 @@
 manifestVersion: 1
-id: big-bear-umbrel-octoprint
+id: octoprint
 category: BigBearCasaOS
 name: OctoPrint
 version: "1.11.3"

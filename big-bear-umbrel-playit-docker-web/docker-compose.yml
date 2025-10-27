@@ -1,7 +1,6 @@
 # Configuration for playit-docker-web setup
 
 # Name of the big-bear-playit-docker-web application
-name: big-bear-playit-docker-web
 # Service definitions for the big-bear-playit-docker-web application
 services:
   # Service name: big-bear-playit-docker-web

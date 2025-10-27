@@ -1,7 +1,6 @@
 # Configuration for plant-it setup
 
 # Name of the big-bear-plant-it application
-name: big-bear-plant-it
 # Service definitions for the big-bear-plant-it application
 services:
   # Service name: big-bear-plant-it

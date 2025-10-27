@@ -1,5 +1,5 @@
 manifestVersion: 1
-id: big-bear-umbrel-adguard-home-host
+id: adguard-home-host
 category: BigBearCasaOS
 name: AdGuard Home (HOST)
 version: "0.107.68"

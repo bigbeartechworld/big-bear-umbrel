@@ -1,4 +1,3 @@
-name: big-bear-jellyseerr # Name of the compose project
 services:
   app:
     image: fallenbagel/jellyseerr:2.7.3 # Image to use for the jellyseerr service

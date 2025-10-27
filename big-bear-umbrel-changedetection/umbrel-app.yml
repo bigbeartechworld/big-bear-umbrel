@@ -1,5 +1,5 @@
 manifestVersion: 1
-id: big-bear-umbrel-changedetection
+id: changedetection
 category: BigBearCasaOS
 name: Change Detection
 version: "0.50.32"

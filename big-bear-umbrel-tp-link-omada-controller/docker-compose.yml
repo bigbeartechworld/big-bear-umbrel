@@ -1,6 +1,5 @@
 # Docker-compose configuration for Omada Controller.
 
-name: big-bear-omada-controller # Name of the configuration.
 # Define the services that run in the Docker environment.
 services:
   # The name of the service being configured.

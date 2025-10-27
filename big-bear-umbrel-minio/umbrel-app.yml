@@ -1,5 +1,5 @@
 manifestVersion: 1
-id: big-bear-umbrel-minio
+id: minio
 category: BigBearCasaOS
 name: Minio
 version: "RELEASE.2025-10-15T17-29-55Z"

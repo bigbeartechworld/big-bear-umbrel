@@ -3,7 +3,6 @@
 # Version: 0.15
 
 # Name of the big-bear-write-freely application
-name: big-bear-write-freely
 # Service definitions for the big-bear-write-freely application
 services:
   # Main service configuration for the Write Freely application
