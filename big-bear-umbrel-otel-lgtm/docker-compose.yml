@@ -1,7 +1,6 @@
 # Configuration for big-bear-otel-lgtm setup
 
 # Name of the big-bear-otel-lgtm application
-name: big-bear-otel-lgtm
 # Service definitions for big-bear-otel-lgtm application
 services:
   # Service name: big-bear-otel-lgtm

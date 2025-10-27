@@ -1,7 +1,6 @@
 # Configuration for invoice-ninja setup
 
 # Name of the big-bear-invoice-ninja application
-name: big-bear-invoice-ninja
 # Service definitions for the big-bear-invoice-ninja application
 services:
   big-bear-invoice-ninja:

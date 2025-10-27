@@ -1,7 +1,6 @@
 # Configuration for kasm setup
 
 # Name of the big-bear-kasm application
-name: big-bear-kasm
 # Service definitions for the big-bear-kasm application
 services:
   # Service name: app

@@ -1,7 +1,6 @@
 # Configuration for note-mark-aio setup
 
 # Name of the big-bear-note-mark-aio application
-name: big-bear-note-mark-aio
 # Service definitions for the big-bear-homarr application
 services:
   # Service name: big-bear-note-mark-aio

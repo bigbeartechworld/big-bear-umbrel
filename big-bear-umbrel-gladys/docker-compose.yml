@@ -1,7 +1,6 @@
 # Configuration for gladys setup
 
 # Name of the big-bear-gladys application
-name: big-bear-gladys
 # Service definitions for the big-bear-gladys application
 services:
   # Service name: app

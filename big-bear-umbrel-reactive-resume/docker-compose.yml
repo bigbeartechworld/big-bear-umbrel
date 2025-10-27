@@ -1,7 +1,6 @@
 # Configuration for reactive resume setup
 
 # Name of the big-bear-reactive-resume application
-name: big-bear-reactive-resume
 # Service definitions for the big-bear-reactive-resume application
 services:
   # Main application

@@ -1,7 +1,6 @@
 # Configuration for ollama-nvidia setup
 
 # Name of the big-bear-ollama-nvidia application
-name: big-bear-ollama-nvidia
 # Service definitions for the big-bear-ollama-nvidia application
 services:
   # Service name: big-bear-ollama-nvidia

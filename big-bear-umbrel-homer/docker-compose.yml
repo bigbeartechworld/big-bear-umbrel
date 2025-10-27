@@ -1,7 +1,6 @@
 # Configuration for homer setup
 
 # Name of the big-bear-homer application
-name: big-bear-homer
 # Service definitions for the big-bear-homer application
 services:
   # Service name: app

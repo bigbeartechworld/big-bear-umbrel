@@ -1,7 +1,6 @@
 # Configuration for penpot setup
 
 # Name of the big-bear-penpot application
-name: big-bear-penpot
 # Service definitions for the big-bear-penpot application
 services:
   # Service name: app

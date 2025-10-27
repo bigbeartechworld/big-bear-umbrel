@@ -1,7 +1,6 @@
 # Configuration for OpenVPN-AS setup
 
 # Name of the OpenVPN-AS application
-name: big-bear-openvpn-as
 # Service definitions for the OpenVPN application
 services:
   # Service name: app

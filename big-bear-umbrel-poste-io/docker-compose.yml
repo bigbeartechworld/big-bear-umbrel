@@ -3,7 +3,6 @@
 # Initial Version: v2.4.11
 
 # Name of the big-bear-poste-io application
-name: big-bear-poste-io
 # Service definitions for the big-bear-poste-io application
 services:
   # Main service configuration for the Poste.io application

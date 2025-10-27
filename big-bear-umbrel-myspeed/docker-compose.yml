@@ -1,7 +1,6 @@
 # Configuration for myspeed setup
 
 # Name of the big-bear-myspeed application
-name: big-bear-myspeed
 # Service definitions for the big-bear-myspeed application
 services:
   # Service name: app

@@ -1,7 +1,6 @@
 # Configuration for project-management setup
 
 # Name of the big-bear-project-management application
-name: big-bear-project-management
 # Service definitions for the big-bear-project-management application
 services:
   # The `big-bear-project-management` service definition

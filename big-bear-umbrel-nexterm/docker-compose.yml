@@ -1,7 +1,6 @@
 # Configuration for nexterm setup
 
 # Name of the big-bear-nexterm application
-name: big-bear-nexterm
 # Service definitions for the big-bear-nexterm application
 services:
   # Service name: big-bear-nexterm

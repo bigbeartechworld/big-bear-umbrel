@@ -1,7 +1,6 @@
 # Configuration for authentik setup
 
 # Name of the big-bear-authentik application
-name: big-bear-authentik
 # Service definitions for the big-bear-authentik application
 services:
   # Service name: authentik

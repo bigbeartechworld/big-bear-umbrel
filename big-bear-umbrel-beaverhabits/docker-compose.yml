@@ -3,7 +3,6 @@
 # Version: 0.5.2
 
 # Name of the big-bear-beaverhabits application
-name: big-bear-beaverhabits
 # Service definitions for the big-bear-beaverhabits application
 services:
   # Main service configuration for the BeaverHabits application

@@ -1,7 +1,6 @@
 # Configuration for adguard-home-sync setup
 
 # Name of the big-bear-adguard-home-sync application
-name: big-bear-ls-adguard-home-sync
 # Service definitions for the big-bear-adguard-home-sync application
 services:
   # Service name: big-bear-ls-adguard-home-sync

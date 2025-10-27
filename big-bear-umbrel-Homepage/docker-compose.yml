@@ -1,7 +1,6 @@
 # Configuration for homepage setup
 
 # Name of the big-bear-homepage application
-name: big-bear-homepage
 # Service definitions for the big-bear-homepage application
 services:
   # Service name: app

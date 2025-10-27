@@ -1,7 +1,6 @@
 # Configuration for focalboard setup
 
 # Application Name
-name: big-bear-focalboard
 # Services used in the application
 services:
   # The `app` service for the Focalboard application

@@ -1,5 +1,4 @@
 # Name of the configuration: big-bear-guacamole
-name: big-bear-guacamole
 # Define the services required for the application
 services:
   # guacd service configuration

@@ -1,5 +1,4 @@
 # Name of the configuration: big-bear-flcontainers-guacamole
-name: big-bear-flcontainers-guacamole
 # Define the services required for the application
 services:
   # app service configuration

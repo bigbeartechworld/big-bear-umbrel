@@ -1,7 +1,6 @@
 # Configuration for ayon setup
 
 # Name of the big-bear-ayon application
-name: big-bear-ayon
 # Service definitions for the big-bear-ayon application
 services:
   # Service name: big-bear-ayon

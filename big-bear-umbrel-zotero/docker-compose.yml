@@ -1,7 +1,6 @@
 # Configuration for zotero setup
 
 # Name of the big-bear-zotero application
-name: big-bear-zotero
 # Service definitions for the big-bear-zotero application
 services:
   # Service name: big-bear-zotero

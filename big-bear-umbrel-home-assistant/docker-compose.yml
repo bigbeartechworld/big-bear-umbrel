@@ -1,7 +1,6 @@
 # Configuration for home-assistant setup
 
 # Name of the big-bear-home-assistant application
-name: big-bear-home-assistant
 # Service definitions for the big-bear-home-assistant application
 services:
   # Service name: app

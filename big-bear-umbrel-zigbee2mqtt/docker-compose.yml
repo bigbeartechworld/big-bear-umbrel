@@ -1,7 +1,6 @@
 # Configuration for zigbee2mqtt setup
 
 # Name of the big-bear-zigbee2mqtt application
-name: big-bear-zigbee2mqtt
 # Service definitions for the big-bear-zigbee2mqtt application
 services:
   # Service name: big-bear-zigbee2mqtt

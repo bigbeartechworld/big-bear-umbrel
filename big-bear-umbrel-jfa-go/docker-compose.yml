@@ -3,7 +3,6 @@
 # Initial Version: latest
 
 # Name of the big-bear-jfa-go application
-name: big-bear-jfa-go
 # Service definitions for the big-bear-jfa-go application
 services:
   # Main service configuration for the JFA-GO application

@@ -1,7 +1,6 @@
 # Configuration for 2fauth setup
 
 # Application Name
-name: big-bear-2fauth
 # Services used in the application
 services:
   # The `app` service for the 2fauth application

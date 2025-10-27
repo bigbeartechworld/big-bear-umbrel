@@ -1,7 +1,6 @@
 # Configuration for wg-easy setup
 
 # Name of the big-bear-wg-easy application
-name: big-bear-wg-easy
 # Service definitions for the big-bear-wg-easy application
 services:
   # Service name: big-bear-wg-easy

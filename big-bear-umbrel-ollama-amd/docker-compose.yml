@@ -1,7 +1,6 @@
 # Configuration for ollama-amd setup
 
 # Name of the big-bear-ollama-amd application
-name: big-bear-ollama-amd
 # Service definitions for the big-bear-ollama-amd application
 services:
   # Service name: big-bear-ollama-amd

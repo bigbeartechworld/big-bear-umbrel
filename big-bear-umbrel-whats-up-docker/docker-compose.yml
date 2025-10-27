@@ -1,7 +1,6 @@
 # Configuration for big-bear-wud setup
 
 # Name of the big-bear-wud application
-name: big-bear-wud
 # Service definitions for the big-bear-wud application
 services:
   # Service definition for the main application

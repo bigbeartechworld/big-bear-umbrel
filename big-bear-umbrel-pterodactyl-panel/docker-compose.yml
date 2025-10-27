@@ -1,5 +1,4 @@
 # big-bear-pterodactyl-panel configuration
-name: big-bear-pterodactyl-panel
 # Services section that specifies how the different services should be run
 services:
   # This is the main app service for Pterodactyl Panel

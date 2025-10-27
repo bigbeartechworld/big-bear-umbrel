@@ -4,7 +4,6 @@
 # Description: Gitea Mirror is a modern web app for automatically mirroring repositories from GitHub to your self-hosted Gitea instance. It can mirror personal repositories, starred repositories, and organization repositories.
 
 # Name of the big-bear-gitea-mirror application
-name: big-bear-gitea-mirror
 # Service definitions for the big-bear-gitea-mirror application
 services:
   # Service name: big-bear-gitea-mirror

@@ -1,7 +1,6 @@
 # Configuration for dozzle setup
 
 # Name of the big-bear-dozzle application
-name: big-bear-dozzle
 # Service definitions for the big-bear-dozzle application
 services:
   # Service name: app

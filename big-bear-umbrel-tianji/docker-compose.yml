@@ -1,7 +1,6 @@
 # Configuration for tianji setup
 
 # Name of the big-bear-tianji application
-name: big-bear-tianji
 # Service definitions for the big-bear-tianji application
 services:
   # Service name: big-bear-tianji
@@ -10,7 +9,7 @@ services:
     # Name of the container
     container_name: big-bear-tianji
     # Image to be used for the container
-    image: moonrailgun/tianji:1.30.0
+    image: moonrailgun/tianji:1.30.1
     # Container restart policy
     restart: unless-stopped
     # Environment variables for the container
@@ -48,7 +47,7 @@ services:
   app_proxy:
     environment:
       APP_HOST: big-bear-umbrel-tianji_big-bear-tianji_1
-      APP_PORT: "12345"
+      APP_PORT: "12346"
 networks:
   big_bear_tianji_network:
     driver: bridge

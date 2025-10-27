@@ -1,7 +1,6 @@
 # Configuration for ncdu setup
 
 # Name of the big-bear-ncdu application
-name: big-bear-ncdu
 # Service definitions for the big-bear-ncdu application
 services:
   # Service name: big-bear-ncdu

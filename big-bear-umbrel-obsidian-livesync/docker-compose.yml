@@ -1,7 +1,6 @@
 # Configuration for obsidian-livesync setup
 
 # Name of the big-bear-obsidian-livesync application
-name: big-bear-obsidian-livesync
 # Service definitions for the big-bear-obsidian-livesync application
 services:
   # Service name: app

@@ -1,7 +1,6 @@
 # Configuration for beszel setup
 
 # Name of the big-bear-beszel application
-name: big-bear-beszel
 # Service definitions for the big-bear-beszel application
 services:
   # Service name: big-bear-beszel

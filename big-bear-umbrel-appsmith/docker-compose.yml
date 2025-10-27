@@ -1,7 +1,6 @@
 # Configuration for appsmith setup
 
 # Name of the big-bear-appsmith application
-name: big-bear-appsmith
 # Service definitions for the big-bear-appsmith application
 services:
   # Service name: app

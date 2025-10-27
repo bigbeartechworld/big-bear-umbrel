@@ -1,7 +1,6 @@
 # Configuration for big-bear-umbrel setup
 
 # Name of the big-bear-umbrel application
-name: big-bear-umbrel
 # Service definitions for the big-bear-umbrel application
 services:
   # Service name: big-bear-umbrel

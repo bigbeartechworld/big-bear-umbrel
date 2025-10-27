@@ -1,5 +1,4 @@
 # Configuration for big-bear-minio setup
-name: big-bear-minio
 # Service definitions for the big-bear-minio application
 services:
   # Service name: app

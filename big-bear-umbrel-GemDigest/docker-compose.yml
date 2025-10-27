@@ -1,7 +1,6 @@
 # Configuration for GemDigest bot setup
 
 # Name of the gem-digest-bot application
-name: big-bear-gem-digest-bot
 # Service definitions for the gem-digest-bot application
 services:
   # Service name: big-bear-gem-digest-bot

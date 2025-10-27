@@ -1,7 +1,6 @@
 # Configuration for ihatemoney setup
 
 # Name of the big-bear-ihatemoney application
-name: big-bear-ihatemoney
 # Service definitions for the big-bear-ihatemoney application
 services:
   # Service name: big-bear-ihatemoney

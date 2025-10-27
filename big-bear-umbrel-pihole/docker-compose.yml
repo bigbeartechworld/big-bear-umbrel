@@ -1,7 +1,6 @@
 # Configuration for pihole setup
 
 # Name of the big-bear-pihole application
-name: big-bear-pihole
 # Service definitions for the big-bear-pihole application
 services:
   # Service name: app

@@ -1,5 +1,4 @@
 # Configuration for big-bear-onlyoffice setup
-name: big-bear-onlyoffice
 # Service definitions for the big-bear-onlyoffice application
 services:
   app:

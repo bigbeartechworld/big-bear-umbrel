@@ -1,7 +1,6 @@
 # Configuration for docker-cron-restart-notifier setup
 
 # Name of the big-bear-docker-cron-restart-notifier application
-name: big-bear-docker-cron-restart-notifier
 # Service definitions for the big-bear-docker-cron-restart-notifier application
 services:
   # Service name: app

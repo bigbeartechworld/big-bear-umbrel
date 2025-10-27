@@ -1,5 +1,4 @@
 # Configuration for big-bear-n8n setup
-name: big-bear-n8n
 # Service definitions for the big-bear-n8n application
 services:
   # Service configuration for the n8n application

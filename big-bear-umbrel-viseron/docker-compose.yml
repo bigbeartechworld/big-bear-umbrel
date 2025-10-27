@@ -1,7 +1,6 @@
 # Configuration for viseron setup
 
 # Name of the big-bear-viseron application
-name: big-bear-viseron
 # Service definitions for the big-bear-viseron application
 services:
   # Service name: big-bear-viseron

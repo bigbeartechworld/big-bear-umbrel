@@ -1,7 +1,6 @@
 # Configuration for farmos setup
 
 # Name of the big-bear-farmos application
-name: big-bear-farmos
 # Service definitions for the big-bear-farmos application
 services:
   # Service name: big-bear-farmos

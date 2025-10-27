@@ -2,7 +2,6 @@
 # This service provides a web interface for a Local hosted web based PDF editor
 
 # Name of the big-bear-stirling-pdf application
-name: big-bear-stirling-pdf
 # Service definitions for the big-bear-stirling-pdf application
 services:
   # Main service configuration for the CasaOS User Management application

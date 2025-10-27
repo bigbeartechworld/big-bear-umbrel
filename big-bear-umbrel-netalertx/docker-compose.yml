@@ -1,7 +1,6 @@
 # Configuration for netalertx setup
 
 # Name of the big-bear-netalertx application
-name: big-bear-netalertx
 # Service definitions for the big-bear-netalertx application
 services:
   # Service name: big-bear-netalertx

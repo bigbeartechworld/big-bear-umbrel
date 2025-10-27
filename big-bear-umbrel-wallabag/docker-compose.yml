@@ -3,7 +3,6 @@
 # Version: 2.6.12
 
 # Name of the wallabag application
-name: big-bear-wallabag
 services:
   # Main Wallabag service configuration
   big-bear-wallabag:

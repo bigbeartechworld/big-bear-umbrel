@@ -1,7 +1,6 @@
 # Configuration for chatpad setup
 
 # Name of the big-bear-chatpad application
-name: big-bear-chatpad
 # Service definitions for the big-bear-chatpad application
 services:
   # Service name: chatpad

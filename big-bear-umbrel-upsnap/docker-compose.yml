@@ -1,7 +1,6 @@
 # Configuration for upsnap setup
 
 # Name of the big-bear-upsnap application
-name: big-bear-upsnap
 # Service definitions for the big-bear-upsnap application
 services:
   # Service name: big-bear-upsnap

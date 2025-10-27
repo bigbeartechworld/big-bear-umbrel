@@ -1,7 +1,6 @@
 # Configuration for sftpgo setup
 
 # Name of the big-bear-sftpgo application
-name: big-bear-sftpgo
 # Service definitions for the big-bear-sftpgo application
 services:
   # Service name: app

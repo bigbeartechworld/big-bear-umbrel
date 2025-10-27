@@ -1,7 +1,6 @@
 # Configuration for cyberchef setup
 
 # Name of the big-bear-cyberchef application
-name: big-bear-cyberchef
 # Service definitions for the big-bear-cyberchef application
 services:
   # Service name: big-bear-cyberchef

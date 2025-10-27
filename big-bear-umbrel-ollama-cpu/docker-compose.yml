@@ -1,7 +1,6 @@
 # Configuration for ollama-cpu setup
 
 # Name of the big-bear-ollama-cpu application
-name: big-bear-ollama-cpu
 # Service definitions for the big-bear-ollama-cpu application
 services:
   # Service name: big-bear-ollama-cpu

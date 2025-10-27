@@ -1,7 +1,6 @@
 # Configuration for it-tools setup
 
 # Name of the big-bear-it-tools application
-name: big-bear-it-tools
 # Service definitions for the big-bear-it-tools application
 services:
   # Service name: app

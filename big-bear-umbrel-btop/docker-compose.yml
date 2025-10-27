@@ -1,7 +1,6 @@
 # Configuration for btop setup
 
 # Name of the big-bear-btop application
-name: big-bear-btop
 # Service definitions for the big-bear-btop application
 services:
   # Service name: big-bear-btop

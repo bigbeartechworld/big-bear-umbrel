@@ -2,7 +2,6 @@
 # Intial version: v3.4.25
 
 # Name of the big-bear-send-visee application
-name: big-bear-send-visee
 # Service definitions for the big-bear-send application
 services:
   # Service name: big-bear-send-visee
