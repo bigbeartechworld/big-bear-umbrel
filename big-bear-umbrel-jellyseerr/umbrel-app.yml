@@ -13,7 +13,7 @@ website: https://github.com/bigbeartechworld/big-bear-casaos
 dependencies: []
 repo: https://github.com/bigbeartechworld/big-bear-casaos
 support: https://github.com/bigbeartechworld/big-bear-casaos/issues
-port: 5055
+port: 10076
 gallery:
   - 1.jpg
   - 2.jpg
