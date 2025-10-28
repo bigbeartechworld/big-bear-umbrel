@@ -31,7 +31,7 @@ If you have a suggestion for an app, please post in the [BigBearCommunity](https
 | [bookstack](https://github.com/bigbeartechworld/big-bear-casaos) | 25.07.20250804 | Dan Brown | [Repository](https://github.com/bigbeartechworld/big-bear-casaos) |
 | [Brave](https://github.com/bigbeartechworld/big-bear-casaos) | 1.15.0-rolling | kasmweb | [Repository](https://github.com/bigbeartechworld/big-bear-casaos) |
 | [btop](https://github.com/bigbeartechworld/big-bear-casaos) | 0.1.5 | bigbeartechworld | [Repository](https://github.com/bigbeartechworld/big-bear-casaos) |
-| [Budibase](https://github.com/bigbeartechworld/big-bear-casaos) | 3.22.2 | Budibase | [Repository](https://github.com/bigbeartechworld/big-bear-casaos) |
+| [Budibase](https://github.com/bigbeartechworld/big-bear-casaos) | 3.22.3 | Budibase | [Repository](https://github.com/bigbeartechworld/big-bear-casaos) |
 | [cAdvisor](https://github.com/bigbeartechworld/big-bear-casaos) | 0.52.1 | BigBearTechWorld | [Repository](https://github.com/bigbeartechworld/big-bear-casaos) |
 | [Cal.com](https://github.com/bigbeartechworld/big-bear-casaos) | 5.8.2 | calcom | [Repository](https://github.com/bigbeartechworld/big-bear-casaos) |
 | [Change Detection](https://github.com/bigbeartechworld/big-bear-casaos) | 0.50.32 | dgtlmoon | [Repository](https://github.com/bigbeartechworld/big-bear-casaos) |
@@ -72,7 +72,7 @@ If you have a suggestion for an app, please post in the [BigBearCommunity](https
 | [Focalboard](https://github.com/bigbeartechworld/big-bear-casaos) | 7.11.4 | mattermost | [Repository](https://github.com/bigbeartechworld/big-bear-casaos) |
 | [GemDigest Bot](https://github.com/bigbeartechworld/big-bear-casaos) | 1.0 | Armaggheddon | [Repository](https://github.com/bigbeartechworld/big-bear-casaos) |
 | [Genmon](https://github.com/bigbeartechworld/big-bear-casaos) | 1.19.06 | bigbeartechworld | [Repository](https://github.com/bigbeartechworld/big-bear-casaos) |
-| [Ghost](https://github.com/bigbeartechworld/big-bear-casaos) | 6.5.0-alpine | ghost | [Repository](https://github.com/bigbeartechworld/big-bear-casaos) |
+| [Ghost](https://github.com/bigbeartechworld/big-bear-casaos) | 6.5.1-alpine | ghost | [Repository](https://github.com/bigbeartechworld/big-bear-casaos) |
 | [Ghostfolio](https://github.com/bigbeartechworld/big-bear-casaos) | 2.210.1 | ghostfolio | [Repository](https://github.com/bigbeartechworld/big-bear-casaos) |
 | [Gitea Mirror](https://github.com/bigbeartechworld/big-bear-casaos) | 3.8.10 | raylabs.io | [Repository](https://github.com/bigbeartechworld/big-bear-casaos) |
 | [Gladys Assistant](https://github.com/bigbeartechworld/big-bear-casaos) | 4.64.0 | GladysAssistant | [Repository](https://github.com/bigbeartechworld/big-bear-casaos) |
@@ -112,7 +112,7 @@ If you have a suggestion for an app, please post in the [BigBearCommunity](https
 | [LibreTranslate](https://github.com/bigbeartechworld/big-bear-casaos) | 1.7.3 | LibreTranslate | [Repository](https://github.com/bigbeartechworld/big-bear-casaos) |
 | [LinkStack](https://github.com/bigbeartechworld/big-bear-casaos) | V4 | LinkStackOrg | [Repository](https://github.com/bigbeartechworld/big-bear-casaos) |
 | [Linkwarden](https://github.com/bigbeartechworld/big-bear-casaos) | 2.13.1 | linkwarden | [Repository](https://github.com/bigbeartechworld/big-bear-casaos) |
-| [LobeChat](https://github.com/bigbeartechworld/big-bear-casaos) | 1.141.10 | lobehub | [Repository](https://github.com/bigbeartechworld/big-bear-casaos) |
+| [LobeChat](https://github.com/bigbeartechworld/big-bear-casaos) | 1.142.0 | lobehub | [Repository](https://github.com/bigbeartechworld/big-bear-casaos) |
 | [LS Adguard Home Sync](https://github.com/bigbeartechworld/big-bear-casaos) | 0.8.1 | bakito | [Repository](https://github.com/bigbeartechworld/big-bear-casaos) |
 | [LyriOn Music Server](https://github.com/bigbeartechworld/big-bear-casaos) | 9.1.0 | LMS-Community | [Repository](https://github.com/bigbeartechworld/big-bear-casaos) |
 | [Mailpit](https://github.com/bigbeartechworld/big-bear-casaos) | 1.27 | axllent | [Repository](https://github.com/bigbeartechworld/big-bear-casaos) |
@@ -199,12 +199,12 @@ If you have a suggestion for an app, please post in the [BigBearCommunity](https
 | [Syncthing](https://github.com/bigbeartechworld/big-bear-casaos) | 2.0 | syncthing | [Repository](https://github.com/bigbeartechworld/big-bear-casaos) |
 | [Tailscale](https://github.com/bigbeartechworld/big-bear-casaos) | 1.88.4 | tailscale | [Repository](https://github.com/bigbeartechworld/big-bear-casaos) |
 | [Tandoor](https://github.com/bigbeartechworld/big-bear-casaos) | 2.3.3 | tandoorrecipes | [Repository](https://github.com/bigbeartechworld/big-bear-casaos) |
-| [Tianji](https://github.com/bigbeartechworld/big-bear-casaos) | 1.30.0 | moonrailgun | [Repository](https://github.com/bigbeartechworld/big-bear-casaos) |
+| [Tianji](https://github.com/bigbeartechworld/big-bear-casaos) | 1.30.1 | moonrailgun | [Repository](https://github.com/bigbeartechworld/big-bear-casaos) |
 | [TP-Link Omada Controller](https://github.com/bigbeartechworld/big-bear-casaos) | 5.15 | BigBearTechWorld | [Repository](https://github.com/bigbeartechworld/big-bear-casaos) |
 | [Traccar](https://github.com/bigbeartechworld/big-bear-casaos) | 6.10-ubuntu | traccar | [Repository](https://github.com/bigbeartechworld/big-bear-casaos) |
 | [Trilium](https://github.com/bigbeartechworld/big-bear-casaos) | v0.99.3 | TriliumNext | [Repository](https://github.com/bigbeartechworld/big-bear-casaos) |
 | [Tududi](https://github.com/bigbeartechworld/big-bear-casaos) | 0.84 | chrisvel | [Repository](https://github.com/bigbeartechworld/big-bear-casaos) |
-| [Tugtainer](https://github.com/bigbeartechworld/big-bear-casaos) | 1.2.3 | Quenary | [Repository](https://github.com/bigbeartechworld/big-bear-casaos) |
+| [Tugtainer](https://github.com/bigbeartechworld/big-bear-casaos) | 1.3.0 | Quenary | [Repository](https://github.com/bigbeartechworld/big-bear-casaos) |
 | [UISP](https://github.com/bigbeartechworld/big-bear-casaos) | 2.4.155.1 | nico640 | [Repository](https://github.com/bigbeartechworld/big-bear-casaos) |
 | [Umami](https://github.com/bigbeartechworld/big-bear-casaos) | postgresql-latest | umami-software | [Repository](https://github.com/bigbeartechworld/big-bear-casaos) |
 | [Umbrel OS](https://github.com/bigbeartechworld/big-bear-casaos) | 1.4.0 | dockurr | [Repository](https://github.com/bigbeartechworld/big-bear-casaos) |
