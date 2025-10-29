@@ -1,5 +1,5 @@
 manifestVersion: 1
-id: big-bear-umbrel-rallly
+id: 
 category: BigBearCasaOS
 name: Rallly
 version: "4.4.1"
@@ -9,11 +9,11 @@ description: >-
 releaseNotes: >-
   This version includes various improvements and bug fixes.
 developer: lukevella
-website: https://github.com/bigbeartechworld/big-bear-casaos
+website: 
 dependencies: []
-repo: https://github.com/bigbeartechworld/big-bear-casaos
-support: https://github.com/bigbeartechworld/big-bear-casaos/issues
-port: 10152
+repo: https://github.com/bigbeartechworld/big-bear-universal-apps
+support: https://github.com/bigbeartechworld/big-bear-universal-apps/issues
+port: 10147
 gallery:
   - 1.jpg
   - 2.jpg
@@ -23,4 +23,4 @@ defaultUsername: ""
 defaultPassword: ""
 icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/rallly.png
 submitter: BigBearTechWorld
-submission: https://github.com/bigbeartechworld/big-bear-casaos
+submission: https://github.com/bigbeartechworld/big-bear-universal-apps

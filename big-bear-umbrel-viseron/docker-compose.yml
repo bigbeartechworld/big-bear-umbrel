@@ -1,21 +1,30 @@
-
+# Configuration for viseron setup
+# Name of the big-bear-viseron application
 version: "3.7"
+# Service definitions for the big-bear-viseron application
 services:
+  app_proxy:
+    environment:
+      APP_HOST: _big-bear-viseron_1
+      APP_PORT: "8888"
+  # Service name: big-bear-viseron
+  # The `big-bear-viseron` service definition
   big-bear-viseron:
+    # Image to be used for the container
     image: roflcoopter/viseron:3.3.1
+    # Container restart policy
     restart: unless-stopped
+    # Shared memory size
     shm_size: "1024mb"
+    # Volumes to be mounted to the container
     volumes:
-      - ${APP_DATA_DIR}/segments:/segments
-      - ${APP_DATA_DIR}/snapshots:/snapshots
-      - ${APP_DATA_DIR}/thumbnails:/thumbnails
-      - ${APP_DATA_DIR}/event_clips:/event_clips
-      - ${APP_DATA_DIR}/config:/config
+      - ${APP_DATA_DIR}/viseron_segments:/segments
+      - ${APP_DATA_DIR}/viseron_snapshots:/snapshots
+      - ${APP_DATA_DIR}/viseron_thumbnails:/thumbnails
+      - ${APP_DATA_DIR}/viseron_event_clips:/event_clips
+      - ${APP_DATA_DIR}/viseron_config:/config
       - /etc/localtime:/etc/localtime:ro
+    # Environment variables
     environment:
       - PUID=1000
       - PGID=1000
-  app_proxy:
-    environment:
-      APP_HOST: big-bear-umbrel-viseron_big-bear-viseron_1
-      APP_PORT: "8888"

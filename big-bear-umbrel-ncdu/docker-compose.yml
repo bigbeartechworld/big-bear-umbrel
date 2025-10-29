@@ -1,19 +1,32 @@
-
+# Configuration for ncdu setup
+# Name of the big-bear-ncdu application
 version: "3.7"
+# Service definitions for the big-bear-ncdu application
 services:
-  big-bear-ncdu:
-    image: bigbeartechworld/big-bear-ncdu:0.0.4
-    restart: unless-stopped
-    privileged: true
-    volumes:
-      - /proc:/proc
-      - /sys:/sys
-      - /dev:/dev
-      - /etc/localtime:/etc/localtime:ro
-      - /:/casaos
-    environment:
-      - NCDU_PATH=/
   app_proxy:
     environment:
-      APP_HOST: big-bear-umbrel-ncdu_big-bear-ncdu_1
+      APP_HOST: _big-bear-ncdu_1
       APP_PORT: "7681"
+  # Service name: big-bear-ncdu
+  # The `big-bear-ncdu` service definition
+  big-bear-ncdu:
+    # Image to be used for the container specifies the ncdu version and source
+    image: bigbeartechworld/big-bear-ncdu:0.0.4
+    # Container restart policy - restarts the container unless manually stopped
+    restart: unless-stopped
+    # Run the container in privileged mode to allow access to system metrics
+    privileged: true
+    # Mount necessary volumes for accessing system information
+    volumes:
+      # Mount the host's /proc directory to the container's /proc directory
+      - /proc:/proc
+      # Mount the host's /sys directory to the container's /sys directory
+      - /sys:/sys
+      # Mount the host's /dev directory to the container's /dev directory
+      - /dev:/dev
+      # Mount the host's /etc/localtime file to the container's /etc/localtime file (read-only)
+      - /etc/localtime:/etc/localtime:ro
+      - /:/casaos
+    # Environment variables to be set in the container for application configuration
+    environment:
+      - NCDU_PATH=/

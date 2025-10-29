@@ -1,9 +1,20 @@
-
+# Configuration for faster-whisper setup
+# Name of the big-bear-faster-whisper application
 version: "3.7"
+# Service definitions for the big-bear-faster-whisper application
 services:
+  app_proxy:
+    environment:
+      APP_HOST: _big-bear-faster-whisper_1
+      APP_PORT: "10300"
+  # Service name: big-bear-faster-whisper
+  # The `big-bear-faster-whisper` service definition
   big-bear-faster-whisper:
+    # Image to be used for the container
     image: linuxserver/faster-whisper:2.5.0
+    # Container restart policy
     restart: unless-stopped
+    # Environment variables
     environment:
       - PUID=1000
       - PGID=1000
@@ -11,9 +22,7 @@ services:
       - WHISPER_MODEL=tiny-int8
       - WHISPER_BEAM=1 #optional
       - WHISPER_LANG=en #optional
+    # Volumes to be mounted to the container
     volumes:
-      - ${APP_DATA_DIR}/config:/config
-  app_proxy:
-    environment:
-      APP_HOST: big-bear-umbrel-faster-whisper_big-bear-faster-whisper_1
-      APP_PORT: "10300"
+      # Mounting the local /DATA/AppData/$AppID/config directory to /config inside the container
+      - ${APP_DATA_DIR}/faster-whisper_config:/config

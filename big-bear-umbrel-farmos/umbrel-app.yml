@@ -1,5 +1,5 @@
 manifestVersion: 1
-id: big-bear-umbrel-farmos
+id: 
 category: BigBearCasaOS
 name: FarmOS
 version: "3.4.5"
@@ -9,10 +9,10 @@ description: >-
 releaseNotes: >-
   This version includes various improvements and bug fixes.
 developer: farmOS
-website: https://github.com/bigbeartechworld/big-bear-casaos
+website: 
 dependencies: []
-repo: https://github.com/bigbeartechworld/big-bear-casaos
-support: https://github.com/bigbeartechworld/big-bear-casaos/issues
+repo: https://github.com/bigbeartechworld/big-bear-universal-apps
+support: https://github.com/bigbeartechworld/big-bear-universal-apps/issues
 port: 10044
 gallery:
   - 1.jpg
@@ -21,6 +21,6 @@ gallery:
 path: ""
 defaultUsername: ""
 defaultPassword: ""
-icon: https://cdn.jsdelivr.net/gh/bigbeartechworld/big-bear-casaos/Apps/farmos/logo.jpeg
+icon: https://cdn.jsdelivr.net/gh/bigbeartechworld/big-bear-universal-apps/apps/farmos/logo.jpeg
 submitter: BigBearTechWorld
-submission: https://github.com/bigbeartechworld/big-bear-casaos
+submission: https://github.com/bigbeartechworld/big-bear-universal-apps

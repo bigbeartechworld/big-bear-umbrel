@@ -1,19 +1,19 @@
 manifestVersion: 1
-id: big-bear-umbrel-chromium
+id: 
 category: BigBearCasaOS
 name: chromium
-version: "1.15.0-rolling"
+version: "version-6ae43f81"
 tagline: chromium
 description: >-
   This Image contains a browser-accessible version of chromium.
 releaseNotes: >-
   This version includes various improvements and bug fixes.
-developer: kasmweb
-website: https://github.com/bigbeartechworld/big-bear-casaos
+developer: linuxserver
+website: 
 dependencies: []
-repo: https://github.com/bigbeartechworld/big-bear-casaos
-support: https://github.com/bigbeartechworld/big-bear-casaos/issues
-port: 10022
+repo: https://github.com/bigbeartechworld/big-bear-universal-apps
+support: https://github.com/bigbeartechworld/big-bear-universal-apps/issues
+port: 10024
 gallery:
   - 1.jpg
   - 2.jpg
@@ -23,4 +23,4 @@ defaultUsername: ""
 defaultPassword: ""
 icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/chromium.png
 submitter: BigBearTechWorld
-submission: https://github.com/bigbeartechworld/big-bear-casaos
+submission: https://github.com/bigbeartechworld/big-bear-universal-apps

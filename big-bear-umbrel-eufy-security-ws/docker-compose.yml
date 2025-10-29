@@ -1,13 +1,24 @@
+# Configuration for eufy-security-ws setup
+# Name of the big-bear-eufy-security-ws application
 version: "3.7"
+# Service definitions for the big-bear-eufy-security-ws application
 services:
+  # Service name: big-bear-eufy-security-ws
+  # The `big-bear-eufy-security-ws` service definition
   big-bear-eufy-security-ws:
+    # Image to be used for the container
     image: bropat/eufy-security-ws:1.9.3
+    # Environment variables for the container
     environment:
       USERNAME: "[EUFY_USERNAME]"
       PASSWORD: "[EUFY_PASSWORD]"
       COUNTRY: "US"
       LANGUAGE: "en"
+    # Container restart policy
     restart: unless-stopped
+    # Volumes to be mounted to the container
     volumes:
-      - ${APP_DATA_DIR}/data:/data
+      # Mounting the local data directory to /data inside the container
+      - ${APP_DATA_DIR}/eufy-security-ws_data:/data
+    # Network configuration
     network_mode: host

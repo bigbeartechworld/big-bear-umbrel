@@ -1,15 +1,22 @@
-
+# Configuration for kavita setup
+# Name of the big-bear-kavita application
 version: "3.7"
+# Service definitions for the big-bear-kavita application
 services:
-  big-bear-kavita:
-    image: jvmilazz0/kavita:0.8.8
-    restart: unless-stopped
-    volumes:
-      - ${APP_DATA_DIR}/data/kavita-config:/kavita/config
-      - ${APP_DATA_DIR}/media/data/books:/books
-      - ${APP_DATA_DIR}/media/data/comics:/comics
-      - ${APP_DATA_DIR}/media/data/manga:/manga
   app_proxy:
     environment:
-      APP_HOST: big-bear-umbrel-kavita_big-bear-kavita_1
+      APP_HOST: _big-bear-kavita_1
       APP_PORT: "5000"
+  # Service name: big-bear-kavita
+  # The `big-bear-kavita` service definition
+  big-bear-kavita:
+    # Image to be used for the container
+    image: jvmilazz0/kavita:0.8.8
+    # Container restart policy
+    restart: unless-stopped
+    # Volumes to be mounted to the container
+    volumes:
+      - ${APP_DATA_DIR}/kavita_data_kavita-config:/kavita/config
+      - ${APP_DATA_DIR}/kavita_media_data_books:/books
+      - ${APP_DATA_DIR}/kavita_media_data_comics:/comics
+      - ${APP_DATA_DIR}/kavita_media_data_manga:/manga

@@ -1,16 +1,23 @@
-
+# Configuration for obsidian-livesync setup
+# Name of the big-bear-obsidian-livesync application
 version: "3.7"
+# Service definitions for the big-bear-obsidian-livesync application
 services:
+  app_proxy:
+    environment:
+      APP_HOST: _app_1
+      APP_PORT: "5984"
+  # Service name: app
+  # The `app` service definition
   app:
+    # Image to be used for the container
     image: couchdb:3.5.0
+    # Container restart policy
     restart: unless-stopped
+    # Volumes to be mounted to the container
     volumes:
-      - ${APP_DATA_DIR}/data/couchdb:/opt/couchdb/data
-      - ${APP_DATA_DIR}/data/local.ini:/opt/couchdb/etc/local.ini
+      - ${APP_DATA_DIR}/obsidian-livesync_data_couchdb:/opt/couchdb/data
+      - ${APP_DATA_DIR}/obsidian-livesync_data_local.ini:/opt/couchdb/etc/local.ini
     environment:
       - COUCHDB_USER=casaos
       - COUCHDB_PASSWORD=casaos
-  app_proxy:
-    environment:
-      APP_HOST: big-bear-umbrel-obsidian-livesync_app_1
-      APP_PORT: "5984"

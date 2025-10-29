@@ -1,5 +1,5 @@
 manifestVersion: 1
-id: big-bear-umbrel-docker-cron-restart-notifier
+id: 
 category: BigBearCasaOS
 name: Docker Cron Restart Notifier
 version: "restart-notifier-latest"
@@ -9,11 +9,11 @@ description: >-
 releaseNotes: >-
   This version includes various improvements and bug fixes.
 developer: activecs
-website: https://github.com/bigbeartechworld/big-bear-casaos
+website: 
 dependencies: []
-repo: https://github.com/bigbeartechworld/big-bear-casaos
-support: https://github.com/bigbeartechworld/big-bear-casaos/issues
-port: 10035
+repo: https://github.com/bigbeartechworld/big-bear-universal-apps
+support: https://github.com/bigbeartechworld/big-bear-universal-apps/issues
+port: 
 gallery:
   - 1.jpg
   - 2.jpg
@@ -21,6 +21,6 @@ gallery:
 path: ""
 defaultUsername: ""
 defaultPassword: ""
-icon: https://cdn.jsdelivr.net/gh/bigbeartechworld/big-bear-casaos/Apps/docker-cron-restart-notifier/logo.png
+icon: https://cdn.jsdelivr.net/gh/bigbeartechworld/big-bear-universal-apps/apps/docker-cron-restart-notifier/logo.png
 submitter: BigBearTechWorld
-submission: https://github.com/bigbeartechworld/big-bear-casaos
+submission: https://github.com/bigbeartechworld/big-bear-universal-apps

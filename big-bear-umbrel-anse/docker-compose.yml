@@ -1,12 +1,19 @@
-
+# Configuration for anse setup
+# Name of the big-bear-anse application
 version: "3.7"
+# Service definitions for the big-bear-anse application
 services:
-  big-bear-anse:
-    image: ddiu8081/anse:v1.1.11
-    restart: unless-stopped
-    environment:
-      - PORT=8014
   app_proxy:
     environment:
-      APP_HOST: big-bear-umbrel-anse_big-bear-anse_1
+      APP_HOST: _big-bear-anse_1
       APP_PORT: "8014"
+  # Service name: big-bear-anse
+  # The `big-bear-anse` service definition
+  big-bear-anse:
+    # Image to be used for the container
+    image: ddiu8081/anse:v1.1.11
+    # Container restart policy
+    restart: unless-stopped
+    # Environment variables
+    environment:
+      - PORT=8014

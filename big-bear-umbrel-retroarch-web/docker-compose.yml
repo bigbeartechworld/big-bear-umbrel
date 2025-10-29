@@ -1,12 +1,19 @@
-
+# Configuration for retroarch-web setup
+# Name of the big-bear-retroarch-web application
 version: "3.7"
+# Service definitions for the big-bear-retroarch-web application
 services:
-  big-bear-retroarch-web:
-    image: inglebard/retroarch-web:latest
-    restart: unless-stopped
-    environment:
-      - ROOT_WWW_PATH="/var/www/html"
   app_proxy:
     environment:
-      APP_HOST: big-bear-umbrel-retroarch-web_big-bear-retroarch-web_1
+      APP_HOST: _big-bear-retroarch-web_1
       APP_PORT: "80"
+  # Service name: big-bear-retroarch-web
+  # The `big-bear-retroarch-web` service definition
+  big-bear-retroarch-web:
+    # Image to be used for the container
+    image: inglebard/retroarch-web:latest
+    # Container restart policy
+    restart: unless-stopped
+    # Environment variables
+    environment:
+      - ROOT_WWW_PATH="/var/www/html"
