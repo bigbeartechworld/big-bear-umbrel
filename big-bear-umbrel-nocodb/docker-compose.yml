@@ -1,6 +1,14 @@
-
+# Configuration for nocodb setup
+# Name of the big-bear-nocodb application
 version: "3.7"
+# Service definitions for the big-bear-nocodb application
 services:
+  app_proxy:
+    environment:
+      APP_HOST: _big-bear-nocodb_1
+      APP_PORT: "8080"
+  # Service name: big-bear-nocodb
+  # This section configures the NocoDB application itself
   big-bear-nocodb:
     image: nocodb/nocodb:0.265.1 # Specifies the Docker image to use for NocoDB
     restart: unless-stopped # Container restart policy to ensure availability
@@ -9,9 +17,10 @@ services:
       - NC_AUTH_JWT_SECRET=899499fc-36a0-4131-b077-7bb9f051ac9b # JWT secret for authentication
       - NC_REDIS_URL=redis://default:casaos@big-bear-nocodb-redis:6379 # Connection string for Redis
     volumes:
-      - ${APP_DATA_DIR}/data:/usr/src/app/data # Maps persistent data storage for NocoDB
+      - ${APP_DATA_DIR}/nocodb_data:/usr/src/app/data # Maps persistent data storage for NocoDB
     networks:
       - big-bear-nocodb-network # Connects to the custom network
+  # Database service configuration
   big-bear-nocodb-db:
     image: postgres:13 # Specifies the PostgreSQL Docker image to use
     restart: always # Ensures the database container is always running
@@ -20,15 +29,16 @@ services:
       POSTGRES_USER: nocodb # Database user
       POSTGRES_PASSWORD: nocodb # Database password
     volumes:
-      - ${APP_DATA_DIR}/pgdata:/var/lib/postgresql/data # Persistent storage for the database
+      - ${APP_DATA_DIR}/nocodb_pgdata:/var/lib/postgresql/data # Persistent storage for the database
     networks:
       - big-bear-nocodb-network # Connects to the custom network
+  # Redis service configuration
   big-bear-nocodb-redis:
     image: redis:8.2.2-alpine@sha256:1c78f5e7512cc8b22b0edc95c20e7abd9e1fd832e5dfd5c3c6b59ce82fb238d0 # Specifies the Redis Docker image to use
     restart: unless-stopped # Ensures Redis container is available unless manually stopped
     command: ["redis-server", "--requirepass", "casaos"] # Starts Redis with a password
     volumes:
-      - ${APP_DATA_DIR}/redis:/data # Persistent storage for Redis data
+      - ${APP_DATA_DIR}/nocodb_redis:/data # Persistent storage for Redis data
     healthcheck:
       test: ["CMD", "redis-cli", "ping"] # Health check command for Redis
       interval: 1s # Interval between health checks
@@ -36,10 +46,7 @@ services:
       retries: 30 # Number of retries before considering the service unhealthy
     networks:
       - big-bear-nocodb-network # Connects to the custom network
-  app_proxy:
-    environment:
-      APP_HOST: big-bear-umbrel-nocodb_big-bear-nocodb_1
-      APP_PORT: "8080"
+# Network configuration
 networks:
   big-bear-nocodb-network:
     driver: bridge # Uses a bridge network for inter-container communication

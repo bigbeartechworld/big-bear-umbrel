@@ -1,5 +1,5 @@
 manifestVersion: 1
-id: big-bear-umbrel-ncdu
+id: 
 category: BigBearCasaOS
 name: Ncdu
 version: "0.0.4"
@@ -9,11 +9,11 @@ description: >-
 releaseNotes: >-
   This version includes various improvements and bug fixes.
 developer: bigbeartechworld
-website: https://github.com/bigbeartechworld/big-bear-casaos
+website: 
 dependencies: []
-repo: https://github.com/bigbeartechworld/big-bear-casaos
-support: https://github.com/bigbeartechworld/big-bear-casaos/issues
-port: 10105
+repo: https://github.com/bigbeartechworld/big-bear-universal-apps
+support: https://github.com/bigbeartechworld/big-bear-universal-apps/issues
+port: 10103
 gallery:
   - 1.jpg
   - 2.jpg
@@ -21,6 +21,6 @@ gallery:
 path: ""
 defaultUsername: ""
 defaultPassword: ""
-icon: https://cdn.jsdelivr.net/gh/bigbeartechworld/big-bear-casaos/Apps/ncdu/logo.png
+icon: https://cdn.jsdelivr.net/gh/bigbeartechworld/big-bear-universal-apps/apps/ncdu/logo.png
 submitter: BigBearTechWorld
-submission: https://github.com/bigbeartechworld/big-bear-casaos
+submission: https://github.com/bigbeartechworld/big-bear-universal-apps

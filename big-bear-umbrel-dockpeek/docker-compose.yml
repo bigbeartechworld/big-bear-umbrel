@@ -1,17 +1,29 @@
-
+# Configuration for dockpeek setup
+# Name of the big-bear-dockpeek application
 version: "3.7"
+# Service definitions for the big-bear-dockpeek application
 services:
-  big-bear-dockpeek:
-    image: ghcr.io/dockpeek/dockpeek:v1.7.0
-    environment:
-      SECRET_KEY: "change_this_secret_key"
-      USERNAME: "bigbear"
-      PASSWORD: "casaos"
-      DOCKER_HOST: "unix:///var/run/docker.sock"
-    restart: unless-stopped
-    volumes:
-      - /var/run/docker.sock:/var/run/docker.sock
   app_proxy:
     environment:
-      APP_HOST: big-bear-umbrel-dockpeek_big-bear-dockpeek_1
+      APP_HOST: _big-bear-dockpeek_1
       APP_PORT: "8000"
+  # Service name: big-bear-dockpeek
+  # The `big-bear-dockpeek` service definition
+  big-bear-dockpeek:
+    # Image to be used for the container
+    image: ghcr.io/dockpeek/dockpeek:v1.7.0
+    # Environment variables
+    environment:
+      # Secret key for the application (change this)
+      SECRET_KEY: "change_this_secret_key"
+      # Username for authentication (change this)
+      USERNAME: "bigbear"
+      # Password for authentication (change this)
+      PASSWORD: "casaos"
+      # Docker host configuration
+      DOCKER_HOST: "unix:///var/run/docker.sock"
+    # Container restart policy
+    restart: unless-stopped
+    # Volumes to be mounted to the container
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock

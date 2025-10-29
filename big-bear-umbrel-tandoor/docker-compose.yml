@@ -1,12 +1,24 @@
-
+# Configuration for tandoor setup
+# Name of the big-bear-tandoor application
 version: "3.7"
+# Service definitions for the big-bear-tandoor application
 services:
+  app_proxy:
+    environment:
+      APP_HOST: _big-bear-tandoor_1
+      APP_PORT: "8080"
+  # Service name: big-bear-tandoor
+  # The `big-bear-tandoor` service definition
   big-bear-tandoor:
+    # Image to be used for the container
     image: ghcr.io/tandoorrecipes/recipes:2.3.3
+    # Container restart policy
     restart: unless-stopped
+    # Volumes to be mounted to the container
     volumes:
-      - ${APP_DATA_DIR}/staticfiles:/opt/recipes/staticfiles
-      - ${APP_DATA_DIR}/mediafiles:/opt/recipes/mediafiles
+      - ${APP_DATA_DIR}/tandoor_staticfiles:/opt/recipes/staticfiles
+      - ${APP_DATA_DIR}/tandoor_mediafiles:/opt/recipes/mediafiles
+    # Environment variables to be passed to the container
     environment:
       - SECRET_KEY=6496f725-e4a4-4fa5-9f7b-db0114bc1568
       - DB_ENGINE=django.db.backends.postgresql
@@ -15,15 +27,17 @@ services:
       - POSTGRES_USER=tandoor
       - POSTGRES_PASSWORD=100c7d31-9ec5-44ec-9101-e226c8e2420d
       - POSTGRES_DB=tandoordb
+    # Network to be used by the container
     networks:
       - big_bear_tandoor_network
+    # Healthcheck configuration for the container
     depends_on:
       big-bear-tandoor-db:
         condition: service_healthy
   big-bear-tandoor-db:
     image: postgres:15-alpine
     volumes:
-      - ${APP_DATA_DIR}/postgresql:/var/lib/postgresql/data
+      - ${APP_DATA_DIR}/tandoor_postgresql:/var/lib/postgresql/data
     environment:
       - POSTGRES_PORT=5432
       - POSTGRES_USER=tandoor
@@ -38,10 +52,7 @@ services:
       timeout: 5s
       retries: 5
       start_period: 30s
-  app_proxy:
-    environment:
-      APP_HOST: big-bear-umbrel-tandoor_big-bear-tandoor_1
-      APP_PORT: "8080"
+# Network definitions for the big-bear-tandoor application
 networks:
   big_bear_tandoor_network:
     driver: bridge

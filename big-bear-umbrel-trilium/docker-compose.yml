@@ -1,14 +1,23 @@
-
+# Configuration for trilium setup
+# Name of the big-bear-trilium application
 version: "3.7"
+# Service definitions for the big-bear-trilium application
 services:
-  app:
-    image: triliumnext/trilium:v0.99.3
-    restart: unless-stopped
-    environment:
-      - TRILIUM_DATA_DIR=/home/node/trilium-data
-    volumes:
-      - ${APP_DATA_DIR}/data:/home/node/trilium-data
   app_proxy:
     environment:
-      APP_HOST: big-bear-umbrel-trilium_app_1
+      APP_HOST: _app_1
       APP_PORT: "8080"
+  # Service name: app
+  # The `app` service definition
+  app:
+    # Image to be used for the container
+    image: triliumnext/trilium:v0.99.3
+    # Container restart policy
+    restart: unless-stopped
+    # Environment variables
+    environment:
+      - TRILIUM_DATA_DIR=/home/node/trilium-data
+    # Volumes to be mounted to the container
+    volumes:
+      # Mounting the local /DATA/AppData/$AppID/data directory to /home/node/trilium-data inside the container
+      - ${APP_DATA_DIR}/trilium_data:/home/node/trilium-data

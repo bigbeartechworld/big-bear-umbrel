@@ -1,5 +1,12 @@
+# Configuration for big-bear-immich-without-machine-learning setup
 version: "3.7"
+# Service definitions for the big-bear-immich-without-machine-learning application
 services:
+  app_proxy:
+    environment:
+      APP_HOST: _immich-server_1
+      APP_PORT: "2283"
+  # Main Immich Server service configuration
   immich-server:
     image: ghcr.io/immich-app/immich-server:v2.1.0 # Image to be used
     volumes: # Mounting directories for persistent data storage
@@ -15,9 +22,11 @@ services:
       - redis
       - database
     restart: unless-stopped # Policy to restart unless stopped
+  # Configuration for Redis service
   redis:
     image: redis:6.2.20-alpine@sha256:2185e741f4c1e7b0ea9ca1e163a3767c4270a73086b6bbea2049a7203212fb7f # patched for CVE-2025-49844
     restart: always # Policy to always restart the container if it stops
+  # Configuration for Database service
   database:
     image: ghcr.io/immich-app/postgres:14-vectorchord0.3.0-pgvectors0.2.0 # Image to be used
     environment: # Setting environment variables
@@ -25,10 +34,8 @@ services:
       POSTGRES_USER: casaos
       POSTGRES_DB: immich
       PG_DATA: /var/lib/postgresql/data
+      # Uncomment the DB_STORAGE_TYPE: 'HDD' var if your database isn't stored on SSDs
+      # DB_STORAGE_TYPE: 'HDD'
     volumes: # Mounting directories for persistent data storage
       - /DATA/AppData/big-bear-immich/pgdata:/var/lib/postgresql/data
     restart: always # Policy to always restart the container if it stops
-  app_proxy:
-    environment:
-      APP_HOST: big-bear-umbrel-immich-without-machine-learning_immich-server_1
-      APP_PORT: "2283"

@@ -1,5 +1,12 @@
+# Configuration for pocket-id setup
 version: "3.7"
+# Service definitions for the pocket-id application
 services:
+  app_proxy:
+    environment:
+      APP_HOST: _big-bear-pocketid_1
+      APP_PORT: ' 1411'
+  # Service configuration for the pocket-id application
   big-bear-pocketid:
     image: ghcr.io/pocket-id/pocket-id:v1.14 # Docker image to use for pocket-id
     restart: unless-stopped # Restart policy: Restart unless manually stopped
@@ -20,18 +27,15 @@ services:
       icon: https://pocket-id.org/img/logo.png # Icon URL
     volumes:
       - type: bind
-        source: ${APP_DATA_DIR}/data
+        source: pocketid_data
         target: /app/data # Volume for persistent data
     devices: []
     cap_add: []
     privileged: false
+    # Optional healthcheck
     healthcheck:
       test: "curl -f http://localhost:1411/healthz" # Health check command
       interval: 1m30s
       timeout: 5s
       retries: 2
       start_period: 10s
-  app_proxy:
-    environment:
-      APP_HOST: big-bear-umbrel-pocketid_big-bear-pocketid_1
-      APP_PORT: ' 1411'

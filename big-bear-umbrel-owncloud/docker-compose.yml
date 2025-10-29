@@ -1,9 +1,20 @@
-
+# Configuration for owncloud setup
+# Name of the big-bear-owncloud application
 version: "3.7"
+# Service definitions for the big-bear-owncloud application
 services:
+  app_proxy:
+    environment:
+      APP_HOST: _big-bear-owncloud_1
+      APP_PORT: "8080"
+  # Service name: big-bear-owncloud
+  # The `big-bear-owncloud` service definition
   big-bear-owncloud:
+    # Image to be used for the container
     image: owncloud/server:10.16.0
+    # Container restart policy
     restart: unless-stopped
+    # Environment variables
     environment:
       - OWNCLOUD_DOMAIN=http://[YOUR_CASAOS_IP]:8080
       - OWNCLOUD_TRUSTED_DOMAINS=[YOUR_CASAOS_IP]
@@ -17,10 +28,14 @@ services:
       - OWNCLOUD_MYSQL_UTF8MB4=true
       - OWNCLOUD_REDIS_ENABLED=true
       - OWNCLOUD_REDIS_HOST=big-bear-owncloud-redis
+    # Volumes to be mounted to the container
     volumes:
-      - ${APP_DATA_DIR}/data:/mnt/data
+      # Mounting the local /DATA/AppData/$AppID/data directory to /mnt/data inside the container
+      - ${APP_DATA_DIR}/owncloud_data:/mnt/data
+    # Networks to be attached to the container
     networks:
       - big_bear_owncloud_network
+    # Healthcheck configuration for the service
     healthcheck:
       test: ["CMD", "/usr/bin/healthcheck"]
       interval: 30s
@@ -45,7 +60,7 @@ services:
       timeout: 5s
       retries: 5
     volumes:
-      - ${APP_DATA_DIR}/mysql:/var/lib/mysql
+      - ${APP_DATA_DIR}/owncloud_mysql:/var/lib/mysql
     networks:
       - big_bear_owncloud_network
   big-bear-owncloud-redis:
@@ -58,13 +73,9 @@ services:
       timeout: 5s
       retries: 5
     volumes:
-      - ${APP_DATA_DIR}/redis:/data
+      - ${APP_DATA_DIR}/owncloud_redis:/data
     networks:
       - big_bear_owncloud_network
-  app_proxy:
-    environment:
-      APP_HOST: big-bear-umbrel-owncloud_big-bear-owncloud_1
-      APP_PORT: "8080"
 networks:
   big_bear_owncloud_network:
     name: big_bear_owncloud_network

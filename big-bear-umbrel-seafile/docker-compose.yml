@@ -1,16 +1,27 @@
-
+# Configuration for seafile setup
+# Name of the big-bear-seafile application
 version: "3.7"
+# Service definitions for the big-bear-seafile application
 services:
+  app_proxy:
+    environment:
+      APP_HOST: _big-bear-seafile_1
+      APP_PORT: "80"
+  # Service name: big-bear-seafile
+  # The `big-bear-seafile` service definition
   big-bear-seafile:
+    # Image to be used for the container
     image: seafileltd/seafile-mc:11.0.13
+    # Container restart policy
     restart: unless-stopped
+    # Service dependencies
     depends_on:
       big-bear-seafile-db:
         condition: service_healthy
       big-bear-seafile-memcached:
         condition: service_started
     volumes:
-      - ${APP_DATA_DIR}/shared:/shared
+      - ${APP_DATA_DIR}/seafile_shared:/shared
     environment:
       - DB_HOST=big-bear-seafile-db # Specifies MySQL service host name.
       - DB_ROOT_PASSWD=seafilepassword # Requested, the value should be root's password of MySQL service.
@@ -19,8 +30,10 @@ services:
       - SEAFILE_ADMIN_PASSWORD=asecret # Specifies Seafile admin password, default is 'asecret'.
       - SEAFILE_SERVER_LETSENCRYPT=false # Whether to use https or not.
       - SEAFILE_SERVER_HOSTNAME=docs.seafile.com # Specifies your host name if https is enabled.
+    # Networks to be attached to the container
     networks:
       - big_bear_seafile_network
+  # Database service for seafile
   big-bear-seafile-db:
     image: mariadb:10.11
     environment:
@@ -28,7 +41,7 @@ services:
       - MYSQL_LOG_CONSOLE=true
       - MARIADB_AUTO_UPGRADE=1
     volumes:
-      - ${APP_DATA_DIR}/mysql:/var/lib/mysql
+      - ${APP_DATA_DIR}/seafile_mysql:/var/lib/mysql
     restart: unless-stopped
     healthcheck:
       test: ["CMD", "healthcheck.sh", "--connect", "--innodb_initialized"]
@@ -39,15 +52,13 @@ services:
       retries: 3
     networks:
       - big_bear_seafile_network
+  # Memcached service for seafile
   big-bear-seafile-memcached:
     image: memcached:1.6.39
     entrypoint: memcached -m 256
     networks:
       - big_bear_seafile_network
-  app_proxy:
-    environment:
-      APP_HOST: big-bear-umbrel-seafile_big-bear-seafile_1
-      APP_PORT: "80"
+# Networks used by the application
 networks:
   big_bear_seafile_network:
     driver: bridge
