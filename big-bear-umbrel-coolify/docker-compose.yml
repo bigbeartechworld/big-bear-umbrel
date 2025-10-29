@@ -1,9 +1,20 @@
-
+# Configuration for coolify setup
+# Name of the big-bear-coolify application
 version: "3.7"
+# Service definitions for the big-bear-coolify application
 services:
+  app_proxy:
+    environment:
+      APP_HOST: _big-bear-coolify_1
+      APP_PORT: "8080"
+  # Service name: big-bear-coolify
+  # The `big-bear-coolify` service definition
   big-bear-coolify:
+    # Image to be used for the container specifies the fastfetch version and source
     image: ghcr.io/coollabsio/coolify:4.0.0-beta.434
+    # Container restart policy - restarts the container unless manually stopped
     restart: unless-stopped
+    # Environment variables for the container
     environment:
       - PHP_MEMORY_LIMIT="512M"
       - APP_ID="coolify"
@@ -61,14 +72,16 @@ services:
       - STRIPE_PRICE_ID_ULTIMATE_MONTHLY_OLD=
       - STRIPE_PRICE_ID_ULTIMATE_YEARLY_OLD=
       - STRIPE_EXCLUDED_PLANS=
+    # Mount necessary volumes for accessing system information
     volumes:
-      - ${APP_DATA_DIR}/ssh:/var/www/html/storage/app/ssh
-      - ${APP_DATA_DIR}/applications:/var/www/html/storage/app/applications
-      - ${APP_DATA_DIR}/databases:/var/www/html/storage/app/databases
-      - ${APP_DATA_DIR}/services:/var/www/html/storage/app/services
-      - ${APP_DATA_DIR}/backups:/var/www/html/storage/app/backups
-      - ${APP_DATA_DIR}/webhooks-during-maintenance:/var/www/html/storage/app/webhooks-during-maintenance
-      - ${APP_DATA_DIR}/logs:/var/www/html/storage/logs
+      # ssh-keygen -f /DATA/AppData/big-bear-coolify/ssh/keys/id.root@host.docker.internal -t ed25519 -N '' -C root@coolify
+      - ${APP_DATA_DIR}/coolify_ssh:/var/www/html/storage/app/ssh
+      - ${APP_DATA_DIR}/coolify_applications:/var/www/html/storage/app/applications
+      - ${APP_DATA_DIR}/coolify_databases:/var/www/html/storage/app/databases
+      - ${APP_DATA_DIR}/coolify_services:/var/www/html/storage/app/services
+      - ${APP_DATA_DIR}/coolify_backups:/var/www/html/storage/app/backups
+      - ${APP_DATA_DIR}/coolify_webhooks-during-maintenance:/var/www/html/storage/app/webhooks-during-maintenance
+      - ${APP_DATA_DIR}/coolify_logs:/var/www/html/storage/logs
     healthcheck:
       test: curl --fail http://127.0.0.1:8080/api/health || exit 1
       interval: 5s
@@ -84,7 +97,7 @@ services:
   big-bear-coolify-postgres:
     image: postgres:15-alpine
     volumes:
-      - ${APP_DATA_DIR}/pgdata:/var/lib/postgresql/data
+      - ${APP_DATA_DIR}/coolify_pgdata:/var/lib/postgresql/data
     environment:
       POSTGRES_USER: "coolify"
       POSTGRES_PASSWORD: "f1986213-9d72-4c36-bbd4-adca2f414fa1"
@@ -102,7 +115,7 @@ services:
     environment:
       REDIS_PASSWORD: "9e3df6aa-ea48-4e59-a9c4-59798f1ba9b4"
     volumes:
-      - ${APP_DATA_DIR}/redis:/data
+      - ${APP_DATA_DIR}/coolify_redis:/data
     healthcheck:
       test: redis-cli ping
       interval: 5s
@@ -124,10 +137,6 @@ services:
       timeout: 2s
     networks:
       - big_bear_coolify_network
-  app_proxy:
-    environment:
-      APP_HOST: big-bear-umbrel-coolify_big-bear-coolify_1
-      APP_PORT: "8080"
 networks:
   big_bear_coolify_network:
     name: big_bear_coolify_network

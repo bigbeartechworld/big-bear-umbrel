@@ -1,10 +1,16 @@
-
+# Configuration for it-tools setup
+# Name of the big-bear-it-tools application
 version: "3.7"
+# Service definitions for the big-bear-it-tools application
 services:
-  app:
-    image: corentinth/it-tools:2023.11.2-7d94e11
-    restart: unless-stopped
   app_proxy:
     environment:
-      APP_HOST: big-bear-umbrel-it-tools_app_1
+      APP_HOST: _app_1
       APP_PORT: "80"
+  # Service name: app
+  # The `app` service definition
+  app:
+    # Image to be used for the container
+    image: corentinth/it-tools:2023.11.2-7d94e11
+    # Container restart policy
+    restart: unless-stopped

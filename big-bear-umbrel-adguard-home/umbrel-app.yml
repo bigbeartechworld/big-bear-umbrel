@@ -1,19 +1,19 @@
 manifestVersion: 1
-id: big-bear-umbrel-adguard-home
+id: 
 category: BigBearCasaOS
 name: AdGuard Home
-version: "0.107.68"
+version: "v0.107.68"
 tagline: Network-wide ads & trackers blocking DNS server.
 description: >-
   AdGuard Home is a network-wide software for blocking ads and tracking. After you set it up, it'll cover all your home devices, and you won't need any client-side software for that. Learn more on our official Github repository.
 releaseNotes: >-
   This version includes various improvements and bug fixes.
 developer: AdGuardTeam
-website: https://github.com/bigbeartechworld/big-bear-casaos
+website: 
 dependencies: []
-repo: https://github.com/bigbeartechworld/big-bear-casaos
-support: https://github.com/bigbeartechworld/big-bear-casaos/issues
-port: 10002
+repo: https://github.com/bigbeartechworld/big-bear-universal-apps
+support: https://github.com/bigbeartechworld/big-bear-universal-apps/issues
+port: 10004
 gallery:
   - 1.jpg
   - 2.jpg
@@ -23,4 +23,4 @@ defaultUsername: ""
 defaultPassword: ""
 icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/adguard-home.png
 submitter: BigBearTechWorld
-submission: https://github.com/bigbeartechworld/big-bear-casaos
+submission: https://github.com/bigbeartechworld/big-bear-universal-apps

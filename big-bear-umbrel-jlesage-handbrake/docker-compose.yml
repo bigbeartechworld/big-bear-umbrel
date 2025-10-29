@@ -1,15 +1,15 @@
 version: "3.7"
 services:
+  app_proxy:
+    environment:
+      APP_HOST: _big-bear-jlesage-handbrake_1
+      APP_PORT: "5800"
   big-bear-jlesage-handbrake:
     image: jlesage/handbrake:v25.10.1 # Docker image for the Handbrake
     environment:
       - VNC_PASSWORD=casaos # Set the VNC password to 'casaos'
     volumes:
-      - ${APP_DATA_DIR}/config:/config:rw
-      - ${APP_DATA_DIR}/storage:/storage:ro
-      - ${APP_DATA_DIR}/watch:/watch:rw
-      - ${APP_DATA_DIR}/output:/output:rw
-  app_proxy:
-    environment:
-      APP_HOST: big-bear-umbrel-jlesage-handbrake_big-bear-jlesage-handbrake_1
-      APP_PORT: "5800"
+      - ${APP_DATA_DIR}/jlesage-handbrake_config:/config:rw
+      - ${APP_DATA_DIR}/jlesage-handbrake_storage:/storage:ro
+      - ${APP_DATA_DIR}/jlesage-handbrake_watch:/watch:rw
+      - ${APP_DATA_DIR}/jlesage-handbrake_output:/output:rw

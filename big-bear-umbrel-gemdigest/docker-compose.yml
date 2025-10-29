@@ -1,0 +1,25 @@
+# Configuration for GemDigest bot setup
+# Name of the gem-digest-bot application
+version: "3.7"
+# Service definitions for the gem-digest-bot application
+services:
+  app_proxy:
+    environment:
+      APP_HOST: _big-bear-gem-digest-bot_1
+      APP_PORT: "8080"
+  # Service name: big-bear-gem-digest-bot
+  # The `big-bear-gem-digest-bot` service definition
+  big-bear-gem-digest-bot:
+    # Docker image to use
+    image: piero24/gemdigest:1.0
+    # Mount local directory to the container's /home/dev directory
+    volumes:
+      - ${APP_DATA_DIR}/GemDigest_extra_configs:/gem_digest_bot/extra_configs
+    # Environment variables with default values
+    environment:
+      TELEGRAM_API_KEY: TELEGRAM_API_KEY
+      GEMINI_API_KEY: GEMINI_API_KEY
+      # Add more users separating their id with ";"
+      ADMIN_USER_ID: 123;456
+    # Container restart policy
+    restart: unless-stopped

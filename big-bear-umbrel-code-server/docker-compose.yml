@@ -1,5 +1,12 @@
+# Configuration for big-bear-code-server setup
 version: "3.7"
+# Service definitions for the big-bear-code-server application
 services:
+  app_proxy:
+    environment:
+      APP_HOST: _app_1
+      APP_PORT: "8443"
+  # Service name: app
   app:
     image: linuxserver/code-server:4.105.1 # The Docker image to be used for the service
     environment:
@@ -10,10 +17,6 @@ services:
       - SUDO_PASSWORD=sudo_my_password # Password to access code-server
       - DEFAULT_WORKSPACE=/config/workspace
     volumes:
-      - ${APP_DATA_DIR}/config:/config #config dir
-      - ${APP_DATA_DIR}/projects:/projects #project dir
+      - ${APP_DATA_DIR}/code-server_config:/config #config dir
+      - ${APP_DATA_DIR}/code-server_projects:/projects #project dir
     restart: always # Policy to restart the container if it stops unexpectedly
-  app_proxy:
-    environment:
-      APP_HOST: big-bear-umbrel-code-server_app_1
-      APP_PORT: "8443"

@@ -1,18 +1,32 @@
-
+# Configuration for kasm setup
+# Name of the big-bear-kasm application
 version: "3.7"
+# Service definitions for the big-bear-kasm application
 services:
-  app:
-    image: linuxserver/kasm:1.120.20221218
-    restart: unless-stopped
-    privileged: true
-    volumes:
-      - ${APP_DATA_DIR}/opt:/opt
-      - ${APP_DATA_DIR}/profiles:/profiles
-      - /dev/input:/dev/input
-      - /run/udev/data:/run/udev/data
-    environment:
-      - KASM_PORT=443
   app_proxy:
     environment:
-      APP_HOST: big-bear-umbrel-kasm_app_1
+      APP_HOST: _app_1
       APP_PORT: "3000"
+  # Service name: app
+  # The `app` service definition
+  app:
+    # Image to be used for the container
+    image: linuxserver/kasm:1.120.20221218
+    # Container restart policy
+    restart: unless-stopped
+    # Privilege of the container
+    privileged: true
+    # Volumes to be mounted to the container
+    volumes:
+      # Mounting the local kasm/opt directory to /opt inside the container
+      - ${APP_DATA_DIR}/kasm_opt:/opt
+      # Mounting the local kasm/profiles directory to /profiles inside the container
+      - ${APP_DATA_DIR}/kasm_profiles:/profiles
+      # Mounting the local /dev/input directory to /dev/input inside the container
+      - /dev/input:/dev/input
+      # Mounting the local /run/udev/data directory to /run/udev/data inside the container
+      - /run/udev/data:/run/udev/data
+    # Environment variables
+    environment:
+      # Tell Kasm where the port number
+      - KASM_PORT=443

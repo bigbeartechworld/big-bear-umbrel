@@ -1,12 +1,19 @@
-
+# Configuration for uptime-kuma setup
+# Name of the big-bear-uptime-kuma application
 version: "3.7"
+# Service definitions for the big-bear-uptime-kuma application
 services:
-  app:
-    image: louislam/uptime-kuma:1
-    volumes:
-      - ${APP_DATA_DIR}/data:/app/data
-    restart: always
   app_proxy:
     environment:
-      APP_HOST: big-bear-umbrel-uptime-kuma_app_1
+      APP_HOST: _app_1
       APP_PORT: "3001"
+  # Service name: app
+  # The `app` service definition includes the docker image, container name, volume mappings, port configurations, restart policy, and CasaOS specific settings.
+  app:
+    # Docker image to use for the app service
+    image: louislam/uptime-kuma:2
+    # Volume mappings: Maps host directory to container directory for persistent storage
+    volumes:
+      - ${APP_DATA_DIR}/uptime-kuma_data:/app/data
+    # Restart policy: Always restart the container if it stops
+    restart: always

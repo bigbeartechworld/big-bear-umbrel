@@ -1,26 +1,47 @@
-
+# Configuration for penpot setup
+# Name of the big-bear-penpot application
 version: "3.7"
+# Service definitions for the big-bear-penpot application
 services:
+  app_proxy:
+    environment:
+      APP_HOST: _penpot-frontend_1
+      APP_PORT: "8080"
+  # Service name: app
+  # The `penpot-frontend` service definition
   penpot-frontend:
+    # Image to be used for the container
     image: penpotapp/frontend:2.10.1
+    # Container restart policy
     restart: unless-stopped
+    # Volumes to be mounted to the container
     volumes:
-      - ${APP_DATA_DIR}/assets:/opt/data/assets
+      # Mounting the local /DATA/AppData/$AppID/assets directory to /opt/data/assets inside the container
+      - ${APP_DATA_DIR}/penpot_assets:/opt/data/assets
+    # Other services that this service depends on
     depends_on:
       - penpot-backend
       - penpot-exporter
+    # Networks to be attached to the container
     networks:
       - big-bear-penpot-network
+  # Definition for penpot-backend service
   penpot-backend:
+    # Docker image for the service
     image: penpotapp/backend:2.10.1
+    # Restart policy for the container
     restart: unless-stopped
+    # Volumes to mount to the container
     volumes:
-      - ${APP_DATA_DIR}/assets:/opt/data/assets
+      - ${APP_DATA_DIR}/penpot_assets:/opt/data/assets
+    # Dependencies for the service
     depends_on:
       - penpot-postgres
       - penpot-redis
+    # Networks to connect the container to
     networks:
       - big-bear-penpot-network
+    # Environment variables for the service
     environment:
       - PENPOT_FLAGS=enable-registration enable-login-with-password disable-email-verification disable-secure-session-cookies
       - PENPOT_SECRET_KEY=big-bear-penpot-secret-key
@@ -32,32 +53,43 @@ services:
       - PENPOT_ASSETS_STORAGE_BACKEND=assets-fs
       - PENPOT_STORAGE_ASSETS_FS_DIRECTORY=/opt/data/assets
       - PENPOT_TELEMETRY_ENABLED=false
+  # Define the penpot-exporter service
   penpot-exporter:
+    # Use the penpotapp/exporter:1.19.3 Docker image
     image: penpotapp/exporter:2.10.1
+    # Automatically restart the container unless stopped
     restart: unless-stopped
+    # Connect the container to the big-bear-penpot-network network
     networks:
       - big-bear-penpot-network
+    # Set environment variables for the container
     environment:
+      # Set the PENPOT_PUBLIC_URI environment variable
       - PENPOT_PUBLIC_URI=http://big-bear-penpot-frontend:8080
+      # Set the PENPOT_REDIS_URI environment variable
       - PENPOT_REDIS_URI=redis://big-bear-penpot-redis/0
+  # Define the PostgreSQL service for Penpot
   penpot-postgres:
     image: postgres:14
     restart: unless-stopped
     stop_signal: SIGINT
     volumes:
-      - ${APP_DATA_DIR}/pgdata:/var/lib/postgresql/data
+      - ${APP_DATA_DIR}/penpot_pgdata:/var/lib/postgresql/data
     networks:
       - big-bear-penpot-network
     environment:
+      # Initialize the database with data checksums
       - POSTGRES_INITDB_ARGS=--data-checksums
       - POSTGRES_DB=penpot # Set the name of the database
       - POSTGRES_USER=bigbear # Set the username for the database
       - POSTGRES_PASSWORD=casaos # Set the password for the database
+  # Define the Redis service for Penpot
   penpot-redis:
     image: redis:7.4.6@sha256:d7432711a2a5c99c2e9dd0e006061cd274d7cb7a9e77f07ffe2ea99e21244677
     restart: unless-stopped
     networks:
       - big-bear-penpot-network
+  # Define the penpot-mailcatch service
   penpot-mailcatch:
     image: sj26/mailcatcher:latest
     restart: always
@@ -65,10 +97,9 @@ services:
       - "1025" # Expose port 1025 for SMTP
     networks:
       - big-bear-penpot-network # Connect to the big-bear-penpot-network
-  app_proxy:
-    environment:
-      APP_HOST: big-bear-umbrel-penpot_penpot-frontend_1
-      APP_PORT: "8080"
+# Define the networks section
 networks:
+  # Define the penpot-network
   big-bear-penpot-network:
+    # Set the driver to bridge
     driver: bridge

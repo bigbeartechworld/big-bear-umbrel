@@ -1,9 +1,17 @@
-
+# Configuration for joplin setup
+# Name of the big-bear-joplin application
 version: "3.7"
+# Service definitions for the big-bear-joplin application
 services:
+  app_proxy:
+    environment:
+      APP_HOST: _big-bear-joplin_1
+      APP_PORT: "22300"
+  # Configuration for the Joplin server service
   big-bear-joplin:
     image: joplin/server:3.4.3 # Docker image to use, specifying version.
     restart: unless-stopped # Policy to automatically restart the container unless manually stopped.
+    # Environment variables for the Joplin server, configuring database connection and application settings.
     environment:
       - APP_PORT=22300 # Port the Joplin server listens on.
       - APP_BASE_URL=http://localhost:22300 # Base URL for the Joplin server.
@@ -18,10 +26,11 @@ services:
       - big_bear_joplin_network # Connects the container to a defined network for inter-container communication.
     depends_on:
       - big-bear-joplin-db # Specifies the database service as a dependency for the Joplin server.
+  # Configuration for the PostgreSQL database service used by Joplin
   big-bear-joplin-db:
     image: postgres:14.2 # Docker image for PostgreSQL, specifying version.
     volumes:
-      - ${APP_DATA_DIR}/postgresql/data:/var/lib/postgresql/data # Maps data directory to host for persistence.
+      - ${APP_DATA_DIR}/joplin_postgresql_data:/var/lib/postgresql/data # Maps data directory to host for persistence.
     restart: unless-stopped # Restart policy similar to the Joplin server container.
     environment:
       - POSTGRES_PASSWORD=27a1d42a-a15d-43dd-903c-2a73538647fe # Database password, matching the Joplin server configuration.
@@ -29,10 +38,7 @@ services:
       - POSTGRES_DB=joplin # Specifies the database used for storing Joplin data.
     networks:
       - big_bear_joplin_network # Ensures database container is on the same network as the Joplin server.
-  app_proxy:
-    environment:
-      APP_HOST: big-bear-umbrel-joplin_big-bear-joplin_1
-      APP_PORT: "22300"
+# Network configuration for the services to communicate internally.
 networks:
   big_bear_joplin_network:
     driver: bridge # Uses a bridge network for inter-container communication.

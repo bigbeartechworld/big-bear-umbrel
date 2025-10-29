@@ -1,10 +1,25 @@
-
+# Docker Compose configuration for Warracker Service
+# This service provides a web interface for managing CasaOS users and permissions
+# Version: 0.1.0
+# Name of the big-bear-warracker application
 version: "3.7"
+# Service definitions for the big-bear-warracker application
 services:
+  app_proxy:
+    environment:
+      APP_HOST: _big-bear-warracker_1
+      APP_PORT: "80"
+  # Main service configuration for the Warracker application
+  # This service provides a web interface running on port 5000 for user administration
   big-bear-warracker:
+    # Image to be used for the container specifies the btop version and source
     image: ghcr.io/sassanix/warracker/main:9.9.3
+    # Container restart policy - restarts the container unless manually stopped
     restart: unless-stopped
+    # Run the container in privileged mode to allow access to system metrics
     privileged: true
+    # Environment variables for service configuration
+    # These settings control the Flask application behavior and default admin credentials
     environment:
       - DB_HOST=big-bear-warrackerdb
       - DB_NAME=big_bear_warracker
@@ -14,33 +29,41 @@ services:
       - SMTP_PORT=465
       - SMTP_USERNAME=youremail@email.com
       - SMTP_PASSWORD=password
+    # Volume mappings required for system integration
+    # These mounts allow the container to interact with the host system
     volumes:
-      - ${APP_DATA_DIR}/uploads:/data/uploads
+      # Required for monitoring system resources and container metrics
+      - ${APP_DATA_DIR}/warracker_uploads:/data/uploads
+    # Container networks
     networks:
       - big_bear_warracker_network
+    # Depends on the warrackerdb service
     depends_on:
       big-bear-warrackerdb:
         condition: service_healthy
   big-bear-warrackerdb:
+    # Container image
     image: postgres:15-alpine
+    # Container volumes
     volumes:
-      - ${APP_DATA_DIR}/warrackerdb:/var/lib/postgresql/data
+      - ${APP_DATA_DIR}/warracker_warrackerdb:/var/lib/postgresql/data
+    # Container environment variables
     environment:
       - POSTGRES_DB=big_bear_warracker
       - POSTGRES_USER=big_bear_warracker_user
       - POSTGRES_PASSWORD=4892f1bc-f1ea-464f-b528-1d52b2c9bb05
+    # Container restart policy - restarts the container unless manually stopped
     restart: unless-stopped
+    # Container networks
     networks:
       - big_bear_warracker_network
+    # Health check for the container
     healthcheck:
       test: ["CMD-SHELL", "pg_isready -U $$POSTGRES_USER -d $$POSTGRES_DB"]
       interval: 5s
       timeout: 5s
       retries: 5
-  app_proxy:
-    environment:
-      APP_HOST: big-bear-umbrel-warracker_big-bear-warracker_1
-      APP_PORT: "80"
+# Container networks
 networks:
   big_bear_warracker_network:
     name: big_bear_warracker_network

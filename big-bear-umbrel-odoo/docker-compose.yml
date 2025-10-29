@@ -1,19 +1,34 @@
-
+# Configuration for odoo setup
+# Name of the big-bear-odoo application
 version: "3.7"
+# Service definitions for the big-bear-odoo application
 services:
+  app_proxy:
+    environment:
+      APP_HOST: _big-bear-odoo_1
+      APP_PORT: "8069"
+  # Service name: big-bear-odoo
+  # This section defines the main Odoo service
   big-bear-odoo:
+    # Image to be used for the container
     image: odoo:19 # Docker image for Odoo version 17
+    # Container restart policy
     restart: unless-stopped # Restart policy to ensure service recovery
+    # User to run the container as
     user: root # Specifies running the container as root
+    # Volumes to be mounted to the container
     volumes:
-      - ${APP_DATA_DIR}/data/etc:/etc/odoo # Mounts Odoo configuration files
-      - ${APP_DATA_DIR}/data/addons:/mnt/extra-addons # Mounts additional Odoo addons
+      - ${APP_DATA_DIR}/odoo_data_etc:/etc/odoo # Mounts Odoo configuration files
+      - ${APP_DATA_DIR}/odoo_data_addons:/mnt/extra-addons # Mounts additional Odoo addons
+    # Environment variables
     environment:
       - HOST=big-bear-odoo-db # Database host
       - USER=odoo # Database username
       - PASSWORD=a8d785b6-bc00-49cc-8675-d404093d1507 # Database password
+    # Networks to be attached to the container
     networks:
       - big_bear_odoo_network # Specifies network attachment for internal communication
+  # Database service for Odoo
   big-bear-odoo-db:
     image: postgres:15 # PostgreSQL version 15 Docker image
     user: root # Runs as root user
@@ -23,13 +38,10 @@ services:
       - POSTGRES_DB=postgres # Database name
     restart: unless-stopped # Restart policy for the database
     volumes:
-      - ${APP_DATA_DIR}/data/postgresql:/var/lib/postgresql/data # Mounts PostgreSQL data directory
+      - ${APP_DATA_DIR}/odoo_data_postgresql:/var/lib/postgresql/data # Mounts PostgreSQL data directory
     networks:
       - big_bear_odoo_network # Attached network for internal communication
-  app_proxy:
-    environment:
-      APP_HOST: big-bear-umbrel-odoo_big-bear-odoo_1
-      APP_PORT: "8069"
+# Network definition for the big-bear-odoo application
 networks:
   big_bear_odoo_network:
     driver: bridge # Specifies network driver as bridge

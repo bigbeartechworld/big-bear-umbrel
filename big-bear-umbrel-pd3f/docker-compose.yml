@@ -1,12 +1,25 @@
-
+# Configuration for pd3f setup
+# Name of the big-bear-pd3f application
 version: "3.7"
+# Service definitions for the big-bear-pd3f application
 services:
+  app_proxy:
+    environment:
+      APP_HOST: _web_1
+      APP_PORT: "5000"
+  # Service name: web
+  # The `web` service definition
   web:
+    # Image to be used for the container
     image: pd3f/pd3f:latest
+    # Container restart policy
     restart: unless-stopped
+    # Volumes to be mounted to the container
     volumes:
-      - ${APP_DATA_DIR}/uploads:/uploads/
+      # Mounting the local /DATA/AppData/$AppID/uploads directory to /uploads/ inside the container
+      - ${APP_DATA_DIR}/pd3f_uploads:/uploads/
     command: ["gunicorn", "app:app", "--bind=0.0.0.0:5000"]
+    # Other services that this service depends on
     depends_on:
       - redis
       - parsr
@@ -14,18 +27,21 @@ services:
       - ocr_worker
     networks:
       - big-bear-pd3f-network
+  # Service name: parsr
   parsr:
     image: axarev/parsr:v1.2.2
     networks:
       - big-bear-pd3f-network
     expose:
       - 3001
+  # Service name: redis
   redis:
     image: redis:6.2.20-alpine@sha256:2185e741f4c1e7b0ea9ca1e163a3767c4270a73086b6bbea2049a7203212fb7f
     networks:
       - big-bear-pd3f-network
     expose:
       - 6379
+  # Service name: worker
   worker:
     image: pd3f/pd3f:latest
     depends_on:
@@ -34,22 +50,21 @@ services:
     networks:
       - big-bear-pd3f-network
     volumes:
-      - ${APP_DATA_DIR}/cache:/root/.cache/
-      - ${APP_DATA_DIR}/to-ocr:/to-ocr/
-      - ${APP_DATA_DIR}/uploads:/uploads/
+      - ${APP_DATA_DIR}/pd3f_cache:/root/.cache/
+      - ${APP_DATA_DIR}/pd3f_to-ocr:/to-ocr/
+      - ${APP_DATA_DIR}/pd3f_uploads:/uploads/
+    # delete results / files after one day
     environment:
       - KEEP_RESULTS_HOURS=24
     command: ["rq", "worker", "-u", "redis://redis:6379", "--results-ttl", "86400"]
+  # Service name: ocr_worker
   ocr_worker:
     image: pd3f/pd3f-ocr:latest
     networks:
       - big-bear-pd3f-network
     volumes:
-      - ${APP_DATA_DIR}/to-ocr:/to-ocr/
-  app_proxy:
-    environment:
-      APP_HOST: big-bear-umbrel-pd3f_web_1
-      APP_PORT: "5000"
+      - ${APP_DATA_DIR}/pd3f_to-ocr:/to-ocr/
+# Network definitions
 networks:
   big-bear-pd3f-network:
     name: big-bear-pd3f-network
