@@ -1,15 +1,23 @@
-
+# Configuration for open-webui setup
+# Name of the big-bear-open-webui application
 version: "3.7"
+# Service definitions for the big-bear-open-webui application
 services:
+  app_proxy:
+    environment:
+      APP_HOST: _big-bear-open-webui_1
+      APP_PORT: "8080"
+  # Service name: big-bear-open-webui
+  # The `big-bear-open-webui` service definition
   big-bear-open-webui:
+    # Image to be used for the container
     image: ghcr.io/open-webui/open-webui:git-33e54a9
+    # Container restart policy
     restart: unless-stopped
+    # Volumes to be mounted to the container
     volumes:
-      - ${APP_DATA_DIR}/data:/app/backend/data
+      - ${APP_DATA_DIR}/open-webui_data:/app/backend/data
+    # Environment variables
     environment:
       - OLLAMA_BASE_URL=
       - OPENAI_API_KEY=
-  app_proxy:
-    environment:
-      APP_HOST: big-bear-umbrel-open-webui_big-bear-open-webui_1
-      APP_PORT: "8080"

@@ -1,19 +1,19 @@
 manifestVersion: 1
-id: big-bear-umbrel-beszel
+id: 
 category: BigBearCasaOS
 name: Beszel
-version: "0.14.1"
+version: "0.15.0"
 tagline: Server Monitoring Hub
 description: >-
   A lightweight server resource monitoring hub with historical data, docker stats, and alerts.
 releaseNotes: >-
   This version includes various improvements and bug fixes.
 developer: henrygd
-website: https://github.com/bigbeartechworld/big-bear-casaos
+website: 
 dependencies: []
-repo: https://github.com/bigbeartechworld/big-bear-casaos
-support: https://github.com/bigbeartechworld/big-bear-casaos/issues
-port: 10011
+repo: https://github.com/bigbeartechworld/big-bear-universal-apps
+support: https://github.com/bigbeartechworld/big-bear-universal-apps/issues
+port: 10013
 gallery:
   - 1.jpg
   - 2.jpg
@@ -21,6 +21,6 @@ gallery:
 path: ""
 defaultUsername: ""
 defaultPassword: ""
-icon: https://cdn.jsdelivr.net/gh/bigbeartechworld/big-bear-casaos/Apps/beszel/logo.jpg
+icon: https://cdn.jsdelivr.net/gh/bigbeartechworld/big-bear-universal-apps/apps/beszel/logo.jpg
 submitter: BigBearTechWorld
-submission: https://github.com/bigbeartechworld/big-bear-casaos
+submission: https://github.com/bigbeartechworld/big-bear-universal-apps

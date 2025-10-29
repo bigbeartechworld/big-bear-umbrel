@@ -1,14 +1,24 @@
-
+# Docker Compose configuration for BigBear CasaOS JFA-GO
+# This service provides a web interface for managing Jellyfin users and permissions
+# Initial Version: latest
+# Name of the big-bear-jfa-go application
 version: "3.7"
+# Service definitions for the big-bear-jfa-go application
 services:
-  big-bear-jfa-go:
-    image: hrfee/jfa-go:latest
-    restart: unless-stopped
-    volumes:
-      - ${APP_DATA_DIR}/.config/jfa-go:/data # Path to wherever you want to store the config file and other data
-      - ${APP_DATA_DIR}/jellyfin:/jf # Only needed for password resets through Jellyfin, ignore if not using or using Emby
-      - /etc/localtime:/etc/localtime:ro # Makes sure time is correct
   app_proxy:
     environment:
-      APP_HOST: big-bear-umbrel-jfa-go_big-bear-jfa-go_1
+      APP_HOST: _big-bear-jfa-go_1
       APP_PORT: "8056"
+  # Main service configuration for the JFA-GO application
+  # This service provides a web interface running on port 8056 for user administration
+  big-bear-jfa-go:
+    # Image to be used for the container specifies the hrfee/jfa-go version and source
+    image: hrfee/jfa-go:latest
+    # Container restart policy - restarts the container unless manually stopped
+    restart: unless-stopped
+    # Volume mappings required for system integration
+    # These mounts allow the container to interact with the host system
+    volumes:
+      - ${APP_DATA_DIR}/jfa-go_.config_jfa-go:/data # Path to wherever you want to store the config file and other data
+      - ${APP_DATA_DIR}/jfa-go_jellyfin:/jf # Only needed for password resets through Jellyfin, ignore if not using or using Emby
+      - /etc/localtime:/etc/localtime:ro # Makes sure time is correct

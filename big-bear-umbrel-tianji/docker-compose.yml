@@ -1,9 +1,20 @@
-
+# Configuration for tianji setup
+# Name of the big-bear-tianji application
 version: "3.7"
+# Service definitions for the big-bear-tianji application
 services:
+  app_proxy:
+    environment:
+      APP_HOST: _big-bear-tianji_1
+      APP_PORT: "12345"
+  # Service name: big-bear-tianji
+  # The `big-bear-tianji` service definition
   big-bear-tianji:
-    image: moonrailgun/tianji:1.30.1
+    # Image to be used for the container
+    image: moonrailgun/tianji:1.30.4
+    # Container restart policy
     restart: unless-stopped
+    # Environment variables for the container
     environment:
       DATABASE_URL: postgresql://tianji-user:227453b7-1286-48cc-b471-1c269495c5fc@big-bear-tianji-db:5432/tianji
       JWT_SECRET: replace-me-with-a-random-string
@@ -13,6 +24,7 @@ services:
       - big_bear_tianji_network
     depends_on:
       - big-bear-tianji-db
+  # Postgres database
   big-bear-tianji-db:
     image: postgres:15.4-alpine
     environment:
@@ -20,7 +32,7 @@ services:
       POSTGRES_USER: tianji-user
       POSTGRES_PASSWORD: 227453b7-1286-48cc-b471-1c269495c5fc
     volumes:
-      - ${APP_DATA_DIR}/pgdata:/var/lib/postgresql/data
+      - ${APP_DATA_DIR}/tianji_pgdata:/var/lib/postgresql/data
     restart: always
     healthcheck:
       test: ["CMD-SHELL", "pg_isready -U $${POSTGRES_USER} -d $${POSTGRES_DB}"]
@@ -29,10 +41,6 @@ services:
       retries: 5
     networks:
       - big_bear_tianji_network
-  app_proxy:
-    environment:
-      APP_HOST: big-bear-umbrel-tianji_big-bear-tianji_1
-      APP_PORT: "12345"
 networks:
   big_bear_tianji_network:
     driver: bridge

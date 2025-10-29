@@ -1,16 +1,24 @@
-
+# Configuration for genmon setup
+# Name of the big-bear-genmon application
 version: "3.7"
+# Service definitions for the big-bear-genmon application
 services:
-  big-bear-genmon:
-    image: bigbeartechworld/big-bear-genmon:1.19.06
-    environment:
-      - TZ=America/Chicago # Set the timezone to 'America/Chicago'
-    restart: unless-stopped # Restart the container unless it is explicitly stopped
-    volumes:
-      - ${APP_DATA_DIR}/git_genmon:/git/genmon # Mount a named volume 'big_bear_genmon_data' to store data persistently at /git/genmon in the container (this is the default location)
-      - ${APP_DATA_DIR}/etc_genmon:/etc/genmon # Mount a named volume 'big_bear_genmon_config' to store configuration files persistently at /etc/genmon in the container
-      - ${APP_DATA_DIR}/var_log:/var/log # Mount a named volume 'big_bear_genmon_logs' to store logs persistently at /var/log in the container
   app_proxy:
     environment:
-      APP_HOST: big-bear-umbrel-genmon_big-bear-genmon_1
+      APP_HOST: _big-bear-genmon_1
       APP_PORT: "22"
+  # Service name: big-bear-genmon
+  # The `big-bear-genmon` service definition
+  big-bear-genmon:
+    # Image to be used for the container
+    image: bigbeartechworld/big-bear-genmon:1.19.06
+    # Environment variables to set inside the container
+    environment:
+      - TZ=America/Chicago # Set the timezone to 'America/Chicago'
+    # Define the restart policy for the service container
+    restart: unless-stopped # Restart the container unless it is explicitly stopped
+    # Mount host paths or named volumes into the container
+    volumes:
+      - ${APP_DATA_DIR}/genmon_git_genmon:/git/genmon # Mount a named volume 'big_bear_genmon_data' to store data persistently at /git/genmon in the container (this is the default location)
+      - ${APP_DATA_DIR}/genmon_etc_genmon:/etc/genmon # Mount a named volume 'big_bear_genmon_config' to store configuration files persistently at /etc/genmon in the container
+      - ${APP_DATA_DIR}/genmon_var_log:/var/log # Mount a named volume 'big_bear_genmon_logs' to store logs persistently at /var/log in the container

@@ -1,5 +1,5 @@
 manifestVersion: 1
-id: big-bear-umbrel-cloudflared-web
+id: 
 category: BigBearCasaOS
 name: Cloudflared Web
 version: "2025.10.0"
@@ -9,10 +9,10 @@ description: >-
 releaseNotes: >-
   This version includes various improvements and bug fixes.
 developer: wisdomsky
-website: https://github.com/bigbeartechworld/big-bear-casaos
+website: 
 dependencies: []
-repo: https://github.com/bigbeartechworld/big-bear-casaos
-support: https://github.com/bigbeartechworld/big-bear-casaos/issues
+repo: https://github.com/bigbeartechworld/big-bear-universal-apps
+support: https://github.com/bigbeartechworld/big-bear-universal-apps/issues
 port: 14333
 gallery:
   - 1.jpg
@@ -23,4 +23,4 @@ defaultUsername: ""
 defaultPassword: ""
 icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/cloudflare.png
 submitter: BigBearTechWorld
-submission: https://github.com/bigbeartechworld/big-bear-casaos
+submission: https://github.com/bigbeartechworld/big-bear-universal-apps

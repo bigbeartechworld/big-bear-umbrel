@@ -1,22 +1,37 @@
-
+# Configuration for Readeck setup
+# Readeck is a self-hosted bookmark manager and read-it-later application
+# Name of the big-bear-readeck application
 version: "3.7"
+# Service definitions for the big-bear-readeck application
 services:
-  big-bear-readeck:
-    image: codeberg.org/readeck/readeck:0.20.4
-    restart: unless-stopped
+  app_proxy:
     environment:
+      APP_HOST: _big-bear-readeck_1
+      APP_PORT: "8000"
+  # Service name: big-bear-readeck
+  # The main Readeck service definition
+  big-bear-readeck:
+    # Image to be used for the container
+    image: codeberg.org/readeck/readeck:0.20.4
+    # Container restart policy
+    restart: unless-stopped
+    # Environment variables for Readeck configuration
+    environment:
+      # Defines the application log level. Can be error, warn, info, debug.
       - READECK_LOG_LEVEL=info
+      # The IP address on which Readeck listens
       - READECK_SERVER_HOST=0.0.0.0
+      # The TCP port on which Readeck listens
       - READECK_SERVER_PORT=8000
+      # Log format (json, text, or dev)
       - READECK_LOG_FORMAT=text
+    # Volumes to be mounted to the container
     volumes:
-      - ${APP_DATA_DIR}/data:/readeck
+      # Volume mapping for persistent data storage
+      - ${APP_DATA_DIR}/readeck_data:/readeck
+    # Health check configuration
     healthcheck:
       test: ["CMD", "/bin/readeck", "healthcheck", "-config", "config.toml"]
       interval: 30s
       timeout: 2s
       retries: 3
-  app_proxy:
-    environment:
-      APP_HOST: big-bear-umbrel-readeck_big-bear-readeck_1
-      APP_PORT: "8000"

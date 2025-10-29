@@ -1,12 +1,26 @@
-
+# Configuration for octoprint setup
+# Name of the big-bear-octoprint application
 version: "3.7"
+# Service definitions for the big-bear-octoprint application
 services:
-  app:
-    image: octoprint/octoprint:1.11.3
-    restart: unless-stopped
-    volumes:
-      - ${APP_DATA_DIR}/octoprint:/octoprint
   app_proxy:
     environment:
-      APP_HOST: big-bear-umbrel-octoprint_app_1
+      APP_HOST: _app_1
       APP_PORT: "80"
+  # Service name: app
+  # The `app` service definition
+  app:
+    # Image to be used for the container
+    image: octoprint/octoprint:1.11.3
+    # Container restart policy
+    restart: unless-stopped
+    # devices:
+    # use `python -m serial.tools.miniterm` to see what the name is of the printer, this requires pyserial
+    #  - /dev/ttyACM0:/dev/ttyACM0
+    #  - /dev/video0:/dev/video0
+    volumes:
+      - ${APP_DATA_DIR}/octoprint_octoprint:/octoprint
+      # uncomment the lines below to ensure camera streaming is enabled when
+      # you add a video device
+      #environment:
+      #  - ENABLE_MJPG_STREAMER=true

@@ -1,22 +1,36 @@
-
+# Configuration for OpenVPN-AS setup
+# Name of the OpenVPN-AS application
 version: "3.7"
+# Service definitions for the OpenVPN application
 services:
+  app_proxy:
+    environment:
+      APP_HOST: _big-bear-openvpn-as_1
+      APP_PORT: "943"
+  # Service name: app
+  # The `app` service definition
   big-bear-openvpn-as:
+    # Image to be used for the container
     image: openvpn/openvpn-as:2.13.1-d8cdeb9c-Ubuntu22
+    # Container restart policy
     restart: unless-stopped
+    # Privileged mode for the container
     privileged: true
+    # Capabilities to be added to the container
     cap_add:
       - NET_ADMIN
+    # Environment variables for the container
     environment:
       - PGID=1000
       - PUID=1000
+      # Timezone for the container
       - TZ=Europe/Rome
+    # Hostname for the container
     hostname: OpenVPN
+    # Labels for the container
     labels:
       icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/openvpn.png
+    # Volumes to be mounted to the container
     volumes:
-      - ${APP_DATA_DIR}/data:/openvpn
-  app_proxy:
-    environment:
-      APP_HOST: big-bear-umbrel-openvpn-as_big-bear-openvpn-as_1
-      APP_PORT: "943"
+      # Mounting the local OpenVPN/data directory to /openvpn inside the container
+      - ${APP_DATA_DIR}/openvpn-as_data:/openvpn

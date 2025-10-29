@@ -1,5 +1,12 @@
+# Name of the application
 version: "3.7"
+# List of services that this application uses
 services:
+  app_proxy:
+    environment:
+      APP_HOST: _app_1
+      APP_PORT: "3000"
+  # Main service for the Umami application
   app:
     image: ghcr.io/umami-software/umami:postgresql-latest # Docker image for the Umami app
     environment: # Environment variables for the service
@@ -10,6 +17,7 @@ services:
       db:
         condition: service_healthy
     restart: always # Restart policy
+  # Database service for the Umami application
   db:
     image: postgres:15-alpine # Docker image for the PostgreSQL database
     environment: # Environment variables for the service
@@ -17,14 +25,10 @@ services:
       POSTGRES_USER: umami
       POSTGRES_PASSWORD: umami
     volumes: # Volumes for data persistence
-      - ${APP_DATA_DIR}/pgdata:/var/lib/postgresql/data
+      - ${APP_DATA_DIR}/umami_pgdata:/var/lib/postgresql/data
     restart: always # Restart policy
     healthcheck: # Health check configuration
       test: ["CMD-SHELL", "pg_isready -U $${POSTGRES_USER} -d $${POSTGRES_DB}"]
       interval: 5s
       timeout: 5s
       retries: 5
-  app_proxy:
-    environment:
-      APP_HOST: big-bear-umbrel-umami_app_1
-      APP_PORT: "3000"

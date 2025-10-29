@@ -1,8 +1,18 @@
-
+# Configuration for jellystat setup
+# Name of the big-bear-jellystat application
 version: "3.7"
+# Service definitions for the big-bear-jellystat application
 services:
+  app_proxy:
+    environment:
+      APP_HOST: _big-bear-jellystat_1
+      APP_PORT: "3000"
+  # Service name: big-bear-jellystat
+  # The `big-bear-jellystat` service definition
   big-bear-jellystat:
+    # Image to be used for the container
     image: cyfershepard/jellystat:1.1.6
+    # Container restart policy
     restart: unless-stopped
     environment:
       - POSTGRES_USER=postgres
@@ -10,8 +20,9 @@ services:
       - POSTGRES_IP=big-bear-jellystat-db
       - POSTGRES_PORT=5432
       - JWT_SECRET="my-secret-jwt-key"
+    # Volumes to be mounted to the container
     volumes:
-      - ${APP_DATA_DIR}/backup-data:/app/backend/backup-data
+      - ${APP_DATA_DIR}/jellystat_backup-data:/app/backend/backup-data
     networks:
       - big-bear-jellystat-network
   big-bear-jellystat-db:
@@ -21,13 +32,9 @@ services:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: 8a23ad09-61cf-4178-a783-6d4586496e3a
     volumes:
-      - ${APP_DATA_DIR}/postgres-data:/var/lib/postgresql/data # Mounting the volume
+      - ${APP_DATA_DIR}/jellystat_postgres-data:/var/lib/postgresql/data # Mounting the volume
     networks:
       - big-bear-jellystat-network
-  app_proxy:
-    environment:
-      APP_HOST: big-bear-umbrel-jellystat_big-bear-jellystat_1
-      APP_PORT: "3000"
 networks:
   big-bear-jellystat-network:
     name: big-bear-jellystat-network
