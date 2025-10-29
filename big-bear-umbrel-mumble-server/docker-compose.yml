@@ -1,10 +1,16 @@
+# Name of the service
 version: "3.7"
+# Service configurations
 services:
-  app:
-    image: mumblevoip/mumble-server:v1.4.230-6
-    hostname: mumble-server
-    restart: on-failure
   app_proxy:
     environment:
-      APP_HOST: big-bear-umbrel-mumble-server_app_1
+      APP_HOST: _app_1
       APP_PORT: "64738"
+  # Main application service
+  app:
+    # Docker image to use
+    image: mumblevoip/mumble-server:v1.4.230-6
+    # Hostname for the container
+    hostname: mumble-server
+    # Restart policy
+    restart: on-failure

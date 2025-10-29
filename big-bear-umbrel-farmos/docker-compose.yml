@@ -1,22 +1,43 @@
-
+# Configuration for farmos setup
+# Name of the big-bear-farmos application
 version: "3.7"
+# Service definitions for the big-bear-farmos application
 services:
+  app_proxy:
+    environment:
+      APP_HOST: _big-bear-farmos_1
+      APP_PORT: "80"
+  # Service name: big-bear-farmos
+  # The `big-bear-farmos` service definition
   big-bear-farmos:
+    # Image to be used for the container
     image: farmos/farmos:3.4.5
+    # Container restart policy
     restart: unless-stopped
+    # Volumes to be mounted to the container
     volumes:
-      - ${APP_DATA_DIR}/sites:/opt/drupal/web/sites
+      # Mounting the local homarr/configs directory to /app/data/configs inside the container
+      - ${APP_DATA_DIR}/farmos_sites:/opt/drupal/web/sites
     networks:
       - big-bear-farmos-network
+  # MariaDB database service configuration for FarmOS
   big-bear-farmos-db:
+    # Use MariaDB version 10 image
     image: mariadb:10
+    # Mount the database files to persist data
     volumes:
-      - "${APP_DATA_DIR}/db:/var/lib/mysql"
+      - "farmos_db:/var/lib/mysql"
+    # Database environment configuration
     environment:
+      # Root user password
       MYSQL_ROOT_PASSWORD: 037ed96f-5f27-4fa8-bd7f-49b4a804a05c
+      # Name of the database to create
       MYSQL_DATABASE: big_bear_farmos
+      # Create a database user
       MYSQL_USER: farmos
+      # Set the database user password
       MYSQL_PASSWORD: 037ed96f-5f27-4fa8-bd7f-49b4a804a05c
+    # Health check configuration to ensure database is running properly
     healthcheck:
       test: ["CMD", "healthcheck.sh", "--connect", "--innodb_initialized"]
       start_period: 1m
@@ -24,12 +45,9 @@ services:
       interval: 1m
       timeout: 5s
       retries: 3
+    # Connect to the FarmOS network
     networks:
       - big-bear-farmos-network
-  app_proxy:
-    environment:
-      APP_HOST: big-bear-umbrel-farmos_big-bear-farmos_1
-      APP_PORT: "80"
 networks:
   big-bear-farmos-network:
     name: big-bear-farmos-network

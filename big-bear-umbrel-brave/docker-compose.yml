@@ -1,5 +1,9 @@
 version: "3.7"
 services:
+  app_proxy:
+    environment:
+      APP_HOST: _brave_1
+      APP_PORT: "6901"
   brave:
     image: kasmweb/brave:1.15.0-rolling # Docker image for the Brave browser
     environment:
@@ -7,8 +11,4 @@ services:
       - LAUNCH_URL=https://community.bigbeartechworld.com/ # Set the default URL to Big Bear Tech World
     shm_size: 512m # Allocate 512 MB of shared memory
     volumes:
-      - ${APP_DATA_DIR}/Downloads:/home/kasm-user/Downloads # Mount the host directory to the container's Downloads directory
-  app_proxy:
-    environment:
-      APP_HOST: big-bear-umbrel-brave_brave_1
-      APP_PORT: "6901"
+      - ${APP_DATA_DIR}/brave_Downloads:/home/kasm-user/Downloads # Mount the host directory to the container's Downloads directory

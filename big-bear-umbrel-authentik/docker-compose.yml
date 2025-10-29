@@ -1,8 +1,17 @@
-
+# Configuration for authentik setup
+# Name of the big-bear-authentik application
 version: "3.7"
+# Service definitions for the big-bear-authentik application
 services:
+  app_proxy:
+    environment:
+      APP_HOST: _big-bear-authentik_1
+      APP_PORT: "9443"
+  # Service name: authentik
+  # The `authentik` service definition
   big-bear-authentik:
-    image: ghcr.io/goauthentik/server:2025.8.4
+    # Image to be used for the container
+    image: ghcr.io/goauthentik/server:2025.10.0
     command: server
     environment:
       AUTHENTIK_REDIS__HOST: big-bear-authentik-redis
@@ -12,15 +21,15 @@ services:
       AUTHENTIK_POSTGRESQL__PASSWORD: authentik-password
       AUTHENTIK_SECRET_KEY: changeme
     volumes:
-      - ${APP_DATA_DIR}/data/authentik-media:/media
-      - ${APP_DATA_DIR}/data/authentik-custom-templates:/templates
+      - ${APP_DATA_DIR}/authentik_data_authentik-media:/media
+      - ${APP_DATA_DIR}/authentik_data_authentik-custom-templates:/templates
     depends_on:
       - big-bear-authentik-db
       - big-bear-authentik-redis
     networks:
       - big_bear_authentik_network
   big-bear-authentik-worker:
-    image: ghcr.io/goauthentik/server:2025.8.4
+    image: ghcr.io/goauthentik/server:2025.10.0
     restart: unless-stopped
     command: worker
     environment:
@@ -30,18 +39,27 @@ services:
       AUTHENTIK_POSTGRESQL__NAME: authentik
       AUTHENTIK_POSTGRESQL__PASSWORD: authentik-password
       AUTHENTIK_SECRET_KEY: changeme
+    # `user: root` and the docker socket volume are optional.
+    # See more for the docker socket integration here:
+    # https://goauthentik.io/docs/outposts/integrations/docker
+    # Removing `user: root` also prevents the worker from fixing the permissions
+    # on the mounted folders, so when removing this make sure the folders have the correct UID/GID
+    # (1000:1000 by default)
     user: root
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
-      - ${APP_DATA_DIR}/data/authentik-media:/media
-      - ${APP_DATA_DIR}/data/authentik-certs:/certs
-      - ${APP_DATA_DIR}/data/authentik-custom-templates:/templates
+      - ${APP_DATA_DIR}/authentik_data_authentik-media:/media
+      - ${APP_DATA_DIR}/authentik_data_authentik-certs:/certs
+      - ${APP_DATA_DIR}/authentik_data_authentik-custom-templates:/templates
     depends_on:
       - big-bear-authentik-db
       - big-bear-authentik-redis
     networks:
       - big_bear_authentik_network
   big-bear-authentik-db:
+    # PostgreSQL 14+ required by Authentik (since version 2024.6)
+    # BREAKING CHANGE: Existing users with PostgreSQL 12 data need to migrate
+    # See: https://www.postgresql.org/docs/current/upgrading.html
     image: postgres:14-alpine
     restart: unless-stopped
     healthcheck:
@@ -51,7 +69,7 @@ services:
       retries: 5
       timeout: 5s
     volumes:
-      - ${APP_DATA_DIR}/data/postgres:/var/lib/postgresql/data
+      - ${APP_DATA_DIR}/authentik_data_postgres:/var/lib/postgresql/data
     environment:
       POSTGRES_PASSWORD: authentik-password
       POSTGRES_USER: authentik
@@ -69,13 +87,9 @@ services:
       retries: 5
       timeout: 3s
     volumes:
-      - ${APP_DATA_DIR}/data/redis:/data
+      - ${APP_DATA_DIR}/authentik_data_redis:/data
     networks:
       - big_bear_authentik_network
-  app_proxy:
-    environment:
-      APP_HOST: big-bear-umbrel-authentik_big-bear-authentik_1
-      APP_PORT: "9443"
 networks:
   big_bear_authentik_network:
     driver: bridge

@@ -1,17 +1,26 @@
-
+# Configuration for ollama-amd setup
+# Name of the big-bear-ollama-amd application
 version: "3.7"
+# Service definitions for the big-bear-ollama-amd application
 services:
-  big-bear-ollama-amd:
-    image: ollama/ollama:0.12.6-rocm
-    restart: unless-stopped
-    environment:
-      - PORT=11434
-    volumes:
-      - ${APP_DATA_DIR}/.ollama:/root/.ollama
-    devices:
-      - /dev/kfd
-      - /dev/dri
   app_proxy:
     environment:
-      APP_HOST: big-bear-umbrel-ollama-amd_big-bear-ollama-amd_1
+      APP_HOST: _big-bear-ollama-amd_1
       APP_PORT: "11434"
+  # Service name: big-bear-ollama-amd
+  # The `big-bear-ollama-amd` service definition
+  big-bear-ollama-amd:
+    # Image to be used for the container
+    image: ollama/ollama:0.12.6-rocm
+    # Container restart policy
+    restart: unless-stopped
+    # Environment variables
+    environment:
+      - PORT=11434
+    # Volumes to be mounted to the container
+    volumes:
+      - ${APP_DATA_DIR}/ollama-amd_.ollama:/root/.ollama
+    devices:
+      # Attach GPU
+      - /dev/kfd
+      - /dev/dri
