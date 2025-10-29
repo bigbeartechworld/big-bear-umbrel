@@ -1,0 +1,22 @@
+# Configuration for homepage setup
+# Name of the big-bear-homepage application
+version: "3.7"
+# Service definitions for the big-bear-homepage application
+services:
+  app_proxy:
+    environment:
+      APP_HOST: _app_1
+      APP_PORT: "3000"
+  # Service name: app
+  # The `app` service definition
+  app:
+    # Image to be used for the container
+    image: ghcr.io/gethomepage/homepage:v1.5.0
+    # Mount points for volumes (persistent storage)
+    volumes:
+      # Maps local config directory to the config directory inside the container
+      # Ensure the local config directory is created before starting the container
+      - ${APP_DATA_DIR}/Homepage_config:/app/config
+      # Maps the Docker socket from the host to the container
+      # This allows the container to communicate with the Docker daemon on the host
+      - /var/run/docker.sock:/var/run/docker.sock

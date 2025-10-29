@@ -1,10 +1,18 @@
+# Configuration for node-red setup
+# Application Name
 version: "3.7"
+# Services used in the application
 services:
+  app_proxy:
+    environment:
+      APP_HOST: _app_1
+      APP_PORT: "1880"
+  # The `app` service for the node-red application
   app:
+    # Docker image to be used
     image: nodered/node-red:4.1.1
-    network_mode: host
-    restart: always
+    # Restart policy for the service
+    restart: unless-stopped
+    # Volumes for the service HOST -> CONTAINER
     volumes:
-      - type: bind
-        source: ${APP_DATA_DIR}/data
-        target: /data
+      - ${APP_DATA_DIR}/node-red_data:/data

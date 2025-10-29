@@ -1,8 +1,18 @@
-
+# Configuration for libretranslate setup
+# Name of the big-bear-libretranslate application
 version: "3.7"
+# Service definitions for the big-bear-libretranslate application
 services:
+  app_proxy:
+    environment:
+      APP_HOST: _big-bear-libretranslate_1
+      APP_PORT: "5000"
+  # Service name: big-bear-libretranslate
+  # The `big-bear-libretranslate` service definition
   big-bear-libretranslate:
+    # Image to be used for the container
     image: libretranslate/libretranslate:v1.7.3
+    # Container restart policy
     restart: unless-stopped
     environment:
       - LT_API_KEYS=true # Enables API key authentication for the LibreTranslate service.
@@ -10,12 +20,10 @@ services:
       - LT_UPDATE_MODELS=true # Allows the LibreTranslate service to update its translation models on startup.
       - LT_LOAD_ONLY=en,fr,es,de,it,pt,ru,ja,zh # Restricts the languages loaded by LibreTranslate to these language codes.
     volumes:
-      - ${APP_DATA_DIR}/db:/app/db # Mounts a volume at /app/db within the container for persistent API key storage.
-      - ${APP_DATA_DIR}/.local:/home/libretranslate/.local:rw # Mounts a volume for storing and updating translation models.
+      - ${APP_DATA_DIR}/libretranslate_db:/app/db # Mounts a volume at /app/db within the container for persistent API key storage.
+      - ${APP_DATA_DIR}/libretranslate_.local:/home/libretranslate/.local:rw # Mounts a volume for storing and updating translation models.
     tty: true # Allocates a pseudo-TTY, which can be useful for interactive applications and logging.
     healthcheck: # Defines a health check for the container to ensure it's running correctly.
+      # This command is run within the container to check its health.
+      # If the command exits with a 0 status, the service is considered healthy. Any other exit status indicates an unhealthy service.
       test: ["CMD-SHELL", "./venv/bin/python scripts/healthcheck.py"]
-  app_proxy:
-    environment:
-      APP_HOST: big-bear-umbrel-libretranslate_big-bear-libretranslate_1
-      APP_PORT: "5000"

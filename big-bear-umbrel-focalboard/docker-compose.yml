@@ -1,12 +1,18 @@
-
+# Configuration for focalboard setup
+# Application Name
 version: "3.7"
+# Services used in the application
 services:
-  app:
-    image: mattermost/focalboard:7.11.4
-    restart: unless-stopped
-    volumes:
-      - ${APP_DATA_DIR}/data:/opt/focalboard/data
   app_proxy:
     environment:
-      APP_HOST: big-bear-umbrel-focalboard_app_1
+      APP_HOST: _app_1
       APP_PORT: "8000"
+  # The `app` service for the Focalboard application
+  app:
+    # Docker image to be used
+    image: mattermost/focalboard:7.11.4
+    # Restart policy for the service
+    restart: unless-stopped
+    # Volumes for the service HOST -> CONTAINER
+    volumes:
+      - ${APP_DATA_DIR}/focalboard_data:/opt/focalboard/data

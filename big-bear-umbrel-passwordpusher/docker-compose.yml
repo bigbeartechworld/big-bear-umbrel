@@ -1,16 +1,31 @@
-
+# Configuration for pwpush setup
+# Name of the big-bear-pwpush application
 version: "3.7"
+# Service definitions for the big-bear-pwpush application
 services:
-  big-bear-pwpush:
-    image: pglombardo/pwpush:1.62.1
-    restart: unless-stopped
+  app_proxy:
     environment:
+      APP_HOST: _big-bear-pwpush_1
+      APP_PORT: "5100"
+  # Service name: big-bear-pwpush
+  # The `big-bear-pwpush` service definition
+  big-bear-pwpush:
+    # Image to be used for the container
+    image: pglombardo/pwpush:1.62.1
+    # Container restart policy
+    restart: unless-stopped
+    # Environment variables for the container
+    environment:
+      # Database connection string
       DATABASE_URL: "mysql2://pwpusher:6280144a-56af-486f-9088-ac7301399328@big-bear-pwpush-db:3306/passwordpusher_db"
+      # Password expiration settings
       PWP__PW__EXPIRE_AFTER_DAYS_DEFAULT: "1"
       PWP__PW__EXPIRE_AFTER_VIEWS_MIN: "1"
       PWP__PW__RETRIEVAL_STEP_DEFAULT: "true"
+    # Volumes to be mounted to the container
     volumes:
-      - ${APP_DATA_DIR}/storage:/opt/PasswordPusher/storage:rw
+      # Storage volume
+      - ${APP_DATA_DIR}/passwordpusher_storage:/opt/PasswordPusher/storage:rw
     networks:
       - big_bear_pwpush_network
   big-bear-pwpush-db:
@@ -21,13 +36,9 @@ services:
       MARIADB_DATABASE: "passwordpusher_db"
       MARIADB_RANDOM_ROOT_PASSWORD: "yes"
     volumes:
-      - ${APP_DATA_DIR}/mysql:/var/lib/mysql
+      - ${APP_DATA_DIR}/passwordpusher_mysql:/var/lib/mysql
     networks:
       - big_bear_pwpush_network
-  app_proxy:
-    environment:
-      APP_HOST: big-bear-umbrel-passwordpusher_big-bear-pwpush_1
-      APP_PORT: "5100"
 networks:
   big_bear_pwpush_network:
     driver: bridge

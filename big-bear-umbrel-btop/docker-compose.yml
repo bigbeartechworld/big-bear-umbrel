@@ -1,21 +1,35 @@
-
+# Configuration for btop setup
+# Name of the big-bear-btop application
 version: "3.7"
+# Service definitions for the big-bear-btop application
 services:
+  app_proxy:
+    environment:
+      APP_HOST: _big-bear-btop_1
+      APP_PORT: "7681"
+  # Service name: big-bear-btop
+  # The `big-bear-btop` service definition
   big-bear-btop:
+    # Image to be used for the container specifies the btop version and source
     image: bigbeartechworld/big-bear-btop:0.1.5
+    # Container restart policy - restarts the container unless manually stopped
     restart: unless-stopped
+    # Run the container in privileged mode to allow access to system metrics
     privileged: true
+    # Environment variables for authentication
     environment:
       - GOTTY_AUTH_USER=bigbear
       - GOTTY_AUTH_PASS=password
       - GOTTY_AUTH_ENABLED=true
+    # Mount necessary volumes for accessing system information
     volumes:
+      # Mount the host's /proc directory to the container's /proc directory
       - /proc:/proc
+      # Mount the host's /sys directory to the container's /sys directory
       - /sys:/sys
+      # Mount the host's /dev directory to the container's /dev directory
       - /dev:/dev
+      # Mount the host's /etc/localtime file to the container's /etc/localtime file (read-only)
       - /etc/localtime:/etc/localtime:ro
-      - ${APP_DATA_DIR}/config:/root/.config/btop
-  app_proxy:
-    environment:
-      APP_HOST: big-bear-umbrel-btop_big-bear-btop_1
-      APP_PORT: "7681"
+      # Mount a local directory for persisting btop configuration files
+      - ${APP_DATA_DIR}/btop_config:/root/.config/btop
