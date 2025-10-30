@@ -1,12 +1,20 @@
-
+# Configuration for playitgg setup
+# Name of the big-bear-playitgg application
 version: "3.7"
+# Service definitions for the big-bear-playitgg application
 services:
-  app:
-    image: dysta/playitgg:1.1.0
-    restart: unless-stopped
-    volumes:
-      - ${APP_DATA_DIR}/secrets:/secrets
   app_proxy:
     environment:
       APP_HOST: big-bear-umbrel-playitgg_app_1
-      APP_PORT: "8080"
+      APP_PORT: ""
+  # Service name: app
+  # The `app` service definition
+  app:
+    # Image to be used for the container
+    image: dysta/playitgg:1.1.0
+    # Container restart policy
+    restart: unless-stopped
+    # Volumes to be mounted to the container
+    volumes:
+      # Mounting the local playitgg directory to /secrets inside the container
+      - ${APP_DATA_DIR}/secrets:/secrets

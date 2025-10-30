@@ -1,6 +1,14 @@
-
+# Configuration for romm setup
+# Name of the big-bear-romm application
 version: "3.7"
+# Service definitions for the big-bear-romm application
 services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-romm_big-bear-romm_1
+      APP_PORT: "8080"
+  # Service name: big-bear-romm
+  # The `big-bear-romm` service definition
   big-bear-romm:
     image: rommapp/romm:4.3.2 # Docker image for the application
     environment:
@@ -10,6 +18,7 @@ services:
       - DB_NAME=romm # Name of the database (Should match the MYSQL_DATABASE value in the mariadb container)
       - DB_PASSWD=casaos # Database password (Should match the MYSQL_PASSWORD value in the mariadb container)
       - ROMM_AUTH_SECRET_KEY=<secret key> # Authentication secret key (Generate a key with `openssl rand -hex 32`)
+      # [Optional] Enable metadata providers (all disabled by default)
       - IGDB_CLIENT_ID=<igdb client id> # Generate an ID and SECRET in IGDB
       - IGDB_CLIENT_SECRET=<igdb client secret> # https://api-docs.igdb.com/#account-creation
       - MOBYGAMES_API_KEY=<moby api key> # https://www.mobygames.com/info/api/
@@ -18,21 +27,23 @@ services:
       - SCREENSCRAPER_PASSWORD=<screenscraper password> # [Optional] ScreenScraper password
       - RETROACHIEVEMENTS_API_KEY=<retroachievements api key> # [Optional] RetroAchievements API key
       - HASHEOUS_API_ENABLED=true # [Optional] Enable Hasheous API
+      # [Optional] Enable asynchronous tasks (all disabled by default)
       - ENABLE_RESCAN_ON_FILESYSTEM_CHANGE=true # Enable rescan on filesystem change
       - ENABLE_SCHEDULED_RESCAN=true # Enable scheduled rescan
       - ENABLE_SCHEDULED_UPDATE_SWITCH_TITLEDB=true # Enable scheduled update of Switch TitleDB database
     volumes:
-      - "${APP_DATA_DIR}/resources:/romm/resources" # [Optional] Path where roms metadata (covers) are stored
-      - "${APP_DATA_DIR}/redis-data:/redis-data" # Cached data for background tasks
-      - "${APP_DATA_DIR}/library:/romm/library" # Path to the roms library
-      - "${APP_DATA_DIR}/assets:/romm/assets" # Uploaded saves, states, etc.
-      - "${APP_DATA_DIR}/config:/romm/config" # [Optional] Path where config is stored
-      - "${APP_DATA_DIR}/logs:/romm/logs" # [Optional] Path where logs are stored
+      - ${APP_DATA_DIR}/resources:/romm/resources" # [Optional] Path where roms metadata (covers) are stored
+      - ${APP_DATA_DIR}/redis-data:/redis-data" # Cached data for background tasks
+      - ${APP_DATA_DIR}/library:/romm/library" # Path to the roms library
+      - ${APP_DATA_DIR}/assets:/romm/assets" # Uploaded saves, states, etc.
+      - ${APP_DATA_DIR}/config:/romm/config" # [Optional] Path where config is stored
+      - ${APP_DATA_DIR}/logs:/romm/logs" # [Optional] Path where logs are stored
     depends_on:
       - big-bear-rommdb # Make sure the romm_db service is started before the app service
     restart: "unless-stopped"
     networks:
       - big-bear-romm-network # Use the big-bear-romm-network network
+  # MariaDB service for rommdb
   big-bear-rommdb:
     image: mariadb:latest
     environment:
@@ -45,10 +56,7 @@ services:
     restart: "unless-stopped"
     networks:
       - big-bear-romm-network # Use the big-bear-romm-network network
-  app_proxy:
-    environment:
-      APP_HOST: big-bear-umbrel-romm_big-bear-romm_1
-      APP_PORT: "8080"
+# Network definitions for the big-bear-romm application
 networks:
   big-bear-romm-network:
     driver: bridge

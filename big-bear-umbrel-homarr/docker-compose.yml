@@ -1,15 +1,26 @@
-
+# Configuration for homarr setup
+# Name of the big-bear-homarr application
 version: "3.7"
+# Service definitions for the big-bear-homarr application
 services:
-  app:
-    image: ghcr.io/ajnart/homarr:0.16.0
-    restart: unless-stopped
-    volumes:
-      - ${APP_DATA_DIR}/configs:/app/data/configs
-      - ${APP_DATA_DIR}/icons:/app/public/icons
-      - ${APP_DATA_DIR}/data:/data
-      - /var/run/docker.sock:/var/run/docker.sock
   app_proxy:
     environment:
       APP_HOST: big-bear-umbrel-homarr_app_1
       APP_PORT: "7575"
+  # Service name: app
+  # The `app` service definition
+  app:
+    # Image to be used for the container
+    image: ghcr.io/ajnart/homarr:0.16.0
+    # Container restart policy
+    restart: unless-stopped
+    # Volumes to be mounted to the container
+    volumes:
+      # Mounting the local homarr/configs directory to /app/data/configs inside the container
+      - ${APP_DATA_DIR}/configs:/app/data/configs
+      # Mounting the local homarr/icons directory to /app/public/icons inside the container
+      - ${APP_DATA_DIR}/icons:/app/public/icons
+      # Mounting the local homarr/dat directory to /data inside the container
+      - ${APP_DATA_DIR}/data:/data
+      # Mounting docker.sock to allow docker management via Homarr
+      - /var/run/docker.sock:/var/run/docker.sock
