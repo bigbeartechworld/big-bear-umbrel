@@ -5,14 +5,14 @@ name: NetAlertX
 version: "25.10.1"
 tagline: NetAlertX
 description: >-
-  WIFI / LAN intruder detector. Scans for devices connected to your network and alerts you if new and unknown devices are found.
+  WIFI / LAN intruder detector. Scans for devices connected to your network and alerts you if new and unknown devices are found. 
 releaseNotes: >-
   This version includes various improvements and bug fixes.
 developer: jokobsk
-website: https://github.com/bigbeartechworld/big-bear-casaos
+website: 
 dependencies: []
-repo: https://github.com/bigbeartechworld/big-bear-casaos
-support: https://github.com/bigbeartechworld/big-bear-casaos/issues
+repo: https://github.com/bigbeartechworld/big-bear-universal-apps
+support: https://github.com/bigbeartechworld/big-bear-universal-apps/issues
 port: 8080
 gallery:
   - 1.jpg
@@ -23,4 +23,4 @@ defaultUsername: ""
 defaultPassword: ""
 icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/pi-alert.png
 submitter: BigBearTechWorld
-submission: https://github.com/bigbeartechworld/big-bear-casaos
+submission: https://github.com/bigbeartechworld/big-bear-universal-apps

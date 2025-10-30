@@ -1,14 +1,21 @@
+# Name of the convertx application
 version: "3.7"
+# Service definitions for the convertx application
 services:
-  big-bear-convertx:
-    image: ghcr.io/c4illin/convertx:v0.15.1
-    restart: unless-stopped
-    environment:
-      - JWT_SECRET=c8330437-e6ae-4cf0-9837-4d1326457e32 # will use randomUUID() if unset
-      - HTTP_ALLOWED=true
-    volumes:
-      - ${APP_DATA_DIR}/data:/app/data
   app_proxy:
     environment:
       APP_HOST: big-bear-umbrel-convertx_big-bear-convertx_1
       APP_PORT: "3000"
+  # Main service configuration for the convertx application
+  big-bear-convertx:
+    # Image to be used for the container
+    image: ghcr.io/c4illin/convertx:v0.15.1
+    # Container restart policy - restarts the container unless manually stopped
+    restart: unless-stopped
+    # Environment variables for the container
+    environment:
+      - JWT_SECRET=c8330437-e6ae-4cf0-9837-4d1326457e32 # will use randomUUID() if unset
+      - HTTP_ALLOWED=true
+    # Volume mappings for data persistence
+    volumes:
+      - ${APP_DATA_DIR}/data:/app/data
