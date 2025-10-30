@@ -1,16 +1,28 @@
-
+# Configuration for fastfetch setup
+# Name of the big-bear-fastfetch application
 version: "3.7"
+# Service definitions for the big-bear-fastfetch application
 services:
-  big-bear-fastfetch:
-    image: bigbeartechworld/big-bear-fastfetch:0.0.4
-    restart: unless-stopped
-    privileged: true
-    volumes:
-      - /proc:/proc
-      - /sys:/sys
-      - /dev:/dev
-      - /etc/localtime:/etc/localtime:ro
   app_proxy:
     environment:
       APP_HOST: big-bear-umbrel-fastfetch_big-bear-fastfetch_1
       APP_PORT: "7681"
+  # Service name: big-bear-fastfetch
+  # The `big-bear-fastfetch` service definition
+  big-bear-fastfetch:
+    # Image to be used for the container specifies the fastfetch version and source
+    image: bigbeartechworld/big-bear-fastfetch:0.0.4
+    # Container restart policy - restarts the container unless manually stopped
+    restart: unless-stopped
+    # Run the container in privileged mode to allow access to system metrics
+    privileged: true
+    # Mount necessary volumes for accessing system information
+    volumes:
+      # Mount the host's /proc directory to the container's /proc directory
+      - /proc:/proc
+      # Mount the host's /sys directory to the container's /sys directory
+      - /sys:/sys
+      # Mount the host's /dev directory to the container's /dev directory
+      - /dev:/dev
+      # Mount the host's /etc/localtime file to the container's /etc/localtime file (read-only)
+      - /etc/localtime:/etc/localtime:ro

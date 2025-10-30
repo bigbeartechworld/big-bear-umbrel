@@ -1,11 +1,22 @@
+# Configuration for watchyourlan setup
+# Name of the big-bear-watchyourlan application
 version: "3.7"
+# Service definitions for the big-bear-watchyourlan application
 services:
+  # Service name: big-bear-watchyourlan
+  # The `big-bear-watchyourlan` service definition
   big-bear-watchyourlan:
+    # Image to be used for the container
     image: aceberg/watchyourlan:2.1.4
+    # Environment variables to be used for the container
     environment:
       - IFACES="eth0"
       - TZ="UTC"
+    # Container restart policy
     restart: unless-stopped
+    # Volumes to be mounted to the container
     volumes:
+      # Mounting the local /DATA/AppData/big-bear-watchyourlan/data directory to /data/WatchYourLAN inside the container
       - ${APP_DATA_DIR}/data:/data/WatchYourLAN
+    # Network mode to be used for the container
     network_mode: host

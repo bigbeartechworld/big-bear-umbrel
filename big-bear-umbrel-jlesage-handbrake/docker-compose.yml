@@ -1,5 +1,9 @@
 version: "3.7"
 services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-jlesage-handbrake_big-bear-jlesage-handbrake_1
+      APP_PORT: "5800"
   big-bear-jlesage-handbrake:
     image: jlesage/handbrake:v25.10.1 # Docker image for the Handbrake
     environment:
@@ -9,7 +13,3 @@ services:
       - ${APP_DATA_DIR}/storage:/storage:ro
       - ${APP_DATA_DIR}/watch:/watch:rw
       - ${APP_DATA_DIR}/output:/output:rw
-  app_proxy:
-    environment:
-      APP_HOST: big-bear-umbrel-jlesage-handbrake_big-bear-jlesage-handbrake_1
-      APP_PORT: "5800"

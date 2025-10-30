@@ -5,14 +5,14 @@ name: 2FAuth
 version: "5.6.0"
 tagline: A Web app to manage your Two-Factor Authentication (2FA) accounts and generate their security codes
 description: >-
-  A Web app to manage your Two-Factor Authentication (2FA) accounts and generate their security codes
+  A Web app to manage your Two-Factor Authentication (2FA) accounts and generate their security codes 
 releaseNotes: >-
   This version includes various improvements and bug fixes.
 developer: bubka
-website: https://github.com/bigbeartechworld/big-bear-casaos
+website: 
 dependencies: []
-repo: https://github.com/bigbeartechworld/big-bear-casaos
-support: https://github.com/bigbeartechworld/big-bear-casaos/issues
+repo: https://github.com/bigbeartechworld/big-bear-universal-apps
+support: https://github.com/bigbeartechworld/big-bear-universal-apps/issues
 port: 10000
 gallery:
   - 1.jpg
@@ -23,4 +23,4 @@ defaultUsername: ""
 defaultPassword: ""
 icon: https://user-images.githubusercontent.com/1289128/276442834-bdb528d0-78fa-4155-ba15-7165d88b9836.png
 submitter: BigBearTechWorld
-submission: https://github.com/bigbeartechworld/big-bear-casaos
+submission: https://github.com/bigbeartechworld/big-bear-universal-apps

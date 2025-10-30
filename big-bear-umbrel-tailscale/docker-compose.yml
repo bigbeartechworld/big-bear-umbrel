@@ -1,11 +1,22 @@
-
+# Configuration for tailscale setup
+# Name of the big-bear-tailscale application
 version: "3.7"
+# Service definitions for the big-bear-tailscale application
 services:
-  big-bear-tailscale:
-    image: tailscale/tailscale:v1.88.4
-    restart: unless-stopped
+  app_proxy:
     environment:
-      - TS_SERVE_CONFIG=""
+      APP_HOST: big-bear-umbrel-tailscale_big-bear-tailscale_1
+      APP_PORT: ""
+  # Service name: big-bear-tailscale
+  # The `big-bear-tailscale` service definition
+  big-bear-tailscale:
+    # Image to be used for the container
+    image: tailscale/tailscale:v1.88.4
+    # Container restart policy
+    restart: unless-stopped
+    # Environment variables for the container
+    environment:
+      - TS_SERVE_CONFIG=/config/serve-config.json
       - TS_ACCEPT_DNS=false
       - TS_AUTH_ONCE=false
       - TS_AUTHKEY=""
@@ -14,14 +25,12 @@ services:
       - TS_EXTRA_ARGS=""
       - TS_USERSPACE=true
       - TS_STATE_DIR=/var/lib/tailscale
+    # Volumes to be mounted to the container
     volumes:
       - ${APP_DATA_DIR}/state:/var/lib/tailscale
       - ${APP_DATA_DIR}/config:/config
+      - ${APP_DATA_DIR}/shared:/shared
       - /dev/net/tun:/dev/net/tun
     cap_add:
       - net_admin
       - sys_module
-  app_proxy:
-    environment:
-      APP_HOST: big-bear-umbrel-tailscale_big-bear-tailscale_1
-      APP_PORT: "8080"

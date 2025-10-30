@@ -5,14 +5,14 @@ name: Excalidraw
 version: "latest"
 tagline: Virtual whiteboard for sketching hand-drawn like diagrams
 description: >-
-  Virtual whiteboard for sketching hand-drawn like diagrams
+  Virtual whiteboard for sketching hand-drawn like diagrams 
 releaseNotes: >-
   This version includes various improvements and bug fixes.
 developer: excalidraw
-website: https://github.com/bigbeartechworld/big-bear-casaos
+website: 
 dependencies: []
-repo: https://github.com/bigbeartechworld/big-bear-casaos
-support: https://github.com/bigbeartechworld/big-bear-casaos/issues
+repo: https://github.com/bigbeartechworld/big-bear-universal-apps
+support: https://github.com/bigbeartechworld/big-bear-universal-apps/issues
 port: 10043
 gallery:
   - 1.jpg
@@ -21,6 +21,6 @@ gallery:
 path: ""
 defaultUsername: ""
 defaultPassword: ""
-icon: https://cdn.jsdelivr.net/gh/bigbeartechworld/big-bear-casaos/Apps/excalidraw/logo.png
+icon: https://cdn.jsdelivr.net/gh/bigbeartechworld/big-bear-universal-apps/apps/excalidraw/logo.png
 submitter: BigBearTechWorld
-submission: https://github.com/bigbeartechworld/big-bear-casaos
+submission: https://github.com/bigbeartechworld/big-bear-universal-apps

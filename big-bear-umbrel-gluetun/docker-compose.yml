@@ -1,21 +1,39 @@
+# Configuration for big-bear-gluetun setup
 version: "3.7"
+# Service definitions for the big-bear-gluetun application
 services:
-  gluetun:
-    image: qmcgaw/gluetun:v3.40.0
-    cap_add:
-      - NET_ADMIN # This allows the container to perform network operations.
-    devices:
-      - /dev/net/tun:/dev/net/tun # Map the TUN device, required for VPNs.
-    volumes:
-      - ${APP_DATA_DIR}/data:/gluetun # Map the data directory.
-    environment:
-      - VPN_SERVICE_PROVIDER=custom
-      - VPN_TYPE=openvpn
-      - OPENVPN_USER= # Username for OpenVPN.
-      - OPENVPN_PASSWORD= # Password for OpenVPN.
-      - TZ=
-      - UPDATER_PERIOD=
   app_proxy:
     environment:
       APP_HOST: big-bear-umbrel-gluetun_gluetun_1
       APP_PORT: "8888"
+  # Main Portainer Agent Server service configuration
+  gluetun:
+    # This configuration is for the 'qmcgaw/gluetun' Docker image, a versatile VPN client in a Docker container.
+    image: qmcgaw/gluetun:v3.40.0
+    # Grant the container specific capabilities, allowing it to perform actions typically restricted.
+    cap_add:
+      - NET_ADMIN # This allows the container to perform network operations.
+    # Map devices from the host to the container.
+    devices:
+      - /dev/net/tun:/dev/net/tun # Map the TUN device, required for VPNs.
+    # Map volumes from the host to the container.
+    volumes:
+      - ${APP_DATA_DIR}/data:/gluetun # Map the data directory.
+    # Define environment variables for the container.
+    environment:
+      # Specify the VPN service provider.
+      - VPN_SERVICE_PROVIDER=custom
+      # Specify the type of VPN.
+      - VPN_TYPE=openvpn
+      # For OpenVPN:
+      - OPENVPN_USER= # Username for OpenVPN.
+      - OPENVPN_PASSWORD= # Password for OpenVPN.
+      # For Wireguard (these are commented out, but can be used if Wireguard is the chosen VPN type):
+      # - WIREGUARD_PRIVATE_KEY=wOEI9rqqbDwnN8/Bpp22sVz48T71vJ4fYmFWujulwUU=
+      # - WIREGUARD_ADDRESSES=10.64.222.21/32
+      # Specify the timezone for accurate log timestamps.
+      - TZ=
+      # Define how often the VPN servers list should be updated.
+      # For more details, refer to the provided link.
+      # See https://github.com/qdm12/gluetun-wiki/blob/main/setup/servers.md#update-the-vpn-servers-list
+      - UPDATER_PERIOD=

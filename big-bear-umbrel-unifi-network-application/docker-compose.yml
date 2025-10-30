@@ -1,14 +1,13 @@
-
+# Configuration for unifi-network-application setup
+# Name of the big-bear-unifi-network-application application
 version: "3.7"
+# Service definitions for the big-bear-homarr application
 services:
-  unifi-db:
-    image: mongo:6.0.11
-    volumes:
-      - ${APP_DATA_DIR}/db/data:/data/db # MongoDB data persistence
-      - ${APP_DATA_DIR}/db/init-mongo.js:/docker-entrypoint-initdb.d/init-mongo.js:ro
-    networks: # Networks to join
-      - unifi-nework-application-network
-    restart: unless-stopped # Restart policy
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-unifi-network-application_app_1
+      APP_PORT: "8443"
+  # Main application service
   app: # Name of the service
     image: linuxserver/unifi-network-application:9.5.21 # Docker image to use
     environment: # Environmental variables for the container
@@ -31,10 +30,17 @@ services:
       - unifi-nework-application-network
     depends_on:
       - unifi-db
-  app_proxy:
-    environment:
-      APP_HOST: big-bear-umbrel-unifi-network-application_unifi-db_1
-      APP_PORT: "27017"
+  # MongoDB database for the application
+  unifi-db:
+    image: mongo:6.0.11
+    volumes:
+      - ${APP_DATA_DIR}/db/data:/data/db # MongoDB data persistence
+      - ${APP_DATA_DIR}/db/init-mongo.js:/docker-entrypoint-initdb.d/init-mongo.js:ro
+    networks: # Networks to join
+      - unifi-nework-application-network
+    restart: unless-stopped # Restart policy
+# Networks used by the application
 networks:
+  # Define the network for AdGuard Home
   unifi-nework-application-network:
     driver: bridge

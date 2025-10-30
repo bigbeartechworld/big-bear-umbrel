@@ -1,17 +1,26 @@
-
+# Configuration for syncthing setup
+# Name of the big-bear-syncthing application
 version: "3.7"
+# Service definitions for the big-bear-syncthing application
 services:
-  big-bear-syncthing:
-    image: syncthing/syncthing:2.0
-    restart: unless-stopped
-    volumes:
-      - ${APP_DATA_DIR}/data:/var/syncthing
-      - ${APP_DATA_DIR}/media/data/syncthing:/media/data/syncthing
-    environment:
-      - PUID=1000 # User ID
-      - PGID=1000 # Group ID
-    stop_grace_period: 1m
   app_proxy:
     environment:
       APP_HOST: big-bear-umbrel-syncthing_big-bear-syncthing_1
       APP_PORT: "8384"
+  # Service name: big-bear-syncthing
+  # The `big-bear-syncthing` service definition
+  big-bear-syncthing:
+    # Image to be used for the container
+    image: syncthing/syncthing:2.0
+    # Container restart policy
+    restart: unless-stopped
+    # Volumes to be mounted to the container
+    volumes:
+      - ${APP_DATA_DIR}/data:/var/syncthing
+      - ${APP_DATA_DIR}/media/data/syncthing:/media/data/syncthing
+    # Environment variables for the container
+    environment:
+      - PUID=1000 # User ID
+      - PGID=1000 # Group ID
+    # Stop the container if it exits
+    stop_grace_period: 1m

@@ -1,8 +1,18 @@
-
+# Configuration for komf setup
+# Name of the big-bear-komf application
 version: "3.7"
+# Service definitions for the big-bear-homarr application
 services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-komf_big-bear-komf_1
+      APP_PORT: "8085"
+  # Service name: big-bear-komf
+  # The `big-bear-komf` service definition
   big-bear-komf:
+    # Image to be used for the container
     image: sndxr/komf:1.6.1
+    # Container restart policy
     restart: unless-stopped
     environment:
       - KOMF_KOMGA_BASE_URI=http://komga:25600
@@ -11,15 +21,18 @@ services:
       - KOMF_KAVITA_BASE_URI=http://kavita:5000
       - KOMF_KAVITA_API_KEY=cd1edcc1-6010-41a8-a82b-73f501dc2760
       - KOMF_LOG_LEVEL=INFO
+      # optional jvm options. Example config for low memory usage. Runs guaranteed cleanup up every 3600000ms(1hour)
+      # - JAVA_TOOL_OPTIONS=-XX:+UnlockExperimentalVMOptions -XX:+UseShenandoahGC -XX:ShenandoahGCHeuristics=compact -XX:ShenandoahGuaranteedGCInterval=3600000 -XX:TrimNativeHeapInterval=3600000
+    # Volumes to be mounted to the container
     volumes:
+      # Mounting the local /config directory to /config inside the container
       - ${APP_DATA_DIR}/config:/config
+    # User to run the container as
     user: "1000:1000"
+    # Networks to be attached to the container
     networks:
       - big_bear_komf_network
-  app_proxy:
-    environment:
-      APP_HOST: big-bear-umbrel-komf_big-bear-komf_1
-      APP_PORT: "8085"
+# Network definitions for the big-bear-komf application
 networks:
   big_bear_komf_network:
     driver: bridge

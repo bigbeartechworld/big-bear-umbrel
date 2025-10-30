@@ -1,9 +1,20 @@
-
+# Configuration for kopia setup
+# Name of the big-bear-kopia application
 version: "3.7"
+# Service definitions for the big-bear-kopia application
 services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-kopia_big-bear-kopia_1
+      APP_PORT: "51515"
+  # Service name: big-bear-kopia
+  # The `big-bear-kopia` service definition
   big-bear-kopia:
+    # Image to be used for the container
     image: ghcr.io/thespad/kopia-server:v0.17.0-spad3
+    # Container restart policy
     restart: unless-stopped
+    # Environment variables for the container
     environment:
       - PUID=0
       - PGID=0
@@ -20,9 +31,6 @@ services:
       - ${APP_DATA_DIR}/repository:/repository # Optional
       - /tmp:/tmp:shared # Optional
       - /var/run/docker.sock:/var/run/docker.sock:ro # Optional
+    # Additional capabilities to be added to the container
     cap_add:
       - SYS_ADMIN # Optional
-  app_proxy:
-    environment:
-      APP_HOST: big-bear-umbrel-kopia_big-bear-kopia_1
-      APP_PORT: "51515"

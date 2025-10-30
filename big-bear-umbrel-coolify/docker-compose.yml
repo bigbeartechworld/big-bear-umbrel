@@ -1,9 +1,20 @@
-
+# Configuration for coolify setup
+# Name of the big-bear-coolify application
 version: "3.7"
+# Service definitions for the big-bear-coolify application
 services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-coolify_big-bear-coolify_1
+      APP_PORT: "8080"
+  # Service name: big-bear-coolify
+  # The `big-bear-coolify` service definition
   big-bear-coolify:
+    # Image to be used for the container specifies the fastfetch version and source
     image: ghcr.io/coollabsio/coolify:4.0.0-beta.434
+    # Container restart policy - restarts the container unless manually stopped
     restart: unless-stopped
+    # Environment variables for the container
     environment:
       - PHP_MEMORY_LIMIT="512M"
       - APP_ID="coolify"
@@ -61,7 +72,9 @@ services:
       - STRIPE_PRICE_ID_ULTIMATE_MONTHLY_OLD=
       - STRIPE_PRICE_ID_ULTIMATE_YEARLY_OLD=
       - STRIPE_EXCLUDED_PLANS=
+    # Mount necessary volumes for accessing system information
     volumes:
+      # ssh-keygen -f /DATA/AppData/big-bear-coolify/ssh/keys/id.root@host.docker.internal -t ed25519 -N '' -C root@coolify
       - ${APP_DATA_DIR}/ssh:/var/www/html/storage/app/ssh
       - ${APP_DATA_DIR}/applications:/var/www/html/storage/app/applications
       - ${APP_DATA_DIR}/databases:/var/www/html/storage/app/databases
@@ -124,10 +137,6 @@ services:
       timeout: 2s
     networks:
       - big_bear_coolify_network
-  app_proxy:
-    environment:
-      APP_HOST: big-bear-umbrel-coolify_big-bear-coolify_1
-      APP_PORT: "8080"
 networks:
   big_bear_coolify_network:
     name: big_bear_coolify_network

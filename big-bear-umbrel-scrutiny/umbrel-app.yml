@@ -5,14 +5,14 @@ name: Scrutiny
 version: "master-omnibus"
 tagline: Monitor your server's hard disk health
 description: >-
-  If you run a server with more than a couple of hard drives, you're probably already familiar with S.M.A.R.T and the smartd daemon.
+  If you run a server with more than a couple of hard drives, you're probably already familiar with S.M.A.R.T and the smartd daemon. 
 releaseNotes: >-
   This version includes various improvements and bug fixes.
 developer: analogj
-website: https://github.com/bigbeartechworld/big-bear-casaos
+website: 
 dependencies: []
-repo: https://github.com/bigbeartechworld/big-bear-casaos
-support: https://github.com/bigbeartechworld/big-bear-casaos/issues
+repo: https://github.com/bigbeartechworld/big-bear-universal-apps
+support: https://github.com/bigbeartechworld/big-bear-universal-apps/issues
 port: 38080
 gallery:
   - 1.jpg
@@ -23,4 +23,4 @@ defaultUsername: ""
 defaultPassword: ""
 icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/scrutiny.png
 submitter: BigBearTechWorld
-submission: https://github.com/bigbeartechworld/big-bear-casaos
+submission: https://github.com/bigbeartechworld/big-bear-universal-apps
