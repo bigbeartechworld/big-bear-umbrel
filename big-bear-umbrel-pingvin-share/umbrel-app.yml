@@ -2,18 +2,18 @@ manifestVersion: 1
 id: big-bear-umbrel-pingvin-share
 category: BigBearCasaOS
 name: Pingvin Share
-version: "1.13.0"
+version: "v1.13.0"
 tagline: Pingvin Share
 description: >-
-  Pingvin Share is self-hosted file sharing platform and an alternative for WeTransfer.
+  Pingvin Share is self-hosted file sharing platform and an alternative for WeTransfer. 
 releaseNotes: >-
   This version includes various improvements and bug fixes.
 developer: stonith404
-website: https://github.com/bigbeartechworld/big-bear-casaos
+website: 
 dependencies: []
-repo: https://github.com/bigbeartechworld/big-bear-casaos
-support: https://github.com/bigbeartechworld/big-bear-casaos/issues
-port: 10137
+repo: https://github.com/bigbeartechworld/big-bear-universal-apps
+support: https://github.com/bigbeartechworld/big-bear-universal-apps/issues
+port: 10134
 gallery:
   - 1.jpg
   - 2.jpg
@@ -23,4 +23,4 @@ defaultUsername: ""
 defaultPassword: ""
 icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/pingvin-share.png
 submitter: BigBearTechWorld
-submission: https://github.com/bigbeartechworld/big-bear-casaos
+submission: https://github.com/bigbeartechworld/big-bear-universal-apps

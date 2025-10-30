@@ -1,11 +1,14 @@
+# Configuration for big-bear-portainer-agent setup
 version: "3.7"
+# Service definitions for the big-bear-portainer-agent application
 services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-portainer-agent_app_1
+      APP_PORT: "9001"
+  # Main Portainer Agent Server service configuration
   app:
     image: portainer/agent:2.35.0 # Image to be used
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock # Bind mount for Docker socket
       - /var/lib/docker/volumes:/var/lib/docker/volumes # Bind mount for Docker volumes
-  app_proxy:
-    environment:
-      APP_HOST: big-bear-umbrel-portainer-agent_app_1
-      APP_PORT: "9001"

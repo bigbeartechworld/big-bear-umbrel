@@ -1,12 +1,20 @@
-
+# Configuration for dbgate setup
+# Name of the big-bear-dbgate application
 version: "3.7"
+# Service definitions for the big-bear-dbgate application
 services:
-  big-bear-dbgate:
-    image: dbgate/dbgate:6.6.5-alpine
-    restart: unless-stopped
-    volumes:
-      - ${APP_DATA_DIR}/config:/root/.dbgate
   app_proxy:
     environment:
       APP_HOST: big-bear-umbrel-dbgate_big-bear-dbgate_1
       APP_PORT: "3000"
+  # Service name: big-bear-dbgate
+  # The `big-bear-dbgate` service definition
+  big-bear-dbgate:
+    # Image to be used for the container
+    image: dbgate/dbgate:6.6.5-alpine
+    # Container restart policy
+    restart: unless-stopped
+    # Volumes to be mounted to the container
+    volumes:
+      # Mounting the local homarr/configs directory to /app/data/configs inside the container
+      - ${APP_DATA_DIR}/config:/root/.dbgate

@@ -1,9 +1,20 @@
-
+# Configuration for Portracker setup
+# Name of the big-bear-portracker application
 version: "3.7"
+# Service definitions for the big-bear-portracker application
 services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-portracker_big-bear-portracker_1
+      APP_PORT: "4999"
+  # Service name: big-bear-portracker
+  # The `big-bear-portracker` service definition
   big-bear-portracker:
+    # Image to be used for the container
     image: mostafawahied/portracker:1.1
+    # Container restart policy
     restart: unless-stopped
+    # Environment variables for service configuration
     environment:
       - PORT=4999
       - DATABASE_PATH=/data/portracker.db
@@ -12,10 +23,7 @@ services:
       - DISABLE_CACHE=false
       - INCLUDE_UDP=false
       - DEBUG=false
+    # Volumes to be mounted to the container
     volumes:
       - ${APP_DATA_DIR}/data:/data
       - /var/run/docker.sock:/var/run/docker.sock
-  app_proxy:
-    environment:
-      APP_HOST: big-bear-umbrel-portracker_big-bear-portracker_1
-      APP_PORT: "4999"
