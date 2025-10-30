@@ -1,11 +1,20 @@
+# Configuration for homebridge setup
+# Name of the big-bear-homebridge application
 version: "3.7"
+# Service definitions for the big-bear-homebridge application
 services:
+  # Service name: big-bear-homebridge
+  # The `big-bear-homebridge` service definition
   big-bear-homebridge:
+    # Image to be used for the container
     image: homebridge/homebridge:2024-05-02
+    # Container restart policy
     restart: unless-stopped
+    # Environment Variables
     environment:
-      - TZ=UTC
+      - TZ=UTC # Timezone
     privileged: true
     network_mode: host
+    # Volumes HOST:CONTAINER
     volumes:
       - ${APP_DATA_DIR}/data:/homebridge

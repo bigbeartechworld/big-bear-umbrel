@@ -1,15 +1,24 @@
-
+# Configuration for ComposeToolbox setup
+# Name of the big-bear-composetoolbox application
 version: "3.7"
+# Service definitions for the big-bear-composetoolbox application
 services:
-  big-bear-composetoolbox:
-    environment:
-      NODE_ENV: production
-    image: ghcr.io/bluegoosemedia/composetoolbox:latest
-    pull_policy: always
-    restart: unless-stopped
-    volumes:
-      - ${APP_DATA_DIR}/data:/app/data
   app_proxy:
     environment:
       APP_HOST: big-bear-umbrel-composetoolbox_big-bear-composetoolbox_1
       APP_PORT: "3000"
+  # Service name: big-bear-composetoolbox
+  # The `big-bear-composetoolbox` service definition
+  big-bear-composetoolbox:
+    # Environment variables
+    environment:
+      # Node environment
+      NODE_ENV: production
+    # Image to be used for the container
+    image: ghcr.io/bluegoosemedia/composetoolbox:latest
+    pull_policy: always
+    # Container restart policy
+    restart: unless-stopped
+    # Volumes to be mounted to the container
+    volumes:
+      - ${APP_DATA_DIR}/data:/app/data

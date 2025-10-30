@@ -1,18 +1,28 @@
+# Name of the application
 version: "3.7"
+# List of services that this application uses
 services:
-  app:
-    image: pawelmalak/flame:multiarch2.3.1
-    environment:
-      PASSWORD: casaos
-    restart: unless-stopped
-    volumes:
-      - type: bind
-        source: ${APP_DATA_DIR}/data
-        target: /app/data
-      - type: bind
-        source: /var/run/docker.sock
-        target: /var/run/docker.sock
   app_proxy:
     environment:
       APP_HOST: big-bear-umbrel-flame_app_1
       APP_PORT: "5005"
+  # Main service for the Flame application
+  app:
+    # The Docker image to be used for the Flame application
+    image: pawelmalak/flame:multiarch2.3.1
+    # Environment variables that configure the application
+    environment:
+      # Specifies the password to be used by the Flame application
+      PASSWORD: casaos
+    # Policy to determine how the service should be restarted if it stops
+    restart: unless-stopped
+    # Specifies the storage volumes that the application should use
+    volumes:
+      # Mounts the application data directory from the host system to the container
+      - type: bind
+        source: flame_data
+        target: /app/data
+      # Mounts the Docker socket from the host system to the container
+      - type: bind
+        source: /var/run/docker.sock
+        target: /var/run/docker.sock

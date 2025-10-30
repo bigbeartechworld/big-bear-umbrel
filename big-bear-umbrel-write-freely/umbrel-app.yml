@@ -5,15 +5,15 @@ name: Write Freely
 version: "0.16"
 tagline: Markdown-based publishing platform.
 description: >-
-  WriteFreely is a clean, minimalist publishing platform made for writers. Start a blog, share knowledge within your organization, or build a community around the shared act of writing.
+  WriteFreely is a clean, minimalist publishing platform made for writers. Start a blog, share knowledge within your organization, or build a community around the shared act of writing. 
 releaseNotes: >-
   This version includes various improvements and bug fixes.
 developer: nephatrine
-website: https://github.com/bigbeartechworld/big-bear-casaos
+website: 
 dependencies: []
-repo: https://github.com/bigbeartechworld/big-bear-casaos
-support: https://github.com/bigbeartechworld/big-bear-casaos/issues
-port: 10188
+repo: https://github.com/bigbeartechworld/big-bear-universal-apps
+support: https://github.com/bigbeartechworld/big-bear-universal-apps/issues
+port: 10184
 gallery:
   - 1.jpg
   - 2.jpg
@@ -21,6 +21,6 @@ gallery:
 path: ""
 defaultUsername: ""
 defaultPassword: ""
-icon: https://cdn.jsdelivr.net/gh/bigbeartechworld/big-bear-casaos/Apps/write-freely/logo.png
+icon: https://cdn.jsdelivr.net/gh/bigbeartechworld/big-bear-universal-apps/apps/write-freely/logo.png
 submitter: BigBearTechWorld
-submission: https://github.com/bigbeartechworld/big-bear-casaos
+submission: https://github.com/bigbeartechworld/big-bear-universal-apps

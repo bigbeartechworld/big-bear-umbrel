@@ -1,6 +1,13 @@
-
+# Configuration for reactive resume setup
+# Name of the big-bear-reactive-resume application
 version: "3.7"
+# Service definitions for the big-bear-reactive-resume application
 services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-reactive-resume_app_1
+      APP_PORT: "3000"
+  # Main application
   app:
     image: amruthpillai/reactive-resume:v4.5.2
     restart: unless-stopped
@@ -12,16 +19,24 @@ services:
     networks:
       - reactive-resume-network
     environment:
+      # -- Environment Variables --
       PORT: "3000"
       NODE_ENV: "production"
+      # -- URLs --
       PUBLIC_URL: "http://[CASAOS_IP]:3000"
       STORAGE_URL: "http://[CASAOS_IP]:9000/default"
+      # -- Printer (Chrome) --
       CHROME_TOKEN: "chrome_token"
       CHROME_URL: "ws://chrome:3000"
+      # -- Database (Postgres) --
       DATABASE_URL: "postgresql://postgres:postgres@postgres:5432/postgres"
+      # -- Auth --
       ACCESS_TOKEN_SECRET: "access_token_secret"
       REFRESH_TOKEN_SECRET: "refresh_token_secret"
+      # -- Emails --
       MAIL_FROM: "noreply@localhost"
+      # SMTP_URL: smtp://user:pass@smtp:587 # Optional
+      # -- Storage (Minio) --
       STORAGE_ENDPOINT: "[CASAOS_IP]"
       STORAGE_PORT: "9000"
       STORAGE_REGION: "us-east-1" # Optional
@@ -29,12 +44,30 @@ services:
       STORAGE_ACCESS_KEY: "minioadmin"
       STORAGE_SECRET_KEY: "minioadmin"
       STORAGE_USE_SSL: "false"
+      # -- Cache (Redis) --
       REDIS_URL: "redis://default:password@redis:6379"
+      # -- Sentry --
+      # VITE_SENTRY_DSN: https://id.sentry.io # Optional
+  # -- Crowdin (Optional) --
+  # CROWDIN_PROJECT_ID:
+  # CROWDIN_PERSONAL_TOKEN:
+  # -- Email (Optional) --
+  # DISABLE_EMAIL_AUTH: true
+  # VITE_DISABLE_SIGNUPS: true
+  # -- GitHub (Optional) --
+  # GITHUB_CLIENT_ID: "github_client_id"
+  # GITHUB_CLIENT_SECRET: "github_client_secret"
+  # GITHUB_CALLBACK_URL: "http://[CASAOS_IP]:3000/api/auth/github/callback"
+  # -- Google (Optional) --
+  # GOOGLE_CLIENT_ID: "google_client_id"
+  # GOOGLE_CLIENT_SECRET: "google_client_secret"
+  # GOOGLE_CALLBACK_URL: "http://[CASAOS_IP]:3000/api/auth/google/callback"
+  # Database (Postgres)
   postgres:
     image: postgres:15-alpine
     restart: unless-stopped
     volumes:
-      - ${APP_DATA_DIR}/pg_data:/var/lib/postgresql/data
+      - ${APP_DATA_DIR}/pg/data:/var/lib/postgresql/data
     environment:
       POSTGRES_DB: "postgres"
       POSTGRES_USER: "postgres"
@@ -46,17 +79,19 @@ services:
       retries: 5
     networks:
       - reactive-resume-network
+  # Storage (for image uploads)
   minio:
     image: minio/minio:RELEASE.2024-09-13T20-26-02Z-cpuv1
     command: ["server", "/data"]
     restart: unless-stopped
     volumes:
-      - ${APP_DATA_DIR}/minio_data:/data
+      - ${APP_DATA_DIR}/minio/data:/data
     environment:
       MINIO_ROOT_USER: "minioadmin"
       MINIO_ROOT_PASSWORD: "minioadmin"
     networks:
       - reactive-resume-network
+  # Chrome Browser (for printing and previews)
   chrome:
     image: browserless/chrome:1.61.1-puppeteer-21.4.1
     restart: unless-stopped
@@ -66,16 +101,15 @@ services:
       PRE_REQUEST_HEALTH_CHECK: "true"
     networks:
       - reactive-resume-network
+  # Redis (for cache & server session management)
   redis:
     image: redis:8.2.2-alpine@sha256:1c78f5e7512cc8b22b0edc95c20e7abd9e1fd832e5dfd5c3c6b59ce82fb238d0
     restart: unless-stopped
     command: ["redis-server", "--requirepass", "password"]
     networks:
       - reactive-resume-network
-  app_proxy:
-    environment:
-      APP_HOST: big-bear-umbrel-reactive-resume_app_1
-      APP_PORT: "3000"
+# Networks used by the application
 networks:
+  # Define the network for AdGuard Home
   reactive-resume-network:
     driver: bridge

@@ -5,15 +5,15 @@ name: Poste.io
 version: "2.5.7"
 tagline: Free version of full mail server solution. POP3, SMTP, IMAP, Spamassassin, WebMail, WebAdmin
 description: >-
-  Full stack mail server solution with SSL TLS support. POP3s, SMTP(s), IMAPs, RSPAMD, Clamav, Roundcube(HTTPS), SPF, DKIM with easy installation and web administration.
+  Full stack mail server solution with SSL TLS support. POP3s, SMTP(s), IMAPs, RSPAMD, Clamav, Roundcube(HTTPS), SPF, DKIM with easy installation and web administration. 
 releaseNotes: >-
   This version includes various improvements and bug fixes.
 developer: analogic
-website: https://github.com/bigbeartechworld/big-bear-casaos
+website: 
 dependencies: []
-repo: https://github.com/bigbeartechworld/big-bear-casaos
-support: https://github.com/bigbeartechworld/big-bear-casaos/issues
-port: 8080
+repo: https://github.com/bigbeartechworld/big-bear-universal-apps
+support: https://github.com/bigbeartechworld/big-bear-universal-apps/issues
+port: 80
 gallery:
   - 1.jpg
   - 2.jpg
@@ -23,4 +23,4 @@ defaultUsername: ""
 defaultPassword: ""
 icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/poste.png
 submitter: BigBearTechWorld
-submission: https://github.com/bigbeartechworld/big-bear-casaos
+submission: https://github.com/bigbeartechworld/big-bear-universal-apps

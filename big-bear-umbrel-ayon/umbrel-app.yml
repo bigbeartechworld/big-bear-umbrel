@@ -5,15 +5,15 @@ name: Ayon
 version: "1.3.6-20240823"
 tagline: Ayon
 description: >-
-  This is the official Docker-based deployment for the Ayon Server. Ayon is a robust tool designed to manage and automate workflows in the animation and visual effects industries.
+  This is the official Docker-based deployment for the Ayon Server. Ayon is a robust tool designed to manage and automate workflows in the animation and visual effects industries. 
 releaseNotes: >-
   This version includes various improvements and bug fixes.
 developer: ynput
-website: https://github.com/bigbeartechworld/big-bear-casaos
+website: 
 dependencies: []
-repo: https://github.com/bigbeartechworld/big-bear-casaos
-support: https://github.com/bigbeartechworld/big-bear-casaos/issues
-port: 10008
+repo: https://github.com/bigbeartechworld/big-bear-universal-apps
+support: https://github.com/bigbeartechworld/big-bear-universal-apps/issues
+port: 10010
 gallery:
   - 1.jpg
   - 2.jpg
@@ -21,6 +21,6 @@ gallery:
 path: ""
 defaultUsername: ""
 defaultPassword: ""
-icon: https://cdn.jsdelivr.net/gh/bigbeartechworld/big-bear-casaos/Apps/ayon/logo.png
+icon: https://cdn.jsdelivr.net/gh/bigbeartechworld/big-bear-universal-apps/apps/ayon/logo.png
 submitter: BigBearTechWorld
-submission: https://github.com/bigbeartechworld/big-bear-casaos
+submission: https://github.com/bigbeartechworld/big-bear-universal-apps

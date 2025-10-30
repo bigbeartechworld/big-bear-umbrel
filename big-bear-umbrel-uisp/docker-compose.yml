@@ -1,14 +1,23 @@
-
+# Configuration for uisp setup
+# Name of the big-bear-uisp application
 version: "3.7"
+# Service definitions for the big-bear-uisp application
 services:
-  big-bear-uisp:
-    image: nico640/docker-unms:2.4.155.1
-    restart: unless-stopped
-    environment:
-      - TZ=UTC
-    volumes:
-      - ${APP_DATA_DIR}/config:/config
   app_proxy:
     environment:
       APP_HOST: big-bear-umbrel-uisp_big-bear-uisp_1
       APP_PORT: "80"
+  # Service name: big-bear-uisp
+  # The `big-bear-uisp` service definition
+  big-bear-uisp:
+    # Image to be used for the container
+    image: nico640/docker-unms:2.4.155.1
+    # Container restart policy
+    restart: unless-stopped
+    # Environment variables for the container
+    environment:
+      - TZ=UTC
+    # Volumes to be mounted to the container
+    volumes:
+      # Mounting the local /DATA/AppData/big-bear-uisp/config directory to /config inside the container
+      - ${APP_DATA_DIR}/config:/config

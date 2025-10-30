@@ -1,10 +1,16 @@
-
+# Configuration for chatpad setup
+# Name of the big-bear-chatpad application
 version: "3.7"
+# Service definitions for the big-bear-chatpad application
 services:
-  big-bear-chatpad:
-    image: ghcr.io/deiucanta/chatpad:f45cd53bc410412610c1ba1cbd84cd137d8e167d
-    restart: unless-stopped
   app_proxy:
     environment:
       APP_HOST: big-bear-umbrel-chatpad_big-bear-chatpad_1
       APP_PORT: "80"
+  # Service name: chatpad
+  # The `chatpad` service definition
+  big-bear-chatpad:
+    # Image to be used for the container
+    image: ghcr.io/deiucanta/chatpad:f45cd53bc410412610c1ba1cbd84cd137d8e167d
+    # Container restart policy
+    restart: unless-stopped

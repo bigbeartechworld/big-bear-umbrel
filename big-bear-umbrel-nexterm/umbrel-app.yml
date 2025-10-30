@@ -5,15 +5,15 @@ name: Nexterm
 version: "1.0.5-OPEN-PREVIEW"
 tagline: Nexterm
 description: >-
-  The open source server management software for SSH, VNC & RDP. This is in Preview Release.
+  The open source server management software for SSH, VNC & RDP. This is in Preview Release. 
 releaseNotes: >-
   This version includes various improvements and bug fixes.
 developer: germannewsmaker
-website: https://github.com/bigbeartechworld/big-bear-casaos
+website: 
 dependencies: []
-repo: https://github.com/bigbeartechworld/big-bear-casaos
-support: https://github.com/bigbeartechworld/big-bear-casaos/issues
-port: 10110
+repo: https://github.com/bigbeartechworld/big-bear-universal-apps
+support: https://github.com/bigbeartechworld/big-bear-universal-apps/issues
+port: 10108
 gallery:
   - 1.jpg
   - 2.jpg
@@ -21,6 +21,6 @@ gallery:
 path: ""
 defaultUsername: ""
 defaultPassword: ""
-icon: https://cdn.jsdelivr.net/gh/bigbeartechworld/big-bear-casaos/Apps/nexterm/logo.png
+icon: https://cdn.jsdelivr.net/gh/bigbeartechworld/big-bear-universal-apps/apps/nexterm/logo.png
 submitter: BigBearTechWorld
-submission: https://github.com/bigbeartechworld/big-bear-casaos
+submission: https://github.com/bigbeartechworld/big-bear-universal-apps

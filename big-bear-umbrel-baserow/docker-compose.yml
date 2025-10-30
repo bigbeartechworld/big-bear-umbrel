@@ -1,12 +1,19 @@
+# Configuration for big-bear-baserow setup
 version: "3.7"
+# Service definitions for the big-bear-baserow application
 services:
-  app:
-    image: baserow/baserow:1.35.3
-    environment:
-      BASEROW_PUBLIC_URL: "http://[YOUR_CASAOS_IP]:7350"
-    volumes:
-      - ${APP_DATA_DIR}/data:/baserow/data
   app_proxy:
     environment:
       APP_HOST: big-bear-umbrel-baserow_app_1
       APP_PORT: "80"
+  # Service name: app
+  app:
+    # Use the specified Docker image for Baserow and specify its version.
+    image: baserow/baserow:1.35.3
+    # Set environment variables for Baserow.
+    environment:
+      # Set the your CASA OS IP for Baserow to use.
+      BASEROW_PUBLIC_URL: "http://[YOUR_CASAOS_IP]:7350"
+    # Define volumes to persist data between container restarts.
+    volumes:
+      - ${APP_DATA_DIR}/data:/baserow/data

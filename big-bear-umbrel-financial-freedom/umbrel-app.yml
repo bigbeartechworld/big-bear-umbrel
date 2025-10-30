@@ -5,14 +5,14 @@ name: Financial Freedom
 version: "v0.2.0-alpha1"
 tagline: Financial Freedom
 description: >-
-  Keep investors and their buyers out of your financial data. Own 100% of your data and start building financial wealth.
+  Keep investors and their buyers out of your financial data. Own 100% of your data and start building financial wealth. 
 releaseNotes: >-
   This version includes various improvements and bug fixes.
 developer: serversideup
-website: https://github.com/bigbeartechworld/big-bear-casaos
+website: 
 dependencies: []
-repo: https://github.com/bigbeartechworld/big-bear-casaos
-support: https://github.com/bigbeartechworld/big-bear-casaos/issues
+repo: https://github.com/bigbeartechworld/big-bear-universal-apps
+support: https://github.com/bigbeartechworld/big-bear-universal-apps/issues
 port: 10047
 gallery:
   - 1.jpg
@@ -21,6 +21,6 @@ gallery:
 path: ""
 defaultUsername: ""
 defaultPassword: ""
-icon: https://cdn.jsdelivr.net/gh/bigbeartechworld/big-bear-casaos/Apps/financial-freedom/logo.png
+icon: https://cdn.jsdelivr.net/gh/bigbeartechworld/big-bear-universal-apps/apps/financial-freedom/logo.png
 submitter: BigBearTechWorld
-submission: https://github.com/bigbeartechworld/big-bear-casaos
+submission: https://github.com/bigbeartechworld/big-bear-universal-apps

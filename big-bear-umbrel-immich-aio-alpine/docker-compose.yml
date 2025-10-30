@@ -1,10 +1,18 @@
+# Configuration for big-bear-immich-aio-alpine setup
 version: "3.7"
+# Service definitions for the big-bear-immich-aio-alpine application
 services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-immich-aio-alpine_big-bear-immich-aio-alpine_1
+      APP_PORT: "8080"
+  # Main Immich Server service configuration
   big-bear-immich-aio-alpine:
     image: ghcr.io/imagegenius/immich:2.0.0-alpine # Image to be used
     volumes: # Mounting directories for persistent data storage
       - ${APP_DATA_DIR}/config:/config
       - ${APP_DATA_DIR}/photos:/usr/src/app/photos
+      # - path_to_imports:/import:ro #optional
     environment: # Setting environment variables
       - PUID=1000
       - PGID=1000
@@ -24,13 +32,16 @@ services:
       - big-bear-immich-redis
       - big-bear-immich-db
     restart: unless-stopped # Policy to restart unless stopped
+    # Networks to be attached to the container
     networks:
       - big_bear_immich_network
+  # Configuration for Redis service
   big-bear-immich-redis:
     image: redis:6.2.20-alpine@sha256:2185e741f4c1e7b0ea9ca1e163a3767c4270a73086b6bbea2049a7203212fb7f # patched for CVE-2025-49844
     restart: always # Policy to always restart the container if it stops
     networks:
       - big_bear_immich_network # Connects the container to a defined network
+  # Configuration for Database service
   big-bear-immich-db:
     image: tensorchord/pgvecto-rs:pg14-v0.2.0 # Image to be used
     environment: # Setting environment variables
@@ -41,12 +52,9 @@ services:
     volumes: # Mounting directories for persistent data storage
       - ${APP_DATA_DIR}/pgdata:/var/lib/postgresql/data
     restart: unless-stopped # Policy to always restart the container if it stops
+    # CasaOS specific configuration for the database service
     networks:
       - big_bear_immich_network # Connects the container to a defined network
-  app_proxy:
-    environment:
-      APP_HOST: big-bear-umbrel-immich-aio-alpine_big-bear-immich-aio-alpine_1
-      APP_PORT: "8080"
 networks: # Defines network configurations for the services
   big_bear_immich_network:
     driver: bridge # Uses bridge network driver
