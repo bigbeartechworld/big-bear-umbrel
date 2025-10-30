@@ -1,8 +1,18 @@
-
+# Configuration for healthchecks setup
+# Name of the big-bear-healthchecks application
 version: "3.7"
+# Service definitions for the big-bear-healthchecks application
 services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-healthchecks_big-bear-healthchecks_1
+      APP_PORT: "8000"
+  # Service name: big-bear-healthchecks
+  # The `big-bear-healthchecks` service definition
   big-bear-healthchecks:
+    # Image to be used for the container
     image: linuxserver/healthchecks:3.11.20250828
+    # Container restart policy
     restart: unless-stopped
     environment:
       - PUID=1000
@@ -27,9 +37,6 @@ services:
       - RP_ID= #optional
       - SECRET_KEY="b2ea4094-c950-4890-b85f-301d8a777af2" #optional
       - SITE_LOGO_URL= #optional
+    # Volumes to be mounted to the container
     volumes:
       - ${APP_DATA_DIR}/config:/config
-  app_proxy:
-    environment:
-      APP_HOST: big-bear-umbrel-healthchecks_big-bear-healthchecks_1
-      APP_PORT: "8000"

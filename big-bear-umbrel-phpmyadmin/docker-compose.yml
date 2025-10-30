@@ -1,14 +1,23 @@
-
+# Configuration for phpmyadmin setup
+# Name of the big-bear-phpmyadmin application
 version: "3.7"
+# Service definitions for the big-bear-phpmyadmin application
 services:
-  phpmyadmin:
-    image: phpmyadmin/phpmyadmin:5.2.3
-    environment:
-      PMA_HOST: "[YOUR-CASAOS-IP]"
-      PMA_PORT: "3306"
-      PMA_USER: "bigbear"
-      PMA_PASSWORD: "password"
   app_proxy:
     environment:
       APP_HOST: big-bear-umbrel-phpmyadmin_phpmyadmin_1
       APP_PORT: "80"
+  # Service name: phpmyadmin
+  phpmyadmin:
+    # Docker image to be used for this service
+    image: phpmyadmin/phpmyadmin:5.2.3
+    # Environment variables passed to the service
+    environment:
+      # Host of the database server
+      PMA_HOST: "[YOUR-CASAOS-IP]"
+      # Port of the database server
+      PMA_PORT: "3306"
+      # Username to connect to the database
+      PMA_USER: "bigbear"
+      # Password to connect to the database
+      PMA_PASSWORD: "password"

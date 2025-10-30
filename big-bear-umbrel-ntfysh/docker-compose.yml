@@ -1,20 +1,28 @@
+# big-bear-ntfy application configuration
 version: "3.7"
+# Services associated with the big-bear-ntfy application
 services:
-  app:
-    image: binwiederhier/ntfy:v2.14.0
-    command:
-      - serve
-    environment:
-      - TZ=UTC
-    restart: unless-stopped
-    volumes:
-      - type: bind
-        source: ${APP_DATA_DIR}/cache
-        target: /var/cache/ntfy
-      - type: bind
-        source: ${APP_DATA_DIR}/config
-        target: /etc/ntfy
   app_proxy:
     environment:
       APP_HOST: big-bear-umbrel-ntfysh_app_1
       APP_PORT: ' 80 # Container port'
+  # Main application service configuration
+  app:
+    # Docker image to be used for the service
+    image: binwiederhier/ntfy:v2.14.0
+    # Command to run inside the container
+    command:
+      - serve
+    # Environment variables for the service
+    environment:
+      - TZ=UTC
+    # Restart policy for the service
+    restart: unless-stopped
+    # Volumes to be mounted inside the container
+    volumes:
+      - type: bind
+        source: ntfysh_cache
+        target: /var/cache/ntfy
+      - type: bind
+        source: ntfysh_config
+        target: /etc/ntfy
