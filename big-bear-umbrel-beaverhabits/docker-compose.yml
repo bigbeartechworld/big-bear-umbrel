@@ -1,18 +1,31 @@
-
+# Docker Compose configuration for BeaverHabits Service
+# This service provides a web interface for managing habits
+# Version: 0.5.2
+# Name of the big-bear-beaverhabits application
 version: "3.7"
+# Service definitions for the big-bear-beaverhabits application
 services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-beaverhabits_big-bear-beaverhabits_1
+      APP_PORT: "8080"
+  # Main service configuration for the BeaverHabits application
+  # This service provides a web interface running on port 8080 for habit administration
   big-bear-beaverhabits:
+    # Image to be used for the container specifies the btop version and source
     image: daya0576/beaverhabits:0.7.3
+    # Container restart policy - restarts the container unless manually stopped
     restart: unless-stopped
     user: "1000:1000"
+    # Environment variables for service configuration
+    # These settings control the Flask application behavior and default admin credentials
     environment:
       - HABITS_STORAGE=USER_DISK
       - TRUSTED_LOCAL_EMAIL=your@email.com
       - INDEX_HABIT_DATE_COLUMNS=5
       - ENABLE_IOS_STANDALONE=true
+    # Volume mappings required for system integration
+    # These mounts allow the container to interact with the host system
     volumes:
+      # Required for monitoring system resources and container metrics
       - ${APP_DATA_DIR}/.user:/app/.user/
-  app_proxy:
-    environment:
-      APP_HOST: big-bear-umbrel-beaverhabits_big-bear-beaverhabits_1
-      APP_PORT: "8080"
