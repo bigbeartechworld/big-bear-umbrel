@@ -5,15 +5,15 @@ name: Warracker
 version: "9.9.3"
 tagline: A self-hosted warranty tracker
 description: >-
-  A self-hosted warranty tracker
+  A self-hosted warranty tracker 
 releaseNotes: >-
   This version includes various improvements and bug fixes.
 developer: sassanix
-website: https://github.com/bigbeartechworld/big-bear-casaos
+website: 
 dependencies: []
-repo: https://github.com/bigbeartechworld/big-bear-casaos
-support: https://github.com/bigbeartechworld/big-bear-casaos/issues
-port: 10183
+repo: https://github.com/bigbeartechworld/big-bear-universal-apps
+support: https://github.com/bigbeartechworld/big-bear-universal-apps/issues
+port: 10179
 gallery:
   - 1.jpg
   - 2.jpg
@@ -23,4 +23,4 @@ defaultUsername: ""
 defaultPassword: ""
 icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/warracker.png
 submitter: BigBearTechWorld
-submission: https://github.com/bigbeartechworld/big-bear-casaos
+submission: https://github.com/bigbeartechworld/big-bear-universal-apps

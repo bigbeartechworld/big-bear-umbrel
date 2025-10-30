@@ -5,14 +5,14 @@ name: Fastfetch
 version: "0.0.4"
 tagline: Fastfetch is a neofetch-like tool.
 description: >-
-  Fastfetch is a neofetch-like tool for fetching system information and displaying it prettily. It is written mainly in C, with performance and customizability in mind. Currently, Linux, Android, FreeBSD, macOS, SunOS and Windows 7+ are supported. https://github.com/fastfetch-cli/fastfetch
+  Fastfetch is a neofetch-like tool for fetching system information and displaying it prettily. It is written mainly in C, with performance and customizability in mind. Currently, Linux, Android, FreeBSD, macOS, SunOS and Windows 7+ are supported. https://github.com/fastfetch-cli/fastfetch 
 releaseNotes: >-
   This version includes various improvements and bug fixes.
 developer: bigbeartechworld
-website: https://github.com/bigbeartechworld/big-bear-casaos
+website: 
 dependencies: []
-repo: https://github.com/bigbeartechworld/big-bear-casaos
-support: https://github.com/bigbeartechworld/big-bear-casaos/issues
+repo: https://github.com/bigbeartechworld/big-bear-universal-apps
+support: https://github.com/bigbeartechworld/big-bear-universal-apps/issues
 port: 10045
 gallery:
   - 1.jpg
@@ -21,6 +21,6 @@ gallery:
 path: ""
 defaultUsername: ""
 defaultPassword: ""
-icon: https://cdn.jsdelivr.net/gh/bigbeartechworld/big-bear-casaos/Apps/fastfetch/logo.png
+icon: https://cdn.jsdelivr.net/gh/bigbeartechworld/big-bear-universal-apps/apps/fastfetch/logo.png
 submitter: BigBearTechWorld
-submission: https://github.com/bigbeartechworld/big-bear-casaos
+submission: https://github.com/bigbeartechworld/big-bear-universal-apps

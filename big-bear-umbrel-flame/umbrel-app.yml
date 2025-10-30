@@ -5,14 +5,14 @@ name: Flame
 version: "multiarch2.3.1"
 tagline: Flame is a self-hosted startpage for your server. Manage your apps and bookmarks effortlessly with built-in editors.
 description: >-
-  Flame is a self-hosted startpage for your server. Its design is heavily inspired by SUI. Flame is user-friendly and easy to set up. With its built-in editors, users can quickly establish their own application hub without any file editing.
+  Flame is a self-hosted startpage for your server. Its design is heavily inspired by SUI. Flame is user-friendly and easy to set up. With its built-in editors, users can quickly establish their own application hub without any file editing. 
 releaseNotes: >-
   This version includes various improvements and bug fixes.
-developer: BigBearTechWorld
-website: https://github.com/bigbeartechworld/big-bear-casaos
+developer: 
+website: 
 dependencies: []
-repo: https://github.com/bigbeartechworld/big-bear-casaos
-support: https://github.com/bigbeartechworld/big-bear-casaos/issues
+repo: https://github.com/bigbeartechworld/big-bear-universal-apps
+support: https://github.com/bigbeartechworld/big-bear-universal-apps/issues
 port: 10049
 gallery:
   - 1.jpg
@@ -23,4 +23,4 @@ defaultUsername: ""
 defaultPassword: ""
 icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/flame.png
 submitter: BigBearTechWorld
-submission: https://github.com/bigbeartechworld/big-bear-casaos
+submission: https://github.com/bigbeartechworld/big-bear-universal-apps

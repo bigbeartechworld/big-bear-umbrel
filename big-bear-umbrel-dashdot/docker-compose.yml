@@ -1,12 +1,15 @@
-
+# Configuration for big-bear-dashdot setup
+# Name of the big-bear-dashdot application
 version: "3.7"
+# Service definitions for the dashdot application
 services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-dashdot_app_1
+      APP_PORT: "3001"
+  # Service definition for the main application
   app:
     image: mauricenino/dashdot:6.2.0 # Image to be used for this service
     volumes:
       - ${APP_DATA_DIR}:/mnt/host# Mounting the local dashdot directory to /mnt/host inside the container
     privileged: true # Runs the container in privileged mode, allowing it access to host devices
-  app_proxy:
-    environment:
-      APP_HOST: big-bear-umbrel-dashdot_app_1
-      APP_PORT: "3001"
