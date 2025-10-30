@@ -1,12 +1,20 @@
-
+# Configuration for erugo setup
+# Name of the big-bear-erugo application
 version: "3.7"
+# Service definitions for the big-bear-erugo application
 services:
-  big-bear-erugo:
-    image: wardy784/erugo:0.1.1
-    restart: unless-stopped
-    volumes:
-      - ${APP_DATA_DIR}/storage:/var/www/html/storage
   app_proxy:
     environment:
-      APP_HOST: big-bear-umbrel-erugo_big-bear-erugo_1
+      APP_HOST: _big-bear-erugo_1
       APP_PORT: "80"
+  # Service name: big-bear-erugo
+  # The `big-bear-erugo` service definition
+  big-bear-erugo:
+    # Image to be used for the container
+    image: wardy784/erugo:0.1.1
+    # Container restart policy
+    restart: unless-stopped
+    # Volumes to be mounted to the container
+    volumes:
+      # Mounting storage directory to allow erugo to save data
+      - ${APP_DATA_DIR}/erugo_storage:/var/www/html/storage

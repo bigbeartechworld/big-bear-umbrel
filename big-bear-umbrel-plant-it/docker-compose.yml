@@ -1,53 +1,95 @@
-
+# Configuration for plant-it setup
+# Name of the big-bear-plant-it application
 version: "3.7"
+# Service definitions for the big-bear-plant-it application
 services:
-  big-bear-plant-it:
-    image: msdeluise/plant-it-server:0.10.0
-    restart: unless-stopped
-    environment:
-      - MYSQL_HOST=big-bear-plant-it-db
-      - MYSQL_PORT=3306
-      - MYSQL_USERNAME=root
-      - MYSQL_PSW=9c75c563-b549-40e6-a0d2-360cf9a962ea
-      - MYSQL_DATABASE=plantit
-      - MYSQL_ROOT_PASSWORD=9c75c563-b549-40e6-a0d2-360cf9a962ea
-      - JWT_SECRET=putTheSecretHere
-      - JWT_EXP=1
-      - USERS_LIMIT=-1
-      - UPLOAD_DIR=/upload-dir
-      - API_PORT=8080
-      - TREFLE_KEY=
-      - LOG_LEVEL=DEBUG
-      - ALLOWED_ORIGINS=*
-      - CACHE_TTL=86400
-      - CACHE_HOST=big-bear-plant-it-cache
-      - CACHE_PORT=6379
-      - SSL_ENABLED=false
-      - CERTIFICATE_PATH=/certificates/
-    volumes:
-      - "${APP_DATA_DIR}/upload-dir:/upload-dir"
-      - "${APP_DATA_DIR}/certificates:/certificates"
-    networks:
-      - big_bear_plant_it_network
-  big-bear-plant-it-db:
-    image: mysql:8.0
-    restart: always
-    environment:
-      - MYSQL_DATABASE=plantit
-      - MYSQL_ROOT_PASSWORD=9c75c563-b549-40e6-a0d2-360cf9a962ea
-    volumes:
-      - "${APP_DATA_DIR}/mysql:/var/lib/mysql"
-    networks:
-      - big_bear_plant_it_network
-  big-bear-plant-it-cache:
-    image: redis:7.2.11@sha256:9c44a721d444690605ffa32d6b6e1ac565060676386f88bbbb376f56cef2f724
-    restart: always
-    networks:
-      - big_bear_plant_it_network
   app_proxy:
     environment:
-      APP_HOST: big-bear-umbrel-plant-it_big-bear-plant-it_1
+      APP_HOST: _big-bear-plant-it_1
       APP_PORT: "8080"
+  # Service name: big-bear-plant-it
+  # The `big-bear-plant-it` service definition
+  big-bear-plant-it:
+    # Image to be used for the container
+    image: msdeluise/plant-it-server:0.10.0
+    # Container restart policy
+    restart: unless-stopped
+    environment:
+      # MySQL database host
+      - MYSQL_HOST=big-bear-plant-it-db
+      # MySQL database port
+      - MYSQL_PORT=3306
+      # MySQL database username
+      - MYSQL_USERNAME=root
+      # MySQL database password
+      - MYSQL_PSW=9c75c563-b549-40e6-a0d2-360cf9a962ea
+      # MySQL database name
+      - MYSQL_DATABASE=plantit
+      # MySQL root password
+      - MYSQL_ROOT_PASSWORD=9c75c563-b549-40e6-a0d2-360cf9a962ea
+      # JWT secret for authentication
+      - JWT_SECRET=putTheSecretHere
+      # JWT expiration time
+      - JWT_EXP=1
+      # Users limit (-1 means no limit)
+      - USERS_LIMIT=-1
+      # Directory for file uploads
+      - UPLOAD_DIR=/upload-dir
+      # API port
+      - API_PORT=8080
+      # Trefle API key (currently empty)
+      - TREFLE_KEY=
+      # Log level
+      - LOG_LEVEL=DEBUG
+      # Allowed origins for CORS
+      - ALLOWED_ORIGINS=*
+      # Cache time-to-live (TTL) in seconds
+      - CACHE_TTL=86400
+      # Cache host
+      - CACHE_HOST=big-bear-plant-it-cache
+      # Cache port
+      - CACHE_PORT=6379
+      # SSL enabled flag
+      - SSL_ENABLED=false
+      # Path to SSL certificates
+      - CERTIFICATE_PATH=/certificates/
+    # Volumes to be mounted to the container
+    volumes:
+      # Volume for uploads
+      - "plant-it_upload-dir:/upload-dir"
+      # Volume for SSL certificates
+      - "plant-it_certificates:/certificates"
+    networks:
+      # Network definition
+      - big_bear_plant_it_network
+  # Service definition for the database
+  big-bear-plant-it-db:
+    # Image for the database
+    image: mysql:8.0
+    # Restart policy for the database container
+    restart: always
+    environment:
+      # MySQL database name
+      - MYSQL_DATABASE=plantit
+      # MySQL root password
+      - MYSQL_ROOT_PASSWORD=9c75c563-b549-40e6-a0d2-360cf9a962ea
+    volumes:
+      # Volume for MySQL data
+      - "plant-it_mysql:/var/lib/mysql"
+    networks:
+      # Network definition
+      - big_bear_plant_it_network
+  # Service definition for the cache
+  big-bear-plant-it-cache:
+    # Image for the cache
+    image: redis:7.2.11@sha256:9c44a721d444690605ffa32d6b6e1ac565060676386f88bbbb376f56cef2f724
+    # Restart policy for the cache container
+    restart: always
+    networks:
+      # Network definition
+      - big_bear_plant_it_network
+# Network configuration
 networks:
+  # Network definition
   big_bear_plant_it_network:
     driver: bridge

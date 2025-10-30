@@ -1,19 +1,19 @@
 manifestVersion: 1
-id: big-bear-umbrel-stalwart-mail
+id: 
 category: BigBearCasaOS
 name: Stalwart Mail
-version: "0.14.0"
+version: "v0.14.0"
 tagline: Secure & Modern All-in-One Mail Server (IMAP, JMAP, POP3, SMTP) 🛡️
 description: >-
   Stalwart Mail Server is an open-source mail server solution with JMAP, IMAP4, POP3, and SMTP support and a wide range of modern features. It is written in Rust and designed to be secure, fast, robust and scalable.
 releaseNotes: >-
   This version includes various improvements and bug fixes.
 developer: stalwartlabs
-website: https://github.com/bigbeartechworld/big-bear-casaos
+website: 
 dependencies: []
-repo: https://github.com/bigbeartechworld/big-bear-casaos
-support: https://github.com/bigbeartechworld/big-bear-casaos/issues
-port: 10164
+repo: https://github.com/bigbeartechworld/big-bear-universal-apps
+support: https://github.com/bigbeartechworld/big-bear-universal-apps/issues
+port: 10159
 gallery:
   - 1.jpg
   - 2.jpg
@@ -23,4 +23,4 @@ defaultUsername: ""
 defaultPassword: ""
 icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/stalwart.png
 submitter: BigBearTechWorld
-submission: https://github.com/bigbeartechworld/big-bear-casaos
+submission: https://github.com/bigbeartechworld/big-bear-universal-apps

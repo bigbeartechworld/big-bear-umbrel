@@ -1,14 +1,23 @@
-
+# Configuration for ejbca-ce setup
+# Name of the big-bear-ejbca-ce application
 version: "3.7"
+# Service definitions for the big-bear-ejbca-ce application
 services:
-  big-bear-ejbca-ce:
-    image: keyfactor/ejbca-ce:9.1.1
-    restart: unless-stopped
-    volumes:
-      - ${APP_DATA_DIR}/persistent:/mnt/persistent
-    environment:
-      - TLS_SETUP_ENABLED=simple
   app_proxy:
     environment:
-      APP_HOST: big-bear-umbrel-ejbca-ce_big-bear-ejbca-ce_1
+      APP_HOST: _big-bear-ejbca-ce_1
       APP_PORT: "8080"
+  # Service name: app
+  # The `app` service definition
+  big-bear-ejbca-ce:
+    # Image to be used for the container
+    image: keyfactor/ejbca-ce:9.1.1
+    # Container restart policy
+    restart: unless-stopped
+    # Volumes to be mounted to the container
+    volumes:
+      # Mounting the local ejbca-ce/persistent directory to /mnt/persistent inside the container
+      - ${APP_DATA_DIR}/ejbca-ce_persistent:/mnt/persistent
+    # Environment variables
+    environment:
+      - TLS_SETUP_ENABLED=simple

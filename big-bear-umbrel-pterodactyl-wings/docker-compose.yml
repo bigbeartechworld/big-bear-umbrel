@@ -1,23 +1,42 @@
+# big-bear-pterodactyl-wings configuration
 version: "3.7"
+# Services section that specifies how the different services should be run
 services:
-  app:
-    image: ghcr.io/pterodactyl/wings:v1.11.13
-    restart: always
-    tty: true
-    environment:
-      TZ: "UTC"
-      WINGS_UID: 988
-      WINGS_GID: 988
-      WINGS_USERNAME: pterodactyl
-    volumes:
-      - "/var/run/docker.sock:/var/run/docker.sock"
-      - "/var/lib/docker/containers/:/var/lib/docker/containers/"
-      - "/etc/ssl/certs:/etc/ssl/certs:ro"
-      - "/tmp/pterodactyl:/tmp/pterodactyl/"
-      - "/etc/pterodactyl:/etc/pterodactyl/"
-      - "/var/log/pterodactyl:/var/log/pterodactyl/"
-      - "/var/lib/pterodactyl:/var/lib/pterodactyl/"
   app_proxy:
     environment:
-      APP_HOST: big-bear-umbrel-pterodactyl-wings_app_1
+      APP_HOST: _app_1
       APP_PORT: "8080"
+  # This is the main app service for Pterodactyl Wings
+  app:
+    # Docker image to use for the container
+    image: ghcr.io/pterodactyl/wings:v1.11.13
+    # Determines the restart policy. In this case, the container will always restart if it stops.
+    restart: always
+    # Allocate a pseudo-TTY, making it act like a terminal
+    tty: true
+    # Set environment variables for the container
+    environment:
+      # Set the timezone to UTC
+      TZ: "UTC"
+      # Set the User ID for the Wings process
+      WINGS_UID: 988
+      # Set the Group ID for the Wings process
+      WINGS_GID: 988
+      # Set the username for the Wings process
+      WINGS_USERNAME: pterodactyl
+    # Mount paths from the host into the container
+    volumes:
+      # Mount the Docker socket, allowing the container to communicate with the host's Docker daemon
+      - "/var/run/docker.sock:/var/run/docker.sock"
+      # Mount the Docker containers directory
+      - "/var/lib/docker/containers/:/var/lib/docker/containers/"
+      # Mount the SSL certificates in read-only mode
+      - "/etc/ssl/certs:/etc/ssl/certs:ro"
+      # Mount a temporary directory for Pterodactyl
+      - "/tmp/pterodactyl:/tmp/pterodactyl/"
+      # Mount the configuration directory for Pterodactyl
+      - "/etc/pterodactyl:/etc/pterodactyl/"
+      # Mount the logs directory for Pterodactyl
+      - "/var/log/pterodactyl:/var/log/pterodactyl/"
+      # Mount the library directory for Pterodactyl
+      - "/var/lib/pterodactyl:/var/lib/pterodactyl/"
