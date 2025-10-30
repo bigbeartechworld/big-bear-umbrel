@@ -1,18 +1,31 @@
-
+# Configuration for lyrionmusicserver setup
+# Name of the big-bear-lyrionmusicserver application
 version: "3.7"
+# Service definitions for the big-bear-lyrionmusicserver application
 services:
-  big-bear-lyrionmusicserver:
-    image: lmscommunity/lyrionmusicserver:9.1.0
-    restart: unless-stopped
-    environment:
-      - HTTP_PORT=9000
-    volumes:
-      - ${APP_DATA_DIR}/config:/config:rw
-      - ${APP_DATA_DIR}/music:/music:ro
-      - ${APP_DATA_DIR}/playlists:/playlist:rw
-      - /etc/localtime:/etc/localtime:ro
-      - /etc/timezone:/etc/timezone:ro
   app_proxy:
     environment:
       APP_HOST: big-bear-umbrel-lyrionmusicserver_big-bear-lyrionmusicserver_1
       APP_PORT: "9000"
+  # Service name: big-bear-lyrionmusicserver
+  # The `big-bear-lyrionmusicserver` service definition
+  big-bear-lyrionmusicserver:
+    # Image to be used for the container
+    image: lmscommunity/lyrionmusicserver:9.1.0
+    # Container restart policy
+    restart: unless-stopped
+    # Environment variables for the container
+    environment:
+      - HTTP_PORT=9000
+    # Volumes to be mounted to the container
+    volumes:
+      # Mounting the local big-bear-lyrionmusicserver/config directory to /config inside the container
+      - ${APP_DATA_DIR}/config:/config:rw
+      # Mounting the local big-bear-lyrionmusicserver/music directory to /music inside the container
+      - ${APP_DATA_DIR}/music:/music:ro
+      # Mounting the local big-bear-lyrionmusicserver/playlists directory to /playlist inside the container
+      - ${APP_DATA_DIR}/playlists:/playlist:rw
+      # Mounting the local /etc/localtime directory to /etc/localtime inside the container
+      - /etc/localtime:/etc/localtime:ro
+      # Mounting the local /etc/timezone directory to /etc/timezone inside the container
+      - /etc/timezone:/etc/timezone:ro

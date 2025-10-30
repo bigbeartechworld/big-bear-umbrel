@@ -1,9 +1,20 @@
-
+# Configuration for semaphore setup
+# Name of the big-bear-semaphore application
 version: "3.7"
+# Service definitions for the big-bear-semaphore application
 services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-semaphore_big-bear-semaphore_1
+      APP_PORT: "3000"
+  # Service name: big-bear-semaphore
+  # The `big-bear-semaphore` service definition
   big-bear-semaphore:
+    # Image to be used for the container
     image: semaphoreui/semaphore:v2.16.34
+    # Container restart policy
     restart: unless-stopped
+    # Environment variables for configuration
     environment:
       SEMAPHORE_DB_USER: semaphore
       SEMAPHORE_DB_PASS: semaphore
@@ -16,11 +27,13 @@ services:
       SEMAPHORE_ADMIN_EMAIL: admin@example.com
       SEMAPHORE_ADMIN: admin
       TZ: UTC
+    # Volumes to be mounted to the container
     volumes:
       - ${APP_DATA_DIR}/home:/etc/semaphore # Configuration files for Semaphore
       - ${APP_DATA_DIR}/lib:/var/lib/semaphore # Local storage for Semaphore data (not needed if using an external database)
     networks:
       - big-bear-semaphore-network
+  # MySQL database service for semaphore
   big-bear-semaphore-db:
     image: mysql:8.0
     restart: unless-stopped
@@ -33,10 +46,6 @@ services:
       MYSQL_PASSWORD: "semaphore" # Database password
     networks:
       - big-bear-semaphore-network
-  app_proxy:
-    environment:
-      APP_HOST: big-bear-umbrel-semaphore_big-bear-semaphore_1
-      APP_PORT: "3000"
 networks:
   big-bear-semaphore-network:
     driver: bridge # Specifies network driver type
