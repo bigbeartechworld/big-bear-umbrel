@@ -1,13 +1,22 @@
-
+# Configuration for kiwix-serve setup
+# Name of the big-bear-kiwix-serve application
 version: "3.7"
+# Service definitions for the big-bear-kiwix-serve application
 services:
-  big-bear-kiwix-serve:
-    image: ghcr.io/kiwix/kiwix-serve:3.7.0-2
-    command: "*.zim"
-    restart: unless-stopped
-    volumes:
-      - ${APP_DATA_DIR}/zim:/data
   app_proxy:
     environment:
       APP_HOST: big-bear-umbrel-kiwix-serve_big-bear-kiwix-serve_1
       APP_PORT: "8080"
+  # Service name: big-bear-kiwix-serve
+  # The `big-bear-kiwix-serve` service definition
+  big-bear-kiwix-serve:
+    # Image to be used for the container
+    image: ghcr.io/kiwix/kiwix-serve:3.7.0-2
+    # Command to run inside the container
+    command: "*.zim"
+    # Container restart policy
+    restart: unless-stopped
+    # Volumes to be mounted to the container
+    volumes:
+      # Mounting the local kiwix-serve_zim directory to /data inside the container
+      - ${APP_DATA_DIR}/zim:/data
