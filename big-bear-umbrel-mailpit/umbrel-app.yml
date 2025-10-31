@@ -2,18 +2,18 @@ manifestVersion: 1
 id: big-bear-umbrel-mailpit
 category: BigBearCasaOS
 name: Mailpit
-version: "1.27"
+version: "v1.27"
 tagline: Mailpit
 description: >-
-  Mailpit is a multi-platform email testing tool & API for developers.
+  Mailpit is a multi-platform email testing tool & API for developers. 
 releaseNotes: >-
   This version includes various improvements and bug fixes.
 developer: axllent
-website: https://github.com/bigbeartechworld/big-bear-casaos
+website: 
 dependencies: []
-repo: https://github.com/bigbeartechworld/big-bear-casaos
-support: https://github.com/bigbeartechworld/big-bear-casaos/issues
-port: 10093
+repo: https://github.com/bigbeartechworld/big-bear-universal-apps
+support: https://github.com/bigbeartechworld/big-bear-universal-apps/issues
+port: 10091
 gallery:
   - 1.jpg
   - 2.jpg
@@ -21,6 +21,6 @@ gallery:
 path: ""
 defaultUsername: ""
 defaultPassword: ""
-icon: https://cdn.jsdelivr.net/gh/bigbeartechworld/big-bear-casaos/Apps/mailpit/logo.png
+icon: https://cdn.jsdelivr.net/gh/bigbeartechworld/big-bear-universal-apps/apps/mailpit/logo.png
 submitter: BigBearTechWorld
-submission: https://github.com/bigbeartechworld/big-bear-casaos
+submission: https://github.com/bigbeartechworld/big-bear-universal-apps

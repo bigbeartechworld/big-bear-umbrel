@@ -2,18 +2,18 @@ manifestVersion: 1
 id: big-bear-umbrel-convertx
 category: BigBearCasaOS
 name: ConvertX
-version: "0.15.1"
+version: "v0.15.1"
 tagline: 💾 Self-hosted online file converter. Supports 1000+ formats ⚙️
 description: >-
-  A self-hosted online file converter. Supports over a thousand different formats. Written with TypeScript, Bun and Elysia.
+  A self-hosted online file converter. Supports over a thousand different formats. Written with TypeScript, Bun and Elysia. 
 releaseNotes: >-
   This version includes various improvements and bug fixes.
 developer: C4illin
-website: https://github.com/bigbeartechworld/big-bear-casaos
+website: 
 dependencies: []
-repo: https://github.com/bigbeartechworld/big-bear-casaos
-support: https://github.com/bigbeartechworld/big-bear-casaos/issues
-port: 10026
+repo: https://github.com/bigbeartechworld/big-bear-universal-apps
+support: https://github.com/bigbeartechworld/big-bear-universal-apps/issues
+port: 10028
 gallery:
   - 1.jpg
   - 2.jpg
@@ -21,6 +21,6 @@ gallery:
 path: ""
 defaultUsername: ""
 defaultPassword: ""
-icon: https://cdn.jsdelivr.net/gh/bigbeartechworld/big-bear-casaos/Apps/convertx/logo.png
+icon: https://cdn.jsdelivr.net/gh/bigbeartechworld/big-bear-universal-apps/apps/convertx/logo.png
 submitter: BigBearTechWorld
-submission: https://github.com/bigbeartechworld/big-bear-casaos
+submission: https://github.com/bigbeartechworld/big-bear-universal-apps

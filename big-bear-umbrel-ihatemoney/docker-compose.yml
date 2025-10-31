@@ -1,8 +1,18 @@
-
+# Configuration for ihatemoney setup
+# Name of the big-bear-ihatemoney application
 version: "3.7"
+# Service definitions for the big-bear-ihatemoney application
 services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-ihatemoney_big-bear-ihatemoney_1
+      APP_PORT: "8000"
+  # Service name: big-bear-ihatemoney
+  # The `big-bear-ihatemoney` service definition
   big-bear-ihatemoney:
+    # Image to be used for the container
     image: ihatemoney/ihatemoney:6.1.5
+    # Container restart policy
     restart: unless-stopped
     environment:
       SECRET_KEY: "1d58bc34-e7ff-4f6d-a1e4-f319262ed9b8" # Sets the secret key environment variable for the application.
@@ -12,6 +22,7 @@ services:
       SESSION_COOKIE_SECURE: "False" # Disables secure session cookies for development.
     networks:
       - big_bear_ihatemoney_network # Connects the service to a network.
+  # Define a service named 'big-bear-ihatemoney-db' for the database.
   big-bear-ihatemoney-db:
     image: mariadb:10 # Use MariaDB version 10 Docker image.
     environment:
@@ -23,10 +34,6 @@ services:
       - ${APP_DATA_DIR}/mysql:/var/lib/mysql # Maps a volume for data persistence.
     networks:
       - big_bear_ihatemoney_network # Connects the MySQL service to the network.
-  app_proxy:
-    environment:
-      APP_HOST: big-bear-umbrel-ihatemoney_big-bear-ihatemoney_1
-      APP_PORT: "8000"
 networks:
   big_bear_ihatemoney_network: # Define a network named 'big_bear_ihatemoney_network'.
     driver: bridge # Use the bridge network driver.

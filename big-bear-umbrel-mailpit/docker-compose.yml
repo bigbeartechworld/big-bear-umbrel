@@ -1,5 +1,12 @@
+# Configuration for big-bear-mailpit setup
 version: "3.7"
+# Service definitions for the big-bear-mailpit application
 services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-mailpit_app_1
+      APP_PORT: "8025"
+  # Service name: app
   app:
     image: axllent/mailpit:v1.27 # Image for the app service
     restart: unless-stopped # Restart policy for the container
@@ -7,7 +14,3 @@ services:
       - ${APP_DATA_DIR}/data:/data
     environment: # Environment variables for the app service
       - TZ=UTC
-  app_proxy:
-    environment:
-      APP_HOST: big-bear-umbrel-mailpit_app_1
-      APP_PORT: "8025"

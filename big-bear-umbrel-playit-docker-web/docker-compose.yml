@@ -1,10 +1,20 @@
+# Configuration for playit-docker-web setup
+# Name of the big-bear-playit-docker-web application
 version: "3.7"
+# Service definitions for the big-bear-playit-docker-web application
 services:
+  # Service name: big-bear-playit-docker-web
+  # The `big-bear-playit-docker-web` service definition
   big-bear-playit-docker-web:
+    # Image to be used for the container
     image: wisdomsky/playit-docker-web:1.1
+    # Container restart policy
     restart: unless-stopped
+    # Network mode
     network_mode: host
+    # Environment variables for the container
     environment:
       - WEBUI_PORT=8008
+    # Volumes to be mounted to the container
     volumes:
       - ${APP_DATA_DIR}/config:/config

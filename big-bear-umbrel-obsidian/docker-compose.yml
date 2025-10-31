@@ -1,16 +1,24 @@
-
+# Configuration for obsidian setup
+# Name of the big-bear-obsidian application
 version: "3.7"
+# Service definitions for the big-bear-obsidian application
 services:
-  big-bear-obsidian:
-    image: linuxserver/obsidian:1.9.14
-    restart: unless-stopped
-    environment:
-      - PUID=1000
-      - PGID=1000
-      - TZ=Etc/UTC
-    volumes:
-      - ${APP_DATA_DIR}/config:/config
   app_proxy:
     environment:
       APP_HOST: big-bear-umbrel-obsidian_big-bear-obsidian_1
       APP_PORT: "3000"
+  # Service name: big-bear-obsidian
+  # The `big-bear-obsidian` service definition
+  big-bear-obsidian:
+    # Image to be used for the container
+    image: linuxserver/obsidian:1.9.14
+    # Container restart policy
+    restart: unless-stopped
+    # Environment variables
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Etc/UTC
+    # Volumes to be mounted to the container
+    volumes:
+      - ${APP_DATA_DIR}/config:/config

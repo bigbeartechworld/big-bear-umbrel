@@ -1,9 +1,17 @@
+# Configuration for matterbridge setup
+# Application Name
 version: "3.7"
+# Services used in the application
 services:
+  # The `big-bear-matterbridge` service for the Matterbridge application
   big-bear-matterbridge:
-    image: luligu/matterbridge:3.3.3
+    # Docker image to be used
+    image: luligu/matterbridge:3.3.4
+    # Restart policy for the service
     restart: unless-stopped
+    # Network mode set to host for Matter mdns support
     network_mode: host
+    # Volume mappings for persistent storage
     volumes:
       - ${APP_DATA_DIR}/Matterbridge:/root/Matterbridge
       - ${APP_DATA_DIR}/.matterbridge:/root/.matterbridge

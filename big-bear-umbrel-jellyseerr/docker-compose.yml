@@ -1,5 +1,9 @@
 version: "3.7"
 services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-jellyseerr_app_1
+      APP_PORT: "5055"
   app:
     image: fallenbagel/jellyseerr:2.7.3 # Image to use for the jellyseerr service
     volumes:
@@ -8,7 +12,3 @@ services:
       - LOG_LEVEL=debug # Sets the log level to debug
       - TZ=$TZ # Sets the timezone, using host's timezone variable
     restart: unless-stopped # Service will restart unless it is explicitly stopped
-  app_proxy:
-    environment:
-      APP_HOST: big-bear-umbrel-jellyseerr_app_1
-      APP_PORT: "5055"

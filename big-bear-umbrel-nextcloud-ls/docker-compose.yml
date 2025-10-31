@@ -1,17 +1,25 @@
-
+# Configuration for nextcloud-ls setup
+# Name of the big-bear-nextcloud-ls application
 version: "3.7"
+# Service definitions for the big-bear-nextcloud-ls application
 services:
-  big-bear-nextcloud-ls:
-    image: linuxserver/nextcloud:32.0.1
-    restart: unless-stopped
-    volumes:
-      - ${APP_DATA_DIR}/config:/config
-      - ${APP_DATA_DIR}/data:/data
-    environment:
-      - PUID=1000
-      - PGID=1000
-      - TZ=Etc/UTC
   app_proxy:
     environment:
       APP_HOST: big-bear-umbrel-nextcloud-ls_big-bear-nextcloud-ls_1
       APP_PORT: "443"
+  # Service name: big-bear-nextcloud-ls
+  # The `big-bear-nextcloud-ls` service definition
+  big-bear-nextcloud-ls:
+    # Use the nextcloud:28.0.1-apache image
+    image: linuxserver/nextcloud:32.0.1
+    # Restart the container unless stopped
+    restart: unless-stopped
+    # Mount the nextcloud-ls_data directory on the host to /var/www/html in the container
+    volumes:
+      - ${APP_DATA_DIR}/config:/config
+      - ${APP_DATA_DIR}/data:/data
+    # Set environment variables
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Etc/UTC

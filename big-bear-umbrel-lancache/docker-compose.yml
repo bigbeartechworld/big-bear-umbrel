@@ -1,36 +1,59 @@
-
+# Configuration for lancache setup
+# Name of the big-bear-lancache application
 version: "3.7"
+# Service definitions for the big-bear-lancache application
 services:
-  app:
-    image: lancachenet/monolithic:latest # Docker image for the caching service
-    environment:
-      - USE_GENERIC_CACHE=true
-      - LANCACHE_IP=10.0.39.1
-      - DNS_BIND_IP=10.0.39.1
-      - UPSTREAM_DNS=8.8.8.8
-      - CACHE_ROOT=./lancache
-      - CACHE_DISK_SIZE=2000g
-      - CACHE_INDEX_SIZE=500m
-      - CACHE_MAX_AGE=3650d
-      - TZ=UTC
-    restart: unless-stopped
-    volumes:
-      - ${APP_DATA_DIR}/cache:/data/cache
-      - ${APP_DATA_DIR}/logs:/data/logs
-  dns:
-    image: lancachenet/lancache-dns:latest # Docker image for DNS service
-    environment:
-      - USE_GENERIC_CACHE=true
-      - LANCACHE_IP=10.0.39.1
-      - DNS_BIND_IP=10.0.39.1
-      - UPSTREAM_DNS=8.8.8.8
-      - CACHE_ROOT=./lancache
-      - CACHE_DISK_SIZE=2000g
-      - CACHE_INDEX_SIZE=500m
-      - CACHE_MAX_AGE=3650d
-      - TZ=UTC
-    restart: unless-stopped
   app_proxy:
     environment:
       APP_HOST: big-bear-umbrel-lancache_app_1
       APP_PORT: "80"
+  # Service name: app
+  app:
+    image: lancachenet/monolithic:latest # Docker image for the caching service
+    environment:
+      # Toggle for load balancer usage or separate IPs for each service
+      - USE_GENERIC_CACHE=true
+      # IPs for lancache monolithic instance; affects DNS resolution
+      - LANCACHE_IP=10.0.39.1
+      # Host IP for the DNS server binding
+      - DNS_BIND_IP=10.0.39.1
+      # Upstream DNS for forwarded lookups
+      - UPSTREAM_DNS=8.8.8.8
+      # Local storage path for cache data
+      - CACHE_ROOT=./lancache
+      # Customizable disk cache size
+      - CACHE_DISK_SIZE=2000g
+      # Memory allocation for nginx cache indexing
+      - CACHE_INDEX_SIZE=500m
+      # Maximum age for cached content
+      - CACHE_MAX_AGE=3650d
+      # Container timezone setting for log timestamps
+      - TZ=UTC
+    restart: unless-stopped
+    volumes:
+      # Mount points for cache and logs
+      - ${APP_DATA_DIR}/cache:/data/cache
+      - ${APP_DATA_DIR}/logs:/data/logs
+  # DNS service configuration
+  dns:
+    image: lancachenet/lancache-dns:latest # Docker image for DNS service
+    environment:
+      # Toggle for load balancer usage or separate IPs for each service
+      - USE_GENERIC_CACHE=true
+      # IPs for lancache monolithic instance; affects DNS resolution
+      - LANCACHE_IP=10.0.39.1
+      # Host IP for the DNS server binding
+      - DNS_BIND_IP=10.0.39.1
+      # Upstream DNS for forwarded lookups
+      - UPSTREAM_DNS=8.8.8.8
+      # Local storage path for cache data
+      - CACHE_ROOT=./lancache
+      # Customizable disk cache size
+      - CACHE_DISK_SIZE=2000g
+      # Memory allocation for nginx cache indexing
+      - CACHE_INDEX_SIZE=500m
+      # Maximum age for cached content
+      - CACHE_MAX_AGE=3650d
+      # Container timezone setting for log timestamps
+      - TZ=UTC
+    restart: unless-stopped

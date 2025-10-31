@@ -1,10 +1,20 @@
+# Configuration for npmplus setup
+# Name of the big-bear-npmplus application
 version: "3.7"
+# Service definitions for the big-bear-npmplus application
 services:
+  # Service name: big-bear-npmplus
+  # The `big-bear-npmplus` service definition
   big-bear-npmplus:
+    # Image to be used for the container
     image: zoeyvid/npmplus:449
+    # Container restart policy
     restart: unless-stopped
+    # Network mode for the container
     network_mode: host
     environment:
-      - "TZ=America/Chicago"
+      - "TZ=America/Chicago" # Required for the container to function properly
+    # Volumes to be mounted to the container
     volumes:
-      - "${APP_DATA_DIR}/data:/data"
+      # Mounting the local npmplus_data directory to /data inside the container
+      - ${APP_DATA_DIR}/data:/data"

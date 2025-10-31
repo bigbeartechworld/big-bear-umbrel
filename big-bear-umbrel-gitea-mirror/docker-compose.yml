@@ -1,11 +1,27 @@
-
+# Configuration for gitea-mirror setup
+# Initial version: v3.6.0
+# Author: Arunavo Ray
+# Description: Gitea Mirror is a modern web app for automatically mirroring repositories from GitHub to your self-hosted Gitea instance. It can mirror personal repositories, starred repositories, and organization repositories.
+# Name of the big-bear-gitea-mirror application
 version: "3.7"
+# Service definitions for the big-bear-gitea-mirror application
 services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-gitea-mirror_big-bear-gitea-mirror_1
+      APP_PORT: "4321"
+  # Service name: big-bear-gitea-mirror
+  # The `big-bear-gitea-mirror` service definition
   big-bear-gitea-mirror:
-    image: ghcr.io/raylabshq/gitea-mirror:v3.8.10
+    # Image to be used for the container
+    image: ghcr.io/raylabshq/gitea-mirror:v3.8.11
+    # Container restart policy
     restart: unless-stopped
+    # Volumes to be mounted to the container
     volumes:
+      # Mounting the local data directory to the container
       - ${APP_DATA_DIR}/data:/app/data
+    # Environment variables for the container
     environment:
       - NODE_ENV=production
       - DATABASE_URL=file:data/gitea-mirror.db
@@ -13,13 +29,16 @@ services:
       - PORT=4321
       - BETTER_AUTH_URL=http://0.0.0.0:4321
       - BETTER_AUTH_SECRET=your-secret-key-change-this-in-production
+      # Optional GitHub/Gitea Mirror Config (can also be set through the UI)
+      # - GITHUB_USERNAME=your-github-username
+      # - GITHUB_TOKEN=your-github-token
+      # - GITEA_URL=your-gitea-url
+      # - GITEA_TOKEN=your-gitea-token
+      # - GITEA_USERNAME=your-gitea-username
+    # Health check configuration
     healthcheck:
       test: ["CMD", "wget", "--no-verbose", "--tries=3", "--spider", "http://localhost:4321/api/health"]
       interval: 30s
       timeout: 10s
       retries: 5
       start_period: 30s
-  app_proxy:
-    environment:
-      APP_HOST: big-bear-umbrel-gitea-mirror_big-bear-gitea-mirror_1
-      APP_PORT: "4321"

@@ -1,13 +1,21 @@
+# Configuration for big-bear-n8n setup
 version: "3.7"
+# Service definitions for the big-bear-n8n application
 services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-n8n_app_1
+      APP_PORT: "5678"
+  # Service configuration for the n8n application
   app:
-    image: n8nio/n8n:1.117.0 # Docker image and version to use for n8n
+    image: n8nio/n8n:1.118.0 # Docker image and version to use for n8n
     restart: unless-stopped # Restart policy: Restart unless manually stopped
     links:
       - db-n8n # Link to the database container
     volumes:
       - ${APP_DATA_DIR}/.n8n:/home/node/.n8n # Volume for persistent data
     environment:
+      # Database configuration environment variables
       - DB_TYPE=postgresdb
       - DB_POSTGRESDB_DATABASE=n8n
       - DB_POSTGRESDB_HOST=db-n8n
@@ -17,6 +25,7 @@ services:
     depends_on:
       db-n8n:
         condition: service_healthy # Ensure DB is healthy before starting app
+  # Database service configuration
   db-n8n:
     image: postgres:14.2 # Docker image and version for PostgreSQL
     restart: on-failure # Restart policy: Restart on failure
@@ -24,15 +33,13 @@ services:
       - ${APP_DATA_DIR}/pgdata:/var/lib/postgresql/data # Persistent DB data
       - ${APP_DATA_DIR}/db/init-data.sh:/docker-entrypoint-initdb.d/init-data.sh # DB initialization script
     environment:
+      # PostgreSQL user, password, and database environment variables
       - POSTGRES_PASSWORD=bigbearcasaos
       - POSTGRES_USER=bigbearcasaos
       - POSTGRES_DB=n8n
     healthcheck:
+      # Health check commands to ensure DB availability
       test: ["CMD-SHELL", "pg_isready -h localhost -U bigbearcasaos -d n8n"]
       interval: 5s
       timeout: 5s
       retries: 10
-  app_proxy:
-    environment:
-      APP_HOST: big-bear-umbrel-n8n_app_1
-      APP_PORT: "5678"

@@ -5,15 +5,15 @@ name: Zigbee to MQTT bridge
 version: "2.6.2"
 tagline: Zigbee to MQTT bridge
 description: >-
-  Zigbee to MQTT bridge, get rid of your proprietary Zigbee bridges
+  Zigbee to MQTT bridge, get rid of your proprietary Zigbee bridges 
 releaseNotes: >-
   This version includes various improvements and bug fixes.
 developer: koenkk
-website: https://github.com/bigbeartechworld/big-bear-casaos
+website: 
 dependencies: []
-repo: https://github.com/bigbeartechworld/big-bear-casaos
-support: https://github.com/bigbeartechworld/big-bear-casaos/issues
-port: 10189
+repo: https://github.com/bigbeartechworld/big-bear-universal-apps
+support: https://github.com/bigbeartechworld/big-bear-universal-apps/issues
+port: 10185
 gallery:
   - 1.jpg
   - 2.jpg
@@ -23,4 +23,4 @@ defaultUsername: ""
 defaultPassword: ""
 icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/zigbee2mqtt.png
 submitter: BigBearTechWorld
-submission: https://github.com/bigbeartechworld/big-bear-casaos
+submission: https://github.com/bigbeartechworld/big-bear-universal-apps
