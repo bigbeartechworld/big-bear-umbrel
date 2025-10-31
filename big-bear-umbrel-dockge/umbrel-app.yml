@@ -5,14 +5,14 @@ name: Dockge
 version: "1.5.0"
 tagline: Dockge
 description: >-
-  A fancy, easy-to-use and reactive docker `compose.yaml` stack-oriented manager
+  A fancy, easy-to-use and reactive docker `compose.yaml` stack-oriented manager 
 releaseNotes: >-
   This version includes various improvements and bug fixes.
 developer: louislam
-website: https://github.com/bigbeartechworld/big-bear-casaos
+website: 
 dependencies: []
-repo: https://github.com/bigbeartechworld/big-bear-casaos
-support: https://github.com/bigbeartechworld/big-bear-casaos/issues
+repo: https://github.com/bigbeartechworld/big-bear-universal-apps
+support: https://github.com/bigbeartechworld/big-bear-universal-apps/issues
 port: 10036
 gallery:
   - 1.jpg
@@ -23,4 +23,4 @@ defaultUsername: ""
 defaultPassword: ""
 icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/dockge.png
 submitter: BigBearTechWorld
-submission: https://github.com/bigbeartechworld/big-bear-casaos
+submission: https://github.com/bigbeartechworld/big-bear-universal-apps

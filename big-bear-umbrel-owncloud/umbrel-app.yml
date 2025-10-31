@@ -5,14 +5,14 @@ name: ownCloud
 version: "10.16.0"
 tagline: ownCloud
 description: >-
-  ownCloud offers file sharing and collaboration trusted by 200+ million users worldwide regardless of device or location.
+  ownCloud offers file sharing and collaboration trusted by 200+ million users worldwide regardless of device or location. 
 releaseNotes: >-
   This version includes various improvements and bug fixes.
 developer: owncloud
-website: https://github.com/bigbeartechworld/big-bear-casaos
+website: 
 dependencies: []
-repo: https://github.com/bigbeartechworld/big-bear-casaos
-support: https://github.com/bigbeartechworld/big-bear-casaos/issues
+repo: https://github.com/bigbeartechworld/big-bear-universal-apps
+support: https://github.com/bigbeartechworld/big-bear-universal-apps/issues
 port: 10126
 gallery:
   - 1.jpg
@@ -23,4 +23,4 @@ defaultUsername: ""
 defaultPassword: ""
 icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/owncloud.png
 submitter: BigBearTechWorld
-submission: https://github.com/bigbeartechworld/big-bear-casaos
+submission: https://github.com/bigbeartechworld/big-bear-universal-apps

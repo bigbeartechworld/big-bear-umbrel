@@ -1,8 +1,18 @@
+# Configuration for upsnap setup
+# Name of the big-bear-upsnap application
 version: "3.7"
+# Service definitions for the big-bear-upsnap application
 services:
+  # Service name: big-bear-upsnap
+  # The `big-bear-upsnap` service definition
   big-bear-upsnap:
+    # Image to be used for the container
     image: ghcr.io/seriousm4x/upsnap:5.2.3
+    # Container restart policy
     restart: unless-stopped
+    # Network mode
     network_mode: host
+    # Volumes to be mounted to the container
     volumes:
-      - ${APP_DATA_DIR}/pb_data:/app/pb_data
+      # Mounting the local ${APP_DATA_DIR}/pb_data directory to /app/pb_data inside the container
+      - ${APP_DATA_DIR}/pb/data:/app/pb_data

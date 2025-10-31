@@ -3,16 +3,16 @@ id: big-bear-umbrel-beaverhabits
 category: BigBearCasaOS
 name: Beaver Habit Tracker
 version: "0.7.3"
-tagline: A self-hosted habit tracking app without "Goals"
+tagline: A self-hosted habit tracking app without Goals
 description: >-
-  A self-hosted habit tracking app without "Goals"
+  A self-hosted habit tracking app without Goals 
 releaseNotes: >-
   This version includes various improvements and bug fixes.
 developer: daya0576
-website: https://github.com/bigbeartechworld/big-bear-casaos
+website: 
 dependencies: []
-repo: https://github.com/bigbeartechworld/big-bear-casaos
-support: https://github.com/bigbeartechworld/big-bear-casaos/issues
+repo: https://github.com/bigbeartechworld/big-bear-universal-apps
+support: https://github.com/bigbeartechworld/big-bear-universal-apps/issues
 port: 10010
 gallery:
   - 1.jpg
@@ -23,4 +23,4 @@ defaultUsername: ""
 defaultPassword: ""
 icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/beaver-habit-tracker.png
 submitter: BigBearTechWorld
-submission: https://github.com/bigbeartechworld/big-bear-casaos
+submission: https://github.com/bigbeartechworld/big-bear-universal-apps

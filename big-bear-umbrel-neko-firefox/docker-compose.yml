@@ -1,10 +1,22 @@
-
+# Configuration for neko-firefox setup
+# Name of the big-bear-neko-firefox application
 version: "3.7"
+# Service definitions for the big-bear-neko-firefox application
 services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-neko-firefox_big-bear-neko-firefox_1
+      APP_PORT: "8080"
+  # Service name: big-bear-neko-firefox
+  # The `big-bear-neko-firefox` service definition
   big-bear-neko-firefox:
+    # Image to be used for the container
     image: m1k1o/neko:firefox
+    # Container restart policy
     restart: unless-stopped
+    # Shared memory size
     shm_size: "2gb"
+    # Environment variables
     environment:
       NEKO_SCREEN: 1920x1080@30
       NEKO_PASSWORD: neko
@@ -13,7 +25,3 @@ services:
       NEKO_ICELITE: "1"
       NEKO_DEBUG: "1"
       NEKO_NAT1TO1: "[CASAOS_IP]" # Replace with your own IP address
-  app_proxy:
-    environment:
-      APP_HOST: big-bear-umbrel-neko-firefox_big-bear-neko-firefox_1
-      APP_PORT: "8080"

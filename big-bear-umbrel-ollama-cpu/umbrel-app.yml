@@ -5,14 +5,14 @@ name: Ollama - CPU
 version: "0.12.6"
 tagline: LLMs inference server with OpenAI compatible API
 description: >-
-  Get up and running with Llama 3, Mistral, Gemma, and other large language models.
+  Get up and running with Llama 3, Mistral, Gemma, and other large language models. 
 releaseNotes: >-
   This version includes various improvements and bug fixes.
 developer: ollama
-website: https://github.com/bigbeartechworld/big-bear-casaos
+website: 
 dependencies: []
-repo: https://github.com/bigbeartechworld/big-bear-casaos
-support: https://github.com/bigbeartechworld/big-bear-casaos/issues
+repo: https://github.com/bigbeartechworld/big-bear-universal-apps
+support: https://github.com/bigbeartechworld/big-bear-universal-apps/issues
 port: 11435
 gallery:
   - 1.jpg
@@ -23,4 +23,4 @@ defaultUsername: ""
 defaultPassword: ""
 icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/ollama.png
 submitter: BigBearTechWorld
-submission: https://github.com/bigbeartechworld/big-bear-casaos
+submission: https://github.com/bigbeartechworld/big-bear-universal-apps

@@ -2,17 +2,17 @@ manifestVersion: 1
 id: big-bear-umbrel-reactive-resume
 category: BigBearCasaOS
 name: Reactive Resume
-version: "4.5.2"
+version: "v4.5.2"
 tagline: A free and open-source resume builder
 description: >-
-  A free and open-source resume builder that simplifies the process of creating, updating, and sharing your resume.
+  A free and open-source resume builder that simplifies the process of creating, updating, and sharing your resume. 
 releaseNotes: >-
   This version includes various improvements and bug fixes.
 developer: AmruthPillai
-website: https://github.com/bigbeartechworld/big-bear-casaos
+website: 
 dependencies: []
-repo: https://github.com/bigbeartechworld/big-bear-casaos
-support: https://github.com/bigbeartechworld/big-bear-casaos/issues
+repo: https://github.com/bigbeartechworld/big-bear-universal-apps
+support: https://github.com/bigbeartechworld/big-bear-universal-apps/issues
 port: 10153
 gallery:
   - 1.jpg
@@ -21,6 +21,6 @@ gallery:
 path: ""
 defaultUsername: ""
 defaultPassword: ""
-icon: https://cdn.jsdelivr.net/gh/bigbeartechworld/big-bear-casaos/Apps/reactive-resume/logo.png
+icon: https://cdn.jsdelivr.net/gh/bigbeartechworld/big-bear-universal-apps/apps/reactive-resume/logo.png
 submitter: BigBearTechWorld
-submission: https://github.com/bigbeartechworld/big-bear-casaos
+submission: https://github.com/bigbeartechworld/big-bear-universal-apps

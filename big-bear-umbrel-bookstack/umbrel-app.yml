@@ -5,14 +5,14 @@ name: bookstack
 version: "25.07.20250804"
 tagline: BookStack
 description: >-
-  BookStack is a simple, self-hosted, easy-to-use platform for organising and storing information. Default login admin@admin.com password password
+  BookStack is a simple, self-hosted, easy-to-use platform for organising and storing information. Default login admin@admin.com password password 
 releaseNotes: >-
   This version includes various improvements and bug fixes.
 developer: Dan Brown
-website: https://github.com/bigbeartechworld/big-bear-casaos
+website: 
 dependencies: []
-repo: https://github.com/bigbeartechworld/big-bear-casaos
-support: https://github.com/bigbeartechworld/big-bear-casaos/issues
+repo: https://github.com/bigbeartechworld/big-bear-universal-apps
+support: https://github.com/bigbeartechworld/big-bear-universal-apps/issues
 port: 10013
 gallery:
   - 1.jpg
@@ -23,4 +23,4 @@ defaultUsername: ""
 defaultPassword: ""
 icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/bookstack.png
 submitter: BigBearTechWorld
-submission: https://github.com/bigbeartechworld/big-bear-casaos
+submission: https://github.com/bigbeartechworld/big-bear-universal-apps

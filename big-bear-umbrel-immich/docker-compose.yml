@@ -1,7 +1,14 @@
+# Configuration for big-bear-immich setup
 version: "3.7"
+# Service definitions for the big-bear-immich application
 services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-immich_immich-server_1
+      APP_PORT: "2283"
+  # Main Immich Server service configuration
   immich-server:
-    image: ghcr.io/immich-app/immich-server:v2.1.0 # Image to be used
+    image: ghcr.io/immich-app/immich-server:v2.2.0 # Image to be used
     volumes: # Mounting directories for persistent data storage
       - ${APP_DATA_DIR}/upload:/usr/src/app/upload
     environment: # Setting environment variables
@@ -16,10 +23,12 @@ services:
       - redis
       - database
     restart: unless-stopped # Policy to restart unless stopped
+    # Networks to be attached to the container
     networks:
       - big_bear_immich_network
+  # Configuration for Immich Machine Learning service
   immich-machine-learning:
-    image: ghcr.io/immich-app/immich-machine-learning:v2.1.0 # Image to be used
+    image: ghcr.io/immich-app/immich-machine-learning:v2.2.0 # Image to be used
     volumes: # Mounting directories for persistent data storage
       - ${APP_DATA_DIR}/model-cache:/cache
     environment: # Setting environment variables
@@ -30,13 +39,16 @@ services:
       DB_PORT: 5432
       REDIS_HOSTNAME: immich-redis
     restart: unless-stopped # Policy to restart unless stopped
+    # Networks to be attached to the container
     networks:
       - big_bear_immich_network # Connects the container to a defined network
+  # Configuration for Redis service
   redis:
     image: redis:6.2.20-alpine@sha256:2185e741f4c1e7b0ea9ca1e163a3767c4270a73086b6bbea2049a7203212fb7f # patched for CVE-2025-49844
     restart: always # Policy to always restart the container if it stops
     networks:
       - big_bear_immich_network # Connects the container to a defined network
+  # Configuration for Database service
   database:
     image: ghcr.io/immich-app/postgres:14-vectorchord0.3.0-pgvectors0.2.0 # Image to be used
     environment: # Setting environment variables
@@ -44,15 +56,15 @@ services:
       POSTGRES_USER: casaos
       POSTGRES_DB: immich
       PG_DATA: /var/lib/postgresql/data
+      # Uncomment the DB_STORAGE_TYPE: 'HDD' var if your database isn't stored on SSDs
+      # DB_STORAGE_TYPE: 'HDD'
     volumes: # Mounting directories for persistent data storage
       - ${APP_DATA_DIR}/pgdata:/var/lib/postgresql/data
     restart: unless-stopped # Policy to always restart the container if it stops
+    # CasaOS specific configuration for the database service
     networks:
       - big_bear_immich_network # Connects the container to a defined network
-  app_proxy:
-    environment:
-      APP_HOST: big-bear-umbrel-immich_immich-server_1
-      APP_PORT: "2283"
 networks:
+  # Defines network configurations for the services
   big_bear_immich_network:
     driver: bridge # Uses bridge network driver
