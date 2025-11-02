@@ -5,14 +5,14 @@ name: btop
 version: "0.1.5"
 tagline: A monitor of resources
 description: >-
-  A monitor of resources. Software made by Aristocratos at https://github.com/aristocratos/btop
+  A monitor of resources. Software made by Aristocratos at https://github.com/aristocratos/btop 
 releaseNotes: >-
   This version includes various improvements and bug fixes.
 developer: bigbeartechworld
-website: https://github.com/bigbeartechworld/big-bear-casaos
+website: 
 dependencies: []
-repo: https://github.com/bigbeartechworld/big-bear-casaos
-support: https://github.com/bigbeartechworld/big-bear-casaos/issues
+repo: https://github.com/bigbeartechworld/big-bear-universal-apps
+support: https://github.com/bigbeartechworld/big-bear-universal-apps/issues
 port: 10015
 gallery:
   - 1.jpg
@@ -23,4 +23,4 @@ defaultUsername: ""
 defaultPassword: ""
 icon: https://cdn.jsdelivr.net/gh/aristocratos/btop/Img/icon.png
 submitter: BigBearTechWorld
-submission: https://github.com/bigbeartechworld/big-bear-casaos
+submission: https://github.com/bigbeartechworld/big-bear-universal-apps

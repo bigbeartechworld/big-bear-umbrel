@@ -2,17 +2,17 @@ manifestVersion: 1
 id: big-bear-umbrel-otel-lgtm
 category: BigBearCasaOS
 name: OTEL LGTM
-version: "0.11.12"
+version: "0.11.14"
 tagline: OpenTelemetry Backend
 description: >-
-  An OpenTelemetry Backend in a Docker Image.
+  An OpenTelemetry Backend in a Docker Image. 
 releaseNotes: >-
   This version includes various improvements and bug fixes.
 developer: Grafana Labs
-website: https://github.com/bigbeartechworld/big-bear-casaos
+website: 
 dependencies: []
-repo: https://github.com/bigbeartechworld/big-bear-casaos
-support: https://github.com/bigbeartechworld/big-bear-casaos/issues
+repo: https://github.com/bigbeartechworld/big-bear-universal-apps
+support: https://github.com/bigbeartechworld/big-bear-universal-apps/issues
 port: 10125
 gallery:
   - 1.jpg
@@ -23,4 +23,4 @@ defaultUsername: ""
 defaultPassword: ""
 icon: https://www.gravatar.com/avatar/31cea69afa424609b2d83621b4d47f1d?s=120&r=g&d=404
 submitter: BigBearTechWorld
-submission: https://github.com/bigbeartechworld/big-bear-casaos
+submission: https://github.com/bigbeartechworld/big-bear-universal-apps

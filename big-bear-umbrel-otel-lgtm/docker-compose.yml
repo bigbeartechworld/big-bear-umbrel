@@ -1,21 +1,30 @@
-
+# Configuration for big-bear-otel-lgtm setup
+# Name of the big-bear-otel-lgtm application
 version: "3.7"
+# Service definitions for big-bear-otel-lgtm application
 services:
-  big-bear-otel-lgtm:
-    image: grafana/otel-lgtm:0.11.12
-    restart: unless-stopped
-    volumes:
-      - type: bind
-        source: ${APP_DATA_DIR}/data
-        target: /data
-        bind:
-          create_host_path: true
-    networks:
-      - big-bear-otel-lgtm
   app_proxy:
     environment:
       APP_HOST: big-bear-umbrel-otel-lgtm_big-bear-otel-lgtm_1
       APP_PORT: "3000"
+  # Service name: big-bear-otel-lgtm
+  # The `big-bear-otel-lgtm` service definition
+  big-bear-otel-lgtm:
+    # Image to be used for the container
+    image: grafana/otel-lgtm:0.11.14
+    # Container restart policy
+    restart: unless-stopped
+    # Volumes to be mounted to the container
+    volumes:
+      # Mounting the local otel-lgtm_data directory to /data inside the container
+      - type: bind
+        source: otel-lgtm_data
+        target: /data
+        bind:
+          create_host_path: true
+    # Networks to be attached to the container
+    networks:
+      - big-bear-otel-lgtm
 networks:
   big-bear-otel-lgtm:
     driver: bridge

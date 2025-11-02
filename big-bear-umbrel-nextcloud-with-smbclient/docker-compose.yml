@@ -1,11 +1,23 @@
-
+# Configuration for nextcloud-smb setup
+# Name of the big-bear-nextcloud-smb application
 version: "3.7"
+# Service definitions for the big-bear-nextcloud-smb application
 services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-nextcloud-with-smbclient_big-bear-nextcloud-smb_1
+      APP_PORT: "80"
+  # Service name: app
+  # The `app` service definition
   big-bear-nextcloud-smb:
-    image: bigbeartechworld/big-bear-nextcloud-with-smbclient:0.0.11
+    # Use the nextcloud image from the official Docker Hub
+    image: bigbeartechworld/big-bear-nextcloud-with-smbclient:0.0.12
+    # Restart the container unless stopped
     restart: unless-stopped
+    # Mount the nextcloud-with-smbclient_html directory on the host to /var/www/html in the container
     volumes:
       - ${APP_DATA_DIR}/html:/var/www/html
+    # Set environment variables for the container
     environment:
       - POSTGRES_HOST=big-bear-nextcloud-smb-db
       - REDIS_HOST=big-bear-nextcloud-smb-redis
@@ -18,13 +30,16 @@ services:
       - OVERWRITEPROTOCOL=http
       - PHP_MEMORY_LIMIT=1024M
       - PHP_UPLOAD_LIMIT=1024M
+    # Specify the dependencies
     depends_on:
       big-bear-nextcloud-smb-db:
         condition: service_healthy
       big-bear-nextcloud-smb-redis:
         condition: service_healthy
+    # Define the network
     networks:
       - big_bear_nextcloud_network
+  # Define the database container for Nextcloud
   big-bear-nextcloud-smb-db:
     image: postgres:14.2
     restart: unless-stopped
@@ -36,30 +51,34 @@ services:
       - POSTGRES_DB=nextcloud # Set the name of the Nextcloud database
     networks:
       - big_bear_nextcloud_network # Connect to the Nextcloud network
+    # Healthcheck configuration for the database service
     healthcheck:
       test: ["CMD-SHELL", "pg_isready -U casaos -d nextcloud"]
       interval: 10s
       timeout: 5s
       retries: 5
+  # Redis configuration for Nextcloud
   big-bear-nextcloud-smb-redis:
     user: "1000:1000"
     image: redis:6.2.20@sha256:d06ff6ec778c7f2a5c0dfaf58141d598efaa50a89d0e966faedfdf122cef451b
     restart: on-failure
     volumes:
-      - "${APP_DATA_DIR}/redis:/data" # Mount the Redis data directory
+      - ${APP_DATA_DIR}/redis:/data # Mount the Redis data directory
     networks:
       - big_bear_nextcloud_network # Connect to the Nextcloud network
+    # Healthcheck configuration for the Redis service
     healthcheck:
       test: ["CMD-SHELL", "redis-cli ping || exit 1"]
       interval: 10s
       timeout: 5s
       retries: 5
   big-bear-nextcloud-smb-cron:
-    image: bigbeartechworld/big-bear-nextcloud-with-smbclient:0.0.11
+    image: bigbeartechworld/big-bear-nextcloud-with-smbclient:0.0.12
     restart: on-failure
     volumes:
       - ${APP_DATA_DIR}/html:/var/www/html
     entrypoint: /cron.sh
+    # Specify the dependencies
     depends_on:
       big-bear-nextcloud-smb-db:
         condition: service_healthy
@@ -67,10 +86,7 @@ services:
         condition: service_healthy
     networks:
       - big_bear_nextcloud_network # Connect to the Nextcloud network
-  app_proxy:
-    environment:
-      APP_HOST: big-bear-umbrel-nextcloud-with-smbclient_big-bear-nextcloud-smb_1
-      APP_PORT: "80"
+# Network definition for the big-bear-nextcloud application
 networks:
   big_bear_nextcloud_network:
     driver: bridge

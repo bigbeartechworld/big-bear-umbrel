@@ -1,14 +1,17 @@
-
+# Configuration for traccar setup
+# Name of the big-bear-traccar application
 version: "3.7"
+# Service definitions for the big-bear-traccar application
 services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-traccar_app_1
+      APP_PORT: "8082"
+  # Service name: app
   app:
     image: traccar/traccar:6.10-ubuntu # Specifies the docker image to use for this service. Using the latest version of the traccar image.
     hostname: traccar # Hostname of the container
     restart: unless-stopped # Restart policy. The container will restart unless it's explicitly stopped.
     volumes: # Defines volume mounts for the container
-      - "${APP_DATA_DIR}/logs:/opt/traccar/logs:rw" # Mounts the logs directory from the host to the container with read and write permissions
-      - "${APP_DATA_DIR}/traccar.xml:/opt/traccar/conf/traccar.xml:ro" # Mounts the traccar.xml config file from the host to the container with read-only permissions
-  app_proxy:
-    environment:
-      APP_HOST: big-bear-umbrel-traccar_app_1
-      APP_PORT: "8082"
+      - ${APP_DATA_DIR}/logs:/opt/traccar/logs:rw # Mounts the logs directory from the host to the container with read and write permissions
+      - ${APP_DATA_DIR}/traccar.xml:/opt/traccar/conf/traccar.xml:ro # Mounts the traccar.xml config file from the host to the container with read-only permissions

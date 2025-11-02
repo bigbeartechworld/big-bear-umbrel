@@ -5,14 +5,14 @@ name: Vikunja
 version: "0.24.6"
 tagline: Vikunja
 description: >-
-  The open-source, self-hostable to-do app. Organize everything, on all platforms.
+  The open-source, self-hostable to-do app. Organize everything, on all platforms. 
 releaseNotes: >-
   This version includes various improvements and bug fixes.
 developer: kolaente
-website: https://github.com/bigbeartechworld/big-bear-casaos
+website: 
 dependencies: []
-repo: https://github.com/bigbeartechworld/big-bear-casaos
-support: https://github.com/bigbeartechworld/big-bear-casaos/issues
+repo: https://github.com/bigbeartechworld/big-bear-universal-apps
+support: https://github.com/bigbeartechworld/big-bear-universal-apps/issues
 port: 10179
 gallery:
   - 1.jpg
@@ -23,4 +23,4 @@ defaultUsername: ""
 defaultPassword: ""
 icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/vikunja.png
 submitter: BigBearTechWorld
-submission: https://github.com/bigbeartechworld/big-bear-casaos
+submission: https://github.com/bigbeartechworld/big-bear-universal-apps

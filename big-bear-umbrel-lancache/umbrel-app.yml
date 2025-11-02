@@ -5,14 +5,14 @@ name: LAN Cache
 version: "latest"
 tagline: LAN Party game caching made easy
 description: >-
-  Make the most of your network. Get more play for your gamers. Download your games once and serve them out to many people at your LAN.
+  Make the most of your network. Get more play for your gamers. Download your games once and serve them out to many people at your LAN. 
 releaseNotes: >-
   This version includes various improvements and bug fixes.
 developer: lancachenet
-website: https://github.com/bigbeartechworld/big-bear-casaos
+website: 
 dependencies: []
-repo: https://github.com/bigbeartechworld/big-bear-casaos
-support: https://github.com/bigbeartechworld/big-bear-casaos/issues
+repo: https://github.com/bigbeartechworld/big-bear-universal-apps
+support: https://github.com/bigbeartechworld/big-bear-universal-apps/issues
 port: 10085
 gallery:
   - 1.jpg
@@ -23,4 +23,4 @@ defaultUsername: ""
 defaultPassword: ""
 icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/lancache-net.png
 submitter: BigBearTechWorld
-submission: https://github.com/bigbeartechworld/big-bear-casaos
+submission: https://github.com/bigbeartechworld/big-bear-universal-apps

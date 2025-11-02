@@ -1,11 +1,14 @@
+# Configuration for big-bear-portainer setup
 version: "3.7"
+# Service definitions for the big-bear-portainer application
 services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-portainer_app_1
+      APP_PORT: "8000"
+  # Main Portainer service configuration
   app:
     image: portainer/portainer-ce:2.35.0-alpine # Image to be used
     volumes:
       - ${APP_DATA_DIR}/data:/data # Bind mount for Docker volumes
       - /var/run/docker.sock:/var/run/docker.sock # Bind mount for Docker socket
-  app_proxy:
-    environment:
-      APP_HOST: big-bear-umbrel-portainer_app_1
-      APP_PORT: "8000"

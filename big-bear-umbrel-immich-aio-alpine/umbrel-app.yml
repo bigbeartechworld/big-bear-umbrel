@@ -5,14 +5,14 @@ name: Immich AIO Alpine
 version: "2.0.0-alpine"
 tagline: Immich All In One Alpine
 description: >-
-  AIO Alpine. Self-hosted photo and video storage.
+  AIO Alpine. Self-hosted photo and video storage. 
 releaseNotes: >-
   This version includes various improvements and bug fixes.
 developer: imagegenius
-website: https://github.com/bigbeartechworld/big-bear-casaos
+website: 
 dependencies: []
-repo: https://github.com/bigbeartechworld/big-bear-casaos
-support: https://github.com/bigbeartechworld/big-bear-casaos/issues
+repo: https://github.com/bigbeartechworld/big-bear-universal-apps
+support: https://github.com/bigbeartechworld/big-bear-universal-apps/issues
 port: 10071
 gallery:
   - 1.jpg
@@ -23,4 +23,4 @@ defaultUsername: ""
 defaultPassword: ""
 icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/immich.png
 submitter: BigBearTechWorld
-submission: https://github.com/bigbeartechworld/big-bear-casaos
+submission: https://github.com/bigbeartechworld/big-bear-universal-apps
