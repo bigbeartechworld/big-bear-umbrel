@@ -1,12 +1,19 @@
-
+# Configuration for beszel setup
+# Name of the big-bear-beszel application
 version: "3.7"
+# Service definitions for the big-bear-beszel application
 services:
-  big-bear-beszel:
-    image: henrygd/beszel:0.14.1
-    restart: unless-stopped
-    volumes:
-      - ${APP_DATA_DIR}/data:/beszel_data
   app_proxy:
     environment:
       APP_HOST: big-bear-umbrel-beszel_big-bear-beszel_1
       APP_PORT: "8090"
+  # Service name: big-bear-beszel
+  # The `big-bear-beszel` service definition
+  big-bear-beszel:
+    # Image to be used for the container
+    image: henrygd/beszel:0.15.2
+    # Container restart policy
+    restart: unless-stopped
+    # Volumes to be mounted to the container
+    volumes:
+      - ${APP_DATA_DIR}/data:/beszel_data

@@ -1,5 +1,11 @@
+# Configuration for big-bear-onlyoffice setup
 version: "3.7"
+# Service definitions for the big-bear-onlyoffice application
 services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-onlyoffice_app_1
+      APP_PORT: "80"
   app:
     image: onlyoffice/documentserver:9.1.0
     volumes:
@@ -9,7 +15,3 @@ services:
       - ${APP_DATA_DIR}/onlyoffice/rabbitmq:/var/lib/rabbitmq
       - ${APP_DATA_DIR}/onlyoffice/redis:/var/lib/redis
       - ${APP_DATA_DIR}/onlyoffice/db:/var/lib/postgresql
-  app_proxy:
-    environment:
-      APP_HOST: big-bear-umbrel-onlyoffice_app_1
-      APP_PORT: "80"

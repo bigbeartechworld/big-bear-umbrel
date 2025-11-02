@@ -2,17 +2,17 @@ manifestVersion: 1
 id: big-bear-umbrel-ls-adguardhome-sync
 category: BigBearCasaOS
 name: LS Adguard Home Sync
-version: "0.8.1"
+version: "0.8.2"
 tagline: LS Adguard Home Sync
 description: >-
-  🛡️ Synchronize AdGuard Home config to replicas. This is the LinuxServer version.
+  🛡️ Synchronize AdGuard Home config to replicas. This is the LinuxServer version. 
 releaseNotes: >-
   This version includes various improvements and bug fixes.
 developer: bakito
-website: https://github.com/bigbeartechworld/big-bear-casaos
+website: https://hub.docker.com/r/linuxserver/adguardhome-sync
 dependencies: []
-repo: https://github.com/bigbeartechworld/big-bear-casaos
-support: https://github.com/bigbeartechworld/big-bear-casaos/issues
+repo: https://github.com/bigbeartechworld/big-bear-universal-apps
+support: https://github.com/bigbeartechworld/big-bear-universal-apps/issues
 port: 10091
 gallery:
   - 1.jpg
@@ -23,4 +23,4 @@ defaultUsername: ""
 defaultPassword: ""
 icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/adguard-home.png
 submitter: BigBearTechWorld
-submission: https://github.com/bigbeartechworld/big-bear-casaos
+submission: https://github.com/bigbeartechworld/big-bear-universal-apps

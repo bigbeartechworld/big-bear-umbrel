@@ -2,17 +2,17 @@ manifestVersion: 1
 id: big-bear-umbrel-tailscale
 category: BigBearCasaOS
 name: Tailscale
-version: "1.88.4"
+version: "v1.90.5"
 tagline: The easiest, most secure way to use WireGuard and 2FA.
 description: >-
-  Zero config VPN. Installs on any device in minutes, manages firewall rules for you, and works from anywhere.
+  Zero config VPN. Installs on any device in minutes, manages firewall rules for you, and works from anywhere. 
 releaseNotes: >-
   This version includes various improvements and bug fixes.
 developer: tailscale
-website: https://github.com/bigbeartechworld/big-bear-casaos
+website: https://hub.docker.com/r/tailscale/tailscale
 dependencies: []
-repo: https://github.com/bigbeartechworld/big-bear-casaos
-support: https://github.com/bigbeartechworld/big-bear-casaos/issues
+repo: https://github.com/bigbeartechworld/big-bear-universal-apps
+support: https://github.com/bigbeartechworld/big-bear-universal-apps/issues
 port: 10167
 gallery:
   - 1.jpg
@@ -23,4 +23,4 @@ defaultUsername: ""
 defaultPassword: ""
 icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/tailscale.png
 submitter: BigBearTechWorld
-submission: https://github.com/bigbeartechworld/big-bear-casaos
+submission: https://github.com/bigbeartechworld/big-bear-universal-apps
