@@ -2,17 +2,17 @@ manifestVersion: 1
 id: big-bear-umbrel-changedetection
 category: BigBearCasaOS
 name: Change Detection
-version: "0.50.32"
+version: "0.50.38"
 tagline: Website change detection.
 description: >-
-  The best and simplest free open source website change detection, restock monitor and notification service.
+  The best and simplest free open source website change detection, restock monitor and notification service. 
 releaseNotes: >-
   This version includes various improvements and bug fixes.
 developer: dgtlmoon
-website: https://github.com/bigbeartechworld/big-bear-casaos
+website: https://hub.docker.com/r/dgtlmoon/changedetection.io
 dependencies: []
-repo: https://github.com/bigbeartechworld/big-bear-casaos
-support: https://github.com/bigbeartechworld/big-bear-casaos/issues
+repo: https://github.com/bigbeartechworld/big-bear-universal-apps
+support: https://github.com/bigbeartechworld/big-bear-universal-apps/issues
 port: 10019
 gallery:
   - 1.jpg
@@ -23,4 +23,4 @@ defaultUsername: ""
 defaultPassword: ""
 icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/changedetection.png
 submitter: BigBearTechWorld
-submission: https://github.com/bigbeartechworld/big-bear-casaos
+submission: https://github.com/bigbeartechworld/big-bear-universal-apps

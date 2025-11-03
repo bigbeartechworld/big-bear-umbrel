@@ -2,17 +2,17 @@ manifestVersion: 1
 id: big-bear-umbrel-dozzle
 category: BigBearCasaOS
 name: Dozzle
-version: "8.14.5"
+version: "v8.14.6"
 tagline: Dozzle is a real-time log viewer for docker containers.
 description: >-
-  Dozzle is a real-time log viewer for docker containers.
+  Dozzle is a real-time log viewer for docker containers. 
 releaseNotes: >-
   This version includes various improvements and bug fixes.
 developer: amir20
-website: https://github.com/bigbeartechworld/big-bear-casaos
+website: https://hub.docker.com/r/amir20/dozzle
 dependencies: []
-repo: https://github.com/bigbeartechworld/big-bear-casaos
-support: https://github.com/bigbeartechworld/big-bear-casaos/issues
+repo: https://github.com/bigbeartechworld/big-bear-universal-apps
+support: https://github.com/bigbeartechworld/big-bear-universal-apps/issues
 port: 10039
 gallery:
   - 1.jpg
@@ -21,6 +21,6 @@ gallery:
 path: ""
 defaultUsername: ""
 defaultPassword: ""
-icon: https://cdn.jsdelivr.net/gh/bigbeartechworld/big-bear-casaos/Apps/dozzle/logo.png
+icon: https://cdn.jsdelivr.net/gh/bigbeartechworld/big-bear-universal-apps/apps/dozzle/logo.png
 submitter: BigBearTechWorld
-submission: https://github.com/bigbeartechworld/big-bear-casaos
+submission: https://github.com/bigbeartechworld/big-bear-universal-apps

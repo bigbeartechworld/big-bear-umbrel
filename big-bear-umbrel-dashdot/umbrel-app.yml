@@ -5,14 +5,14 @@ name: Dashdot
 version: "6.2.0"
 tagline: dash. - a modern server dashboard
 description: >-
-  About A simple, modern server dashboard, primarily used by smaller private servers.
+  About A simple, modern server dashboard, primarily used by smaller private servers. 
 releaseNotes: >-
   This version includes various improvements and bug fixes.
 developer: mauricenino
-website: https://github.com/bigbeartechworld/big-bear-casaos
+website: https://hub.docker.com/r/mauricenino/dashdot
 dependencies: []
-repo: https://github.com/bigbeartechworld/big-bear-casaos
-support: https://github.com/bigbeartechworld/big-bear-casaos/issues
+repo: https://github.com/bigbeartechworld/big-bear-universal-apps
+support: https://github.com/bigbeartechworld/big-bear-universal-apps/issues
 port: 10030
 gallery:
   - 1.jpg
@@ -23,4 +23,4 @@ defaultUsername: ""
 defaultPassword: ""
 icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/dashdot.png
 submitter: BigBearTechWorld
-submission: https://github.com/bigbeartechworld/big-bear-casaos
+submission: https://github.com/bigbeartechworld/big-bear-universal-apps

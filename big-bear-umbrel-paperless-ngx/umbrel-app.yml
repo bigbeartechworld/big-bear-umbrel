@@ -2,17 +2,17 @@ manifestVersion: 1
 id: big-bear-umbrel-paperless-ngx
 category: BigBearCasaOS
 name: Paperless-ngx
-version: "2.19.2"
+version: "2.19.3"
 tagline: Paperless-ngx
 description: >-
-  Paperless-ngx is a community-supported open-source document management system that transforms your physical documents into a searchable online archive so you can keep, well, less paper.
+  Paperless-ngx is a community-supported open-source document management system that transforms your physical documents into a searchable online archive so you can keep, well, less paper. 
 releaseNotes: >-
   This version includes various improvements and bug fixes.
 developer: paperless-ngx
-website: https://github.com/bigbeartechworld/big-bear-casaos
+website: https://hub.docker.com/r/paperless-ngx/paperless-ngx
 dependencies: []
-repo: https://github.com/bigbeartechworld/big-bear-casaos
-support: https://github.com/bigbeartechworld/big-bear-casaos/issues
+repo: https://github.com/bigbeartechworld/big-bear-universal-apps
+support: https://github.com/bigbeartechworld/big-bear-universal-apps/issues
 port: 10127
 gallery:
   - 1.jpg
@@ -23,4 +23,4 @@ defaultUsername: ""
 defaultPassword: ""
 icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/paperless-ngx.png
 submitter: BigBearTechWorld
-submission: https://github.com/bigbeartechworld/big-bear-casaos
+submission: https://github.com/bigbeartechworld/big-bear-universal-apps

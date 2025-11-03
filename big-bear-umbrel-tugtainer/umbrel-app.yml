@@ -2,17 +2,17 @@ manifestVersion: 1
 id: big-bear-umbrel-tugtainer
 category: BigBearCasaOS
 name: Tugtainer
-version: "1.3.0"
+version: "v1.4.2"
 tagline: Docker Container Update Automator
 description: >-
-  Tugtainer is a self-hosted app for automating updates of your docker containers with a web UI. It's like watchtower but with more control and a user-friendly interface.
+  Tugtainer is a self-hosted app for automating updates of your docker containers with a web UI. It's like watchtower but with more control and a user-friendly interface. 
 releaseNotes: >-
   This version includes various improvements and bug fixes.
 developer: Quenary
-website: https://github.com/bigbeartechworld/big-bear-casaos
+website: https://hub.docker.com/r/quenary/tugtainer
 dependencies: []
-repo: https://github.com/bigbeartechworld/big-bear-casaos
-support: https://github.com/bigbeartechworld/big-bear-casaos/issues
+repo: https://github.com/bigbeartechworld/big-bear-universal-apps
+support: https://github.com/bigbeartechworld/big-bear-universal-apps/issues
 port: 10173
 gallery:
   - 1.jpg
@@ -23,4 +23,4 @@ defaultUsername: ""
 defaultPassword: ""
 icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/docker.png
 submitter: BigBearTechWorld
-submission: https://github.com/bigbeartechworld/big-bear-casaos
+submission: https://github.com/bigbeartechworld/big-bear-universal-apps
