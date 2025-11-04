@@ -5,14 +5,14 @@ name: OnlyOffice
 version: "9.1.0"
 tagline: OnlyOffice
 description: >-
-  Feature-rich web-based office suite with a vast range of collaborative capabilities
+  Feature-rich web-based office suite with a vast range of collaborative capabilities 
 releaseNotes: >-
   This version includes various improvements and bug fixes.
-developer: BigBearTechWorld
-website: https://github.com/bigbeartechworld/big-bear-casaos
+developer: onlyoffice
+website: https://hub.docker.com/r/onlyoffice/documentserver
 dependencies: []
-repo: https://github.com/bigbeartechworld/big-bear-casaos
-support: https://github.com/bigbeartechworld/big-bear-casaos/issues
+repo: https://github.com/bigbeartechworld/big-bear-universal-apps
+support: https://github.com/bigbeartechworld/big-bear-universal-apps/issues
 port: 10122
 gallery:
   - 1.jpg
@@ -23,4 +23,4 @@ defaultUsername: ""
 defaultPassword: ""
 icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/onlyoffice.png
 submitter: BigBearTechWorld
-submission: https://github.com/bigbeartechworld/big-bear-casaos
+submission: https://github.com/bigbeartechworld/big-bear-universal-apps

@@ -5,14 +5,14 @@ name: Piwigo
 version: "15.7.0"
 tagline: Piwigo
 description: >-
-  Piwigo is a photo gallery software for the web that comes with powerful features to publish and manage your collection of pictures.
+  Piwigo is a photo gallery software for the web that comes with powerful features to publish and manage your collection of pictures. 
 releaseNotes: >-
   This version includes various improvements and bug fixes.
 developer: piwigo
-website: https://github.com/bigbeartechworld/big-bear-casaos
+website: https://hub.docker.com/r/linuxserver/piwigo
 dependencies: []
-repo: https://github.com/bigbeartechworld/big-bear-casaos
-support: https://github.com/bigbeartechworld/big-bear-casaos/issues
+repo: https://github.com/bigbeartechworld/big-bear-universal-apps
+support: https://github.com/bigbeartechworld/big-bear-universal-apps/issues
 port: 10138
 gallery:
   - 1.jpg
@@ -23,4 +23,4 @@ defaultUsername: ""
 defaultPassword: ""
 icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/piwigo.png
 submitter: BigBearTechWorld
-submission: https://github.com/bigbeartechworld/big-bear-casaos
+submission: https://github.com/bigbeartechworld/big-bear-universal-apps

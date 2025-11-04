@@ -1,12 +1,20 @@
-
+# Configuration for mealie setup
+# Name of the big-bear-mealie application
 version: "3.7"
+# Service definitions for the big-bear-mealie application
 services:
-  app:
-    image: hkotel/mealie:v3.3.2
-    restart: unless-stopped
-    volumes:
-      - ${APP_DATA_DIR}/data:/app/data
   app_proxy:
     environment:
       APP_HOST: big-bear-umbrel-mealie_app_1
       APP_PORT: "9000"
+  # Service name: app
+  # The `app` service definition
+  app:
+    # Image to be used for the container
+    image: hkotel/mealie:v3.4.0
+    # Container restart policy
+    restart: unless-stopped
+    # Volumes to be mounted to the container
+    volumes:
+      # Mounting the local mealie_data directory to /app/data inside the container
+      - ${APP_DATA_DIR}/data:/app/data

@@ -1,14 +1,24 @@
-
+# Configuration for big-bear-umbrel setup
+# Name of the big-bear-umbrel application
 version: "3.7"
+# Service definitions for the big-bear-umbrel application
 services:
-  big-bear-umbrel:
-    image: dockurr/umbrel:1.4.0
-    restart: unless-stopped
-    volumes:
-      - ${APP_DATA_DIR}/data:/data
-      - /var/run/docker.sock:/var/run/docker.sock
-    stop_grace_period: 1m
   app_proxy:
     environment:
       APP_HOST: big-bear-umbrel-umbrel-os_big-bear-umbrel_1
       APP_PORT: "80"
+  # Service name: big-bear-umbrel
+  # The `big-bear-umbrel` service definition
+  big-bear-umbrel:
+    # Image to be used for the container
+    image: dockurr/umbrel:1.4.0
+    # Container restart policy
+    restart: unless-stopped
+    # Volumes to be mounted to the container
+    volumes:
+      # Mounting the local ${APP_DATA_DIR} directory to /data inside the container
+      - ${APP_DATA_DIR}/data:/data
+      # Mounting docker.sock to allow docker management via Umbrel
+      - /var/run/docker.sock:/var/run/docker.sock
+    # Stop grace period for the container
+    stop_grace_period: 1m

@@ -5,14 +5,14 @@ name: Stirling-PDF
 version: "1.5.0"
 tagline: Stirling PDF - Local hosted web based PDF editor
 description: >-
-  Stirling PDF - Local hosted web based PDF editor
+  Stirling PDF - Local hosted web based PDF editor 
 releaseNotes: >-
   This version includes various improvements and bug fixes.
 developer: stirlingtools
-website: https://github.com/bigbeartechworld/big-bear-casaos
+website: https://hub.docker.com/r/stirlingtools/stirling-pdf
 dependencies: []
-repo: https://github.com/bigbeartechworld/big-bear-casaos
-support: https://github.com/bigbeartechworld/big-bear-casaos/issues
+repo: https://github.com/bigbeartechworld/big-bear-universal-apps
+support: https://github.com/bigbeartechworld/big-bear-universal-apps/issues
 port: 10165
 gallery:
   - 1.jpg
@@ -21,6 +21,6 @@ gallery:
 path: ""
 defaultUsername: ""
 defaultPassword: ""
-icon: https://cdn.jsdelivr.net/gh/bigbeartechworld/big-bear-casaos/Apps/stirling-pdf/logo.png
+icon: https://cdn.jsdelivr.net/gh/bigbeartechworld/big-bear-universal-apps/apps/stirling-pdf/logo.png
 submitter: BigBearTechWorld
-submission: https://github.com/bigbeartechworld/big-bear-casaos
+submission: https://github.com/bigbeartechworld/big-bear-universal-apps

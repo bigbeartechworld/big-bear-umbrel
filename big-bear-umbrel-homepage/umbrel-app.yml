@@ -1,0 +1,26 @@
+manifestVersion: 1
+id: big-bear-umbrel-homepage
+category: BigBearCasaOS
+name: Homepage
+version: "v1.6.0"
+tagline: Homepage
+description: >-
+  A modern, fully static, fast, secure fully proxied, highly customizable application dashboard with integrations for over 100 services and translations into multiple languages. Easily configured via YAML files or through docker label discovery. 
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: gethomepage
+website: https://hub.docker.com/r/gethomepage/homepage
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-universal-apps
+support: https://github.com/bigbeartechworld/big-bear-universal-apps/issues
+port: 10067
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/homepage.png
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-universal-apps

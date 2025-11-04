@@ -5,14 +5,14 @@ name: zipline
 version: "3.7.13"
 tagline: zipline
 description: >-
-  A ShareX/file upload server that is easy to use, packed with features, and with an easy setup!
+  A ShareX/file upload server that is easy to use, packed with features, and with an easy setup! 
 releaseNotes: >-
   This version includes various improvements and bug fixes.
 developer: zipline
-website: https://github.com/bigbeartechworld/big-bear-casaos
+website: https://hub.docker.com/r/diced/zipline
 dependencies: []
-repo: https://github.com/bigbeartechworld/big-bear-casaos
-support: https://github.com/bigbeartechworld/big-bear-casaos/issues
+repo: https://github.com/bigbeartechworld/big-bear-universal-apps
+support: https://github.com/bigbeartechworld/big-bear-universal-apps/issues
 port: 10190
 gallery:
   - 1.jpg
@@ -23,4 +23,4 @@ defaultUsername: ""
 defaultPassword: ""
 icon: https://github.com/bigbeartechworld/big-bear-casaos/assets/1289128/3b655316-f72c-4b89-8138-0abee624e9b8
 submitter: BigBearTechWorld
-submission: https://github.com/bigbeartechworld/big-bear-casaos
+submission: https://github.com/bigbeartechworld/big-bear-universal-apps
