@@ -1,12 +1,11 @@
-
 version: "3.7"
 services:
-  app:
-    image: mauricenino/dashdot:6.2.0 # Image to be used for this service
-    volumes:
-      - ${APP_DATA_DIR}:/mnt/host# Mounting the local dashdot directory to /mnt/host inside the container
-    privileged: true # Runs the container in privileged mode, allowing it access to host devices
   app_proxy:
     environment:
       APP_HOST: big-bear-umbrel-dashdot_app_1
       APP_PORT: "3001"
+  app:
+    image: mauricenino/dashdot:6.2.0
+    volumes:
+      - ${APP_DATA_DIR}/data:/mnt/host
+    privileged: true

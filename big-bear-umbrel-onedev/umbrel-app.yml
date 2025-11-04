@@ -5,14 +5,14 @@ name: OneDev
 version: "13.0.9"
 tagline: Self-hosted Git Server with Kanban and CI/CD
 description: >-
-  Self-hosted Git Server with Kanban and CI/CD
+  Self-hosted Git Server with Kanban and CI/CD 
 releaseNotes: >-
   This version includes various improvements and bug fixes.
 developer: theonedev
-website: https://github.com/bigbeartechworld/big-bear-casaos
+website: https://hub.docker.com/r/1dev/server
 dependencies: []
-repo: https://github.com/bigbeartechworld/big-bear-casaos
-support: https://github.com/bigbeartechworld/big-bear-casaos/issues
+repo: https://github.com/bigbeartechworld/big-bear-universal-apps
+support: https://github.com/bigbeartechworld/big-bear-universal-apps/issues
 port: 10121
 gallery:
   - 1.jpg
@@ -23,4 +23,4 @@ defaultUsername: ""
 defaultPassword: ""
 icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/onedev.png
 submitter: BigBearTechWorld
-submission: https://github.com/bigbeartechworld/big-bear-casaos
+submission: https://github.com/bigbeartechworld/big-bear-universal-apps

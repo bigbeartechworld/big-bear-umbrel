@@ -1,7 +1,16 @@
-
+# Configuration for photoprism setup
+# Name of the big-bear-photoprism application
 version: "3.7"
+# Service definitions for the big-bear-photoprism application
 services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-photoprism_app_1
+      APP_PORT: "2342"
+  # Service name: app
+  # The `app` service definition
   app:
+    # Image to be used for the container
     image: photoprism/photoprism:240915
     environment:
       PHOTOPRISM_ADMIN_PASSWORD: casaos
@@ -29,31 +38,41 @@ services:
       PHOTOPRISM_DATABASE_USER: "photoprism"
       PHOTOPRISM_DATABASE_PASSWORD: "casaos"
       PHOTOPRISM_SITE_CAPTION: "AI-Powered Photos App"
+    # Container restart policy: restart the container unless it was stopped manually
     restart: unless-stopped
+    # File system volumes to be mounted to the container
     volumes:
-      - "${APP_DATA_DIR}/originals:/photoprism/originals"
-      - "${APP_DATA_DIR}/storage:/photoprism/storage"
+      # Mount points for originals and storage
+      - ${APP_DATA_DIR}/originals:/photoprism/originals
+      - ${APP_DATA_DIR}/storage:/photoprism/storage
+    # Networks to be attached to the container
     networks:
       - photoprism-network
+    # Other services that this service depends on
     depends_on:
       - photoprism-db
+  # Database service for Photoprism
   photoprism-db:
+    # Docker image for the database
     image: mariadb:10.8
+    # Restart policy for the database container
     restart: unless-stopped
+    # Command and options for the database service
     command: ["mysqld", "--innodb-buffer-pool-size=128M", "--transaction-isolation=READ-COMMITTED", "--character-set-server=utf8mb4", "--collation-server=utf8mb4_unicode_ci", "--max-connections=512", "--innodb-rollback-on-timeout=OFF", "--innodb-lock-wait-timeout=120"] # File system volumes for the database
     volumes:
-      - "${APP_DATA_DIR}/mysql:/var/lib/mysql"
+      - ${APP_DATA_DIR}/mysql:/var/lib/mysql
+    # Environment variables for the MariaDB
     environment:
       MARIADB_DATABASE: "photoprism"
       MARIADB_USER: "photoprism"
       MARIADB_PASSWORD: "casaos"
       MARIADB_ROOT_PASSWORD: "casaos"
+    # Network configurations for the database
     networks:
       - photoprism-network
-  app_proxy:
-    environment:
-      APP_HOST: big-bear-umbrel-photoprism_app_1
-      APP_PORT: "2342"
+# Define the networks section
 networks:
+  # Define the photoprism-network
   photoprism-network:
+    # Set the driver to bridge
     driver: bridge

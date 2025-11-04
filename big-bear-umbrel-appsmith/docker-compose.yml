@@ -1,12 +1,16 @@
-
+# Configuration for appsmith setup
+# Name of the big-bear-appsmith application
 version: "3.7"
+# Service definitions for the big-bear-appsmith application
 services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-appsmith_app_1
+      APP_PORT: "80"
+  # Service name: app
+  # The `app` service definition
   app:
     image: appsmith/appsmith-ce:v1.73.1 # Docker image to use
     volumes:
       - ${APP_DATA_DIR}/stacks:/appsmith-stacks # Mount volume for app data
     restart: unless-stopped # Container restart policy
-  app_proxy:
-    environment:
-      APP_HOST: big-bear-umbrel-appsmith_app_1
-      APP_PORT: "80"

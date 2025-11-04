@@ -2,17 +2,17 @@ manifestVersion: 1
 id: big-bear-umbrel-speedtest-tracker
 category: BigBearCasaOS
 name: Speedtest Tracker
-version: "1.6.8"
+version: "1.6.10"
 tagline: Speedtest Tracker
 description: >-
-  A Docker image to check your internet speed using Ookla's Speedtest service. Build using Laravel and the Speedtest CLI.
+  A Docker image to check your internet speed using Ookla's Speedtest service. Build using Laravel and the Speedtest CLI. 
 releaseNotes: >-
   This version includes various improvements and bug fixes.
 developer: alexjustesen
-website: https://github.com/bigbeartechworld/big-bear-casaos
+website: https://hub.docker.com/r/linuxserver/speedtest-tracker
 dependencies: []
-repo: https://github.com/bigbeartechworld/big-bear-casaos
-support: https://github.com/bigbeartechworld/big-bear-casaos/issues
+repo: https://github.com/bigbeartechworld/big-bear-universal-apps
+support: https://github.com/bigbeartechworld/big-bear-universal-apps/issues
 port: 10163
 gallery:
   - 1.jpg
@@ -23,4 +23,4 @@ defaultUsername: ""
 defaultPassword: ""
 icon: https://cdn.jsdelivr.net/gh/alexjustesen/speedtest-tracker/public/img/speedtest-tracker-icon.png
 submitter: BigBearTechWorld
-submission: https://github.com/bigbeartechworld/big-bear-casaos
+submission: https://github.com/bigbeartechworld/big-bear-universal-apps

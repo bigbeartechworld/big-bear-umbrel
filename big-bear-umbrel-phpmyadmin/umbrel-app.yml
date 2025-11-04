@@ -5,14 +5,14 @@ name: phpMyAdmin
 version: "5.2.3"
 tagline: phpMyAdmin
 description: >-
-  phpMyAdmin - A web interface for MySQL and MariaDB.
+  phpMyAdmin - A web interface for MySQL and MariaDB. 
 releaseNotes: >-
   This version includes various improvements and bug fixes.
 developer: phpMyAdmin
-website: https://github.com/bigbeartechworld/big-bear-casaos
+website: https://hub.docker.com/r/phpmyadmin/phpmyadmin
 dependencies: []
-repo: https://github.com/bigbeartechworld/big-bear-casaos
-support: https://github.com/bigbeartechworld/big-bear-casaos/issues
+repo: https://github.com/bigbeartechworld/big-bear-universal-apps
+support: https://github.com/bigbeartechworld/big-bear-universal-apps/issues
 port: 10133
 gallery:
   - 1.jpg
@@ -23,4 +23,4 @@ defaultUsername: ""
 defaultPassword: ""
 icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/phpmyadmin.png
 submitter: BigBearTechWorld
-submission: https://github.com/bigbeartechworld/big-bear-casaos
+submission: https://github.com/bigbeartechworld/big-bear-universal-apps

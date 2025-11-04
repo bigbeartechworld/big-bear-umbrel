@@ -1,9 +1,20 @@
-
+# Configuration for paperless-ngx setup
+# Name of the big-bear-paperless-ngx application
 version: "3.7"
+# Service definitions for the big-bear-paperless-ngx application
 services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-paperless-ngx_big-bear-paperless-ngx_1
+      APP_PORT: "8000"
+  # Service name: big-bear-paperless-ngx
+  # The `big-bear-paperless-ngx` service definition
   big-bear-paperless-ngx:
-    image: ghcr.io/paperless-ngx/paperless-ngx:2.19.2
+    # Image to be used for the container
+    image: ghcr.io/paperless-ngx/paperless-ngx:2.19.4
+    # Container restart policy
     restart: unless-stopped
+    # environment variables
     environment:
       PAPERLESS_REDIS: redis://big-bear-paperless-ngx-broker:6379
       PAPERLESS_DBHOST: big-bear-paperless-ngx-db
@@ -17,11 +28,12 @@ services:
       PAPERLESS_URL: http://[YOUR_IP]:8000
       COMPOSE_PROJECT_NAME: big-bear-paperless-ngx
       PAPERLESS_CSRF_TRUSTED_ORIGINS: http://[YOUR_IP]:8000
+    # Volumes to be mounted to the container
     volumes:
-      - ${APP_DATA_DIR}/paperless_data:/usr/src/paperless/data
-      - ${APP_DATA_DIR}/paperless_media:/usr/src/paperless/media
-      - ${APP_DATA_DIR}/paperless_export:/usr/src/paperless/export
-      - ${APP_DATA_DIR}/paperless_consume:/usr/src/paperless/consume
+      - ${APP_DATA_DIR}/paperless/data:/usr/src/paperless/data
+      - ${APP_DATA_DIR}/paperless/media:/usr/src/paperless/media
+      - ${APP_DATA_DIR}/paperless/export:/usr/src/paperless/export
+      - ${APP_DATA_DIR}/paperless/consume:/usr/src/paperless/consume
     depends_on:
       - big-bear-paperless-ngx-db
       - big-bear-paperless-ngx-broker
@@ -34,35 +46,54 @@ services:
       - ${APP_DATA_DIR}/redis:/data
     networks:
       - big-bear-paperless-ngx-network
+  # The PostgreSQL database service is used to store the data for the paperless-ngx service.
   big-bear-paperless-ngx-db:
+    # Image to be used for the container
     image: library/postgres:16
+    # Container restart policy
     restart: unless-stopped
+    # Volumes to be mounted to the container
     volumes:
       - ${APP_DATA_DIR}/postgres:/var/lib/postgresql/data
+    # Environment variables
     environment:
+      # PostgreSQL database name
       POSTGRES_DB: paperless
+      # PostgreSQL database user
       POSTGRES_USER: bigbear
+      # PostgreSQL database password
       POSTGRES_PASSWORD: c6e74adb-3fce-4318-b657-4bdc0858fcac
+    # Networks to be used for the service
     networks:
       - big-bear-paperless-ngx-network
+  # The gotenberg service is used for converting documents to PDFs. It is
+  # configured to disable JavaScript and only allow access to the
+  # /tmp directory to prevent potential security issues.
   big-bear-paperless-ngx-gotenberg:
     image: gotenberg/gotenberg:8.24
     restart: unless-stopped
+    # The gotenberg chromium route is used to convert .eml files. We do not
+    # want to allow external content like tracking pixels or even javascript.
+    # Therefore, we disable JavaScript and only allow access to the
+    # /tmp directory.
     command:
       - "gotenberg"
       - "--chromium-disable-javascript=true"
       - "--chromium-allow-list=file:///tmp/.*"
     networks:
       - big-bear-paperless-ngx-network
+  # The Tika service is used to extract text from files. It is based on the
+  # Apache Tika project and is configured to use the minimal image.
   big-bear-paperless-ngx-tika:
-    image: ghcr.io/paperless-ngx/tika:2.9.1-minimal
+    image: apache/tika:3.2.3.0
     restart: unless-stopped
+    # The Tika service is connected to the big-bear-paperless-ngx-network
+    # network.
     networks:
       - big-bear-paperless-ngx-network
-  app_proxy:
-    environment:
-      APP_HOST: big-bear-umbrel-paperless-ngx_big-bear-paperless-ngx_1
-      APP_PORT: "8000"
+# Define a network for the paperless-ngx services to communicate with
+# each other. This network is a bridge network, which means that it is
+# not isolated from the host's network stack.
 networks:
   big-bear-paperless-ngx-network:
     driver: bridge

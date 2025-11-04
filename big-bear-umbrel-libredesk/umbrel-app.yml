@@ -2,17 +2,17 @@ manifestVersion: 1
 id: big-bear-umbrel-libredesk
 category: BigBearCasaOS
 name: Libredesk
-version: "0.7.4-alpha"
+version: "v0.7.4-alpha"
 tagline: Open source, self-hosted customer support desk. Single binary app.
 description: >-
-  Open source, self-hosted customer support desk. Single binary app.
+  Open source, self-hosted customer support desk. Single binary app. 
 releaseNotes: >-
   This version includes various improvements and bug fixes.
 developer: libredesk
-website: https://github.com/bigbeartechworld/big-bear-casaos
+website: https://hub.docker.com/r/libredesk/libredesk
 dependencies: []
-repo: https://github.com/bigbeartechworld/big-bear-casaos
-support: https://github.com/bigbeartechworld/big-bear-casaos/issues
+repo: https://github.com/bigbeartechworld/big-bear-universal-apps
+support: https://github.com/bigbeartechworld/big-bear-universal-apps/issues
 port: 10086
 gallery:
   - 1.jpg
@@ -21,6 +21,6 @@ gallery:
 path: ""
 defaultUsername: ""
 defaultPassword: ""
-icon: https://cdn.jsdelivr.net/gh/bigbeartechworld/big-bear-casaos@master/Apps/libredesk/icon.png
+icon: https://cdn.jsdelivr.net/gh/bigbeartechworld/big-bear-universal-apps/apps/_example/logo.jpg
 submitter: BigBearTechWorld
-submission: https://github.com/bigbeartechworld/big-bear-casaos
+submission: https://github.com/bigbeartechworld/big-bear-universal-apps

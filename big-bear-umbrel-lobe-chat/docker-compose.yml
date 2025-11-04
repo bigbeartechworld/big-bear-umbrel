@@ -1,15 +1,22 @@
-
+# Configuration for lobe-chat setup
+# Name of the big-bear-lobe-chat application
 version: "3.7"
+# Service definitions for the big-bear-lobe-chat application
 services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-lobe-chat_big-bear-lobe-chat_1
+      APP_PORT: "3210"
+  # Service name: big-bear-lobe-chat
+  # The `big-bear-lobe-chat` service definition
   big-bear-lobe-chat:
-    image: lobehub/lobe-chat:1.142.0
+    # Image to be used for the container
+    image: lobehub/lobe-chat:1.142.8
+    # Container restart policy
     restart: unless-stopped
+    # Environment variables for the container
     environment:
       - OPENAI_API_KEY=""
       - OPENAI_PROXY_URL=""
       - CUSTOM_MODELS=""
       - ACCESS_CODE=""
-  app_proxy:
-    environment:
-      APP_HOST: big-bear-umbrel-lobe-chat_big-bear-lobe-chat_1
-      APP_PORT: "3210"

@@ -2,17 +2,17 @@ manifestVersion: 1
 id: big-bear-umbrel-appsmith
 category: BigBearCasaOS
 name: Appsmith
-version: "1.73.1"
+version: "v1.73.1"
 tagline: Appsmith
 description: >-
-  Low code project to build admin panels, internal tools, and dashboards, integrating 15+ databases.
+  Low code project to build admin panels, internal tools, and dashboards, integrating 15+ databases. 
 releaseNotes: >-
   This version includes various improvements and bug fixes.
 developer: appsmithorg
-website: https://github.com/bigbeartechworld/big-bear-casaos
+website: https://hub.docker.com/r/appsmith/appsmith-ce
 dependencies: []
-repo: https://github.com/bigbeartechworld/big-bear-casaos
-support: https://github.com/bigbeartechworld/big-bear-casaos/issues
+repo: https://github.com/bigbeartechworld/big-bear-universal-apps
+support: https://github.com/bigbeartechworld/big-bear-universal-apps/issues
 port: 10005
 gallery:
   - 1.jpg
@@ -23,4 +23,4 @@ defaultUsername: ""
 defaultPassword: ""
 icon: https://cdn.jsdelivr.net/gh/appsmithorg/appsmith/static/logo.png
 submitter: BigBearTechWorld
-submission: https://github.com/bigbeartechworld/big-bear-casaos
+submission: https://github.com/bigbeartechworld/big-bear-universal-apps
