@@ -2,7 +2,7 @@ manifestVersion: 1
 id: big-bear-umbrel-dockpeek
 category: BigBearCasaOS
 name: Dockpeek
-version: "v1.7.1"
+version: "v1.7.2"
 tagline: Docker Dashboard
 description: >-
   A lightweight, self-hosted Docker dashboard that provides quick access to all running containers and their exposed ports with one-click access to web apps. 
