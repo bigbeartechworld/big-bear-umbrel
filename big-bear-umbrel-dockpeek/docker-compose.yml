@@ -11,7 +11,7 @@ services:
   # The `big-bear-dockpeek` service definition
   big-bear-dockpeek:
     # Image to be used for the container
-    image: ghcr.io/dockpeek/dockpeek:v1.7.1
+    image: ghcr.io/dockpeek/dockpeek:v1.7.2
     # Environment variables
     environment:
       # Secret key for the application (change this)
