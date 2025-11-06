@@ -26,7 +26,7 @@ If you have a suggestion for an app, please post in the [BigBearCommunity](https
 | [Ayon](https://hub.docker.com/r/ynput/ayon) | 1.3.6-20240823 | ynput | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Baserow](https://hub.docker.com/r/baserow/baserow) | 1.35.3 | baserow | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Beaver Habit Tracker](https://hub.docker.com/r/daya0576/beaverhabits) | 0.7.3 | daya0576 | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
-| [Beszel](https://hub.docker.com/r/henrygd/beszel) | 0.15.2 | henrygd | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
+| [Beszel](https://hub.docker.com/r/henrygd/beszel) | 0.15.3 | henrygd | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Big Bear CasaOS User Management](https://github.com/bigbeartechworld/big-bear-casaos) | 0.1.1 | bigbeartechworld | [Repository](https://github.com/bigbeartechworld/big-bear-casaos) |
 | [bookstack](https://hub.docker.com/r/linuxserver/bookstack) | 25.07.20250804 | Dan Brown | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Brave](https://github.com/bigbeartechworld/big-bear-casaos) | 1.15.0-rolling | kasmweb | [Repository](https://github.com/bigbeartechworld/big-bear-casaos) |
@@ -53,7 +53,7 @@ If you have a suggestion for an app, please post in the [BigBearCommunity](https
 | [DIUN](https://hub.docker.com/r/crazymax/diun) | 4.30.0 | crazymax | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Docker Cron Restart Notifier](https://hub.docker.com/r/deduard/tools) | restart-notifier-latest | activecs | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Dockge](https://hub.docker.com/r/louislam/dockge) | 1.5.0 | louislam | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
-| [Dockpeek](https://hub.docker.com/r/dockpeek/dockpeek) | v1.7.1 | dockpeek | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
+| [Dockpeek](https://hub.docker.com/r/dockpeek/dockpeek) | v1.7.2 | dockpeek | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Docmost](https://hub.docker.com/r/docmost/docmost) | 0.23.2 | docmost | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Dozzle](https://hub.docker.com/r/amir20/dozzle) | v8.14.6 | amir20 | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [EJBCA Community](https://hub.docker.com/r/keyfactor/ejbca-ce) | 9.1.1 | Keyfactor | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
@@ -61,11 +61,11 @@ If you have a suggestion for an app, please post in the [BigBearCommunity](https
 | [Eufy Security WS](https://github.com/bigbeartechworld/big-bear-casaos) | 1.9.3 | bropat | [Repository](https://github.com/bigbeartechworld/big-bear-casaos) |
 | [Excalidraw](https://hub.docker.com/r/excalidraw/excalidraw) | latest | excalidraw | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [FarmOS](https://hub.docker.com/r/farmos/farmos) | 3.4.5 | farmOS | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
-| [Faster-whisper](https://hub.docker.com/r/linuxserver/faster-whisper) | 2.5.0 | systran | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
+| [Faster-whisper](https://hub.docker.com/r/linuxserver/faster-whisper) | 3.0.1 | systran | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Fastfetch](https://hub.docker.com/r/bigbeartechworld/big-bear-fastfetch) | 0.0.4 | bigbeartechworld | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Filebrowser](https://hub.docker.com/r/filebrowser/filebrowser) | v2.45.0-s6 | filebrowser | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Financial Freedom](https://hub.docker.com/r/serversideup/financial-freedom) | v0.2.0-alpha1 | serversideup | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
-| [Firefox](https://hub.docker.com/r/linuxserver/firefox) | 1143.0.4 | linuxserver | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
+| [Firefox](https://hub.docker.com/r/linuxserver/firefox) | 1144.0.2 | linuxserver | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Flame](https://hub.docker.com/r/pawelmalak/flame) | multiarch2.3.1 | pawelmalak | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [FlContainers Guacamole](https://hub.docker.com/r/flcontainers/guacamole) | 1.6.0 | flcontainers | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Flowise AI](https://hub.docker.com/r/flowiseai/flowise) | 3.0.8 | bigbeartechworld | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
@@ -74,7 +74,7 @@ If you have a suggestion for an app, please post in the [BigBearCommunity](https
 | [GemDigest Bot](https://hub.docker.com/r/piero24/gemdigest) | 1.0 | Armaggheddon | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Genmon](https://hub.docker.com/r/bigbeartechworld/big-bear-genmon) | 1.19.06 | bigbeartechworld | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Ghost](https://hub.docker.com/r/ghost) | 6.5.3-alpine | ghost | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
-| [Ghostfolio](https://hub.docker.com/r/ghostfolio/ghostfolio) | 2.213.0 | ghostfolio | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
+| [Ghostfolio](https://hub.docker.com/r/ghostfolio/ghostfolio) | 2.214.0 | ghostfolio | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Gitea Mirror](https://hub.docker.com/r/raylabshq/gitea-mirror) | v3.8.11 | raylabs.io | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Gladys Assistant](https://github.com/bigbeartechworld/big-bear-casaos) | 4.64.0 | GladysAssistant | [Repository](https://github.com/bigbeartechworld/big-bear-casaos) |
 | [Glances](https://hub.docker.com/r/nicolargo/glances) | 4.3.0.8-full | nicolargo | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
@@ -88,13 +88,13 @@ If you have a suggestion for an app, please post in the [BigBearCommunity](https
 | [Home Assistant](https://github.com/bigbeartechworld/big-bear-casaos) | 2025.10.4 | home-assistant | [Repository](https://github.com/bigbeartechworld/big-bear-casaos) |
 | [HomeBridge](https://github.com/bigbeartechworld/big-bear-casaos) | 2024-05-02 | homebridge | [Repository](https://github.com/bigbeartechworld/big-bear-casaos) |
 | [Homepage](https://github.com/bigbeartechworld/big-bear-casaos) | 1.5.0 | gethomepage | [Repository](https://github.com/bigbeartechworld/big-bear-casaos) |
-| [Homepage](https://hub.docker.com/r/gethomepage/homepage) | v1.6.0 | gethomepage | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
+| [Homepage](https://hub.docker.com/r/gethomepage/homepage) | v1.6.1 | gethomepage | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Homer](https://hub.docker.com/r/b4bz/homer) | v25.10.1 | bastienwirtz | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [I Hate Money](https://hub.docker.com/r/ihatemoney/ihatemoney) | 6.1.5 | spiral-project | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
-| [Immich](https://hub.docker.com/r/immich-app/immich-server) | v2.2.2 | immich-app | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
+| [Immich](https://hub.docker.com/r/immich-app/immich-server) | v2.2.3 | immich-app | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Immich AIO Alpine](https://hub.docker.com/r/imagegenius/immich) | 2.0.0-alpine | imagegenius | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Immich Kiosk](https://hub.docker.com/r/damongolding/immich-kiosk) | 0.26.1 | damongolding | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
-| [Immich without machine learning](https://hub.docker.com/r/immich-app/immich-server) | v2.2.2 | immich | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
+| [Immich without machine learning](https://hub.docker.com/r/immich-app/immich-server) | v2.2.3 | immich | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Invoice Ninja](https://hub.docker.com/r/invoiceninja/invoiceninja) | 5.12.28 | invoiceninja | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [IT Tools](https://hub.docker.com/r/corentinth/it-tools) | 2023.11.2-7d94e11 | corentinth | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Jellyseerr](https://hub.docker.com/r/fallenbagel/jellyseerr) | 2.7.3 | Fallenbagel | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
@@ -151,7 +151,7 @@ If you have a suggestion for an app, please post in the [BigBearCommunity](https
 | [Ollama - AMD](https://hub.docker.com/r/ollama/ollama) | 0.12.9-rocm | ollama | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Ollama - CPU](https://hub.docker.com/r/ollama/ollama) | 0.12.9 | ollama | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Ollama - NVIDIA](https://hub.docker.com/r/ollama/ollama) | 0.12.9 | ollama | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
-| [OneDev](https://hub.docker.com/r/1dev/server) | 13.0.9 | theonedev | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
+| [OneDev](https://hub.docker.com/r/1dev/server) | 13.0.10 | theonedev | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [OnlyOffice](https://hub.docker.com/r/onlyoffice/documentserver) | 9.1.0 | onlyoffice | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Open WebUI](https://hub.docker.com/r/open-webui/open-webui) | git-33e54a9 | open-webui | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [OpenVPN](https://hub.docker.com/r/openvpn/openvpn-as) | 2.13.1-d8cdeb9c-Ubuntu22 | openvpn | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
@@ -227,7 +227,7 @@ If you have a suggestion for an app, please post in the [BigBearCommunity](https
 | [Wishlist](https://hub.docker.com/r/cmintey/wishlist) | v0.52.0 | cmintey | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [WordPress](https://hub.docker.com/r/wordpress) | 6.8.3 | Automattic | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Write Freely](https://hub.docker.com/r/nephatrine/write-freely) | 0.16 | nephatrine | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
-| [Zigbee to MQTT bridge](https://hub.docker.com/r/koenkk/zigbee2mqtt) | 2.6.2 | koenkk | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
+| [Zigbee to MQTT bridge](https://hub.docker.com/r/koenkk/zigbee2mqtt) | 2.6.3 | koenkk | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [zipline](https://hub.docker.com/r/diced/zipline) | 3.7.13 | zipline | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Zotero](https://hub.docker.com/r/linuxserver/zotero) | 7.0.20240809 | linuxserver | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 
