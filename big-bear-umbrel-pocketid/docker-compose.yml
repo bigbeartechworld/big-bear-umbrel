@@ -8,7 +8,7 @@ services:
       APP_PORT: ' 1411'
   # Service configuration for the pocket-id application
   big-bear-pocketid:
-    image: ghcr.io/pocket-id/pocket-id:v1.14 # Docker image to use for pocket-id
+    image: ghcr.io/pocket-id/pocket-id:v1.15 # Docker image to use for pocket-id
     restart: unless-stopped # Restart policy: Restart unless manually stopped
     cpu_shares: 90
     command: []

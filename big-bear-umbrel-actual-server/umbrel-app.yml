@@ -2,7 +2,7 @@ manifestVersion: 1
 id: big-bear-umbrel-actual-server
 category: BigBearCasaOS
 name: Actual Budget
-version: "25.10.0"
+version: "25.11.0"
 tagline: Local-first OpenSource Budget tool
 description: >-
   Actual Budget is a super fast and privacy-focused app for managing your finances. At its heart is the well proven and much loved Envelope Budgeting methodology. You own your data and can do whatever you want with it. Featuring multi-device sync, optional end-to-end encryption and so much more. 
