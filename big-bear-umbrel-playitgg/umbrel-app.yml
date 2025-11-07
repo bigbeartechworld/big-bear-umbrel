@@ -2,7 +2,7 @@ manifestVersion: 1
 id: big-bear-umbrel-playitgg
 category: BigBearCasaOS
 name: playit.gg
-version: "1.1.0"
+version: "1.2.0"
 tagline: playit.gg is a global proxy that allows anyone to host a server without port forwarding. We use tunneling. Only the server needs to run the program, not every player!
 description: >-
   playit.gg is a global proxy that allows anyone to host a server without port forwarding. We use tunneling. Only the server needs to run the program, not every player! 
