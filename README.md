@@ -26,15 +26,15 @@ If you have a suggestion for an app, please post in the [BigBearCommunity](https
 | [Ayon](https://hub.docker.com/r/ynput/ayon) | 1.3.6-20240823 | ynput | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Baserow](https://hub.docker.com/r/baserow/baserow) | 1.35.3 | baserow | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Beaver Habit Tracker](https://hub.docker.com/r/daya0576/beaverhabits) | 0.7.3 | daya0576 | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
-| [Beszel](https://hub.docker.com/r/henrygd/beszel) | 0.15.3 | henrygd | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
+| [Beszel](https://hub.docker.com/r/henrygd/beszel) | 0.15.4 | henrygd | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Big Bear CasaOS User Management](https://github.com/bigbeartechworld/big-bear-casaos) | 0.1.1 | bigbeartechworld | [Repository](https://github.com/bigbeartechworld/big-bear-casaos) |
 | [bookstack](https://hub.docker.com/r/linuxserver/bookstack) | 25.07.20250804 | Dan Brown | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Brave](https://github.com/bigbeartechworld/big-bear-casaos) | 1.15.0-rolling | kasmweb | [Repository](https://github.com/bigbeartechworld/big-bear-casaos) |
 | [btop](https://hub.docker.com/r/bigbeartechworld/big-bear-btop) | 0.1.5 | bigbeartechworld | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
-| [Budibase](https://hub.docker.com/r/budibase/budibase) | 3.23.4 | Budibase | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
+| [Budibase](https://hub.docker.com/r/budibase/budibase) | 3.23.15 | Budibase | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [cAdvisor](https://hub.docker.com/r/cadvisor/cadvisor) | v0.52.1 | cadvisor | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Cal.com](https://hub.docker.com/r/calcom/cal.com) | v5.8.2 | calcom | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
-| [Change Detection](https://hub.docker.com/r/dgtlmoon/changedetection.io) | 0.50.39 | dgtlmoon | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
+| [Change Detection](https://hub.docker.com/r/dgtlmoon/changedetection.io) | 0.50.40 | dgtlmoon | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Chatpad](https://hub.docker.com/r/deiucanta/chatpad) | f45cd53bc410412610c1ba1cbd84cd137d8e167d | deiucanta | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [chrome](https://github.com/bigbeartechworld/big-bear-casaos) | 1.15.0-rolling | kasmweb | [Repository](https://github.com/bigbeartechworld/big-bear-casaos) |
 | [chromium](https://hub.docker.com/r/linuxserver/chromium) | version-6ae43f81 | linuxserver | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
@@ -73,9 +73,9 @@ If you have a suggestion for an app, please post in the [BigBearCommunity](https
 | [GemDigest Bot](https://github.com/bigbeartechworld/big-bear-casaos) | 1.0 | Armaggheddon | [Repository](https://github.com/bigbeartechworld/big-bear-casaos) |
 | [GemDigest Bot](https://hub.docker.com/r/piero24/gemdigest) | 1.0 | Armaggheddon | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Genmon](https://hub.docker.com/r/bigbeartechworld/big-bear-genmon) | 1.19.06 | bigbeartechworld | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
-| [Ghost](https://hub.docker.com/r/ghost) | 6.5.3-alpine | ghost | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
+| [Ghost](https://hub.docker.com/r/ghost) | 6.6.0-alpine | ghost | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Ghostfolio](https://hub.docker.com/r/ghostfolio/ghostfolio) | 2.214.0 | ghostfolio | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
-| [Gitea Mirror](https://hub.docker.com/r/raylabshq/gitea-mirror) | v3.9.0 | raylabs.io | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
+| [Gitea Mirror](https://hub.docker.com/r/raylabshq/gitea-mirror) | v3.9.2 | raylabs.io | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Gladys Assistant](https://github.com/bigbeartechworld/big-bear-casaos) | 4.64.0 | GladysAssistant | [Repository](https://github.com/bigbeartechworld/big-bear-casaos) |
 | [Glances](https://hub.docker.com/r/nicolargo/glances) | 4.3.0.8-full | nicolargo | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Gluetun](https://hub.docker.com/r/qmcgaw/gluetun) | v3.40.0 | portainer | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
@@ -84,7 +84,7 @@ If you have a suggestion for an app, please post in the [BigBearCommunity](https
 | [Guacamole](https://hub.docker.com/r/guacamole/guacamole) | 1.6.0 | guacamole | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Healthchecks](https://hub.docker.com/r/linuxserver/healthchecks) | 3.11.20250828 | linuxserver | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Homarr](https://hub.docker.com/r/ajnart/homarr) | 0.16.0 | ajnart | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
-| [Homarr v1](https://hub.docker.com/r/homarr-labs/homarr) | v1.43.1 | homarr-labs | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
+| [Homarr v1](https://hub.docker.com/r/homarr-labs/homarr) | v1.43.2 | homarr-labs | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Home Assistant](https://github.com/bigbeartechworld/big-bear-casaos) | 2025.10.4 | home-assistant | [Repository](https://github.com/bigbeartechworld/big-bear-casaos) |
 | [HomeBridge](https://github.com/bigbeartechworld/big-bear-casaos) | 2024-05-02 | homebridge | [Repository](https://github.com/bigbeartechworld/big-bear-casaos) |
 | [Homepage](https://github.com/bigbeartechworld/big-bear-casaos) | 1.5.0 | gethomepage | [Repository](https://github.com/bigbeartechworld/big-bear-casaos) |
@@ -155,7 +155,7 @@ If you have a suggestion for an app, please post in the [BigBearCommunity](https
 | [OnlyOffice](https://hub.docker.com/r/onlyoffice/documentserver) | 9.1.0 | onlyoffice | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Open WebUI](https://hub.docker.com/r/open-webui/open-webui) | git-33e54a9 | open-webui | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [OpenVPN](https://hub.docker.com/r/openvpn/openvpn-as) | 2.13.1-d8cdeb9c-Ubuntu22 | openvpn | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
-| [OTEL LGTM](https://hub.docker.com/r/grafana/otel-lgtm) | 0.11.14 | Grafana Labs | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
+| [OTEL LGTM](https://hub.docker.com/r/grafana/otel-lgtm) | 0.11.15 | Grafana Labs | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [ownCloud](https://hub.docker.com/r/owncloud/server) | 10.16.0 | owncloud | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Paperless-ngx](https://hub.docker.com/r/paperless-ngx/paperless-ngx) | 2.19.5 | paperless-ngx | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Password Pusher](https://hub.docker.com/r/pglombardo/pwpush) | 1.62.1 | pglombardo | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
@@ -185,7 +185,7 @@ If you have a suggestion for an app, please post in the [BigBearCommunity](https
 | [Pterodactyl Wings](https://hub.docker.com/r/pterodactyl/wings) | v1.11.13 | pterodactyl | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Python Matter Server](https://github.com/bigbeartechworld/big-bear-casaos) | 8.1.0 | BigBearTechWorld | [Repository](https://github.com/bigbeartechworld/big-bear-casaos) |
 | [Rallly](https://hub.docker.com/r/lukevella/rallly) | 4.4.1 | lukevella | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
-| [Reactive Resume](https://hub.docker.com/r/amruthpillai/reactive-resume) | v4.5.2 | AmruthPillai | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
+| [Reactive Resume](https://hub.docker.com/r/amruthpillai/reactive-resume) | v4.5.5 | AmruthPillai | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Readeck](https://hub.docker.com/r/readeck/readeck) | 0.20.4 | readeck | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [RetroArch](https://hub.docker.com/r/inglebard/retroarch-web) | latest | inglebard | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Rocket.Chat](https://hub.docker.com/r/rocket.chat) | 6.13.1 | rocket.chat | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
