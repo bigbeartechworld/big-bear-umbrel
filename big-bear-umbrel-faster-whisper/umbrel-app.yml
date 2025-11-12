@@ -2,7 +2,7 @@ manifestVersion: 1
 id: big-bear-umbrel-faster-whisper
 category: BigBearCasaOS
 name: Faster-whisper
-version: "3.0.1"
+version: "3.0.2"
 tagline: Faster-whisper
 description: >-
   Faster-whisper is a reimplementation of OpenAI's Whisper model using CTranslate2, which is a fast inference engine for Transformer models. This container provides a Wyoming protocol server for faster-whisper. 
