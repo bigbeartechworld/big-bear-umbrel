@@ -23,7 +23,7 @@ services:
       - "/etc/localtime:/etc/localtime:ro"
       - ${APP_DATA_DIR}/config:/config
       - ${APP_DATA_DIR}/web:/etc/ssl/web
-    image: "linuxserver/speedtest-tracker:1.7.0"
+    image: "linuxserver/speedtest-tracker:1.7.1"
     restart: unless-stopped
     depends_on:
       - big-bear-speedtest-tracker-db

@@ -11,7 +11,7 @@ services:
   # The `big-bear-changedetection` service definition
   big-bear-changedetection:
     # Image to be used for the container
-    image: ghcr.io/dgtlmoon/changedetection.io:0.50.40
+    image: ghcr.io/dgtlmoon/changedetection.io:0.50.43
     # Container restart policy
     restart: unless-stopped
     # Volumes to be mounted to the container
