@@ -1,0 +1,26 @@
+manifestVersion: 1
+id: big-bear-umbrel-spoolman
+category: Utilities
+name: Spoolman
+version: "0.22.1"
+tagline: Filament spool inventory management for 3D printing
+description: >-
+  Keep track of your inventory of 3D-printer filament spools. Spoolman is a self-hosted web service designed to help you efficiently manage your 3D printer filament spools and monitor their usage. 
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: Donkie
+website: https://github.com/Donkie/Spoolman
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-universal-apps
+support: https://github.com/bigbeartechworld/big-bear-universal-apps/issues
+port: 7912
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/spoolman.png
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-universal-apps

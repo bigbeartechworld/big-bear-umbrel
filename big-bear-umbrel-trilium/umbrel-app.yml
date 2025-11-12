@@ -2,7 +2,7 @@ manifestVersion: 1
 id: big-bear-umbrel-trilium
 category: BigBearCasaOS
 name: Trilium
-version: "v0.99.3"
+version: "v0.99.4"
 tagline: Build your personal knowledge base with Trilium Notes
 description: >-
   Build your personal knowledge base with Trilium Notes 

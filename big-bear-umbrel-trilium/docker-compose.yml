@@ -11,7 +11,7 @@ services:
   # The `app` service definition
   app:
     # Image to be used for the container
-    image: triliumnext/trilium:v0.99.3
+    image: triliumnext/trilium:v0.99.4
     # Container restart policy
     restart: unless-stopped
     # Environment variables
