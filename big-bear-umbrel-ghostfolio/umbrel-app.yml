@@ -2,7 +2,7 @@ manifestVersion: 1
 id: big-bear-umbrel-ghostfolio
 category: BigBearCasaOS
 name: Ghostfolio
-version: "2.214.0"
+version: "2.215.0"
 tagline: Ghostfolio
 description: >-
   Open Source Wealth Management Software. Angular + NestJS + Prisma + Nx + TypeScript 🤍 

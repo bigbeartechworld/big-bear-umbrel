@@ -11,7 +11,7 @@ services:
   # The `big-bear-bookstack` service definition
   big-bear-bookstack:
     # Image to be used for the container
-    image: linuxserver/bookstack:25.07.20250804
+    image: linuxserver/bookstack:25.11.20251109
     # Container restart policy
     restart: unless-stopped
     volumes:

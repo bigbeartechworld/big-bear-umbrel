@@ -2,7 +2,7 @@ manifestVersion: 1
 id: big-bear-umbrel-speedtest-tracker
 category: BigBearCasaOS
 name: Speedtest Tracker
-version: "1.7.0"
+version: "1.7.1"
 tagline: Speedtest Tracker
 description: >-
   A Docker image to check your internet speed using Ookla's Speedtest service. Build using Laravel and the Speedtest CLI. 
