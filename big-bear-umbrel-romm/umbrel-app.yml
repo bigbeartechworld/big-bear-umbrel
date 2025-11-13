@@ -2,7 +2,7 @@ manifestVersion: 1
 id: big-bear-umbrel-romm
 category: BigBearCasaOS
 name: RomM
-version: "4.3.2"
+version: "4.4.0"
 tagline: RomM
 description: >-
   ROM manager for organizing, enriching, and playing retro games, with support for 400+ platforms. 
