@@ -189,7 +189,7 @@ If you have a suggestion for an app, please post in the [BigBearCommunity](https
 | [Readeck](https://hub.docker.com/r/readeck/readeck) | 0.20.4 | readeck | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [RetroArch](https://hub.docker.com/r/inglebard/retroarch-web) | latest | inglebard | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Rocket.Chat](https://hub.docker.com/r/rocket.chat) | 6.13.1 | rocket.chat | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
-| [RomM](https://hub.docker.com/r/rommapp/romm) | 4.3.2 | RomM Team | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
+| [RomM](https://hub.docker.com/r/rommapp/romm) | 4.4.0 | RomM Team | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Scrutiny](https://hub.docker.com/r/analogj/scrutiny) | master-omnibus | analogj | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Scrypted](https://github.com/bigbeartechworld/big-bear-casaos) | 0.123.58-jammy-full | koush | [Repository](https://github.com/bigbeartechworld/big-bear-casaos) |
 | [seafile](https://hub.docker.com/r/seafileltd/seafile-mc) | 11.0.13 | seafile | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
