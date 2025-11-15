@@ -11,7 +11,7 @@ services:
   # The `big-bear-obsidian` service definition
   big-bear-obsidian:
     # Image to be used for the container
-    image: linuxserver/obsidian:1.9.14
+    image: linuxserver/obsidian:1.10.3
     # Container restart policy
     restart: unless-stopped
     # Environment variables
