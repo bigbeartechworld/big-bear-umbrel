@@ -84,7 +84,7 @@ If you have a suggestion for an app, please post in the [BigBearCommunity](https
 | [Guacamole](https://hub.docker.com/r/guacamole/guacamole) | 1.6.0 | guacamole | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Healthchecks](https://hub.docker.com/r/linuxserver/healthchecks) | 3.11.20250828 | linuxserver | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Homarr](https://hub.docker.com/r/ajnart/homarr) | 0.16.0 | ajnart | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
-| [Homarr v1](https://hub.docker.com/r/homarr-labs/homarr) | v1.43.2 | homarr-labs | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
+| [Homarr v1](https://hub.docker.com/r/homarr-labs/homarr) | v1.43.3 | homarr-labs | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Home Assistant](https://github.com/bigbeartechworld/big-bear-casaos) | 2025.10.4 | home-assistant | [Repository](https://github.com/bigbeartechworld/big-bear-casaos) |
 | [HomeBridge](https://github.com/bigbeartechworld/big-bear-casaos) | 2024-05-02 | homebridge | [Repository](https://github.com/bigbeartechworld/big-bear-casaos) |
 | [Homepage](https://github.com/bigbeartechworld/big-bear-casaos) | 1.5.0 | gethomepage | [Repository](https://github.com/bigbeartechworld/big-bear-casaos) |
@@ -130,7 +130,7 @@ If you have a suggestion for an app, please post in the [BigBearCommunity](https
 | [Mumble Server](https://hub.docker.com/r/mumblevoip/mumble-server) | v1.4.230-6 | mumblevoip | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Music Assistant](https://github.com/bigbeartechworld/big-bear-casaos) | 2.6.0 | music-assistant | [Repository](https://github.com/bigbeartechworld/big-bear-casaos) |
 | [MySpeed](https://hub.docker.com/r/germannewsmaker/myspeed) | 1.0.9 | gnmyt | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
-| [n8n](https://hub.docker.com/r/n8nio/n8n) | 1.119.1 | n8n | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
+| [n8n](https://hub.docker.com/r/n8nio/n8n) | 1.120.1 | n8n | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Ncdu](https://hub.docker.com/r/bigbeartechworld/big-bear-ncdu) | 0.0.4 | bigbeartechworld | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Neko Firefox](https://hub.docker.com/r/m1k1o/neko) | firefox | m1k1o | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [NetAlertX](https://github.com/bigbeartechworld/big-bear-casaos) | 25.10.1 | jokobsk | [Repository](https://github.com/bigbeartechworld/big-bear-casaos) |
@@ -196,17 +196,17 @@ If you have a suggestion for an app, please post in the [BigBearCommunity](https
 | [Send Visee](https://hub.docker.com/r/timvisee/send) | v3.4.27 | timvisee | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [SFTPGO](https://hub.docker.com/r/drakkan/sftpgo) | v2.7 | drakkan | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Spacedrive](https://hub.docker.com/r/spacedriveapp/spacedrive/server) | 0.4.2 | spacedriveapp | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
-| [Speedtest Tracker](https://hub.docker.com/r/linuxserver/speedtest-tracker) | 1.7.2 | alexjustesen | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
+| [Speedtest Tracker](https://hub.docker.com/r/linuxserver/speedtest-tracker) | 1.7.3 | alexjustesen | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Spoolman](https://github.com/Donkie/Spoolman) | 0.22.1 | Donkie | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Stalwart Mail](https://hub.docker.com/r/stalwartlabs/stalwart) | v0.14.1 | stalwartlabs | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Stirling-PDF](https://hub.docker.com/r/stirlingtools/stirling-pdf) | 1.5.0 | stirlingtools | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Syncthing](https://hub.docker.com/r/syncthing/syncthing) | 2.0 | syncthing | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Tailscale](https://hub.docker.com/r/tailscale/tailscale) | v1.90.6 | tailscale | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Tandoor](https://hub.docker.com/r/tandoorrecipes/recipes) | 2.3.3 | tandoorrecipes | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
-| [Tianji](https://hub.docker.com/r/moonrailgun/tianji) | 1.30.9 | moonrailgun | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
+| [Tianji](https://hub.docker.com/r/moonrailgun/tianji) | 1.30.10 | moonrailgun | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [TP-Link Omada Controller](https://github.com/bigbeartechworld/big-bear-casaos) | 5.15 | BigBearTechWorld | [Repository](https://github.com/bigbeartechworld/big-bear-casaos) |
 | [Traccar](https://hub.docker.com/r/traccar/traccar) | 6.10-ubuntu | traccar | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
-| [Trilium](https://hub.docker.com/r/triliumnext/trilium) | v0.99.4 | TriliumNext | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
+| [Trilium](https://hub.docker.com/r/triliumnext/trilium) | v0.99.5 | TriliumNext | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Tududi](https://hub.docker.com/r/chrisvel/tududi) | 0.86 | chrisvel | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Tugtainer](https://hub.docker.com/r/quenary/tugtainer) | v1.7.0 | Quenary | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [UISP](https://hub.docker.com/r/nico640/docker-unms) | 2.4.155.1 | nico640 | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
