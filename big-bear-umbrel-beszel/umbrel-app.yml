@@ -2,7 +2,7 @@ manifestVersion: 1
 id: big-bear-umbrel-beszel
 category: BigBearCasaOS
 name: Beszel
-version: "0.15.4"
+version: "0.16.0"
 tagline: Server Monitoring Hub
 description: >-
   A lightweight server resource monitoring hub with historical data, docker stats, and alerts. 
