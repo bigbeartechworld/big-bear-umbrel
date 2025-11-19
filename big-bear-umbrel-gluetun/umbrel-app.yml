@@ -2,7 +2,7 @@ manifestVersion: 1
 id: big-bear-umbrel-gluetun
 category: BigBearCasaOS
 name: Gluetun
-version: "v3.40.0"
+version: "v3.40.1"
 tagline: Gluetun
 description: >-
   Lightweight swiss-knife-like VPN client to multiple VPN service providers 

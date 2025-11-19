@@ -9,7 +9,7 @@ services:
   # Main Portainer Agent Server service configuration
   gluetun:
     # This configuration is for the 'qmcgaw/gluetun' Docker image, a versatile VPN client in a Docker container.
-    image: qmcgaw/gluetun:v3.40.0
+    image: qmcgaw/gluetun:v3.40.1
     # Grant the container specific capabilities, allowing it to perform actions typically restricted.
     cap_add:
       - NET_ADMIN # This allows the container to perform network operations.
