@@ -11,7 +11,7 @@ services:
   # The `app` service definition
   app:
     # Specifies the Docker image to be used for the service
-    image: b4bz/homer:v25.10.1
+    image: b4bz/homer:v25.11.1
     # Binds the container's volumes to host directories or named volumes
     # In this case, bind-mounts `homer_assets` from the host to `/www/assets` inside the container
     volumes:
