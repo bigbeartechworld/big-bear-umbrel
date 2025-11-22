@@ -1,0 +1,265 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://github.com/bigbeartechworld/big-bear-umbrel/schemas/umbrel-app-schema-v1.json",
+  "title": "Umbrel App Schema",
+  "description": "JSON Schema for validating Umbrel application structure and manifest",
+  "type": "object",
+  "definitions": {
+    "umbrelApp": {
+      "type": "object",
+      "description": "Umbrel app manifest (umbrel-app.yml)",
+      "required": ["manifestVersion", "id", "category", "name", "version", "tagline", "description", "developer", "website", "dependencies", "repo", "support", "icon"],
+      "properties": {
+        "manifestVersion": {
+          "type": "integer",
+          "description": "Manifest format version",
+          "enum": [1]
+        },
+        "id": {
+          "type": "string",
+          "description": "Unique app identifier (must match folder name and start with big-bear-umbrel-)",
+          "pattern": "^big-bear-umbrel-[a-z0-9-]+$"
+        },
+        "category": {
+          "type": "string",
+          "description": "Application category",
+          "minLength": 1
+        },
+        "name": {
+          "type": "string",
+          "description": "Application display name",
+          "minLength": 1
+        },
+        "version": {
+          "type": "string",
+          "description": "Application version",
+          "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+.*$"
+        },
+        "tagline": {
+          "type": "string",
+          "description": "Short tagline (one sentence)",
+          "minLength": 1
+        },
+        "description": {
+          "type": "string",
+          "description": "Detailed description (supports YAML multiline)",
+          "minLength": 1
+        },
+        "releaseNotes": {
+          "type": "string",
+          "description": "Release notes for this version (supports YAML multiline)"
+        },
+        "developer": {
+          "type": "string",
+          "description": "Original application developer",
+          "minLength": 1
+        },
+        "website": {
+          "type": "string",
+          "description": "Application website URL",
+          "format": "uri"
+        },
+        "dependencies": {
+          "type": "array",
+          "description": "App IDs of dependencies (usually empty array)",
+          "items": {
+            "type": "string"
+          }
+        },
+        "repo": {
+          "type": "string",
+          "description": "Source repository URL",
+          "format": "uri"
+        },
+        "support": {
+          "type": "string",
+          "description": "Support/issues URL",
+          "format": "uri"
+        },
+        "port": {
+          "type": "integer",
+          "description": "Main port for web UI",
+          "minimum": 1,
+          "maximum": 65535
+        },
+        "gallery": {
+          "type": "array",
+          "description": "Screenshot filenames in app folder",
+          "items": {
+            "type": "string",
+            "pattern": "\\.(jpg|png|gif|webp)$"
+          }
+        },
+        "path": {
+          "type": "string",
+          "description": "URL path for web UI (empty string for root)",
+          "default": ""
+        },
+        "defaultUsername": {
+          "type": "string",
+          "description": "Default username (empty if not applicable)",
+          "default": ""
+        },
+        "defaultPassword": {
+          "type": "string",
+          "description": "Default password (empty if not applicable)",
+          "default": ""
+        },
+        "icon": {
+          "type": "string",
+          "description": "Icon URL (must be https)",
+          "format": "uri",
+          "pattern": "^https://"
+        },
+        "torOnly": {
+          "type": "boolean",
+          "description": "Whether app only works over Tor",
+          "default": false
+        },
+        "submitter": {
+          "type": "string",
+          "description": "Name of person/org who submitted the app"
+        },
+        "submission": {
+          "type": "string",
+          "description": "URL to submission PR or issue",
+          "format": "uri"
+        },
+        "installSize": {
+          "type": "integer",
+          "description": "Approximate install size in bytes"
+        },
+        "releaseDate": {
+          "type": "string",
+          "description": "Release date (ISO 8601)",
+          "format": "date"
+        }
+      }
+    },
+    "dockerCompose": {
+      "type": "object",
+      "description": "Docker Compose file (docker-compose.yml)",
+      "properties": {
+        "version": {
+          "type": "string",
+          "description": "Docker Compose version (optional)"
+        },
+        "services": {
+          "type": "object",
+          "description": "Service definitions",
+          "minProperties": 1,
+          "patternProperties": {
+            "^[a-zA-Z0-9_-]+$": {
+              "type": "object",
+              "required": ["image"],
+              "properties": {
+                "image": {
+                  "type": "string",
+                  "description": "Docker image with tag"
+                },
+                "restart": {
+                  "type": "string",
+                  "enum": ["no", "always", "on-failure", "unless-stopped"],
+                  "description": "Restart policy"
+                },
+                "stop_grace_period": {
+                  "type": "string",
+                  "description": "Grace period before force stop"
+                },
+                "ports": {
+                  "type": "array",
+                  "description": "Port mappings",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "volumes": {
+                  "type": "array",
+                  "description": "Volume mappings (use ${APP_DATA_DIR} for data directory)",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "environment": {
+                  "oneOf": [
+                    {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    },
+                    {
+                      "type": "object",
+                      "additionalProperties": {
+                        "type": ["string", "number", "boolean"]
+                      }
+                    }
+                  ],
+                  "description": "Environment variables (can use ${VAR} syntax)"
+                },
+                "networks": {
+                  "type": "object",
+                  "description": "Network configuration",
+                  "properties": {
+                    "default": {
+                      "type": "object",
+                      "properties": {
+                        "ipv4_address": {
+                          "type": "string",
+                          "description": "Static IPv4 address (use ${APP_xxx_IP} variables)"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "networks": {
+          "type": "object",
+          "description": "Network definitions (usually empty, Umbrel manages)",
+          "additionalProperties": {
+            "type": "object"
+          }
+        }
+      }
+    }
+  },
+  "properties": {
+    "appId": {
+      "type": "string",
+      "description": "Application identifier (folder name starting with big-bear-umbrel-)",
+      "pattern": "^big-bear-umbrel-[a-z0-9-]+$"
+    },
+    "umbrelApp": {
+      "$ref": "#/definitions/umbrelApp"
+    },
+    "dockerCompose": {
+      "$ref": "#/definitions/dockerCompose"
+    },
+    "dataFolder": {
+      "type": "string",
+      "description": "Path to data/ folder containing app-specific data files"
+    }
+  },
+  "notes": [
+    "Repository structure: big-bear-umbrel-{appId}/umbrel-app.yml + docker-compose.yml + data/ folder",
+    "Required files: umbrel-app.yml (YAML manifest), docker-compose.yml",
+    "Optional: data/ folder for app-specific files, screenshots (referenced in gallery field)",
+    "App ID must start with 'big-bear-umbrel-' prefix and match folder name",
+    "manifestVersion is currently 1 for all apps",
+    "icon must be https URL pointing to app logo/icon",
+    "port should be the main web UI port (if applicable)",
+    "path is URL path appended to base URL (empty string for root)",
+    "dependencies array lists other Umbrel app IDs required (usually empty)",
+    "Docker Compose should use ${APP_DATA_DIR} variable for data directory paths",
+    "Volume mappings typically use pattern: ${APP_DATA_DIR}/data/{subpath}",
+    "Environment variables can reference ${APP_xxx} variables provided by Umbrel",
+    "Networks are managed by Umbrel; use ipv4_address with ${APP_xxx_IP} variables",
+    "Version in umbrel-app.yml should match the Docker image tag in docker-compose.yml",
+    "gallery field lists screenshot filenames that should exist in app folder",
+    "description and releaseNotes support YAML multiline format (>-)",
+    "submitter and submission fields track app store submission info"
+  ]
+}
