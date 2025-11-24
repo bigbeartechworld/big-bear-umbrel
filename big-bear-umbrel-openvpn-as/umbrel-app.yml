@@ -21,6 +21,6 @@ gallery:
 path: ""
 defaultUsername: ""
 defaultPassword: ""
-icon: https://static-00.iconduck.com/assets.00/openvpn-icon-512x512-nmf6geqm.png
+icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/openvpn.png
 submitter: BigBearTechWorld
 submission: https://github.com/bigbeartechworld/big-bear-universal-apps
