@@ -8,7 +8,7 @@ services:
       APP_PORT: "2283"
   # Main Immich Server service configuration
   immich-server:
-    image: ghcr.io/immich-app/immich-server:v2.2.3 # Image to be used
+    image: ghcr.io/immich-app/immich-server:v2.3.1 # Image to be used
     volumes: # Mounting directories for persistent data storage
       - ${APP_DATA_DIR}/upload:/usr/src/app/upload
     environment: # Setting environment variables
@@ -28,7 +28,7 @@ services:
       - big_bear_immich_network
   # Configuration for Immich Machine Learning service
   immich-machine-learning:
-    image: ghcr.io/immich-app/immich-machine-learning:v2.2.3 # Image to be used
+    image: ghcr.io/immich-app/immich-machine-learning:v2.3.1 # Image to be used
     volumes: # Mounting directories for persistent data storage
       - ${APP_DATA_DIR}/model-cache:/cache
     environment: # Setting environment variables
