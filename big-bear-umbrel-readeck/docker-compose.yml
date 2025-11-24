@@ -12,7 +12,7 @@ services:
   # The main Readeck service definition
   big-bear-readeck:
     # Image to be used for the container
-    image: codeberg.org/readeck/readeck:0.20.4
+    image: codeberg.org/readeck/readeck:0.21.2
     # Container restart policy
     restart: unless-stopped
     # Environment variables for Readeck configuration
