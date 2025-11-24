@@ -2,7 +2,7 @@ manifestVersion: 1
 id: big-bear-umbrel-beaverhabits
 category: BigBearCasaOS
 name: Beaver Habit Tracker
-version: "0.7.3"
+version: "0.7.4"
 tagline: A self-hosted habit tracking app without Goals
 description: >-
   A self-hosted habit tracking app without Goals 
