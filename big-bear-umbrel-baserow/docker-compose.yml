@@ -13,7 +13,7 @@ services:
     # Set environment variables for Baserow.
     environment:
       # Set the your CASA OS IP for Baserow to use.
-      BASEROW_PUBLIC_URL: "http://[YOUR_CASAOS_IP]:7350"
+      BASEROW_PUBLIC_URL: "http://umbrel.local:10009"
     # Define volumes to persist data between container restarts.
     volumes:
       - ${APP_DATA_DIR}/data:/baserow/data

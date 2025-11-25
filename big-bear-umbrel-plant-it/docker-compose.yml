@@ -6,7 +6,7 @@ services:
   app_proxy:
     environment:
       APP_HOST: big-bear-umbrel-plant-it_big-bear-plant-it_1
-      APP_PORT: "8080"
+      APP_PORT: "3000"
   # Service name: big-bear-plant-it
   # The `big-bear-plant-it` service definition
   big-bear-plant-it:

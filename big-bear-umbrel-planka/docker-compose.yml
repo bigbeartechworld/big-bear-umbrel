@@ -21,7 +21,7 @@ services:
       - ${APP_DATA_DIR}/attachments:/app/private/attachments
     # Environment variables to be set in the container for application configuration
     environment:
-      - BASE_URL=http://[YOUR_CASAOS_LAN_IP]:3000
+      - BASE_URL=http://umbrel.local:10139
       - DATABASE_URL=postgresql://postgres@big-bear-planka-postgres/planka
       - SECRET_KEY=notsecretkey
       # - TRUST_PROXY=0
