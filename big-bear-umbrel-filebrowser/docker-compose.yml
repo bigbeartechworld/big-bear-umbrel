@@ -11,7 +11,7 @@ services:
   # The `big-bear-filebrowser` service definition
   big-bear-filebrowser:
     # Image to be used for the container
-    image: filebrowser/filebrowser:v2.48.2-s6
+    image: filebrowser/filebrowser:v2.49.0-s6
     # Container restart policy
     restart: unless-stopped
     # Environment variables

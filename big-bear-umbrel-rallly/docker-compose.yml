@@ -15,12 +15,12 @@ services:
       # Database connection URL (DATABASE_URL=postgres://username:password@host/database)
       - DATABASE_URL=postgres://rallly:f87c7126-f816-47ef-9193-2e5eec763fcd@big-bear-rallly-db/big-bear-rallly
       - SECRET_PASSWORD=0f6f292d-c78c-4709-920d-e3b6361eb5b5 # Secret password for application security UUID V4
-      # URL for the frontend to use, replace [YOUR_CASAOS_IP] with your actual CasaOS IP
-      - NEXT_PUBLIC_BASE_URL=http://[YOUR_CASAOS_IP]:3000
+      # URL for the frontend to use, replace umbrel.local with your actual CasaOS IP
+      - NEXT_PUBLIC_BASE_URL=http://umbrel.local:10152
       - NOREPLY_EMAIL=noreply@example.com # Email used for sending no-reply messages
       - SUPPORT_EMAIL=support@example.com # Support contact email
       # SMTP configuration for sending emails, to be filled with your SMTP server details
-      - SMTP_HOST=[YOUR_CASAOS_IP]
+      - SMTP_HOST=umbrel.local
       - SMTP_PORT=1025
       - SMTP_SECURE=
       - SMTP_USER=

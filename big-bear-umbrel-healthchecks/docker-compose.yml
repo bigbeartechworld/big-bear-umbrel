@@ -18,7 +18,7 @@ services:
       - PUID=1000
       - PGID=1000
       - TZ=Etc/UTC
-      - SITE_ROOT=http://[YOUR_CASAOS_IP]
+      - SITE_ROOT=http://umbrel.local
       - SITE_NAME="Big Bear HealthChecks"
       - SUPERUSER_EMAIL=user@example.com
       - SUPERUSER_PASSWORD=8a4c087a-2652-4d12-a6cc-feeb60e59dd4
