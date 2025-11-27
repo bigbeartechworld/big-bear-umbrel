@@ -1,0 +1,16 @@
+# Configuration for vert setup
+# Name of the big-bear-vert application
+version: "3.7"
+# Service definitions for the big-bear-vert application
+services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-vert_app_1
+      APP_PORT: "80"
+  # Service name: app
+  # The `app` service definition
+  app:
+    # Image to be used for the container
+    image: ghcr.io/vert-sh/vert:sha-a1b0b15
+    # Container restart policy
+    restart: unless-stopped
