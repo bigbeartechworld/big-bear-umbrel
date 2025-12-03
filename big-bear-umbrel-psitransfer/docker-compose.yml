@@ -1,0 +1,37 @@
+# Configuration for PsiTransfer setup
+# Name of the big-bear-psitransfer application
+version: "3.7"
+# Service definitions for the big-bear-psitransfer application
+services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-psitransfer_app_1
+      APP_PORT: "3000"
+  # Service name: app
+  # The `app` service definition
+  app:
+    # Image to be used for the container
+    image: psitrax/psitransfer:v2.3.0
+    # Run as UID 1000 (node user) to match the image's default user
+    user: "1000:1000"
+    # Environment variables
+    environment:
+      # Admin password for /admin page (leave empty to disable)
+      PSITRANSFER_ADMIN_PASS: ""
+      # Upload password (leave empty to allow public uploads)
+      PSITRANSFER_UPLOAD_PASS: ""
+      # Make bucket password mandatory
+      PSITRANSFER_REQUIRE_BUCKET_PASSWORD: "false"
+      # Maximum file size in bytes (empty = no limit)
+      PSITRANSFER_MAX_FILE_SIZE: ""
+      # Maximum bucket size in bytes (empty = no limit)
+      PSITRANSFER_MAX_BUCKET_SIZE: ""
+      # Default retention time in seconds (604800 = 1 week)
+      PSITRANSFER_DEFAULT_RETENTION: "604800"
+      # Maximum age for files in seconds (6480000 = 75 days)
+      PSITRANSFER_MAX_AGE: "6480000"
+    # Volumes to be mounted to the container
+    volumes:
+      - ${APP_DATA_DIR}/data:/data
+    # Container restart policy
+    restart: unless-stopped
