@@ -2,7 +2,7 @@ manifestVersion: 1
 id: big-bear-umbrel-lobe-chat
 category: BigBearCasaOS
 name: LobeChat
-version: "1.142.9"
+version: "1.143.0"
 tagline: LobeChat
 description: >-
   LobeChat is a open-source, extensible (Function Calling), high-performance chatbot framework. It supports one-click free deployment of your private ChatGPT/LLM web application. 
