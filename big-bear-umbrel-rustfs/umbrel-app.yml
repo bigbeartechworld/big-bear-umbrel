@@ -1,0 +1,26 @@
+manifestVersion: 1
+id: big-bear-umbrel-rustfs
+category: Storage
+name: RustFS
+version: "1.0.0-alpha.71"
+tagline: High-performance S3-compatible object storage built in Rust
+description: >-
+  RustFS is a high-performance, distributed object storage system built in Rust. It combines the simplicity of MinIO with the memory safety and raw performance of Rust. It offers full S3 compatibility, is completely open-source under Apache 2.0 license, and is optimized for data lakes, AI, and big data workloads. 
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: rustfs
+website: https://rustfs.com/
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-universal-apps
+support: https://github.com/bigbeartechworld/big-bear-universal-apps/issues
+port: 10170
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/rustfs.png
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-universal-apps

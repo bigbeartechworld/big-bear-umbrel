@@ -1,0 +1,25 @@
+version: "3.7"
+services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-rustfs_app_1
+      APP_PORT: "9000"
+  app:
+    image: rustfs/rustfs:1.0.0-alpha.71
+    volumes:
+      - ${APP_DATA_DIR}/data:/data
+      - ${APP_DATA_DIR}/logs:/logs
+    environment:
+      - RUSTFS_ACCESS_KEY=bigbear
+      - RUSTFS_SECRET_KEY=f1805acc-55a7-4964-849a-8076b3e1cfdf
+      - RUSTFS_CONSOLE_ENABLE=true
+      - RUSTFS_ADDRESS=0.0.0.0:9000
+      - RUSTFS_CONSOLE_ADDRESS=0.0.0.0:9001
+      - TZ=UTC
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "sh", "-c", "curl -f http://localhost:9000/health && curl -f http://localhost:9001/rustfs/console/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s

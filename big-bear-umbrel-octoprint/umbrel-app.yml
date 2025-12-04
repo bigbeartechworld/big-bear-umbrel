@@ -2,7 +2,7 @@ manifestVersion: 1
 id: big-bear-umbrel-octoprint
 category: BigBearCasaOS
 name: OctoPrint
-version: "1.11.4"
+version: "1.11.5"
 tagline: OctoPrint
 description: >-
   OctoPrint is the snappy web interface for your 3D printer! 
