@@ -11,7 +11,7 @@ services:
   # The `big-bear-viseron` service definition
   big-bear-viseron:
     # Image to be used for the container
-    image: roflcoopter/viseron:3.3.1
+    image: roflcoopter/viseron:3.4.1
     # Container restart policy
     restart: unless-stopped
     # Shared memory size

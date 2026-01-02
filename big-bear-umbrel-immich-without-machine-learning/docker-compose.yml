@@ -8,7 +8,7 @@ services:
       APP_PORT: "2283"
   # Main Immich Server service configuration
   immich-server:
-    image: ghcr.io/immich-app/immich-server:v2.3.1 # Image to be used
+    image: ghcr.io/immich-app/immich-server:v2.4.1 # Image to be used
     volumes: # Mounting directories for persistent data storage
       - /DATA/AppData/big-bear-immich/upload:/usr/src/app/upload
     environment: # Setting environment variables

@@ -2,7 +2,7 @@ manifestVersion: 1
 id: big-bear-umbrel-unifi-network-application
 category: BigBearCasaOS
 name: Unifi Network Application
-version: "9.5.21"
+version: "10.0.162"
 tagline: The Unifi-network-application
 description: >-
   The Unifi-network-application software is a powerful, enterprise wireless software engine ideal for high-density client deployments requiring low latency and high uptime performance. 

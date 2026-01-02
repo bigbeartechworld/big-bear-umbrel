@@ -11,7 +11,7 @@ services:
   # The `big-bear-jellystat` service definition
   big-bear-jellystat:
     # Image to be used for the container
-    image: cyfershepard/jellystat:1.1.6
+    image: cyfershepard/jellystat:1.1.7
     # Container restart policy
     restart: unless-stopped
     environment:

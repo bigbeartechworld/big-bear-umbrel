@@ -11,7 +11,7 @@ services:
   # The `big-bear-diun` service definition
   big-bear-diun:
     # Image to be used for the container
-    image: crazymax/diun:4.30.0
+    image: crazymax/diun:4.31.0
     # Command to run inside the container
     command: ["serve"]
     # Container restart policy

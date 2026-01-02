@@ -11,7 +11,7 @@ services:
   # The `big-bear-erugo` service definition
   big-bear-erugo:
     # Image to be used for the container
-    image: wardy784/erugo:0.1.1
+    image: wardy784/erugo:0.2.11
     # Container restart policy
     restart: unless-stopped
     # Volumes to be mounted to the container

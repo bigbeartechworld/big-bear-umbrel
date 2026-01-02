@@ -9,7 +9,7 @@ services:
       APP_PORT: "22300"
   # Configuration for the Joplin server service
   big-bear-joplin:
-    image: joplin/server:3.4.3 # Docker image to use, specifying version.
+    image: joplin/server:3.5.2 # Docker image to use, specifying version.
     restart: unless-stopped # Policy to automatically restart the container unless manually stopped.
     # Environment variables for the Joplin server, configuring database connection and application settings.
     environment:

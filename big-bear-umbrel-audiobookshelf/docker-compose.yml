@@ -11,7 +11,7 @@ services:
   # The `big-bear-audiobookshelf` service definition
   big-bear-audiobookshelf:
     # Image to be used for the container
-    image: ghcr.io/advplyr/audiobookshelf:2.30.0
+    image: ghcr.io/advplyr/audiobookshelf:2.32.1
     # Container restart policy
     restart: unless-stopped
     # Volumes to be mounted to the container

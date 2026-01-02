@@ -1,9 +1,0 @@
-version: "3.7"
-services:
-  big-bear-adguard-home-host:
-    image: adguard/adguardhome:v0.107.68
-    volumes:
-      - "${APP_DATA_DIR}/data/work:/opt/adguardhome/work"
-      - "${APP_DATA_DIR}/data/conf:/opt/adguardhome/conf"
-    restart: unless-stopped
-    network_mode: host

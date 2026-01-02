@@ -11,7 +11,7 @@ services:
   # The `big-bear-docmost` service definition
   big-bear-docmost:
     # Image to be used for the container
-    image: docmost/docmost:0.23.2
+    image: docmost/docmost:0.24.1
     # Container restart policy
     restart: unless-stopped
     environment:
