@@ -11,7 +11,7 @@ services:
   # The `big-bear-tududi` service definition
   big-bear-tududi:
     # Image to be used for the container
-    image: chrisvel/tududi:0.86
+    image: chrisvel/tududi:0.87
     # Container restart policy
     restart: unless-stopped
     # Environment variables

@@ -2,7 +2,7 @@ manifestVersion: 1
 id: big-bear-umbrel-joplin
 category: BigBearCasaOS
 name: joplin
-version: "3.4.3"
+version: "3.5.2"
 tagline: joplin
 description: >-
   Note taking and to-do application with synchronisation 

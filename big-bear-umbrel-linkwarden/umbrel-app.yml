@@ -2,7 +2,7 @@ manifestVersion: 1
 id: big-bear-umbrel-linkwarden
 category: BigBearCasaOS
 name: Linkwarden
-version: "v2.13.1"
+version: "v2.13.5"
 tagline: Linkwarden
 description: >-
   ⚡️⚡️⚡️Self-hosted collaborative bookmark manager to collect, organize, and preserve webpages and articles. 

@@ -1,9 +1,0 @@
-version: "3.7"
-services:
-  big-bear-matterbridge:
-    image: luligu/matterbridge:3.3.3
-    restart: unless-stopped
-    network_mode: host
-    volumes:
-      - ${APP_DATA_DIR}/Matterbridge:/root/Matterbridge
-      - ${APP_DATA_DIR}/.matterbridge:/root/.matterbridge

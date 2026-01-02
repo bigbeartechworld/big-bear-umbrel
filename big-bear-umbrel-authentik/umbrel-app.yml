@@ -2,7 +2,7 @@ manifestVersion: 1
 id: big-bear-umbrel-authentik
 category: BigBearCasaOS
 name: Authentik
-version: "2025.10.2"
+version: "2025.10.3"
 tagline: Authentik
 description: >-
   Authentik is a self-hosted identity and access management platform that provides a secure and scalable solution for managing user accounts, authentication, and authorization. It offers a range of features, including user management, role-based access control, and multi-factor authentication. Authentik is designed to be easy to use and integrate with your existing systems, making it a great choice for organizations looking to improve their security and compliance. 

@@ -8,7 +8,7 @@ services:
       APP_HOST: big-bear-umbrel-invoice-ninja_big-bear-invoice-ninja-web_1
       APP_PORT: "8080"
   big-bear-invoice-ninja:
-    image: invoiceninja/invoiceninja:5.12.36
+    image: invoiceninja/invoiceninja:5.12.41
     restart: unless-stopped
     user: 1500:1500
     environment:
@@ -62,7 +62,7 @@ services:
     # This command is required to set important mariadb defaults
     command: [mysqld, --character-set-server=utf8mb4, --collation-server=utf8mb4_unicode_ci, --wait_timeout=28800, --log-warnings=0]
   big-bear-invoice-ninja-init:
-    image: bash:5.3.3
+    image: bash:5.3.9
     volumes:
       - ${APP_DATA_DIR}/data:/tmp/data
     command: ["/bin/sh", "-c", "if [ ! -f /tmp/data/.init_complete ]; then echo 'Starting initialization process...' && if [ -f /tmp/data/init/init.sh ]; then echo 'Found init.sh, making it executable...' && chmod +x /tmp/data/init/init.sh && echo 'Executing init.sh...' && /tmp/data/init/init.sh && echo 'init.sh execution completed.' && touch /tmp/data/.init_complete && echo 'Initialization process finished.'; else echo 'Error: /tmp/data/init/init.sh not found!' && exit 1; fi; else echo 'Initialization already completed. Exiting.'; fi && exit 0"]

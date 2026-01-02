@@ -2,7 +2,7 @@ manifestVersion: 1
 id: big-bear-umbrel-immich-kiosk
 category: BigBearCasaOS
 name: Immich Kiosk
-version: "0.28.0"
+version: "0.29.1"
 tagline: Immich Kiosk
 description: >-
   Immich Kiosk is a lightweight slideshow for running on kiosk devices and browsers that uses Immich as a data source. 

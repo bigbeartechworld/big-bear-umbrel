@@ -2,7 +2,7 @@ manifestVersion: 1
 id: big-bear-umbrel-wordpress
 category: BigBearCasaOS
 name: WordPress
-version: "6.8.3"
+version: "6.9.0"
 tagline: WordPress
 description: >-
   Initially started as a blogging tool in 2003, it has evolved into a highly flexible CMS that powers over 40% of the web (as of my last training data in 2022). 

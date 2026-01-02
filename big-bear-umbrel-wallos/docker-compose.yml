@@ -11,7 +11,7 @@ services:
   # The `big-bear-wallos` service definition
   big-bear-wallos:
     # Image to be used for the container
-    image: bellamy/wallos:4.5.0
+    image: bellamy/wallos:4.6.0
     # Container restart policy
     restart: unless-stopped
     # Environment variables for the container

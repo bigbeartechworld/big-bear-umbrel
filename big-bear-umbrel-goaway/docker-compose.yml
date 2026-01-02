@@ -10,7 +10,7 @@ services:
   # The `big-bear-goaway` service for the goaway application
   big-bear-goaway:
     # Docker image to be used
-    image: pommee/goaway:0.62.20
+    image: pommee/goaway:0.63.3
     # Restart policy for the service
     restart: unless-stopped
     # Volumes for the service HOST -> CONTAINER
