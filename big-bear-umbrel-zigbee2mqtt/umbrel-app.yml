@@ -2,7 +2,7 @@ manifestVersion: 1
 id: big-bear-umbrel-zigbee2mqtt
 category: BigBearCasaOS
 name: Zigbee to MQTT bridge
-version: "2.7.1"
+version: "2.7.2"
 tagline: Zigbee to MQTT bridge
 description: >-
   Zigbee to MQTT bridge, get rid of your proprietary Zigbee bridges 
