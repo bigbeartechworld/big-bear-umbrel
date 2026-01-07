@@ -2,7 +2,7 @@ manifestVersion: 1
 id: big-bear-umbrel-gotify
 category: BigBearCasaOS
 name: Gotify
-version: "2.7.3"
+version: "2.8.0"
 tagline: Gotify
 description: >-
   a simple server for sending and receiving messages 

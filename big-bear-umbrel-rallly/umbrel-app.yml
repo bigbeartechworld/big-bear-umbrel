@@ -2,7 +2,7 @@ manifestVersion: 1
 id: big-bear-umbrel-rallly
 category: BigBearCasaOS
 name: Rallly
-version: "4.5.13"
+version: "4.5.14"
 tagline: Rallly
 description: >-
   Rallly is an open-source scheduling and collaboration tool designed to make organizing events and meetings easier. 
