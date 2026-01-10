@@ -5,7 +5,7 @@ services:
       APP_HOST: big-bear-umbrel-jlesage-handbrake_big-bear-jlesage-handbrake_1
       APP_PORT: "5800"
   big-bear-jlesage-handbrake:
-    image: jlesage/handbrake:v25.12.4 # Docker image for the Handbrake
+    image: jlesage/handbrake:v26.01.1 # Docker image for the Handbrake
     environment:
       - VNC_PASSWORD=casaos # Set the VNC password to 'casaos'
     volumes:
