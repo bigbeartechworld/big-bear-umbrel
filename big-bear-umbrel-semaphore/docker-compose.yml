@@ -11,7 +11,7 @@ services:
   # The `big-bear-semaphore` service definition
   big-bear-semaphore:
     # Image to be used for the container
-    image: semaphoreui/semaphore:v2.16.47
+    image: semaphoreui/semaphore:v2.16.49
     # Container restart policy
     restart: unless-stopped
     # Environment variables for configuration
