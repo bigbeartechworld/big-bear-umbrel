@@ -10,7 +10,7 @@ services:
   # The `app` service for the Ghost application
   app:
     # Docker image to be used
-    image: ghost:6.10.3-alpine
+    image: ghost:6.11.0-alpine
     # Restart policy for the service
     restart: on-failure
     # Networks used by the service
