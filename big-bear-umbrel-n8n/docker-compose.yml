@@ -8,7 +8,7 @@ services:
       APP_PORT: "5678"
   # Service configuration for the n8n application
   app:
-    image: n8nio/n8n:2.2.2 # Docker image and version to use for n8n
+    image: n8nio/n8n:2.4.0 # Docker image and version to use for n8n
     restart: unless-stopped # Restart policy: Restart unless manually stopped
     links:
       - db-n8n # Link to the database container
