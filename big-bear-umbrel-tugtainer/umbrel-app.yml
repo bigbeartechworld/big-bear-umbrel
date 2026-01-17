@@ -2,7 +2,7 @@ manifestVersion: 1
 id: big-bear-umbrel-tugtainer
 category: BigBearCasaOS
 name: Tugtainer
-version: "v1.15.1"
+version: "v1.16.0"
 tagline: Docker Container Update Automator
 description: >-
   Tugtainer is a self-hosted app for automating updates of your docker containers with a web UI. It's like watchtower but with more control and a user-friendly interface. 
