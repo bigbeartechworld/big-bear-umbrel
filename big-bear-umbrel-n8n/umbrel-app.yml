@@ -2,7 +2,7 @@ manifestVersion: 1
 id: big-bear-umbrel-n8n
 category: BigBearCasaOS
 name: n8n
-version: "2.2.2"
+version: "2.4.2"
 tagline: Workflow automation tool
 description: >-
   Free and open fair-code licensed node based Workflow Automation Tool. 
