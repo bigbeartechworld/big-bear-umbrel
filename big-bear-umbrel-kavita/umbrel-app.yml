@@ -2,7 +2,7 @@ manifestVersion: 1
 id: big-bear-umbrel-kavita
 category: BigBearCasaOS
 name: Kavita
-version: "0.8.8"
+version: "0.8.9"
 tagline: Kavita
 description: >-
   Kavita is a fast, feature rich, cross platform reading server 

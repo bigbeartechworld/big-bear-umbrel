@@ -2,7 +2,7 @@ manifestVersion: 1
 id: big-bear-umbrel-microbin
 category: BigBearCasaOS
 name: Microbin
-version: "2.0.4"
+version: "2.1.0"
 tagline: Pastebin alternative with encryption
 description: >-
   Self-hosted, encrypted pastebin alternative with configurable features. 
