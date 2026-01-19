@@ -2,7 +2,7 @@ manifestVersion: 1
 id: big-bear-umbrel-nocodb
 category: BigBearCasaOS
 name: NocoDB
-version: "0.265.1"
+version: "0.301.1"
 tagline: 🔥 🔥 🔥 Open Source Airtable Alternative
 description: >-
   NocoDB allows building no-code database solutions with ease of spreadsheets. Bring your own database or choose ours! Millions of rows? Not a problem. Your Data. Your rules. You are in control. 
