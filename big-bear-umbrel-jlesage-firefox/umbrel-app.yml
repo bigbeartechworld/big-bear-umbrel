@@ -2,7 +2,7 @@ manifestVersion: 1
 id: big-bear-umbrel-jlesage-firefox
 category: BigBearCasaOS
 name: Jlesage Firefox
-version: "v25.12.5"
+version: "v26.01.1"
 tagline: This project implements a Docker container for Firefox.
 description: >-
   The GUI of the application is accessed through a modern web browser (no installation or configuration needed on the client side) or via any VNC client. 
