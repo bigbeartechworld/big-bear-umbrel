@@ -2,7 +2,7 @@ manifestVersion: 1
 id: big-bear-umbrel-ollama-cpu
 category: BigBearCasaOS
 name: Ollama - CPU
-version: "0.14.2"
+version: "0.14.3"
 tagline: LLMs inference server with OpenAI compatible API
 description: >-
   Get up and running with Llama 3, Mistral, Gemma, and other large language models. 
