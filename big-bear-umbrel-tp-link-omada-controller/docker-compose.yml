@@ -5,7 +5,7 @@ services:
   # The name of the service being configured.
   app:
     # The Docker image used for the service.
-    image: mbentley/omada-controller:6.0
+    image: mbentley/omada-controller:6.1
     # Restart policy for the container. "unless-stopped" means the container will always restart unless manually stopped.
     restart: unless-stopped
     # Set limits on system-level resources for the container.
