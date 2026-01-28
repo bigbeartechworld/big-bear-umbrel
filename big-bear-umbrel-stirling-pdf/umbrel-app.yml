@@ -2,7 +2,7 @@ manifestVersion: 1
 id: big-bear-umbrel-stirling-pdf
 category: BigBearCasaOS
 name: Stirling-PDF
-version: "2.3.1"
+version: "2.4.0"
 tagline: Stirling PDF - Local hosted web based PDF editor
 description: >-
   Stirling PDF - Local hosted web based PDF editor 

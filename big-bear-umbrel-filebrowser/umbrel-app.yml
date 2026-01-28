@@ -2,7 +2,7 @@ manifestVersion: 1
 id: big-bear-umbrel-filebrowser
 category: BigBearCasaOS
 name: Filebrowser
-version: "v2.55.0-s6"
+version: "v2.56.0-s6"
 tagline: Access your homeserver files from your browser
 description: >-
   Reliable and Performant File Management Desktop Sync and File Sharing Tool. 
