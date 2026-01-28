@@ -2,7 +2,7 @@ manifestVersion: 1
 id: big-bear-umbrel-ollama-nvidia
 category: BigBearCasaOS
 name: Ollama - NVIDIA
-version: "0.14.3"
+version: "0.15.0"
 tagline: LLMs inference server with OpenAI compatible API
 description: >-
   Get up and running with Llama 3, Mistral, Gemma, and other large language models. 
