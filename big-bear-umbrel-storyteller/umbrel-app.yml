@@ -1,0 +1,26 @@
+manifestVersion: 1
+id: big-bear-umbrel-storyteller
+category: BigBearCasaOS
+name: Storyteller
+version: "web-v2.6.0-experimental.14"
+tagline: Self-hosted ebook reading platform
+description: >-
+  Storyteller is a self-hosted platform for ebook reading and library management. It supports multiple ebook formats including EPUB, PDF, and MOBI. Features include a modern web-based reader, library organization, metadata management, and multi-user support. Built with Django and includes optional Readium reader integration for enhanced reading experience. 
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: storyteller-platform
+website: https://storyteller-platform.gitlab.io/storyteller
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-universal-apps
+support: https://github.com/bigbeartechworld/big-bear-universal-apps/issues
+port: 10094
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/storyteller.png
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-universal-apps

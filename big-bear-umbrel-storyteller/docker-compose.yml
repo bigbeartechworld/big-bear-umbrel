@@ -1,0 +1,16 @@
+version: "3.7"
+services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-storyteller_app_1
+      APP_PORT: "8001"
+  app:
+    image: registry.gitlab.com/storyteller-platform/storyteller:web-v2.6.0-experimental.14
+    volumes:
+      - ${APP_DATA_DIR}/data:/data
+    environment:
+      - STORYTELLER_SECRET_KEY=${STORYTELLER_SECRET_KEY}
+      - STORYTELLER_LOG_LEVEL=${STORYTELLER_LOG_LEVEL:-info}
+      - STORYTELLER_DATA_DIR=${STORYTELLER_DATA_DIR:-/data}
+      - TZ=${TZ:-UTC}
+    restart: unless-stopped
