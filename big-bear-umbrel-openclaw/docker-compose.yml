@@ -1,0 +1,40 @@
+version: "3.7"
+services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-openclaw_big-bear-openclaw_1
+      APP_PORT: "18789"
+  big-bear-openclaw:
+    image: ghcr.io/openclaw/openclaw:2026.1.29
+    environment:
+      - HOME=/home/node
+      - TERM=xterm-256color
+      - "OPENCLAW_GATEWAY_TOKEN=${OPENCLAW_GATEWAY_TOKEN:?Gateway token required. Generate with: openssl rand -hex 32}"
+      - CLAUDE_AI_SESSION_KEY=${CLAUDE_AI_SESSION_KEY:-}
+      - CLAUDE_WEB_SESSION_KEY=${CLAUDE_WEB_SESSION_KEY:-}
+      - CLAUDE_WEB_COOKIE=${CLAUDE_WEB_COOKIE:-}
+    volumes:
+      - ${APP_DATA_DIR}/config:/home/node/.openclaw
+      - ${APP_DATA_DIR}/config:/home/node/.openclaw/workspace
+    init: true
+    restart: unless-stopped
+    command: ["node", "dist/index.js", "gateway", "--bind", "lan", "--port", "18789"]
+  big-bear-openclaw-cli:
+    image: ghcr.io/openclaw/openclaw:2026.1.29
+    environment:
+      - HOME=/home/node
+      - TERM=xterm-256color
+      - BROWSER=echo
+      - "OPENCLAW_GATEWAY_TOKEN=${OPENCLAW_GATEWAY_TOKEN:?Gateway token required. Generate with: openssl rand -hex 32}"
+      - CLAUDE_AI_SESSION_KEY=${CLAUDE_AI_SESSION_KEY:-}
+      - CLAUDE_WEB_SESSION_KEY=${CLAUDE_WEB_SESSION_KEY:-}
+      - CLAUDE_WEB_COOKIE=${CLAUDE_WEB_COOKIE:-}
+    volumes:
+      - ${APP_DATA_DIR}/config:/home/node/.openclaw
+      - ${APP_DATA_DIR}/config:/home/node/.openclaw/workspace
+    init: true
+    stdin_open: true
+    tty: true
+    entrypoint: ["node", "dist/index.js"]
+    profiles:
+      - tools
