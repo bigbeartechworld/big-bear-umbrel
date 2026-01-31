@@ -11,7 +11,7 @@ services:
   # The `big-bear-lobe-chat` service definition
   big-bear-lobe-chat:
     # Image to be used for the container
-    image: lobehub/lobe-chat:1.143.2
+    image: lobehub/lobe-chat:1.143.3
     # Container restart policy
     restart: unless-stopped
     # Environment variables for the container

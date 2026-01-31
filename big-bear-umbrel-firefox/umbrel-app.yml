@@ -2,7 +2,7 @@ manifestVersion: 1
 id: big-bear-umbrel-firefox
 category: BigBearCasaOS
 name: Firefox
-version: "1147.0.1"
+version: "1147.0.2"
 tagline: Firefox
 description: >-
   This Image contains a browser-accessible version of Firefox. 
