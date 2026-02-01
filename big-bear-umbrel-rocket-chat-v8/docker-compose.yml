@@ -1,0 +1,59 @@
+# Configuration for Rocket.Chat v8 setup in a containerized environment
+# NOTE: Rocket.Chat v8 requires MongoDB 8.2+ and includes breaking changes from v6
+# For legacy v6 installations, use the 'rocket-chat' app instead
+# Application Name
+# This sets the name of the Rocket.Chat v8 application.
+version: "3.7"
+# Service definitions
+# Defining the services required for the Rocket.Chat v8 application.
+services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-rocket-chat-v8_app_1
+      APP_PORT: "3000"
+  # Service: app
+  # This service is for the Rocket.Chat v8 application itself.
+  app:
+    # Docker Image
+    # Specifies the Docker image to use for Rocket.Chat v8.
+    image: rocket.chat:8.0.1
+    # Restart Policy
+    # Determines how the container should be handled if it stops.
+    restart: unless-stopped
+    # Environment variables
+    # These variables are used by Rocket.Chat for its configuration.
+    environment:
+      MONGO_OPLOG_URL: mongodb://db:27017/local
+      ROOT_URL: http://localhost:3100
+    # Dependencies
+    # Specifies other services that this service depends on.
+    depends_on:
+      db:
+        condition: service_healthy
+    # Networks
+    # Assigns the app service to a network.
+    networks:
+      - rocketchat-v8-net
+  # Service: db
+  # This service runs the MongoDB 8.2 database required by Rocket.Chat v8.
+  db:
+    image: mongo:8.2.0
+    volumes:
+      # Persistent storage for MongoDB
+      - ${APP_DATA_DIR}/db:/data/db
+    # Health Check
+    # Checks the health of the MongoDB service.
+    healthcheck:
+      test: ["CMD", "mongosh", "--eval", "db.adminCommand('ping')"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    # Networks
+    networks:
+      - rocketchat-v8-net
+# Networks
+# Defines the network configurations used by the services.
+networks:
+  rocketchat-v8-net:
+    driver: bridge
