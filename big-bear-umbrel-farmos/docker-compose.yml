@@ -11,7 +11,7 @@ services:
   # The `big-bear-farmos` service definition
   big-bear-farmos:
     # Image to be used for the container
-    image: farmos/farmos:3.5.0
+    image: farmos/farmos:3.5.1
     # Container restart policy
     restart: unless-stopped
     # Volumes to be mounted to the container
