@@ -8,7 +8,7 @@ services:
       APP_PORT: "5006"
   # Service name: app
   app:
-    image: actualbudget/actual-server:25.12.0 # The Docker image to use (latest version of actual-server)
+    image: actualbudget/actual-server:26.1.0 # The Docker image to use (latest version of actual-server)
     volumes:
       - ${APP_DATA_DIR}/data:/data # Mounting the data volume
     restart: unless-stopped # Policy to restart the container if it stops unexpectedly
