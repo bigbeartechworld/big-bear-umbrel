@@ -2,7 +2,7 @@ manifestVersion: 1
 id: big-bear-umbrel-dbgate
 category: BigBearCasaOS
 name: DBGate
-version: "6.8.2-alpine"
+version: "7.0.1-alpine"
 tagline: DBGate
 description: >-
   Web based UI for managing and exploring SQL database data 
