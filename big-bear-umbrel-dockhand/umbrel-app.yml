@@ -1,0 +1,26 @@
+manifestVersion: 1
+id: big-bear-umbrel-dockhand
+category: BigBearCasaOS
+name: Dockhand
+version: "latest"
+tagline: Modern Docker management you will like
+description: >-
+  Modern, efficient Docker management application providing real-time container management, Compose stack orchestration, and multi-environment support. Features include interactive terminal access, file browser, Git integration, and SSO via OIDC. All in a lightweight, secure and privacy-focused package. 
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: Finsys
+website: https://dockhand.pro
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-universal-apps
+support: https://github.com/bigbeartechworld/big-bear-universal-apps/issues
+port: 10448
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/dockhand.png
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-universal-apps
