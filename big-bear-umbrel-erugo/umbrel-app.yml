@@ -2,7 +2,7 @@ manifestVersion: 1
 id: big-bear-umbrel-erugo
 category: BigBearCasaOS
 name: Erugo
-version: "0.2.14"
+version: "0.2.15"
 tagline: A powerful, self-hosted file-sharing platform built with PHP and Laravel with a Vue.js frontend.
 description: >-
   A powerful, self-hosted file-sharing platform built with PHP and Laravel with a Vue.js frontend. It offers secure, customizable file-transfer capabilities through an elegant user interface, giving you complete control over your data while providing a seamless experience for both senders and recipients. 

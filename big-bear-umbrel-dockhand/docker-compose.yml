@@ -8,7 +8,7 @@ services:
       APP_HOST: big-bear-umbrel-dockhand_app_1
       APP_PORT: "3000"
   # Service name: app
-  # The `app` service definition
+  # The main Dockhand application service
   app:
     # Image to be used for the container
     image: fnsys/dockhand:latest
@@ -16,5 +16,5 @@ services:
     restart: unless-stopped
     # Volumes to be mounted to the container
     volumes:
-      - /var/run/docker.sock:/var/run/docker.sock
-      - ${APP_DATA_DIR}/data:/app/data
+      - /var/run/docker.sock:/var/run/docker.sock # Docker socket access
+      - ${APP_DATA_DIR}/data:/app/data # Application data
