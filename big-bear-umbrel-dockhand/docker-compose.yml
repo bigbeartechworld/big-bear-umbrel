@@ -1,0 +1,20 @@
+# Configuration for dockhand setup
+# Name of the big-bear-dockhand application
+version: "3.7"
+# Service definitions for the big-bear-dockhand application
+services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-dockhand_app_1
+      APP_PORT: "3000"
+  # Service name: app
+  # The `app` service definition
+  app:
+    # Image to be used for the container
+    image: fnsys/dockhand:latest
+    # Container restart policy
+    restart: unless-stopped
+    # Volumes to be mounted to the container
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ${APP_DATA_DIR}/data:/app/data
