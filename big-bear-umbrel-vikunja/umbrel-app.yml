@@ -2,7 +2,7 @@ manifestVersion: 1
 id: big-bear-umbrel-vikunja
 category: BigBearCasaOS
 name: Vikunja
-version: "0.24.6"
+version: "1.0.0"
 tagline: Vikunja
 description: >-
   The open-source, self-hostable to-do app. Organize everything, on all platforms. 
