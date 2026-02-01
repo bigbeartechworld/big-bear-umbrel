@@ -2,7 +2,7 @@ manifestVersion: 1
 id: big-bear-umbrel-onedev
 category: BigBearCasaOS
 name: OneDev
-version: "14.1.0"
+version: "13.1.7"
 tagline: Self-hosted Git Server with Kanban and CI/CD
 description: >-
   Self-hosted Git Server with Kanban and CI/CD 
