@@ -1,0 +1,26 @@
+manifestVersion: 1
+id: big-bear-umbrel-rocket-chat-v8
+category: BigBearCasaOS
+name: Rocket.Chat v8
+version: "8.0.1"
+tagline: The communications platform that puts data protection first (v8).
+description: >-
+  Rocket.Chat v8 is an open-source fully customizable communications platform developed in JavaScript for organizations with high standards of data protection. This version requires MongoDB 8.2+ and includes significant updates including ABAC for private channels, Matrix federation support, and voice calling improvements. Note: This is a separate app from the legacy v6 version due to breaking changes including mandatory MongoDB 8.2+ upgrade, removal of multiple SMS providers (Twilio only), and elimination of built-in logging (requires Prometheus/Grafana). 
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: rocket.chat
+website: https://hub.docker.com/r/rocket.chat
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-universal-apps
+support: https://github.com/bigbeartechworld/big-bear-universal-apps/issues
+port: 10157
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/rocket-chat.png
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-universal-apps
