@@ -11,7 +11,7 @@ services:
   # The `app` service definition
   app:
     # Image to be used for the container
-    image: psitrax/psitransfer:v2.3.1
+    image: psitrax/psitransfer:v2.4.0
     # Run as UID 1000 (node user) to match the image's default user
     user: "1000:1000"
     # Environment variables
