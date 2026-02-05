@@ -2,7 +2,7 @@ manifestVersion: 1
 id: big-bear-umbrel-ollama-amd
 category: BigBearCasaOS
 name: Ollama - AMD
-version: "0.15.3-rocm"
+version: "0.15.4-rocm"
 tagline: LLMs inference server with OpenAI compatible API
 description: >-
   Get up and running with Llama 3, Mistral, Gemma, and other large language models. 

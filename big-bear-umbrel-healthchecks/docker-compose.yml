@@ -11,7 +11,7 @@ services:
   # The `big-bear-healthchecks` service definition
   big-bear-healthchecks:
     # Image to be used for the container
-    image: linuxserver/healthchecks:4.0.20260126
+    image: linuxserver/healthchecks:4.0.20260202
     # Container restart policy
     restart: unless-stopped
     environment:
