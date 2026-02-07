@@ -1,0 +1,26 @@
+manifestVersion: 1
+id: big-bear-umbrel-filebrowser-quantum
+category: BigBearCasaOS
+name: FileBrowser Quantum
+version: "1.1.2-stable"
+tagline: Advanced self-hosted web file manager
+description: >-
+  A self-hosted web file manager forked from FileBrowser with advanced features including OIDC authentication, indexed search, office document previews, and multi-source support. 
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: gtsteffaniak
+website: https://hub.docker.com/r/gtstef/filebrowser
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-universal-apps
+support: https://github.com/bigbeartechworld/big-bear-universal-apps/issues
+port: 10700
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+icon: https://cdn.jsdelivr.net/gh/gtsteffaniak/filebrowser@main/frontend/public/img/logo.svg
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-universal-apps
