@@ -12,7 +12,7 @@ services:
   # This service provides a web interface running on port 5000 for user administration
   big-bear-stirling-pdf:
     # Image to be used for the container specifies the stirling-pdf version and source
-    image: stirlingtools/stirling-pdf:2.4.3
+    image: stirlingtools/stirling-pdf:2.4.4
     # Container restart policy - restarts the container unless manually stopped
     restart: unless-stopped
     # Environment variables for service configuration
