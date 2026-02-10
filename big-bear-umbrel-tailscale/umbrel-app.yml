@@ -2,7 +2,7 @@ manifestVersion: 1
 id: big-bear-umbrel-tailscale
 category: BigBearCasaOS
 name: Tailscale
-version: "v1.92.5"
+version: "v1.94.1"
 tagline: The easiest, most secure way to use WireGuard and 2FA.
 description: >-
   Zero config VPN. Installs on any device in minutes, manages firewall rules for you, and works from anywhere. 
