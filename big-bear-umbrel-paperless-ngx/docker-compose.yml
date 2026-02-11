@@ -11,7 +11,7 @@ services:
   # The `big-bear-paperless-ngx` service definition
   big-bear-paperless-ngx:
     # Image to be used for the container
-    image: ghcr.io/paperless-ngx/paperless-ngx:2.20.3
+    image: ghcr.io/paperless-ngx/paperless-ngx:2.20.6
     # Container restart policy
     restart: unless-stopped
     # environment variables
@@ -41,7 +41,7 @@ services:
     networks:
       - big-bear-paperless-ngx-network
   big-bear-paperless-ngx-broker:
-    image: docker.io/library/redis:8.4.0
+    image: docker.io/library/redis:8.6.0
     restart: unless-stopped
     volumes:
       - ${APP_DATA_DIR}/redis:/data

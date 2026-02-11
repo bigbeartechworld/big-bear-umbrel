@@ -10,7 +10,7 @@ services:
   # The `app` service for the node-red application
   app:
     # Docker image to be used
-    image: nodered/node-red:4.1.4
+    image: nodered/node-red:4.1.5
     # Restart policy for the service
     restart: unless-stopped
     # Volumes for the service HOST -> CONTAINER

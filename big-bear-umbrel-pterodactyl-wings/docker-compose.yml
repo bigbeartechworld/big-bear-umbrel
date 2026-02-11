@@ -9,7 +9,7 @@ services:
   # This is the main app service for Pterodactyl Wings
   app:
     # Docker image to use for the container
-    image: ghcr.io/pterodactyl/wings:v1.11.13
+    image: ghcr.io/pterodactyl/wings:v1.12.1
     # Determines the restart policy. In this case, the container will always restart if it stops.
     restart: always
     # Allocate a pseudo-TTY, making it act like a terminal

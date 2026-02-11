@@ -2,7 +2,7 @@ manifestVersion: 1
 id: big-bear-umbrel-budibase
 category: BigBearCasaOS
 name: Budibase
-version: "3.27.4"
+version: "3.28.1"
 tagline: Internal tools made easy.
 description: >-
   Low code platform for creating internal tools, workflows, and admin panels in minutes. Supports PostgreSQL, MySQL, MSSQL, MongoDB, Rest API, Docker, K8s, and more 🚀. Budibase, the low code platform you'll enjoy using ⚡ 
