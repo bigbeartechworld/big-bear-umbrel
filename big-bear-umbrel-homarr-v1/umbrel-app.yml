@@ -2,7 +2,7 @@ manifestVersion: 1
 id: big-bear-umbrel-homarr-v1
 category: BigBearCasaOS
 name: Homarr v1
-version: "v1.48.0"
+version: "v1.53.0"
 tagline: Homarr v1 (Latest)
 description: >-
   Homarr v1 - A sleek, modern dashboard for your server. This is the latest major version (v1.x) from homarr-labs with improved architecture and features. Note: This version uses a different data structure and requires SECRET_ENCRYPTION_KEY. Not compatible with legacy Homarr (v0.x) data without migration. 

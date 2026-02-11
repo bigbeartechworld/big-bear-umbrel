@@ -2,7 +2,7 @@ manifestVersion: 1
 id: big-bear-umbrel-convertx
 category: BigBearCasaOS
 name: ConvertX
-version: "v0.16.1"
+version: "v0.17.0"
 tagline: 💾 Self-hosted online file converter. Supports 1000+ formats ⚙️
 description: >-
   A self-hosted online file converter. Supports over a thousand different formats. Written with TypeScript, Bun and Elysia. 

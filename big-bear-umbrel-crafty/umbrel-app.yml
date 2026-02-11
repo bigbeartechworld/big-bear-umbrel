@@ -2,7 +2,7 @@ manifestVersion: 1
 id: big-bear-umbrel-crafty
 category: BigBearCasaOS
 name: Crafty Controller
-version: "4.7.0"
+version: "4.9.0"
 tagline: Crafty Controller
 description: >-
   Crafty 4 is the next iteration of our Minecraft Server Wrapper / Controller / Launcher. 

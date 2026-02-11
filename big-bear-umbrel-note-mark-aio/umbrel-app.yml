@@ -2,7 +2,7 @@ manifestVersion: 1
 id: big-bear-umbrel-note-mark-aio
 category: BigBearCasaOS
 name: Note Mark AIO
-version: "0.18.0"
+version: "0.19.0"
 tagline: Note Mark Aio
 description: >-
   Note Mark Aio is a self-hosted note taking app that allows you to create, organize, and share notes. It's a fork of the popular note-mark app with a focus on simplicity and ease of use. 
