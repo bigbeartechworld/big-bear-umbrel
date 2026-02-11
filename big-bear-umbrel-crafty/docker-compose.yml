@@ -11,7 +11,7 @@ services:
   # The `big-bear-crafty` service definition
   big-bear-crafty:
     # Image to be used for the container
-    image: registry.gitlab.com/crafty-controller/crafty-4:4.7.0
+    image: registry.gitlab.com/crafty-controller/crafty-4:4.9.0
     # Container restart policy
     restart: unless-stopped
     # Environment variables

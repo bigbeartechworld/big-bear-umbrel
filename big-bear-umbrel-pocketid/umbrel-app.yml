@@ -2,7 +2,7 @@ manifestVersion: 1
 id: big-bear-umbrel-pocketid
 category: BigBearCasaOS
 name: Pocket ID
-version: "v1.16"
+version: "v2.2"
 tagline: Passkey-based OIDC authentication
 description: >-
   Simple and easy-to-use OIDC provider that allows users to authenticate with their passkeys to your services. 
