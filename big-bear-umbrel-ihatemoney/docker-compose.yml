@@ -11,7 +11,7 @@ services:
   # The `big-bear-ihatemoney` service definition
   big-bear-ihatemoney:
     # Image to be used for the container
-    image: ihatemoney/ihatemoney:6.1.5
+    image: ihatemoney/ihatemoney:7.0.0
     # Container restart policy
     restart: unless-stopped
     environment:
