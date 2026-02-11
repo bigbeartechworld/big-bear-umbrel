@@ -2,7 +2,7 @@ manifestVersion: 1
 id: big-bear-umbrel-ihatemoney
 category: BigBearCasaOS
 name: I Hate Money
-version: "6.1.5"
+version: "7.0.0"
 tagline: A simple shared budget manager web application
 description: >-
   I hate money is a web application made to ease shared budget management. It keeps track of who bought what, when, and for whom; and helps to settle the bills. 
