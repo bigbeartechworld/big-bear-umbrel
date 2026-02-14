@@ -11,7 +11,7 @@ services:
   # The `big-bear-dbgate` service definition
   big-bear-dbgate:
     # Image to be used for the container
-    image: dbgate/dbgate:7.0.4-alpine
+    image: dbgate/dbgate:7.0.6-alpine
     # Container restart policy
     restart: unless-stopped
     # Volumes to be mounted to the container

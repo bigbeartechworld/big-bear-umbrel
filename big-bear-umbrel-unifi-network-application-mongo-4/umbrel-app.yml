@@ -2,7 +2,7 @@ manifestVersion: 1
 id: big-bear-umbrel-unifi-network-application-mongo-4
 category: BigBearCasaOS
 name: Unifi Network Application
-version: "10.1.84"
+version: "10.1.85"
 tagline: The Unifi-network-application MongoDB 4
 description: >-
   Supports Zimaboards and PI's. The Unifi-network-application software is a powerful, enterprise wireless software engine ideal for high-density client deployments requiring low latency and high uptime performance. 
