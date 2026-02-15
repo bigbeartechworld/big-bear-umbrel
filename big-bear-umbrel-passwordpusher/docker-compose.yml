@@ -11,7 +11,7 @@ services:
   # The `big-bear-pwpush` service definition
   big-bear-pwpush:
     # Image to be used for the container
-    image: pglombardo/pwpush:1.67.1
+    image: pglombardo/pwpush:1.67.2
     # Container restart policy
     restart: unless-stopped
     # Environment variables for the container
