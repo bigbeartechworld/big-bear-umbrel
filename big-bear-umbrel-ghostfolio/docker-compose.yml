@@ -9,7 +9,7 @@ services:
       APP_PORT: "3333"
   # Service definition for the Ghostfolio application
   big-bear-ghostfolio:
-    image: ghostfolio/ghostfolio:2.237.0 # Docker image to use
+    image: ghostfolio/ghostfolio:2.239.0 # Docker image to use
     restart: unless-stopped # Policy to restart the container unless manually stopped
     environment: # Environment variables for configuration
       NODE_ENV: production # Node environment setting (production, development, etc.)
