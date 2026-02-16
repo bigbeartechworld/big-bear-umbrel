@@ -2,7 +2,7 @@ manifestVersion: 1
 id: big-bear-umbrel-psitransfer
 category: BigBearCasaOS
 name: PsiTransfer
-version: "v2.4.0"
+version: "v2.4.1"
 tagline: Simple self-hosted file sharing solution
 description: >-
   PsiTransfer is a simple open source self-hosted file sharing solution. It's an alternative to paid services like Dropbox and WeTransfer. Features include no accounts or logins required, mobile friendly responsive interface, support for many and very big files with resumable uploads and downloads, expiring upload buckets, one-time downloads, password protected downloads, and admin dashboard. 

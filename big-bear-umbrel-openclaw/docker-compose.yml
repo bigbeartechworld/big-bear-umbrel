@@ -5,7 +5,7 @@ services:
       APP_HOST: big-bear-umbrel-openclaw_big-bear-openclaw_1
       APP_PORT: "18789"
   big-bear-openclaw:
-    image: ghcr.io/openclaw/openclaw:2026.2.14
+    image: ghcr.io/openclaw/openclaw:2026.2.15
     environment:
       - HOME=/home/node
       - TERM=xterm-256color
@@ -20,7 +20,7 @@ services:
     restart: unless-stopped
     command: ["node", "dist/index.js", "gateway", "--bind", "lan", "--port", "18789"]
   big-bear-openclaw-cli:
-    image: ghcr.io/openclaw/openclaw:2026.2.14
+    image: ghcr.io/openclaw/openclaw:2026.2.15
     environment:
       - HOME=/home/node
       - TERM=xterm-256color
