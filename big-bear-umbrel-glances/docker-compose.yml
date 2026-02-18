@@ -9,7 +9,7 @@ services:
   # Service name: big-bear-glances
   big-bear-glances:
     # Docker image to use
-    image: nicolargo/glances:4.5.0.4-full
+    image: nicolargo/glances:4.5.0.5-full
     # Environment variables
     environment:
       - TZ=UTC # Timezone
