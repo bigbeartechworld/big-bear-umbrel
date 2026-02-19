@@ -2,7 +2,7 @@ manifestVersion: 1
 id: big-bear-umbrel-semaphore
 category: BigBearCasaOS
 name: Ansible Semaphore
-version: "v2.17.2"
+version: "v2.17.7"
 tagline: Ansible Semaphore
 description: >-
   Ansible Semaphore is a modern UI for Ansible. It lets you easily run Ansible playbooks, get notifications about fails, control access to deployment system. 
