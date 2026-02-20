@@ -2,7 +2,7 @@ manifestVersion: 1
 id: big-bear-umbrel-owncloud
 category: BigBearCasaOS
 name: ownCloud
-version: "10.16.0"
+version: "10.16.1"
 tagline: ownCloud
 description: >-
   ownCloud offers file sharing and collaboration trusted by 200+ million users worldwide regardless of device or location. 
