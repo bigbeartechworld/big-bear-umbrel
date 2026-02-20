@@ -10,7 +10,7 @@ services:
   # The `app` service for the adguard home application
   app:
     # Docker image to be used
-    image: adguard/adguardhome:v0.107.71
+    image: adguard/adguardhome:v0.107.72
     # Resources for the service
     deploy:
       resources:
