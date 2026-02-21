@@ -11,7 +11,7 @@ services:
   # The `big-bear-lyrionmusicserver` service definition
   big-bear-lyrionmusicserver:
     # Image to be used for the container
-    image: lmscommunity/lyrionmusicserver:9.1.0
+    image: lmscommunity/lyrionmusicserver:9.2.0
     # Container restart policy
     restart: unless-stopped
     # Environment variables for the container
