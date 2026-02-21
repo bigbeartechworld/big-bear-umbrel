@@ -13,7 +13,7 @@ services:
   # This service provides a web interface running on port 8080 for habit administration
   big-bear-beaverhabits:
     # Image to be used for the container specifies the btop version and source
-    image: daya0576/beaverhabits:0.8.2
+    image: daya0576/beaverhabits:0.9.0
     # Container restart policy - restarts the container unless manually stopped
     restart: unless-stopped
     user: "1000:1000"
