@@ -1,9 +1,9 @@
 manifestVersion: 1
 id: big-bear-umbrel-planka
 category: BigBearCasaOS
-name: Planka
+name: Planka (Legacy)
 version: "1.26.3"
-tagline: Free open source kanban board for workgroups.
+tagline: Legacy v1 - Use Planka v2 for new installs.
 description: >-
   The realtime kanban board for workgroups built with React and Redux. 
 releaseNotes: >-

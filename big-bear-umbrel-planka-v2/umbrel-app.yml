@@ -1,19 +1,19 @@
 manifestVersion: 1
-id: big-bear-umbrel-paperless-ngx
+id: big-bear-umbrel-planka-v2
 category: BigBearCasaOS
-name: Paperless-ngx
-version: "2.20.8"
-tagline: Paperless-ngx
+name: Planka v2
+version: "2.0.1"
+tagline: Free open source kanban board for workgroups.
 description: >-
-  Paperless-ngx is a community-supported open-source document management system that transforms your physical documents into a searchable online archive so you can keep, well, less paper. 
+  The realtime kanban board for workgroups built with React and Redux. 
 releaseNotes: >-
   This version includes various improvements and bug fixes.
-developer: paperless-ngx
-website: https://hub.docker.com/r/paperless-ngx/paperless-ngx
+developer: plankanban
+website: https://hub.docker.com/r/plankanban/planka
 dependencies: []
 repo: https://github.com/bigbeartechworld/big-bear-universal-apps
 support: https://github.com/bigbeartechworld/big-bear-universal-apps/issues
-port: 10127
+port: 10139
 gallery:
   - 1.jpg
   - 2.jpg
@@ -21,6 +21,6 @@ gallery:
 path: ""
 defaultUsername: ""
 defaultPassword: ""
-icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/paperless-ngx.png
+icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/planka.png
 submitter: BigBearTechWorld
 submission: https://github.com/bigbeartechworld/big-bear-universal-apps
