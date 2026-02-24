@@ -2,7 +2,7 @@ manifestVersion: 1
 id: big-bear-umbrel-traccar
 category: BigBearCasaOS
 name: Traccar
-version: "6.11-ubuntu"
+version: "6.12-ubuntu"
 tagline: Traccar
 description: >-
   Traccar GPS Tracking System in Docker image. 
