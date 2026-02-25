@@ -6,3 +6,4 @@ github.secrets
 .vscode/
 run.py
 scripts/*.js
+schemas/README.md
