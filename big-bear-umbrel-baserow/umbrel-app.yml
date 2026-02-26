@@ -2,7 +2,7 @@ manifestVersion: 1
 id: big-bear-umbrel-baserow
 category: BigBearCasaOS
 name: Baserow
-version: "2.1.0"
+version: "2.1.1"
 tagline: Baserow
 description: >-
   Create your own online database without technical experience. Our user-friendly no-code tool gives you the powers of a developer without leaving your browser. 

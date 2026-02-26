@@ -11,7 +11,7 @@ services:
   # The `app` service definition
   nextcloud:
     # Use the nextcloud image from the official Docker Hub
-    image: bigbeartechworld/big-bear-nextcloud-with-smbclient:32.0.3
+    image: bigbeartechworld/big-bear-nextcloud-with-smbclient:32.0.6
     # Restart the container unless stopped
     restart: unless-stopped
     # Mount the nextcloud_html directory on the host to /var/www/html in the container
@@ -73,7 +73,7 @@ services:
       timeout: 5s
       retries: 5
   cron:
-    image: bigbeartechworld/big-bear-nextcloud-with-smbclient:32.0.3
+    image: bigbeartechworld/big-bear-nextcloud-with-smbclient:32.0.6
     restart: unless-stopped
     volumes:
       - ${APP_DATA_DIR}/html:/var/www/html
