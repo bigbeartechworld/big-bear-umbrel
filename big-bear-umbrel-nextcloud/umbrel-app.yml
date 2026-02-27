@@ -2,7 +2,7 @@ manifestVersion: 1
 id: big-bear-umbrel-nextcloud
 category: BigBearCasaOS
 name: Nextcloud
-version: "32.0.6"
+version: "33.0.0"
 tagline: The productivity platform that keeps you in control
 description: >-
   Nextcloud puts your data at your fingertips, under your control. Store your documents, calendar, contacts and photos on a server at home, at one of our providers or in a data center you trust. 
