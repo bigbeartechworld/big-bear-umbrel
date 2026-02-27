@@ -2,7 +2,7 @@ manifestVersion: 1
 id: big-bear-umbrel-openclaw
 category: BigBearCasaOS
 name: OpenClaw
-version: "2026.2.25"
+version: "2026.2.26"
 tagline: Self-hosted AI agent platform with Claude integration
 description: >-
   OpenClaw is a self-hosted AI agent platform that provides Claude AI integration through a local gateway. It enables running AI assistants with local tool execution, file access, and workspace management. Features include WebSocket gateway, browser automation, and extensible command framework. 
