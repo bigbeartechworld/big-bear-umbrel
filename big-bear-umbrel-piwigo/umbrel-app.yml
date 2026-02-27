@@ -2,7 +2,7 @@ manifestVersion: 1
 id: big-bear-umbrel-piwigo
 category: BigBearCasaOS
 name: Piwigo
-version: "16.2.0"
+version: "16.3.0"
 tagline: Piwigo
 description: >-
   Piwigo is a photo gallery software for the web that comes with powerful features to publish and manage your collection of pictures. 
