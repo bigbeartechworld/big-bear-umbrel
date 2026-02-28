@@ -11,7 +11,7 @@ services:
   # The `big-bear-ollama-amd` service definition
   big-bear-ollama-amd:
     # Image to be used for the container
-    image: ollama/ollama:0.17.1-rocm
+    image: ollama/ollama:0.17.4-rocm
     # Container restart policy
     restart: unless-stopped
     # Environment variables
