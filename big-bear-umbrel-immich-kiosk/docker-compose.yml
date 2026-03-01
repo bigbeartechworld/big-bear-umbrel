@@ -13,7 +13,7 @@ services:
   # This service provides a web interface running on port 3000 for Immich Kiosk
   big-bear-immich-kiosk:
     # Image to be used for the container specifies the Immich Kiosk version and source
-    image: ghcr.io/damongolding/immich-kiosk:0.33.1
+    image: ghcr.io/damongolding/immich-kiosk:0.33.2
     # Enable TTY for interactive terminal access
     tty: true
     # Container restart policy - restarts the container unless manually stopped
