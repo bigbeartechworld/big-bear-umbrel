@@ -9,7 +9,7 @@ services:
       APP_PORT: "1337"
   big-bear-nightscout:
     # Image to be used for the container
-    image: nightscout/cgm-remote-monitor:15.0.3
+    image: nightscout/cgm-remote-monitor:15.0.4
     # Container restart policy
     restart: unless-stopped
     # Environment variables for the container
