@@ -11,7 +11,7 @@ services:
   # The `big-bear-homarr-v1` service definition
   big-bear-homarr-v1:
     # Image to be used for the container
-    image: ghcr.io/homarr-labs/homarr:v1.53.2
+    image: ghcr.io/homarr-labs/homarr:v1.54.0
     # Container restart policy
     restart: unless-stopped
     # Volumes to be mounted to the container
