@@ -11,7 +11,7 @@ services:
   # The `big-bear-ollama-nvidia` service definition
   big-bear-ollama-nvidia:
     # Image to be used for the container
-    image: ollama/ollama:0.17.4
+    image: ollama/ollama:0.17.5
     # Container restart policy
     restart: unless-stopped
     # Volumes to be mounted to the container

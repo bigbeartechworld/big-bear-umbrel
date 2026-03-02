@@ -2,7 +2,7 @@ manifestVersion: 1
 id: big-bear-umbrel-dashdot
 category: BigBearCasaOS
 name: Dashdot
-version: "6.3.0"
+version: "6.3.2"
 tagline: dash. - a modern server dashboard
 description: >-
   About A simple, modern server dashboard, primarily used by smaller private servers. 
