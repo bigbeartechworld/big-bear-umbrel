@@ -2,7 +2,7 @@ manifestVersion: 1
 id: big-bear-umbrel-ls-adguardhome-sync
 category: BigBearCasaOS
 name: LS Adguard Home Sync
-version: "0.8.2"
+version: "0.9.0"
 tagline: LS Adguard Home Sync
 description: >-
   🛡️ Synchronize AdGuard Home config to replicas. This is the LinuxServer version. 
