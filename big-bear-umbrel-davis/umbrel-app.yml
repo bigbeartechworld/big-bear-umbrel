@@ -2,7 +2,7 @@ manifestVersion: 1
 id: big-bear-umbrel-davis
 category: BigBearCasaOS
 name: Davis
-version: "5.4.0"
+version: "5.4.1"
 tagline: Davis
 description: >-
   A simple, fully translatable admin interface for sabre/dav based on Symfony 5 and Bootstrap 5, initially inspired by Baïkal. Provides user edition, calendar creation and sharing, and address book creation. The interface is simple and straightforward, responsive, and provides a light and a dark mode. 

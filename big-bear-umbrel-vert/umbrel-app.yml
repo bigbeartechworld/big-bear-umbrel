@@ -1,6 +1,6 @@
 manifestVersion: 1
 id: big-bear-umbrel-vert
-category: BigBearUniversalApps
+category: BigBearCasaOS
 name: VERT
 version: "sha-a1b0b15"
 tagline: The next-generation file converter. Open source, fully local and free forever.
