@@ -45,6 +45,7 @@ services:
       DB_HOST: "database" # Database host
       DB_PASSWORD: casaos # Database password
       DB_PORT: "3306" # Database port
+      DB_CONNECTION: "mariadb" # Use MariaDB connector to avoid mysql binary requirement (v1.12.0+)
   database:
     # Image to use for the database
     image: mariadb:10.5
