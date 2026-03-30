@@ -10,7 +10,7 @@ services:
   # The `app` service for the 2fauth application
   app:
     # Docker image to be used
-    image: 2fauth/2fauth:6.1.1
+    image: 2fauth/2fauth:6.1.2
     # Restart policy for the service
     restart: unless-stopped
     # Volumes for the service HOST -> CONTAINER
