@@ -14,7 +14,7 @@ If you have a suggestion for an app, please post in the [BigBearCommunity](https
 
 | Application | Version | Developer | Repository |
 | --- | --- | --- | --- |
-| [2FAuth](https://hub.docker.com/r/2fauth/2fauth) | 6.1.1 | bubka | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
+| [2FAuth](https://hub.docker.com/r/2fauth/2fauth) | 6.1.2 | bubka | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Actual Budget](https://hub.docker.com/r/actualbudget/actual-server) | 26.3.0 | actualbudget | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [AdGuard Home](https://hub.docker.com/r/adguard/adguardhome) | v0.107.73 | AdGuardTeam | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Anse](https://hub.docker.com/r/ddiu8081/anse) | v1.1.11 | ddiu8081 | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
@@ -25,7 +25,7 @@ If you have a suggestion for an app, please post in the [BigBearCommunity](https
 | [Ayon](https://hub.docker.com/r/ynput/ayon) | 1.3.6-20240823 | ynput | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Baserow](https://hub.docker.com/r/baserow/baserow) | 2.1.6 | baserow | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Beaver Habit Tracker](https://hub.docker.com/r/daya0576/beaverhabits) | 0.9.0 | daya0576 | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
-| [Beszel](https://hub.docker.com/r/henrygd/beszel) | 0.18.5 | henrygd | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
+| [Beszel](https://hub.docker.com/r/henrygd/beszel) | 0.18.6 | henrygd | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [bookstack](https://hub.docker.com/r/linuxserver/bookstack) | 26.03.20260315 | Dan Brown | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [btop](https://hub.docker.com/r/bigbeartechworld/big-bear-btop) | 0.1.5 | bigbeartechworld | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Budibase](https://hub.docker.com/r/budibase/budibase) | 3.34.11 | Budibase | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
@@ -42,7 +42,7 @@ If you have a suggestion for an app, please post in the [BigBearCommunity](https
 | [Crafty Controller](https://hub.docker.com/r/crafty-controller/crafty-4) | 4.10.2 | crafty-controller | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [CyberChef](https://hub.docker.com/r/gchq/cyberchef) | 10.22.1 | gchq | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Dashdot](https://hub.docker.com/r/mauricenino/dashdot) | 6.3.4 | mauricenino | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
-| [Dashy](https://hub.docker.com/r/lissy93/dashy) | 3.1.13 | Lissy93 | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
+| [Dashy](https://hub.docker.com/r/lissy93/dashy) | 3.1.15 | Lissy93 | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Davis](https://hub.docker.com/r/tchapi/davis-standalone) | 5.4.1 | tchapi | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [DBGate](https://hub.docker.com/r/dbgate/dbgate) | 7.1.6-alpine | dbgate | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [DIUN](https://hub.docker.com/r/crazymax/diun) | 4.31.0 | crazymax | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
