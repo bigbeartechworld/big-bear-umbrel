@@ -42,7 +42,7 @@ If you have a suggestion for an app, please post in the [BigBearCommunity](https
 | [Crafty Controller](https://hub.docker.com/r/crafty-controller/crafty-4) | 4.10.2 | crafty-controller | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [CyberChef](https://hub.docker.com/r/gchq/cyberchef) | 10.22.1 | gchq | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Dashdot](https://hub.docker.com/r/mauricenino/dashdot) | 6.3.4 | mauricenino | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
-| [Dashy](https://hub.docker.com/r/lissy93/dashy) | 3.2.1 | Lissy93 | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
+| [Dashy](https://hub.docker.com/r/lissy93/dashy) | 3.2.2 | Lissy93 | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Davis](https://hub.docker.com/r/tchapi/davis-standalone) | 5.4.1 | tchapi | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [DBGate](https://hub.docker.com/r/dbgate/dbgate) | 7.1.6-alpine | dbgate | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [DIUN](https://hub.docker.com/r/crazymax/diun) | 4.31.0 | crazymax | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
@@ -79,7 +79,7 @@ If you have a suggestion for an app, please post in the [BigBearCommunity](https
 | [Healthchecks](https://hub.docker.com/r/linuxserver/healthchecks) | 4.1.20260323 | linuxserver | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Homarr](https://hub.docker.com/r/ajnart/homarr) | 0.16.1 | ajnart | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Homarr v1](https://hub.docker.com/r/homarr-labs/homarr) | v1.57.1 | homarr-labs | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
-| [Homepage](https://hub.docker.com/r/gethomepage/homepage) | v1.12.2 | gethomepage | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
+| [Homepage](https://hub.docker.com/r/gethomepage/homepage) | v1.12.3 | gethomepage | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Homer](https://hub.docker.com/r/b4bz/homer) | v25.11.1 | bastienwirtz | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [I Hate Money](https://hub.docker.com/r/ihatemoney/ihatemoney) | 7.0.1 | spiral-project | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Immich](https://hub.docker.com/r/immich-app/immich-server) | v2.6.3 | immich-app | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
@@ -194,7 +194,7 @@ If you have a suggestion for an app, please post in the [BigBearCommunity](https
 | [Traccar](https://hub.docker.com/r/traccar/traccar) | 6.12-ubuntu | traccar | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Trilium](https://hub.docker.com/r/triliumnext/trilium) | v0.102.1 | TriliumNext | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Tududi](https://hub.docker.com/r/chrisvel/tududi) | 0.87 | chrisvel | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
-| [Tugtainer](https://hub.docker.com/r/quenary/tugtainer) | v1.27.0 | Quenary | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
+| [Tugtainer](https://hub.docker.com/r/quenary/tugtainer) | v1.28.2 | Quenary | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [UISP](https://hub.docker.com/r/nico640/docker-unms) | 2.4.155.1 | nico640 | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Umami](https://hub.docker.com/r/umami-software/umami) | postgresql-latest | umami-software | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Umbrel OS](https://hub.docker.com/r/dockurr/umbrel) | 1.4.0 | dockurr | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
@@ -213,7 +213,7 @@ If you have a suggestion for an app, please post in the [BigBearCommunity](https
 | [Wishlist](https://hub.docker.com/r/cmintey/wishlist) | v0.62.0 | cmintey | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [WordPress](https://hub.docker.com/r/wordpress) | 6.9.4 | Automattic | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Write Freely](https://hub.docker.com/r/nephatrine/write-freely) | 0.16 | nephatrine | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
-| [Zigbee to MQTT bridge](https://hub.docker.com/r/koenkk/zigbee2mqtt) | 2.9.1 | koenkk | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
+| [Zigbee to MQTT bridge](https://hub.docker.com/r/koenkk/zigbee2mqtt) | 2.9.2 | koenkk | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [zipline](https://hub.docker.com/r/diced/zipline) | 3.7.13 | zipline | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Zotero](https://hub.docker.com/r/linuxserver/zotero) | 7.0.20240809 | linuxserver | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 
