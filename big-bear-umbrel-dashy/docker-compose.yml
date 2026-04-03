@@ -10,7 +10,7 @@ services:
   # Service name: big-bear-dashy
   big-bear-dashy:
     # Image to be used for the app service
-    image: lissy93/dashy:3.2.2
+    image: lissy93/dashy:3.2.3
     # Uncomment below if you want to mount volumes
     volumes:
       - ${APP_DATA_DIR}/public:/app/public
