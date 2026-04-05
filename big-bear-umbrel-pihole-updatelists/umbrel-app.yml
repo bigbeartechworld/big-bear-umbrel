@@ -2,7 +2,7 @@ manifestVersion: 1
 id: big-bear-umbrel-pihole-updatelists
 category: BigBearCasaOS
 name: Pi-hole® Updatelists
-version: "2026.02.0"
+version: "2026.04.0"
 tagline: A black hole for Internet advertisements. This is a fork of the Pi-hole® application that adds the ability to update the lists of blocked domains and regexes.
 description: >-
   The Pi-hole® is a DNS sinkhole that protects your devices from unwanted content without installing any client-side software. This is a fork of the Pi-hole® application that adds the ability to update the lists of blocked domains and regexes. 
