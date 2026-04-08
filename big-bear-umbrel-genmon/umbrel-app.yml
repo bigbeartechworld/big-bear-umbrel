@@ -2,7 +2,7 @@ manifestVersion: 1
 id: big-bear-umbrel-genmon
 category: BigBearCasaOS
 name: Genmon
-version: "1.19.08"
+version: "1.20.00"
 tagline: Genmon
 description: >-
   Generac (and other models) Generator Monitoring using a Raspberry Pi and WiFi 
