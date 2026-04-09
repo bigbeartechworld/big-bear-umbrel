@@ -2,7 +2,7 @@ manifestVersion: 1
 id: big-bear-umbrel-appsmith
 category: BigBearCasaOS
 name: Appsmith
-version: "v1.73.1"
+version: "v1.98.1"
 tagline: Appsmith
 description: >-
   Low code project to build admin panels, internal tools, and dashboards, integrating 15+ databases. 

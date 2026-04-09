@@ -10,7 +10,7 @@ services:
   # Service name: app
   # The `app` service definition
   app:
-    image: appsmith/appsmith-ce:v1.73.1 # Docker image to use
+    image: appsmith/appsmith-ce:v1.98.1 # Docker image to use
     volumes:
       - ${APP_DATA_DIR}/stacks:/appsmith-stacks # Mount volume for app data
     restart: unless-stopped # Container restart policy
