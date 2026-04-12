@@ -1,0 +1,74 @@
+# Configuration for Password Pusher v2 setup
+# PASSWORD PUSHER V2 - NEW DEPLOYMENT
+# =====================================
+# This is a SEPARATE app from 'passwordpusher' (v1.x Legacy). They can coexist.
+#
+# Password Pusher v2 breaking changes:
+# - MySQL/MariaDB support dropped entirely (legacy uses MariaDB)
+# - Now uses PostgreSQL for persistence (or SQLite for ephemeral)
+# - `enable_logins` removed; use `allow_anonymous`, `disable_signups`, `disable_logins`
+# - URL/file/QR pushes now default to enabled
+# - Retrieval verification defaults to on
+#
+# FOR NEW INSTALLATIONS:
+# - Deploy this app for new Password Pusher instances
+#
+# FOR MIGRATION FROM V1:
+# - Do NOT uninstall your existing 'passwordpusher' v1 app
+# - Data migration from MariaDB to PostgreSQL is required
+# - See: https://docs.pwpush.com/docs/upgrading/
+# Name of the big-bear-pwpush-v2 application
+version: "3.7"
+# Service definitions for the big-bear-pwpush-v2 application
+services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-passwordpusher-v2_big-bear-pwpush-v2_1
+      APP_PORT: "5100"
+  # Service name: big-bear-pwpush-v2
+  # The `big-bear-pwpush-v2` service definition
+  big-bear-pwpush-v2:
+    # Image to be used for the container
+    image: pglombardo/pwpush:2.2.2
+    # Container restart policy
+    restart: unless-stopped
+    # Environment variables for the container
+    environment:
+      # PostgreSQL database connection string (v2 dropped MySQL/MariaDB support)
+      DATABASE_URL: "postgresql://pwpusher:6280144a-56af-486f-9088-ac7301399328@big-bear-pwpush-v2-db:5432/passwordpusher_db"
+      # Password expiration settings
+      PWP__PW__EXPIRE_AFTER_DAYS_DEFAULT: "1"
+      PWP__PW__EXPIRE_AFTER_VIEWS_MIN: "1"
+      PWP__PW__RETRIEVAL_STEP_DEFAULT: "true"
+      # v2.0: Replaces `enable_logins`; allow anonymous pushes and control signup/login
+      # PWP__ALLOW_ANONYMOUS: "true"
+      # PWP__DISABLE_SIGNUPS: "false"
+      # PWP__DISABLE_LOGINS: "false"
+    # Volumes to be mounted to the container
+    volumes:
+      # Storage volume
+      - ${APP_DATA_DIR}/storage:/opt/PasswordPusher/storage:rw
+    networks:
+      - big_bear_pwpush_v2_network
+    depends_on:
+      big-bear-pwpush-v2-db:
+        condition: service_healthy
+  big-bear-pwpush-v2-db:
+    # PostgreSQL required for v2 (MySQL/MariaDB no longer supported)
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: "pwpusher"
+      POSTGRES_PASSWORD: "6280144a-56af-486f-9088-ac7301399328"
+      POSTGRES_DB: "passwordpusher_db"
+    volumes:
+      - ${APP_DATA_DIR}/postgres:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U pwpusher -d passwordpusher_db"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - big_bear_pwpush_v2_network
+networks:
+  big_bear_pwpush_v2_network:
+    driver: bridge

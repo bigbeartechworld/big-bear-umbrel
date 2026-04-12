@@ -1,8 +1,8 @@
 manifestVersion: 1
-id: big-bear-umbrel-vikunja
+id: big-bear-umbrel-vikunja-v2
 category: BigBearCasaOS
-name: Vikunja (Legacy)
-version: "1.1.0"
+name: Vikunja v2
+version: "2.3.0"
 tagline: Vikunja
 description: >-
   The open-source, self-hostable to-do app. Organize everything, on all platforms. 
@@ -13,7 +13,7 @@ website: https://hub.docker.com/r/vikunja/vikunja
 dependencies: []
 repo: https://github.com/bigbeartechworld/big-bear-universal-apps
 support: https://github.com/bigbeartechworld/big-bear-universal-apps/issues
-port: 10179
+port: 8082
 gallery:
   - 1.jpg
   - 2.jpg
