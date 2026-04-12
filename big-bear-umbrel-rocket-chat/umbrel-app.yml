@@ -1,7 +1,7 @@
 manifestVersion: 1
 id: big-bear-umbrel-rocket-chat
 category: BigBearCasaOS
-name: Rocket.Chat
+name: Rocket.Chat (Legacy)
 version: "6.13.1"
 tagline: The communications platform that puts data protection first.
 description: >-

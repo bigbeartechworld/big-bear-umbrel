@@ -1,19 +1,19 @@
 manifestVersion: 1
-id: big-bear-umbrel-vikunja
+id: big-bear-umbrel-passwordpusher-v2
 category: BigBearCasaOS
-name: Vikunja (Legacy)
-version: "1.1.0"
-tagline: Vikunja
+name: Password Pusher v2
+version: "2.2.2"
+tagline: Give your users the tools to be secure by default.
 description: >-
-  The open-source, self-hostable to-do app. Organize everything, on all platforms. 
+  Password Pusher is an open source application to communicate passwords over the web. Links to passwords expire after a certain number of views and/or time has passed. 
 releaseNotes: >-
   This version includes various improvements and bug fixes.
-developer: kolaente
-website: https://hub.docker.com/r/vikunja/vikunja
+developer: pglombardo
+website: https://hub.docker.com/r/pglombardo/pwpush
 dependencies: []
 repo: https://github.com/bigbeartechworld/big-bear-universal-apps
 support: https://github.com/bigbeartechworld/big-bear-universal-apps/issues
-port: 10179
+port: 5101
 gallery:
   - 1.jpg
   - 2.jpg
@@ -21,6 +21,6 @@ gallery:
 path: ""
 defaultUsername: ""
 defaultPassword: ""
-icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/vikunja.png
+icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/password-pusher.png
 submitter: BigBearTechWorld
 submission: https://github.com/bigbeartechworld/big-bear-universal-apps

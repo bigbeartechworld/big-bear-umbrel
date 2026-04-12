@@ -1,7 +1,7 @@
 manifestVersion: 1
 id: big-bear-umbrel-passwordpusher
 category: BigBearCasaOS
-name: Password Pusher
+name: Password Pusher (Legacy)
 version: "1.69.3"
 tagline: Give your users the tools to be secure by default.
 description: >-
