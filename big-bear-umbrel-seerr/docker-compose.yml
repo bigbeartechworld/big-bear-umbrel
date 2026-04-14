@@ -1,0 +1,21 @@
+version: "3.7"
+services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-seerr_app_1
+      APP_PORT: "5055"
+  app:
+    image: ghcr.io/seerr-team/seerr:3.1.0 # Image to use for the seerr service
+    init: true # Enable init process
+    volumes:
+      - ${APP_DATA_DIR}/config:/app/config # Binds a volume from host to container for configuration
+    environment:
+      - LOG_LEVEL=debug # Sets the log level to debug
+      - TZ=$TZ # Sets the timezone, using host's timezone variable
+    healthcheck:
+      test: wget --no-verbose --tries=1 --spider http://localhost:5055/api/v1/settings/public || exit 1
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 20s
+    restart: unless-stopped # Service will restart unless it is explicitly stopped
