@@ -1,19 +1,19 @@
 manifestVersion: 1
-id: big-bear-umbrel-immich-without-machine-learning
+id: big-bear-umbrel-seerr
 category: BigBearCasaOS
-name: Immich without machine learning
-version: "v2.7.5"
-tagline: Immich without machine learning
+name: Seerr
+version: "3.1.0"
+tagline: Media request management for Jellyfin, Plex, and Emby
 description: >-
-  Self-hosted photo and video storage. This does not include the machine learning part. 
+  Seerr is a free and open source software application for managing requests for your media library. It is the successor to Overseerr and Jellyseerr, bringing support for Jellyfin, Plex, and Emby media servers. 
 releaseNotes: >-
   This version includes various improvements and bug fixes.
-developer: immich
-website: https://hub.docker.com/r/immich-app/immich-server
+developer: Seerr Team
+website: https://github.com/seerr-team/seerr
 dependencies: []
 repo: https://github.com/bigbeartechworld/big-bear-universal-apps
 support: https://github.com/bigbeartechworld/big-bear-universal-apps/issues
-port: 10073
+port: 5056
 gallery:
   - 1.jpg
   - 2.jpg
@@ -21,6 +21,6 @@ gallery:
 path: ""
 defaultUsername: ""
 defaultPassword: ""
-icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/immich.png
+icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/seerr.png
 submitter: BigBearTechWorld
 submission: https://github.com/bigbeartechworld/big-bear-universal-apps
