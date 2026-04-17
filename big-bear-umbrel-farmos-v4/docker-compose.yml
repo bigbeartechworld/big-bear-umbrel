@@ -29,7 +29,7 @@ services:
   # The `big-bear-farmos-v4` service definition
   big-bear-farmos-v4:
     # Image to be used for the container
-    image: farmos/farmos:4.0.0
+    image: farmos/farmos:4.0.1
     # Container restart policy
     restart: unless-stopped
     # Volumes to be mounted to the container
