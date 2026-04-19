@@ -2,7 +2,7 @@ manifestVersion: 1
 id: big-bear-umbrel-homer
 category: BigBearCasaOS
 name: Homer
-version: "v26.4.1"
+version: "v26.4.2"
 tagline: Homer
 description: >-
   A dead simple static HOMepage for your servER to keep your services on hand, from a simple yaml configuration file. 
