@@ -5,7 +5,7 @@ services:
       APP_HOST: big-bear-umbrel-seerr_app_1
       APP_PORT: "5055"
   app:
-    image: seerr/seerr:v3.1.1 # Image to use for the seerr service
+    image: seerr/seerr:v3.2.0 # Image to use for the seerr service
     init: true # Enable init process
     volumes:
       - ${APP_DATA_DIR}/config:/app/config # Binds a volume from host to container for configuration

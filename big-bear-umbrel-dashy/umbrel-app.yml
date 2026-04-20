@@ -2,7 +2,7 @@ manifestVersion: 1
 id: big-bear-umbrel-dashy
 category: BigBearCasaOS
 name: Dashy
-version: "3.2.15"
+version: "3.3.1"
 tagline: Dashy
 description: >-
   Dashy helps you organize your self-hosted services by making them accessible from a single place 
