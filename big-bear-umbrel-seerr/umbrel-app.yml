@@ -2,7 +2,7 @@ manifestVersion: 1
 id: big-bear-umbrel-seerr
 category: BigBearCasaOS
 name: Seerr
-version: "v3.1.1"
+version: "v3.2.0"
 tagline: Media request management for Jellyfin, Plex, and Emby
 description: >-
   Seerr is a free and open source software application for managing requests for your media library. It is the successor to Overseerr and Jellyseerr, bringing support for Jellyfin, Plex, and Emby media servers. 
