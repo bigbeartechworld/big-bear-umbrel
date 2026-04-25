@@ -2,7 +2,7 @@ manifestVersion: 1
 id: big-bear-umbrel-pihole
 category: BigBearCasaOS
 name: Pi-hole
-version: "2026.04.0"
+version: "2026.04.1"
 tagline: A black hole for Internet advertisements
 description: >-
   The Pi-hole® is a DNS sinkhole that protects your devices from unwanted content without installing any client-side software. 
