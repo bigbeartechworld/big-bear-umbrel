@@ -11,7 +11,7 @@ services:
   # The `app` service definition
   app:
     # Image to be used for the container
-    image: pihole/pihole:2026.04.0
+    image: pihole/pihole:2026.04.1
     # Container restart policy
     restart: unless-stopped
     # Environment variables
