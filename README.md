@@ -143,7 +143,7 @@ If you have a suggestion for an app, please post in the [BigBearCommunity](https
 | [Open WebUI](https://hub.docker.com/r/open-webui/open-webui) | git-33e54a9 | open-webui | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [OpenClaw](https://github.com/openclaw/openclaw) | 2026.4.7-1 | openclaw | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [OpenVPN](https://hub.docker.com/r/openvpn/openvpn-as) | 2.13.1-d8cdeb9c-Ubuntu22 | openvpn | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
-| [OTEL LGTM](https://hub.docker.com/r/grafana/otel-lgtm) | 0.25.0 | Grafana Labs | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
+| [OTEL LGTM](https://hub.docker.com/r/grafana/otel-lgtm) | 0.26.0 | Grafana Labs | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [ownCloud](https://hub.docker.com/r/owncloud/server) | 10.16.2 | owncloud | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Paperless-ngx](https://hub.docker.com/r/paperless-ngx/paperless-ngx) | 2.20.14 | paperless-ngx | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Password Pusher (Legacy)](https://hub.docker.com/r/pglombardo/pwpush) | 1.69.3 | pglombardo | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
@@ -155,7 +155,7 @@ If you have a suggestion for an app, please post in the [BigBearCommunity](https
 | [phpMyAdmin](https://hub.docker.com/r/phpmyadmin/phpmyadmin) | 5.2.3 | phpMyAdmin | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Pi-hole](https://hub.docker.com/r/pihole/pihole) | 2026.04.1 | pi-hole.net | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Pi-hole and Unbound](https://hub.docker.com/r/bigbeartechworld/big-bear-pihole-unbound) | 2026.04.0 | bigbeartechworld | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
-| [Pi-hole® Updatelists](https://hub.docker.com/r/jacklul/pihole) | 2026.04.0 | jacklul | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
+| [Pi-hole® Updatelists](https://hub.docker.com/r/jacklul/pihole) | 2026.04.1 | jacklul | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Pingvin Share](https://hub.docker.com/r/stonith404/pingvin-share) | v1.13.0 | stonith404 | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Piwigo](https://hub.docker.com/r/linuxserver/piwigo) | 16.3.0 | piwigo | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Planka (Legacy)](https://hub.docker.com/r/plankanban/planka) | 1.26.3 | plankanban | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
@@ -171,7 +171,7 @@ If you have a suggestion for an app, please post in the [BigBearCommunity](https
 | [Pterodactyl Panel](https://hub.docker.com/r/pterodactyl/panel) | v1.12.2 | pterodactyl | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Pterodactyl Wings](https://hub.docker.com/r/pterodactyl/wings) | v1.12.1 | pterodactyl | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Rallly](https://hub.docker.com/r/lukevella/rallly) | 4.9.2 | lukevella | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
-| [Reactive Resume](https://hub.docker.com/r/amruthpillai/reactive-resume) | v5.0.18 | AmruthPillai | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
+| [Reactive Resume](https://hub.docker.com/r/amruthpillai/reactive-resume) | v5.0.19 | AmruthPillai | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Readeck](https://hub.docker.com/r/readeck/readeck) | 0.22.3 | readeck | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [RetroArch](https://hub.docker.com/r/inglebard/retroarch-web) | latest | inglebard | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Rocket.Chat (Legacy)](https://hub.docker.com/r/rocket.chat) | 6.13.1 | rocket.chat | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
@@ -186,8 +186,8 @@ If you have a suggestion for an app, please post in the [BigBearCommunity](https
 | [Spacedrive](https://hub.docker.com/r/spacedriveapp/spacedrive/server) | 0.4.2 | spacedriveapp | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Speedtest Tracker](https://hub.docker.com/r/linuxserver/speedtest-tracker) | 1.14.0 | alexjustesen | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Spoolman](https://github.com/Donkie/Spoolman) | 0.23.1 | Donkie | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
-| [Stalwart Mail](https://hub.docker.com/r/stalwartlabs/stalwart) | v0.16.0 | stalwartlabs | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
-| [Stirling-PDF](https://hub.docker.com/r/stirlingtools/stirling-pdf) | 2.9.2 | stirlingtools | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
+| [Stalwart Mail](https://hub.docker.com/r/stalwartlabs/stalwart) | v0.16.1 | stalwartlabs | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
+| [Stirling-PDF](https://hub.docker.com/r/stirlingtools/stirling-pdf) | 2.10.0 | stirlingtools | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Storyteller](https://storyteller-platform.gitlab.io/storyteller) | web-v2.6.0-experimental.14 | storyteller-platform | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Syncthing](https://hub.docker.com/r/syncthing/syncthing) | 2.0 | syncthing | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Tailscale](https://hub.docker.com/r/tailscale/tailscale) | v1.96.5 | tailscale | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
