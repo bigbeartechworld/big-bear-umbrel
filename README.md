@@ -15,7 +15,7 @@ If you have a suggestion for an app, please post in the [BigBearCommunity](https
 | Application | Version | Developer | Repository |
 | --- | --- | --- | --- |
 | [2FAuth](https://hub.docker.com/r/2fauth/2fauth) | 6.1.3 | bubka | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
-| [Actual Budget](https://hub.docker.com/r/actualbudget/actual-server) | 26.4.0 | actualbudget | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
+| [Actual Budget](https://hub.docker.com/r/actualbudget/actual-server) | 26.5.0 | actualbudget | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [AdGuard Home](https://hub.docker.com/r/adguard/adguardhome) | v0.107.74 | AdGuardTeam | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Anse](https://hub.docker.com/r/ddiu8081/anse) | v1.1.11 | ddiu8081 | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Ansible Semaphore](https://hub.docker.com/r/semaphoreui/semaphore) | v2.17.39 | semaphore | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
@@ -87,7 +87,7 @@ If you have a suggestion for an app, please post in the [BigBearCommunity](https
 | [Immich AIO Alpine](https://hub.docker.com/r/imagegenius/immich) | 2.0.0-alpine | imagegenius | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Immich Kiosk](https://hub.docker.com/r/damongolding/immich-kiosk) | 0.38.0 | damongolding | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Immich without machine learning](https://hub.docker.com/r/immich-app/immich-server) | v2.7.5 | immich | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
-| [Invoice Ninja](https://hub.docker.com/r/invoiceninja/invoiceninja) | 5.13.20 | invoiceninja | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
+| [Invoice Ninja](https://hub.docker.com/r/invoiceninja/invoiceninja) | 5.13.21 | invoiceninja | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [IT Tools](https://hub.docker.com/r/corentinth/it-tools) | 2023.11.2-7d94e11 | corentinth | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Jellyseerr (Legacy)](https://hub.docker.com/r/fallenbagel/jellyseerr) | 2.7.3 | Fallenbagel | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Jellystat](https://hub.docker.com/r/cyfershepard/jellystat) | 1.1.10 | cyfershepard | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
@@ -135,9 +135,9 @@ If you have a suggestion for an app, please post in the [BigBearCommunity](https
 | [Obsidian Livesync](https://hub.docker.com/r/couchdb) | 3.5.0 | couchdb | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [OctoPrint](https://hub.docker.com/r/octoprint/octoprint) | 1.11.7 | octoprint | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Odoo](https://hub.docker.com/r/odoo) | 19 | odoo | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
-| [Ollama - AMD](https://hub.docker.com/r/ollama/ollama) | 0.22.1-rocm | ollama | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
-| [Ollama - CPU](https://hub.docker.com/r/ollama/ollama) | 0.22.1 | ollama | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
-| [Ollama - NVIDIA](https://hub.docker.com/r/ollama/ollama) | 0.22.1 | ollama | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
+| [Ollama - AMD](https://hub.docker.com/r/ollama/ollama) | 0.23.0-rocm | ollama | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
+| [Ollama - CPU](https://hub.docker.com/r/ollama/ollama) | 0.23.0 | ollama | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
+| [Ollama - NVIDIA](https://hub.docker.com/r/ollama/ollama) | 0.23.0 | ollama | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [OneDev](https://hub.docker.com/r/1dev/server) | 14.1.9 | theonedev | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [OnlyOffice](https://hub.docker.com/r/onlyoffice/documentserver) | 9.1.0 | onlyoffice | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Open WebUI](https://hub.docker.com/r/open-webui/open-webui) | git-33e54a9 | open-webui | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
@@ -157,7 +157,7 @@ If you have a suggestion for an app, please post in the [BigBearCommunity](https
 | [Pi-hole and Unbound](https://hub.docker.com/r/bigbeartechworld/big-bear-pihole-unbound) | 2026.04.0 | bigbeartechworld | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Pi-hole® Updatelists](https://hub.docker.com/r/jacklul/pihole) | 2026.04.1 | jacklul | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Pingvin Share](https://hub.docker.com/r/stonith404/pingvin-share) | v1.13.0 | stonith404 | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
-| [Piwigo](https://hub.docker.com/r/linuxserver/piwigo) | 16.3.0 | piwigo | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
+| [Piwigo](https://hub.docker.com/r/linuxserver/piwigo) | 16.4.0 | piwigo | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Planka (Legacy)](https://hub.docker.com/r/plankanban/planka) | 1.26.3 | plankanban | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Planka v2](https://hub.docker.com/r/plankanban/planka) | 2.1.1 | plankanban | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Plant-it](https://hub.docker.com/r/msdeluise/plant-it-server) | 0.10.0 | msdeluise | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
