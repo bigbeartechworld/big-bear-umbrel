@@ -28,7 +28,7 @@ If you have a suggestion for an app, please post in the [BigBearCommunity](https
 | [Beszel](https://hub.docker.com/r/henrygd/beszel) | 0.18.7 | henrygd | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [bookstack](https://hub.docker.com/r/linuxserver/bookstack) | 26.03.20260315 | Dan Brown | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [btop](https://hub.docker.com/r/bigbeartechworld/big-bear-btop) | 0.1.5 | bigbeartechworld | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
-| [Budibase](https://hub.docker.com/r/budibase/budibase) | 3.37.5 | Budibase | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
+| [Budibase](https://hub.docker.com/r/budibase/budibase) | 3.38.0 | Budibase | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [cAdvisor](https://hub.docker.com/r/cadvisor/cadvisor) | v0.55.1 | cadvisor | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Cal.com](https://hub.docker.com/r/calcom/cal.com) | v6.2.0 | calcom | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Change Detection](https://hub.docker.com/r/dgtlmoon/changedetection.io) | 0.55.3 | dgtlmoon | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
@@ -69,7 +69,7 @@ If you have a suggestion for an app, please post in the [BigBearCommunity](https
 | [Focalboard](https://hub.docker.com/r/mattermost/focalboard) | 7.11.4 | mattermost | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [GemDigest Bot](https://hub.docker.com/r/piero24/gemdigest) | 1.0 | Armaggheddon | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Genmon](https://hub.docker.com/r/bigbeartechworld/big-bear-genmon) | 1.20.00 | bigbeartechworld | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
-| [Ghost](https://hub.docker.com/r/ghost) | 6.36.0-alpine | ghost | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
+| [Ghost](https://hub.docker.com/r/ghost) | 6.37.1-alpine | ghost | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Ghostfolio](https://hub.docker.com/r/ghostfolio/ghostfolio) | 2.255.0 | ghostfolio | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Gitea Mirror](https://hub.docker.com/r/raylabshq/gitea-mirror) | v3.15.10 | raylabs.io | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Glances](https://hub.docker.com/r/nicolargo/glances) | 4.5.3.2-full | nicolargo | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
@@ -79,10 +79,10 @@ If you have a suggestion for an app, please post in the [BigBearCommunity](https
 | [Guacamole](https://hub.docker.com/r/guacamole/guacamole) | 1.6.0 | guacamole | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Healthchecks](https://hub.docker.com/r/linuxserver/healthchecks) | 4.2.20260504 | linuxserver | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Homarr](https://hub.docker.com/r/ajnart/homarr) | 0.16.1 | ajnart | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
-| [Homarr v1](https://hub.docker.com/r/homarr-labs/homarr) | v1.60.0 | homarr-labs | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
-| [Homepage](https://hub.docker.com/r/gethomepage/homepage) | v1.12.3 | gethomepage | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
+| [Homarr v1](https://hub.docker.com/r/homarr-labs/homarr) | v1.61.0 | homarr-labs | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
+| [Homepage](https://hub.docker.com/r/gethomepage/homepage) | v1.13.0 | gethomepage | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Homer](https://hub.docker.com/r/b4bz/homer) | v26.4.2 | bastienwirtz | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
-| [I Hate Money](https://hub.docker.com/r/ihatemoney/ihatemoney) | 7.0.1 | spiral-project | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
+| [I Hate Money](https://hub.docker.com/r/ihatemoney/ihatemoney) | 7.1.1 | spiral-project | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Immich](https://hub.docker.com/r/immich-app/immich-server) | v2.7.5 | immich-app | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Immich AIO Alpine](https://hub.docker.com/r/imagegenius/immich) | 2.0.0-alpine | imagegenius | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Immich Kiosk](https://hub.docker.com/r/damongolding/immich-kiosk) | 0.38.1 | damongolding | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
@@ -147,7 +147,7 @@ If you have a suggestion for an app, please post in the [BigBearCommunity](https
 | [ownCloud](https://hub.docker.com/r/owncloud/server) | 10.16.2 | owncloud | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Paperless-ngx](https://hub.docker.com/r/paperless-ngx/paperless-ngx) | 2.20.15 | paperless-ngx | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Password Pusher (Legacy)](https://hub.docker.com/r/pglombardo/pwpush) | 1.69.3 | pglombardo | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
-| [Password Pusher v2](https://hub.docker.com/r/pglombardo/pwpush) | 2.6.4 | pglombardo | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
+| [Password Pusher v2](https://hub.docker.com/r/pglombardo/pwpush) | 2.6.5 | pglombardo | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [PD3F](https://hub.docker.com/r/pd3f/pd3f) | latest | pd3f | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Penpot](https://hub.docker.com/r/penpotapp/frontend) | 2.14.5 | penpotapp | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Peppermint](https://hub.docker.com/r/pepperlabs/peppermint) | latest | Pepperlabs | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
@@ -171,11 +171,11 @@ If you have a suggestion for an app, please post in the [BigBearCommunity](https
 | [Pterodactyl Panel](https://hub.docker.com/r/pterodactyl/panel) | v1.12.2 | pterodactyl | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Pterodactyl Wings](https://hub.docker.com/r/pterodactyl/wings) | v1.12.1 | pterodactyl | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Rallly](https://hub.docker.com/r/lukevella/rallly) | 4.10.0 | lukevella | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
-| [Reactive Resume](https://hub.docker.com/r/amruthpillai/reactive-resume) | v5.0.20 | AmruthPillai | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
+| [Reactive Resume](https://hub.docker.com/r/amruthpillai/reactive-resume) | v5.1.1 | AmruthPillai | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Readeck](https://hub.docker.com/r/readeck/readeck) | 0.22.3 | readeck | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [RetroArch](https://hub.docker.com/r/inglebard/retroarch-web) | latest | inglebard | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Rocket.Chat (Legacy)](https://hub.docker.com/r/rocket.chat) | 6.13.1 | rocket.chat | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
-| [Rocket.Chat v8](https://hub.docker.com/r/rocket.chat) | 8.4.0 | rocket.chat | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
+| [Rocket.Chat v8](https://hub.docker.com/r/rocket.chat) | 8.4.1 | rocket.chat | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [RomM](https://hub.docker.com/r/rommapp/romm) | 4.8.1 | RomM Team | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [RustFS](https://rustfs.com/) | 1.0.0-alpha.71 | rustfs | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Scrutiny](https://hub.docker.com/r/analogj/scrutiny) | master-omnibus | analogj | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
