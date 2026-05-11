@@ -1,19 +1,19 @@
 manifestVersion: 1
-id: big-bear-umbrel-portainer
+id: big-bear-umbrel-gitea
 category: BigBearCasaOS
-name: Portainer
-version: "2.41.1-alpine"
-tagline: Portainer
+name: Gitea
+version: "1.26.1"
+tagline: Self-hosted Git service
 description: >-
-  Irrespective of your industry, orchestration platform, or computing device, Portainer is the most versatile container management software that simplifies your secure adoption of containers with remarkable speed. 
+  Gitea is a painless self-hosted all-in-one software development service. It includes Git hosting, code review, team collaboration, package registry, and CI/CD. It is similar to GitHub, Bitbucket and GitLab. 
 releaseNotes: >-
   This version includes various improvements and bug fixes.
-developer: portainer
-website: https://hub.docker.com/r/portainer/portainer-ce
+developer: gitea
+website: https://gitea.com
 dependencies: []
 repo: https://github.com/bigbeartechworld/big-bear-universal-apps
 support: https://github.com/bigbeartechworld/big-bear-universal-apps/issues
-port: 10144
+port: 3000
 gallery:
   - 1.jpg
   - 2.jpg
@@ -21,6 +21,6 @@ gallery:
 path: ""
 defaultUsername: ""
 defaultPassword: ""
-icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/portainer.png
+icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/gitea.png
 submitter: BigBearTechWorld
 submission: https://github.com/bigbeartechworld/big-bear-universal-apps
