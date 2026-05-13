@@ -1,9 +1,9 @@
 manifestVersion: 1
-id: big-bear-umbrel-dashy
+id: big-bear-umbrel-dashy-v4
 category: BigBearCasaOS
-name: Dashy (Legacy)
-version: "3.3.1"
-tagline: Dashy
+name: Dashy v4
+version: "4.0.8"
+tagline: Dashy v4
 description: >-
   Dashy helps you organize your self-hosted services by making them accessible from a single place 
 releaseNotes: >-
@@ -13,7 +13,7 @@ website: https://hub.docker.com/r/lissy93/dashy
 dependencies: []
 repo: https://github.com/bigbeartechworld/big-bear-universal-apps
 support: https://github.com/bigbeartechworld/big-bear-universal-apps/issues
-port: 10031
+port: 10032
 gallery:
   - 1.jpg
   - 2.jpg
