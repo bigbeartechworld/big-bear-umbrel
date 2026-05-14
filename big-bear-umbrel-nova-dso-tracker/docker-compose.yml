@@ -1,0 +1,11 @@
+version: "3.7"
+services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-nova-dso-tracker_nova_1
+      APP_PORT: "5001"
+  nova:
+    image: mrantonsg/nova-dso-tracker:5.9.0
+    volumes:
+      - ${APP_DATA_DIR}/instance:/app/instance
+    restart: unless-stopped
