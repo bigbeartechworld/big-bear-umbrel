@@ -2,7 +2,7 @@ manifestVersion: 1
 id: big-bear-umbrel-syncthing
 category: BigBearCasaOS
 name: Syncthing
-version: "2.0"
+version: "2.1"
 tagline: Peer-to-peer file synchronization between your devices
 description: >-
   Syncthing is a continuous file synchronization program. It synchronizes files between two or more computers. We strive to fulfill the goals below. The goals are listed in order of importance, the most important one being the first. 
