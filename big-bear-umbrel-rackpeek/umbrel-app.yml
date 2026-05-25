@@ -1,19 +1,19 @@
 manifestVersion: 1
-id: big-bear-umbrel-n8n
+id: big-bear-umbrel-rackpeek
 category: BigBearCasaOS
-name: n8n
-version: "2.22.1"
-tagline: Workflow automation tool
+name: RackPeek
+version: "v1.4.0"
+tagline: Document Your Home Lab
 description: >-
-  Free and open fair-code licensed node based Workflow Automation Tool. 
+  A webui and CLI tool to discover, manage, and document your home lab and small-scale IT infrastructure. Track hardware, services, networks, and their relationships using open, non-proprietary YAML. 
 releaseNotes: >-
   This version includes various improvements and bug fixes.
-developer: n8n
-website: https://hub.docker.com/r/n8nio/n8n
+developer: timmoth
+website: https://timmoth.github.io/RackPeek/
 dependencies: []
 repo: https://github.com/bigbeartechworld/big-bear-universal-apps
 support: https://github.com/bigbeartechworld/big-bear-universal-apps/issues
-port: 10104
+port: 10192
 gallery:
   - 1.jpg
   - 2.jpg
@@ -21,6 +21,6 @@ gallery:
 path: ""
 defaultUsername: ""
 defaultPassword: ""
-icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/n8n.png
+icon: https://cdn.jsdelivr.net/gh/bigbeartechworld/big-bear-universal-apps/apps/rackpeek/logo.jpg
 submitter: BigBearTechWorld
 submission: https://github.com/bigbeartechworld/big-bear-universal-apps
