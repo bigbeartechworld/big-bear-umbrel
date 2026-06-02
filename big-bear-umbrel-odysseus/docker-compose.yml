@@ -1,0 +1,144 @@
+# Configuration for odysseus setup
+# Name of the big-bear-odysseus application
+version: "3.7"
+# Service definitions for the big-bear-odysseus application
+services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-odysseus_big-bear-odysseus_1
+      APP_PORT: "7000"
+  # Service name: big-bear-odysseus
+  # The main Odysseus AI workspace service
+  big-bear-odysseus:
+    # Image to be used for the container
+    image: bigbeartechworld/big-bear-odysseus:2026.06.02
+    # Container restart policy
+    restart: unless-stopped
+    environment:
+      # Process user ID
+      - PUID=1000
+      # Process group ID
+      - PGID=1000
+      # Require login to access the workspace
+      - AUTH_ENABLED=${AUTH_ENABLED:-true}
+      # Admin password (override via .env, default is insecure)
+      - ODYSSEUS_ADMIN_PASSWORD=${ODYSSEUS_ADMIN_PASSWORD:-changeme}
+      # SearXNG search instance URL
+      - SEARXNG_INSTANCE=http://searxng:8080
+      # ChromaDB host
+      - CHROMADB_HOST=chromadb
+      # ChromaDB port
+      - CHROMADB_PORT=8000
+    # Volumes to be mounted to the container
+    volumes:
+      # Application data
+      - ${APP_DATA_DIR}/data:/app/data
+      # Application logs
+      - ${APP_DATA_DIR}/logs:/app/logs
+    # Start order dependencies
+    depends_on:
+      searxng:
+        condition: service_healthy
+      chromadb:
+        condition: service_started
+    # Healthcheck for the Odysseus API
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:7000/api/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    networks:
+      - big_bear_odysseus_network
+  # Service name: chromadb
+  # Vector database for Odysseus
+  chromadb:
+    # Image to be used for the container
+    image: chromadb/chroma:1.5.9
+    # Container restart policy
+    restart: unless-stopped
+    environment:
+      # Disable anonymized telemetry
+      - ANONYMIZED_TELEMETRY=FALSE
+    # Volumes to be mounted to the container
+    volumes:
+      # ChromaDB persistence
+      - ${APP_DATA_DIR}/chromadb:/chroma/chroma
+    networks:
+      - big_bear_odysseus_network
+  # Service name: searxng
+  # Web search backend; settings seeded into the named volume on first run
+  searxng:
+    # Image to be used for the container
+    image: searxng/searxng:2026.6.2-e964708c0
+    # Container restart policy
+    restart: unless-stopped
+    # Inline entrypoint seeds settings.yml (secret + html/json formats) into the volume
+    entrypoint:
+      - /bin/sh
+      - -c
+      - |
+        set -eu
+        if [ ! -s /etc/searxng/settings.yml ]; then
+          secret="$${SEARXNG_SECRET:-}"
+          if [ -z "$$secret" ]; then
+            secret="$$(python -c 'import secrets; print(secrets.token_urlsafe(48))')"
+          fi
+          cat > /etc/searxng/settings.yml <<EOF
+        use_default_settings: true
+        server:
+          secret_key: "$$secret"
+        search:
+          formats:
+            - html
+            - json
+        EOF
+        fi
+        exec /usr/local/searxng/entrypoint.sh
+    environment:
+      # Base URL for SearXNG
+      - SEARXNG_BASE_URL=http://localhost:8080/
+      # Optional fixed secret (auto-generated if empty)
+      - SEARXNG_SECRET=${SEARXNG_SECRET:-}
+    # Volumes to be mounted to the container
+    volumes:
+      # SearXNG config persistence
+      - ${APP_DATA_DIR}/searxng:/etc/searxng
+    cap_drop:
+      - ALL
+    cap_add:
+      - CHOWN
+      - SETGID
+      - SETUID
+      - DAC_OVERRIDE
+    # Healthcheck for the SearXNG service
+    healthcheck:
+      test: ["CMD-SHELL", "python -c \"import urllib.request; urllib.request.urlopen('http://localhost:8080/', timeout=5).read(1)\""]
+      interval: 10s
+      timeout: 6s
+      retries: 20
+      start_period: 10s
+    networks:
+      - big_bear_odysseus_network
+  # Service name: ntfy
+  # Optional notification service
+  ntfy:
+    # Image to be used for the container
+    image: binwiederhier/ntfy:v2.23.0
+    # Container restart policy
+    restart: unless-stopped
+    # Run the ntfy server
+    command: serve
+    environment:
+      # Base URL for ntfy
+      - NTFY_BASE_URL=${NTFY_BASE_URL:-http://localhost:8091}
+    # Volumes to be mounted to the container
+    volumes:
+      # ntfy cache
+      - ${APP_DATA_DIR}/ntfy:/var/cache/ntfy
+    networks:
+      - big_bear_odysseus_network
+# Network configuration
+networks:
+  big_bear_odysseus_network:
+    driver: bridge

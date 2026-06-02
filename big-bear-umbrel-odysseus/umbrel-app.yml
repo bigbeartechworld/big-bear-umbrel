@@ -1,0 +1,26 @@
+manifestVersion: 1
+id: big-bear-umbrel-odysseus
+category: BigBearCasaOS
+name: Odysseus
+version: "2026.06.02"
+tagline: Self-hosted AI workspace
+description: >-
+  Odysseus is a self-hosted AI workspace. It bundles chat, web search via SearXNG, and a ChromaDB vector store so you can run your own private AI environment with the LLM provider of your choice. 
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: pewdiepie-archdaemon
+website: https://github.com/pewdiepie-archdaemon/odysseus
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-universal-apps
+support: https://github.com/bigbeartechworld/big-bear-universal-apps/issues
+port: 10070
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+icon: https://cdn.jsdelivr.net/gh/bigbeartechworld/big-bear-universal-apps/apps/odysseus/logo.png
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-universal-apps
