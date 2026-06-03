@@ -1,0 +1,33 @@
+# Configuration for discopanel setup
+# Name of the big-bear-discopanel application
+version: "3.7"
+# Service definitions for the big-bear-discopanel application
+services:
+  # Service name: big-bear-discopanel
+  # The main DiscoPanel application service
+  big-bear-discopanel:
+    # Image to be used for the container
+    image: nickheyer/discopanel:v2.0.12
+    # Container restart policy
+    restart: unless-stopped
+    # Host networking is required so DiscoPanel can expose the dynamic
+    # Minecraft server ports (25565+) of the containers it manages
+    network_mode: host
+    # Environment variables for the container
+    environment:
+      # Path inside the container where DiscoPanel stores its data
+      - DISCOPANEL_DATA_DIR=/app/data
+      # Real host path of the data mount. DiscoPanel passes this to the
+      # Minecraft containers it spawns so they can bind-mount their worlds.
+      # Must match the host source of the /app/data bind mount below.
+      - DISCOPANEL_HOST_DATA_PATH=/DATA/AppData/discopanel/data
+      # Timezone for the application
+      - TZ=UTC
+    # Volumes to be mounted to the container. Bind mounts are used (not named
+    # volumes) because DISCOPANEL_HOST_DATA_PATH must reference a real host
+    # path that DiscoPanel can hand to the Minecraft containers it spawns.
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock # Manage Minecraft server containers
+      - /DATA/AppData/discopanel/data:/app/data # Application data and server worlds
+      - /DATA/AppData/discopanel/backups:/app/backups # Server backups
+      - /DATA/AppData/discopanel/tmp:/app/tmp # Temporary files
