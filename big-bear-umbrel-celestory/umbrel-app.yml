@@ -1,0 +1,26 @@
+manifestVersion: 1
+id: big-bear-umbrel-celestory
+category: Development
+name: Celestory & Voltask
+version: "1.0.0"
+tagline: No-code interactive storytelling & automation
+description: >-
+  The all-in-one no-code platform for interactive storytelling and Voltask automation engine. Paid license required, no free tier available. Purchase a license at https://celestory.io/pricing 
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: celestory
+website: https://www.celestory.io
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-universal-apps
+support: https://github.com/bigbeartechworld/big-bear-universal-apps/issues
+port: 1500
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+icon: https://storage.googleapis.com/voltask-assets/celestory.png
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-universal-apps

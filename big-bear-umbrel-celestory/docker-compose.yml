@@ -1,0 +1,247 @@
+version: "3.7"
+services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-celestory_gateway_1
+      APP_PORT: "80"
+  gateway:
+    image: celestory/gateway:1.1.2
+    environment:
+      SERVER_NAME: localhost
+      FRONTEND_HOST: frontend
+      FRONTEND_PORT: 80
+      VOLTASK_HOST: voltask
+      VOLTASK_PORT: 1401
+      HUB_HOST: hub
+      HUB_PORT: 1402
+    depends_on:
+      frontend:
+        condition: service_healthy
+      voltask:
+        condition: service_healthy
+      hub:
+        condition: service_healthy
+      api:
+        condition: service_healthy
+      auth:
+        condition: service_healthy
+      generator:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:80/"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    restart: unless-stopped
+  frontend:
+    image: celestory/frontend:1.1.1
+    environment:
+      CLOUD_API_URL: http://api
+      ACCOUNT_API_URL: http://auth
+      AUTH_CLIENT_ID: self_hosted_client
+      AUTH_CLIENT_SECRET: self_hosted_secret
+      AUTH_AUDIENCE: self_hosted
+    depends_on:
+      api:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:80/"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    restart: unless-stopped
+  hub:
+    image: celestory/hub:1.1.0
+    environment:
+      AUTH_ORIGIN: http://auth
+      AUTH_AUDIENCE: self_hosted
+      AUTH_AUTHORITY_SECRET: ${AUTH_AUTHORITY_SECRET}
+      AUTH_JWKS_URI: http://auth/.well-known/jwks.json
+      DB_VOLTASK_URL: postgres://celestory_admin:celestory_postgres_password_@db/voltask
+      DB_HUB_URL: postgres://celestory_admin:celestory_postgres_password_@db/hub
+      ADMIN_USERNAME: ${ADMIN_USERNAME}
+      ADMIN_PASSWORD: ${ADMIN_PASSWORD}
+      PORT: 1402
+      ORIGIN: ${HUB_ORIGIN}
+    depends_on:
+      db:
+        condition: service_healthy
+      auth:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "node", "-e", "require('http').get('http://127.0.0.1:1402/')"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    restart: unless-stopped
+  api:
+    image: celestory/api:1.1.2
+    volumes:
+      - ${APP_DATA_DIR}/projectFiles:/app/projectFiles
+    environment:
+      PORT: 80
+      SELF_HOSTED: "true"
+      STORAGE_SOLUTION: filesystem
+      AUTH_DOMAIN: http://auth
+      DB_URL: postgres://celestory_admin:celestory_postgres_password_@db/celestory
+      AUTH_JWKS_URI: http://auth/.well-known/jwks.json
+      AUTH_CLIENT_ID: self_hosted_client
+      AUTH_CLIENT_SECRET: self_hosted_secret
+      AUTH_AUDIENCE: self_hosted
+      GENERATOR_URL: http://generator
+      ORIGIN: ${API_ORIGIN}
+    depends_on:
+      db:
+        condition: service_healthy
+      auth:
+        condition: service_healthy
+      hub:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "node", "-e", "require('http').get('http://127.0.0.1:80/')"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    restart: unless-stopped
+  generator:
+    image: celestory/generator:1.1.2
+    volumes:
+      - ${APP_DATA_DIR}/projectFiles:/usr/src/app/projectFiles
+    environment:
+      PORT: 80
+      PROJECT_FILES_PATH: /usr/src/app/projectFiles
+      STORAGE_SOLUTION: filesystem
+      PROJECT_FILES_PREFIX: /celestory/api/filesystem/
+    depends_on:
+      api:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "node", "-e", "require('http').get('http://127.0.0.1:80/')"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    restart: unless-stopped
+  auth:
+    image: celestory/auth:1.1.0
+    environment:
+      PORT: 80
+      DB_HOST: db
+      DB_DATABASE: auth
+      DB_USERNAME: celestory_admin
+      DB_PASSWORD: celestory_postgres_password_
+      API_AUTHORITY_SECRET: ${AUTH_AUTHORITY_SECRET}
+      API_OAUTH_ISSUER: celestory_auth
+      SELF_HOSTED_REDIRECT_URI: ${AUTH_REDIRECT_URI}
+      GENERATE_KEYS: true
+      API_ACCESS_TOKEN_TTL: 604800
+      API_REFRESH_TOKEN_TTL: 1209600
+      USE_SELF_HOSTED_CLIENT: true
+    depends_on:
+      db:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "node", "-e", "require('http').get('http://127.0.0.1:80/')"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    restart: unless-stopped
+  voltask:
+    image: celestory/voltask:1.0.8
+    environment:
+      PORT: 1401
+      DATABASE_URL: postgresql://celestory_admin:celestory_postgres_password_@db:5432/voltask?schema=voltask
+      ORCHESTRATOR_URL: http://orchestrator:3003
+      VOLTASK_URL: http://voltask:1401
+      WEBHOOK_URL: ${VOLTASK_WEBHOOK_URL}
+      CELESTORY_AUTH_URL: http://auth
+      CELESTORY_AUTH_CLIENT_ID: self_hosted_client
+      CELESTORY_AUTH_CLIENT_SECRET: self_hosted_secret
+      LICENSE_API_URL: http://hub:1402/hub
+      PLUGINS_BUN_URL: http://plugins-bun:8001
+      PLUGINS_DENO_URL: http://plugins-deno:8002
+      PREMISE: on-premise
+      PREMISE_USER_EMAIL: ${VOLTASK_ADMIN_EMAIL}
+      PREMISE_USER_PASSWORD: ${VOLTASK_ADMIN_PASSWORD}
+      STORAGE_DIR: /app/uploads
+    volumes:
+      - ${APP_DATA_DIR}/uploads:/app/uploads
+    depends_on:
+      hub:
+        condition: service_healthy
+      plugins-bun:
+        condition: service_healthy
+      plugins-deno:
+        condition: service_healthy
+      orchestrator:
+        condition: service_healthy
+      db:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "node", "-e", "require('http').get('http://127.0.0.1:1401/voltask')"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    restart: unless-stopped
+  plugins-bun:
+    image: celestory/voltask-plugins-bun:1.0.8
+    restart: unless-stopped
+    environment:
+      PORT: 8001
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "30m"
+        max-file: "1"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8001/imap"]
+      retries: 3
+      timeout: 60s
+      interval: 10s
+      start_period: 10s
+      start_interval: 10s
+  plugins-deno:
+    image: celestory/voltask-plugins-deno:1.0.8
+    restart: unless-stopped
+    environment:
+      PORT: 8002
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "30m"
+        max-file: "1"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8002/deno"]
+      retries: 3
+      timeout: 60s
+      interval: 10s
+      start_period: 10s
+      start_interval: 10s
+  orchestrator:
+    image: celestory/voltask-orchestrator:1.0.8
+    environment:
+      PORT: 3003
+      DATABASE_URL: postgresql://celestory_admin:celestory_postgres_password_@db:5432/orchestrator?sslmode=disable
+    depends_on:
+      db:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:3003/statements"]
+      retries: 3
+      timeout: 60s
+      interval: 10s
+      start_period: 10s
+      start_interval: 10s
+    restart: unless-stopped
+  db:
+    image: celestory/postgres:1.0.0
+    environment:
+      POSTGRES_USER: celestory_admin
+      POSTGRES_PASSWORD: celestory_postgres_password_
+    volumes:
+      - ${APP_DATA_DIR}/db:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U celestory_admin"]
+      interval: 10s
+      timeout: 60s
+      retries: 3
+    restart: unless-stopped
