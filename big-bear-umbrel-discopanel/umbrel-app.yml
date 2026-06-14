@@ -2,7 +2,7 @@ manifestVersion: 1
 id: big-bear-umbrel-discopanel
 category: BigBearCasaOS
 name: DiscoPanel
-version: "v2.0.12"
+version: "v2.0.13"
 tagline: A game server panel for Minecraft
 description: >-
   DiscoPanel is a game server panel for Minecraft. It provides a clean interface for creating and managing Minecraft servers, installing modpacks, and running each server as its own Docker container. Features include modpack browsing and installation, per-server configuration, backups, and real-time server management. 
