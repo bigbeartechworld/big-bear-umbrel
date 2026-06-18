@@ -73,7 +73,7 @@ If you have a suggestion for an app, please post in the [BigBearCommunity](https
 | [GemDigest Bot](https://hub.docker.com/r/piero24/gemdigest) | 1.0 | Armaggheddon | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Genmon](https://hub.docker.com/r/bigbeartechworld/big-bear-genmon) | 2.0.01 | bigbeartechworld | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Ghost](https://hub.docker.com/r/ghost) | 6.45.0-alpine | ghost | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
-| [Ghostfolio](https://hub.docker.com/r/ghostfolio/ghostfolio) | 3.10.0 | ghostfolio | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
+| [Ghostfolio](https://hub.docker.com/r/ghostfolio/ghostfolio) | 3.11.0 | ghostfolio | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Gitea](https://gitea.com) | 1.26.2 | gitea | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Gitea Mirror](https://hub.docker.com/r/raylabshq/gitea-mirror) | v3.15.10 | raylabs.io | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Glances](https://hub.docker.com/r/nicolargo/glances) | 4.5.3.2-full | nicolargo | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
@@ -161,7 +161,7 @@ If you have a suggestion for an app, please post in the [BigBearCommunity](https
 | [phpMyAdmin](https://hub.docker.com/r/phpmyadmin/phpmyadmin) | 5.2.3 | phpMyAdmin | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Pi-hole](https://hub.docker.com/r/pihole/pihole) | 2026.05.0 | pi-hole.net | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Pi-hole and Unbound](https://hub.docker.com/r/bigbeartechworld/big-bear-pihole-unbound) | 2026.05.0 | bigbeartechworld | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
-| [Pi-hole® Updatelists](https://hub.docker.com/r/jacklul/pihole) | 2026.05.0 | jacklul | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
+| [Pi-hole® Updatelists](https://hub.docker.com/r/jacklul/pihole) | 2026.06.0 | jacklul | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Pingvin Share](https://hub.docker.com/r/stonith404/pingvin-share) | v1.13.0 | stonith404 | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Piwigo](https://hub.docker.com/r/linuxserver/piwigo) | 16.4.0 | piwigo | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Planka (Legacy)](https://hub.docker.com/r/plankanban/planka) | 1.26.3 | plankanban | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
@@ -191,7 +191,7 @@ If you have a suggestion for an app, please post in the [BigBearCommunity](https
 | [Send Visee](https://hub.docker.com/r/timvisee/send) | v3.4.27 | timvisee | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [SFTPGO](https://hub.docker.com/r/drakkan/sftpgo) | v2.7 | drakkan | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Spacedrive](https://hub.docker.com/r/spacedriveapp/spacedrive/server) | 0.4.2 | spacedriveapp | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
-| [Speedtest Tracker](https://hub.docker.com/r/linuxserver/speedtest-tracker) | 1.14.3 | alexjustesen | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
+| [Speedtest Tracker](https://hub.docker.com/r/linuxserver/speedtest-tracker) | 1.14.4 | alexjustesen | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Spoolman](https://github.com/Donkie/Spoolman) | 0.23.1 | Donkie | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Stalwart Mail](https://hub.docker.com/r/stalwartlabs/stalwart) | v0.16.8 | stalwartlabs | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Stirling-PDF](https://hub.docker.com/r/stirlingtools/stirling-pdf) | 2.12.0 | stirlingtools | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
@@ -199,12 +199,12 @@ If you have a suggestion for an app, please post in the [BigBearCommunity](https
 | [Syncthing](https://hub.docker.com/r/syncthing/syncthing) | 2.1 | syncthing | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Tailscale](https://hub.docker.com/r/tailscale/tailscale) | v1.98.4 | tailscale | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Tandoor](https://hub.docker.com/r/tandoorrecipes/recipes) | 2.6.9 | tandoorrecipes | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
-| [Tianji](https://hub.docker.com/r/moonrailgun/tianji) | 1.31.29 | moonrailgun | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
+| [Tianji](https://hub.docker.com/r/moonrailgun/tianji) | 1.32.0 | moonrailgun | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [TP-Link Omada Controller](https://hub.docker.com/r/mbentley/omada-controller) | 6.2 | mbentley | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Traccar](https://hub.docker.com/r/traccar/traccar) | 6.14-ubuntu | traccar | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Trilium](https://hub.docker.com/r/triliumnext/trilium) | v0.103.0 | TriliumNext | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Tududi](https://hub.docker.com/r/chrisvel/tududi) | 0.87 | chrisvel | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
-| [Tugtainer](https://hub.docker.com/r/quenary/tugtainer) | v1.30.4 | Quenary | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
+| [Tugtainer](https://hub.docker.com/r/quenary/tugtainer) | v1.30.5 | Quenary | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [UISP](https://hub.docker.com/r/nico640/docker-unms) | 2.4.155.1 | nico640 | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Umami](https://hub.docker.com/r/umami-software/umami) | postgresql-latest | umami-software | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Umbrel OS](https://hub.docker.com/r/dockurr/umbrel) | 1.7.3 | dockurr | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
