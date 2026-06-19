@@ -11,9 +11,14 @@ services:
   # The `big-bear-nexterm` service definition
   big-bear-nexterm:
     # Image to be used for the container
-    image: germannewsmaker/nexterm:1.0.9-OPEN-PREVIEW
+    image: nexterm/aio:1.2.1-BETA
     # Container restart policy
     restart: unless-stopped
+    # Environment variables for the big-bear-nexterm container
+    environment:
+      # REQUIRED: Replace with a strong random key before deploying
+      # Generate with: openssl rand -hex 32
+      - ENCRYPTION_KEY=
     # Volumes to be mounted to the container
     volumes:
       # Mounting the local nexterm_data directory to /app/data inside the container

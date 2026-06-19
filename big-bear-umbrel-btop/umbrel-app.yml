@@ -2,7 +2,7 @@ manifestVersion: 1
 id: big-bear-umbrel-btop
 category: BigBearCasaOS
 name: btop
-version: "0.1.9"
+version: "0.1.10"
 tagline: A monitor of resources
 description: >-
   A monitor of resources. Software made by Aristocratos at https://github.com/aristocratos/btop 
