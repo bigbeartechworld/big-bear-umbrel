@@ -2,14 +2,14 @@ manifestVersion: 1
 id: big-bear-umbrel-nexterm
 category: BigBearCasaOS
 name: Nexterm
-version: "1.0.9-OPEN-PREVIEW"
+version: "1.2.1-BETA"
 tagline: Nexterm
 description: >-
-  The open source server management software for SSH, VNC & RDP. This is in Preview Release. 
+  The open source server management software for SSH, VNC & RDP. This is in BETA. 
 releaseNotes: >-
   This version includes various improvements and bug fixes.
-developer: germannewsmaker
-website: https://hub.docker.com/r/germannewsmaker/nexterm
+developer: gnmyt
+website: https://hub.docker.com/r/nexterm/aio
 dependencies: []
 repo: https://github.com/bigbeartechworld/big-bear-universal-apps
 support: https://github.com/bigbeartechworld/big-bear-universal-apps/issues
