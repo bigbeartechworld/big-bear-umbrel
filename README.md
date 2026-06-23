@@ -46,7 +46,7 @@ If you have a suggestion for an app, please post in the [BigBearCommunity](https
 | [Dashy (Legacy)](https://hub.docker.com/r/lissy93/dashy) | 3.3.1 | Lissy93 | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Dashy v4](https://hub.docker.com/r/lissy93/dashy) | 4.0.8 | Lissy93 | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Davis](https://hub.docker.com/r/tchapi/davis-standalone) | 5.4.1 | tchapi | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
-| [DBGate](https://hub.docker.com/r/dbgate/dbgate) | 7.2.0-alpine | dbgate | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
+| [DBGate](https://hub.docker.com/r/dbgate/dbgate) | 7.2.1-alpine | dbgate | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [DiscoPanel](https://discopanel.app) | v2.0.13 | nickheyer | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [DIUN](https://hub.docker.com/r/crazymax/diun) | 4.33.0 | crazymax | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Docker Cron Restart Notifier](https://hub.docker.com/r/deduard/tools) | restart-notifier-latest | activecs | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
@@ -123,7 +123,7 @@ If you have a suggestion for an app, please post in the [BigBearCommunity](https
 | [Morphos](https://hub.docker.com/r/danvergara/morphos-server) | 0.6.0 | danvergara | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Mumble Server](https://hub.docker.com/r/mumblevoip/mumble-server) | v1.4.230-6 | mumblevoip | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [MySpeed](https://hub.docker.com/r/germannewsmaker/myspeed) | 1.0.9 | gnmyt | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
-| [n8n](https://hub.docker.com/r/n8nio/n8n) | 2.27.2 | n8n | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
+| [n8n](https://hub.docker.com/r/n8nio/n8n) | 2.27.3 | n8n | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Ncdu](https://hub.docker.com/r/bigbeartechworld/big-bear-ncdu) | 0.0.9 | bigbeartechworld | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Neko Firefox](https://hub.docker.com/r/m1k1o/neko) | firefox | m1k1o | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Nextcloud](https://hub.docker.com/r/bigbeartechworld/big-bear-nextcloud-with-smbclient) | 33.0.5 | nextcloud | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
@@ -144,7 +144,7 @@ If you have a suggestion for an app, please post in the [BigBearCommunity](https
 | [Ollama - AMD](https://hub.docker.com/r/ollama/ollama) | 0.30.10-rocm | ollama | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Ollama - CPU](https://hub.docker.com/r/ollama/ollama) | 0.30.10 | ollama | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Ollama - NVIDIA](https://hub.docker.com/r/ollama/ollama) | 0.30.10 | ollama | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
-| [OneDev](https://hub.docker.com/r/1dev/server) | 15.1.7 | theonedev | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
+| [OneDev](https://hub.docker.com/r/1dev/server) | 15.1.8 | theonedev | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [OnlyOffice](https://hub.docker.com/r/onlyoffice/documentserver) | 9.1.0 | onlyoffice | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Open WebUI](https://hub.docker.com/r/open-webui/open-webui) | git-33e54a9 | open-webui | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [OpenClaw](https://github.com/openclaw/openclaw) | 2026.5.3-1 | openclaw | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
@@ -177,7 +177,7 @@ If you have a suggestion for an app, please post in the [BigBearCommunity](https
 | [Pterodactyl Panel](https://hub.docker.com/r/pterodactyl/panel) | v1.12.2 | pterodactyl | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Pterodactyl Wings](https://hub.docker.com/r/pterodactyl/wings) | v1.12.1 | pterodactyl | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [RackPeek](https://timmoth.github.io/RackPeek/) | v1.4.0 | timmoth | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
-| [Rallly](https://hub.docker.com/r/lukevella/rallly) | 4.10.2 | lukevella | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
+| [Rallly](https://hub.docker.com/r/lukevella/rallly) | 4.11.0 | lukevella | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Reactive Resume](https://hub.docker.com/r/amruthpillai/reactive-resume) | v5.1.8 | AmruthPillai | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Readeck](https://hub.docker.com/r/readeck/readeck) | 0.22.3 | readeck | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [RetroArch](https://hub.docker.com/r/inglebard/retroarch-web) | latest | inglebard | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
@@ -194,7 +194,7 @@ If you have a suggestion for an app, please post in the [BigBearCommunity](https
 | [Speedtest Tracker](https://hub.docker.com/r/linuxserver/speedtest-tracker) | 1.14.4 | alexjustesen | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Spoolman](https://github.com/Donkie/Spoolman) | 0.23.1 | Donkie | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Stalwart Mail](https://hub.docker.com/r/stalwartlabs/stalwart) | v0.16.9 | stalwartlabs | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
-| [Stirling-PDF](https://hub.docker.com/r/stirlingtools/stirling-pdf) | 2.12.0 | stirlingtools | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
+| [Stirling-PDF](https://hub.docker.com/r/stirlingtools/stirling-pdf) | 2.13.1 | stirlingtools | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Storyteller](https://storyteller-platform.gitlab.io/storyteller) | web-v2.6.0-experimental.14 | storyteller-platform | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Syncthing](https://hub.docker.com/r/syncthing/syncthing) | 2.1 | syncthing | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Tailscale](https://hub.docker.com/r/tailscale/tailscale) | v1.98.4 | tailscale | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
