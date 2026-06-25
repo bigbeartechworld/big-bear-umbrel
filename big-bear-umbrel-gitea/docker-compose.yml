@@ -5,7 +5,7 @@ services:
       APP_HOST: big-bear-umbrel-gitea_big-bear-gitea_1
       APP_PORT: "3000"
   big-bear-gitea:
-    image: gitea/gitea:1.26.3
+    image: gitea/gitea:1.26.4
     restart: unless-stopped
     volumes:
       - ${APP_DATA_DIR}/data:/data
