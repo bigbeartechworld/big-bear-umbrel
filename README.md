@@ -94,7 +94,7 @@ If you have a suggestion for an app, please post in the [BigBearCommunity](https
 | [Invoice Ninja](https://hub.docker.com/r/invoiceninja/invoiceninja) | 5.13.25 | invoiceninja | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [IT Tools](https://hub.docker.com/r/corentinth/it-tools) | 2023.11.2-7d94e11 | corentinth | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Jellyseerr (Legacy)](https://hub.docker.com/r/fallenbagel/jellyseerr) | 2.7.3 | Fallenbagel | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
-| [Jellystat](https://hub.docker.com/r/cyfershepard/jellystat) | 1.1.10 | cyfershepard | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
+| [Jellystat](https://hub.docker.com/r/cyfershepard/jellystat) | 1.1.11 | cyfershepard | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [jfa-go](https://hub.docker.com/r/hrfee/jfa-go) | latest | hrfee | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Jlesage Firefox](https://hub.docker.com/r/jlesage/firefox) | v26.03.1 | jlesage | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Jlesage Handbrake](https://hub.docker.com/r/jlesage/handbrake) | v26.03.3 | jlesage | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
