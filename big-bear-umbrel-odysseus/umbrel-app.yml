@@ -2,7 +2,7 @@ manifestVersion: 1
 id: big-bear-umbrel-odysseus
 category: BigBearCasaOS
 name: Odysseus
-version: "2026.06.22"
+version: "2026.06.29"
 tagline: Self-hosted AI workspace
 description: >-
   Odysseus is a self-hosted AI workspace. It bundles chat, web search via SearXNG, and a ChromaDB vector store so you can run your own private AI environment with the LLM provider of your choice. 
