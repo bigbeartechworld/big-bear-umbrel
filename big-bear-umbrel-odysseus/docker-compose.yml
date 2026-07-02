@@ -11,7 +11,7 @@ services:
   # The main Odysseus AI workspace service
   big-bear-odysseus:
     # Image to be used for the container
-    image: bigbeartechworld/big-bear-odysseus:2026.06.22
+    image: bigbeartechworld/big-bear-odysseus:2026.06.29
     # Container restart policy
     restart: unless-stopped
     environment:
