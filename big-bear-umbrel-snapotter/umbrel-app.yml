@@ -1,0 +1,26 @@
+manifestVersion: 1
+id: big-bear-umbrel-snapotter
+category: BigBearCasaOS
+name: SnapOtter
+version: "2.0.0"
+tagline: Self-hosted file toolkit for images, video, audio, PDFs, and files.
+description: >-
+  SnapOtter is an open-source, self-hosted file manipulation suite with 200+ tools across images, video, audio, PDFs, and files. It includes batch processing, reusable pipelines, local AI tools, a browser image editor, and a REST API so files stay on your own server. 
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: SnapOtter
+website: https://snapotter.com
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-universal-apps
+support: https://github.com/bigbeartechworld/big-bear-universal-apps/issues
+port: 10193
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+icon: https://cdn.jsdelivr.net/gh/bigbeartechworld/big-bear-universal-apps@main/apps/snapotter/logo.png
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-universal-apps
