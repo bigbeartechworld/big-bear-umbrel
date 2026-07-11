@@ -190,6 +190,7 @@ If you have a suggestion for an app, please post in the [BigBearCommunity](https
 | [Seerr](https://github.com/seerr-team/seerr) | v3.3.0 | Seerr Team | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Send Visee](https://hub.docker.com/r/timvisee/send) | v3.4.27 | timvisee | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [SFTPGO](https://hub.docker.com/r/drakkan/sftpgo) | v2.7 | drakkan | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
+| [SnapOtter](https://snapotter.com) | 2.0.0 | SnapOtter | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Spacedrive](https://hub.docker.com/r/spacedriveapp/spacedrive/server) | 0.4.2 | spacedriveapp | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Speedtest Tracker](https://hub.docker.com/r/linuxserver/speedtest-tracker) | 1.14.5 | alexjustesen | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Spoolman](https://github.com/Donkie/Spoolman) | 0.23.1 | Donkie | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
