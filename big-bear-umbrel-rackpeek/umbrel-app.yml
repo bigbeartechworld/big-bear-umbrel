@@ -2,7 +2,7 @@ manifestVersion: 1
 id: big-bear-umbrel-rackpeek
 category: BigBearCasaOS
 name: RackPeek
-version: "v1.4.0"
+version: "v2.0.0"
 tagline: Document Your Home Lab
 description: >-
   A webui and CLI tool to discover, manage, and document your home lab and small-scale IT infrastructure. Track hardware, services, networks, and their relationships using open, non-proprietary YAML. 
