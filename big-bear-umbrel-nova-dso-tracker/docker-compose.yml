@@ -5,7 +5,7 @@ services:
       APP_HOST: big-bear-umbrel-nova-dso-tracker_nova_1
       APP_PORT: "5001"
   nova:
-    image: mrantonsg/nova-dso-tracker:5.9.0
+    image: mrantonsg/nova-dso-tracker:6.2.0
     volumes:
       - ${APP_DATA_DIR}/instance:/app/instance
     restart: unless-stopped
