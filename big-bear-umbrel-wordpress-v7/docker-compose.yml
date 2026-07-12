@@ -1,0 +1,61 @@
+# Configuration for big-bear-wordpress-v7 setup
+# WORDPRESS V7.0.1 - NEW DEPLOYMENT
+# ================================
+# This is a SEPARATE app from 'wordpress' (v6.9.4). They can coexist.
+#
+# WHY A NEW APP:
+# - WordPress 7.0 raises the minimum database to MySQL 8.0 (up from 5.5.5)
+# - The legacy 'wordpress' app bundles mysql:5.7, which WordPress 7 rejects
+# - A MySQL 5.7 data directory does NOT upgrade in-place to 8.0 cleanly
+#
+# FOR NEW INSTALLATIONS:
+# - Deploy this app for new WordPress instances
+# - Pairs WordPress 7.0.1 with MySQL 8.0
+#
+# FOR MIGRATION FROM THE LEGACY APP:
+# - Do NOT uninstall your existing 'wordpress' (v6) app
+# - Deploy this as a NEW app alongside it
+# - Migration is manual (MySQL 5.7 -> 8.0 requires a dump/reload)
+#
+# Migration steps (after deploying this app):
+# 1. Dump legacy DB: docker compose -f apps/wordpress/docker-compose.yml exec db mysqldump -u root -pcasaos wordpress > wordpress.sql
+# 2. Copy legacy html volume contents into wordpress-v7_html
+# 3. Import into v7 DB: docker compose -f apps/wordpress-v7/docker-compose.yml exec -T db mysql -u root -pcasaos wordpress < wordpress.sql
+# 4. Verify the v7 site before removing the legacy app
+# Name of the big-bear-wordpress-v7 application
+version: "3.7"
+# Service definitions for the wordpress-v7 application
+services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-wordpress-v7_app_1
+      APP_PORT: "80"
+  # Service definition for the main application
+  app:
+    # Docker image to use for the application
+    image: wordpress:7.0.1
+    # Environment variables for the application
+    environment:
+      WORDPRESS_DB_HOST: db
+      WORDPRESS_DB_USER: casaos
+      WORDPRESS_DB_PASSWORD: casaos
+      WORDPRESS_DB_NAME: wordpress
+    # Volume mapping for the application
+    volumes:
+      - ${APP_DATA_DIR}/html:/var/www/html
+    # Service dependencies for the application
+    depends_on:
+      - db
+  # Service definition for the database
+  db:
+    # Docker image to use for the database
+    image: mysql:8.0
+    # Environment variables for the database
+    environment:
+      MYSQL_DATABASE: wordpress
+      MYSQL_USER: casaos
+      MYSQL_PASSWORD: casaos
+      MYSQL_ROOT_PASSWORD: casaos
+    # Volume mapping for the database
+    volumes:
+      - ${APP_DATA_DIR}/mysql:/var/lib/mysql
