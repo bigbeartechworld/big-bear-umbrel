@@ -11,7 +11,7 @@ services:
   # The `big-bear-komga` service definition
   big-bear-komga:
     # Image to be used for the container
-    image: ghcr.io/gotson/komga:1.24.4
+    image: ghcr.io/gotson/komga:1.24.4@sha256:dae630271561b642d47c9723803ec77900d1f0a803fbe6a42da69db5b21ebaeb
     # Container restart policy
     restart: unless-stopped
     # Environment variables for the container

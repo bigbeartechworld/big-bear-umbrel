@@ -7,7 +7,7 @@ services:
       APP_HOST: big-bear-umbrel-onlyoffice_app_1
       APP_PORT: "80"
   app:
-    image: onlyoffice/documentserver:9.1.0
+    image: onlyoffice/documentserver:9.1.0@sha256:34b92f4a67bfd939bd6b75893e8217556e3b977f81e49472f7e28737b741ba1d
     volumes:
       - ${APP_DATA_DIR}/onlyoffice/logs:/var/log/onlyoffice
       - ${APP_DATA_DIR}/onlyoffice/data:/var/www/onlyoffice/Data

@@ -26,7 +26,7 @@ services:
       APP_HOST: big-bear-umbrel-vikunja-v2_vikunja-v2_1
       APP_PORT: "3456"
   vikunja-v2:
-    image: vikunja/vikunja:2.3.0
+    image: vikunja/vikunja:2.3.0@sha256:f6b80393c1998cd5cd0dc38d24762c59ab4c10000a6f1032ef5b554e262cab93
     volumes:
       # Map container path to host path for files
       - ${APP_DATA_DIR}/files:/app/vikunja/files
@@ -45,7 +45,7 @@ services:
     networks:
       - vikunja-v2-network
   vikunja-v2-db:
-    image: mariadb:11
+    image: mariadb:11@sha256:efb4959ef2c835cd735dbc388eb9ad6aab0c78dd64febcd51bc17481111890c4
     command:
       - --character-set-server=utf8mb4
       - --collation-server=utf8mb4_unicode_ci

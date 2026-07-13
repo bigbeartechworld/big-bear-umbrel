@@ -12,7 +12,7 @@ services:
   # The `big-bear-send-visee` service definition
   big-bear-send-visee:
     # Image to be used for the container
-    image: registry.gitlab.com/timvisee/send:v3.4.27
+    image: registry.gitlab.com/timvisee/send:v3.4.27@sha256:b950a557f0f4eb7d2114a9126aea5df984ffe868385a3fb6b327d9f770bec0ae
     # Container restart policy
     restart: unless-stopped
     # Environment variables for the container

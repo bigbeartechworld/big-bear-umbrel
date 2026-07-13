@@ -11,7 +11,7 @@ services:
   # The `zipline` service definition
   zipline:
     # Image to be used for the container
-    image: ghcr.io/diced/zipline:3.7.13
+    image: ghcr.io/diced/zipline:3.7.13@sha256:f0209223b159be9460bf1454b1908417877fef6a1f3a31d5e682885fb9431f30
     # Container restart policy
     restart: unless-stopped
     # Volumes to be mounted to the container
@@ -32,7 +32,7 @@ services:
   # Postgres database
   zipline-db:
     # Image to be used
-    image: postgres:15
+    image: postgres:15@sha256:bcab099bfaab33333a73a2ebe8c1d615c9f4c2402dd43452f989a36c6da9a5ba
     # Container restart policy
     restart: unless-stopped
     # Environment variables

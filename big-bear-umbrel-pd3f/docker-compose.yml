@@ -11,7 +11,7 @@ services:
   # The `web` service definition
   web:
     # Image to be used for the container
-    image: pd3f/pd3f:latest
+    image: pd3f/pd3f:latest@sha256:30a5c6c4c108c05799718d296630fb2d52d7053b2fba75cb0d89ff43b0eaa823
     # Container restart policy
     restart: unless-stopped
     # Volumes to be mounted to the container
@@ -29,7 +29,7 @@ services:
       - big-bear-pd3f-network
   # Service name: parsr
   parsr:
-    image: axarev/parsr:v1.2.2
+    image: axarev/parsr:v1.2.2@sha256:9b2b844474cd750aa026cc4bcbba55fb807f93cead9f0bec47f8ac1dc9e33280
     networks:
       - big-bear-pd3f-network
     expose:
@@ -43,7 +43,7 @@ services:
       - 6379
   # Service name: worker
   worker:
-    image: pd3f/pd3f:latest
+    image: pd3f/pd3f:latest@sha256:30a5c6c4c108c05799718d296630fb2d52d7053b2fba75cb0d89ff43b0eaa823
     depends_on:
       - parsr
       - redis
@@ -59,7 +59,7 @@ services:
     command: ["rq", "worker", "-u", "redis://redis:6379", "--results-ttl", "86400"]
   # Service name: ocr_worker
   ocr_worker:
-    image: pd3f/pd3f-ocr:latest
+    image: pd3f/pd3f-ocr:latest@sha256:7bd3d4c8ba1816932e1f631d207056eb1f421f53f205b305372af8340db16a1b
     networks:
       - big-bear-pd3f-network
     volumes:

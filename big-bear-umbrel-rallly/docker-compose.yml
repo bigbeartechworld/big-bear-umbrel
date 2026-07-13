@@ -9,7 +9,7 @@ services:
       APP_PORT: "3000"
   # Main application service definition
   big-bear-rallly:
-    image: lukevella/rallly:4.11.1 # Docker image to be used for creating the container
+    image: lukevella/rallly:4.11.1@sha256:b2acb78afb1e2e88445e78cec4393cd8b8cc63f9268cf1defe19f96d0db945b0 # Docker image to be used for creating the container
     restart: unless-stopped # Policy to restart the container unless manually stopped
     environment: # Environment variables passed to the container for configuration
       # Database connection URL (DATABASE_URL=postgres://username:password@host/database)
@@ -34,7 +34,7 @@ services:
         condition: service_healthy # Ensures the DB service is healthy before starting
   # Database service for the application
   big-bear-rallly-db:
-    image: postgres:14 # PostgreSQL version 14 as the database
+    image: postgres:14@sha256:9e279cc7fc6e908da071befe389c576bd6752dbd295a9c078f96a75bab03e54c # PostgreSQL version 14 as the database
     restart: unless-stopped # Restart policy similar to the application service
     volumes:
       - ${APP_DATA_DIR}/postgresql:/var/lib/postgresql/data # Persistent data storage

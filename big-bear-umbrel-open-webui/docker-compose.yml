@@ -11,7 +11,7 @@ services:
   # The `big-bear-open-webui` service definition
   big-bear-open-webui:
     # Image to be used for the container
-    image: ghcr.io/open-webui/open-webui:git-33e54a9
+    image: ghcr.io/open-webui/open-webui:git-33e54a9@sha256:b1f3fdcbe97af8b282cecbc550339e55e032d37f6c5aeb1635457a209ec5d42f
     # Container restart policy
     restart: unless-stopped
     # Volumes to be mounted to the container

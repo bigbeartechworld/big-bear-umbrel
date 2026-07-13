@@ -10,7 +10,7 @@ services:
   # Service name: phpmyadmin
   phpmyadmin:
     # Docker image to be used for this service
-    image: phpmyadmin/phpmyadmin:5.2.3
+    image: phpmyadmin/phpmyadmin:5.2.3@sha256:42a200db07b4e70fbf32c594ad4521cf16399b8e54bbb5adceae98e7566dfbeb
     # Environment variables passed to the service
     environment:
       # Host of the database server

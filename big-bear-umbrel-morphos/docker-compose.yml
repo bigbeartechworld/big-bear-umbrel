@@ -10,7 +10,7 @@ services:
   # This service provides a web interface running on port 8080 for file conversion
   big-bear-morphos:
     # Image to be used for the container specifies the btop version and source
-    image: ghcr.io/danvergara/morphos-server:0.6.0
+    image: ghcr.io/danvergara/morphos-server:0.6.0@sha256:3d6f64ef386cbb6a7c5d55526e1a69da2d3661a1996d757897e92bf4369088f5
     # Container restart policy - restarts the container unless manually stopped
     restart: unless-stopped
     # Volume mappings required for system integration

@@ -7,7 +7,7 @@ services:
       APP_HOST: big-bear-umbrel-mind_app_1
       APP_PORT: "8080"
   app:
-    image: "mrcas/mind:v1.4.1"
+    image: "mrcas/mind:v1.4.1@sha256:152f824d093f2e8772af0d209afc710b9e79edf3e6286d7c3eccb0509dafffd4"
     environment:
       - TZ=UTC
     volumes:

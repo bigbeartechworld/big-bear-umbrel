@@ -8,7 +8,7 @@ services:
       APP_HOST: big-bear-umbrel-invoice-ninja_big-bear-invoice-ninja-web_1
       APP_PORT: "8080"
   big-bear-invoice-ninja:
-    image: invoiceninja/invoiceninja:5.13.26
+    image: invoiceninja/invoiceninja:5.13.26@sha256:d1eec88a8134481b19a0d78107abc6a72bf29987e310cc82f3b81dfcb02decf1
     restart: unless-stopped
     user: 1500:1500
     environment:
@@ -36,7 +36,7 @@ services:
       - big-bear-invoice-ninja-network
   big-bear-invoice-ninja-web:
     # Image to be used for the container
-    image: nginx:1.29
+    image: nginx:1.29@sha256:1881968aff6f7cdcc4b888c00a11f4ce241ad7ec957e0cb4a9e19e93a3ff87ea
     # Container restart policy
     restart: unless-stopped
     # Volumes to be mounted to the container
@@ -46,7 +46,7 @@ services:
     networks:
       - big-bear-invoice-ninja-network
   big-bear-invoice-ninja-db:
-    image: mariadb:10.4
+    image: mariadb:10.4@sha256:22edfe1c78349f8cae88bbb5c2873b7e6c515be767c91c691308ce57445806f3
     restart: unless-stopped
     environment:
       - MARIADB_ROOT_PASSWORD=ad178c4b-302f-44e6-937f-8c7808f23795
@@ -62,7 +62,7 @@ services:
     # This command is required to set important mariadb defaults
     command: [mysqld, --character-set-server=utf8mb4, --collation-server=utf8mb4_unicode_ci, --wait_timeout=28800, --log-warnings=0]
   big-bear-invoice-ninja-init:
-    image: bash:5.3.15
+    image: bash:5.3.15@sha256:a19c811ee9e97fa8a080001d82b8e0ded303f0795cffdb1cbd162731bc8ce208
     volumes:
       - ${APP_DATA_DIR}/data:/tmp/data
     command: ["/bin/sh", "-c", "if [ ! -f /tmp/data/.init_complete ]; then echo 'Starting initialization process...' && if [ -f /tmp/data/init/init.sh ]; then echo 'Found init.sh, making it executable...' && chmod +x /tmp/data/init/init.sh && echo 'Executing init.sh...' && /tmp/data/init/init.sh && echo 'init.sh execution completed.' && touch /tmp/data/.init_complete && echo 'Initialization process finished.'; else echo 'Error: /tmp/data/init/init.sh not found!' && exit 1; fi; else echo 'Initialization already completed. Exiting.'; fi && exit 0"]

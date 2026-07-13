@@ -11,7 +11,7 @@ services:
   # The `app` service definition
   app:
     # Image to be used for the container
-    image: louislam/dockge:1.5.0
+    image: louislam/dockge:1.5.0@sha256:335c6368b880ecc203236ed89e6e5232e0d6578e8ef5920e4a502390451502bf
     # Environment variables
     environment:
       # Tell Dockge where is your stacks directory
