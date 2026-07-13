@@ -9,7 +9,7 @@ services:
       APP_PORT: "8443"
   # Main application service
   app: # Name of the service
-    image: linuxserver/unifi-network-application:10.4.57 # Docker image to use
+    image: linuxserver/unifi-network-application:10.4.57@sha256:7d25457f8d0600388f663cd2316d7f86c8104de8e6fa9b6e2e44c7f6526476d6 # Docker image to use
     environment: # Environmental variables for the container
       - PUID=1000 # User ID
       - PGID=1000 # Group ID
@@ -32,7 +32,7 @@ services:
       - unifi-db
   # MongoDB database for the application
   unifi-db:
-    image: mongo:6.0.11
+    image: mongo:6.0.11@sha256:52a007213974cab7753e9cd3fbd5750cc9a9f996f85ccdae73b164239b8f6951
     volumes:
       - ${APP_DATA_DIR}/db/data:/data/db # MongoDB data persistence
       - ${APP_DATA_DIR}/db/init-mongo.js:/docker-entrypoint-initdb.d/init-mongo.js:ro

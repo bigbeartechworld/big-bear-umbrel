@@ -11,7 +11,7 @@ services:
   # The `big-bear-otel-lgtm` service definition
   big-bear-otel-lgtm:
     # Image to be used for the container
-    image: grafana/otel-lgtm:0.28.0
+    image: grafana/otel-lgtm:0.28.0@sha256:10f48eb2f8670134df542177bb19536c55421b089e43f9dfc2a27d4c078204d8
     # Container restart policy
     restart: unless-stopped
     # Volumes to be mounted to the container

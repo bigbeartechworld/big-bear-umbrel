@@ -11,7 +11,7 @@ services:
   # The `big-bear-gem-digest-bot` service definition
   big-bear-gem-digest-bot:
     # Docker image to use
-    image: piero24/gemdigest:1.0
+    image: piero24/gemdigest:1.0@sha256:6f49c511af7f2f7a1b9e652e517e6a222760632e7b69801a4997787e40065cc6
     # Mount local directory to the container's /home/dev directory
     volumes:
       - ${APP_DATA_DIR}//extra/configs:/gem_digest_bot/extra_configs

@@ -11,7 +11,7 @@ services:
   # The `app` service definition
   nextcloud:
     # Use the nextcloud image from the official Docker Hub
-    image: bigbeartechworld/big-bear-nextcloud-with-smbclient:33.0.5
+    image: bigbeartechworld/big-bear-nextcloud-with-smbclient:33.0.5@sha256:c74370fa69284a8f2243cc3ee07d429ef81d089c746f71771d2b9ade4b5625b2
     # Restart the container unless stopped
     restart: unless-stopped
     # Mount the nextcloud_html directory on the host to /var/www/html in the container
@@ -41,7 +41,7 @@ services:
       - nextcloud_network
   # Define the database container for Nextcloud
   db-nextcloud:
-    image: postgres:14.2
+    image: postgres:14.2@sha256:2c954f8c5d03da58f8b82645b783b56c1135df17e650b186b296fa1bb71f9cfd
     restart: unless-stopped
     volumes:
       - ${APP_DATA_DIR}/pgdata:/var/lib/postgresql/data # Mount the PostgreSQL data directory
@@ -73,7 +73,7 @@ services:
       timeout: 5s
       retries: 5
   cron:
-    image: bigbeartechworld/big-bear-nextcloud-with-smbclient:33.0.5
+    image: bigbeartechworld/big-bear-nextcloud-with-smbclient:33.0.5@sha256:c74370fa69284a8f2243cc3ee07d429ef81d089c746f71771d2b9ade4b5625b2
     restart: unless-stopped
     volumes:
       - ${APP_DATA_DIR}/html:/var/www/html

@@ -11,7 +11,7 @@ services:
   # The `big-bear-coolify` service definition
   big-bear-coolify:
     # Image to be used for the container specifies the fastfetch version and source
-    image: ghcr.io/coollabsio/coolify:4.0.0-beta.434
+    image: ghcr.io/coollabsio/coolify:4.0.0-beta.434@sha256:39db8373628c340747cf6199f5873322d5d0a9b6617bad0ce5cf6895369a3a83
     # Container restart policy - restarts the container unless manually stopped
     restart: unless-stopped
     # Environment variables for the container
@@ -95,7 +95,7 @@ services:
     networks:
       - big_bear_coolify_network
   big-bear-coolify-postgres:
-    image: postgres:15-alpine
+    image: postgres:15-alpine@sha256:3d0f7584ed7d04e27fa050d6683a74746608faf21f202be78460d679cc56461f
     volumes:
       - ${APP_DATA_DIR}/pgdata:/var/lib/postgresql/data
     environment:
@@ -124,7 +124,7 @@ services:
     networks:
       - big_bear_coolify_network
   big-bear-coolify-soketi:
-    image: quay.io/soketi/soketi:1.6-16-alpine
+    image: quay.io/soketi/soketi:1.6-16-alpine@sha256:5e45fe1adbf2d4ef8022d0126a3c7e4371b7b08f35784b76a2dc353954ee885c
     environment:
       SOKETI_DEBUG: "false"
       SOKETI_DEFAULT_APP_ID: ""

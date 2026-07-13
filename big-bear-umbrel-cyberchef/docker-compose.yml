@@ -11,6 +11,6 @@ services:
   # The `big-bear-cyberchef` service definition
   big-bear-cyberchef:
     # Image to be used for the container
-    image: ghcr.io/gchq/cyberchef:11.0.0
+    image: ghcr.io/gchq/cyberchef:11.0.0@sha256:45082a0ac41d6beeea2daeb192d8b20c66520362854542f4fe340aab37635f66
     # Container restart policy
     restart: unless-stopped

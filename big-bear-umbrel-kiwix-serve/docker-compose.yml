@@ -11,7 +11,7 @@ services:
   # The `big-bear-kiwix-serve` service definition
   big-bear-kiwix-serve:
     # Image to be used for the container
-    image: ghcr.io/kiwix/kiwix-serve:3.7.0-2
+    image: ghcr.io/kiwix/kiwix-serve:3.7.0-2@sha256:9a19c082d0cf4a2bebc190e62d9f76980f18ea35ca3c9347197c5ed0ebaa08ce
     # Command to run inside the container
     command: "*.zim"
     # Container restart policy

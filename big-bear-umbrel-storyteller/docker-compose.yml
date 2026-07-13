@@ -5,7 +5,7 @@ services:
       APP_HOST: big-bear-umbrel-storyteller_app_1
       APP_PORT: "8001"
   app:
-    image: registry.gitlab.com/storyteller-platform/storyteller:web-v2.6.0-experimental.14
+    image: registry.gitlab.com/storyteller-platform/storyteller:web-v2.6.0-experimental.14@sha256:876ca77416c1e262faf871ad9f4558339fc3d8858a3fac49610ec5cb69b14957
     volumes:
       - ${APP_DATA_DIR}/data:/data
     environment:

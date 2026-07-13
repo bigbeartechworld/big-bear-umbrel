@@ -11,7 +11,7 @@ services:
   # The `big-bear-pwpush` service definition
   big-bear-pwpush:
     # Image to be used for the container
-    image: pglombardo/pwpush:1.69.3
+    image: pglombardo/pwpush:1.69.3@sha256:7bf7f919b87d818a9cafa2a5c53e2565a577a7b90983b3cd55de90d6de71cf07
     # Container restart policy
     restart: unless-stopped
     # Environment variables for the container
@@ -29,7 +29,7 @@ services:
     networks:
       - big_bear_pwpush_network
   big-bear-pwpush-db:
-    image: mariadb:10.6.5
+    image: mariadb:10.6.5@sha256:ca31f38b6e325ece985d857db7eba1fe59928b4fd83ff8a55cb912c9684b9e43
     environment:
       MARIADB_USER: "pwpusher"
       MARIADB_PASSWORD: "6280144a-56af-486f-9088-ac7301399328"

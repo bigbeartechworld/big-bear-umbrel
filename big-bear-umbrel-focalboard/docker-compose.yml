@@ -10,7 +10,7 @@ services:
   # The `app` service for the Focalboard application
   app:
     # Docker image to be used
-    image: mattermost/focalboard:7.11.4
+    image: mattermost/focalboard:7.11.4@sha256:c935a2879dc7bcb8243a562afea21a30edbb6dbe029b53a9c0ae7ab4b3255c54
     # Restart policy for the service
     restart: unless-stopped
     # Volumes for the service HOST -> CONTAINER

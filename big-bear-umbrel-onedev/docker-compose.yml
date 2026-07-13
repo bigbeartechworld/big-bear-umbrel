@@ -11,7 +11,7 @@ services:
   # The `big-bear-onedev` service definition
   big-bear-onedev:
     # Image to be used for the container
-    image: 1dev/server:16.0.5
+    image: 1dev/server:16.0.5@sha256:327030763933d36d0aa39a94b76128fb95d6dd1ca5c7595d57d9ba2ae0963169
     # Container restart policy
     restart: unless-stopped
     # Volumes to be mounted to the container
@@ -36,7 +36,7 @@ services:
       - big_bear_ondedev_network
   # Define the service for the PostgreSQL database
   big-bear-onedev-db:
-    image: postgres:14 # Use the specified PostgreSQL image
+    image: postgres:14@sha256:9e279cc7fc6e908da071befe389c576bd6752dbd295a9c078f96a75bab03e54c # Use the specified PostgreSQL image
     restart: unless-stopped # Policy to restart the container unless stopped manually
     environment: # Environment variables for PostgreSQL configuration
       - POSTGRES_USER=bigbear # Default username for PostgreSQL
