@@ -8,7 +8,7 @@ services:
       APP_PORT: "8443"
   # Service name: app
   app:
-    image: linuxserver/code-server:4.126.0@sha256:26dfecc1cd4c0e4c47dceb913b4eb8afd97af9f2311eb449d04b59126e6e5483 # The Docker image to be used for the service
+    image: linuxserver/code-server:4.128.0@sha256:dfc5e74083f43f3cb217fedfead149f32b319ee663744351c001bdc5e4245441 # The Docker image to be used for the service
     environment:
       - PUID=1000 # User ID under which code-server will run
       - PGID=1000 # Group ID under which code-server will run

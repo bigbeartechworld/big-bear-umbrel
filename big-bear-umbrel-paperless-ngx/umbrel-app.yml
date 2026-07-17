@@ -2,7 +2,7 @@ manifestVersion: 1
 id: big-bear-umbrel-paperless-ngx
 category: BigBearCasaOS
 name: Paperless-ngx
-version: "6c86cad803970ea782683a8e80e7403444c5bf3cf70de63b4d3c8e87500db92f"
+version: "2.20.15"
 tagline: Paperless-ngx
 description: >-
   Paperless-ngx is a community-supported open-source document management system that transforms your physical documents into a searchable online archive so you can keep, well, less paper. 
