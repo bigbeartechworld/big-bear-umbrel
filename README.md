@@ -16,7 +16,7 @@ If you have a suggestion for an app, please post in the [BigBearCommunity](https
 | --- | --- | --- | --- |
 | [2FAuth](https://hub.docker.com/r/2fauth/2fauth) | 8.0.1 | bubka | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Actual Budget](https://hub.docker.com/r/actualbudget/actual-server) | 26.7.0 | actualbudget | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
-| [AdGuard Home](https://hub.docker.com/r/adguard/adguardhome) | v0.107.77 | AdGuardTeam | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
+| [AdGuard Home](https://hub.docker.com/r/adguard/adguardhome) | v0.107.78 | AdGuardTeam | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Anse](https://hub.docker.com/r/ddiu8081/anse) | v1.1.11 | ddiu8081 | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Ansible Semaphore](https://hub.docker.com/r/semaphoreui/semaphore) | v2.18.26 | semaphore | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Appsmith](https://hub.docker.com/r/appsmith/appsmith-ce) | v1.98.1 | appsmithorg | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
@@ -35,7 +35,7 @@ If you have a suggestion for an app, please post in the [BigBearCommunity](https
 | [Change Detection](https://hub.docker.com/r/dgtlmoon/changedetection.io) | 0.55.3 | dgtlmoon | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Chatpad](https://hub.docker.com/r/deiucanta/chatpad) | f45cd53bc410412610c1ba1cbd84cd137d8e167d | deiucanta | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [chromium](https://hub.docker.com/r/linuxserver/chromium) | version-6ae43f81 | linuxserver | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
-| [Code Server](https://hub.docker.com/r/linuxserver/code-server) | 4.126.0 | linuxserver | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
+| [Code Server](https://hub.docker.com/r/linuxserver/code-server) | 4.128.0 | linuxserver | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [CodeX Docs](https://hub.docker.com/r/codex-team/codex.docs) | v2.2 | codex-team | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Compose Toolbox](https://hub.docker.com/r/bluegoosemedia/composetoolbox) | latest | bluegoosemedia | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [ConvertX](https://hub.docker.com/r/c4illin/convertx) | v0.17.0 | C4illin | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
@@ -96,8 +96,8 @@ If you have a suggestion for an app, please post in the [BigBearCommunity](https
 | [Jellyseerr (Legacy)](https://hub.docker.com/r/fallenbagel/jellyseerr) | 2.7.3 | Fallenbagel | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Jellystat](https://hub.docker.com/r/cyfershepard/jellystat) | 1.1.11 | cyfershepard | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [jfa-go](https://hub.docker.com/r/hrfee/jfa-go) | latest | hrfee | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
-| [Jlesage Firefox](https://hub.docker.com/r/jlesage/firefox) | v26.07.1 | jlesage | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
-| [Jlesage Handbrake](https://hub.docker.com/r/jlesage/handbrake) | v26.03.3 | jlesage | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
+| [Jlesage Firefox](https://hub.docker.com/r/jlesage/firefox) | v26.07.2 | jlesage | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
+| [Jlesage Handbrake](https://hub.docker.com/r/jlesage/handbrake) | v26.07.1 | jlesage | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [joplin](https://hub.docker.com/r/joplin/server) | 3.7.1 | joplin | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Kasm](https://hub.docker.com/r/linuxserver/kasm) | 1.120.20221218 | Kasm | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Kavita](https://hub.docker.com/r/jvmilazz0/kavita) | 0.9.0 | jvmilazz0 | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
@@ -140,7 +140,7 @@ If you have a suggestion for an app, please post in the [BigBearCommunity](https
 | [Obsidian Livesync](https://hub.docker.com/r/couchdb) | 3.5.0 | couchdb | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [OctoPrint](https://hub.docker.com/r/octoprint/octoprint) | 1.11.8 | octoprint | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Odoo](https://hub.docker.com/r/odoo) | 19 | odoo | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
-| [Odysseus](https://github.com/pewdiepie-archdaemon/odysseus) | 2026.07.06 | pewdiepie-archdaemon | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
+| [Odysseus](https://github.com/pewdiepie-archdaemon/odysseus) | 2026.07.13 | pewdiepie-archdaemon | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Ollama - AMD](https://hub.docker.com/r/ollama/ollama) | 0.31.2-rocm | ollama | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Ollama - CPU](https://hub.docker.com/r/ollama/ollama) | 0.31.2 | ollama | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Ollama - NVIDIA](https://hub.docker.com/r/ollama/ollama) | 0.31.2 | ollama | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
@@ -151,7 +151,7 @@ If you have a suggestion for an app, please post in the [BigBearCommunity](https
 | [OpenVPN](https://hub.docker.com/r/openvpn/openvpn-as) | 2.13.1-d8cdeb9c-Ubuntu22 | openvpn | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [OTEL LGTM](https://hub.docker.com/r/grafana/otel-lgtm) | 0.28.0 | Grafana Labs | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [ownCloud](https://hub.docker.com/r/owncloud/server) | 10.16.3 | owncloud | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
-| [Paperless-ngx](https://hub.docker.com/r/paperless-ngx/paperless-ngx) | 6c86cad803970ea782683a8e80e7403444c5bf3cf70de63b4d3c8e87500db92f | paperless-ngx | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
+| [Paperless-ngx](https://hub.docker.com/r/paperless-ngx/paperless-ngx) | 2.20.15 | paperless-ngx | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Password Pusher (Legacy)](https://hub.docker.com/r/pglombardo/pwpush) | 1.69.3 | pglombardo | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Password Pusher v2](https://hub.docker.com/r/pglombardo/pwpush) | 2.8.1 | pglombardo | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [PD3F](https://hub.docker.com/r/pd3f/pd3f) | latest | pd3f | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
@@ -208,7 +208,7 @@ If you have a suggestion for an app, please post in the [BigBearCommunity](https
 | [Tugtainer](https://hub.docker.com/r/quenary/tugtainer) | v1.30.8 | Quenary | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [UISP](https://hub.docker.com/r/nico640/docker-unms) | 2.4.155.1 | nico640 | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Umami](https://hub.docker.com/r/umami-software/umami) | postgresql-latest | umami-software | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
-| [Umbrel OS](https://hub.docker.com/r/dockurr/umbrel) | 1.7.3 | dockurr | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
+| [Umbrel OS](https://hub.docker.com/r/dockurr/umbrel) | 1.7.4 | dockurr | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Unifi Network Application](https://hub.docker.com/r/linuxserver/unifi-network-application) | 10.4.57 | Ubiquiti | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Unifi Network Application](https://hub.docker.com/r/linuxserver/unifi-network-application) | 10.4.57 | Ubiquiti | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Uptime Kuma](https://hub.docker.com/r/louislam/uptime-kuma) | 2 | louislam | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
