@@ -5,7 +5,7 @@ services:
       APP_HOST: big-bear-umbrel-jlesage-firefox_big-bear-jlesage-firefox_1
       APP_PORT: "5800"
   big-bear-jlesage-firefox:
-    image: jlesage/firefox:v26.07.1@sha256:cac65caf8f32bcf629c1ccfd54a71053ffcff1c718f64346dadc038bffbb7f72 # Docker image for the Firefox browser
+    image: jlesage/firefox:v26.07.2@sha256:2bdbe30e355028eabb8a3a6f50a35a5d729e1de2376bc9c3c27c55fd2a7443d9 # Docker image for the Firefox browser
     environment:
       - VNC_PASSWORD=casaos # Set the VNC password to 'casaos'
       - FF_OPEN_URL=https://community.bigbeartechworld.com/ # Set the default URL to Big Bear Tech World
