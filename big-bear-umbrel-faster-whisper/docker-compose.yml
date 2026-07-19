@@ -11,7 +11,7 @@ services:
   # The `big-bear-faster-whisper` service definition
   big-bear-faster-whisper:
     # Image to be used for the container
-    image: linuxserver/faster-whisper:3.3.1@sha256:69462a9da4ed3da7fb5e19264b290d9420943d9264ca5fc81b52a51b0dc71fd5
+    image: linuxserver/faster-whisper:3.5.0@sha256:00ed4893bfd991b579f926c9b4b0bd2e8e7356a1872c02e928894068a80f45b9
     # Container restart policy
     restart: unless-stopped
     # Environment variables
