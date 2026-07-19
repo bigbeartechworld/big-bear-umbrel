@@ -2,7 +2,7 @@ manifestVersion: 1
 id: big-bear-umbrel-gitea
 category: BigBearCasaOS
 name: Gitea
-version: "1.26.4"
+version: "1.27.0"
 tagline: Self-hosted Git service
 description: >-
   Gitea is a painless self-hosted all-in-one software development service. It includes Git hosting, code review, team collaboration, package registry, and CI/CD. It is similar to GitHub, Bitbucket and GitLab. 
