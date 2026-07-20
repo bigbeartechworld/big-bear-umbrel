@@ -40,8 +40,15 @@ const getUmbrelAppConfigs = (): UmbrelAppConfig[] => {
           const configFile = fs.readFileSync(configPath, "utf8");
           const config = jsyaml.load(configFile) as UmbrelAppConfig;
 
-          if (config && config.version) {
+          if (config && config.version && config.id) {
             apps.push(config);
+          } else if (config && !config.id) {
+            console.error(`App in ${entry.name} is missing an id field or has null ID`);
+            console.error(`Config file path: ${configPath}`);
+          } else if (config && !config.version) {
+            console.error(`App in ${entry.name} is missing a version field`);
+          } else if (!config) {
+            console.error(`Failed to parse config for ${entry.name}`);
           }
         } catch (e) {
           console.error(`Error parsing config file for ${entry.name}:`, e);
@@ -244,7 +251,13 @@ describe("Umbrel App configs", () => {
     const apps = getUmbrelAppConfigs();
 
     apps.forEach((app) => {
-      test(`${app.id} directory structure`, () => {
+      test(`${app.id || 'INVALID-APP'} directory structure`, () => {
+        // Ensure app has a valid ID
+        expect(app.id).toBeDefined();
+        expect(app.id).not.toBeNull();
+        expect(typeof app.id).toBe("string");
+        expect(app.id.length).toBeGreaterThan(0);
+        
         const dataPath = `./${app.id}/data`;
         const hasDataDir = fs.existsSync(dataPath);
 
