@@ -2,7 +2,7 @@ manifestVersion: 1
 id: big-bear-umbrel-snapotter
 category: BigBearCasaOS
 name: SnapOtter
-version: "2.0.0"
+version: "2.1.0"
 tagline: Self-hosted file toolkit for images, video, audio, PDFs, and files.
 description: >-
   SnapOtter is an open-source, self-hosted file manipulation suite with 200+ tools across images, video, audio, PDFs, and files. It includes batch processing, reusable pipelines, local AI tools, a browser image editor, and a REST API so files stay on your own server. 
