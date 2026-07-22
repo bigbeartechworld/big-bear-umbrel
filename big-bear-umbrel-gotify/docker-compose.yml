@@ -8,7 +8,7 @@ services:
       APP_PORT: "80"
   # Service name: app
   app:
-    image: gotify/server:2.9.1@sha256:a3af47067ce6aad76aadf5ba32d6ddfecd1ae576a961359f039fd1831e8b7652 # Docker image for the service
+    image: gotify/server:3.0.0@sha256:d75e89e0e28389c00c2556afe01282a37ee9756b0285799aa25214243aebd5e5 # Docker image for the service
     environment: # Environment variables for the service
       - GOTIFY_DEFAULTUSER_NAME=admin
       - GOTIFY_DEFAULTUSER_PASS=custom
