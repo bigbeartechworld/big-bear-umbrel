@@ -2,7 +2,7 @@ manifestVersion: 1
 id: big-bear-umbrel-dozzle
 category: BigBearCasaOS
 name: Dozzle
-version: "v10.6.10"
+version: "v10.6.11"
 tagline: Dozzle is a real-time log viewer for docker containers.
 description: >-
   Dozzle is a real-time log viewer for docker containers. 
