@@ -2,7 +2,7 @@ manifestVersion: 1
 id: big-bear-umbrel-nova-dso-tracker
 category: Photography
 name: Nova DSO Tracker
-version: "6.2.0"
+version: "6.2.1"
 tagline: Real-time tracking and planning for Deep Space Objects.
 description: >-
   Nova DSO Tracker is a tool for astrophotographers to track Deep Space Objects, check observability, and manage imaging sessions. 
