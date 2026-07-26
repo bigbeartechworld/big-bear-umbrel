@@ -2,7 +2,7 @@ manifestVersion: 1
 id: big-bear-umbrel-wordpress-v7
 category: BigBearCasaOS
 name: WordPress v7
-version: "7.0.1"
+version: "7.0.2"
 tagline: WordPress
 description: >-
   Initially started as a blogging tool in 2003, it has evolved into a highly flexible CMS that powers over 40% of the web. WordPress 7 requires MySQL 8.0 and is packaged as a new app alongside the legacy WordPress 6 entry. 
