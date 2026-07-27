@@ -115,7 +115,7 @@ If you have a suggestion for an app, please post in the [BigBearCommunity](https
 | [LyriOn Music Server](https://hub.docker.com/r/lmscommunity/lyrionmusicserver) | 9.2.0 | LMS-Community | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Mailpit](https://hub.docker.com/r/axllent/mailpit) | v1.30 | axllent | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Maybe Finance](https://hub.docker.com/r/maybe-finance/maybe) | sha-347c0a790693031fdd3b32792b5b6792693d1805 | Maybe Finance | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
-| [Mealie](https://hub.docker.com/r/hkotel/mealie) | v3.20.1 | mealie-recipes | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
+| [Mealie](https://hub.docker.com/r/hkotel/mealie) | v3.21.0 | mealie-recipes | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Microbin](https://hub.docker.com/r/danielszabo99/microbin) | 2.1.4 | danielszabo99 | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [MIND](https://hub.docker.com/r/mrcas/mind) | v1.4.1 | Casvt | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Minio](https://hub.docker.com/r/bigbeartechworld/big-bear-minio) | RELEASE.2025-10-15T17-29-55Z | minio | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
@@ -123,11 +123,11 @@ If you have a suggestion for an app, please post in the [BigBearCommunity](https
 | [Morphos](https://hub.docker.com/r/danvergara/morphos-server) | 0.6.0 | danvergara | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Mumble Server](https://hub.docker.com/r/mumblevoip/mumble-server) | v1.4.230-6 | mumblevoip | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [MySpeed](https://hub.docker.com/r/germannewsmaker/myspeed) | 1.0.9 | gnmyt | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
-| [n8n](https://hub.docker.com/r/n8nio/n8n) | 2.32.2 | n8n | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
+| [n8n](https://hub.docker.com/r/n8nio/n8n) | 2.32.3 | n8n | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Ncdu](https://hub.docker.com/r/bigbeartechworld/big-bear-ncdu) | 0.0.9 | bigbeartechworld | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Neko Firefox](https://hub.docker.com/r/m1k1o/neko) | firefox | m1k1o | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Nextcloud](https://hub.docker.com/r/bigbeartechworld/big-bear-nextcloud-with-smbclient) | 34.0.1 | nextcloud | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
-| [Nextcloud LS](https://hub.docker.com/r/linuxserver/nextcloud) | 34.0.1 | nextcloud | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
+| [Nextcloud LS](https://hub.docker.com/r/linuxserver/nextcloud) | 34.0.2 | nextcloud | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Nextcloud with SMB (Legacy)](https://hub.docker.com/r/bigbeartechworld/big-bear-nextcloud-with-smbclient) | 34.0.1 | nextcloud | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Nexterm](https://hub.docker.com/r/nexterm/aio) | 1.2.2-BETA | gnmyt | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [nightscout](https://hub.docker.com/r/nightscout/cgm-remote-monitor) | 15.0.7 | nightscout | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
@@ -141,9 +141,9 @@ If you have a suggestion for an app, please post in the [BigBearCommunity](https
 | [OctoPrint](https://hub.docker.com/r/octoprint/octoprint) | 1.11.8 | octoprint | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Odoo](https://hub.docker.com/r/odoo) | 19 | odoo | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Odysseus](https://github.com/pewdiepie-archdaemon/odysseus) | 2026.07.13 | pewdiepie-archdaemon | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
-| [Ollama - AMD](https://hub.docker.com/r/ollama/ollama) | 0.32.2-rocm | ollama | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
-| [Ollama - CPU](https://hub.docker.com/r/ollama/ollama) | 0.32.2 | ollama | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
-| [Ollama - NVIDIA](https://hub.docker.com/r/ollama/ollama) | 0.32.2 | ollama | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
+| [Ollama - AMD](https://hub.docker.com/r/ollama/ollama) | 0.32.3-rocm | ollama | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
+| [Ollama - CPU](https://hub.docker.com/r/ollama/ollama) | 0.32.3 | ollama | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
+| [Ollama - NVIDIA](https://hub.docker.com/r/ollama/ollama) | 0.32.3 | ollama | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [OneDev](https://hub.docker.com/r/1dev/server) | 16.2.3 | theonedev | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [OnlyOffice](https://hub.docker.com/r/onlyoffice/documentserver) | 9.1.0 | onlyoffice | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Open WebUI](https://hub.docker.com/r/open-webui/open-webui) | git-33e54a9 | open-webui | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
@@ -192,7 +192,7 @@ If you have a suggestion for an app, please post in the [BigBearCommunity](https
 | [SFTPGO](https://hub.docker.com/r/drakkan/sftpgo) | v2.7 | drakkan | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [SnapOtter](https://snapotter.com) | 2.1.0 | SnapOtter | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Spacedrive](https://hub.docker.com/r/spacedriveapp/spacedrive/server) | 0.4.2 | spacedriveapp | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
-| [Speedtest Tracker](https://hub.docker.com/r/linuxserver/speedtest-tracker) | 1.14.5 | alexjustesen | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
+| [Speedtest Tracker](https://hub.docker.com/r/linuxserver/speedtest-tracker) | 1.14.6 | alexjustesen | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Spoolman](https://github.com/Donkie/Spoolman) | 0.23.1 | Donkie | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Stalwart Mail](https://hub.docker.com/r/stalwartlabs/stalwart) | v0.16.14 | stalwartlabs | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Stirling-PDF](https://hub.docker.com/r/stirlingtools/stirling-pdf) | 2.14.2 | stirlingtools | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
