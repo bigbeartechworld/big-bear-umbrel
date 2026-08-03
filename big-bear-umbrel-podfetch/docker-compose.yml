@@ -1,0 +1,24 @@
+version: "3.7"
+services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-podfetch_app_1
+      APP_PORT: "8000"
+  app:
+    image: samuel19982/podfetch:v5.2.2@sha256:b6473cc2fef5a3f1cbebab18ba56e198ee95fe8b3524e57c54d1d1e012c4045f
+    volumes:
+      - ${APP_DATA_DIR}/podfetch/podcasts:/app/podcasts
+      - ${APP_DATA_DIR}/podfetch/db:/app/db
+    environment:
+      - DATABASE_URL=sqlite:///app/db/podcast.db
+      - POLLING_INTERVAL=300
+      - BASIC_AUTH=false
+      - USERNAME=bigbear
+      - PASSWORD=15c40698-3cd9-40ce-8039-e8d80fc1a030
+      - GPODDER_INTEGRATION_ENABLED=false
+    restart: unless-stopped
+    networks:
+      - podfetch-network
+networks:
+  podfetch-network:
+    driver: bridge
