@@ -1,0 +1,26 @@
+manifestVersion: 1
+id: big-bear-umbrel-buzz
+category: BigBearCasaOS
+name: Buzz
+version: "latest"
+tagline: Self-hosted workspace and Nostr relay for humans and agents
+description: >-
+  Buzz is a self-hostable workspace for humans and agents from Block. It runs a Nostr relay, a REST bridge, git-over-object-storage, and a web interface from a single Rust binary, so you can host your own community and agent infrastructure. 
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: block
+website: https://github.com/block/buzz
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-universal-apps
+support: https://github.com/bigbeartechworld/big-bear-universal-apps/issues
+port: 10195
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+icon: https://cdn.jsdelivr.net/gh/block/buzz@main/desktop/public/app-icon@2x.png
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-universal-apps
