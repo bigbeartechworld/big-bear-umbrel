@@ -11,7 +11,7 @@ services:
   # The main FileBrowser Quantum application service
   app:
     # Image to be used for the container
-    image: gtstef/filebrowser:1.5.0-stable@sha256:fc213590ebc090cb8205125cd3ecdfa9066b9ed4a0b53fe2570972d6a3379e73
+    image: gtstef/filebrowser:1.5.1-stable@sha256:e82e3bb6d03d4c9e6d5b6ded452b202f79bad335490889591580bf350b601133
     # Container restart policy
     restart: unless-stopped
     # Environment variables
