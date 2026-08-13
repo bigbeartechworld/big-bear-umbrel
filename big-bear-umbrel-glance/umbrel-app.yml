@@ -1,0 +1,26 @@
+manifestVersion: 1
+id: big-bear-umbrel-glance
+category: BigBearCasaOS
+name: Glance
+version: "v0.8.5"
+tagline: Self-hosted dashboard for your feeds
+description: >-
+  Glance is a self-hosted dashboard that puts all your feeds in one place. 
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: glanceapp
+website: https://github.com/glanceapp/glance
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-universal-apps
+support: https://github.com/bigbeartechworld/big-bear-universal-apps/issues
+port: 10202
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+icon: https://cdn.jsdelivr.net/gh/bigbeartechworld/big-bear-universal-apps/apps/glance/logo.png
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-universal-apps

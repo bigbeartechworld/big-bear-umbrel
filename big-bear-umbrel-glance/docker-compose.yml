@@ -1,0 +1,77 @@
+# Configuration for glance setup
+# Name of the big-bear-glance application
+version: "3.7"
+# Service definitions for the big-bear-glance application
+services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-glance_app_1
+      APP_PORT: "8080"
+  # Service name: app
+  # The `app` service definition
+  app:
+    # Image to be used for the container
+    image: glanceapp/glance:v0.8.5@sha256:32ab73d80f2b8b5fb0735b0431deb36b93fbb6b2fb43592449b0178c8b83e350
+    # Container restart policy
+    restart: unless-stopped
+    # Glance exits unless /app/config/glance.yml exists, so a starter config is
+    # seeded into the volume on first run. The guard keeps user edits intact.
+    entrypoint:
+      - /bin/sh
+      - -c
+      - |
+        set -eu
+        if [ ! -s /app/config/glance.yml ]; then
+          mkdir -p /app/config
+          cat > /app/config/glance.yml <<EOF
+        pages:
+          - name: Home
+            columns:
+              - size: small
+                widgets:
+                  - type: calendar
+                    first-day-of-week: monday
+                  - type: rss
+                    limit: 10
+                    collapse-after: 3
+                    cache: 12h
+                    feeds:
+                      - url: https://selfh.st/rss/
+                        title: selfh.st
+                        limit: 4
+                      - url: https://ciechanow.ski/atom.xml
+                      - url: https://samwho.dev/rss.xml
+              - size: full
+                widgets:
+                  - type: group
+                    widgets:
+                      - type: hacker-news
+                      - type: lobsters
+                  - type: docker-containers
+                    hide-by-default: false
+              - size: small
+                widgets:
+                  - type: weather
+                    location: New York, United States
+                    units: imperial
+                    hour-format: 12h
+                  - type: releases
+                    cache: 1d
+                    repositories:
+                      - glanceapp/glance
+        EOF
+        fi
+        exec /app/glance --config /app/config/glance.yml
+    # Volumes to be mounted to the container
+    volumes:
+      # Dashboard configuration
+      - ${APP_DATA_DIR}/config:/app/config
+      # Docker socket for the docker-containers widget
+      # (ro mount protects the socket file, not the Docker API behind it)
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+    networks:
+      - big_bear_glance_network
+# Network configuration
+networks:
+  big_bear_glance_network:
+    driver: bridge
