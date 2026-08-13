@@ -5,7 +5,7 @@ services:
       APP_HOST: big-bear-umbrel-podfetch_app_1
       APP_PORT: "8000"
   app:
-    image: samuel19982/podfetch:v5.2.2@sha256:3d99ea7ae6401879c2c1d6c81c2aefdc0a30d35605996c384c4c31cc55eb1120
+    image: samuel19982/podfetch:v5.2.3@sha256:30dde81c92ec60450da08dee9f13723c0d8586e3ee4b3d7933b1fb221e051c28
     volumes:
       - ${APP_DATA_DIR}/podfetch/podcasts:/app/podcasts
       - ${APP_DATA_DIR}/podfetch/db:/app/db
