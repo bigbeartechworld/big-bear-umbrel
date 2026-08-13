@@ -1,0 +1,26 @@
+manifestVersion: 1
+id: big-bear-umbrel-paperclip
+category: BigBearCasaOS
+name: Paperclip
+version: "latest"
+tagline: Self-hosted board for managing AI coding agents
+description: >-
+  Paperclip is an open-source self-hosted board for managing AI coding agents such as Claude Code, Codex, OpenCode, and Gemini CLI. Assign work to agents, run them, and track cost and output from a single dashboard. 
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: paperclipai
+website: https://paperclip.ing
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-universal-apps
+support: https://github.com/bigbeartechworld/big-bear-universal-apps/issues
+port: 10201
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+icon: https://cdn.jsdelivr.net/gh/paperclipai/paperclip@master/ui/public/apple-touch-icon.png
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-universal-apps
