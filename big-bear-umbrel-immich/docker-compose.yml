@@ -26,6 +26,7 @@ services:
     # Networks to be attached to the container
     networks:
       - big_bear_immich_network
+      - default
   # Configuration for Immich Machine Learning service
   immich-machine-learning:
     image: ghcr.io/immich-app/immich-machine-learning:v3.1.0@sha256:5a0839dc5303cd7215bcd2180a26aed3af41675aefb3e75e5157e9f10ad16e6e # Image to be used

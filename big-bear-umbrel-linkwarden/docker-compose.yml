@@ -26,6 +26,7 @@ services:
     # Networks to be attached to the container
     networks:
       - linkwarden_network
+      - default
   # Postgres database
   linkwarden-db:
     # Image to be used

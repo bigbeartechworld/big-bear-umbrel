@@ -29,6 +29,7 @@ services:
     # Networks to be attached to the container
     networks:
       - zipline_network
+      - default
   # Postgres database
   zipline-db:
     # Image to be used

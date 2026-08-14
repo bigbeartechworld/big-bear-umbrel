@@ -40,6 +40,7 @@ services:
     # Network configuration
     networks:
       - big-bear-wallabag-network
+      - default
     # Service dependencies
     depends_on:
       - big-bear-wallabag-db

@@ -32,6 +32,7 @@ services:
     networks:
       # Define the pihole-network
       - pihole-network
+      - default
     # Capabilities to be added to the container
     cap_add:
       - NET_ADMIN

@@ -25,6 +25,7 @@ services:
     networks:
       # Specify the adguard-home-network
       - adguard-home-network
+      - default
 # Networks used by the application
 networks:
   # Define the network for AdGuard Home

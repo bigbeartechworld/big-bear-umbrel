@@ -34,6 +34,7 @@ services:
     # Assigns the app service to a network.
     networks:
       - rocketchat-v8-net
+      - default
   # Service: db
   # This service runs the MongoDB 8.2 database required by Rocket.Chat v8.
   db:

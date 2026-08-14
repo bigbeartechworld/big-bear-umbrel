@@ -48,6 +48,7 @@ services:
     # Networks to be attached to the container
     networks:
       - photoprism-network
+      - default
     # Other services that this service depends on
     depends_on:
       - photoprism-db

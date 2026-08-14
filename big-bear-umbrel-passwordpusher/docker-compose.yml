@@ -28,6 +28,7 @@ services:
       - ${APP_DATA_DIR}/storage:/opt/PasswordPusher/storage:rw
     networks:
       - big_bear_pwpush_network
+      - default
   big-bear-pwpush-db:
     image: mariadb:10.6.5@sha256:ca31f38b6e325ece985d857db7eba1fe59928b4fd83ff8a55cb912c9684b9e43
     environment:

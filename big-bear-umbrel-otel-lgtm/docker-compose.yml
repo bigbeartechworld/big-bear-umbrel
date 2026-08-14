@@ -25,6 +25,7 @@ services:
     # Networks to be attached to the container
     networks:
       - big-bear-otel-lgtm
+      - default
 networks:
   big-bear-otel-lgtm:
     driver: bridge

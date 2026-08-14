@@ -16,6 +16,7 @@ services:
     # Networks used by the service
     networks:
       - ghost-network
+      - default
     environment:
       # Database configuration for Ghost (see Ghost documentation for more details)
       database__client: mysql

@@ -32,6 +32,7 @@ services:
         condition: service_healthy
     networks:
       - big_bear_ghostfolio_network # Connects the service to the defined network
+      - default
   # PostgreSQL database service for Ghostfolio
   big-bear-ghostfolio-db:
     image: postgres:15.4-alpine@sha256:35ce2187f2f7fb75e8e79493e13743596c21eb3789ff41ece145ae04d06e93a5 # Using PostgreSQL 15.4 on Alpine Linux

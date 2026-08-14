@@ -18,6 +18,7 @@ services:
       - chrome
     networks:
       - reactive-resume-network
+      - default
     environment:
       # -- Environment Variables --
       PORT: "3000"

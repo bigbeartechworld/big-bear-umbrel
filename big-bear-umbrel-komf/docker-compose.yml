@@ -32,6 +32,7 @@ services:
     # Networks to be attached to the container
     networks:
       - big_bear_komf_network
+      - default
 # Network definitions for the big-bear-komf application
 networks:
   big_bear_komf_network:

@@ -20,6 +20,7 @@ services:
       - ${APP_DATA_DIR}/sites:/opt/drupal/web/sites
     networks:
       - big-bear-farmos-network
+      - default
   # MariaDB database service configuration for FarmOS
   big-bear-farmos-db:
     # Use MariaDB version 10 image

@@ -22,6 +22,7 @@ services:
       SESSION_COOKIE_SECURE: "False" # Disables secure session cookies for development.
     networks:
       - big_bear_ihatemoney_network # Connects the service to a network.
+      - default
   # Define a service named 'big-bear-ihatemoney-db' for the database.
   big-bear-ihatemoney-db:
     image: mariadb:10@sha256:be981e4113326ada8d6004174dd09eeaefc03094037f811182a52d4f2e737350 # Use MariaDB version 10 Docker image.

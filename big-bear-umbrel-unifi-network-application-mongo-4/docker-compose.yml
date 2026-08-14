@@ -28,6 +28,7 @@ services:
     restart: unless-stopped # Restart policy for the container
     networks: # Networks to join
       - unifi-nework-application-network
+      - default
     depends_on:
       - unifi-db
   # MongoDB database for the application

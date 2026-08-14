@@ -44,6 +44,7 @@ services:
       - vikunja-v2-db
     networks:
       - vikunja-v2-network
+      - default
   vikunja-v2-db:
     image: mariadb:11@sha256:efb4959ef2c835cd735dbc388eb9ad6aab0c78dd64febcd51bc17481111890c4
     command:

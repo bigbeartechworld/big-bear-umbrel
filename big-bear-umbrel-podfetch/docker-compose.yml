@@ -19,6 +19,7 @@ services:
     restart: unless-stopped
     networks:
       - podfetch-network
+      - default
 networks:
   podfetch-network:
     driver: bridge

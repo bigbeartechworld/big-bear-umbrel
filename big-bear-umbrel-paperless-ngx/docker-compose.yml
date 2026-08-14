@@ -40,6 +40,7 @@ services:
       - big-bear-paperless-ngx-broker
     networks:
       - big-bear-paperless-ngx-network
+      - default
   big-bear-paperless-ngx-broker:
     image: docker.io/library/redis:8.10.0@sha256:344e3945a0b431c8ff1eecd58c5573538126bd756f02fc7e218ddf1fc2546366
     restart: unless-stopped

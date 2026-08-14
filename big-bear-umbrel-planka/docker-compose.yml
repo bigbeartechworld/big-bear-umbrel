@@ -60,6 +60,7 @@ services:
       # - OIDC_ENFORCED=true
     networks:
       - big-bear-planka-network
+      - default
     # Dependency on another service, ensuring it is healthy before starting
     depends_on:
       big-bear-planka-postgres:

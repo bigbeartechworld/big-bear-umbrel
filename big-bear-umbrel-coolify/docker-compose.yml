@@ -94,6 +94,7 @@ services:
         condition: service_healthy
     networks:
       - big_bear_coolify_network
+      - default
   big-bear-coolify-postgres:
     image: postgres:15-alpine@sha256:3d0f7584ed7d04e27fa050d6683a74746608faf21f202be78460d679cc56461f
     volumes:

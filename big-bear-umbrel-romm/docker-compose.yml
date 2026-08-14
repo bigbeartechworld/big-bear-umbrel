@@ -43,6 +43,7 @@ services:
     restart: "unless-stopped"
     networks:
       - big-bear-romm-network # Use the big-bear-romm-network network
+      - default
   # MariaDB service for rommdb
   big-bear-rommdb:
     image: mariadb:latest@sha256:628f228f0fd5913a220438693576b29b6fe4dc1fa0a1298c0e98579fae28635f

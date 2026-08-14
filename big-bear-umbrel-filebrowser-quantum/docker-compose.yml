@@ -24,6 +24,7 @@ services:
     # Networks for the big-bear-filebrowser-quantum application
     networks:
       - big-bear-filebrowser-quantum-network
+      - default
 # Networks definition for the big-bear-filebrowser-quantum application
 networks:
   big-bear-filebrowser-quantum-network:

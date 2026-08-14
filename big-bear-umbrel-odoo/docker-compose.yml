@@ -28,6 +28,7 @@ services:
     # Networks to be attached to the container
     networks:
       - big_bear_odoo_network # Specifies network attachment for internal communication
+      - default
   # Database service for Odoo
   big-bear-odoo-db:
     image: postgres:15@sha256:bcab099bfaab33333a73a2ebe8c1d615c9f4c2402dd43452f989a36c6da9a5ba # PostgreSQL version 15 Docker image

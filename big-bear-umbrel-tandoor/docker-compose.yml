@@ -30,6 +30,7 @@ services:
     # Network to be used by the container
     networks:
       - big_bear_tandoor_network
+      - default
     # Healthcheck configuration for the container
     depends_on:
       big-bear-tandoor-db:

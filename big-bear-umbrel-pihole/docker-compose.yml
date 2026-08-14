@@ -28,6 +28,7 @@ services:
     networks:
       # Define the pihole-network
       - pihole-network
+      - default
 # Define the networks section
 networks:
   # Define the pihole-network
