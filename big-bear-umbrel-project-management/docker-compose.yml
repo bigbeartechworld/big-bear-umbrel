@@ -32,6 +32,7 @@ services:
       - /etc/localtime:/etc/localtime
     networks:
       - big_bear_project_management_network
+      - default
     depends_on:
       - big-bear-project-management-db
   big-bear-project-management-db:

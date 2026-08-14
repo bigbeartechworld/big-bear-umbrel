@@ -24,6 +24,7 @@ services:
     # Networks to be attached to the container
     networks:
       - big_bear_note_mark_aio_network
+      - default
 # Network definitions for the big-bear-note-mark-aio application
 networks:
   big_bear_note_mark_aio_network:

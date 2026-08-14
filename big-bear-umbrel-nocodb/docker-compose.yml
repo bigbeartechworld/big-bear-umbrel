@@ -20,6 +20,7 @@ services:
       - ${APP_DATA_DIR}/data:/usr/src/app/data # Maps persistent data storage for NocoDB
     networks:
       - big-bear-nocodb-network # Connects to the custom network
+      - default
   # Database service configuration
   big-bear-nocodb-db:
     image: postgres:13@sha256:4689940c683801b4ab839ab3b0a0a3555a5fe425371422310944e89eca7d8068 # Specifies the PostgreSQL Docker image to use

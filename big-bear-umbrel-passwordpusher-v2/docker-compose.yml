@@ -50,6 +50,7 @@ services:
       - ${APP_DATA_DIR}/storage:/opt/PasswordPusher/storage:rw
     networks:
       - big_bear_pwpush_v2_network
+      - default
     depends_on:
       big-bear-pwpush-v2-db:
         condition: service_healthy

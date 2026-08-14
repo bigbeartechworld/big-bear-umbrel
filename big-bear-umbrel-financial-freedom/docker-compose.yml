@@ -17,6 +17,7 @@ services:
     # financial-freedom-network networks
     networks:
       - financial-freedom-network
+      - default
     # Volumes to be mounted to the container
     volumes:
       - ${APP_DATA_DIR}/logs:/var/www/html/storage/logs

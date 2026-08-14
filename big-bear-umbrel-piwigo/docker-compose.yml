@@ -25,6 +25,7 @@ services:
       - ${APP_DATA_DIR}/gallery:/gallery # Gallery files
     networks:
       - big_bear_piwigo_network
+      - default
   big-bear-piwigo-db:
     image: mariadb:10.6@sha256:114d40be36852d0a019afd8458f7e1cc63fd300403b115b1f32e31130d5f671b
     environment:

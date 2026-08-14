@@ -39,6 +39,7 @@ services:
     # Define the network
     networks:
       - nextcloud_network
+      - default
   # Define the database container for Nextcloud
   db-nextcloud:
     image: postgres:14.2@sha256:2c954f8c5d03da58f8b82645b783b56c1135df17e650b186b296fa1bb71f9cfd

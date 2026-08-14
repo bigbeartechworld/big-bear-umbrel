@@ -40,6 +40,7 @@ services:
       - big-bear-farmos-v4-db
     networks:
       - big-bear-farmos-v4-network
+      - default
   # MariaDB database service configuration for FarmOS v4
   big-bear-farmos-v4-db:
     # Use MariaDB 10.6 image (minimum required for farmOS v4)

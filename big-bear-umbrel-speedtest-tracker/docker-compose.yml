@@ -29,6 +29,7 @@ services:
       - big-bear-speedtest-tracker-db
     networks:
       - big_bear_speedtest_tracker_network
+      - default
   big-bear-speedtest-tracker-db:
     image: mariadb:10@sha256:be981e4113326ada8d6004174dd09eeaefc03094037f811182a52d4f2e737350
     restart: always

@@ -45,6 +45,7 @@ services:
       - ${APP_DATA_DIR}/data/public:/var/www/app/public:ro
     networks:
       - big-bear-invoice-ninja-network
+      - default
   big-bear-invoice-ninja-db:
     image: mariadb:10.4@sha256:22edfe1c78349f8cae88bbb5c2873b7e6c515be767c91c691308ce57445806f3
     restart: unless-stopped

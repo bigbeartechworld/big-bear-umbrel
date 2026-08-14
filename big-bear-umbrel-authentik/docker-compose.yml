@@ -28,6 +28,7 @@ services:
       - big-bear-authentik-redis
     networks:
       - big_bear_authentik_network
+      - default
   big-bear-authentik-worker:
     image: ghcr.io/goauthentik/server:2026.2.2@sha256:40f0df709957c11324420fa387f1135c427f16086f12ca266b2d883d39c71fe3
     restart: unless-stopped

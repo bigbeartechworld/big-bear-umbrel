@@ -71,6 +71,7 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock:ro
     networks:
       - big_bear_glance_network
+      - default
 # Network configuration
 networks:
   big_bear_glance_network:

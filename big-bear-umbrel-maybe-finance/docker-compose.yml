@@ -20,6 +20,7 @@ services:
     networks:
       # Use the default Docker network
       - big_bear_maybe_finance_network
+      - default
     # Volumes to be mounted to the container
     volumes:
       # Mounting the local maybe/pp-storage directory to /rails/storage inside the container

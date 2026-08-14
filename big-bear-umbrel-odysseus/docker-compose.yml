@@ -50,6 +50,7 @@ services:
       start_period: 40s
     networks:
       - big_bear_odysseus_network
+      - default
   # Service name: chromadb
   # Vector database for Odysseus
   chromadb:

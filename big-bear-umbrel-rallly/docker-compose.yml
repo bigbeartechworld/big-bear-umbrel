@@ -29,6 +29,7 @@ services:
       - ALLOWED_EMAILS= # Specify allowed emails if needed
     networks:
       - big_bear_rally_network # Connects the container to the specified network
+      - default
     depends_on:
       big-bear-rallly-db:
         condition: service_healthy # Ensures the DB service is healthy before starting

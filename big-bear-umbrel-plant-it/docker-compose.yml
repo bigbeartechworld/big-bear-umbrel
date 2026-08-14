@@ -62,6 +62,7 @@ services:
     networks:
       # Network definition
       - big_bear_plant_it_network
+      - default
   # Service definition for the database
   big-bear-plant-it-db:
     # Image for the database

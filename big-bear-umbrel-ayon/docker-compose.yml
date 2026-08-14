@@ -29,6 +29,7 @@ services:
     expose: ["5000"]
     networks:
       - big-bear-ayon-network
+      - default
     depends_on:
       postgres:
         condition: service_healthy

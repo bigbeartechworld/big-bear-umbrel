@@ -27,6 +27,7 @@ services:
       - ocr_worker
     networks:
       - big-bear-pd3f-network
+      - default
   # Service name: parsr
   parsr:
     image: axarev/parsr:v1.2.2@sha256:9b2b844474cd750aa026cc4bcbba55fb807f93cead9f0bec47f8ac1dc9e33280

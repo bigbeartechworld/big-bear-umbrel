@@ -93,6 +93,7 @@ services:
       # - OIDC_ENFORCED=true
     networks:
       - big-bear-planka-v2-network
+      - default
     # Dependency on another service, ensuring it is healthy before starting
     depends_on:
       big-bear-planka-v2-postgres:

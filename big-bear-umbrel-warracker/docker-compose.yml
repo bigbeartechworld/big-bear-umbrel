@@ -37,6 +37,7 @@ services:
     # Container networks
     networks:
       - big_bear_warracker_network
+      - default
     # Depends on the warrackerdb service
     depends_on:
       big-bear-warrackerdb:

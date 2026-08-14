@@ -28,6 +28,7 @@ services:
     networks:
       # Define the network for pihole-unbound
       - pihole-unbound-network # Name of the network used by pihole-unbound
+      - default
 # Define the networks section
 networks:
   # Define the pihole-unbound-network

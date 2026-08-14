@@ -24,6 +24,7 @@ services:
       - MAX_TIME_DRIFT=0 # Maximum allowed time drift for synchronization.
     networks:
       - big_bear_joplin_network # Connects the container to a defined network for inter-container communication.
+      - default
     depends_on:
       - big-bear-joplin-db # Specifies the database service as a dependency for the Joplin server.
   # Configuration for the PostgreSQL database service used by Joplin

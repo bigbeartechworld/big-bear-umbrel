@@ -33,6 +33,7 @@ services:
     # Networks to be attached to the container
     networks:
       - big_bear_seafile_network
+      - default
   # Database service for seafile
   big-bear-seafile-db:
     image: mariadb:10.11@sha256:be981e4113326ada8d6004174dd09eeaefc03094037f811182a52d4f2e737350

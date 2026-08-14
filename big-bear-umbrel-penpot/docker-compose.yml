@@ -25,6 +25,7 @@ services:
     # Networks to be attached to the container
     networks:
       - big-bear-penpot-network
+      - default
   # Definition for penpot-backend service
   penpot-backend:
     # Docker image for the service

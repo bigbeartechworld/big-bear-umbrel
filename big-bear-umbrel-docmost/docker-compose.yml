@@ -24,6 +24,7 @@ services:
       - ${APP_DATA_DIR}/data/storage:/app/data/storage
     networks:
       - big-bear-docmost-network
+      - default
     depends_on:
       - big-bear-docmost-db
       - big-bear-docmost-redis

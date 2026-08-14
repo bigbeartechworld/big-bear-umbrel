@@ -32,6 +32,7 @@ services:
     # Assigns the app service to a network.
     networks:
       - rocketchat-net
+      - default
   # Service: db
   # This service runs the MongoDB database used by Rocket.Chat.
   db:

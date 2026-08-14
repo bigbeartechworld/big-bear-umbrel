@@ -32,6 +32,7 @@ services:
       - ${APP_DATA_DIR}/uploads:/uploads
     networks:
       - big_bear_send_visee_network
+      - default
   big-bear-send-visee-redis:
     # Image to be used for the container
     image: redis:8.2.2-alpine@sha256:1c78f5e7512cc8b22b0edc95c20e7abd9e1fd832e5dfd5c3c6b59ce82fb238d0

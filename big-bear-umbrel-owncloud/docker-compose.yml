@@ -35,6 +35,7 @@ services:
     # Networks to be attached to the container
     networks:
       - big_bear_owncloud_network
+      - default
     # Healthcheck configuration for the service
     healthcheck:
       test: ["CMD", "/usr/bin/healthcheck"]

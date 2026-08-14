@@ -22,6 +22,7 @@ services:
       ALLOW_OPENAPI: "true"
     networks:
       - big_bear_tianji_network
+      - default
     depends_on:
       - big-bear-tianji-db
   # Postgres database

@@ -34,6 +34,7 @@ services:
       - big-bear-onedev-db
     networks: # Connect to the network
       - big_bear_ondedev_network
+      - default
   # Define the service for the PostgreSQL database
   big-bear-onedev-db:
     image: postgres:14@sha256:9e279cc7fc6e908da071befe389c576bd6752dbd295a9c078f96a75bab03e54c # Use the specified PostgreSQL image
