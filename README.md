@@ -73,7 +73,7 @@ If you have a suggestion for an app, please post in the [BigBearCommunity](https
 | [Focalboard](https://hub.docker.com/r/mattermost/focalboard) | 7.11.4 | mattermost | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [GemDigest Bot](https://hub.docker.com/r/piero24/gemdigest) | 1.0 | Armaggheddon | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Genmon](https://hub.docker.com/r/bigbeartechworld/big-bear-genmon) | 2.0.01 | bigbeartechworld | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
-| [Ghost](https://hub.docker.com/r/ghost) | 6.57.0-alpine | ghost | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
+| [Ghost](https://hub.docker.com/r/ghost) | 6.57.1-alpine | ghost | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Ghostfolio](https://hub.docker.com/r/ghostfolio/ghostfolio) | 3.47.0 | ghostfolio | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Gitea](https://gitea.com) | 1.27.1 | gitea | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Gitea Mirror](https://hub.docker.com/r/raylabshq/gitea-mirror) | v3.15.10 | raylabs.io | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
@@ -93,7 +93,7 @@ If you have a suggestion for an app, please post in the [BigBearCommunity](https
 | [Immich AIO Alpine](https://hub.docker.com/r/imagegenius/immich) | 2.0.0-alpine | imagegenius | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Immich Kiosk](https://hub.docker.com/r/damongolding/immich-kiosk) | 0.38.1 | damongolding | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Immich without machine learning](https://hub.docker.com/r/immich-app/immich-server) | v3.1.0 | immich | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
-| [Invoice Ninja](https://hub.docker.com/r/invoiceninja/invoiceninja) | 5.13.30 | invoiceninja | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
+| [Invoice Ninja](https://hub.docker.com/r/invoiceninja/invoiceninja) | 5.13.31 | invoiceninja | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [IT Tools](https://hub.docker.com/r/corentinth/it-tools) | 2023.11.2-7d94e11 | corentinth | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Jellyseerr (Legacy)](https://hub.docker.com/r/fallenbagel/jellyseerr) | 2.7.3 | Fallenbagel | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Jellystat](https://hub.docker.com/r/cyfershepard/jellystat) | 1.1.11 | cyfershepard | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
@@ -143,9 +143,9 @@ If you have a suggestion for an app, please post in the [BigBearCommunity](https
 | [OctoPrint](https://hub.docker.com/r/octoprint/octoprint) | 1.11.8 | octoprint | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Odoo](https://hub.docker.com/r/odoo) | 19 | odoo | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Odysseus](https://github.com/pewdiepie-archdaemon/odysseus) | 2026.07.13 | pewdiepie-archdaemon | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
-| [Ollama - AMD](https://hub.docker.com/r/ollama/ollama) | 0.32.8-rocm | ollama | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
-| [Ollama - CPU](https://hub.docker.com/r/ollama/ollama) | 0.32.6 | ollama | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
-| [Ollama - NVIDIA](https://hub.docker.com/r/ollama/ollama) | 0.32.6 | ollama | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
+| [Ollama - AMD](https://hub.docker.com/r/ollama/ollama) | 0.32.9-rocm | ollama | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
+| [Ollama - CPU](https://hub.docker.com/r/ollama/ollama) | 0.32.9 | ollama | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
+| [Ollama - NVIDIA](https://hub.docker.com/r/ollama/ollama) | 0.32.9 | ollama | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [OneDev](https://hub.docker.com/r/1dev/server) | 16.4.2 | theonedev | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [OnlyOffice](https://hub.docker.com/r/onlyoffice/documentserver) | 9.1.0 | onlyoffice | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
 | [Open WebUI](https://hub.docker.com/r/open-webui/open-webui) | git-33e54a9 | open-webui | [Repository](https://github.com/bigbeartechworld/big-bear-universal-apps) |
