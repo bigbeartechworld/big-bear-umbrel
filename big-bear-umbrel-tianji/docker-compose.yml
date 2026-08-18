@@ -11,7 +11,7 @@ services:
   # The `big-bear-tianji` service definition
   big-bear-tianji:
     # Image to be used for the container
-    image: moonrailgun/tianji:1.32.21@sha256:2bd3cb48bc496e41b2b16772a25a96358a881790d1388897be216381dbb7b534
+    image: moonrailgun/tianji:1.32.22@sha256:e128044134cfaa80e8607c4ce196e9daa5d97ae9f6c3b29867bbff378deb9e63
     # Container restart policy
     restart: unless-stopped
     # Environment variables for the container
