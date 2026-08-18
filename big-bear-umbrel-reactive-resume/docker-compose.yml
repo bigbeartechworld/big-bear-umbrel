@@ -9,7 +9,7 @@ services:
       APP_PORT: "3000"
   # Main application
   app:
-    image: amruthpillai/reactive-resume:v5.2.5@sha256:fab7aba9386163ee6cb16e56343ff3871c43a738adab78664a5c6d4d588d61df
+    image: amruthpillai/reactive-resume:v5.2.6@sha256:0a5014349218304f32ed4899ed097390fd755ba0afb512ca888f8366a56814ac
     restart: unless-stopped
     depends_on:
       - postgres
