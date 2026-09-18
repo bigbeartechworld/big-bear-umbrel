@@ -1,0 +1,17 @@
+version: "3.7"
+services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-ferdium_app_1
+      APP_PORT: ' 3000'
+  app:
+    image: linuxserver/ferdium:7.2.3@sha256:91d0b770d951cc23ad3666308708082d80bf95b32270dbf03ae3fe7f94065471
+    restart: unless-stopped
+    environment:
+      PUID: $PUID
+      PGID: $PGID
+      TZ: $TZ
+    volumes:
+      - type: bind
+        source: /DATA/AppData/ferdium/config
+        target: /config

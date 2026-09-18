@@ -1,0 +1,17 @@
+version: "3.7"
+services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-ci_app_1
+      APP_PORT: ' 80'
+  app:
+    image: linuxserver/ci:b1ca9f98-ls65@sha256:f0c0d03f3a0da803d3a0a55c30ed722d4df25d37b12489c45149e99df8e0e491
+    restart: unless-stopped
+    environment:
+      PUID: $PUID
+      PGID: $PGID
+      TZ: $TZ
+    volumes:
+      - type: bind
+        source: /DATA/AppData/ci/config
+        target: /config

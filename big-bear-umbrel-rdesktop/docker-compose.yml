@@ -1,0 +1,23 @@
+version: "3.7"
+services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-rdesktop_app_1
+      APP_PORT: ' 3389'
+  app:
+    image: linuxserver/rdesktop:arch-kde-version-arch-2025-01-10@sha256:c779495feea3bbfbac0fcd239c5be5981a8744df97646236c685357f90fb5565
+    restart: unless-stopped
+    environment:
+      PUID: $PUID
+      PGID: $PGID
+      TZ: $TZ
+    volumes:
+      - type: bind
+        source: /DATA/AppData/rdesktop/config
+        target: /config
+      - type: bind
+        source: /var/run/docker.sock
+        target: /var/run/docker.sock
+      - type: bind
+        source: /DATA/AppData/rdesktop/config
+        target: /config

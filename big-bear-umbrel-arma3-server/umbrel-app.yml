@@ -1,0 +1,26 @@
+manifestVersion: 1
+id: big-bear-umbrel-arma3-server
+category: Gaming
+name: Arma 3 Server
+version: "1.0.0"
+tagline: Arma 3 Dedicated Server
+description: >-
+  Arma 3 Dedicated Server. Updates to the latest version every time it is restarted. Supports mission configs mods and headless clients. 
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: BrettMayson
+website: https://github.com/BrettMayson/Arma3Server
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-universal-apps
+support: https://github.com/bigbeartechworld/big-bear-universal-apps/issues
+port: 2302
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/steam.png
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-universal-apps

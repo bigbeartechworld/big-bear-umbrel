@@ -1,0 +1,17 @@
+version: "3.7"
+services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-pidgin_app_1
+      APP_PORT: ' 3000'
+  app:
+    image: linuxserver/pidgin:2.14.14@sha256:70c7c1741aaf59781f2e6afbe0a30044c61eb94b5359405a691416b0700bf904
+    restart: unless-stopped
+    environment:
+      PUID: $PUID
+      PGID: $PGID
+      TZ: $TZ
+    volumes:
+      - type: bind
+        source: /DATA/AppData/pidgin/config
+        target: /config

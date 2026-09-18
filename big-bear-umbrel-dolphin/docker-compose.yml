@@ -1,0 +1,17 @@
+version: "3.7"
+services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-dolphin_app_1
+      APP_PORT: ' 3000'
+  app:
+    image: linuxserver/dolphin:version-2606a@sha256:3f7021021e20aa2e244d61cb1ded987181dae30cf1e5ae2c1b88960da4018330
+    restart: unless-stopped
+    environment:
+      PUID: $PUID
+      PGID: $PGID
+      TZ: $TZ
+    volumes:
+      - type: bind
+        source: /DATA/AppData/dolphin/config
+        target: /config

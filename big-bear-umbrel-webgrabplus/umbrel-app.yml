@@ -1,0 +1,26 @@
+manifestVersion: 1
+id: big-bear-umbrel-webgrabplus
+category: Smart Home
+name: Webgrabplus
+version: "5.6.1"
+tagline: A multi-site incremental xmltv epg grabber. It collects tv-program guide data from selected tvguide sites for your favourite channels.
+description: >-
+  Webgrabplus is a multi-site incremental xmltv epg grabber. It collects tv-program guide data from selected tvguide sites for your favourite channels. 
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: LinuxServer.io
+website: https://hub.docker.com/r/linuxserver/webgrabplus
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-universal-apps
+support: https://github.com/bigbeartechworld/big-bear-universal-apps/issues
+port: 80
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+icon: https://images.weserv.nl/?url=https%3A%2F%2Fwww.webgrabplus.com%2Fsites%2Fdefault%2Fthemes%2FWgTheme%2Fimages%2Fslideshows%2FEPG_fading.jpg
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-universal-apps

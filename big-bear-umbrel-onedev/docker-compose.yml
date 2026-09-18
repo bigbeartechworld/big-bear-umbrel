@@ -11,7 +11,7 @@ services:
   # The `big-bear-onedev` service definition
   big-bear-onedev:
     # Image to be used for the container
-    image: 1dev/server:16.5.0@sha256:26f1482723607b34f73ce6c05f80ff150a3b0bb21e036c804bd3bdb87c934bee
+    image: 1dev/server:16.6.3@sha256:784e36be549764c9f7f7c79f37d30bc5cc2a7d0421266987ef513ae894e7a9fd
     # Container restart policy
     restart: unless-stopped
     # Volumes to be mounted to the container

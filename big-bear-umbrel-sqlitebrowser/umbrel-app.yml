@@ -1,0 +1,26 @@
+manifestVersion: 1
+id: big-bear-umbrel-sqlitebrowser
+category: Smart Home
+name: Sqlitebrowser
+version: "18.04.1"
+tagline: A high quality, visual, open source tool to create, design, and edit database files compatible with SQLite.
+description: >-
+  DB Browser for SQLite is a high quality, visual, open source tool to create, design, and edit database files compatible with SQLite. 
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: LinuxServer.io
+website: https://hub.docker.com/r/linuxserver/sqlitebrowser
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-universal-apps
+support: https://github.com/bigbeartechworld/big-bear-universal-apps/issues
+port: 3000
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+icon: https://cdn.jsdelivr.net/gh/linuxserver/docker-templates@master/linuxserver.io/img/sqlitebrowser-banner.png
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-universal-apps

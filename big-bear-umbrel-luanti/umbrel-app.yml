@@ -1,0 +1,26 @@
+manifestVersion: 1
+id: big-bear-umbrel-luanti
+category: Smart Home
+name: Luanti
+version: "5.17.0"
+tagline: (formerly Minetest) is an open source voxel game-creation platform with easy modding and game creation
+description: >-
+  Luanti (formerly Minetest) is an open source voxel game-creation platform with easy modding and game creation 
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: LinuxServer.io
+website: https://hub.docker.com/r/linuxserver/luanti
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-universal-apps
+support: https://github.com/bigbeartechworld/big-bear-universal-apps/issues
+port: 30000
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+icon: https://cdn.jsdelivr.net/gh/linuxserver/docker-templates@master/linuxserver.io/img/minetest-icon.png
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-universal-apps

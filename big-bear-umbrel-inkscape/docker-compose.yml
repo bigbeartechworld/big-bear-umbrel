@@ -1,0 +1,17 @@
+version: "3.7"
+services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-inkscape_app_1
+      APP_PORT: ' 3000'
+  app:
+    image: linuxserver/inkscape:1.4.2@sha256:aa5c7ea9077cded71525ee4db9d5a5c9452600c945e51362151a8e151e19091d
+    restart: unless-stopped
+    environment:
+      PUID: $PUID
+      PGID: $PGID
+      TZ: $TZ
+    volumes:
+      - type: bind
+        source: /DATA/AppData/inkscape/config
+        target: /config

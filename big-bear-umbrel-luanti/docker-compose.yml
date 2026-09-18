@@ -1,0 +1,18 @@
+version: "3.7"
+services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-luanti_app_1
+      APP_PORT: ' 30000'
+  app:
+    image: linuxserver/luanti:5.17.0@sha256:9411293fa6a84767923d1b310ada55eedfefd883b8093f3f7d64f3726d354e01
+    restart: unless-stopped
+    environment:
+      PUID: $PUID
+      PGID: $PGID
+      TZ: $TZ
+      CLI_ARGS: ''
+    volumes:
+      - type: bind
+        source: /DATA/AppData/luanti/config/.minetest
+        target: /config/.minetest

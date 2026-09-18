@@ -1,0 +1,26 @@
+manifestVersion: 1
+id: big-bear-umbrel-hermes
+category: BigBearCasaOS
+name: Hermes Agent
+version: "2026.9.14"
+tagline: 
+description: >-
+  Hermes Agent 0.21.3 is a self-hosted AI agent with a gateway API and an authenticated web dashboard. 
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: Nous Research
+website: https://hermes-agent.nousresearch.com/
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-universal-apps
+support: https://github.com/bigbeartechworld/big-bear-universal-apps/issues
+port: 10000
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Hermes/icon.svg
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-universal-apps

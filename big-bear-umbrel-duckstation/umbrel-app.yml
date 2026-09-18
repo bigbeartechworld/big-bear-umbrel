@@ -1,0 +1,26 @@
+manifestVersion: 1
+id: big-bear-umbrel-duckstation
+category: Smart Home
+name: Duckstation
+version: "0.0.0"
+tagline: A PS1 Emulator aiming for the best accuracy and game support.
+description: >-
+  DuckStation is a PS1 Emulator aiming for the best accuracy and game support. 
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: LinuxServer.io
+website: https://hub.docker.com/r/linuxserver/duckstation
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-universal-apps
+support: https://github.com/bigbeartechworld/big-bear-universal-apps/issues
+port: 3000
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+icon: https://cdn.jsdelivr.net/gh/linuxserver/docker-templates@master/linuxserver.io/img/duckstation-logo.png
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-universal-apps

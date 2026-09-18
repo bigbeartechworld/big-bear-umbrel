@@ -1,0 +1,17 @@
+version: "3.7"
+services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-rustdesk_app_1
+      APP_PORT: ' 3000'
+  app:
+    image: linuxserver/rustdesk:1.4.9@sha256:5637ecd8ff5b1fcaa8efbe63a272219ba2c5281bc28d22bc4fd24b9755cecbad
+    restart: unless-stopped
+    environment:
+      PUID: $PUID
+      PGID: $PGID
+      TZ: $TZ
+    volumes:
+      - type: bind
+        source: /DATA/AppData/rustdesk/config
+        target: /config

@@ -1,0 +1,18 @@
+version: "3.7"
+services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-quassel-core_app_1
+      APP_PORT: ' 4242'
+  app:
+    image: linuxserver/quassel-core:0.14.0@sha256:cefb9aa752d4db099d98be5966432e9dcd298695571c8eedc84ffc298f3258e0
+    restart: unless-stopped
+    environment:
+      PUID: $PUID
+      PGID: $PGID
+      TZ: $TZ
+      RUN_OPTS: ''
+    volumes:
+      - type: bind
+        source: /DATA/AppData/quassel-core/config
+        target: /config

@@ -1,0 +1,17 @@
+version: "3.7"
+services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-winegui_app_1
+      APP_PORT: ' 3000'
+  app:
+    image: linuxserver/winegui:4.4.0@sha256:33ca76d0ef972567372fac1b0238fe037092e6e30a9a4d925ad9d4b9ae6cea66
+    restart: unless-stopped
+    environment:
+      PUID: $PUID
+      PGID: $PGID
+      TZ: $TZ
+    volumes:
+      - type: bind
+        source: /DATA/AppData/winegui/config
+        target: /config

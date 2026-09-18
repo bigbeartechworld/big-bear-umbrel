@@ -1,0 +1,17 @@
+version: "3.7"
+services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-budge_app_1
+      APP_PORT: ' 80'
+  app:
+    image: linuxserver/budge:0.0.9@sha256:187a8087588bd1d8dc6601a81a771549fcfe3cb72388633acb5e19dea11f338e
+    restart: unless-stopped
+    environment:
+      PUID: $PUID
+      PGID: $PGID
+      TZ: $TZ
+    volumes:
+      - type: bind
+        source: /DATA/AppData/budge/config
+        target: /config

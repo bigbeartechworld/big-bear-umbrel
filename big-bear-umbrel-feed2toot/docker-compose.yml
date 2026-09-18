@@ -1,0 +1,18 @@
+version: "3.7"
+services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-feed2toot_app_1
+      APP_PORT: "8080"
+  app:
+    image: linuxserver/feed2toot:0.17.20251115@sha256:59e3ea300189052aba25c527a3501ade5c3a57466761c8a1e0ab1c8bdf90170d
+    restart: unless-stopped
+    environment:
+      PUID: $PUID
+      PGID: $PGID
+      TZ: $TZ
+      FEED_LIMIT: ''
+    volumes:
+      - type: bind
+        source: /DATA/AppData/feed2toot/config
+        target: /config

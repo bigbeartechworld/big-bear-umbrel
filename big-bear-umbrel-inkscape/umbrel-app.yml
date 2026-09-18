@@ -1,0 +1,26 @@
+manifestVersion: 1
+id: big-bear-umbrel-inkscape
+category: Smart Home
+name: Inkscape
+version: "1.4.2"
+tagline: Professional quality vector graphics software which runs on Linux, Mac OS X and Windows desktop computers.
+description: >-
+  Inkscape is professional quality vector graphics software which runs on Linux, Mac OS X and Windows desktop computers. 
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: LinuxServer.io
+website: https://hub.docker.com/r/linuxserver/inkscape
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-universal-apps
+support: https://github.com/bigbeartechworld/big-bear-universal-apps/issues
+port: 3000
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+icon: https://cdn.jsdelivr.net/gh/linuxserver/docker-templates@master/linuxserver.io/img/inkscape-logo.png
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-universal-apps

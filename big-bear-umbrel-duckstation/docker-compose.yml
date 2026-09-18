@@ -1,0 +1,17 @@
+version: "3.7"
+services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-duckstation_app_1
+      APP_PORT: ' 3000'
+  app:
+    image: linuxserver/duckstation:version-latest@sha256:872b926dd713e13f06dac7135b13fa1f3ff4bc40eaabcb3ef01d8eaa16e6d34d
+    restart: unless-stopped
+    environment:
+      PUID: $PUID
+      PGID: $PGID
+      TZ: $TZ
+    volumes:
+      - type: bind
+        source: /DATA/AppData/duckstation/config
+        target: /config

@@ -1,0 +1,18 @@
+version: "3.7"
+services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-vivaldi_app_1
+      APP_PORT: ' 3000'
+  app:
+    image: linuxserver/vivaldi:8.2.4133@sha256:a73b59cc021e2d6425d0a884a4d1f440808125bdb6c2c191723eef332b980bf6
+    restart: unless-stopped
+    environment:
+      PUID: $PUID
+      PGID: $PGID
+      TZ: $TZ
+      VIVALDI_CLI: ''
+    volumes:
+      - type: bind
+        source: /DATA/AppData/vivaldi/config
+        target: /config

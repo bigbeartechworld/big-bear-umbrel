@@ -1,0 +1,17 @@
+version: "3.7"
+services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-digikam_app_1
+      APP_PORT: ' 3000'
+  app:
+    image: linuxserver/digikam:9.1.0@sha256:cc7c9a87b40d05996fe026a5ff206df1f9c89cdde3f11dc838c44df29aea56b0
+    restart: unless-stopped
+    environment:
+      PUID: $PUID
+      PGID: $PGID
+      TZ: $TZ
+    volumes:
+      - type: bind
+        source: /DATA/AppData/digikam/config
+        target: /config

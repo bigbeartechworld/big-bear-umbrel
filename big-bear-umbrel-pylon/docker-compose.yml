@@ -1,0 +1,23 @@
+version: "3.7"
+services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-pylon_app_1
+      APP_PORT: ' 3131'
+  app:
+    image: linuxserver/pylon:2.10.0@sha256:5552a0c4b42f1e09a1146d2265c790fb2833128ec3ea9ebf1b0c634d40784e01
+    restart: unless-stopped
+    environment:
+      PUID: $PUID
+      PGID: $PGID
+      TZ: $TZ
+      GITURL: ''
+      PYUSER: ''
+      PYPASS: ''
+    volumes:
+      - type: bind
+        source: /DATA/AppData/pylon/config
+        target: /config
+      - type: bind
+        source: /DATA/AppData/pylon/code
+        target: /code

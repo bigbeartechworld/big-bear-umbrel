@@ -1,0 +1,23 @@
+version: "3.7"
+services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-beets_app_1
+      APP_PORT: ' 8337'
+  app:
+    image: linuxserver/beets:2.14.0@sha256:748b6fcdece5f3142cb555a4219b52ad9b9352763db02329ebe4dc3e21bce74d
+    restart: unless-stopped
+    environment:
+      PUID: $PUID
+      PGID: $PGID
+      TZ: $TZ
+    volumes:
+      - type: bind
+        source: /DATA/AppData/beets/config
+        target: /config
+      - type: bind
+        source: /DATA/AppData/beets/music
+        target: /music
+      - type: bind
+        source: /DATA/AppData/beets/downloads
+        target: /downloads

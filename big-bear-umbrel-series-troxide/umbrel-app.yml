@@ -1,0 +1,26 @@
+manifestVersion: 1
+id: big-bear-umbrel-series-troxide
+category: Other
+name: Series-troxide
+version: "0.5.1"
+tagline: A Simple and Modern Series Tracker
+description: >-
+  Series Troxide a Simple and Modern Series Tracker 
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: LinuxServer.io
+website: https://hub.docker.com/r/linuxserver/series-troxide
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-universal-apps
+support: https://github.com/bigbeartechworld/big-bear-universal-apps/issues
+port: 3000
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+icon: https://cdn.jsdelivr.net/gh/linuxserver/docker-templates@master/linuxserver.io/img/series-troxide-logo.png
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-universal-apps

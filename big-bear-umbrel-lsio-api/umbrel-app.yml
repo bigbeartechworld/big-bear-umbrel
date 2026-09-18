@@ -1,0 +1,26 @@
+manifestVersion: 1
+id: big-bear-umbrel-lsio-api
+category: Other
+name: Lsio-api
+version: "0.0.0"
+tagline: "This container needs special attention. Please check https://hub. Docker. Com/r/linuxserver/lsio-api for details."
+description: >-
+  This container needs special attention. Please check https://hub.docker.com/r/linuxserver/lsio-api for details. 
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: LinuxServer.io
+website: https://hub.docker.com/r/linuxserver/lsio-api
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-universal-apps
+support: https://github.com/bigbeartechworld/big-bear-universal-apps/issues
+port: 80
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+icon: https://cdn.jsdelivr.net/gh/WisdomSky/CasaOS-LinuxServer-AppStore@main/default-icon.svg
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-universal-apps

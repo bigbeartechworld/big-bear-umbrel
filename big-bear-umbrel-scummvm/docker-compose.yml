@@ -1,0 +1,17 @@
+version: "3.7"
+services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-scummvm_app_1
+      APP_PORT: ' 3000'
+  app:
+    image: linuxserver/scummvm:2026.3.0@sha256:29555e536d0ff5defb1166a8b17c23a1a6e5d206233410b167d36c0f791fd2b5
+    restart: unless-stopped
+    environment:
+      PUID: $PUID
+      PGID: $PGID
+      TZ: $TZ
+    volumes:
+      - type: bind
+        source: /DATA/AppData/scummvm/config
+        target: /config

@@ -1,0 +1,17 @@
+version: "3.7"
+services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-blade-of-agony_app_1
+      APP_PORT: ' 3000'
+  app:
+    image: linuxserver/blade-of-agony:3.1.20260910@sha256:94847e367511092748d764e6a83a72e9d7f7bfa3fc9da5ac7172c46eed5b28f6
+    restart: unless-stopped
+    environment:
+      PUID: $PUID
+      PGID: $PGID
+      TZ: $TZ
+    volumes:
+      - type: bind
+        source: /DATA/AppData/blade-of-agony/config
+        target: /config

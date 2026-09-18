@@ -1,0 +1,17 @@
+version: "3.7"
+services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-intellij-idea_app_1
+      APP_PORT: ' 3000'
+  app:
+    image: linuxserver/intellij-idea:42026.2.2@sha256:0bcb707fd86f9238abed6a531ba88d6776dbf8ccdc75bdaa38c571e71bce876e
+    restart: unless-stopped
+    environment:
+      PUID: $PUID
+      PGID: $PGID
+      TZ: $TZ
+    volumes:
+      - type: bind
+        source: /DATA/AppData/intellij-idea/config
+        target: /config

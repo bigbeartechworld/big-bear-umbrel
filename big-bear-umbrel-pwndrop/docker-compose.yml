@@ -1,0 +1,18 @@
+version: "3.7"
+services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-pwndrop_app_1
+      APP_PORT: ' 8080'
+  app:
+    image: linuxserver/pwndrop:1.0.1@sha256:c81021c92464579cdfc9fa686ffa44f81a132b679fc8f3b6fbe3cfbeec423582
+    restart: unless-stopped
+    environment:
+      PUID: $PUID
+      PGID: $PGID
+      TZ: $TZ
+      SECRET_PATH: ''
+    volumes:
+      - type: bind
+        source: /DATA/AppData/pwndrop/config
+        target: /config

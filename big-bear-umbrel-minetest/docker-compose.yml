@@ -1,0 +1,18 @@
+version: "3.7"
+services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-minetest_app_1
+      APP_PORT: ' 30000'
+  app:
+    image: linuxserver/minetest:5.10.0@sha256:781e50480e4027145d2c81f5cbf6632df40ef0a2b5781682cd149ce58bea305e
+    restart: unless-stopped
+    environment:
+      PUID: $PUID
+      PGID: $PGID
+      TZ: $TZ
+      CLI_ARGS: ''
+    volumes:
+      - type: bind
+        source: /DATA/AppData/minetest/config/.minetest
+        target: /config/.minetest

@@ -1,0 +1,17 @@
+version: "3.7"
+services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-pcsx2_app_1
+      APP_PORT: ' 3000'
+  app:
+    image: linuxserver/pcsx2:2.8.2@sha256:adad5a2ca1d2fa58cc39fd4212ae20e7fcc730045e67f271a1ea491e442d30f9
+    restart: unless-stopped
+    environment:
+      PUID: $PUID
+      PGID: $PGID
+      TZ: $TZ
+    volumes:
+      - type: bind
+        source: /DATA/AppData/pcsx2/config
+        target: /config

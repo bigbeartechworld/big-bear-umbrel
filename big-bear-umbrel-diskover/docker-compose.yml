@@ -1,0 +1,22 @@
+version: "3.7"
+services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-diskover_app_1
+      APP_PORT: ' 80'
+  app:
+    image: linuxserver/diskover:2.3.5@sha256:7cef36aff4aa3b664fc58c8a71021453a0b22bc156cb47b7fac3a601c78de880
+    restart: unless-stopped
+    environment:
+      PUID: $PUID
+      PGID: $PGID
+      TZ: $TZ
+      ES_HOST: ''
+      ES_PORT: ''
+    volumes:
+      - type: bind
+        source: /DATA/AppData/diskover/config
+        target: /config
+      - type: bind
+        source: /DATA/AppData/diskover/data
+        target: /data

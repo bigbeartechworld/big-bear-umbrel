@@ -1,0 +1,18 @@
+version: "3.7"
+services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-ungoogled-chromium_app_1
+      APP_PORT: ' 3000'
+  app:
+    image: linuxserver/ungoogled-chromium:153.0.8010@sha256:d7d68f4848e2d5b2b9d553111e9ac08ee44433622a8692338659ce52d0368e66
+    restart: unless-stopped
+    environment:
+      PUID: $PUID
+      PGID: $PGID
+      TZ: $TZ
+      CHROME_CLI: ''
+    volumes:
+      - type: bind
+        source: /DATA/AppData/ungoogled-chromium/config
+        target: /config

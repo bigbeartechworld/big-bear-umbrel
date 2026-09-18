@@ -1,0 +1,17 @@
+version: "3.7"
+services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-python_app_1
+      APP_PORT: ' 80'
+  app:
+    image: linuxserver/python:3.14.7@sha256:a8c71ea50391142aad8e20e6b9bdb764b808ddb55b4fbe2abeb8a9ac150ee4d7
+    restart: unless-stopped
+    environment:
+      PUID: $PUID
+      PGID: $PGID
+      TZ: $TZ
+    volumes:
+      - type: bind
+        source: /DATA/AppData/python/config
+        target: /config

@@ -1,0 +1,27 @@
+version: "3.7"
+services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-steamos_app_1
+      APP_PORT: ' 3000'
+  app:
+    image: linuxserver/steamos:version-2024-12-20@sha256:04adf2c7af1c97c7cf9d8949aebeeaa8ccfc672e24e6bbebe72a95b06013f5af
+    restart: unless-stopped
+    environment:
+      PUID: $PUID
+      PGID: $PGID
+      TZ: $TZ
+      DRINODE: ''
+      HOST_IP: ''
+      STARTUP: ''
+      RESOLUTION: ''
+    volumes:
+      - type: bind
+        source: /DATA/AppData/steamos/config
+        target: /config
+      - type: bind
+        source: /dev/input
+        target: /dev/input
+      - type: bind
+        source: /run/udev/data
+        target: /run/udev/data

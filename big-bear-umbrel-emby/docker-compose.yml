@@ -1,0 +1,26 @@
+version: "3.7"
+services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-emby_app_1
+      APP_PORT: ' 8096'
+  app:
+    image: linuxserver/emby:4.10.0@sha256:2b5be3e424c095722f1d8eeac86d74d8e5b5b5323bcfdb68da45c688b5b1a477
+    restart: unless-stopped
+    environment:
+      PUID: $PUID
+      PGID: $PGID
+      TZ: $TZ
+    volumes:
+      - type: bind
+        source: /DATA/AppData/emby/config
+        target: /config
+      - type: bind
+        source: /DATA/AppData/emby/data/tvshows
+        target: /data/tvshows
+      - type: bind
+        source: /DATA/AppData/emby/data/movies
+        target: /data/movies
+      - type: bind
+        source: /opt/vc/lib
+        target: /opt/vc/lib

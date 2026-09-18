@@ -1,0 +1,17 @@
+version: "3.7"
+services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-darktable_app_1
+      APP_PORT: ' 3000'
+  app:
+    image: linuxserver/darktable:25.6.1@sha256:00ddd5b849bc499a73a5b40326a40eb444cb2d0ea17c86aff529779e7a5b5b70
+    restart: unless-stopped
+    environment:
+      PUID: $PUID
+      PGID: $PGID
+      TZ: $TZ
+    volumes:
+      - type: bind
+        source: /DATA/AppData/darktable/config
+        target: /config

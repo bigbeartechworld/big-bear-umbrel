@@ -1,0 +1,17 @@
+version: "3.7"
+services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-lsio-api_app_1
+      APP_PORT: ' 80'
+  app:
+    image: linuxserver/lsio-api:version-9eda67ec@sha256:374295622f0cc2e951b2f2b7b431fa1718102d2145335cee84b8c24ce72f46fb
+    restart: unless-stopped
+    environment:
+      PUID: $PUID
+      PGID: $PGID
+      TZ: $TZ
+    volumes:
+      - type: bind
+        source: /DATA/AppData/lsio-api/config
+        target: /config

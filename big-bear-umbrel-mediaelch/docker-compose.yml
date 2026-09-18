@@ -1,0 +1,17 @@
+version: "3.7"
+services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-mediaelch_app_1
+      APP_PORT: ' 3000'
+  app:
+    image: linuxserver/mediaelch:2.12.0@sha256:34f164fb5422b96e4c8f2f6759f8b10872f160d5342c19fc9f11b53cc561ecf2
+    restart: unless-stopped
+    environment:
+      PUID: $PUID
+      PGID: $PGID
+      TZ: $TZ
+    volumes:
+      - type: bind
+        source: /DATA/AppData/mediaelch/config
+        target: /config

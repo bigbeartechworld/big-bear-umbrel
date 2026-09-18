@@ -1,0 +1,26 @@
+manifestVersion: 1
+id: big-bear-umbrel-manyfold
+category: Smart Home
+name: Manyfold
+version: "0.149.0"
+tagline: An open source, self-hosted web application for managing a collection of 3D models, particularly focused on 3D printing.
+description: >-
+  Manyfold is an open source, self-hosted web application for managing a collection of 3D models, particularly focused on 3D printing. 
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: LinuxServer.io
+website: https://hub.docker.com/r/linuxserver/manyfold
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-universal-apps
+support: https://github.com/bigbeartechworld/big-bear-universal-apps/issues
+port: 3214
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/manyfold.png
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-universal-apps

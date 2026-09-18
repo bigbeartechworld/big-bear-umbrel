@@ -1,0 +1,18 @@
+version: "3.7"
+services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-minisatip_app_1
+      APP_PORT: ' 8875'
+  app:
+    image: linuxserver/minisatip:2.0.103@sha256:3ff7892f3cdf3fa3dd0f90f526fb345837febf86b8f11d8f680ec09612fbc6f2
+    restart: unless-stopped
+    environment:
+      PUID: $PUID
+      PGID: $PGID
+      TZ: $TZ
+      RUN_OPTS: ''
+    volumes:
+      - type: bind
+        source: /DATA/AppData/minisatip/config
+        target: /config

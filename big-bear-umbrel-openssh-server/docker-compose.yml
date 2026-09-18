@@ -1,0 +1,27 @@
+version: "3.7"
+services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-openssh-server_app_1
+      APP_PORT: ' 2222'
+  app:
+    image: linuxserver/openssh-server:version-10.3_p1-r1@sha256:39ba37d50fdd6be1bf70644c871e5dcb9234ee79ac56424ea03ca08cadf1e7b0
+    restart: unless-stopped
+    environment:
+      PUID: $PUID
+      PGID: $PGID
+      TZ: $TZ
+      PUBLIC_KEY: ''
+      PUBLIC_KEY_FILE: ''
+      PUBLIC_KEY_DIR: ''
+      PUBLIC_KEY_URL: ''
+      SUDO_ACCESS: ''
+      PASSWORD_ACCESS: ''
+      USER_PASSWORD: ''
+      USER_PASSWORD_FILE: ''
+      USER_NAME: ''
+      LOG_STDOUT: ''
+    volumes:
+      - type: bind
+        source: /DATA/AppData/openssh-server/config
+        target: /config

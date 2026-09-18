@@ -1,0 +1,26 @@
+manifestVersion: 1
+id: big-bear-umbrel-mastodon
+category: Smart Home
+name: Mastodon
+version: "4.7.2"
+tagline: A free, open-source social network server based on ActivityPub where users can follow friends and discover new ones. .
+description: >-
+  Mastodon is a free, open-source social network server based on ActivityPub where users can follow friends and discover new ones.. 
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: LinuxServer.io
+website: https://hub.docker.com/r/linuxserver/mastodon
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-universal-apps
+support: https://github.com/bigbeartechworld/big-bear-universal-apps/issues
+port: 80
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+icon: https://cdn.jsdelivr.net/gh/linuxserver/docker-templates@master/linuxserver.io/img/mastodon-banner.png
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-universal-apps

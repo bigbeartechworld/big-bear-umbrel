@@ -1,0 +1,17 @@
+version: "3.7"
+services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-thunderbird_app_1
+      APP_PORT: ' 3000'
+  app:
+    image: linuxserver/thunderbird:1140.16.0@sha256:483ca2ea649031debad626df3f122e4399849d911483aed1f1623a78b56e7d79
+    restart: unless-stopped
+    environment:
+      PUID: $PUID
+      PGID: $PGID
+      TZ: $TZ
+    volumes:
+      - type: bind
+        source: /DATA/AppData/thunderbird/config
+        target: /config

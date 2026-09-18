@@ -1,0 +1,26 @@
+manifestVersion: 1
+id: big-bear-umbrel-kitchenowl
+category: BigBearCasaOS
+name: KitchenOwl
+version: "v0.7.10"
+tagline: Self-hosted grocery list and recipe manager
+description: >-
+  KitchenOwl is a self-hosted grocery list and recipe manager. Track what you need to buy, add recipes, plan meals, and sync your household shopping lists across all your devices in real time. 
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: TomBursch
+website: https://kitchenowl.org
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-universal-apps
+support: https://github.com/bigbeartechworld/big-bear-universal-apps/issues
+port: 10287
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/kitchenowl.png
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-universal-apps

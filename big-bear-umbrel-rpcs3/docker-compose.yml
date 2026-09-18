@@ -1,0 +1,17 @@
+version: "3.7"
+services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-rpcs3_app_1
+      APP_PORT: ' 3000'
+  app:
+    image: linuxserver/rpcs3:version-build-92721aedfe9dda00caae25a7aaf7e6b7d07213d0@sha256:1438172a71f2ee930c91755c69b7b54d894d4eb2b2be2904ad64a5a6e3099cb7
+    restart: unless-stopped
+    environment:
+      PUID: $PUID
+      PGID: $PGID
+      TZ: $TZ
+    volumes:
+      - type: bind
+        source: /DATA/AppData/rpcs3/config
+        target: /config

@@ -1,0 +1,17 @@
+version: "3.7"
+services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-pelorus_app_1
+      APP_PORT: ' 3001'
+  app:
+    image: linuxserver/pelorus:0.2.3@sha256:d91ea4e4479e43200ae796000f1999bf9aa6fd8b92eb4bd38a4c96f0e8557d84
+    restart: unless-stopped
+    environment:
+      PUID: $PUID
+      PGID: $PGID
+      TZ: $TZ
+    volumes:
+      - type: bind
+        source: /DATA/AppData/pelorus/config
+        target: /config

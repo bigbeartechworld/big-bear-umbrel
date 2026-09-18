@@ -1,0 +1,17 @@
+version: "3.7"
+services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-shadps4_app_1
+      APP_PORT: ' 3000'
+  app:
+    image: linuxserver/shadps4:version-shadPS4QtLauncher-2026-09-12-864dc30bc5372d7ad95ef609188942ecd77bf6f4@sha256:c15058c8d9ce5b5a0e1cd0b570296b3696f85d5e92274e9a0ef1e4da369b0560
+    restart: unless-stopped
+    environment:
+      PUID: $PUID
+      PGID: $PGID
+      TZ: $TZ
+    volumes:
+      - type: bind
+        source: /DATA/AppData/shadps4/config
+        target: /config

@@ -1,0 +1,17 @@
+version: "3.7"
+services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-ci-debug_app_1
+      APP_PORT: ' 80'
+  app:
+    image: linuxserver/ci-debug:933e2702-ls1@sha256:ad48184795f11c6e231a845bf844eda0f00dc071f98eab3ba445643d17e53357
+    restart: unless-stopped
+    environment:
+      PUID: $PUID
+      PGID: $PGID
+      TZ: $TZ
+    volumes:
+      - type: bind
+        source: /DATA/AppData/ci-debug/config
+        target: /config

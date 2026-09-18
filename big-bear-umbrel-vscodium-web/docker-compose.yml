@@ -1,0 +1,22 @@
+version: "3.7"
+services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-vscodium-web_app_1
+      APP_PORT: ' 8000'
+  app:
+    image: linuxserver/vscodium-web:1.135.06055@sha256:8d2cc3e425c15274f79cac90222e1a39c19ec866bbffd9ecc65d2f74fbc4fd8e
+    restart: unless-stopped
+    environment:
+      PUID: $PUID
+      PGID: $PGID
+      TZ: $TZ
+      CONNECTION_TOKEN: ''
+      CONNECTION_TOKEN_FILE: ''
+      SUDO_PASSWORD: ''
+      SUDO_PASSWORD_HASH: ''
+      CODE_ARGS: ''
+    volumes:
+      - type: bind
+        source: /DATA/AppData/vscodium-web/config
+        target: /config

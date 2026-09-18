@@ -1,0 +1,26 @@
+manifestVersion: 1
+id: big-bear-umbrel-feed2toot
+category: Other
+name: Feed2toot
+version: "0.17.20251115"
+tagline: Automatically parses rss feeds, identifies new posts and posts them on the Mastodon social network. 
+description: >-
+  Feed2toot automatically parses rss feeds, identifies new posts and posts them on the Mastodon social network. 
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: LinuxServer.io
+website: https://hub.docker.com/r/linuxserver/feed2toot
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-universal-apps
+support: https://github.com/bigbeartechworld/big-bear-universal-apps/issues
+port: 8080
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+icon: https://cdn.jsdelivr.net/gh/WisdomSky/CasaOS-LinuxServer-AppStore@main/default-icon.svg
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-universal-apps

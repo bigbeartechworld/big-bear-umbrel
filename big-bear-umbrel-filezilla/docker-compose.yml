@@ -1,0 +1,17 @@
+version: "3.7"
+services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-filezilla_app_1
+      APP_PORT: ' 3000'
+  app:
+    image: linuxserver/filezilla:3.69.6@sha256:0115048da2837b65e16de32d2d786bac27ceea15ca7dcc5cd3108fc5c9c74085
+    restart: unless-stopped
+    environment:
+      PUID: $PUID
+      PGID: $PGID
+      TZ: $TZ
+    volumes:
+      - type: bind
+        source: /DATA/AppData/filezilla/config
+        target: /config

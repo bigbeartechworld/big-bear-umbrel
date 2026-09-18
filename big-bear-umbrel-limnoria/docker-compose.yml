@@ -1,0 +1,17 @@
+version: "3.7"
+services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-limnoria_app_1
+      APP_PORT: ' 8080'
+  app:
+    image: linuxserver/limnoria:2026.5.8@sha256:9ff75185e9c38e214bac5b97994fec11b39d7d0d1096541399d0874c88c6c2ff
+    restart: unless-stopped
+    environment:
+      PUID: $PUID
+      PGID: $PGID
+      TZ: $TZ
+    volumes:
+      - type: bind
+        source: /DATA/AppData/limnoria/config
+        target: /config

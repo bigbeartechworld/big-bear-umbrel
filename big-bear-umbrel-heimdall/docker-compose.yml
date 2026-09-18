@@ -1,0 +1,18 @@
+version: "3.7"
+services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-heimdall_app_1
+      APP_PORT: ' 80'
+  app:
+    image: linuxserver/heimdall:2.8.3@sha256:f9b43b696fcbf52f3b20a0121efd3e895543dd085ed13edb54593d614e65eb7a
+    restart: unless-stopped
+    environment:
+      PUID: $PUID
+      PGID: $PGID
+      TZ: $TZ
+      ALLOW_INTERNAL_REQUESTS: ''
+    volumes:
+      - type: bind
+        source: /DATA/AppData/heimdall/config
+        target: /config

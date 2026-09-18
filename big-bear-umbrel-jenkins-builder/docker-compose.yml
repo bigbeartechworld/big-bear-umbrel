@@ -1,0 +1,17 @@
+version: "3.7"
+services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-jenkins-builder_app_1
+      APP_PORT: ' 80'
+  app:
+    image: linuxserver/jenkins-builder:version-4f81ddbe@sha256:dd7cfe3b09302fafc36be18dd4e3030c6318a1f750324e420b16319d4d67d579
+    restart: unless-stopped
+    environment:
+      PUID: $PUID
+      PGID: $PGID
+      TZ: $TZ
+    volumes:
+      - type: bind
+        source: /DATA/AppData/jenkins-builder/config
+        target: /config

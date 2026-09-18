@@ -1,0 +1,17 @@
+version: "3.7"
+services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-gitqlient_app_1
+      APP_PORT: ' 3000'
+  app:
+    image: linuxserver/gitqlient:1.6.3@sha256:4e1835de2a8c259e25a281f3b563cea2318578ecd85917a88e8c199f3d39ccd6
+    restart: unless-stopped
+    environment:
+      PUID: $PUID
+      PGID: $PGID
+      TZ: $TZ
+    volumes:
+      - type: bind
+        source: /DATA/AppData/gitqlient/config
+        target: /config

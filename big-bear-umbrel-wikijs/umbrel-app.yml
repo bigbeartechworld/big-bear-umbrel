@@ -1,0 +1,26 @@
+manifestVersion: 1
+id: big-bear-umbrel-wikijs
+category: Smart Home
+name: Wikijs
+version: "2.5.314"
+tagline: A modern, lightweight and powerful wiki app built on NodeJS.
+description: >-
+  Wikijs A modern, lightweight and powerful wiki app built on NodeJS. 
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: LinuxServer.io
+website: https://hub.docker.com/r/linuxserver/wikijs
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-universal-apps
+support: https://github.com/bigbeartechworld/big-bear-universal-apps/issues
+port: 3000
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+icon: https://images.weserv.nl/?url=https%3A%2F%2Fstatic.requarks.io%2Flogo%2Fwikijs-full.svg
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-universal-apps

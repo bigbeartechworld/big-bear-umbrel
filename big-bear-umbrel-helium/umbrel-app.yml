@@ -1,0 +1,26 @@
+manifestVersion: 1
+id: big-bear-umbrel-helium
+category: Smart Home
+name: Helium
+version: "0.17.1"
+tagline: A Chromium-based web browser made for people, with love. Privacy-first with unbiased ad-blocking.
+description: >-
+  Helium is a Chromium-based web browser made for people, with love. Privacy-first with unbiased ad-blocking. 
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: LinuxServer.io
+website: https://hub.docker.com/r/linuxserver/helium
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-universal-apps
+support: https://github.com/bigbeartechworld/big-bear-universal-apps/issues
+port: 3000
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+icon: https://cdn.jsdelivr.net/gh/linuxserver/docker-templates@master/linuxserver.io/img/helium-logo.png
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-universal-apps

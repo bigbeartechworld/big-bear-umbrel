@@ -1,0 +1,17 @@
+version: "3.7"
+services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-wps-office_app_1
+      APP_PORT: ' 3000'
+  app:
+    image: linuxserver/wps-office:11.1.0@sha256:8806d61b77e5da44b2e8e1505d1acd83475b2540ed57109a542c9e8e19f40691
+    restart: unless-stopped
+    environment:
+      PUID: $PUID
+      PGID: $PGID
+      TZ: $TZ
+    volumes:
+      - type: bind
+        source: /DATA/AppData/wps-office/config
+        target: /config

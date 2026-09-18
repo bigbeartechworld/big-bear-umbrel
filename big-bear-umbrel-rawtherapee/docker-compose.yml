@@ -1,0 +1,17 @@
+version: "3.7"
+services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-rawtherapee_app_1
+      APP_PORT: ' 3000'
+  app:
+    image: linuxserver/rawtherapee:5.13.20260913@sha256:7844c0ba8a6cf27ba045a1c80fdfb5b06425709f009602024e50d348b77bbc17
+    restart: unless-stopped
+    environment:
+      PUID: $PUID
+      PGID: $PGID
+      TZ: $TZ
+    volumes:
+      - type: bind
+        source: /DATA/AppData/rawtherapee/config
+        target: /config

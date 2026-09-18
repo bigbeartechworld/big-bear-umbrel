@@ -1,0 +1,17 @@
+version: "3.7"
+services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-libreoffice_app_1
+      APP_PORT: ' 3000'
+  app:
+    image: linuxserver/libreoffice:25.8.7@sha256:fb3d8001632fc26a3dd9d0ee9b6a8bde0f2d8156f5e633014d5e93a8c103c3e6
+    restart: unless-stopped
+    environment:
+      PUID: $PUID
+      PGID: $PGID
+      TZ: $TZ
+    volumes:
+      - type: bind
+        source: /DATA/AppData/libreoffice/config
+        target: /config

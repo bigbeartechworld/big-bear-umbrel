@@ -1,0 +1,28 @@
+version: "3.7"
+services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-wireguard_app_1
+      APP_PORT: ' 51820'
+  app:
+    image: linuxserver/wireguard:1.0.20260223@sha256:dca67384e3e9a5bcc288461fa983e6fcb0e248e5a2d8e5b3e5d3f753bfac3e35
+    restart: unless-stopped
+    environment:
+      PUID: $PUID
+      PGID: $PGID
+      TZ: $TZ
+      SERVERURL: ''
+      SERVERPORT: ''
+      PEERS: ''
+      PEERDNS: ''
+      INTERNAL_SUBNET: ''
+      ALLOWEDIPS: ''
+      PERSISTENTKEEPALIVE_PEERS: ''
+      LOG_CONFS: ''
+    volumes:
+      - type: bind
+        source: /DATA/AppData/wireguard/config
+        target: /config
+      - type: bind
+        source: /lib/modules
+        target: /lib/modules

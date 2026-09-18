@@ -1,0 +1,17 @@
+version: "3.7"
+services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-freecad_app_1
+      APP_PORT: ' 3000'
+  app:
+    image: linuxserver/freecad:1.1.3@sha256:4f56100b99cfc8d967b0c15a34dd86f7a48b42cd318dfd40802fa40cf5a421ea
+    restart: unless-stopped
+    environment:
+      PUID: $PUID
+      PGID: $PGID
+      TZ: $TZ
+    volumes:
+      - type: bind
+        source: /DATA/AppData/freecad/config
+        target: /config

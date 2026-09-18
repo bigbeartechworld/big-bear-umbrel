@@ -1,0 +1,21 @@
+version: "3.7"
+services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-apprise-api_app_1
+      APP_PORT: ' 8000'
+  app:
+    image: linuxserver/apprise-api:1.5.4@sha256:499e551ec5f7711356df5f9ffb5a262eab4a926fee38fb944fd01a0cf5d70e52
+    restart: unless-stopped
+    environment:
+      PUID: $PUID
+      PGID: $PGID
+      TZ: $TZ
+      APPRISE_ATTACH_SIZE: ''
+    volumes:
+      - type: bind
+        source: /DATA/AppData/apprise-api/config
+        target: /config
+      - type: bind
+        source: /DATA/AppData/apprise-api/attachments
+        target: /attachments

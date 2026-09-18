@@ -1,0 +1,26 @@
+manifestVersion: 1
+id: big-bear-umbrel-netboot-xyz
+category: BigBearCasaOS
+name: netboot.xyz
+version: "0.7.6-nbxyz24"
+tagline: Network boot menu (iPXE) with TFTP and a web UI
+description: >-
+  netboot.xyz is a PXE app: an iPXE menu that boots OS installers and utilities over the network. This Universal App wraps the official container (web UI, TFTP, local asset HTTP). It does not run DHCP; point the LAN DHCP next-server and bootfile at this host. 
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: netbootxyz
+website: https://netboot.xyz
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-universal-apps
+support: https://github.com/bigbeartechworld/big-bear-universal-apps/issues
+port: 10196
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/netboot-xyz.png
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-universal-apps

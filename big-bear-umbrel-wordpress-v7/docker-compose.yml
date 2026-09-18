@@ -33,7 +33,7 @@ services:
   # Service definition for the main application
   app:
     # Docker image to use for the application
-    image: wordpress:7.0.4@sha256:b427cec767f5de2aa649390cb8805aa1fe320e1e0d57fc1f467754edb6cc0a49
+    image: wordpress:7.1.0@sha256:74103f21d460e96abdee0dc304852a00823950bef3cb343ba855e19b6983c31d
     # Environment variables for the application
     environment:
       WORDPRESS_DB_HOST: db

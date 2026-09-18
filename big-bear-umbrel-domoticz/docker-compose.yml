@@ -1,0 +1,19 @@
+version: "3.7"
+services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-domoticz_app_1
+      APP_PORT: ' 8080'
+  app:
+    image: linuxserver/domoticz:2023.2.20231129@sha256:db5939da7ee7979a2a29ac455f5bee6646d59ef32f3ea20a3be0d77667ef8428
+    restart: unless-stopped
+    environment:
+      PUID: $PUID
+      PGID: $PGID
+      TZ: $TZ
+      WEBROOT: ''
+      DBASE: ''
+    volumes:
+      - type: bind
+        source: /DATA/AppData/domoticz/config
+        target: /config

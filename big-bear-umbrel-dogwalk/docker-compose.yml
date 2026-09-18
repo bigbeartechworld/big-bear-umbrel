@@ -1,0 +1,17 @@
+version: "3.7"
+services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-dogwalk_app_1
+      APP_PORT: ' 3000'
+  app:
+    image: linuxserver/dogwalk:version-b93769c4@sha256:bda9bb4effc4f9cb23845f52c277e3956e80a5e10e8319295dd81b104d17916c
+    restart: unless-stopped
+    environment:
+      PUID: $PUID
+      PGID: $PGID
+      TZ: $TZ
+    volumes:
+      - type: bind
+        source: /DATA/AppData/dogwalk/config
+        target: /config

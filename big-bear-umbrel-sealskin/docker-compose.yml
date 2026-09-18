@@ -1,0 +1,24 @@
+version: "3.7"
+services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-sealskin_app_1
+      APP_PORT: ' 8443'
+  app:
+    image: linuxserver/sealskin:0.3.2@sha256:d959efd23b736460d3e36a86ef6d4765302693f081bc82ef08cedaeefc5769e5
+    restart: unless-stopped
+    environment:
+      PUID: $PUID
+      PGID: $PGID
+      TZ: $TZ
+      HOST_URL: ''
+    volumes:
+      - type: bind
+        source: /DATA/AppData/sealskin/config
+        target: /config
+      - type: bind
+        source: /DATA/AppData/sealskin/storage
+        target: /storage
+      - type: bind
+        source: /var/run/docker.sock
+        target: /var/run/docker.sock

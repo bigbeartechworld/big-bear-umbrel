@@ -2,7 +2,7 @@ manifestVersion: 1
 id: big-bear-umbrel-2fauth
 category: BigBearCasaOS
 name: 2FAuth
-version: "8.0.1"
+version: "8.0.2"
 tagline: A Web app to manage your Two-Factor Authentication (2FA) accounts and generate their security codes
 description: >-
   A Web app to manage your Two-Factor Authentication (2FA) accounts and generate their security codes 
@@ -21,6 +21,6 @@ gallery:
 path: ""
 defaultUsername: ""
 defaultPassword: ""
-icon: https://user-images.githubusercontent.com/1289128/276442834-bdb528d0-78fa-4155-ba15-7165d88b9836.png
+icon: https://images.weserv.nl/?url=https%3A%2F%2Fuser-images.githubusercontent.com%2F1289128%2F276442834-bdb528d0-78fa-4155-ba15-7165d88b9836.png
 submitter: BigBearTechWorld
 submission: https://github.com/bigbeartechworld/big-bear-universal-apps
