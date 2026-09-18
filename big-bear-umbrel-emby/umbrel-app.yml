@@ -1,0 +1,26 @@
+manifestVersion: 1
+id: big-bear-umbrel-emby
+category: Smart Home
+name: Emby
+version: "4.10.0"
+tagline: Organizes video, music, live TV, and photos from personal media libraries and streams them to smart TVs, streaming boxes and mobile devices. This container is packaged as a standalone emby Media Server.
+description: >-
+  Emby organizes video, music, live TV, and photos from personal media libraries and streams them to smart TVs, streaming boxes and mobile devices. This container is packaged as a standalone emby Media Server. 
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: LinuxServer.io
+website: https://hub.docker.com/r/linuxserver/emby
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-universal-apps
+support: https://github.com/bigbeartechworld/big-bear-universal-apps/issues
+port: 8096
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+icon: https://cdn.jsdelivr.net/gh/linuxserver/docker-templates@master/linuxserver.io/img/emby-logo.png
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-universal-apps

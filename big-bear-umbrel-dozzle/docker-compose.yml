@@ -11,7 +11,7 @@ services:
   # The `app` service definition
   app:
     # Image to be used for the container
-    image: amir20/dozzle:v10.7.1@sha256:a8441e9d2928cc7b30d0023f5eedbb87ef6e234d87f3be02662bd8f417955b8b
+    image: amir20/dozzle:v10.10.0@sha256:2875e3c1f31f2244ee99d6067b53852b30666b3e2fb293d179bc8be94b1da5eb
     # Container restart policy
     restart: unless-stopped
     # Volumes to be mounted to the container

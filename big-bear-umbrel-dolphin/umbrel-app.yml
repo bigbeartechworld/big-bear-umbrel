@@ -1,0 +1,26 @@
+manifestVersion: 1
+id: big-bear-umbrel-dolphin
+category: Smart Home
+name: Dolphin
+version: "0.0.0"
+tagline: Lets you play GameCube and Wii games with various graphical enhancements and other features are available to improve your game experience.
+description: >-
+  Dolphin Emulator lets you play GameCube and Wii games with various graphical enhancements and other features are available to improve your game experience. 
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: LinuxServer.io
+website: https://hub.docker.com/r/linuxserver/dolphin
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-universal-apps
+support: https://github.com/bigbeartechworld/big-bear-universal-apps/issues
+port: 3000
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+icon: https://cdn.jsdelivr.net/gh/linuxserver/docker-templates@master/linuxserver.io/img/dolphin-logo.png
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-universal-apps

@@ -1,0 +1,27 @@
+version: "3.7"
+services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-arma3-server_app_1
+      APP_PORT: 2302-2306
+  app:
+    image: ghcr.io/brettmayson/arma3server/arma3server:latest@sha256:951fb164243d35d815259a9ddd2f9ce7b5375d366c665ee7c78e752717fde815
+    volumes:
+      - ${APP_DATA_DIR}/mpmissions:/arma3/mpmissions
+      - ${APP_DATA_DIR}/mpmissions:/arma3/configs
+      - ${APP_DATA_DIR}/mpmissions:/arma3/mods
+      - ${APP_DATA_DIR}/mpmissions:/arma3/servermods
+      - ${APP_DATA_DIR}/mpmissions:/arma3/addons
+      - ${APP_DATA_DIR}/mpmissions:/steamcmd
+    environment:
+      - STEAM_USER=${STEAM_USER:-}
+      - STEAM_PASSWORD=${STEAM_PASSWORD:-}
+      - PORT=2302
+      - ARMA_CONFIG=main.cfg
+      - ARMA_PROFILE=main
+      - ARMA_WORLD=empty
+      - ARMA_LIMITFPS=100
+      - ARMA_BINARY=./arma3server_x64
+      - ARMA_PARAMS=
+      - TZ=UTC
+    restart: unless-stopped

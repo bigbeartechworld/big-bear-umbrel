@@ -1,0 +1,26 @@
+manifestVersion: 1
+id: big-bear-umbrel-heimdall
+category: Smart Home
+name: Heimdall
+version: "2.8.3"
+tagline: A way to organise all those links to your most used web sites and web applications in a simple way. Simplicity is the key to Heimdall. Why not use it as your browser start page. It even has the ability to include a search bar using either Google, Bing or DuckDuckGo.
+description: >-
+  Heimdall is a way to organise all those links to your most used web sites and web applications in a simple way. Simplicity is the key to Heimdall. Why not use it as your browser start page? It even has the ability to include a search bar using either Google, Bing or DuckDuckGo. 
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: LinuxServer.io
+website: https://hub.docker.com/r/linuxserver/heimdall
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-universal-apps
+support: https://github.com/bigbeartechworld/big-bear-universal-apps/issues
+port: 80
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+icon: https://cdn.jsdelivr.net/gh/linuxserver/docker-templates@master/linuxserver.io/img/heimdall-banner.png
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-universal-apps

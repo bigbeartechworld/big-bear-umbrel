@@ -1,0 +1,11 @@
+version: "3.7"
+services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-tester_app_1
+      APP_PORT: ' 3000'
+  app:
+    image: linuxserver/tester:version-66f677b0@sha256:976ed6115060a646cf9e427b003d048d1a5aecfa4ded89b9bb7a2d5a5db9e839
+    restart: unless-stopped
+    environment:
+      URL: ''

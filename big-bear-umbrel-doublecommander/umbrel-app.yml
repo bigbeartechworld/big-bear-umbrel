@@ -1,0 +1,26 @@
+manifestVersion: 1
+id: big-bear-umbrel-doublecommander
+category: Smart Home
+name: Doublecommander
+version: "0.0.0"
+tagline: A free cross platform open source file manager with two panels side by side. It is inspired by Total Commander and features some new ideas.
+description: >-
+  Double Commander is a free cross platform open source file manager with two panels side by side. It is inspired by Total Commander and features some new ideas. 
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: LinuxServer.io
+website: https://hub.docker.com/r/linuxserver/doublecommander
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-universal-apps
+support: https://github.com/bigbeartechworld/big-bear-universal-apps/issues
+port: 3000
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+icon: https://cdn.jsdelivr.net/gh/linuxserver/docker-templates@master/linuxserver.io/img/doublecommander-icon.png
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-universal-apps

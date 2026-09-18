@@ -1,0 +1,17 @@
+version: "3.7"
+services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-ngircd_app_1
+      APP_PORT: ' 6667'
+  app:
+    image: linuxserver/ngircd:version-27-r1@sha256:25a924851122b34d933404e4a942e68835e4a1dc182f12d28461c4490476e265
+    restart: unless-stopped
+    environment:
+      PUID: $PUID
+      PGID: $PGID
+      TZ: $TZ
+    volumes:
+      - type: bind
+        source: /DATA/AppData/ngircd/config
+        target: /config

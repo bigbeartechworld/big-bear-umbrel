@@ -1,0 +1,17 @@
+version: "3.7"
+services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-melonds_app_1
+      APP_PORT: ' 3000'
+  app:
+    image: linuxserver/melonds:1.1.20261229@sha256:1b5a28a03910688f5a44236f1c5afe49ad29ff497ba55614e08e5e6d7a5a1e49
+    restart: unless-stopped
+    environment:
+      PUID: $PUID
+      PGID: $PGID
+      TZ: $TZ
+    volumes:
+      - type: bind
+        source: /DATA/AppData/melonds/config
+        target: /config

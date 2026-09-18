@@ -1,0 +1,26 @@
+manifestVersion: 1
+id: big-bear-umbrel-lollypop
+category: Smart Home
+name: Lollypop
+version: "1.4.45"
+tagline: A lightweight modern music player designed to work excellently on the GNOME desktop environment.
+description: >-
+  Lollypop is a lightweight modern music player designed to work excellently on the GNOME desktop environment. 
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: LinuxServer.io
+website: https://hub.docker.com/r/linuxserver/lollypop
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-universal-apps
+support: https://github.com/bigbeartechworld/big-bear-universal-apps/issues
+port: 3000
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+icon: https://cdn.jsdelivr.net/gh/linuxserver/docker-templates@master/linuxserver.io/img/lollypop-icon.png
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-universal-apps

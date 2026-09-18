@@ -1,0 +1,18 @@
+version: "3.7"
+services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-msedge_app_1
+      APP_PORT: ' 3000'
+  app:
+    image: linuxserver/msedge:153.0.4234@sha256:71a209e720aef2dfa5601dc3004c9c3ba4bbfb7e143e8289919735f776cafa9a
+    restart: unless-stopped
+    environment:
+      PUID: $PUID
+      PGID: $PGID
+      TZ: $TZ
+      EDGE_CLI: ''
+    volumes:
+      - type: bind
+        source: /DATA/AppData/msedge/config
+        target: /config

@@ -1,0 +1,20 @@
+version: "3.7"
+services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-mame_app_1
+      APP_PORT: ' 3000'
+  app:
+    image: linuxserver/mame:version-0.289dfsg1-0@sha256:9460e65352a4668f775f45bd68ea44f819515d57065bc07560700153c8644e8d
+    restart: unless-stopped
+    environment:
+      PUID: $PUID
+      PGID: $PGID
+      TZ: $TZ
+    volumes:
+      - type: bind
+        source: /DATA/AppData/mame/config
+        target: /config
+      - type: bind
+        source: /DATA/AppData/mame/mame:ro
+        target: /mame:ro

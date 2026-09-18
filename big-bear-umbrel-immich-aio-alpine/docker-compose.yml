@@ -8,7 +8,7 @@ services:
       APP_PORT: "8080"
   # Main Immich Server service configuration
   big-bear-immich-aio-alpine:
-    image: ghcr.io/imagegenius/immich:2.0.0-alpine # Image to be used
+    image: ghcr.io/imagegenius/immich:2.7.5@sha256:4012699ba6c1b2c2ec4f4b50eb8e50b1c3af040d1ae2fb5dedcabebe055776ad # Image to be used
     volumes: # Mounting directories for persistent data storage
       - ${APP_DATA_DIR}/config:/config
       - ${APP_DATA_DIR}/photos:/usr/src/app/photos

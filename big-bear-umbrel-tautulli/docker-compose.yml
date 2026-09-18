@@ -1,0 +1,17 @@
+version: "3.7"
+services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-tautulli_app_1
+      APP_PORT: ' 8181'
+  app:
+    image: linuxserver/tautulli:2.18.1@sha256:e35570d636471f8aabfac7044057712679f954844a763ba735baa9659ea142b5
+    restart: unless-stopped
+    environment:
+      PUID: $PUID
+      PGID: $PGID
+      TZ: $TZ
+    volumes:
+      - type: bind
+        source: /DATA/AppData/tautulli/config
+        target: /config

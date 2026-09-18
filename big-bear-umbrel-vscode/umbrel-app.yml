@@ -1,0 +1,26 @@
+manifestVersion: 1
+id: big-bear-umbrel-vscode
+category: Smart Home
+name: Vscode
+version: "1.137.0"
+tagline: An integrated development environment developed by Microsoft. This container runs the full desktop application, for a web native version see Code Server.
+description: >-
+  VS Code is an integrated development environment developed by Microsoft. This container runs the full desktop application, for a web native version see Code Server. 
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: LinuxServer.io
+website: https://hub.docker.com/r/linuxserver/vscode
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-universal-apps
+support: https://github.com/bigbeartechworld/big-bear-universal-apps/issues
+port: 3000
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+icon: https://cdn.jsdelivr.net/gh/linuxserver/docker-templates@master/linuxserver.io/img/vscode-logo.png
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-universal-apps

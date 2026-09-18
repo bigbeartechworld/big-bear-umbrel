@@ -1,0 +1,24 @@
+version: "3.7"
+services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-openvscode-server_app_1
+      APP_PORT: ' 3000'
+  app:
+    image: linuxserver/openvscode-server:1.109.5@sha256:3a8bef142c1bd8e6b937ca56b3eb145f22632bd01d4ca0021f37e2e79eb15bb1
+    restart: unless-stopped
+    environment:
+      PUID: $PUID
+      PGID: $PGID
+      TZ: $TZ
+      CONNECTION_TOKEN: ''
+      CONNECTION_SECRET: ''
+      SUDO_PASSWORD: ''
+      SUDO_PASSWORD_HASH: ''
+    volumes:
+      - type: bind
+        source: /DATA/AppData/openvscode-server/config
+        target: /config
+      - type: bind
+        source: /
+        target: /casaos

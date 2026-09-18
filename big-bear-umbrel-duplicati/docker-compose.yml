@@ -1,0 +1,26 @@
+version: "3.7"
+services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-duplicati_app_1
+      APP_PORT: ' 8200'
+  app:
+    image: linuxserver/duplicati:2.4.0@sha256:5c65d960f4885579096979cb791cb379835872b1b125768deaf342ea1ff2f247
+    restart: unless-stopped
+    environment:
+      PUID: $PUID
+      PGID: $PGID
+      TZ: $TZ
+      SETTINGS_ENCRYPTION_KEY: ''
+      CLI_ARGS: ''
+      DUPLICATI__WEBSERVICE_PASSWORD: ''
+    volumes:
+      - type: bind
+        source: /DATA/AppData/duplicati/config
+        target: /config
+      - type: bind
+        source: /DATA/AppData/duplicati/backups
+        target: /backups
+      - type: bind
+        source: /DATA/AppData/duplicati/source
+        target: /source

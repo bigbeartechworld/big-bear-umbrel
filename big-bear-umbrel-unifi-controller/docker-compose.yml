@@ -1,0 +1,19 @@
+version: "3.7"
+services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-unifi-controller_app_1
+      APP_PORT: ' 8443'
+  app:
+    image: linuxserver/unifi-controller:8.0.24@sha256:0ae315a3a45635e443899e30e86bd507c2c48922cb27f4bc7241777885f4650e
+    restart: unless-stopped
+    environment:
+      PUID: $PUID
+      PGID: $PGID
+      TZ: $TZ
+      MEM_LIMIT: ''
+      MEM_STARTUP: ''
+    volumes:
+      - type: bind
+        source: /DATA/AppData/unifi-controller/config
+        target: /config

@@ -1,0 +1,26 @@
+manifestVersion: 1
+id: big-bear-umbrel-smokeping
+category: Smart Home
+name: Smokeping
+version: "2.9.0"
+tagline: Keeps track of your network latency. For a full example of what this application is capable of visit UCDavis.
+description: >-
+  Smokeping keeps track of your network latency. For a full example of what this application is capable of visit UCDavis. 
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: LinuxServer.io
+website: https://hub.docker.com/r/linuxserver/smokeping
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-universal-apps
+support: https://github.com/bigbeartechworld/big-bear-universal-apps/issues
+port: 80
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+icon: https://cdn.jsdelivr.net/gh/linuxserver/docker-templates@master/linuxserver.io/img/smokeping-logo.png
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-universal-apps

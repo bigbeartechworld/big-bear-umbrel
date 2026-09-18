@@ -1,0 +1,26 @@
+manifestVersion: 1
+id: big-bear-umbrel-pcsx2
+category: Smart Home
+name: Pcsx2
+version: "2.8.2"
+tagline: An open source PS2 Emulator.
+description: >-
+  PCSX2 is an open source PS2 Emulator. 
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: LinuxServer.io
+website: https://hub.docker.com/r/linuxserver/pcsx2
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-universal-apps
+support: https://github.com/bigbeartechworld/big-bear-universal-apps/issues
+port: 3000
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+icon: https://cdn.jsdelivr.net/gh/linuxserver/docker-templates@master/linuxserver.io/img/pcsx2-logo.png
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-universal-apps

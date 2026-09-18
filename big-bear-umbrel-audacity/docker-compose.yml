@@ -1,0 +1,17 @@
+version: "3.7"
+services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-audacity_app_1
+      APP_PORT: ' 3000'
+  app:
+    image: linuxserver/audacity:4.0.0@sha256:a33f2a0d30b3aea62eb5402df1c4d7721c3af21ae4d92643dfa1badfaa7f9591
+    restart: unless-stopped
+    environment:
+      PUID: $PUID
+      PGID: $PGID
+      TZ: $TZ
+    volumes:
+      - type: bind
+        source: /DATA/AppData/audacity/config
+        target: /config

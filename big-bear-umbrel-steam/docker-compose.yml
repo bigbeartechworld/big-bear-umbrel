@@ -1,0 +1,17 @@
+version: "3.7"
+services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-steam_app_1
+      APP_PORT: ' 3000'
+  app:
+    image: linuxserver/steam:version-0779c5e2@sha256:ed97628a6943b103e3f2ff617c6ceb9062db16cebab6cf71e42a1ceb5ea0cff5
+    restart: unless-stopped
+    environment:
+      PUID: $PUID
+      PGID: $PGID
+      TZ: $TZ
+    volumes:
+      - type: bind
+        source: /DATA/AppData/steam/config
+        target: /config

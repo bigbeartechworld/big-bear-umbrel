@@ -1,0 +1,17 @@
+version: "3.7"
+services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-thelounge_app_1
+      APP_PORT: ' 9000'
+  app:
+    image: linuxserver/thelounge:4.5.2@sha256:276a04a7b203ff121c2440f3f4bdcea2f9a865ba8971b6b2f372e848c789a0f8
+    restart: unless-stopped
+    environment:
+      PUID: $PUID
+      PGID: $PGID
+      TZ: $TZ
+    volumes:
+      - type: bind
+        source: /DATA/AppData/thelounge/config
+        target: /config

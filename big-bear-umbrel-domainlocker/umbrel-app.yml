@@ -1,0 +1,26 @@
+manifestVersion: 1
+id: big-bear-umbrel-domainlocker
+category: BigBearCasaOS
+name: Domain Locker
+version: "0.2.4"
+tagline: Domain Locker
+description: >-
+  🌐 The all-in-one tool, for keeping track of your domain name portfolio. Got domain names? Get Domain Locker! 
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: lissy93
+website: https://hub.docker.com/r/lissy93/domain-locker
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-universal-apps
+support: https://github.com/bigbeartechworld/big-bear-universal-apps/issues
+port: 10203
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/domain-locker.png
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-universal-apps

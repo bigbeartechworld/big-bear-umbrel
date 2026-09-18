@@ -1,0 +1,17 @@
+version: "3.7"
+services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-dillinger_app_1
+      APP_PORT: ' 8080'
+  app:
+    image: linuxserver/dillinger:3.39.1@sha256:58dc39f6cddee732241c78f89805bca608299471f66ec90a8028e10b2cadd1b4
+    restart: unless-stopped
+    environment:
+      PUID: $PUID
+      PGID: $PGID
+      TZ: $TZ
+    volumes:
+      - type: bind
+        source: /DATA/AppData/dillinger/config
+        target: /config

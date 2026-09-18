@@ -1,0 +1,19 @@
+version: "3.7"
+services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-changedetection-io_app_1
+      APP_PORT: ' 5000'
+  app:
+    image: linuxserver/changedetection.io:0.60.6@sha256:7deab325d9046bc1155c1598d5d65202950d96c7e4b337fc1fdf89eaca0be039
+    restart: unless-stopped
+    environment:
+      PUID: $PUID
+      PGID: $PGID
+      TZ: $TZ
+      BASE_URL: ''
+      PLAYWRIGHT_DRIVER_URL: ''
+    volumes:
+      - type: bind
+        source: /DATA/AppData/changedetection.io/config
+        target: /config

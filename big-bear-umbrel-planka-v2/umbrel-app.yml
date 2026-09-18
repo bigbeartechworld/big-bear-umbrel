@@ -13,7 +13,7 @@ website: https://hub.docker.com/r/plankanban/planka
 dependencies: []
 repo: https://github.com/bigbeartechworld/big-bear-universal-apps
 support: https://github.com/bigbeartechworld/big-bear-universal-apps/issues
-port: 10139
+port: 10206
 gallery:
   - 1.jpg
   - 2.jpg

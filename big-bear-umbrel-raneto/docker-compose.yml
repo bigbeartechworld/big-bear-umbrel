@@ -1,0 +1,17 @@
+version: "3.7"
+services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-raneto_app_1
+      APP_PORT: ' 3000'
+  app:
+    image: linuxserver/raneto:0.18.1@sha256:b42adb6267d22bde31295995ed151ba23f6ca01c6da2d5d2562ca46cce859bec
+    restart: unless-stopped
+    environment:
+      PUID: $PUID
+      PGID: $PGID
+      TZ: $TZ
+    volumes:
+      - type: bind
+        source: /DATA/AppData/raneto/config
+        target: /config

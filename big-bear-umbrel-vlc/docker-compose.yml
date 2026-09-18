@@ -1,0 +1,18 @@
+version: "3.7"
+services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-vlc_app_1
+      APP_PORT: ' 3000'
+  app:
+    image: linuxserver/vlc:3.0.23@sha256:52fee84f890b64bb7b8bfc0bb6536c31cfaf371ba7709b5cfa708a8fe64f7b68
+    restart: unless-stopped
+    environment:
+      PUID: $PUID
+      PGID: $PGID
+      TZ: $TZ
+      VLC_CLI: ''
+    volumes:
+      - type: bind
+        source: /DATA/AppData/vlc/config
+        target: /config

@@ -1,0 +1,20 @@
+version: "3.7"
+services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-qdirstat_app_1
+      APP_PORT: ' 3000'
+  app:
+    image: linuxserver/qdirstat:2.0.20260913@sha256:3b3999ef8f0f3501cd35d373f0868e564937c739d1a79fbe545c6d68692bb727
+    restart: unless-stopped
+    environment:
+      PUID: $PUID
+      PGID: $PGID
+      TZ: $TZ
+    volumes:
+      - type: bind
+        source: /DATA/AppData/qdirstat/config
+        target: /config
+      - type: bind
+        source: /DATA/AppData/qdirstat/data
+        target: /data

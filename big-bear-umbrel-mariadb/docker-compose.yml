@@ -1,0 +1,23 @@
+version: "3.7"
+services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-mariadb_app_1
+      APP_PORT: ' 3306'
+  app:
+    image: linuxserver/mariadb:11.8.8@sha256:75ffa39d652653e73848328a667d169a20a1e084fd51a66c4be3eb754a2492c9
+    restart: unless-stopped
+    environment:
+      PUID: $PUID
+      PGID: $PGID
+      TZ: $TZ
+      MYSQL_ROOT_PASSWORD: ''
+      MYSQL_DATABASE: ''
+      MYSQL_USER: ''
+      MYSQL_PASSWORD: ''
+      REMOTE_SQL: ''
+      CLI_OPTS: ''
+    volumes:
+      - type: bind
+        source: /DATA/AppData/mariadb/config
+        target: /config

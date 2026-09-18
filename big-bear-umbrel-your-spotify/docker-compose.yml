@@ -1,0 +1,23 @@
+version: "3.7"
+services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-your-spotify_app_1
+      APP_PORT: ' 80'
+  app:
+    image: linuxserver/your_spotify:1.20.0@sha256:34f592ef352cce88db8f64ca502d646b17aa2ecd6076df47e053241b0dbef2da
+    restart: unless-stopped
+    environment:
+      PUID: $PUID
+      PGID: $PGID
+      TZ: $TZ
+      APP_URL: ''
+      SPOTIFY_PUBLIC: ''
+      SPOTIFY_SECRET: ''
+      SPOTIFY_API_DELAY_MS: ''
+      CORS: ''
+      MONGO_ENDPOINT: ''
+    volumes:
+      - type: bind
+        source: /DATA/AppData/your_spotify/config
+        target: /config

@@ -1,0 +1,26 @@
+manifestVersion: 1
+id: big-bear-umbrel-dillinger
+category: Other
+name: Dillinger
+version: "3.39.1"
+tagline: A cloud-enabled, mobile-ready, offline-storage, AngularJS powered HTML5 Markdown editor.
+description: >-
+  Visit homepage: https://hub.docker.com/r/linuxserver/dillinger/ 
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: LinuxServer.io
+website: https://hub.docker.com/r/linuxserver/dillinger
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-universal-apps
+support: https://github.com/bigbeartechworld/big-bear-universal-apps/issues
+port: 8080
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+icon: https://cdn.jsdelivr.net/gh/linuxserver/docker-templates@master/linuxserver.io/img/dillinger.png
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-universal-apps

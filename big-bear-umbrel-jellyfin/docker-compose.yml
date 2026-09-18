@@ -1,0 +1,24 @@
+version: "3.7"
+services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-jellyfin_app_1
+      APP_PORT: ' 8096'
+  app:
+    image: linuxserver/jellyfin:12.1ubu2604-ls50@sha256:51252e7a416e703cdc3cd91e8a54673a2430cc80409be8a38abe511411577b95
+    restart: unless-stopped
+    environment:
+      PUID: $PUID
+      PGID: $PGID
+      TZ: $TZ
+      JELLYFIN_PublishedServerUrl: ''
+    volumes:
+      - type: bind
+        source: /DATA/AppData/jellyfin/config
+        target: /config
+      - type: bind
+        source: /DATA/AppData/jellyfin/data/tvshows
+        target: /data/tvshows
+      - type: bind
+        source: /DATA/AppData/jellyfin/data/movies
+        target: /data/movies

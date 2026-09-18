@@ -1,0 +1,17 @@
+version: "3.7"
+services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-series-troxide_app_1
+      APP_PORT: ' 3000'
+  app:
+    image: linuxserver/series-troxide:0.5.1@sha256:a86c0f9b6500be2596e3fdf12bf3b341f6b842c1b1fc88d44b6ef3362f9b58df
+    restart: unless-stopped
+    environment:
+      PUID: $PUID
+      PGID: $PGID
+      TZ: $TZ
+    volumes:
+      - type: bind
+        source: /DATA/AppData/series-troxide/config
+        target: /config

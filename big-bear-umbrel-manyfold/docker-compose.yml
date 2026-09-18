@@ -1,0 +1,23 @@
+version: "3.7"
+services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-manyfold_app_1
+      APP_PORT: ' 3214'
+  app:
+    image: linuxserver/manyfold:0.149.0@sha256:1e3260d3bba74790dc00c57ae8a8ddb8f7aa5cf0f97000d265f8d30dc931f792
+    restart: unless-stopped
+    environment:
+      PUID: $PUID
+      PGID: $PGID
+      TZ: $TZ
+      DATABASE_URL: ''
+      REDIS_URL: ''
+      SECRET_KEY_BASE: ''
+    volumes:
+      - type: bind
+        source: /DATA/AppData/manyfold/config
+        target: /config
+      - type: bind
+        source: /DATA/AppData/manyfold/libraries
+        target: /libraries

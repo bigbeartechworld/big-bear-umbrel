@@ -1,0 +1,17 @@
+version: "3.7"
+services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-flycast_app_1
+      APP_PORT: ' 3000'
+  app:
+    image: linuxserver/flycast:2.7.20260913@sha256:74a090d9b743d09d95dfc546064980ea9ded0d1e701de89b11672ce2d1431202
+    restart: unless-stopped
+    environment:
+      PUID: $PUID
+      PGID: $PGID
+      TZ: $TZ
+    volumes:
+      - type: bind
+        source: /DATA/AppData/flycast/config
+        target: /config

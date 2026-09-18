@@ -1,0 +1,19 @@
+version: "3.7"
+services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-hishtory-server_app_1
+      APP_PORT: ' 8080'
+  app:
+    image: linuxserver/hishtory-server:0.335.20260911@sha256:ec2d85af066a68227b7b837d34132764e435399c24d06b3c05191040f26c4e99
+    restart: unless-stopped
+    environment:
+      PUID: $PUID
+      PGID: $PGID
+      TZ: $TZ
+      HISHTORY_POSTGRES_DB: ''
+      HISHTORY_SQLITE_DB: ''
+    volumes:
+      - type: bind
+        source: /DATA/AppData/hishtory-server/config
+        target: /config

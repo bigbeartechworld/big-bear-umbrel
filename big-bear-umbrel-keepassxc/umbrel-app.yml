@@ -1,0 +1,26 @@
+manifestVersion: 1
+id: big-bear-umbrel-keepassxc
+category: Smart Home
+name: Keepassxc
+version: "2.7.12"
+tagline: A free and open-source password manager. It started as a community fork of KeePassX (itself a cross-platform port of KeePass).
+description: >-
+  KeePassXC is a free and open-source password manager. It started as a community fork of KeePassX (itself a cross-platform port of KeePass). 
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: LinuxServer.io
+website: https://hub.docker.com/r/linuxserver/keepassxc
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-universal-apps
+support: https://github.com/bigbeartechworld/big-bear-universal-apps/issues
+port: 3000
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+icon: https://cdn.jsdelivr.net/gh/linuxserver/docker-templates@master/linuxserver.io/img/keepassxc-logo.png
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-universal-apps

@@ -1,0 +1,57 @@
+version: "3.7"
+services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-fail2ban_app_1
+      APP_PORT: ' 80'
+  app:
+    image: linuxserver/fail2ban:1.1.0@sha256:82ca532863046968e06525539a771aa0db9598df5f8e495383c279e3d2491ddf
+    restart: unless-stopped
+    environment:
+      PUID: $PUID
+      PGID: $PGID
+      TZ: $TZ
+      VERBOSITY: ''
+    volumes:
+      - type: bind
+        source: /DATA/AppData/fail2ban/config
+        target: /config
+      - type: bind
+        source: /DATA/AppData/fail2ban/var/log:ro
+        target: /var/log:ro
+      - type: bind
+        source: /DATA/AppData/fail2ban/remotelogs/airsonic:ro
+        target: /remotelogs/airsonic:ro
+      - type: bind
+        source: /DATA/AppData/fail2ban/remotelogs/apache2:ro
+        target: /remotelogs/apache2:ro
+      - type: bind
+        source: /DATA/AppData/fail2ban/remotelogs/authelia:ro
+        target: /remotelogs/authelia:ro
+      - type: bind
+        source: /DATA/AppData/fail2ban/remotelogs/emby:ro
+        target: /remotelogs/emby:ro
+      - type: bind
+        source: /DATA/AppData/fail2ban/remotelogs/filebrowser:ro
+        target: /remotelogs/filebrowser:ro
+      - type: bind
+        source: /DATA/AppData/fail2ban/remotelogs/homeassistant:ro
+        target: /remotelogs/homeassistant:ro
+      - type: bind
+        source: /DATA/AppData/fail2ban/remotelogs/lighttpd:ro
+        target: /remotelogs/lighttpd:ro
+      - type: bind
+        source: /DATA/AppData/fail2ban/remotelogs/nextcloud:ro
+        target: /remotelogs/nextcloud:ro
+      - type: bind
+        source: /DATA/AppData/fail2ban/remotelogs/nginx:ro
+        target: /remotelogs/nginx:ro
+      - type: bind
+        source: /DATA/AppData/fail2ban/remotelogs/overseerr:ro
+        target: /remotelogs/overseerr:ro
+      - type: bind
+        source: /DATA/AppData/fail2ban/remotelogs/unificontroller:ro
+        target: /remotelogs/unificontroller:ro
+      - type: bind
+        source: /DATA/AppData/fail2ban/remotelogs/vaultwarden:ro
+        target: /remotelogs/vaultwarden:ro

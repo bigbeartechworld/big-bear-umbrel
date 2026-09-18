@@ -1,0 +1,24 @@
+version: "3.7"
+services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-mullvad-browser_app_1
+      APP_PORT: ' 3000'
+  app:
+    image: linuxserver/mullvad-browser:15.0.20251116@sha256:2bb0a028813463e3e7d2dbdbfb5727d7928fb7e8a17e206435ba27e61836d586
+    restart: unless-stopped
+    environment:
+      PUID: $PUID
+      PGID: $PGID
+      TZ: $TZ
+      LOCAL_NET: ''
+    volumes:
+      - type: bind
+        source: /DATA/AppData/mullvad-browser/config
+        target: /config
+      - type: bind
+        source: /DATA/Downloads
+        target: /config/Downloads
+    cap_add:
+      - NET_ADMIN
+    shm_size: 1gb

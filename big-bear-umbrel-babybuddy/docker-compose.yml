@@ -1,0 +1,18 @@
+version: "3.7"
+services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-babybuddy_app_1
+      APP_PORT: ' 8000'
+  app:
+    image: linuxserver/babybuddy:2.10.1@sha256:985a2adc74c431271d0273db9d14196cd28a50aadc943fe3b36af3c45f7030a0
+    restart: unless-stopped
+    environment:
+      PUID: $PUID
+      PGID: $PGID
+      TZ: $TZ
+      CSRF_TRUSTED_ORIGINS: ''
+    volumes:
+      - type: bind
+        source: /DATA/AppData/babybuddy/config
+        target: /config

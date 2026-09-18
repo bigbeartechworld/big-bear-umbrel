@@ -1,0 +1,26 @@
+manifestVersion: 1
+id: big-bear-umbrel-mariadb
+category: Smart Home
+name: Mariadb
+version: "11.8.8"
+tagline: One of the most popular database servers. Made by the original developers of MySQL.
+description: >-
+  Mariadb is one of the most popular database servers. Made by the original developers of MySQL. 
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: LinuxServer.io
+website: https://hub.docker.com/r/linuxserver/mariadb
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-universal-apps
+support: https://github.com/bigbeartechworld/big-bear-universal-apps/issues
+port: 3306
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+icon: https://cdn.jsdelivr.net/gh/linuxserver/docker-templates@master/linuxserver.io/img/mariadb-git.png
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-universal-apps

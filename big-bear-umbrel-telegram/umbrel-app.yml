@@ -1,0 +1,26 @@
+manifestVersion: 1
+id: big-bear-umbrel-telegram
+category: Smart Home
+name: Telegram
+version: "7.2.8"
+tagline: A cloud-based mobile and desktop messaging app.
+description: >-
+  Telegram is a cloud-based mobile and desktop messaging app. 
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: LinuxServer.io
+website: https://hub.docker.com/r/linuxserver/telegram
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-universal-apps
+support: https://github.com/bigbeartechworld/big-bear-universal-apps/issues
+port: 3000
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+icon: https://cdn.jsdelivr.net/gh/linuxserver/docker-templates@master/linuxserver.io/img/telegram-logo.png
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-universal-apps

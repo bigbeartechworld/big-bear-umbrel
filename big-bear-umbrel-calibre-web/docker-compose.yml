@@ -1,0 +1,22 @@
+version: "3.7"
+services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-calibre-web_app_1
+      APP_PORT: ' 8083'
+  app:
+    image: linuxserver/calibre-web:0.6.27@sha256:0767226fcf209d12d93ef1d29711ebc22c1c9db2c8a4b0e4469a8771fe269a52
+    restart: unless-stopped
+    environment:
+      PUID: $PUID
+      PGID: $PGID
+      TZ: $TZ
+      DOCKER_MODS: ''
+      OAUTHLIB_RELAX_TOKEN_SCOPE: ''
+    volumes:
+      - type: bind
+        source: /DATA/AppData/calibre-web/config
+        target: /config
+      - type: bind
+        source: /DATA/AppData/calibre-web/books
+        target: /books

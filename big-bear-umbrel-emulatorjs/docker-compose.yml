@@ -1,0 +1,21 @@
+version: "3.7"
+services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-emulatorjs_app_1
+      APP_PORT: ' 3000'
+  app:
+    image: linuxserver/emulatorjs:1.9.2@sha256:b7003f7d4f383dd32d210ba08f24c840276fdf92c211bd18a798d47647311290
+    restart: unless-stopped
+    environment:
+      PUID: $PUID
+      PGID: $PGID
+      TZ: $TZ
+      SUBFOLDER: ''
+    volumes:
+      - type: bind
+        source: /DATA/AppData/emulatorjs/config
+        target: /config
+      - type: bind
+        source: /DATA/AppData/emulatorjs/data
+        target: /data

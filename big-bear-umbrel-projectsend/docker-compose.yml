@@ -1,0 +1,20 @@
+version: "3.7"
+services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-projectsend_app_1
+      APP_PORT: ' 80'
+  app:
+    image: linuxserver/projectsend:version-r2098@sha256:f9a3ef120901e5322c8c0e1261f7b8f10723eaa8a5036510d37e776cefda2e2a
+    restart: unless-stopped
+    environment:
+      PUID: $PUID
+      PGID: $PGID
+      TZ: $TZ
+    volumes:
+      - type: bind
+        source: /DATA/AppData/projectsend/config
+        target: /config
+      - type: bind
+        source: /DATA/AppData/projectsend/data
+        target: /data

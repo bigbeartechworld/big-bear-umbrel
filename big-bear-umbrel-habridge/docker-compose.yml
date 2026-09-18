@@ -1,0 +1,18 @@
+version: "3.7"
+services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-habridge_app_1
+      APP_PORT: ' 8080'
+  app:
+    image: linuxserver/habridge:5.4.1@sha256:e1b479165a5b32b0a072e8d3cdd3750266a2860ac304bbdb448635a4e1336e69
+    restart: unless-stopped
+    environment:
+      PUID: $PUID
+      PGID: $PGID
+      TZ: $TZ
+      SEC_KEY: ''
+    volumes:
+      - type: bind
+        source: /DATA/AppData/habridge/config
+        target: /config

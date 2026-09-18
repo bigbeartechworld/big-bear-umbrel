@@ -1,0 +1,21 @@
+version: "3.7"
+services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-quassel-web_app_1
+      APP_PORT: ' 64080'
+  app:
+    image: linuxserver/quassel-web:version-019bfdc1@sha256:15453e655257907853d02a41903c255f0fd4da8a759f13f73b2573dca2d981ba
+    restart: unless-stopped
+    environment:
+      PUID: $PUID
+      PGID: $PGID
+      TZ: $TZ
+      QUASSEL_CORE: ''
+      QUASSEL_PORT: ''
+      QUASSEL_HTTPS: ''
+      URL_BASE: ''
+    volumes:
+      - type: bind
+        source: /DATA/AppData/quassel-web/config
+        target: /config

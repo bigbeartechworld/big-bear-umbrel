@@ -2,7 +2,7 @@ manifestVersion: 1
 id: big-bear-umbrel-immich-aio-alpine
 category: BigBearCasaOS
 name: Immich AIO Alpine
-version: "2.0.0-alpine"
+version: "2.7.5"
 tagline: Immich All In One Alpine
 description: >-
   AIO Alpine. Self-hosted photo and video storage. 

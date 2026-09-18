@@ -1,0 +1,17 @@
+version: "3.7"
+services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-qemu-static_app_1
+      APP_PORT: ' 80'
+  app:
+    image: linuxserver/qemu-static:10.0.2@sha256:3b35e71b380a231f8b649d5c14c00aa598bd87a99e2f5addc8388b8102532b34
+    restart: unless-stopped
+    environment:
+      PUID: $PUID
+      PGID: $PGID
+      TZ: $TZ
+    volumes:
+      - type: bind
+        source: /DATA/AppData/qemu-static/config
+        target: /config

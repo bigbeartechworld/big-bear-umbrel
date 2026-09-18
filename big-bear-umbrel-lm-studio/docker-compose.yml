@@ -1,0 +1,17 @@
+version: "3.7"
+services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-lm-studio_app_1
+      APP_PORT: ' 3000'
+  app:
+    image: linuxserver/lm-studio:version-2026-09-12@sha256:29d2149a8046d54be16a9a3ae60568f63e6e886bed453d5884f8cfa93a3ac389
+    restart: unless-stopped
+    environment:
+      PUID: $PUID
+      PGID: $PGID
+      TZ: $TZ
+    volumes:
+      - type: bind
+        source: /DATA/AppData/lm-studio/config
+        target: /config

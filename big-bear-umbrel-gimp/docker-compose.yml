@@ -1,0 +1,17 @@
+version: "3.7"
+services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-gimp_app_1
+      APP_PORT: ' 3000'
+  app:
+    image: linuxserver/gimp:version-284e0208@sha256:e2f5a8f3fadd795010c9201c136d5db02e542473eb3d21c53d913e7fb4d61c94
+    restart: unless-stopped
+    environment:
+      PUID: $PUID
+      PGID: $PGID
+      TZ: $TZ
+    volumes:
+      - type: bind
+        source: /DATA/AppData/gimp/config
+        target: /config

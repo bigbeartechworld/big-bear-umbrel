@@ -1,0 +1,17 @@
+version: "3.7"
+services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-signal_app_1
+      APP_PORT: ' 3000'
+  app:
+    image: linuxserver/signal:8.27.0@sha256:cdb4247d5773b5fb85a86cd713f9708c2b2d56eda56170ca3ff38615d48da8e8
+    restart: unless-stopped
+    environment:
+      PUID: $PUID
+      PGID: $PGID
+      TZ: $TZ
+    volumes:
+      - type: bind
+        source: /DATA/AppData/signal/config
+        target: /config

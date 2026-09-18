@@ -1,0 +1,17 @@
+version: "3.7"
+services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-kali-linux_app_1
+      APP_PORT: ' 3000'
+  app:
+    image: linuxserver/kali-linux:version-45f3494e@sha256:3a082bb348852e97567153ffdd79a532924ff53fccc04fd56bbc2d971139d0d6
+    restart: unless-stopped
+    environment:
+      PUID: $PUID
+      PGID: $PGID
+      TZ: $TZ
+    volumes:
+      - type: bind
+        source: /DATA/AppData/kali-linux/config
+        target: /config

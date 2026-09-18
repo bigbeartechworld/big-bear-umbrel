@@ -1,0 +1,24 @@
+version: "3.7"
+services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-duckdns_app_1
+      APP_PORT: ' 80'
+  app:
+    image: linuxserver/duckdns:version-73f1bc7d@sha256:7edcc8555ecbca2ea6e441290a09d172bc531debce7c6771c14551838a3f67f2
+    restart: unless-stopped
+    environment:
+      PUID: $PUID
+      PGID: $PGID
+      TZ: $TZ
+      SUBDOMAINS: ''
+      TOKEN: ''
+      UPDATE_IP: ''
+      LOG_FILE: ''
+    volumes:
+      - type: bind
+        source: /DATA/AppData/duckdns/config
+        target: /config
+      - type: bind
+        source: /DATA/AppData/duckdns/config
+        target: /config

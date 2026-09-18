@@ -1,0 +1,17 @@
+version: "3.7"
+services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-github-desktop_app_1
+      APP_PORT: ' 3000'
+  app:
+    image: linuxserver/github-desktop:3.4.13@sha256:e1465fe5867239fe1bfea4b41bdfb46af2236c8a54884565bc4f1b119a1f8137
+    restart: unless-stopped
+    environment:
+      PUID: $PUID
+      PGID: $PGID
+      TZ: $TZ
+    volumes:
+      - type: bind
+        source: /DATA/AppData/github-desktop/config
+        target: /config

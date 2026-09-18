@@ -1,0 +1,17 @@
+version: "3.7"
+services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-modmanager_app_1
+      APP_PORT: ' 80'
+  app:
+    image: linuxserver/modmanager:version-7dc8618e@sha256:742583b32a779fbcbe7d0a8915bd4c6d4a9d7170e802cc576364b1cd3b971d1f
+    restart: unless-stopped
+    environment:
+      PUID: $PUID
+      PGID: $PGID
+      TZ: $TZ
+    volumes:
+      - type: bind
+        source: /DATA/AppData/modmanager/config
+        target: /config

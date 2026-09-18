@@ -1,0 +1,17 @@
+version: "3.7"
+services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-dosbox-staging_app_1
+      APP_PORT: ' 3000'
+  app:
+    image: linuxserver/dosbox-staging:0.83.0@sha256:9b47af7cb6c5e51faaef40460816a0e1ffd24fad4beaac67418236085646b183
+    restart: unless-stopped
+    environment:
+      PUID: $PUID
+      PGID: $PGID
+      TZ: $TZ
+    volumes:
+      - type: bind
+        source: /DATA/AppData/dosbox-staging/config
+        target: /config

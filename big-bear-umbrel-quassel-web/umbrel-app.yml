@@ -1,0 +1,26 @@
+manifestVersion: 1
+id: big-bear-umbrel-quassel-web
+category: Other
+name: Quassel-web
+version: "0.0.0"
+tagline: A web client for Quassel. Note that a Quassel-Core instance is required, we have a container available here.
+description: >-
+  Visit homepage: https://hub.docker.com/r/linuxserver/quassel-web/ 
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: LinuxServer.io
+website: https://hub.docker.com/r/linuxserver/quassel-web
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-universal-apps
+support: https://github.com/bigbeartechworld/big-bear-universal-apps/issues
+port: 64080
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+icon: https://cdn.jsdelivr.net/gh/linuxserver/docker-templates@master/linuxserver.io/img/quassel-web-icon.png
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-universal-apps

@@ -1,0 +1,17 @@
+version: "3.7"
+services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-lollypop_app_1
+      APP_PORT: ' 3000'
+  app:
+    image: linuxserver/lollypop:1.4.45@sha256:d74da4821ac555698d60a783e1d81f36741a13e777e5c6997b836d81839b0c91
+    restart: unless-stopped
+    environment:
+      PUID: $PUID
+      PGID: $PGID
+      TZ: $TZ
+    volumes:
+      - type: bind
+        source: /DATA/AppData/lollypop/config
+        target: /config

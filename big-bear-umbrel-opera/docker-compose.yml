@@ -1,0 +1,18 @@
+version: "3.7"
+services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-opera_app_1
+      APP_PORT: ' 3000'
+  app:
+    image: linuxserver/opera:136.0.6008@sha256:68dc250c357534f6cc18627eb4577d8f14fbdda9fb44aa4acf342c4bcea00c94
+    restart: unless-stopped
+    environment:
+      PUID: $PUID
+      PGID: $PGID
+      TZ: $TZ
+      OPERA_CLI: ''
+    volumes:
+      - type: bind
+        source: /DATA/AppData/opera/config
+        target: /config

@@ -2,7 +2,7 @@ manifestVersion: 1
 id: big-bear-umbrel-warracker
 category: BigBearCasaOS
 name: Warracker
-version: "9.9.3"
+version: "1.0.2"
 tagline: A self-hosted warranty tracker
 description: >-
   A self-hosted warranty tracker 

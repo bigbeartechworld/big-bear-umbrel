@@ -1,0 +1,67 @@
+version: "3.7"
+services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-bookorbit_app_1
+      APP_PORT: "3000"
+  app:
+    image: ghcr.io/bookorbit/bookorbit:2.7.0@sha256:0f46241c54ba7cd07ddf7dc519386a29c98dd0f3679cebc9ca35f3305dc79e69
+    restart: unless-stopped
+    init: true
+    environment:
+      NODE_ENV: production
+      PORT: "3000"
+      APP_URL: http://umbrel.local:10301
+      POSTGRES_HOST: postgres
+      POSTGRES_PORT: "5432"
+      POSTGRES_USER: bookorbit
+      POSTGRES_PASSWORD: 7b0aee8dc43c518eef646e2d
+      POSTGRES_DB: bookorbit
+      JWT_SECRET: cd94b64e8c98c7e5cab21ebc9c1e82e739c770d0f00f2626def2987942167c4e
+      SETUP_BOOTSTRAP_TOKEN: 1ba75f44baee64b32d1af876cc38e2b6
+      PUID: "1000"
+      PGID: "1000"
+      LIBRARY_BROWSE_ROOT: /books
+      BOOK_DOCK_PATH: ""
+    depends_on:
+      postgres:
+        condition: service_healthy
+    volumes:
+      - ./books:/books
+      - ${APP_DATA_DIR}/data:/data
+    read_only: true
+    tmpfs:
+      - /tmp
+    cap_drop:
+      - ALL
+    cap_add:
+      - CHOWN
+      - DAC_OVERRIDE
+      - FOWNER
+      - SETGID
+      - SETUID
+    security_opt:
+      - no-new-privileges:true
+    stop_grace_period: 30s
+    healthcheck:
+      test: ["CMD", "node", "-e", "const p=process.env.PORT||3000;fetch('http://127.0.0.1:'+p+'/api/v1/health').then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 20s
+  postgres:
+    image: pgvector/pgvector:pg18@sha256:2ba9ca5f2e7daa0f0e7723cba1ee9167bab54efd3640516a44ac1a928dd67e7a
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: bookorbit
+      POSTGRES_PASSWORD: 7b0aee8dc43c518eef646e2d
+      POSTGRES_DB: bookorbit
+      PGDATA: /var/lib/postgresql/data/pgdata
+    volumes:
+      - ${APP_DATA_DIR}/postgresql:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U bookorbit -d bookorbit"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 20s

@@ -1,0 +1,19 @@
+version: "3.7"
+services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-pydio-cells_app_1
+      APP_PORT: ' 8080'
+  app:
+    image: linuxserver/pydio-cells:5.0.2@sha256:64dfe2e5cdb5d1db16c6ffa02877072cc6b426068929b84a5fe6c2decfca17c6
+    restart: unless-stopped
+    environment:
+      PUID: $PUID
+      PGID: $PGID
+      TZ: $TZ
+      EXTERNALURL: ''
+      SERVER_IP: ''
+    volumes:
+      - type: bind
+        source: /DATA/AppData/pydio-cells/config
+        target: /config

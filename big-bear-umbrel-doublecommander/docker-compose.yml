@@ -1,0 +1,20 @@
+version: "3.7"
+services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-doublecommander_app_1
+      APP_PORT: ' 3000'
+  app:
+    image: linuxserver/doublecommander:version-8143f818@sha256:efd6e23446d4eca9a29e3ff81b1209e18a13465fa50073d4de4fb51e233a98ac
+    restart: unless-stopped
+    environment:
+      PUID: $PUID
+      PGID: $PGID
+      TZ: $TZ
+    volumes:
+      - type: bind
+        source: /DATA/AppData/doublecommander/config
+        target: /config
+      - type: bind
+        source: /DATA/AppData/doublecommander/data
+        target: /data

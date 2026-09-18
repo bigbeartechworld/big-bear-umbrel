@@ -1,0 +1,31 @@
+version: "3.7"
+services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-swag_app_1
+      APP_PORT: ' 443'
+  app:
+    image: linuxserver/swag:5.8.0@sha256:7f4646e77ff362efb506a313a504e866d53a3d5c071175dbf4024acb18f795d3
+    restart: unless-stopped
+    environment:
+      PUID: $PUID
+      PGID: $PGID
+      TZ: $TZ
+      URL: ''
+      VALIDATION: ''
+      SUBDOMAINS: ''
+      CERTPROVIDER: ''
+      CERT_PROFILE: ''
+      DNSPLUGIN: ''
+      PROPAGATION: ''
+      EMAIL: ''
+      ONLY_SUBDOMAINS: ''
+      EXTRA_DOMAINS: ''
+      STAGING: ''
+      DISABLE_F2B: ''
+      SWAG_AUTORELOAD: ''
+      SWAG_AUTORELOAD_WATCHLIST: ''
+    volumes:
+      - type: bind
+        source: /DATA/AppData/swag/config
+        target: /config

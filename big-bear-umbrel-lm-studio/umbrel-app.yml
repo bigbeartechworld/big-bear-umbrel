@@ -1,0 +1,26 @@
+manifestVersion: 1
+id: big-bear-umbrel-lm-studio
+category: Smart Home
+name: Lm-studio
+version: "0.0.0"
+tagline: Can run local AI models like gpt-oss, Llama, Gemma, Qwen, and DeepSeek privately on your computer.
+description: >-
+  LM Studio can run local AI models like gpt-oss, Llama, Gemma, Qwen, and DeepSeek privately on your computer. 
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: LinuxServer.io
+website: https://hub.docker.com/r/linuxserver/lm-studio
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-universal-apps
+support: https://github.com/bigbeartechworld/big-bear-universal-apps/issues
+port: 3000
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+icon: https://cdn.jsdelivr.net/gh/linuxserver/docker-templates@master/linuxserver.io/img/lmstudio-logo.png
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-universal-apps

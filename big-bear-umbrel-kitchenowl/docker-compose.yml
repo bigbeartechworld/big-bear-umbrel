@@ -1,0 +1,13 @@
+version: "3.7"
+services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-kitchenowl_app_1
+      APP_PORT: "8080"
+  app:
+    image: tombursch/kitchenowl:v0.7.10@sha256:bd821a41b8cb27fd7fcf429acd1fc67e9f889485a2cd1193d68c2d804a8e1bef
+    restart: unless-stopped
+    environment:
+      - JWT_SECRET_KEY=7c7884a9-f13a-4e01-a2f0-310add0acf60
+    volumes:
+      - ${APP_DATA_DIR}/data:/data

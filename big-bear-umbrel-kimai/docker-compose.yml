@@ -1,0 +1,21 @@
+version: "3.7"
+services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-kimai_app_1
+      APP_PORT: ' 80'
+  app:
+    image: linuxserver/kimai:2.67.0@sha256:fb8f8d1b6f984ceffbe4945ba22ee69d7ad8b86f81333b78a1d715aac61c8f1a
+    restart: unless-stopped
+    environment:
+      PUID: $PUID
+      PGID: $PGID
+      TZ: $TZ
+      APP_SECRET: ''
+      DATABASE_URL: ''
+      TRUSTED_HOSTS: ''
+      TRUSTED_PROXIES: ''
+    volumes:
+      - type: bind
+        source: /DATA/AppData/kimai/config
+        target: /config

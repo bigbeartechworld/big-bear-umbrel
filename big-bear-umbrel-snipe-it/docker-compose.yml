@@ -1,0 +1,35 @@
+version: "3.7"
+services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-snipe-it_app_1
+      APP_PORT: ' 8080'
+  app:
+    image: linuxserver/snipe-it:7.1.17@sha256:d75283795506f371fe5059f13312c84de01225de373ef3aec154d562bbed9dd4
+    restart: unless-stopped
+    environment:
+      PUID: $PUID
+      PGID: $PGID
+      TZ: $TZ
+      APP_KEY: $APP_KEY
+      APP_URL: $APP_URL
+      MYSQL_PORT_3306_TCP_ADDR: $MYSQL_PORT_3306_TCP_ADDR
+      MYSQL_PORT_3306_TCP_PORT: $MYSQL_PORT_3306_TCP_PORT
+      MYSQL_DATABASE: $MYSQL_DATABASE
+      MYSQL_USER: $MYSQL_USER
+      MYSQL_PASSWORD: $MYSQL_PASSWORD
+      APP_DEBUG: $APP_DEBUG
+      APP_ENV: $APP_ENV
+      APP_FORCE_TLS: $APP_FORCE_TLS
+      APP_LOCALE: $APP_LOCALE
+      MAIL_PORT_587_TCP_ADDR: $MAIL_PORT_587_TCP_ADDR
+      MAIL_PORT_587_TCP_PORT: $MAIL_PORT_587_TCP_PORT
+      MAIL_ENV_FROM_ADDR: $MAIL_ENV_FROM_ADDR
+      MAIL_ENV_FROM_NAME: $MAIL_ENV_FROM_NAME
+      MAIL_ENV_ENCRYPTION: $MAIL_ENV_ENCRYPTION
+      MAIL_ENV_USERNAME: $MAIL_ENV_USERNAME
+      MAIL_ENV_PASSWORD: $MAIL_ENV_PASSWORD
+    volumes:
+      - type: bind
+        source: /DATA/AppData/snipe-it/config
+        target: /config

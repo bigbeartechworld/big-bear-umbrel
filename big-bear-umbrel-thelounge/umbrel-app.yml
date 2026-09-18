@@ -1,0 +1,26 @@
+manifestVersion: 1
+id: big-bear-umbrel-thelounge
+category: Smart Home
+name: Thelounge
+version: "4.5.2"
+tagline: (a fork of shoutIRC) is a web IRC client that you host on your own server.
+description: >-
+  Thelounge (a fork of shoutIRC) is a web IRC client that you host on your own server. 
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: LinuxServer.io
+website: https://hub.docker.com/r/linuxserver/thelounge
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-universal-apps
+support: https://github.com/bigbeartechworld/big-bear-universal-apps/issues
+port: 9000
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+icon: https://cdn.jsdelivr.net/gh/thelounge/thelounge@master/client/public/img/logo-vertical-transparent-bg.svg
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-universal-apps

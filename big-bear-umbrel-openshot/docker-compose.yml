@@ -1,0 +1,17 @@
+version: "3.7"
+services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-openshot_app_1
+      APP_PORT: ' 3000'
+  app:
+    image: linuxserver/openshot:4.0.0@sha256:9ecb4ef33b4692f46977daf8d30cf8e3561e286bdf40631767044a491dac5b94
+    restart: unless-stopped
+    environment:
+      PUID: $PUID
+      PGID: $PGID
+      TZ: $TZ
+    volumes:
+      - type: bind
+        source: /DATA/AppData/openshot/config
+        target: /config

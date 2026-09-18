@@ -54,7 +54,7 @@ services:
       - ${APP_DATA_DIR}/attachments:/app/private/attachments
     # Environment variables to be set in the container for application configuration
     environment:
-      - BASE_URL=http://umbrel.local:10139
+      - BASE_URL=http://umbrel.local:10206
       - DATABASE_URL=postgresql://postgres@big-bear-planka-v2-postgres/planka
       - SECRET_KEY=notsecretkey
       # v2.0.0 CHANGE: TRUST_PROXY now requires boolean strings (false/true) instead of numeric (0/1)

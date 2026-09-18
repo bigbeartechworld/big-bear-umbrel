@@ -1,0 +1,25 @@
+version: "3.7"
+services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-endlessh_app_1
+      APP_PORT: ' 22'
+  app:
+    image: linuxserver/endlessh:version-dfe44eb2@sha256:1ba907783c782f2900347a42d730d97ccc88ab50e9c3403657211ca711d02ecc
+    restart: unless-stopped
+    environment:
+      PUID: $PUID
+      PGID: $PGID
+      TZ: $TZ
+      MSDELAY: ''
+      MAXLINES: ''
+      MAXCLIENTS: ''
+      LOGFILE: ''
+      BINDFAMILY: ''
+    volumes:
+      - type: bind
+        source: /DATA/AppData/endlessh/config
+        target: /config
+      - type: bind
+        source: /DATA/AppData/endlessh/config
+        target: /config

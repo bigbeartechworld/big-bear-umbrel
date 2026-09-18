@@ -1,0 +1,18 @@
+version: "3.7"
+services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-boinc_app_1
+      APP_PORT: ' 8080'
+  app:
+    image: linuxserver/boinc:18.04.1@sha256:8c81947b3f5771fa15fd47fd7c978e5c6121d516e2c1d3de039808bf9378006b
+    restart: unless-stopped
+    environment:
+      PUID: $PUID
+      PGID: $PGID
+      TZ: $TZ
+      PASSWORD: ''
+    volumes:
+      - type: bind
+        source: /DATA/AppData/boinc/config
+        target: /config

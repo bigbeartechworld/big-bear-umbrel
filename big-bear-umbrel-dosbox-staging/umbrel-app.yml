@@ -1,0 +1,26 @@
+manifestVersion: 1
+id: big-bear-umbrel-dosbox-staging
+category: Smart Home
+name: Dosbox-staging
+version: "0.83.0"
+tagline: A modern continuation of DOSBox a free and open-source emulator that enables the execution of MS-DOS software, especially video games.
+description: >-
+  DOSBox Staging is a modern continuation of DOSBox a free and open-source emulator that enables the execution of MS-DOS software, especially video games. 
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: LinuxServer.io
+website: https://hub.docker.com/r/linuxserver/dosbox-staging
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-universal-apps
+support: https://github.com/bigbeartechworld/big-bear-universal-apps/issues
+port: 3000
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+icon: https://cdn.jsdelivr.net/gh/linuxserver/docker-templates@master/linuxserver.io/img/dosbox-logo.png
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-universal-apps
