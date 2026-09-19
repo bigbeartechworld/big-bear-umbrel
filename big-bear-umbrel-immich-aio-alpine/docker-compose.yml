@@ -8,7 +8,7 @@ services:
       APP_PORT: "8080"
   # Main Immich Server service configuration
   big-bear-immich-aio-alpine:
-    image: ghcr.io/imagegenius/immich:2.7.5@sha256:4012699ba6c1b2c2ec4f4b50eb8e50b1c3af040d1ae2fb5dedcabebe055776ad # Image to be used
+    image: ghcr.io/imagegenius/immich:3.2.2@sha256:cf3cf9a3d66befd6989dfa5739b9923f718ae22fabe3d6665f87d37d369f462f # Image to be used
     volumes: # Mounting directories for persistent data storage
       - ${APP_DATA_DIR}/config:/config
       - ${APP_DATA_DIR}/photos:/usr/src/app/photos
@@ -44,7 +44,7 @@ services:
       - big_bear_immich_network # Connects the container to a defined network
   # Configuration for Database service
   big-bear-immich-db:
-    image: tensorchord/pgvecto-rs:pg14-v0.2.0@sha256:739cdd626151ff1f796dc95a6591b55a714f341c737e27f045019ceabf8e8c52 # Image to be used
+    image: ghcr.io/immich-app/postgres:14-vectorchord0.4.3-pgvectors0.2.0@sha256:bcf63357191b76a916ae5eb93464d65c07511da41e3bf7a8416db519b40b1c23 # Image to be used
     environment: # Setting environment variables
       POSTGRES_PASSWORD: casaos
       POSTGRES_USER: casaos
