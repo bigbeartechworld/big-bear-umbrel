@@ -1,19 +1,19 @@
 manifestVersion: 1
-id: big-bear-umbrel-immich-aio-alpine
-category: BigBearCasaOS
-name: Immich AIO Alpine
-version: "3.2.2"
-tagline: Immich All In One Alpine
+id: big-bear-umbrel-snipe-it-v8
+category: Other
+name: Snipe-IT v8
+version: "8.7.2"
+tagline: Open source IT asset management
 description: >-
-  AIO Alpine. Self-hosted photo and video storage. 
+  Snipe-IT is a free, open source IT asset management system. 
 releaseNotes: >-
   This version includes various improvements and bug fixes.
-developer: imagegenius
-website: https://hub.docker.com/r/imagegenius/immich
+developer: Grokability
+website: https://snipe-it.readme.io/docs/docker
 dependencies: []
 repo: https://github.com/bigbeartechworld/big-bear-universal-apps
 support: https://github.com/bigbeartechworld/big-bear-universal-apps/issues
-port: 10071
+port: 10206
 gallery:
   - 1.jpg
   - 2.jpg
@@ -21,6 +21,6 @@ gallery:
 path: ""
 defaultUsername: ""
 defaultPassword: ""
-icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/immich.png
+icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/snipe-it.png
 submitter: BigBearTechWorld
 submission: https://github.com/bigbeartechworld/big-bear-universal-apps
