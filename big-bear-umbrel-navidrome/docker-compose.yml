@@ -1,0 +1,12 @@
+version: "3.7"
+services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-navidrome_app_1
+      APP_PORT: "4533"
+  app:
+    image: deluan/navidrome:0.61.2@sha256:9fa40b3d8dec43ceb2213d1fa551da3dcfef6ac6d19c2e534efb92527c2bafd2
+    volumes:
+      - ./data:/data
+      - ${APP_DATA_DIR}/music:/music:ro
+    restart: unless-stopped

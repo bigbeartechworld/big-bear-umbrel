@@ -1,19 +1,19 @@
 manifestVersion: 1
-id: big-bear-umbrel-onedev
-category: BigBearCasaOS
-name: OneDev
-version: "16.6.4"
-tagline: Self-hosted Git Server with Kanban and CI/CD
+id: big-bear-umbrel-navidrome
+category: Media
+name: Navidrome
+version: "0.61.2"
+tagline: Modern music server and streamer
 description: >-
-  Self-hosted Git Server with Kanban and CI/CD 
+  Modern web-based music server and streamer for your personal music collection. 
 releaseNotes: >-
   This version includes various improvements and bug fixes.
-developer: theonedev
-website: https://hub.docker.com/r/1dev/server
+developer: Navidrome
+website: https://www.navidrome.org/
 dependencies: []
 repo: https://github.com/bigbeartechworld/big-bear-universal-apps
 support: https://github.com/bigbeartechworld/big-bear-universal-apps/issues
-port: 10121
+port: 10002
 gallery:
   - 1.jpg
   - 2.jpg
@@ -21,6 +21,6 @@ gallery:
 path: ""
 defaultUsername: ""
 defaultPassword: ""
-icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/onedev.png
+icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/navidrome.png
 submitter: BigBearTechWorld
 submission: https://github.com/bigbeartechworld/big-bear-universal-apps

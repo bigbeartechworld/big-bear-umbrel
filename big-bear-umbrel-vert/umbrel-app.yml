@@ -13,7 +13,7 @@ website: https://vert.sh/
 dependencies: []
 repo: https://github.com/bigbeartechworld/big-bear-universal-apps
 support: https://github.com/bigbeartechworld/big-bear-universal-apps/issues
-port: 10001
+port: 10003
 gallery:
   - 1.jpg
   - 2.jpg
