@@ -1,19 +1,19 @@
 manifestVersion: 1
-id: big-bear-umbrel-onedev
-category: BigBearCasaOS
-name: OneDev
-version: "16.6.4"
-tagline: Self-hosted Git Server with Kanban and CI/CD
+id: big-bear-umbrel-drawio
+category: Productivity
+name: Draw.io
+version: "31.4.6"
+tagline: Structured diagram editor
 description: >-
-  Self-hosted Git Server with Kanban and CI/CD 
+  Draw.io is a structured diagram editor for creating flowcharts, network diagrams, and other visual documentation. 
 releaseNotes: >-
   This version includes various improvements and bug fixes.
-developer: theonedev
-website: https://hub.docker.com/r/1dev/server
+developer: JGraph
+website: https://www.drawio.com/
 dependencies: []
 repo: https://github.com/bigbeartechworld/big-bear-universal-apps
 support: https://github.com/bigbeartechworld/big-bear-universal-apps/issues
-port: 10121
+port: 10000
 gallery:
   - 1.jpg
   - 2.jpg
@@ -21,6 +21,6 @@ gallery:
 path: ""
 defaultUsername: ""
 defaultPassword: ""
-icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/onedev.png
+icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/drawio.png
 submitter: BigBearTechWorld
 submission: https://github.com/bigbeartechworld/big-bear-universal-apps
