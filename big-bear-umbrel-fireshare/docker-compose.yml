@@ -1,0 +1,33 @@
+version: "3.7"
+services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-fireshare_fireshare_1
+      APP_PORT: "80"
+  fireshare:
+    image: shaneisrael/fireshare:1.7.1
+    volumes:
+      - ${APP_DATA_DIR}/fireshare/data:/data
+      - ${APP_DATA_DIR}/fireshare/processed:/processed
+      - ${APP_DATA_DIR}/fireshare/videos:/videos
+      - ${APP_DATA_DIR}/fireshare/images:/images
+    environment:
+      - ADMIN_USERNAME=admin
+      - ADMIN_PASSWORD=admin
+      # SECRET_KEY intentionally omitted: Fireshare auto-generates a secure
+      # random key (Python secrets.token_hex) when unset, so it is unique per
+      # deployment. Set it explicitly only to persist sessions across restarts.
+      - MINUTES_BETWEEN_VIDEO_SCANS=5
+      - THUMBNAIL_VIDEO_LOCATION=10
+      - DOMAIN=
+      - PUID=1000
+      - PGID=1000
+      - ENABLE_TRANSCODING=false
+      - TRANSCODE_GPU=false
+    restart: unless-stopped
+    networks:
+      - fireshare-network
+      - default
+networks:
+  fireshare-network:
+    driver: bridge
