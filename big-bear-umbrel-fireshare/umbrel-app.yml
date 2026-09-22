@@ -1,0 +1,26 @@
+manifestVersion: 1
+id: big-bear-umbrel-fireshare
+category: Media
+name: Fireshare
+version: "1.7.1"
+tagline: Store and share your video game clips and screenshots
+description: >-
+  Fireshare lets you host your own video and image content and share it with others via public or private links — no third-party services required. Drop videos into a watched folder and Fireshare automatically scans, generates thumbnails, and organizes them into a clean, searchable library with folder support. Great for game clips, screen recordings, screenshots, and home videos. Features include public/private share links, an admin login, automatic video scanning, OpenGraph link previews, and optional GPU transcoding. 
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: Shane Israel
+website: https://github.com/ShaneIsrael/fireshare
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-universal-apps
+support: https://github.com/bigbeartechworld/big-bear-universal-apps/issues
+port: 18585
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/fireshare.png
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-universal-apps
