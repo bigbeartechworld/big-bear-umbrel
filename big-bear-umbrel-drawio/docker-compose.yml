@@ -5,5 +5,5 @@ services:
       APP_HOST: big-bear-umbrel-drawio_app_1
       APP_PORT: "8080"
   app:
-    image: jgraph/drawio:31.4.6@sha256:4bd19d4bc36b65cabf1ae9c5d234597e564416b6c67f7d4db296c2df758fcb52
+    image: jgraph/drawio:31.4.6@sha256:139b43305b77c46575d5af5dcc7b6c38dc7ea22f430fdfe954fb8f96926643e5
     restart: unless-stopped
