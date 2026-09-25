@@ -1,0 +1,26 @@
+manifestVersion: 1
+id: big-bear-umbrel-rustdesk-server
+category: Other
+name: Rustdesk Server
+version: "1"
+tagline: RustDesk is a full-featured open source remote control alternative for self-hosting and security with minimal configuration. You have full control of your data, with no concerns about security.
+description: >-
+  RustDesk is a full-featured open source remote control alternative for self-hosting and security with minimal configuration. You have full control of your data, with no concerns about security. 
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: RustDesk
+website: https://github.com/WisdomSky/CasaOS-Coolstore/tree/main/Apps/rustdesk-server
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-universal-apps
+support: https://github.com/bigbeartechworld/big-bear-universal-apps/issues
+port: 8080
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+icon: https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Rustdesk.svg/48px-Rustdesk.svg.png
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-universal-apps

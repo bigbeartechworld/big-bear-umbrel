@@ -1,0 +1,26 @@
+manifestVersion: 1
+id: big-bear-umbrel-hestiacp
+category: Other
+name: Hestia CP
+version: "latest"
+tagline: An open-source web hosting control panel that allows users to manage their websites, domains, email accounts, databases, and more. It provides a user-friendly interface for managing web hosting environments and simplifies various administrative tasks.
+description: >-
+  Hestia Control Panel (HestiaCP) is an open-source web hosting control panel that allows users to manage their websites, domains, email accounts, databases, and more. It provides a user-friendly interface for managing web hosting environments and simplifies various administrative tasks. 
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: 
+website: https://github.com/WisdomSky/CasaOS-Coolstore/tree/main/Apps/hestiacp
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-universal-apps
+support: https://github.com/bigbeartechworld/big-bear-universal-apps/issues
+port: 48112
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+icon: https://raw.githubusercontent.com/hestiacp/hestiacp/main/web/images/logo.png
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-universal-apps

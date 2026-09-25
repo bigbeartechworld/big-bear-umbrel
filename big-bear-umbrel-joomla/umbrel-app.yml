@@ -1,0 +1,26 @@
+manifestVersion: 1
+id: big-bear-umbrel-joomla
+category: Other
+name: Joomla
+version: "6.1.3-apache"
+tagline: Another Free And Open-source Cms
+description: >-
+  Another free and open-source CMS 
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: 
+website: https://github.com/WisdomSky/CasaOS-Coolstore/tree/main/Apps/joomla
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-universal-apps
+support: https://github.com/bigbeartechworld/big-bear-universal-apps/issues
+port: 48105
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+icon: https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/joomla.png
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-universal-apps

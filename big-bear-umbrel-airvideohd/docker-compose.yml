@@ -1,0 +1,16 @@
+version: "3.7"
+services:
+  app:
+    image: dmaxwell/airvideohd:latest
+    restart: unless-stopped
+    network_mode: host
+    volumes:
+      - type: bind
+        source: /DATA/AppData/airvideohd/config
+        target: /config
+      - type: bind
+        source: /DATA/AppData/airvideohd/conversionPath
+        target: /conversionPath
+      - type: bind
+        source: /DATA/Media/Movies
+        target: /videos

@@ -1,0 +1,20 @@
+version: "3.7"
+services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-portainer-tools_app_1
+      APP_PORT: ' 9999'
+  app:
+    image: technorabilia/portainer-tools
+    restart: unless-stopped
+    environment:
+      PUID: $PUID
+      PGID: $PGID
+      PORTAINER_USERNAME: ''
+      PORTAINER_PASSWORD: ''
+      PORTAINER_URL: 0.0.0.0:9000
+      SERVER_URL: http://0.0.0.0:9999
+    volumes:
+      - type: bind
+        source: /DATA/AppData/portainer-tools/config
+        target: /config

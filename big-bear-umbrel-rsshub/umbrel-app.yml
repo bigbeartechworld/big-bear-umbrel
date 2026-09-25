@@ -1,0 +1,26 @@
+manifestVersion: 1
+id: big-bear-umbrel-rsshub
+category: Other
+name: RSShub
+version: "2026-09-24"
+tagline: RSSHub is an open source, easy to use, and extensible RSS feed generator. It's capable of generating RSS feeds from pretty much everything.
+description: >-
+  RSSHub is an open source, easy to use, and extensible RSS feed generator. It's capable of generating RSS feeds from pretty much everything. RSSHub delivers millions of contents aggregated from all kinds of sources, our vibrant open source community is ensuring the deliver of RSSHub's new routes, new features and bug fixes. RSSHub can be used with browser extension RSSHub Radar and mobile auxiliary app RSSBud (iOS) and RSSAid (Android) 
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: DIYgod
+website: https://github.com/WisdomSky/CasaOS-Coolstore/tree/main/Apps/rsshub
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-universal-apps
+support: https://github.com/bigbeartechworld/big-bear-universal-apps/issues
+port: 1200
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+icon: https://docs.rsshub.app/logo.png
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-universal-apps

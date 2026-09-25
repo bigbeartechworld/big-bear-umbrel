@@ -1,0 +1,17 @@
+version: "3.7"
+services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-websync_app_1
+      APP_PORT: ' 3000'
+  app:
+    image: furier/websync:latest
+    restart: unless-stopped
+    working_dir: /src
+    command:
+      - node
+      - server.js
+    volumes:
+      - type: bind
+        source: /DATA/AppData/websync/data
+        target: /data

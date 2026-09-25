@@ -1,0 +1,18 @@
+version: "3.7"
+services:
+  app:
+    image: esphome/esphome:2026.9
+    restart: unless-stopped
+    network_mode: host
+    privileged: true
+    environment:
+      USERNAME: bigbear
+      PASSWORD: f87989f5-0dd4-44af-a286-6c6a325001cc
+    volumes:
+      - type: bind
+        source: /DATA/AppData/esphome/config
+        target: /config
+      - type: bind
+        source: /etc/localtime
+        target: /etc/localtime
+        read_only: true

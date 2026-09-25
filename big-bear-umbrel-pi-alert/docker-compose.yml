@@ -1,0 +1,19 @@
+version: "3.7"
+services:
+  app:
+    image: jokobsk/pi.alert:25
+    restart: always
+    network_mode: host
+    environment:
+      PUID: $PUID
+      PGID: $PGID
+      HOST_USER_ID: $PUID
+      HOST_USER_GID: $PGID
+      TZ: $TZ
+    volumes:
+      - type: bind
+        source: ${APP_DATA_DIR}/config
+        target: /home/pi/pialert/config
+      - type: bind
+        source: ${APP_DATA_DIR}/db
+        target: /home/pi/pialert/db

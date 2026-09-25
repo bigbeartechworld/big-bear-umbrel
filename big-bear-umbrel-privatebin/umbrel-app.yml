@@ -1,0 +1,26 @@
+manifestVersion: 1
+id: big-bear-umbrel-privatebin
+category: Other
+name: Privatebin
+version: "2.0.6"
+tagline: Privatebin Is A Minimalist, Open Source Online Pastebin Where The Server Has Zero Knowledge Of Pasted Data!
+description: >-
+  PrivateBin is a minimalist, open source online pastebin where the server has zero knowledge of pasted data! 
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: 
+website: https://github.com/WisdomSky/CasaOS-Coolstore/tree/main/Apps/privatebin
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-universal-apps
+support: https://github.com/bigbeartechworld/big-bear-universal-apps/issues
+port: 48106
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+icon: https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/images/privatebin.png
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-universal-apps

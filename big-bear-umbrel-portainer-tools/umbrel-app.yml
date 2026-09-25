@@ -1,0 +1,26 @@
+manifestVersion: 1
+id: big-bear-umbrel-portainer-tools
+category: Other
+name: Portainer Tools
+version: "latest"
+tagline: Portainer Tools allows you to add your own Portainer App Template definitions, merge them with existing ones and host them on your own server.
+description: >-
+  Portainer Tools allows you to add your own Portainer App Template definitions, merge them with existing ones and host them on your own server. You can set the Portainer App Templates URL from within the application to easily switch App Template definitions. Detailed information about installing and using the application and more can be found on https://www.technorabilia.com/portainer-tools-merge-and-host-app-template-definitions. 
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: Technorabilia
+website: https://github.com/WisdomSky/CasaOS-Coolstore/tree/main/Apps/portainer-tools
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-universal-apps
+support: https://github.com/bigbeartechworld/big-bear-universal-apps/issues
+port: 9999
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Portainer/icon.png
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-universal-apps

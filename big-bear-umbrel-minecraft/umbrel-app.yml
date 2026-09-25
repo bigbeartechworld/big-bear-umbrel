@@ -1,0 +1,26 @@
+manifestVersion: 1
+id: big-bear-umbrel-minecraft
+category: Other
+name: Minecraft Server
+version: "2026.9.1"
+tagline: This Docker Image Provides A Minecraft Server That Will Automatically Download The Latest Stable Version At Startup. You Can Also Run/upgrade To Any Specific Version Or The Latest Snapshot. See The Versions Section Below For More Information.
+description: >-
+  This docker image provides a Minecraft Server that will automatically download the latest stable version at startup. You can also run/upgrade to any specific version or the latest snapshot. See the Versions section below for more information. 
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: 
+website: https://github.com/WisdomSky/CasaOS-Coolstore/tree/main/Apps/minecraft
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-universal-apps
+support: https://github.com/bigbeartechworld/big-bear-universal-apps/issues
+port: 25565
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+icon: https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/images/minecraft.png
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-universal-apps

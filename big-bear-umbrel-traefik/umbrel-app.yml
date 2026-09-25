@@ -1,0 +1,26 @@
+manifestVersion: 1
+id: big-bear-umbrel-traefik
+category: Other
+name: Traefik
+version: "v3.7.13"
+tagline: Cloud-native Networking Stack That Just Works.
+description: >-
+  Cloud-Native Networking Stack That Just Works. 
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: 
+website: https://github.com/WisdomSky/CasaOS-Coolstore/tree/main/Apps/traefik
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-universal-apps
+support: https://github.com/bigbeartechworld/big-bear-universal-apps/issues
+port: 48104
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+icon: https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/images/traefik.png
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-universal-apps

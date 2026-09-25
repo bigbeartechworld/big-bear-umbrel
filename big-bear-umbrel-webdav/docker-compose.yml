@@ -1,0 +1,17 @@
+version: "3.7"
+services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-webdav_app_1
+      APP_PORT: ' 80'
+  app:
+    image: bytemark/webdav:latest
+    restart: unless-stopped
+    environment:
+      AUTH_TYPE: Digest
+      USERNAME: bigbear
+      PASSWORD: 437830b0-693e-47c3-863c-465522d720db
+    volumes:
+      - type: bind
+        source: /DATA/Documents
+        target: /var/lib/dav

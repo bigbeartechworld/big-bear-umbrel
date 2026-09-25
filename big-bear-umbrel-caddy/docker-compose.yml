@@ -1,0 +1,19 @@
+version: "3.7"
+services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-caddy_app_1
+      APP_PORT: ' 80'
+  app:
+    image: caddy:2.11.4
+    restart: unless-stopped
+    volumes:
+      - type: bind
+        source: /DATA/AppData/caddy/data
+        target: /data
+      - type: bind
+        source: /DATA/AppData/caddy/config
+        target: /config
+      - type: bind
+        source: /DATA/AppData/caddy/caddyfile
+        target: /etc/caddy/caddyfile

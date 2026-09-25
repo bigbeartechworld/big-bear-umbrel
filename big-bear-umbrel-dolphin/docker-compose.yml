@@ -5,7 +5,7 @@ services:
       APP_HOST: big-bear-umbrel-dolphin_app_1
       APP_PORT: ' 3000'
   app:
-    image: linuxserver/dolphin:version-2606a@sha256:3f7021021e20aa2e244d61cb1ded987181dae30cf1e5ae2c1b88960da4018330
+    image: linuxserver/dolphin:version-2606a@sha256:2934f9f01b98669242408c97cfd927ccf308cab108c380f5d4b8dfded5eb5055
     restart: unless-stopped
     environment:
       PUID: $PUID

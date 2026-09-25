@@ -1,0 +1,29 @@
+version: "3.7"
+services:
+  app:
+    image: wisdomsky/casaos-toolbox:0.2
+    restart: unless-stopped
+    network_mode: host
+    environment:
+      FORCE_HTTPS: false
+      WEBUI_PORT: 8088
+      DB_HOST: 0.0.0.0
+      DB_PORT: 33066
+      DB_DATABASE: casaos
+      DB_USERNAME: bigbear
+      DB_PASSWORD: fe8a627d-d00f-4486-9bb4-20d58b8b6d3e
+    volumes:
+      - /usr/bin/casaos-cli:/usr/bin/casaos-cli
+      - /etc/casaos/gateway.ini:/casaos/gateway.ini
+      - /var/lib/casaos/apps:/casaos/apps
+      - /var/lib/casaos/www:/casaos/www
+  db:
+    image: mariadb:13.0.2
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: 05e5827c-ff33-4a7d-9b95-fddbf290b839
+      MYSQL_DATABASE: casaos
+      MYSQL_USER: bigbear
+      MYSQL_PASSWORD: fe8a627d-d00f-4486-9bb4-20d58b8b6d3e
+    volumes:
+      - /DATA/AppData/casaos-toolbox/mysql:/var/lib/mysql
