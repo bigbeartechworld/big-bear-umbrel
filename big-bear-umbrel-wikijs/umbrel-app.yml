@@ -2,7 +2,7 @@ manifestVersion: 1
 id: big-bear-umbrel-wikijs
 category: Smart Home
 name: Wikijs
-version: "2.5.314"
+version: "2.5.315"
 tagline: A modern, lightweight and powerful wiki app built on NodeJS.
 description: >-
   Wikijs A modern, lightweight and powerful wiki app built on NodeJS. 

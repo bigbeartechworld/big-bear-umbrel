@@ -2,7 +2,7 @@ manifestVersion: 1
 id: big-bear-umbrel-write-freely
 category: BigBearCasaOS
 name: Write Freely
-version: "0.16"
+version: "0.17"
 tagline: Markdown-based publishing platform.
 description: >-
   WriteFreely is a clean, minimalist publishing platform made for writers. Start a blog, share knowledge within your organization, or build a community around the shared act of writing. 

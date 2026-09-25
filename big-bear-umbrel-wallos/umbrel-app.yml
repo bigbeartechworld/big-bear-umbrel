@@ -2,7 +2,7 @@ manifestVersion: 1
 id: big-bear-umbrel-wallos
 category: BigBearCasaOS
 name: Wallos
-version: "5.7.1"
+version: "5.8.1"
 tagline: Wallos
 description: >-
   Wallos: Open-Source Personal Subscription Tracker 

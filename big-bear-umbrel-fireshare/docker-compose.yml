@@ -5,7 +5,7 @@ services:
       APP_HOST: big-bear-umbrel-fireshare_fireshare_1
       APP_PORT: "80"
   fireshare:
-    image: shaneisrael/fireshare:1.7.1
+    image: shaneisrael/fireshare:1.8.1
     volumes:
       - ${APP_DATA_DIR}/fireshare/data:/data
       - ${APP_DATA_DIR}/fireshare/processed:/processed

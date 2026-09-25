@@ -2,7 +2,7 @@ manifestVersion: 1
 id: big-bear-umbrel-hermes
 category: BigBearCasaOS
 name: Hermes Agent
-version: "2026.9.14"
+version: "v2026.9.21"
 tagline: 
 description: >-
   Hermes Agent 0.21.3 is a self-hosted AI agent with a gateway API and an authenticated web dashboard. 

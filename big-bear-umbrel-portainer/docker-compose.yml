@@ -8,7 +8,7 @@ services:
       APP_PORT: "8000"
   # Main Portainer service configuration
   app:
-    image: portainer/portainer-ce:2.45.0-alpine@sha256:e6b0225f4bbc989e398c85062f7426f8cf4b61f8aca6f40bf44789d1dada1949 # Image to be used
+    image: portainer/portainer-ce:2.45.1-alpine@sha256:4d9a99f4495c005388842b94d72377d5239eac8686543428c3ff7c9b6c0882bb # Image to be used
     volumes:
       - ${APP_DATA_DIR}/data:/data # Bind mount for Docker volumes
       - /var/run/docker.sock:/var/run/docker.sock # Bind mount for Docker socket
