@@ -1,0 +1,26 @@
+manifestVersion: 1
+id: big-bear-umbrel-esphome
+category: Other
+name: ESPHome
+version: "2026.9"
+tagline: ESPHome is a system to control your microcontrollers by simple yet powerful configuration files and control them remotely through Home Automation systems.
+description: >-
+  ESPHome is a system to control your microcontrollers by simple yet powerful configuration files and control them remotely through Home Automation systems. 
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: ESPHome
+website: https://github.com/WisdomSky/CasaOS-Coolstore/tree/main/Apps/esphome
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-universal-apps
+support: https://github.com/bigbeartechworld/big-bear-universal-apps/issues
+port: 6052
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+icon: https://avatars.githubusercontent.com/u/45919759
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-universal-apps

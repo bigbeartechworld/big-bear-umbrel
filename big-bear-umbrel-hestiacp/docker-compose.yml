@@ -1,0 +1,39 @@
+version: "3.7"
+services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-hestiacp_app_1
+      APP_PORT: ' 8083'
+  app:
+    image: artsemkniazeu/hestiacp
+    restart: unless-stopped
+    environment:
+      TZ: $TZ
+    networks:
+      docnet:
+        ipv4_address: 10.1.1.0
+      default: null
+    volumes:
+      - type: bind
+        source: ${APP_DATA_DIR}/config
+        target: /hestia
+      - type: bind
+        source: ${APP_DATA_DIR}/home
+        target: /home
+      - type: bind
+        source: ${APP_DATA_DIR}/backup
+        target: /backup
+    cap_add:
+      - NET_ADMIN
+      - NET_RAW
+      - SYS_NICE
+      - DAC_READ_SEARCH
+networks:
+  docnet:
+    name: docnet
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 10.1.0.0/16
+          ip_range: 10.1.1.0/24
+          gateway: 10.1.0.1

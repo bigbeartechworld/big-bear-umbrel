@@ -1,0 +1,16 @@
+version: "3.7"
+services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-redis_app_1
+      APP_PORT: ' 6379'
+  app:
+    image: redis:8.8.3
+    restart: unless-stopped
+    volumes:
+      - type: bind
+        source: /DATA/AppData/redis/data
+        target: /data
+      - type: bind
+        source: /DATA/AppData/redis/config
+        target: /usr/local/etc/redis

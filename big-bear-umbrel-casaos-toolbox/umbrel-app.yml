@@ -1,0 +1,26 @@
+manifestVersion: 1
+id: big-bear-umbrel-casaos-toolbox
+category: Other
+name: CasaOS Toolbox
+version: "0.2"
+tagline: Provides additional features to CasaOS.
+description: >-
+  CasaOS Toolbox is an extension application that provides additional features to CasaOS. 
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: WisdomSky
+website: https://github.com/WisdomSky/CasaOS-Coolstore/tree/main/Apps/casaos-toolbox
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-universal-apps
+support: https://github.com/bigbeartechworld/big-bear-universal-apps/issues
+port: 8088
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+icon: https://cdn.jsdelivr.net/gh/bigbeartechworld/big-bear-universal-apps@main/apps/casaos-toolbox/logo.png
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-universal-apps

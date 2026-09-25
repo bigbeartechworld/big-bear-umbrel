@@ -1,0 +1,26 @@
+manifestVersion: 1
+id: big-bear-umbrel-caddy
+category: Other
+name: Caddy
+version: "2.11.4"
+tagline: Caddy - The Ultimate Server With Automatic Https.
+description: >-
+  Caddy - The Ultimate Server with Automatic HTTPS. 
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: 
+website: https://github.com/WisdomSky/CasaOS-Coolstore/tree/main/Apps/caddy
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-universal-apps
+support: https://github.com/bigbeartechworld/big-bear-universal-apps/issues
+port: 48100
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+icon: https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/images/caddy.png
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-universal-apps

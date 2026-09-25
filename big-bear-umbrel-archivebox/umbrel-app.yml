@@ -1,0 +1,26 @@
+manifestVersion: 1
+id: big-bear-umbrel-archivebox
+category: Other
+name: Archivebox
+version: "0.9.51"
+tagline: Archivebox Is A Powerful, Self-hosted Internet Archiving Solution To Collect, Save, And View Sites You Want To Preserve Offline.
+description: >-
+  ArchiveBox is a powerful, self-hosted internet archiving solution to collect, save, and view sites you want to preserve offline. 
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: 
+website: https://github.com/WisdomSky/CasaOS-Coolstore/tree/main/Apps/archivebox
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-universal-apps
+support: https://github.com/bigbeartechworld/big-bear-universal-apps/issues
+port: 8002
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+icon: https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/images/archivebox.png
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-universal-apps

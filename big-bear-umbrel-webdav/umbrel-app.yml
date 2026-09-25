@@ -1,0 +1,26 @@
+manifestVersion: 1
+id: big-bear-umbrel-webdav
+category: Other
+name: WebDAV
+version: "latest"
+tagline: Web-based distributed authoring and versioning (WebDAV) is a set of extensions to the HTTP protocol that allows WebDAV clients (such as Microsoft Web Folders) to collaboratively edit and manage files on remote Web servers.
+description: >-
+  Web-based distributed authoring and versioning (WebDAV) is a set of extensions to the HTTP protocol that allows WebDAV clients (such as Microsoft Web Folders) to collaboratively edit and manage files on remote Web servers. 
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: Bytemark
+website: https://github.com/WisdomSky/CasaOS-Coolstore/tree/main/Apps/webdav
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-universal-apps
+support: https://github.com/bigbeartechworld/big-bear-universal-apps/issues
+port: 48108
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+icon: https://debrid-link.com/screen/webdav_logo.png
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-universal-apps

@@ -1,0 +1,26 @@
+manifestVersion: 1
+id: big-bear-umbrel-websync
+category: Other
+name: Web Sync (RSync)
+version: "latest"
+tagline: Websync is intended to be an rsync task manager, where rsync tasks can be added, scheduled and maintained in a sane manner.
+description: >-
+  Websync is intended to be an rsync task manager, where rsync tasks can be added, scheduled and maintained in a sane manner. 
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: 
+website: https://github.com/WisdomSky/CasaOS-Coolstore/tree/main/Apps/websync
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-universal-apps
+support: https://github.com/bigbeartechworld/big-bear-universal-apps/issues
+port: 48109
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+icon: https://cdn0.iconfinder.com/data/icons/octicons/1024/sync-1024.png
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-universal-apps

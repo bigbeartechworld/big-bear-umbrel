@@ -1,0 +1,14 @@
+version: "3.7"
+services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-minecraft_app_1
+      APP_PORT: ' 25565'
+  app:
+    image: itzg/minecraft-server:2026.9.1
+    environment:
+      EULA: true
+    volumes:
+      - type: bind
+        source: ${APP_DATA_DIR}/data
+        target: /data

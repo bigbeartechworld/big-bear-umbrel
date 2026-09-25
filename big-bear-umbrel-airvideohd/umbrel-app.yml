@@ -1,0 +1,26 @@
+manifestVersion: 1
+id: big-bear-umbrel-airvideohd
+category: Other
+name: Air Video HD
+version: "latest"
+tagline: Watch videos streamed instantly from your computer on your iPhone, iPad, iPod touch or Apple TV.
+description: >-
+  Watch videos streamed instantly from your computer on your iPhone, iPad, iPod touch or Apple TV. 
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: InMethod
+website: https://github.com/WisdomSky/CasaOS-Coolstore/tree/main/Apps/airvideohd
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-universal-apps
+support: https://github.com/bigbeartechworld/big-bear-universal-apps/issues
+port: 8080
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+icon: https://airvideo.app/images/icon.png
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-universal-apps
