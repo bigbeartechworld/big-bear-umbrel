@@ -2,7 +2,7 @@ manifestVersion: 1
 id: big-bear-umbrel-fireshare
 category: Media
 name: Fireshare
-version: "1.7.1"
+version: "1.8.1"
 tagline: Store and share your video game clips and screenshots
 description: >-
   Fireshare lets you host your own video and image content and share it with others via public or private links — no third-party services required. Drop videos into a watched folder and Fireshare automatically scans, generates thumbnails, and organizes them into a clean, searchable library with folder support. Great for game clips, screen recordings, screenshots, and home videos. Features include public/private share links, an admin login, automatic video scanning, OpenGraph link previews, and optional GPU transcoding. 

@@ -2,7 +2,7 @@ manifestVersion: 1
 id: big-bear-umbrel-mstream
 category: Smart Home
 name: Mstream
-version: "6.28.1"
+version: "6.29.0"
 tagline: A personal music streaming server. You can use mStream to stream your music from your home computer to any device, anywhere. There are mobile apps available for both Android and iPhone.
 description: >-
   Mstream is a personal music streaming server. You can use mStream to stream your music from your home computer to any device, anywhere. There are mobile apps available for both Android and iPhone. 

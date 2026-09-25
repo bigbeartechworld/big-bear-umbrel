@@ -2,7 +2,7 @@ manifestVersion: 1
 id: big-bear-umbrel-grav
 category: Smart Home
 name: Grav
-version: "2.1.6"
+version: "2.1.8"
 tagline: A Fast, Simple, and Flexible, file-based Web-platform.
 description: >-
   Grav is a Fast, Simple, and Flexible, file-based Web-platform. 

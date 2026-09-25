@@ -2,7 +2,7 @@ manifestVersion: 1
 id: big-bear-umbrel-lychee
 category: Smart Home
 name: Lychee
-version: "7.8.3"
+version: "7.8.4"
 tagline: A free photo-management tool, which runs on your server or web-space. Installing is a matter of seconds. Upload, manage and share photos like from a native application. Lychee comes with everything you need and all your photos are stored securely.
 description: >-
   Lychee is a free photo-management tool, which runs on your server or web-space. Installing is a matter of seconds. Upload, manage and share photos like from a native application. Lychee comes with everything you need and all your photos are stored securely. 

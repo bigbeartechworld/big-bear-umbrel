@@ -2,7 +2,7 @@ manifestVersion: 1
 id: big-bear-umbrel-bambustudio
 category: Smart Home
 name: Bambustudio
-version: "02.08.02"
+version: "02.08.03"
 tagline: An open-source, cutting-edge, feature-rich slicing software. It contains project-based workflows, systematically optimized slicing algorithms, and an easy-to-use graphical interface, bringing users an incredibly smooth printing experience.
 description: >-
   Bambu Studio is an open-source, cutting-edge, feature-rich slicing software. It contains project-based workflows, systematically optimized slicing algorithms, and an easy-to-use graphical interface, bringing users an incredibly smooth printing experience. 

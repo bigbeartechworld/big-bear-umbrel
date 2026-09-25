@@ -2,7 +2,7 @@ manifestVersion: 1
 id: big-bear-umbrel-blade-of-agony
 category: Smart Home
 name: Blade-of-agony
-version: "3.1.20260910"
+version: "3.1.20260917"
 tagline: A story-driven WWII shooter inspired by Wolfenstein and Doom.
 description: >-
   Wolfenstein: Blade of Agony is a story-driven WWII shooter inspired by Wolfenstein and Doom. 
