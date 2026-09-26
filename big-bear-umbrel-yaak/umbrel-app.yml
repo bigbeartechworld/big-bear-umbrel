@@ -2,7 +2,7 @@ manifestVersion: 1
 id: big-bear-umbrel-yaak
 category: Smart Home
 name: Yaak
-version: "2026.7.1"
+version: "2026.8.0"
 tagline: A desktop API client for organizing and executing REST, GraphQL, and gRPC requests. It's built using Tauri, Rust, and ReactJS.
 description: >-
   Yaak is a desktop API client for organizing and executing REST, GraphQL, and gRPC requests. It's built using Tauri, Rust, and ReactJS. 
