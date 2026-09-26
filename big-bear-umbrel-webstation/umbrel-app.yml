@@ -2,7 +2,7 @@ manifestVersion: 1
 id: big-bear-umbrel-webstation
 category: Smart Home
 name: Webstation
-version: "0.8.4-romm"
+version: "0.8.5-romm"
 tagline: A web native emulation focused LXQt desktop based on Ubuntu.
 description: >-
   Webstation is a web native emulation focused LXQt desktop based on Ubuntu. 

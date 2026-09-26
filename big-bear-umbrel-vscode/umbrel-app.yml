@@ -2,7 +2,7 @@ manifestVersion: 1
 id: big-bear-umbrel-vscode
 category: Smart Home
 name: Vscode
-version: "1.137.0"
+version: "1.138.0"
 tagline: An integrated development environment developed by Microsoft. This container runs the full desktop application, for a web native version see Code Server.
 description: >-
   VS Code is an integrated development environment developed by Microsoft. This container runs the full desktop application, for a web native version see Code Server. 

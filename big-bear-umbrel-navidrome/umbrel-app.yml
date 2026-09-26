@@ -2,7 +2,7 @@ manifestVersion: 1
 id: big-bear-umbrel-navidrome
 category: Media
 name: Navidrome
-version: "0.64.0"
+version: "0.64.1"
 tagline: Modern music server and streamer
 description: >-
   Modern web-based music server and streamer for your personal music collection. 

@@ -2,7 +2,7 @@ manifestVersion: 1
 id: big-bear-umbrel-intellij-idea
 category: Smart Home
 name: Intellij-idea
-version: "42026.2.2"
+version: "42026.2.3"
 tagline: Helps you write code faster with tools that eliminate tedious tasks and let you focus on what matters – building great software.
 description: >-
   IntelliJ IDEA helps you write code faster with tools that eliminate tedious tasks and let you focus on what matters – building great software. 
