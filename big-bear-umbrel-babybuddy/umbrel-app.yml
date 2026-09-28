@@ -2,7 +2,7 @@ manifestVersion: 1
 id: big-bear-umbrel-babybuddy
 category: Smart Home
 name: Babybuddy
-version: "2.10.1"
+version: "2.11.0"
 tagline: A buddy for babies. Helps caregivers track sleep, feedings, diaper changes, tummy time and more to learn about and predict baby's needs without (as much) guess work.
 description: >-
   Babybuddy is a buddy for babies! Helps caregivers track sleep, feedings, diaper changes, tummy time and more to learn about and predict baby's needs without (as much) guess work. 
