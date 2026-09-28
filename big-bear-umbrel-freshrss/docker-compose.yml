@@ -5,7 +5,7 @@ services:
       APP_HOST: big-bear-umbrel-freshrss_app_1
       APP_PORT: ' 80'
   app:
-    image: linuxserver/freshrss:1.30.0@sha256:5358f396069b36f1399b16a4a368869ed8c1ccca16d15778bbc7782b76fba57e
+    image: linuxserver/freshrss:1.30.0@sha256:50f295fe361b2ef467a65232ab488ef161f8a0d6815d28b918c29fcb4a9c9690
     restart: unless-stopped
     environment:
       PUID: $PUID
