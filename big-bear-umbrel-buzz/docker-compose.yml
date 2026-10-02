@@ -5,7 +5,7 @@ services:
       APP_HOST: big-bear-umbrel-buzz_relay_1
       APP_PORT: "3000"
   relay:
-    image: ghcr.io/block/buzz:main@sha256:56658526d46599299c46a290e02f5dae0bde8b1b5e02c418e3ef7f95fa3a6776
+    image: ghcr.io/block/buzz:main@sha256:661fda21edc35f01bb02badfebcaf6908d4b39505f083854e9af71411e0b5227
     environment:
       BUZZ_BIND_ADDR: 0.0.0.0:3000
       BUZZ_HEALTH_PORT: "8080"
