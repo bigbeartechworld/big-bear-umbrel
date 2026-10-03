@@ -2,7 +2,7 @@ manifestVersion: 1
 id: big-bear-umbrel-audacity
 category: Smart Home
 name: Audacity
-version: "4.0.0"
+version: "4.0.1"
 tagline: An easy-to-use, multi-track audio editor and recorder. Developed by a group of volunteers as open source.
 description: >-
   Audacity is an easy-to-use, multi-track audio editor and recorder. Developed by a group of volunteers as open source. 
