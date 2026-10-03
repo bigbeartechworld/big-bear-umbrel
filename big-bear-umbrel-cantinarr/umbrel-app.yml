@@ -1,0 +1,26 @@
+manifestVersion: 1
+id: big-bear-umbrel-cantinarr
+category: Media
+name: Cantinarr
+version: "0.16.0"
+tagline: Media requests and server management in one app
+description: >-
+  Cantinarr brings media requests and server management into one app. Household members browse and request movies, shows, books, and music, follow downloads, and get notified when content is ready. Admins manage Radarr, Sonarr, Chaptarr, Lidarr, and download clients, review approvals, and investigate stuck downloads from a phone or browser. Connect the services you use after setup. AI is optional: an assistant can help with library questions and requests, while the repair agent investigates persistent download problems and proposes actions for an administrator to review. Cantinarr also offers MCP tools for authorized clients. Service credentials stay server-side and are encrypted at rest. 
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: windoze95
+website: https://cantinarr.com
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-universal-apps
+support: https://github.com/bigbeartechworld/big-bear-universal-apps/issues
+port: 10585
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+icon: https://raw.githubusercontent.com/windoze95/cantinarr/main/app/web/icons/Icon-512.png
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-universal-apps

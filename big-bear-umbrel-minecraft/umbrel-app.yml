@@ -2,7 +2,7 @@ manifestVersion: 1
 id: big-bear-umbrel-minecraft
 category: Other
 name: Minecraft Server
-version: "2026.9.1"
+version: "2026.9.2"
 tagline: This Docker Image Provides A Minecraft Server That Will Automatically Download The Latest Stable Version At Startup. You Can Also Run/upgrade To Any Specific Version Or The Latest Snapshot. See The Versions Section Below For More Information.
 description: >-
   This docker image provides a Minecraft Server that will automatically download the latest stable version at startup. You can also run/upgrade to any specific version or the latest snapshot. See the Versions section below for more information. 

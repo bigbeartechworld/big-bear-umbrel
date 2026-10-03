@@ -2,7 +2,7 @@ manifestVersion: 1
 id: big-bear-umbrel-rawtherapee
 category: Smart Home
 name: Rawtherapee
-version: "5.13.20260913"
+version: "5.13.20260927"
 tagline: A free, cross-platform raw image processing program.
 description: >-
   RawTherapee is a free, cross-platform raw image processing program! 

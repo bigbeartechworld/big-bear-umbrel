@@ -2,7 +2,7 @@ manifestVersion: 1
 id: big-bear-umbrel-zen
 category: Smart Home
 name: Zen
-version: "1.22.2"
+version: "1.22.3"
 tagline: A free and open-source fork of Mozilla Firefox with a focus on privacy, customizability and design.
 description: >-
   Zen Browser is a free and open-source fork of Mozilla Firefox with a focus on privacy, customizability and design. 

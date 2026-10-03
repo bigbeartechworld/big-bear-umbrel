@@ -2,7 +2,7 @@ manifestVersion: 1
 id: big-bear-umbrel-modrinth
 category: Smart Home
 name: Modrinth
-version: "0.21.4"
+version: "0.21.5"
 tagline: A unique, open source launcher that allows you to play your favorite mods, and keep them up to date, all in one neat little package.
 description: >-
   Modrinth App is a unique, open source launcher that allows you to play your favorite mods, and keep them up to date, all in one neat little package. 

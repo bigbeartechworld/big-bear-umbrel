@@ -2,7 +2,7 @@ manifestVersion: 1
 id: big-bear-umbrel-changedetection-io
 category: Smart Home
 name: Changedetection.io
-version: "0.60.6"
+version: "0.60.7"
 tagline: Provides free, open-source web page monitoring, notification and change detection.
 description: >-
   Changedetection.io provides free, open-source web page monitoring, notification and change detection. 
