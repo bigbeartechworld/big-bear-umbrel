@@ -2,7 +2,7 @@ manifestVersion: 1
 id: big-bear-umbrel-pydio-cells
 category: Smart Home
 name: Pydio-cells
-version: "5.0.3"
+version: "5.1.0"
 tagline: The nextgen file sharing platform for organizations. It is a full rewrite of the Pydio project using the Go language following a micro-service architecture.
 description: >-
   Pydio-cells is the nextgen file sharing platform for organizations. It is a full rewrite of the Pydio project using the Go language following a micro-service architecture. 

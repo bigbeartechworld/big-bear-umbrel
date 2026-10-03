@@ -1,0 +1,51 @@
+# ODOO 20 - NEW DEPLOYMENT
+# ========================
+# This is a SEPARATE app from 'odoo' (Odoo 19 on PostgreSQL 15). They can coexist.
+#
+# FOR NEW INSTALLATIONS:
+# - Deploy this app for new Odoo 20 instances
+# - Bundles PostgreSQL 16, the minimum Odoo 20 accepts
+# - Host port 8070 so it does not collide with the legacy app on 8069
+#
+# FOR MIGRATION FROM ODOO 19:
+# - Do NOT uninstall the existing 'odoo' app
+# - Do NOT attach this app to the Odoo 19 database or PostgreSQL volume
+# - Major upgrades require Odoo's migration tooling, not an image swap
+# - A PostgreSQL 15 data directory cannot be started with the PostgreSQL 16 image
+# - Upgrade guide: https://www.odoo.com/documentation/master/administration/upgrade.html
+version: "3.7"
+services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-odoo-v20_big-bear-odoo-v20_1
+      APP_PORT: "8069"
+  big-bear-odoo-v20:
+    image: odoo:20@sha256:cdd83e8359b3e8c357895d476396c05021fed9975bf420f353bab25fcaed1533
+    restart: unless-stopped
+    user: root
+    volumes:
+      - ${APP_DATA_DIR}/data/etc:/etc/odoo
+      - ${APP_DATA_DIR}/data/addons:/mnt/extra-addons
+      - ${APP_DATA_DIR}/data/filestore:/var/lib/odoo
+    environment:
+      - HOST=big-bear-odoo-v20-db
+      - USER=odoo
+      - PASSWORD=c9983a93-bf4f-491a-bfef-c42eca42f04d
+    networks:
+      - big-bear-odoo-v20-network
+      - default
+  big-bear-odoo-v20-db:
+    image: postgres:16@sha256:be01cf82fc7dbba824acf0a82e150b4b360f3ff93c6631d7844af431e841a95c
+    user: root
+    environment:
+      - POSTGRES_USER=odoo
+      - POSTGRES_PASSWORD=c9983a93-bf4f-491a-bfef-c42eca42f04d
+      - POSTGRES_DB=postgres
+    restart: unless-stopped
+    volumes:
+      - ${APP_DATA_DIR}/data/postgresql:/var/lib/postgresql/data
+    networks:
+      - big-bear-odoo-v20-network
+networks:
+  big-bear-odoo-v20-network:
+    driver: bridge
