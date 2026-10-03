@@ -1,0 +1,26 @@
+manifestVersion: 1
+id: big-bear-umbrel-homarr-v2
+category: BigBearCasaOS
+name: Homarr v2
+version: "2.0.0"
+tagline: Homarr v2
+description: >-
+  Homarr v2 dashboard. This is a new app, separate from Homarr v1. The default SQLite database moves by copying /appdata and keeping the same SECRET_ENCRYPTION_KEY. An external PostgreSQL database is not in /appdata. Stop v1, back up that database, then set the same DB_DIALECT and DB_URL and leave v1 stopped while v2 migrates it. MySQL is no longer supported; convert existing MySQL data to SQLite before starting v2. Not compatible with legacy Homarr (v0.x) data without migration. 
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: homarr-labs
+website: https://homarr.dev/
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-universal-apps
+support: https://github.com/bigbeartechworld/big-bear-universal-apps/issues
+port: 10065
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/homarr.png
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-universal-apps
