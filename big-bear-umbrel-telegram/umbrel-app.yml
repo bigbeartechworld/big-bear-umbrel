@@ -2,7 +2,7 @@ manifestVersion: 1
 id: big-bear-umbrel-telegram
 category: Smart Home
 name: Telegram
-version: "7.2.8"
+version: "7.2.9"
 tagline: A cloud-based mobile and desktop messaging app.
 description: >-
   Telegram is a cloud-based mobile and desktop messaging app. 

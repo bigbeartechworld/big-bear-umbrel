@@ -5,7 +5,7 @@ services:
       APP_HOST: big-bear-umbrel-mysql-workbench_app_1
       APP_PORT: ' 3000'
   app:
-    image: linuxserver/mysql-workbench:8.0.47@sha256:ce3265f003ac8daacba066d394e21c3f7b8604a0fab0df15172bdcff5061b11c
+    image: linuxserver/mysql-workbench:8.0.47@sha256:280372c734cb9fc0ce5eeebff04fb70f7374ed69b1e580b3b3eab6242520be18
     restart: unless-stopped
     environment:
       PUID: $PUID

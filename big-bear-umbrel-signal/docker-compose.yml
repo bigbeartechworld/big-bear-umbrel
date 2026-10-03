@@ -5,7 +5,7 @@ services:
       APP_HOST: big-bear-umbrel-signal_app_1
       APP_PORT: ' 3000'
   app:
-    image: linuxserver/signal:8.27.0@sha256:86d2bd83079eb0aa6337b4d86e602c912c70cb5d7c942cc99ce033cc9d80f336
+    image: linuxserver/signal:8.28.0@sha256:1552d343e845d1246728a5894f53e0c42804adedcd1a1a36af7f5aff40cf8d8b
     restart: unless-stopped
     environment:
       PUID: $PUID

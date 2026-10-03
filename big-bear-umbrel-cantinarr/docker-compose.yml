@@ -1,0 +1,26 @@
+version: "3.7"
+services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-cantinarr_app_1
+      APP_PORT: "8585"
+  app:
+    image: ghcr.io/windoze95/cantinarr:0.16.0@sha256:92e0c7099303616a833c1a75fdf4904645be4008e981151e24540553b5c4249c
+    restart: unless-stopped
+    environment:
+      CANTINARR_PUSH_GATEWAY_URL: https://push.cantinarr.com
+      CANTINARR_ARR_CALLBACK_URL: ""
+    volumes:
+      - ${APP_DATA_DIR}/config:/config
+    healthcheck:
+      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://127.0.0.1:8585/api/health"]
+      interval: 30s
+      timeout: 5s
+      retries: 5
+      start_period: 15s
+    networks:
+      - big_bear_cantinarr_network
+      - default
+networks:
+  big_bear_cantinarr_network:
+    driver: bridge

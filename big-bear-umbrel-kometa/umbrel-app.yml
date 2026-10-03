@@ -2,7 +2,7 @@ manifestVersion: 1
 id: big-bear-umbrel-kometa
 category: Smart Home
 name: Kometa
-version: "2.4.8"
+version: "2.5.1"
 tagline: A powerful tool designed to give you complete control over your media libraries. With Kometa, you can take your customization to the next level, with granular control over metadata, collections, overlays, and much more.
 description: >-
   Kometa is a powerful tool designed to give you complete control over your media libraries. With Kometa, you can take your customization to the next level, with granular control over metadata, collections, overlays, and much more. 

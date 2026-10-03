@@ -2,7 +2,7 @@ manifestVersion: 1
 id: big-bear-umbrel-qdirstat
 category: Smart Home
 name: Qdirstat
-version: "2.0.20260913"
+version: "2.0.20260928"
 tagline: "Qt-based directory statistics: KDirStat without any KDE -- from the author of the original KDirStat."
 description: >-
   QDirStat Qt-based directory statistics: KDirStat without any KDE -- from the author of the original KDirStat. 
