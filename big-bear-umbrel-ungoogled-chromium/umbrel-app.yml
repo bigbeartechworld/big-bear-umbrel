@@ -2,7 +2,7 @@ manifestVersion: 1
 id: big-bear-umbrel-ungoogled-chromium
 category: Smart Home
 name: Ungoogled-chromium
-version: "153.0.8010"
+version: "154.0.8037"
 tagline: Google Chromium, sans dependency on Google web services.
 description: >-
   Ungoogled Chromium is Google Chromium, sans dependency on Google web services. 
