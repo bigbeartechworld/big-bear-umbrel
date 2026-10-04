@@ -2,7 +2,7 @@ manifestVersion: 1
 id: big-bear-umbrel-snipe-it-v8
 category: Other
 name: Snipe-IT v8
-version: "8.7.2"
+version: "v8.8.0"
 tagline: Open source IT asset management
 description: >-
   Snipe-IT is a free, open source IT asset management system. 
