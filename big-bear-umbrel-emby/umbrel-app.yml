@@ -2,7 +2,7 @@ manifestVersion: 1
 id: big-bear-umbrel-emby
 category: Smart Home
 name: Emby
-version: "4.10.0"
+version: "4.10.1"
 tagline: Organizes video, music, live TV, and photos from personal media libraries and streams them to smart TVs, streaming boxes and mobile devices. This container is packaged as a standalone emby Media Server.
 description: >-
   Emby organizes video, music, live TV, and photos from personal media libraries and streams them to smart TVs, streaming boxes and mobile devices. This container is packaged as a standalone emby Media Server. 

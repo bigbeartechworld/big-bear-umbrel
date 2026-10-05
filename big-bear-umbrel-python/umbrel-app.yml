@@ -2,7 +2,7 @@ manifestVersion: 1
 id: big-bear-umbrel-python
 category: Other
 name: Python
-version: "3.14.7"
+version: "3.14.8"
 tagline: "This container needs special attention. Please check https://hub. Docker. Com/r/linuxserver/python for details. "
 description: >-
   This container needs special attention. Please check https://hub.docker.com/r/linuxserver/python for details. 
