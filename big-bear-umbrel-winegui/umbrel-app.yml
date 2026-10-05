@@ -2,7 +2,7 @@ manifestVersion: 1
 id: big-bear-umbrel-winegui
 category: Smart Home
 name: Winegui
-version: "4.4.0"
+version: "4.5.1"
 tagline: A user-interface friendly Wine manager that provides a graphical frontend for creating and managing Wine bottles.
 description: >-
   WineGUI is a user-interface friendly Wine manager that provides a graphical frontend for creating and managing Wine bottles. 
