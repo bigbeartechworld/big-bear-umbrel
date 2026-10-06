@@ -2,7 +2,7 @@ manifestVersion: 1
 id: big-bear-umbrel-rustdesk
 category: Smart Home
 name: Rustdesk
-version: "1.4.9"
+version: "1.5.0"
 tagline: A full-featured open source remote control alternative for self-hosting and security with minimal configuration.
 description: >-
   RustDesk is a full-featured open source remote control alternative for self-hosting and security with minimal configuration. 

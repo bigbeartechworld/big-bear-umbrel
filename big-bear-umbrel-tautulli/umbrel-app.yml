@@ -2,7 +2,7 @@ manifestVersion: 1
 id: big-bear-umbrel-tautulli
 category: Smart Home
 name: Tautulli
-version: "2.18.1"
+version: "2.18.2"
 tagline: A python based web application for monitoring, analytics and notifications for Plex Media Server.
 description: >-
   Tautulli is a python based web application for monitoring, analytics and notifications for Plex Media Server. 
