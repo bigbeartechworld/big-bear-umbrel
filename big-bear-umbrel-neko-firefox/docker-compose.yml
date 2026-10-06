@@ -11,7 +11,7 @@ services:
   # The `big-bear-neko-firefox` service definition
   big-bear-neko-firefox:
     # Image to be used for the container
-    image: m1k1o/neko:firefox@sha256:08c6519f58d8b2fe6daf01d91f4b27c0f7dfa064eb2c745b8ed836dbb1d7bfe3
+    image: m1k1o/neko:firefox@sha256:7cc717ccc1721a5c8fd1d40332a8a5fa70580244e4f354232b1b9ac6f80a5d7a
     # Container restart policy
     restart: unless-stopped
     # Shared memory size
