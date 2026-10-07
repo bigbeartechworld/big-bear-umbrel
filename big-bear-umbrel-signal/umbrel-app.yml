@@ -2,7 +2,7 @@ manifestVersion: 1
 id: big-bear-umbrel-signal
 category: Smart Home
 name: Signal
-version: "8.28.0"
+version: "8.29.0"
 tagline: A messaging app with privacy at its core. It is free and easy to use, with strong end-to-end encryption that keeps your communication completely private.
 description: >-
   Signal is a messaging app with privacy at its core. It is free and easy to use, with strong end-to-end encryption that keeps your communication completely private. 

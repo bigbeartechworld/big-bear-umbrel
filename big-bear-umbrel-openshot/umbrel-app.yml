@@ -2,7 +2,7 @@ manifestVersion: 1
 id: big-bear-umbrel-openshot
 category: Smart Home
 name: Openshot
-version: "4.0.0"
+version: "4.0.1"
 tagline: Video Editor is an award-winning free and open-source video editor for Linux, Mac, and Windows, and is dedicated to delivering high quality video editing and animation solutions to the world.
 description: >-
   OpenShot Video Editor is an award-winning free and open-source video editor for Linux, Mac, and Windows, and is dedicated to delivering high quality video editing and animation solutions to the world. 

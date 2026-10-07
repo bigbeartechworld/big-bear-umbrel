@@ -2,7 +2,7 @@ manifestVersion: 1
 id: big-bear-umbrel-manyfold
 category: Smart Home
 name: Manyfold
-version: "0.149.0"
+version: "0.150.0"
 tagline: An open source, self-hosted web application for managing a collection of 3D models, particularly focused on 3D printing.
 description: >-
   Manyfold is an open source, self-hosted web application for managing a collection of 3D models, particularly focused on 3D printing. 

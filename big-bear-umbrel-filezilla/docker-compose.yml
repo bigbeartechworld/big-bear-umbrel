@@ -5,7 +5,7 @@ services:
       APP_HOST: big-bear-umbrel-filezilla_app_1
       APP_PORT: ' 3000'
   app:
-    image: linuxserver/filezilla:3.69.6@sha256:c74d8e56d7a48d7e643e06f4f8119790df0eacbb0340268323704d349c94231f
+    image: linuxserver/filezilla:3.69.6@sha256:e9aee91a1a9905ad7299022a34c99ce17244ff5ec5c8950e5efaccad03b82ea3
     restart: unless-stopped
     environment:
       PUID: $PUID
