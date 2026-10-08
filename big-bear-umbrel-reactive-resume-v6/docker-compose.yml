@@ -1,0 +1,58 @@
+# REACTIVE RESUME V6 - NEW DEPLOYMENT
+# ====================================
+# This is a SEPARATE app from 'reactive-resume' (v5.3.2). They can coexist.
+#
+# FOR NEW INSTALLATIONS:
+# - Deploy this app for new Reactive Resume v6 instances
+# - PostgreSQL 18 plus a local upload volume at /app/data
+# - PDFs render in the app. No Browserless, MinIO, or Redis
+# - APP_URL is http://localhost:3028. Change it if you open the app from another device
+# - Web UI is on host port 3028 (3001 is already used by other apps)
+#
+# FOR MIGRATION FROM V5:
+# - Do NOT uninstall the existing 'reactive-resume' app
+# - Do NOT attach this app to the v5 PostgreSQL volume or MinIO volume
+# - v6 startup drops columns v5 still reads. The migration is one-way
+# - PostgreSQL 18 cannot open the v5 data directory
+# - Uploads move only if you copy them into /app/data or an S3 bucket
+# - Upgrade guide: https://docs.rxresu.me/self-hosting/upgrading-to-v6
+version: "3.7"
+services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-reactive-resume-v6_big-bear-reactive-resume-v6_1
+      APP_PORT: "3000"
+  big-bear-reactive-resume-v6:
+    image: amruthpillai/reactive-resume:v6.0.0@sha256:29f418bd46d23f1d7cd9a73ec7f6bc46681926cb1ff617ac388064f45ee790d0
+    restart: unless-stopped
+    depends_on:
+      big-bear-reactive-resume-v6-db:
+        condition: service_healthy
+    environment:
+      APP_URL: "http://localhost:3028"
+      AUTH_SECRET: "access_token_secret"
+      DATABASE_URL: "postgresql://postgres:postgres@big-bear-reactive-resume-v6-db:5432/postgres"
+    volumes:
+      - ${APP_DATA_DIR}/data:/app/data
+    networks:
+      - big-bear-reactive-resume-v6-network
+      - default
+  big-bear-reactive-resume-v6-db:
+    image: postgres:18@sha256:74935e72241653ca55e0414067e6d8763aceb8a810eb51b452253ec3dcfc4336
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: postgres
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: "postgres"
+    volumes:
+      - ${APP_DATA_DIR}/pg:/var/lib/postgresql
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d postgres"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+    networks:
+      - big-bear-reactive-resume-v6-network
+networks:
+  big-bear-reactive-resume-v6-network:
+    driver: bridge

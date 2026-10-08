@@ -19,6 +19,7 @@ services:
       TZ: "UTC"
       LOG_LEVEL: "warning"
       JWT_SECRET_KEY: "your-secret-key-here"
+      AGENT_SECRET: "your-secret-key-here"
       ACCESS_TOKEN_LIFETIME_MIN: "5"
       REFRESH_TOKEN_LIFETIME_MIN: "43200"
       HTTPS: "FALSE"
