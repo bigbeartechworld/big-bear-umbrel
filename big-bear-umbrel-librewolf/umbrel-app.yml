@@ -2,7 +2,7 @@ manifestVersion: 1
 id: big-bear-umbrel-librewolf
 category: Smart Home
 name: Librewolf
-version: "156.0.1"
+version: "157.0.1"
 tagline: A custom and independent version of Firefox, with the primary goals of privacy, security and user freedom. LibreWolf also aims to remove all the telemetry, data collection and annoyances, as well as disabling anti-freedom features like DRM.
 description: >-
   LibreWolf is a custom and independent version of Firefox, with the primary goals of privacy, security and user freedom. LibreWolf also aims to remove all the telemetry, data collection and annoyances, as well as disabling anti-freedom features like DRM. 
