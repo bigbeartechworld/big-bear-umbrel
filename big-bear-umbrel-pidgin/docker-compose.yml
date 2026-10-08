@@ -5,7 +5,7 @@ services:
       APP_HOST: big-bear-umbrel-pidgin_app_1
       APP_PORT: ' 3000'
   app:
-    image: linuxserver/pidgin:2.14.14@sha256:bc65e4095567bbfc9f4ca224cf4123065f7ba651a94d17602d9263bd5221dc76
+    image: linuxserver/pidgin:2.14.14@sha256:12c0f4103b37b53b4e84e3c5b7cea10992ff16e6f103c652d8eedfae11ba15a4
     restart: unless-stopped
     environment:
       PUID: $PUID
