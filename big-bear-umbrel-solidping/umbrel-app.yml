@@ -1,0 +1,26 @@
+manifestVersion: 1
+id: big-bear-umbrel-solidping
+category: Monitoring
+name: SolidPing
+version: "0.37.0"
+tagline: Uptime monitoring, alerting and status pages, self-hosted
+description: >-
+  SolidPing monitors HTTP(S) endpoints, TCP/UDP ports, DNS records, SSL certificates, ICMP ping, and databases, plus scriptable browser and JavaScript checks for anything those don't cover. Alerts go out over email, Slack, Discord, Telegram, WhatsApp and generic webhooks, with escalation policies and maintenance windows. Public status pages, a multi-region distributed worker system, and multi-user organizations with role-based access are included. Existing Uptime Kuma users can import their monitors directly. Single Go binary, SQLite by default. 
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: Florent Clairambault
+website: https://www.solidping.io
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-universal-apps
+support: https://github.com/bigbeartechworld/big-bear-universal-apps/issues
+port: 10400
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+icon: https://cdn.jsdelivr.net/gh/fclairamb/solidping@main/res/favicons/favicon-512.png
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-universal-apps
