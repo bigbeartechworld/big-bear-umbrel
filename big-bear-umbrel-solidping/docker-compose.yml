@@ -1,0 +1,23 @@
+version: "3.7"
+services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-solidping_app_1
+      APP_PORT: "4000"
+  app:
+    image: ghcr.io/fclairamb/solidping:0.37.0@sha256:b7905f7747e217c259f7442b14fcdb49b145b06dbe6791f9fc8dd4dde5e95428
+    restart: unless-stopped
+    # The image runs as nonroot (uid 65532) and has no shell. Running as root
+    # lets it write to host bind mounts created by the platform as root.
+    user: "0:0"
+    # Needed for ICMP ping checks.
+    cap_add:
+      - NET_RAW
+    volumes:
+      - ${APP_DATA_DIR}/data:/data
+    healthcheck:
+      test: ["CMD", "/app/solidping", "healthcheck"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 15s
