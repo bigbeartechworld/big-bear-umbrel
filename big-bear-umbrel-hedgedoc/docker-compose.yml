@@ -5,7 +5,7 @@ services:
       APP_HOST: big-bear-umbrel-hedgedoc_app_1
       APP_PORT: ' 3000'
   app:
-    image: linuxserver/hedgedoc:1.12.0@sha256:f7626b91abe887cafab577ab7d163259d47e40ebe1cb77a42aca02619b561da4
+    image: linuxserver/hedgedoc:1.12.0@sha256:4dfa8f686a78bc1e88b4eeff6857ea23dca42b4b530af7ff7e8a3b3a40dadac8
     restart: unless-stopped
     environment:
       PUID: $PUID

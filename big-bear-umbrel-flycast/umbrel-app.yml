@@ -2,7 +2,7 @@ manifestVersion: 1
 id: big-bear-umbrel-flycast
 category: Smart Home
 name: Flycast
-version: "2.7.20260927"
+version: "2.7.20261004"
 tagline: A multi-platform Sega Dreamcast, Naomi, Naomi 2, and Atomiswave emulator derived from reicast.
 description: >-
   Flycast is a multi-platform Sega Dreamcast, Naomi, Naomi 2, and Atomiswave emulator derived from reicast. 
