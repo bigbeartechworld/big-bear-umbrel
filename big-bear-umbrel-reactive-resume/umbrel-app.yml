@@ -1,7 +1,7 @@
 manifestVersion: 1
 id: big-bear-umbrel-reactive-resume
 category: BigBearCasaOS
-name: Reactive Resume
+name: Reactive Resume (Legacy)
 version: "v5.3.2"
 tagline: A free and open-source resume builder
 description: >-

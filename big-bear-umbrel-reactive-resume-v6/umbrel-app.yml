@@ -1,0 +1,26 @@
+manifestVersion: 1
+id: big-bear-umbrel-reactive-resume-v6
+category: BigBearCasaOS
+name: Reactive Resume v6
+version: "v6.0.0"
+tagline: Reactive Resume v6
+description: >-
+  Reactive Resume v6 resume builder. This is a new app, separate from Reactive Resume v5. v6 stores uploads on a local volume, renders PDFs in the app, and bundles PostgreSQL 18. It does not include MinIO, Redis, or Browserless. Do not attach it to a v5 database volume. A v5 database migration is one-way, and PostgreSQL 18 cannot open the v5 data directory. 
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: AmruthPillai
+website: https://hub.docker.com/r/amruthpillai/reactive-resume
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-universal-apps
+support: https://github.com/bigbeartechworld/big-bear-universal-apps/issues
+port: 10151
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+icon: https://cdn.jsdelivr.net/gh/bigbeartechworld/big-bear-universal-apps/apps/reactive-resume-v6/logo.png
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-universal-apps
