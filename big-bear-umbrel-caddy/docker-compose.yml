@@ -5,7 +5,7 @@ services:
       APP_HOST: big-bear-umbrel-caddy_app_1
       APP_PORT: ' 80'
   app:
-    image: caddy:2.11.6
+    image: caddy:2.11.7
     restart: unless-stopped
     volumes:
       - type: bind

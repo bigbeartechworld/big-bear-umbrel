@@ -2,7 +2,7 @@ manifestVersion: 1
 id: big-bear-umbrel-drawio
 category: Productivity
 name: Draw.io
-version: "32.0.2"
+version: "32.2.0"
 tagline: Structured diagram editor
 description: >-
   Draw.io is a structured diagram editor for creating flowcharts, network diagrams, and other visual documentation. 
