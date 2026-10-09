@@ -2,7 +2,7 @@ manifestVersion: 1
 id: big-bear-umbrel-caddy
 category: Other
 name: Caddy
-version: "2.11.6"
+version: "2.11.7"
 tagline: Caddy - The Ultimate Server With Automatic Https.
 description: >-
   Caddy - The Ultimate Server with Automatic HTTPS. 

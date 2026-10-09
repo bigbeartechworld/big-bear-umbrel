@@ -32,6 +32,12 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock
       - ${APP_DATA_DIR}/appdata:/appdata
     environment:
-      - SECRET_ENCRYPTION_KEY=${SECRET_ENCRYPTION_KEY}
-      - DB_DIALECT=${DB_DIALECT:-sqlite}
-      - DB_URL=${DB_URL:-/appdata/db/db.sqlite}
+      # CasaOS writes the install-form value onto this line. A ${SECRET_ENCRYPTION_KEY} placeholder is left unset.
+      - SECRET_ENCRYPTION_KEY=
+      # ZimaOS loads this file through CasaOS. An unset ${VAR:-default} is treated as
+      # the non-empty placeholder $VAR, then expanded to an empty string. An empty
+      # DB_DIALECT overrides the image default and Homarr runs
+      # /app/db/migrations/migrate.cjs, which is not in the image. These literals
+      # stay put. Set DB_DIALECT to postgresql and DB_URL to that database to migrate one.
+      - DB_DIALECT=sqlite
+      - DB_URL=/appdata/db/db.sqlite
