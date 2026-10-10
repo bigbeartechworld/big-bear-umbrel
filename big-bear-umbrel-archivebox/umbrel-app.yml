@@ -2,7 +2,7 @@ manifestVersion: 1
 id: big-bear-umbrel-archivebox
 category: Other
 name: Archivebox
-version: "0.9.71"
+version: "0.9.73"
 tagline: Archivebox Is A Powerful, Self-hosted Internet Archiving Solution To Collect, Save, And View Sites You Want To Preserve Offline.
 description: >-
   ArchiveBox is a powerful, self-hosted internet archiving solution to collect, save, and view sites you want to preserve offline. 

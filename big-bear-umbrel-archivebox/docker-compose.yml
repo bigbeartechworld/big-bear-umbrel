@@ -5,7 +5,7 @@ services:
       APP_HOST: big-bear-umbrel-archivebox_app_1
       APP_PORT: ' 8000'
   app:
-    image: archivebox/archivebox:0.9.71
+    image: archivebox/archivebox:0.9.73
     restart: unless-stopped
     environment:
       ALLOWED_HOSTS: '*'
