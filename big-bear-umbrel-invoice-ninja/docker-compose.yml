@@ -8,7 +8,7 @@ services:
       APP_HOST: big-bear-umbrel-invoice-ninja_big-bear-invoice-ninja-web_1
       APP_PORT: "8080"
   big-bear-invoice-ninja:
-    image: invoiceninja/invoiceninja:5.13.43@sha256:8917b50fccd22d77ceda53b2b0dc7b7466a0d72e93fffa8aeeb868dcdb2c3915
+    image: invoiceninja/invoiceninja:5.13.44@sha256:1e91a6faa03558bddeed2e1ea5dc6f021f680d536a28b3a4b5dff0fc71825729
     restart: unless-stopped
     user: 1500:1500
     environment:
