@@ -11,7 +11,7 @@ services:
   # The `big-bear-monica` service definition
   big-bear-monica:
     # Image to be used for the container
-    image: monica:4.1.2@sha256:3529fbf89d2dd2c91abd7fbbcc1187e5d875eac86ee12900a8f173831bd206d1
+    image: monica:4.1.2@sha256:787c7e9972cad3956f378afd93e0ac140863dba9199f81f6b368a65a96b32e54
     # Container restart policy
     restart: unless-stopped
     environment:
