@@ -5,7 +5,7 @@ services:
       APP_HOST: big-bear-umbrel-github-desktop_app_1
       APP_PORT: ' 3000'
   app:
-    image: linuxserver/github-desktop:3.4.13@sha256:e56e620d3f3b3fce6feb13f97ac926317b800a3d4dba4b5f31177e98db0e0be2
+    image: linuxserver/github-desktop:3.4.13@sha256:8651e12fa3c6418b3a6f1a745ec629e9923294c52a653a87d81983a4bbaeba07
     restart: unless-stopped
     environment:
       PUID: $PUID
