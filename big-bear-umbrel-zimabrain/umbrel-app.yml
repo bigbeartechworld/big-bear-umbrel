@@ -2,7 +2,7 @@ manifestVersion: 1
 id: big-bear-umbrel-zimabrain
 category: BigBearCasaOS
 name: ZimaBrain CE
-version: "1.6.0-beta"
+version: "1.6.2-beta"
 tagline: Local ZimaOS diagnostic assistant
 description: >-
   ZimaBrain CE is a local verifier-first diagnostic assistant for ZimaOS. It checks host evidence and keeps monitor history in a local SQLite database. 

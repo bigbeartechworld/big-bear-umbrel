@@ -2,7 +2,7 @@ manifestVersion: 1
 id: big-bear-umbrel-autoxpose
 category: BigBearCasaOS
 name: autoxpose
-version: "0.5.2"
+version: "0.6.0"
 tagline: 
 description: >-
   autoxpose 0.5.2 watches Docker labels and creates DNS records plus reverse-proxy hosts. 
