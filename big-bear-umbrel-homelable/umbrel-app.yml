@@ -1,0 +1,26 @@
+manifestVersion: 1
+id: big-bear-umbrel-homelable
+category: BigBearCasaOS
+name: Homelable
+version: "3.5.1"
+tagline: Homelab network diagram
+description: >-
+  Homelable 3.5.1 is a self-hosted homelab diagram with live status monitoring. 
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: Pouzor
+website: https://homelable.net
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-universal-apps
+support: https://github.com/bigbeartechworld/big-bear-universal-apps/issues
+port: 20033
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/homelable.png
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-universal-apps

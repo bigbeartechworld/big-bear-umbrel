@@ -1,0 +1,32 @@
+version: "3.7"
+services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-yuvomi_yuvomi_1
+      APP_PORT: "3000"
+  yuvomi:
+    image: ghcr.io/ulsklyc/yuvomi:2.73.0@sha256:86b874876612aa880bc5ce18563b2cd502e2230263aa3cc3a679d9d1245de938
+    restart: unless-stopped
+    volumes:
+      - ${APP_DATA_DIR}/data:/data
+      - ${APP_DATA_DIR}/backups:/backups
+      - ${APP_DATA_DIR}/modules:/app/modules
+      - ${APP_DATA_DIR}/documents:/documents
+    environment:
+      NODE_ENV: production
+      PORT: "3000"
+      DB_PATH: /data/yuvomi.db
+      BACKUP_DIR: /backups
+      MODULES_DIR: /app/modules
+      SESSION_SECRET: REPLACE_WITH_A_LONG_RANDOM_STRING
+      DB_ENCRYPTION_KEY: 12C_F5m7nZC69qeJlJL0BqgCNd8lH3m1zqAeERMcG3g
+      SESSION_SECURE: "false"
+      TRUST_PROXY: loopback
+      DOCUMENT_STORAGE_LOCAL_ENABLED: "false"
+      DOCUMENT_STORAGE_LOCAL_PATH: /documents
+    healthcheck:
+      test: ["CMD", "node", "-e", "require('http').get('http://localhost:3000/health', r => process.exit(r.statusCode === 200 ? 0 : 1))"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 10s

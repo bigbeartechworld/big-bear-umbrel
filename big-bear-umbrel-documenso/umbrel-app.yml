@@ -1,0 +1,26 @@
+manifestVersion: 1
+id: big-bear-umbrel-documenso
+category: BigBearCasaOS
+name: Documenso
+version: "v2.19.0"
+tagline: Open source document signing
+description: >-
+  Documenso v2.19.0 is an open-source document signing platform backed by PostgreSQL. 
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: Documenso
+website: https://documenso.com
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-universal-apps
+support: https://github.com/bigbeartechworld/big-bear-universal-apps/issues
+port: 20030
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/documenso.png
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-universal-apps

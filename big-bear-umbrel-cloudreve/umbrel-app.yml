@@ -1,0 +1,26 @@
+manifestVersion: 1
+id: big-bear-umbrel-cloudreve
+category: BigBearCasaOS
+name: Cloudreve
+version: "4.19.1"
+tagline: 
+description: >-
+  Cloudreve 4.19.1 is a self-hosted file manager with multi-cloud storage, backed by Postgres and Redis. 
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: Cloudreve
+website: https://cloudreve.org
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-universal-apps
+support: https://github.com/bigbeartechworld/big-bear-universal-apps/issues
+port: 10002
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/cloudreve.png
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-universal-apps

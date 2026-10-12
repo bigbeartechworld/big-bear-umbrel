@@ -1,0 +1,26 @@
+manifestVersion: 1
+id: big-bear-umbrel-indelible
+category: BigBearCasaOS
+name: Indelible
+version: "0.1.1"
+tagline: Self-hosted read-it-later library
+description: >-
+  Indelible is a self-hosted read-it-later and knowledge library. It stores articles, newsletters, PDFs, and EPUBs in PostgreSQL and an S3-compatible object store, and the API serves the web app on the same port. 
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: useindelible
+website: https://useindelible.com/
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-universal-apps
+support: https://github.com/bigbeartechworld/big-bear-universal-apps/issues
+port: 38473
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+icon: https://cdn.jsdelivr.net/gh/useindelible/indelible@v0.1.1/web/static/favicon.png
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-universal-apps

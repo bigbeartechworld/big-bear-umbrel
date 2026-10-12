@@ -1,0 +1,15 @@
+version: "3.7"
+services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-autoxpose_autoxpose_1
+      APP_PORT: "3000"
+  autoxpose:
+    image: mostafawahied/autoxpose:0.5.2@sha256:5e29bc48b7b164127f1ade8f3d9be9dba06e665ed2cdeeb569173fa343eca5d3
+    restart: unless-stopped
+    environment:
+      SERVER_IP: ""
+      LAN_IP: ""
+    volumes:
+      - ${APP_DATA_DIR}/data:/app/packages/backend/data
+      - /var/run/docker.sock:/var/run/docker.sock:ro

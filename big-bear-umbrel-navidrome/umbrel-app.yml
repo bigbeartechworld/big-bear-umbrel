@@ -13,7 +13,7 @@ website: https://www.navidrome.org/
 dependencies: []
 repo: https://github.com/bigbeartechworld/big-bear-universal-apps
 support: https://github.com/bigbeartechworld/big-bear-universal-apps/issues
-port: 10002
+port: 10007
 gallery:
   - 1.jpg
   - 2.jpg

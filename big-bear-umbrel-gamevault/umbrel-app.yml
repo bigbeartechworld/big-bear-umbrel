@@ -1,0 +1,26 @@
+manifestVersion: 1
+id: big-bear-umbrel-gamevault
+category: BigBearCasaOS
+name: GameVault
+version: "17.0.1"
+tagline: Self-hosted DRM-free game library
+description: >-
+  GameVault 17.0.1 is a self-hosted library for DRM-free games, with a web UI and PostgreSQL. 
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: Phalcode
+website: https://gamevau.lt
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-universal-apps
+support: https://github.com/bigbeartechworld/big-bear-universal-apps/issues
+port: 20032
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/gamevault.png
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-universal-apps

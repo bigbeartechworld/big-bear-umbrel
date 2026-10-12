@@ -1,0 +1,26 @@
+manifestVersion: 1
+id: big-bear-umbrel-homedex
+category: BigBearCasaOS
+name: Homedex
+version: "0.2.5"
+tagline: Read-only homelab inventory
+description: >-
+  Homedex 0.2.5 is a read-only homelab inventory of services, ports, routes, and certificate expiry. 
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: Harsh Shah
+website: https://github.com/HarshShah0203/homedex
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-universal-apps
+support: https://github.com/bigbeartechworld/big-bear-universal-apps/issues
+port: 10006
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/homedex.png
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-universal-apps

@@ -1,0 +1,26 @@
+manifestVersion: 1
+id: big-bear-umbrel-trackie
+category: BigBearCasaOS
+name: Trackie
+version: "26.9.0"
+tagline: New Zealand Actual Budget
+description: >-
+  Trackie is a New Zealand Actual Budget server image. Sign-in is OpenID Connect, and optional per-user Akahu bank tokens are encrypted at rest. 
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: trackie-nz
+website: https://trackie.nz/
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-universal-apps
+support: https://github.com/bigbeartechworld/big-bear-universal-apps/issues
+port: 20005
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+icon: https://trackie.nz/apple-touch-icon.png
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-universal-apps

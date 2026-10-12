@@ -1,0 +1,26 @@
+manifestVersion: 1
+id: big-bear-umbrel-outline
+category: BigBearCasaOS
+name: Outline
+version: "1.10.1"
+tagline: Self-hosted team wiki
+description: >-
+  Outline is a self-hosted team wiki and knowledge base. This stack runs the Outline server with PostgreSQL 18 and Redis, and stores uploads on a local volume. 
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: Outline
+website: https://www.getoutline.com/
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-universal-apps
+support: https://github.com/bigbeartechworld/big-bear-universal-apps/issues
+port: 23000
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/outline.png
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-universal-apps

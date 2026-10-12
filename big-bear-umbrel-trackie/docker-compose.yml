@@ -1,0 +1,24 @@
+version: "3.7"
+services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-trackie_trackie_1
+      APP_PORT: "5006"
+  trackie:
+    image: ghcr.io/trackie-nz/trackie:26.9.0@sha256:7c13fedacc7232f10ed3ebc59374c1b2fbe42f89d04575d2838992fb9587540d
+    restart: unless-stopped
+    volumes:
+      - ${APP_DATA_DIR}/data:/data
+    environment:
+      NODE_ENV: production
+      ACTUAL_LOGIN_METHOD: openid
+      ACTUAL_OPENID_ENFORCE: "true"
+      ACTUAL_USER_CREATION_MODE: login
+      ACTUAL_OPENID_DISCOVERY_URL: ""
+      ACTUAL_OPENID_CLIENT_ID: ""
+      ACTUAL_OPENID_CLIENT_SECRET: ""
+      ACTUAL_OPENID_SERVER_HOSTNAME: http://localhost:20005
+      ACTUAL_TOKEN_EXPIRATION: "7776000"
+      ACTUAL_IDENTITY_SECRET: v3smK3KDuHTlcUVTDXPLGCilbm3y3-0OGF6PYX-iIQ0
+      ACTUAL_AKAHU_TOKEN_SECRET: jQBA8ydLKvkPN8tc1duO2vQRY-yhpXI0fq6Xxc1sNhQ
+      TZ: Pacific/Auckland

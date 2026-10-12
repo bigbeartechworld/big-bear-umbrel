@@ -1,0 +1,51 @@
+version: "3.7"
+services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-outline_outline_1
+      APP_PORT: "3000"
+  outline:
+    image: docker.getoutline.com/outlinewiki/outline:1.10.1@sha256:832051f039b446c87aa23929cf92c00980c66aaa2d744d118c48c016ec816ad8
+    restart: unless-stopped
+    environment:
+      NODE_ENV: production
+      URL: http://localhost:23000
+      PORT: "3000"
+      SECRET_KEY: 6f3cbf7b3415ec195adc0cc98a3fc7f5953de9e8b77bff78e34584867ecb60f4
+      UTILS_SECRET: X8p5_gwAyZJW_MION_hihkRrU77tZHpu_4oJvLgWY4E
+      DATABASE_URL: postgres://outline:82d982a5-0329-46f7-a098-4e4cce10f3c2@postgres:5432/outline
+      PGSSLMODE: disable
+      REDIS_URL: redis://redis:6379
+      FILE_STORAGE: local
+      FILE_STORAGE_LOCAL_ROOT_DIR: /var/lib/outline/data
+      FILE_STORAGE_UPLOAD_MAX_SIZE: "262144000"
+      FORCE_HTTPS: "false"
+    volumes:
+      - ${APP_DATA_DIR}/data/storage:/var/lib/outline/data
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+  redis:
+    image: redis:8.6.7@sha256:a323342084bc0350cc66feb7f6e11282c8d853b5e7e729de3b0e81ed88381196
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 30s
+      retries: 3
+  postgres:
+    image: postgres:18.6@sha256:5a5a84b19854a9ffaa54082c166ff4ec27473a361e496e5ea167f298f2da9722
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: outline
+      POSTGRES_PASSWORD: 82d982a5-0329-46f7-a098-4e4cce10f3c2
+      POSTGRES_DB: outline
+    volumes:
+      - ${APP_DATA_DIR}/data/database:/var/lib/postgresql
+    healthcheck:
+      test: ["CMD", "pg_isready", "-d", "outline", "-U", "outline"]
+      interval: 30s
+      timeout: 20s
+      retries: 3

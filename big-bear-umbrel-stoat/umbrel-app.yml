@@ -1,0 +1,26 @@
+manifestVersion: 1
+id: big-bear-umbrel-stoat
+category: BigBearCasaOS
+name: Stoat
+version: "4017c18"
+tagline: Self-hosted chat, formerly Revolt
+description: >-
+  Stoat is a self-hosted chat server, formerly Revolt. This stack runs the API, web app, file server, proxy, and voice ingress behind Caddy. 
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: stoatchat
+website: https://stoat.chat/
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-universal-apps
+support: https://github.com/bigbeartechworld/big-bear-universal-apps/issues
+port: 20002
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/stoat.png
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-universal-apps

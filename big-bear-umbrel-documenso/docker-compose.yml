@@ -1,0 +1,43 @@
+version: "3.7"
+services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-documenso_documenso_1
+      APP_PORT: "3000"
+  documenso:
+    image: documenso/documenso:v2.19.0@sha256:a0592ef8edbc8d74e5e236d9c2dffb3fc4f0104a3ea1c52baaae4673799d8d91
+    restart: unless-stopped
+    depends_on:
+      documenso-db:
+        condition: service_healthy
+    environment:
+      PORT: "3000"
+      NEXTAUTH_SECRET: HlLbSGA2KdCiFkgFK2QCbocNRMQYCuyHcdw0HybLaks
+      NEXT_PRIVATE_ENCRYPTION_KEY: z7k14oDge1HeVUG2LlT3aQeypUTr8NH-JID_K6tYUO0
+      NEXT_PRIVATE_ENCRYPTION_SECONDARY_KEY: utotV_gd2gwCIO5BGo-E72vSqI24hOittOVkWfbqBAg
+      NEXT_PUBLIC_WEBAPP_URL: http://localhost:20030
+      NEXT_PRIVATE_INTERNAL_WEBAPP_URL: http://localhost:3000
+      NEXT_PRIVATE_DATABASE_URL: postgresql://documenso:68a9a162-7781-4a5e-be4f-3c4256932a98@documenso-db:5432/documenso
+      NEXT_PRIVATE_DIRECT_DATABASE_URL: postgresql://documenso:68a9a162-7781-4a5e-be4f-3c4256932a98@documenso-db:5432/documenso
+      NEXT_PUBLIC_UPLOAD_TRANSPORT: database
+      NEXT_PRIVATE_SMTP_TRANSPORT: smtp-auth
+      NEXT_PRIVATE_SMTP_HOST: smtp.example.com
+      NEXT_PRIVATE_SMTP_PORT: "587"
+      NEXT_PRIVATE_SMTP_USERNAME: documenso-4RI74RoG
+      NEXT_PRIVATE_SMTP_PASSWORD: 61e22c1d-6f27-4542-a49d-47f36c1b0da6
+      NEXT_PRIVATE_SMTP_FROM_NAME: Documenso
+      NEXT_PRIVATE_SMTP_FROM_ADDRESS: noreply@localhost
+  documenso-db:
+    image: postgres:15.19@sha256:724292da1f2e50bdccfc3302ce75bbba7f4a6076701b588cc795fcac65683550
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: documenso
+      POSTGRES_PASSWORD: 68a9a162-7781-4a5e-be4f-3c4256932a98
+      POSTGRES_DB: documenso
+    volumes:
+      - ${APP_DATA_DIR}/database:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U documenso -d documenso"]
+      interval: 10s
+      timeout: 5s
+      retries: 5

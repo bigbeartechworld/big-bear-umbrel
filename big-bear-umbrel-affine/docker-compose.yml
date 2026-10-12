@@ -1,0 +1,61 @@
+version: "3.7"
+services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-affine_affine_1
+      APP_PORT: "3010"
+  affine:
+    image: ghcr.io/toeverything/affine:0.27.4@sha256:b649f5ce2384ffdf13c23bccf81d759e15973d59d0b0058af65d895a84373099
+    restart: unless-stopped
+    depends_on:
+      redis:
+        condition: service_healthy
+      postgres:
+        condition: service_healthy
+      affine_migration:
+        condition: service_completed_successfully
+    volumes:
+      - ${APP_DATA_DIR}/storage:/root/.affine/storage
+      - ${APP_DATA_DIR}/config:/root/.affine/config
+    environment:
+      REDIS_SERVER_HOST: redis
+      DATABASE_URL: postgresql://affine@postgres:5432/affine
+      AFFINE_INDEXER_ENABLED: "false"
+  affine_migration:
+    image: ghcr.io/toeverything/affine:0.27.4@sha256:b649f5ce2384ffdf13c23bccf81d759e15973d59d0b0058af65d895a84373099
+    volumes:
+      - ${APP_DATA_DIR}/storage:/root/.affine/storage
+      - ${APP_DATA_DIR}/config:/root/.affine/config
+    command: ["sh", "-c", "node ./scripts/self-host-predeploy.js"]
+    environment:
+      REDIS_SERVER_HOST: redis
+      DATABASE_URL: postgresql://affine@postgres:5432/affine
+      AFFINE_INDEXER_ENABLED: "false"
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+  redis:
+    image: redis:8.10.2@sha256:6f81e8915c60b065a524e6967e0ad1c639ba6efa84d669f823683ea04d9150ee
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "redis-cli", "--raw", "incr", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+  postgres:
+    image: pgvector/pgvector:pg16@sha256:7b822b0aac60967beb1ea5e576b8602c94c300a157d187f385ae3e0da199b90a
+    restart: unless-stopped
+    volumes:
+      - ${APP_DATA_DIR}/postgres:/var/lib/postgresql/data
+    environment:
+      POSTGRES_USER: affine
+      POSTGRES_DB: affine
+      POSTGRES_INITDB_ARGS: "--data-checksums"
+      POSTGRES_HOST_AUTH_METHOD: trust
+    healthcheck:
+      test: ["CMD", "pg_isready", "-U", "affine", "-d", "affine"]
+      interval: 10s
+      timeout: 5s
+      retries: 5

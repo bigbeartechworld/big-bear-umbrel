@@ -1,0 +1,26 @@
+manifestVersion: 1
+id: big-bear-umbrel-omniroute
+category: BigBearCasaOS
+name: OmniRoute
+version: "3.8.51"
+tagline: Self-hosted LLM router
+description: >-
+  OmniRoute is a self-hosted LLM router. The dashboard and an OpenAI-compatible endpoint on one port send requests to the provider accounts you connect, with Redis for rate limiting. 
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: diegosouzapw
+website: https://github.com/diegosouzapw/OmniRoute
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-universal-apps
+support: https://github.com/bigbeartechworld/big-bear-universal-apps/issues
+port: 20128
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/omniroute.png
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-universal-apps

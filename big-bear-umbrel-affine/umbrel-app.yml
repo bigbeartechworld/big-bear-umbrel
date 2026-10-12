@@ -1,0 +1,26 @@
+manifestVersion: 1
+id: big-bear-umbrel-affine
+category: BigBearCasaOS
+name: AFFiNE
+version: "0.27.4"
+tagline: 
+description: >-
+  AFFiNE 0.27.4 is a self-hosted workspace for docs, whiteboards, and knowledge bases, with Postgres and Redis. 
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: toeverything
+website: https://affine.pro
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-universal-apps
+support: https://github.com/bigbeartechworld/big-bear-universal-apps/issues
+port: 10000
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/affine.png
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-universal-apps

@@ -1,0 +1,131 @@
+version: "3.7"
+services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-indelible_indelible_1
+      APP_PORT: "8080"
+  indelible:
+    image: ghcr.io/useindelible/ind-api:0.1.1@sha256:04604c1bd64148b1bbb4edac8d4cc395b8332de97da6e9ffedeb60faffb526ab
+    restart: unless-stopped
+    environment:
+      IND_ENV: development
+      DATABASE_URL: postgres://indelible:1c200d72-b081-4f40-a3c3-cb98d604ad76@postgres:5432/indelible
+      S3_ENDPOINT: http://silo:9000
+      S3_REGION: us-east-1
+      S3_BUCKET: indelible
+      S3_ACCESS_KEY: indelible
+      S3_SECRET_KEY: 2f32d346-ff03-48cb-bfed-2ead51511aa8
+      S3_FORCE_PATH_STYLE: "true"
+      AUTH_CREDENTIAL_KEY: "PFy8QhmU0ZU6H1RFu/ZiIYaEZxVBFPMs4JqHWJ840ZI="
+      EGRESS_ALLOW_PRIVATE_TARGETS: "false"
+      IND_HOST: 0.0.0.0
+      IND_PORT: "8080"
+      IND_BASE_URL: http://localhost:38473
+      FRONTEND_URL: http://localhost:38473
+      EXTENSION_REDIRECT_URIS: https://jidilhjojlgndbpeooeeceohmkedooef.chromiumapp.org/indelible,https://38bd18db5de5caccb6ab6c1271fec03ec1662d5c.extensions.allizom.org/indelible
+      CORS_ORIGINS: http://localhost:38473
+      JWT_SECRET: GuLcGAJ92GTP4Xg-iUJCs44iB6bf7vebfRVEofYB0OM
+      CSRF_SECRET: F3uBgXCtF4d79aPkxskk5aBEjTP4nhiMXe-FN2A15Co
+      ASSET_COOKIE_SECRET: 32e43181ad36e8465cb37f846b0d4117ef56402764aa5f9757055b3fac419e98
+      OIDC_ENABLED: "false"
+    extra_hosts:
+      - host.docker.internal:host-gateway
+    depends_on:
+      postgres:
+        condition: service_healthy
+      silo:
+        condition: service_healthy
+      indelible-silo-init:
+        condition: service_completed_successfully
+  postgres:
+    image: pgvector/pgvector:pg18@sha256:2358fcba361ed2233a5ed81b5fe4ca779ccb304120ce531a3bf51c0ed7e2bc11
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: indelible
+      POSTGRES_PASSWORD: 1c200d72-b081-4f40-a3c3-cb98d604ad76
+      POSTGRES_DB: indelible
+    volumes:
+      - ${APP_DATA_DIR}/data/pgdata:/var/lib/postgresql
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U indelible -d indelible"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+  silo:
+    image: docker.io/pgsty/silo:RELEASE.2026-08-06T00-00-00Z@sha256:29a498b24669cae1fed11c1a2fb2b3d73c68829a0a9c0b14e71b386671d38fac
+    restart: unless-stopped
+    command: ["server", "/data", "--console-address", ":9001"]
+    environment:
+      MINIO_ROOT_USER: indelible
+      MINIO_ROOT_PASSWORD: 2f32d346-ff03-48cb-bfed-2ead51511aa8
+    volumes:
+      - ${APP_DATA_DIR}/data/silodata:/data
+    healthcheck:
+      test: ["CMD", "silo", "healthcheck", "ready"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+  indelible-silo-init:
+    image: docker.io/pgsty/silo:RELEASE.2026-08-06T00-00-00Z@sha256:29a498b24669cae1fed11c1a2fb2b3d73c68829a0a9c0b14e71b386671d38fac
+    restart: "no"
+    environment:
+      MINIO_ROOT_USER: indelible
+      MINIO_ROOT_PASSWORD: 2f32d346-ff03-48cb-bfed-2ead51511aa8
+    depends_on:
+      silo:
+        condition: service_healthy
+    entrypoint:
+      - /bin/sh
+      - -c
+      - |
+        mcli alias set silo http://silo:9000 "$$MINIO_ROOT_USER" "$$MINIO_ROOT_PASSWORD" && mcli mb --ignore-existing silo/indelible
+  renderer:
+    image: ghcr.io/useindelible/ind-renderer:0.1.1@sha256:f43488ff9bc9c413b248a620ba9eed29e583699752305ed4cfbb63383e1af5cf
+    init: true
+    restart: unless-stopped
+    environment:
+      IND_ENV: development
+      DATABASE_URL: postgres://indelible:1c200d72-b081-4f40-a3c3-cb98d604ad76@postgres:5432/indelible
+      S3_ENDPOINT: http://silo:9000
+      S3_REGION: us-east-1
+      S3_BUCKET: indelible
+      S3_ACCESS_KEY: indelible
+      S3_SECRET_KEY: 2f32d346-ff03-48cb-bfed-2ead51511aa8
+      S3_FORCE_PATH_STYLE: "true"
+      AUTH_CREDENTIAL_KEY: "PFy8QhmU0ZU6H1RFu/ZiIYaEZxVBFPMs4JqHWJ840ZI="
+      EGRESS_ALLOW_PRIVATE_TARGETS: "false"
+      RENDERER_HOST: 0.0.0.0
+      RENDERER_PORT: "3100"
+    extra_hosts:
+      - host.docker.internal:host-gateway
+    depends_on:
+      postgres:
+        condition: service_healthy
+      silo:
+        condition: service_healthy
+  worker:
+    image: ghcr.io/useindelible/ind-worker:0.1.1@sha256:4338ce6da40d7856fc8ad4eef567cfa8b5ec5b13f63a0a7e3bcd24efc394fa28
+    restart: unless-stopped
+    environment:
+      IND_ENV: development
+      DATABASE_URL: postgres://indelible:1c200d72-b081-4f40-a3c3-cb98d604ad76@postgres:5432/indelible
+      S3_ENDPOINT: http://silo:9000
+      S3_REGION: us-east-1
+      S3_BUCKET: indelible
+      S3_ACCESS_KEY: indelible
+      S3_SECRET_KEY: 2f32d346-ff03-48cb-bfed-2ead51511aa8
+      S3_FORCE_PATH_STYLE: "true"
+      AUTH_CREDENTIAL_KEY: "PFy8QhmU0ZU6H1RFu/ZiIYaEZxVBFPMs4JqHWJ840ZI="
+      EGRESS_ALLOW_PRIVATE_TARGETS: "false"
+      RENDERER_URL: http://renderer:3100
+    extra_hosts:
+      - host.docker.internal:host-gateway
+    depends_on:
+      postgres:
+        condition: service_healthy
+      silo:
+        condition: service_healthy
+      renderer:
+        condition: service_started
+      indelible-silo-init:
+        condition: service_completed_successfully

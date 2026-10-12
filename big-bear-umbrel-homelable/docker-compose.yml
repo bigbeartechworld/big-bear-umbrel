@@ -1,0 +1,28 @@
+version: "3.7"
+services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-homelable_homelable_1
+      APP_PORT: "80"
+  homelable:
+    image: ghcr.io/pouzor/homelable-frontend:3.5.1@sha256:d307875b5afe484f5f082170af829b10259b07676e29e142c0de07ebc5cbba04
+    restart: unless-stopped
+    depends_on:
+      - backend
+    environment:
+      BACKEND_UPSTREAM: backend:8000
+  backend:
+    image: ghcr.io/pouzor/homelable-backend:3.5.1@sha256:54dfa4b12843f0098141260e75e863a9638ced535a1618cd7b8826bf1718dd62
+    restart: unless-stopped
+    cap_add:
+      - NET_RAW
+    environment:
+      SECRET_KEY: j1Y2R1xaVZDUSdCvOXz7dvJhkfljx1PZJyH3pjffwMA
+      SQLITE_PATH: /app/data/homelab.db
+      CORS_ORIGINS: '["http://localhost:20033"]'
+      AUTH_MODE: local
+      AUTH_USERNAME: admin
+      AUTH_PASSWORD_HASH: "$$2y$$12$$.578Mwn8ZZsSrG.o1.zDR.N3sIHeeLWcXOQsfeT1v5l9Vz2zqMJTi"
+      SCANNER_RANGES: "[]"
+    volumes:
+      - ${APP_DATA_DIR}/data:/app/data

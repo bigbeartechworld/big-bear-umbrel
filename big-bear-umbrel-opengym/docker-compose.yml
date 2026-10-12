@@ -1,0 +1,54 @@
+version: "3.7"
+services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-opengym_opengym_1
+      APP_PORT: "80"
+  opengym:
+    image: registry.gitlab.com/duartesantos8/opengym/web:1.3.9@sha256:eb97d4f78a9d495a41d0181440ae3394feab41e7200b7a4a36099cee36e80036
+    restart: unless-stopped
+    depends_on:
+      media:
+        condition: service_completed_successfully
+      api:
+        condition: service_started
+    environment:
+      NGINX_PORT: "80"
+      BACKEND: api
+      PORT: "3000"
+      RESOLVER: 127.0.0.11
+      CF_CONNECTING_IP: ""
+      BASE_PATH: ""
+      MEDIA_UPLOAD_MAX: 48m
+    volumes:
+      - ${APP_DATA_DIR}/data/media/img:/usr/share/nginx/html/img:ro
+      - ${APP_DATA_DIR}/data/media/gif:/usr/share/nginx/html/gif:ro
+  api:
+    image: registry.gitlab.com/duartesantos8/opengym/api:1.3.9@sha256:88b192dd743ed3746ddeeb973952bdf380c810d6b69337b8205d96d053d7962f
+    restart: unless-stopped
+    environment:
+      PORT: "3000"
+      DATA_DIR: /data
+      TRUST_PROXY: "1"
+      RP_ID: localhost
+      ORIGIN: http://localhost:20808
+      RP_NAME: openGym
+    volumes:
+      - ${APP_DATA_DIR}/data:/data
+      - ${APP_DATA_DIR}/data/coach-auth:/coach-auth
+  media:
+    image: alpine/git:2.54.0@sha256:a4bb51f1a3553df194ce679fc1db721d8bfba2046fa1a88fe9d4ac551ffbce25
+    restart: "no"
+    entrypoint: ["/bin/sh", "-c"]
+    command:
+      - |
+        set -e
+        if [ -z "$$(ls -A /out/img 2>/dev/null)" ] || [ -z "$$(ls -A /out/gif 2>/dev/null)" ]; then
+          rm -rf /tmp/ds
+          git clone --depth 1 https://github.com/hasaneyldrm/exercises-dataset /tmp/ds
+          cp /tmp/ds/images/*.jpg /out/img/
+          cp /tmp/ds/videos/*.gif /out/gif/
+        fi
+    volumes:
+      - ${APP_DATA_DIR}/data/media/img:/out/img
+      - ${APP_DATA_DIR}/data/media/gif:/out/gif

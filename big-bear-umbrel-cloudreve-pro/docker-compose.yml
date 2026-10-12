@@ -1,0 +1,37 @@
+version: "3.7"
+services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-cloudreve-pro_cloudreve-pro_1
+      APP_PORT: "5212"
+  cloudreve-pro:
+    image: ghcr.io/dvorinka/cloudreve:v4.23.0@sha256:75b6e6f1781e37b47320907d6f72476e19cd85c5ef073579e441e01d0509c4c5
+    restart: unless-stopped
+    depends_on:
+      postgresql:
+        condition: service_started
+      redis:
+        condition: service_started
+    environment:
+      CR_CONF_Database.Type: postgres
+      CR_CONF_Database.Host: postgresql
+      CR_CONF_Database.User: cloudreve
+      CR_CONF_Database.Name: cloudreve
+      CR_CONF_Database.Port: "5432"
+      CR_CONF_Redis.Server: redis:6379
+    volumes:
+      - ${APP_DATA_DIR}/data:/cloudreve/data
+  postgresql:
+    image: postgres:17@sha256:d74eeac9a635390a49bc21bd49fccd973de707e2a53a76ac49b552b8712ec46f
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: cloudreve
+      POSTGRES_DB: cloudreve
+      POSTGRES_HOST_AUTH_METHOD: trust
+    volumes:
+      - ${APP_DATA_DIR}/postgres:/var/lib/postgresql/data
+  redis:
+    image: redis:8.10.2@sha256:6f81e8915c60b065a524e6967e0ad1c639ba6efa84d669f823683ea04d9150ee
+    restart: unless-stopped
+    volumes:
+      - ${APP_DATA_DIR}/redis:/data

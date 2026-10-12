@@ -1,0 +1,38 @@
+version: "3.7"
+services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-omniroute_omniroute_1
+      APP_PORT: "20128"
+  omniroute:
+    image: diegosouzapw/omniroute:3.8.51@sha256:8bd462c9f60d8eda79329cfbb6ea7ea723505fe7721beb944f3d43835409e218
+    restart: unless-stopped
+    stop_grace_period: 40s
+    environment:
+      DATA_DIR: /app/data
+      REDIS_URL: redis://redis:6379
+      REQUIRE_API_KEY: "true"
+      INITIAL_PASSWORD: 0efefa3c-54ae-4848-b7bc-295f91483fe7
+      OMNIROUTE_MEMORY_MB: "2048"
+    volumes:
+      - ${APP_DATA_DIR}/data:/app/data
+    depends_on:
+      redis:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "node", "healthcheck.mjs"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 20s
+  redis:
+    image: redis:8.6.5-alpine@sha256:cd218f4b106a332c5c992e38a9480bfb9d7e9f8f7b0ec9a0023bfa36d9a408f9
+    restart: unless-stopped
+    command: ["redis-server", "--save", "60", "1", "--loglevel", "warning"]
+    volumes:
+      - ${APP_DATA_DIR}/data/redis:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 3

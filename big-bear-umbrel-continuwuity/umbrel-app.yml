@@ -1,0 +1,26 @@
+manifestVersion: 1
+id: big-bear-umbrel-continuwuity
+category: BigBearCasaOS
+name: Continuwuity
+version: "v26.7.2"
+tagline: Community Matrix homeserver
+description: >-
+  Continuwuity v26.7.2 is a community-driven Matrix homeserver and the continuation of conduwuit. 
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: continuwuation
+website: https://continuwuity.org
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-universal-apps
+support: https://github.com/bigbeartechworld/big-bear-universal-apps/issues
+port: 20006
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/continuwuity.png
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-universal-apps
