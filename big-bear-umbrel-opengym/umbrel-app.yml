@@ -1,0 +1,26 @@
+manifestVersion: 1
+id: big-bear-umbrel-opengym
+category: BigBearCasaOS
+name: openGym
+version: "1.3.9"
+tagline: Self-hosted workout tracker
+description: >-
+  openGym is a self-hosted gym and body-weight tracker. It plans workouts, logs sets, and signs you in with passkeys. The web container proxies the API and serves exercise media. 
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: Duarte Santos
+website: https://github.com/DuarteSantos8/openGym
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-universal-apps
+support: https://github.com/bigbeartechworld/big-bear-universal-apps/issues
+port: 20808
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+icon: https://cdn.jsdelivr.net/gh/DuarteSantos8/openGym@main/frontend/public/icon-512.png
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-universal-apps

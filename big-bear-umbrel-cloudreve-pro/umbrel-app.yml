@@ -1,0 +1,26 @@
+manifestVersion: 1
+id: big-bear-umbrel-cloudreve-pro
+category: BigBearCasaOS
+name: Cloudreve Fork
+version: "v4.23.0"
+tagline: 
+description: >-
+  Cloudreve Fork v4.23.0 is the Dvorinka open-source Cloudreve server. It uses the same Postgres and Redis layout as upstream and is not the official paid Pro image. 
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: Dvorinka
+website: https://github.com/Dvorinka/cloudreve
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-universal-apps
+support: https://github.com/bigbeartechworld/big-bear-universal-apps/issues
+port: 20042
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/cloudreve.png
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-universal-apps

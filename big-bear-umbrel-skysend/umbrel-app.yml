@@ -1,0 +1,26 @@
+manifestVersion: 1
+id: big-bear-umbrel-skysend
+category: BigBearCasaOS
+name: SkySend
+version: "v2.12.2"
+tagline: Encrypted file and note sharing
+description: >-
+  SkySend is a self-hosted file and note sharing service. Files and notes are encrypted in the browser before they are stored, and the server keeps only encrypted blobs. 
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: skyfay
+website: https://github.com/skyfay/skysend
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-universal-apps
+support: https://github.com/bigbeartechworld/big-bear-universal-apps/issues
+port: 23001
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/skysend.png
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-universal-apps

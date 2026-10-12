@@ -1,0 +1,59 @@
+version: "3.7"
+services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-homedex_homedex_1
+      APP_PORT: "7377"
+  homedex:
+    image: ghcr.io/harshshah0203/homedex:0.2.5@sha256:c896084c063a358ed19932587d98f9a54d5520e5b2f9e1672ade279f8f0dcea0
+    restart: unless-stopped
+    depends_on:
+      - docker-socket-proxy
+    environment:
+      HOMEDEX_DATA_DIR: /data
+      HOMEDEX_LISTEN: ":7377"
+      HOMEDEX_ADMIN_PASSWORD: CHANGE_ME
+    volumes:
+      - ${APP_DATA_DIR}/data:/data
+    read_only: true
+    tmpfs:
+      - /tmp
+    cap_drop:
+      - ALL
+    security_opt:
+      - no-new-privileges:true
+    networks:
+      - app
+      - discovery
+      - default
+  docker-socket-proxy:
+    image: tecnativa/docker-socket-proxy:v0.4.2@sha256:1f3a6f303320723d199d2316a3e82b2e2685d86c275d5e3deeaf182573b47476
+    restart: unless-stopped
+    environment:
+      CONTAINERS: "1"
+      IMAGES: "1"
+      INFO: "1"
+      NETWORKS: "1"
+      VERSION: "1"
+      POST: "0"
+      ALLOW_START: "0"
+      ALLOW_STOP: "0"
+      ALLOW_RESTARTS: "0"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+    read_only: true
+    tmpfs:
+      - /run
+      - /tmp
+    cap_drop:
+      - ALL
+    security_opt:
+      - no-new-privileges:true
+    networks:
+      - discovery
+networks:
+  app:
+    driver: bridge
+  discovery:
+    driver: bridge
+    internal: true

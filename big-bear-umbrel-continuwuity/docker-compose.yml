@@ -1,0 +1,18 @@
+version: "3.7"
+services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-continuwuity_continuwuity_1
+      APP_PORT: "8008"
+  continuwuity:
+    image: forgejo.ellis.link/continuwuation/continuwuity:v26.7.2@sha256:b5f5d7454a3e8dda041fc82084088409f2c34905ff51274955d52050203a87af
+    restart: unless-stopped
+    command: /sbin/conduwuit
+    volumes:
+      - ${APP_DATA_DIR}/data:/var/lib/continuwuity
+    environment:
+      CONTINUWUITY_SERVER_NAME: matrix.localhost
+      CONTINUWUITY_DATABASE_PATH: /var/lib/continuwuity
+      CONTINUWUITY_ADDRESS: 0.0.0.0
+      CONTINUWUITY_PORT: "8008"
+      CONTINUWUITY_ALLOW_FEDERATION: "false"

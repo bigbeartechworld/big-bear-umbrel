@@ -1,0 +1,26 @@
+manifestVersion: 1
+id: big-bear-umbrel-yuvomi
+category: BigBearCasaOS
+name: Yuvomi
+version: "2.73.0"
+tagline: Self-hosted family planner
+description: >-
+  Yuvomi is a self-hosted family planner for tasks, calendar, meals, shopping, budget, and documents. It stores data in one SQLite database on your server. 
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: ulsklyc
+website: https://yuvomi.cloud/
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-universal-apps
+support: https://github.com/bigbeartechworld/big-bear-universal-apps/issues
+port: 20004
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/yuvomi.png
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-universal-apps

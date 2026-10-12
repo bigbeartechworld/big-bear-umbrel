@@ -1,0 +1,40 @@
+version: "3.7"
+services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-zimabrain_zimabrain_1
+      APP_PORT: "8601"
+  zimabrain:
+    image: gelbuilding/zimabrain-ce:1.6.0-beta@sha256:930c689a0f4389b767d726dbc41766590ca5d58cd030f840099ec0ddf382cca5
+    restart: unless-stopped
+    privileged: true
+    pid: host
+    environment:
+      ZIMABRAIN_PASSWORD: 79526452-173c-49bc-873f-956f5a9838cb
+      ZIMABRAIN_SECRET_KEY: qC57Chx7nDu_juH55MXIma7EsHMKLSwBN9CgWFESkqU
+      ZIMABRAIN_MONITOR_ENABLED: "true"
+      ZIMABRAIN_MONITOR_INTERVAL_SECONDS: "60"
+      ZIMABRAIN_MONITOR_RETENTION_DAYS: "7"
+    volumes:
+      - ${APP_DATA_DIR}/data:/data
+      - /proc:/host/proc:ro
+      - /sys:/host/sys:ro
+      - /etc/hostname:/host/etc/hostname:ro
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+    entrypoint:
+      - /bin/sh
+      - -c
+      - |
+        if [ -z "$$ZIMABRAIN_PASSWORD" ] || [ "$$ZIMABRAIN_PASSWORD" = "79526452-173c-49bc-873f-956f5a9838cb" ]; then
+          echo "Set ZIMABRAIN_PASSWORD to your own value before start. The catalog value is public, and an empty value opens first-run setup on port 8601." >&2
+          exit 1
+        fi
+        exec python /app/flask_app.py
+    extra_hosts:
+      - host.docker.internal:host-gateway
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8601/health', timeout=3)"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 20s
