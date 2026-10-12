@@ -1,0 +1,43 @@
+# FILEBROWSER QUANTUM V2 - NEW DEPLOYMENT
+# =======================================
+# This is a SEPARATE app from 'filebrowser-quantum' (1.5.8-stable). They can coexist.
+#
+# WHY A NEW APP:
+# - v2 replaces BoltDB (database.db) with SQLite (database.sqlite)
+# - v2 refuses to start if database.db is still in the data directory
+# - Config must be converted and migrateFrom set before the first v2 start
+# - That migration is manual. An image tag change is not an upgrade
+#
+# FOR NEW INSTALLATIONS:
+# - Deploy this app for a new FileBrowser Quantum 2 instance
+# - The first start generates an admin password and prints it once in the logs
+# - Web UI is on host port 8701 (8700 stays with the 1.5.8 app)
+# - Database and config live in filebrowser-quantum-v2_data at /home/filebrowser/data
+#
+# FOR MIGRATION FROM 1.5.8:
+# - Do NOT uninstall the existing 'filebrowser-quantum' app
+# - Do NOT attach this app to the 1.5.8 data volume
+# - Stop 1.5.8, back up database.db, rename it to database.db.old, convert config.yaml,
+#   set server.database.migrateFrom, then start a v2 process against that copy
+# - Migration: https://filebrowserquantum.com/en/docs/getting-started/v2/migration/
+version: "3.7"
+services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-filebrowser-quantum-v2_big-bear-filebrowser-quantum-v2_1
+      APP_PORT: "80"
+  big-bear-filebrowser-quantum-v2:
+    image: gtstef/filebrowser:2.0.0-stable@sha256:9d42f635e32913d7daf05259428b6c70061cfdca3affc9602b4c31717e0a4bae
+    restart: unless-stopped
+    environment:
+      - TZ=UTC
+      - FILEBROWSER_DATABASE_PATH=/home/filebrowser/data/database.sqlite
+    volumes:
+      - ${APP_DATA_DIR}/data:/home/filebrowser/data
+      - ${APP_DATA_DIR}/srv:/srv
+    networks:
+      - big-bear-filebrowser-quantum-v2-network
+      - default
+networks:
+  big-bear-filebrowser-quantum-v2-network:
+    driver: bridge

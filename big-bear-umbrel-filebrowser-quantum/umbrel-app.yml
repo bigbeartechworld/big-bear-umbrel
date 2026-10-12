@@ -1,7 +1,7 @@
 manifestVersion: 1
 id: big-bear-umbrel-filebrowser-quantum
 category: BigBearCasaOS
-name: FileBrowser Quantum
+name: FileBrowser Quantum (Legacy)
 version: "1.5.8-stable"
 tagline: Advanced self-hosted web file manager
 description: >-

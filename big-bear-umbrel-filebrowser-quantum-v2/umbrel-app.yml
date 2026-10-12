@@ -1,0 +1,26 @@
+manifestVersion: 1
+id: big-bear-umbrel-filebrowser-quantum-v2
+category: BigBearCasaOS
+name: FileBrowser Quantum v2
+version: "2.0.0-stable"
+tagline: FileBrowser Quantum v2
+description: >-
+  FileBrowser Quantum 2.0 file manager. This is a new app, separate from FileBrowser Quantum 1.5.8. v2 stores users and shares in SQLite and refuses to start while a v1 database.db file is still in the data directory. Do not attach the 1.5.8 data volume. A fresh install prints a one-time admin password in the container logs. 
+releaseNotes: >-
+  This version includes various improvements and bug fixes.
+developer: gtsteffaniak
+website: https://hub.docker.com/r/gtstef/filebrowser
+dependencies: []
+repo: https://github.com/bigbeartechworld/big-bear-universal-apps
+support: https://github.com/bigbeartechworld/big-bear-universal-apps/issues
+port: 10701
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/filebrowser-quantum.png
+submitter: BigBearTechWorld
+submission: https://github.com/bigbeartechworld/big-bear-universal-apps
