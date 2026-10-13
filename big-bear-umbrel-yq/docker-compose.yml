@@ -5,7 +5,7 @@ services:
       APP_HOST: big-bear-umbrel-yq_app_1
       APP_PORT: ' 80'
   app:
-    image: linuxserver/yq:4.4.0@sha256:459ea899679213d9aa951398a5461d61f24dcce7358ef02398e506a0884854ed
+    image: linuxserver/yq:4.4.2@sha256:a0e5f406011320cdeea8858a6c36cc56006651bdcf005d0d0ff2fdcd170ab872
     restart: unless-stopped
     environment:
       PUID: $PUID
