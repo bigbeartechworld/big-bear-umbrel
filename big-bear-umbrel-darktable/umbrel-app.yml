@@ -2,7 +2,7 @@ manifestVersion: 1
 id: big-bear-umbrel-darktable
 category: Smart Home
 name: Darktable
-version: "25.6.1"
+version: "25.6.2"
 tagline: An open source photography workflow application and raw developer. A virtual lighttable and darkroom for photographers. It manages your digital negatives in a database, lets you view them through a zoomable lighttable and enables you to develop raw images and enhance them.
 description: >-
   darktable is an open source photography workflow application and raw developer. A virtual lighttable and darkroom for photographers. It manages your digital negatives in a database, lets you view them through a zoomable lighttable and enables you to develop raw images and enhance them. 
