@@ -5,7 +5,7 @@ services:
       APP_HOST: big-bear-umbrel-winegui_app_1
       APP_PORT: ' 3000'
   app:
-    image: linuxserver/winegui:4.5.1@sha256:41a12b6613072df63bae0d05331386a84c8a347095f4b99b4f20a9bb72b8517f
+    image: linuxserver/winegui:4.5.1@sha256:59ec652acc8f5d4aab7308ee7d3d30bd68858d11264d9e54e0d526584232421a
     restart: unless-stopped
     environment:
       PUID: $PUID

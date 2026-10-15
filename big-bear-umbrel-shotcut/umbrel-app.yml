@@ -2,7 +2,7 @@ manifestVersion: 1
 id: big-bear-umbrel-shotcut
 category: Smart Home
 name: Shotcut
-version: "26.8.1"
+version: "26.9.27"
 tagline: A free, open source, cross-platform video editor.
 description: >-
   Shotcut is a free, open source, cross-platform video editor. 
