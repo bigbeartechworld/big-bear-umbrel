@@ -5,7 +5,7 @@ services:
       APP_HOST: big-bear-umbrel-your-spotify_app_1
       APP_PORT: ' 80'
   app:
-    image: linuxserver/your_spotify:1.20.0@sha256:34f592ef352cce88db8f64ca502d646b17aa2ecd6076df47e053241b0dbef2da
+    image: linuxserver/your_spotify:1.20.0@sha256:936dd2724ed796ee56afea7e3b888bc2194261f2f653facdaf62ed76d1e369ce
     restart: unless-stopped
     environment:
       PUID: $PUID
