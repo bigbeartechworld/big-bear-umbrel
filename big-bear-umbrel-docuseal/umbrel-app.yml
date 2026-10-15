@@ -2,7 +2,7 @@ manifestVersion: 1
 id: big-bear-umbrel-docuseal
 category: BigBearCasaOS
 name: DocuSeal
-version: "3.3.1"
+version: "3.3.2"
 tagline: Open source PDF signing
 description: >-
   DocuSeal 3.3.1 is an open-source platform to create, fill, and sign PDF documents. 

@@ -1,7 +1,7 @@
 manifestVersion: 1
 id: big-bear-umbrel-seafile
 category: BigBearCasaOS
-name: seafile
+name: Seafile (Legacy)
 version: "11.0.13"
 tagline: Seafile is an open source file sync and share platform, focusing on reliability and performance.
 description: >-
