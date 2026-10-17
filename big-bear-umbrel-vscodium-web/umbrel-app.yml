@@ -2,7 +2,7 @@ manifestVersion: 1
 id: big-bear-umbrel-vscodium-web
 category: Smart Home
 name: Vscodium-web
-version: "1.135.06055"
+version: "1.140.06880"
 tagline: A community-driven, freely-licensed binary distribution of the remote host web component of Microsoft's editor VS Code.
 description: >-
   Vscodium-web is a community-driven, freely-licensed binary distribution of the remote host web component of Microsoft's editor VS Code. 

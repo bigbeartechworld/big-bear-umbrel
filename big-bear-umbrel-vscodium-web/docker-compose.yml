@@ -5,7 +5,7 @@ services:
       APP_HOST: big-bear-umbrel-vscodium-web_app_1
       APP_PORT: ' 8000'
   app:
-    image: linuxserver/vscodium-web:1.135.06055@sha256:c1bc670d4f9bf10994090715923d0e62ff339749c19028c2d483759568e139e6
+    image: linuxserver/vscodium-web:1.140.06880@sha256:5907b6ec2b6a306aec3a330b82ab54c36a97a550db1a7919b65e4ffabdb7fc58
     restart: unless-stopped
     environment:
       PUID: $PUID
