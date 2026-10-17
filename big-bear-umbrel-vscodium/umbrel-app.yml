@@ -2,7 +2,7 @@ manifestVersion: 1
 id: big-bear-umbrel-vscodium
 category: Smart Home
 name: Vscodium
-version: "1.135.06055"
+version: "1.140.06880"
 tagline: A community-driven, freely-licensed binary distribution of Microsoft’s editor VS Code.
 description: >-
   VSCodium is a community-driven, freely-licensed binary distribution of Microsoft’s editor VS Code. 

@@ -2,7 +2,7 @@ manifestVersion: 1
 id: big-bear-umbrel-vlc
 category: Smart Home
 name: Vlc
-version: "3.0.23"
+version: "3.0.24"
 tagline: A free and open source cross-platform multimedia player and framework that delivers dependable performance across multiple devices.
 description: >-
   VLC Media Player is a free and open source cross-platform multimedia player and framework that delivers dependable performance across multiple devices. 
