@@ -2,7 +2,7 @@ manifestVersion: 1
 id: big-bear-umbrel-web-check
 category: BigBearCasaOS
 name: Web-Check
-version: "2.3.5"
+version: "2.3.6"
 tagline: OSINT for any website
 description: >-
   Web-Check is an on-demand OSINT tool for analysing any website: server, security headers, technologies, DNS, and related public signals. 
