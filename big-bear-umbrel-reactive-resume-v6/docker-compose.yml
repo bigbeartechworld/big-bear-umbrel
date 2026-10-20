@@ -23,7 +23,7 @@ services:
       APP_HOST: big-bear-umbrel-reactive-resume-v6_big-bear-reactive-resume-v6_1
       APP_PORT: "3000"
   big-bear-reactive-resume-v6:
-    image: amruthpillai/reactive-resume:v6.0.2@sha256:2b08d01446f8b775e0bf5888cc15b0a3fd6805521efefb0a0e21a4f5bfb253b3
+    image: amruthpillai/reactive-resume:v6.0.3@sha256:41023d1641276e4cafbf284a96973620e94e16aad2d59340f373f19bda2f6a4e
     restart: unless-stopped
     depends_on:
       big-bear-reactive-resume-v6-db:
