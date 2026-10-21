@@ -1,0 +1,31 @@
+version: "3.7"
+services:
+  app_proxy:
+    environment:
+      APP_HOST: big-bear-umbrel-cairn_app_1
+      APP_PORT: "8080"
+  app:
+    image: morgankryze/cairn:1.25.0@sha256:aa62518775284c228d4f7f20b05aef75426a3017ed1ecc74f157308e26b04c33
+    # cairn only ever reads this volume. Put a services.yaml in it to list your
+    # own services; while it is empty cairn serves a getting-started page instead
+    # of failing, and an invalid file leaves the previous configuration running.
+    # Mount a host directory here instead if you would rather edit the file in
+    # place. Reference: https://github.com/MorganKryze/cairn/tree/main/docs
+    volumes:
+      - ${APP_DATA_DIR}/cairn/config:/config:ro
+    read_only: true
+    cap_drop:
+      - ALL
+    security_opt:
+      - no-new-privileges:true
+    healthcheck:
+      test: ["CMD", "/cairn", "-healthcheck"]
+      interval: 30s
+      start_period: 5s
+    restart: unless-stopped
+    networks:
+      - cairn-network
+      - default
+networks:
+  cairn-network:
+    driver: bridge
