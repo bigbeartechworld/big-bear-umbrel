@@ -5,7 +5,7 @@ services:
       APP_HOST: big-bear-umbrel-privatebin_app_1
       APP_PORT: ' 8080'
   app:
-    image: privatebin/nginx-fpm-alpine:2.0.6
+    image: privatebin/nginx-fpm-alpine:2.1.0
     restart: unless-stopped
     environment:
       PUID: $PUID

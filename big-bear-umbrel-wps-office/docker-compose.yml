@@ -5,7 +5,7 @@ services:
       APP_HOST: big-bear-umbrel-wps-office_app_1
       APP_PORT: ' 3000'
   app:
-    image: linuxserver/wps-office:11.1.0@sha256:72a7f80c2c45a118b2357c6c4264a738783623678697f7761d193dd45e430512
+    image: linuxserver/wps-office:11.1.0@sha256:f75d78cf61505b4fc464bc0db227ecec0bedf47603f5fbbb54deed2848e74d65
     restart: unless-stopped
     environment:
       PUID: $PUID

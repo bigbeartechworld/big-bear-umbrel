@@ -2,7 +2,7 @@ manifestVersion: 1
 id: big-bear-umbrel-luanti
 category: Smart Home
 name: Luanti
-version: "5.17.0"
+version: "5.18.0"
 tagline: (formerly Minetest) is an open source voxel game-creation platform with easy modding and game creation
 description: >-
   Luanti (formerly Minetest) is an open source voxel game-creation platform with easy modding and game creation 
