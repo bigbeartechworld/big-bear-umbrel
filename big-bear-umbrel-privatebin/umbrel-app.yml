@@ -2,7 +2,7 @@ manifestVersion: 1
 id: big-bear-umbrel-privatebin
 category: Other
 name: Privatebin
-version: "2.0.6"
+version: "2.1.0"
 tagline: Privatebin Is A Minimalist, Open Source Online Pastebin Where The Server Has Zero Knowledge Of Pasted Data!
 description: >-
   PrivateBin is a minimalist, open source online pastebin where the server has zero knowledge of pasted data! 
