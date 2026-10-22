@@ -5,7 +5,7 @@ services:
       APP_HOST: big-bear-umbrel-rsnapshot_app_1
       APP_PORT: ' 80'
   app:
-    image: linuxserver/rsnapshot:1.4.5@sha256:9f2b9c875d9b970f0078d81eec17c27b8428201c0f9defc70360c19d43ccb658
+    image: linuxserver/rsnapshot:1.4.5@sha256:3662cff04ae2d7375be2468642f6612266cc44bdc6755fe533f50441581adb87
     restart: unless-stopped
     environment:
       PUID: $PUID

@@ -11,7 +11,7 @@ services:
   # The `big-bear-owncloud` service definition
   big-bear-owncloud:
     # Image to be used for the container
-    image: owncloud/server:11.0.1@sha256:31cf2a61fa0adf2bf8d07bed4bdf8a1ccfe8060541b587f9de879df495fcf2dc
+    image: owncloud/server:11.0.1@sha256:bacdc811aa792944e8c1e09a8a5572165fec16296a1a265a26e965b8b72caf6e
     # Container restart policy
     restart: unless-stopped
     # Environment variables
