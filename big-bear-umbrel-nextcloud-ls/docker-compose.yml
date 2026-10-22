@@ -11,7 +11,7 @@ services:
   # The `big-bear-nextcloud-ls` service definition
   big-bear-nextcloud-ls:
     # Use the nextcloud:28.0.1-apache image
-    image: linuxserver/nextcloud:35.0.2@sha256:6f42aa6799355b270bde66ddc0abc145336feb93fd04d397ea395d1be6b6d4f0
+    image: linuxserver/nextcloud:35.0.2@sha256:e7f790011bf023d33517b4be70231d7aa2e19d54c619664a8533e8bedd4716ac
     # Restart the container unless stopped
     restart: unless-stopped
     # Mount the nextcloud-ls_data directory on the host to /var/www/html in the container
