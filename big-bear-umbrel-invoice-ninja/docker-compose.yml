@@ -63,7 +63,7 @@ services:
     # This command is required to set important mariadb defaults
     command: [mysqld, --character-set-server=utf8mb4, --collation-server=utf8mb4_unicode_ci, --wait_timeout=28800, --log-warnings=0]
   big-bear-invoice-ninja-init:
-    image: bash:5.3.20@sha256:61962062d969cb46dfc2bad061d36342406fa485f64f246aa7e95693ca07df1f
+    image: bash:5.3.20@sha256:7c8dba299bec8cf7a2d31935214bdecc243214d439383d28b968b6a749a6dd5c
     volumes:
       - ${APP_DATA_DIR}/data:/tmp/data
     command: ["/bin/sh", "-c", "if [ ! -f /tmp/data/.init_complete ]; then echo 'Starting initialization process...' && if [ -f /tmp/data/init/init.sh ]; then echo 'Found init.sh, making it executable...' && chmod +x /tmp/data/init/init.sh && echo 'Executing init.sh...' && /tmp/data/init/init.sh && echo 'init.sh execution completed.' && touch /tmp/data/.init_complete && echo 'Initialization process finished.'; else echo 'Error: /tmp/data/init/init.sh not found!' && exit 1; fi; else echo 'Initialization already completed. Exiting.'; fi && exit 0"]

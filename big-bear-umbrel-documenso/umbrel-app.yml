@@ -2,7 +2,7 @@ manifestVersion: 1
 id: big-bear-umbrel-documenso
 category: BigBearCasaOS
 name: Documenso
-version: "v2.20.0"
+version: "v2.21.0"
 tagline: Open source document signing
 description: >-
   Documenso v2.19.0 is an open-source document signing platform backed by PostgreSQL. 
