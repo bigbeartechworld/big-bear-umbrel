@@ -2,7 +2,7 @@ manifestVersion: 1
 id: big-bear-umbrel-thunderbird
 category: Smart Home
 name: Thunderbird
-version: "1140.16.0"
+version: "1140.17.0"
 tagline: A free and open-source personal information manager primarily used as an e-mail client with a calendar and contactbook, as well as an RSS feed reader, chat client, and news client.
 description: >-
   Thunderbird is a free and open-source personal information manager primarily used as an e-mail client with a calendar and contactbook, as well as an RSS feed reader, chat client, and news client. 
