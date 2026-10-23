@@ -26,7 +26,7 @@ services:
       - ${APP_DATA_DIR}/config:/home/claude/.claude
       - /var/run/docker.sock:/var/run/docker.sock
   caddy:
-    image: caddy:2.11.7@sha256:3095ad245c353e3bdb27a38f22a095c1cfa9e295ab21c0214c3e72b0e2960525
+    image: caddy:2.11.7@sha256:504a44d7d74bd2bc28a66afc4774912fc21223ca8a67734af1c54ab2f999b489
     restart: unless-stopped
     depends_on:
       - claude
