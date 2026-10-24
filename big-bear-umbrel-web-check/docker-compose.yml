@@ -5,7 +5,7 @@ services:
       APP_HOST: big-bear-umbrel-web-check_web-check_1
       APP_PORT: "3000"
   web-check:
-    image: lissy93/web-check:2.3.7@sha256:5e4feb4acbd58573afc2f402e13d6b2fe3e6e1a6bcd0e7605ad7b8c6aabb1bb7
+    image: lissy93/web-check:2.3.8@sha256:1cd3f9599dd54e6c08b545bd22435887251e75ba9408a888d9e736eb10360b17
     restart: unless-stopped
     environment:
       API_BLOCKED_HOSTS: "localhost,local,metadata.google.internal,169.254.169.254,::1,0.0.0.0/8,10.0.0.0/8,100.64.0.0/10,127.0.0.0/8,169.254.0.0/16,172.16.0.0/12,192.168.0.0/16"
