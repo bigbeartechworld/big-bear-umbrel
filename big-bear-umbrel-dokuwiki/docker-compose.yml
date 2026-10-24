@@ -5,7 +5,7 @@ services:
       APP_HOST: big-bear-umbrel-dokuwiki_app_1
       APP_PORT: ' 80'
   app:
-    image: linuxserver/dokuwiki:version-2026-07-14c@sha256:f39c992b29016fe10f888e3723481d470a3c19d409f65e1655645bbb223ad9a1
+    image: linuxserver/dokuwiki:version-2026-07-14c@sha256:0e4263ac90c82f30b1ac114b2b4730abe443c310a875a8ec802bc6abb1321c31
     restart: unless-stopped
     environment:
       PUID: $PUID
