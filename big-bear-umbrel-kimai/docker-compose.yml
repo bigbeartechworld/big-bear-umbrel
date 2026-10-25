@@ -5,7 +5,7 @@ services:
       APP_HOST: big-bear-umbrel-kimai_app_1
       APP_PORT: ' 80'
   app:
-    image: linuxserver/kimai:2.70.0@sha256:93348c63012d0a1dad18d44915aa8efafc8068c5a53c7c6900c76b8ff43680f2
+    image: linuxserver/kimai:2.70.1@sha256:ee137d0cee2af0f4c9684945537b0ededbd7feb384d10570129079d8052d3179
     restart: unless-stopped
     environment:
       PUID: $PUID

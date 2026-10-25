@@ -2,7 +2,7 @@ manifestVersion: 1
 id: big-bear-umbrel-esphome
 category: Other
 name: ESPHome
-version: "2026.9"
+version: "2026.10"
 tagline: ESPHome is a system to control your microcontrollers by simple yet powerful configuration files and control them remotely through Home Automation systems.
 description: >-
   ESPHome is a system to control your microcontrollers by simple yet powerful configuration files and control them remotely through Home Automation systems. 
