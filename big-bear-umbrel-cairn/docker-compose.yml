@@ -5,7 +5,7 @@ services:
       APP_HOST: big-bear-umbrel-cairn_app_1
       APP_PORT: "8080"
   app:
-    image: morgankryze/cairn:1.25.0@sha256:aa62518775284c228d4f7f20b05aef75426a3017ed1ecc74f157308e26b04c33
+    image: morgankryze/cairn:1.25.1@sha256:e1b159419bc66dd950ce99e665db2bd3502c210c13542ae4f05dc9ba6e218007
     # cairn only ever reads this volume. Put a services.yaml in it to list your
     # own services; while it is empty cairn serves a getting-started page instead
     # of failing, and an invalid file leaves the previous configuration running.

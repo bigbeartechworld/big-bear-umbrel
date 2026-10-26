@@ -2,7 +2,7 @@ manifestVersion: 1
 id: big-bear-umbrel-traefik
 category: Other
 name: Traefik
-version: "v3.7.15"
+version: "v3.7.16"
 tagline: Cloud-native Networking Stack That Just Works.
 description: >-
   Cloud-Native Networking Stack That Just Works. 
