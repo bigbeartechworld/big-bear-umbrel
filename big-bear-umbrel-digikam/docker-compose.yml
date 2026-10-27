@@ -5,7 +5,7 @@ services:
       APP_HOST: big-bear-umbrel-digikam_app_1
       APP_PORT: ' 3000'
   app:
-    image: linuxserver/digikam:9.1.0@sha256:b373c7756c283886a5027060de9aef0a6b5251a300038a5e88944c628200cfd5
+    image: linuxserver/digikam:9.1.0@sha256:23f15c1d6877533648896787ec4de437618e6d516cefd93ef56dfb6eec9b7edc
     restart: unless-stopped
     environment:
       PUID: $PUID
