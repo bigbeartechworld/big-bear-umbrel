@@ -5,7 +5,7 @@ services:
       APP_HOST: big-bear-umbrel-firefox_firefox_1
       APP_PORT: "3000"
   firefox:
-    image: linuxserver/firefox:1155.0.1@sha256:1d224760c3b9e45aac55457d73a174188cc55b34480fc7cdd3e9e13023d7b9a0 # Docker image for the Firefox browser
+    image: linuxserver/firefox:1158.0.1@sha256:c6acb3b01e34d45317d6f05daead8787f523161efa633bc8dc933132108eb51a # Docker image for the Firefox browser
     environment:
       - PUID=1000
       - PGID=1000
