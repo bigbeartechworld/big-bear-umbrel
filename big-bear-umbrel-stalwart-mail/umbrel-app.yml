@@ -1,7 +1,7 @@
 manifestVersion: 1
 id: big-bear-umbrel-stalwart-mail
 category: BigBearCasaOS
-name: Stalwart Mail
+name: Stalwart Mail (Legacy)
 version: "v0.16.27"
 tagline: Secure & Modern All-in-One Mail Server (IMAP, JMAP, POP3, SMTP) 🛡️
 description: >-
