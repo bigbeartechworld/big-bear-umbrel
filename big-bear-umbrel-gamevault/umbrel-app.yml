@@ -2,7 +2,7 @@ manifestVersion: 1
 id: big-bear-umbrel-gamevault
 category: BigBearCasaOS
 name: GameVault
-version: "17.0.1"
+version: "17.1.0"
 tagline: Self-hosted DRM-free game library
 description: >-
   GameVault 17.0.1 is a self-hosted library for DRM-free games, with a web UI and PostgreSQL. 
