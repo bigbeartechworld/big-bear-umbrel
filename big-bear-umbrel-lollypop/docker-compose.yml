@@ -5,7 +5,7 @@ services:
       APP_HOST: big-bear-umbrel-lollypop_app_1
       APP_PORT: ' 3000'
   app:
-    image: linuxserver/lollypop:1.4.45@sha256:b99556134690ce17b9fd5d29228acbec9b319aecb945748b2e96b524a2e233de
+    image: linuxserver/lollypop:1.4.45@sha256:aa525497087ade779351992433c6a6277ede4cdb20076ddbe42a077a63126bbf
     restart: unless-stopped
     environment:
       PUID: $PUID
