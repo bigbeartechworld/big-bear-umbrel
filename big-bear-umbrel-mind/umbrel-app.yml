@@ -2,7 +2,7 @@ manifestVersion: 1
 id: big-bear-umbrel-mind
 category: BigBearCasaOS
 name: MIND
-version: "v1.5.1"
+version: "v1.5.2"
 tagline: A simple self hosted reminder application that can send push notifications to your device. Set the reminder and forget about it!
 description: >-
   A simple self hosted reminder application that can send push notifications to your device. Set the reminder and forget about it! 
